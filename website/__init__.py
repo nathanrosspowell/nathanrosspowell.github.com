@@ -1,15 +1,15 @@
 import os
 import sqlite3
 from contextlib import closing
-from flask import \
-Flask, \
-request, \
-session, \
-g, \
-redirect, \
-url_for, \
-abort, \
-render_template, \
+from flask import   \
+Flask,              \
+request,            \
+session,            \
+g,                  \
+redirect,           \
+url_for,            \
+abort,              \
+render_template,    \
 flash
 
 #-----------------------------------------------------------------------------
@@ -45,18 +45,12 @@ def before_request():
 def teardown_request( exception ):
     g.db.close()
 
-#-----------------------------------------------------------------------------
-# Views.
-@app.route('/')
-def index():
-    return render_template( "index.html" )
-
 @app.route( "/blog/" )
 def blog():
-    rows = g.db.execute( \
-"select title, post, author, posted, tags from posts order by id desc" )
-    posts = [ dict(title=r[0],post=r[1],author=r[2]) for r in rows.fetchall() ]
-    return render_template( "blog.html", blog_posts=posts )
+    q = "select title, post, author, posted, tags from posts order by id desc"
+    rs = g.db.execute( q )
+    ps = [ dict(title=r[0],post=r[1],author=r[2]) for r in rs.fetchall() ]
+    return render_template( "blog.html", blog_posts=ps )
 
 @app.route( "/blog/<int:post_id>" )
 def blog_post( post_id ):

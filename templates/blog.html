@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for blog_post in blog_posts %}
+        <article>
+            <header>
+                <div class='headline'>
+                    <div class='comments'>
+                        177
+                    </div>
+                    <div class='date'>
+                        {{ value.strftime("%Y") }}
+                    </div>
+                    <div class='title'>
+                        {{ blog_post.title|title }}
+                    </div>
+                </div>
+            </header>
+            <p>
+                {{ blog_post.post|safe|truncate( 20 ) }}...
+            </p>
+            <footer>
+                <em>
+                    Written by:
+                </em>
+                <strong>
+                    {{ blog_post.author }}
+                </strong>
+                <span class='newline'>
+                    <em>
+                        Tags:
+                    </em>
+                    <a class='tags'>
+                        cool
+                    </a>
+                </span>
+                <a class='button' href='/blog/'>
+                    Continue Reading
+                </a>
+            </footer>
+        </article>
+    {% endfor %}
+{% endblock %}

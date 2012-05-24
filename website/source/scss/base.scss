@@ -22,7 +22,7 @@ $col-rss-dark: #e1a467;
 
 /******************************************************************/
 /* Sizes */
-$sz-body: 800px;
+$sz-body: 850px;
 $sz-margin: 12px;
 $sz-pad: 20px;
 
@@ -34,7 +34,10 @@ $sz-large-text: 250%;
 /* constants */
 /* options */
 $c-tab-options: 4;
-$c-tab-width: ( $sz-body - ( $sz-margin *  ( $c-tab-options - 1 ) ) ) / $c-tab-options;
+$c-tab-extra: 0px;
+$c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-options ) + $c-tab-extra;
+
+
 
 /******************************************************************/
 /* Mixins */
@@ -118,17 +121,15 @@ hgroup h1 a:hover { border: none }
 
 /* Navigation */
 nav#global {
-    margin: $sz-margin $sz-margin $sz-margin $sz-margin ;
-    /*padding: $sz-pad $sz-pad $sz-pad 0;*/
-    ul {
+    h6 {
+        white-space: nowrap;
         vertical-align:middle;
-        text-align:center;
+        list-style-type: none;
+    margin: 0px $sz-margin 0px $sz-margin;
         a { 
             @include rgba( $col-background, $col-background-alpha );
             display: inline-block;
             width: $c-tab-width ;
-
-
             height: $sz-tab ;
             font-size:$sz-large-text;
             text-align:center;

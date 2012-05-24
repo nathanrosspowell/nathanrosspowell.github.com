@@ -5,6 +5,11 @@ create table posts (
     post string not null,
     author string not null,
     posted date not null,
-    modified date not null,
     tags string not null
+);
+
+drop table if exists tags;
+create table tags (
+    id integer primary key autoincrement,
+    tag string not null
 );

@@ -7,21 +7,21 @@
 <head>
     <meta charset='utf-8' />
     <title>
-        {% block page_title %}
+        
             nrp - wobsite
-        {% endblock %}
+        
     </title>
-    <meta content='{% block meta_description %}Webpage{% endblock %}' name='description' />
-    <meta content='{% block meta_author %}Nathan Ross Powell{% endblock %}' name='author' />
+    <meta content='Webpage' name='description' />
+    <meta content='Nathan Ross Powell' name='author' />
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0;' name='viewport' />
 <!-- Load in the CSS with the template added JSON object. -->
-    <!--script src='{{ STATIC_URL }}js/base.js'></script-->
+    <!--script src='js/base.js'></script-->
 </script>
 </head>
 <header>
     <hgroup>
         <h1>
-            <a href="{{ url_for( "index" ) }}">
+            <a href="/">
                 nrp
             </a>
         </h1>
@@ -31,10 +31,10 @@
     </hgroup>
     <nav id='global'>
         <ul>
-            <a href="{{ url_for( "index" ) }}">
+            <a href="/">
                 Home
             </a>
-            <a href="{{ url_for( "blog" ) }}">
+            <a href="/blog/">
                 Blog
             </a>
             <a href='#'>
@@ -46,14 +46,51 @@
         </ul>
     </nav>
 </header>
-<body class='{% block body_class %}{% endblock %}'>
-    {% block body %}
+<body class=''>
+    
         <div id='container'>
             <header></header>
             <div id='main' role='main'>
-                {% block content %}
-<!-- content here --> MAIN CONTENT BLOCK HERE!!!!!!
-                {% endblock %}
+                
+    
+        <article>
+            <header>
+                <div class='headline'>
+                    <div class='comments'>
+                        4545
+                    </div>
+                    <div class='date'>
+                        2012/04/01
+                    </div>
+                    <div class='title'>
+                        Post From The Past!
+                    </div>
+                </div>
+            </header>
+            <p>
+                <p>This should come up last..</p>
+            </p>
+            <footer>
+                <em>
+                    Written by:
+                </em>
+                <strong>
+                    
+                        Nathan Ross Powell
+                    
+                </strong>
+                <span class='newline'>
+                    <em>
+                        Tags:
+                    </em>
+                    
+                        <a class='tags'>blog</a>
+                    
+                </span>
+            </footer>
+        </article>
+    
+
             </div>
             <footer></footer>
         </div>
@@ -119,24 +156,22 @@
                 </a>
             </section>
         </aside>
-        {% if debug %}
-            {% include 'includes/debug.html' %}
-        {% endif %}
-        {% block loading %}
-        {% endblock %}
-        {% block js_inline %}
+        
+        
+        
+        
 <!-- js here -->
 <!-- :javascript -->
-        {% endblock %}
+        
 <!--[if lt IE 7 ]>
-    <script src="{{ STATIC_URL }}js/dd_belatedpng.js"></script>
+    <script src="js/dd_belatedpng.js"></script>
 <script type='text/javascript'>
 // <![CDATA[
             <script> DD_belatedPNG.fix('img, .png_bg');</script>
 // ]]>
 </script>
 <![endif]-->
-    {% endblock %}
+    
 </body>
 <footer class='clearfix'>
   <section>
@@ -144,13 +179,13 @@
                 Popular Posts
    </h1>
    <ul class='links'>
-    {% block popular_posts %}
+    
                 <li>
                     <a href='#'>
                             Lacus suspendisse risus consequat nec nunc quis sed
                     </a>
                 </li>
-    {% endblock %}
+    
     <li>
                     <a href='#'>
                         Diam turpis maecenas
@@ -178,8 +213,8 @@
                 Recent Comments
    </h1>
    <ul id='comments'>
-    {% block recent_comments %}
-    {% endblock %}
+    
+    
     <li>
      <a href='#'>
                         Tincidunt justo sed feugiat eget ligula nec, porta luctus&hellip;

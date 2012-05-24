@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for blog_post in blog_posts %}
+    {% for page in pages %}
         <article>
             <header>
                 <div class='headline'>
@@ -8,34 +8,42 @@
                         177
                     </div>
                     <div class='date'>
-                        {{ value.strftime("%Y") }}
+                        {{ page.published }}
                     </div>
                     <div class='title'>
-                        {{ blog_post.title|title }}
+                        {{ page.title|title }}
                     </div>
                 </div>
             </header>
             <p>
-                {{ blog_post.post|safe|truncate( 20 ) }}...
+                {{ page.body[:100] }}...
             </p>
             <footer>
                 <em>
                     Written by:
                 </em>
                 <strong>
-                    {{ blog_post.author }}
+                    {% if page.author %}
+                        {{ page.author|title }}
+                    {% else %}
+                        Nathan Ross Powell
+                    {% endif %}
                 </strong>
                 <span class='newline'>
                     <em>
                         Tags:
                     </em>
-                    <a class='tags'>
-                        cool
-                    </a>
+                    {% for tag in page.tags %}
+                        <a class='tags'>{{ tag }}</a>
+                    {% else %}
+                        <a class='tags'>-no-tags-</a>
+                    {% endfor %}
                 </span>
-                <a class='button' href='/blog/'>
-                    Continue Reading
-                </a>
+                    {% if page.url %}
+                        <a class='button' href="{{ url_for("page", page_path=page.path) }}" >
+                            Continue Reading
+                        </a>
+                    {% endif %}
             </footer>
         </article>
     {% endfor %}

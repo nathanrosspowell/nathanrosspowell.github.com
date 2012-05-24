@@ -16,7 +16,7 @@ HElloooooooo
 /******************************************************************/
 /* Styles */
 body {
-  width: 800px;
+  width: 850px;
   text-align: justify;
   margin: 0 auto;
   color: white;
@@ -47,23 +47,22 @@ hgroup h1 a:hover {
   border: none; }
 
 /* Navigation */
-nav#global {
-  margin: 12px 12px 12px 12px;
-  /*padding: $sz-pad $sz-pad $sz-pad 0;*/ }
-  nav#global ul {
-    vertical-align: middle;
+nav#global h6 {
+  white-space: nowrap;
+  vertical-align: middle;
+  list-style-type: none;
+  margin: 0px 12px 0px 12px; }
+  nav#global h6 a {
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    width: 203.5px;
+    height: 45px;
+    font-size: 250%;
     text-align: center; }
-    nav#global ul a {
-      background-color: black;
-      background-color: rgba(0, 0, 0, 0.7);
-      display: inline-block;
-      width: 191px;
-      height: 45px;
-      font-size: 250%;
-      text-align: center; }
-      nav#global ul a:hover {
-        background-image: -moz-linear-gradient(bottom, #ca0000, #970000);
-        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca0000), color-stop(1, #970000)); }
+    nav#global h6 a:hover {
+      background-image: -moz-linear-gradient(bottom, #ca0000, #970000);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca0000), color-stop(1, #970000)); }
 
 /* MAIN */
 article {

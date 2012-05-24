@@ -7,8 +7,9 @@
 <head>
     <meta charset='utf-8' />
     <title>
+        nathanrosspowell.com - 
         {% block page_title %}
-            nrp - wobsite
+            wobsite
         {% endblock %}
     </title>
     <meta content='{% block meta_description %}Webpage{% endblock %}' name='description' />
@@ -16,17 +17,18 @@
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0;' name='viewport' />
 <!-- Load in the CSS with the template added JSON object. -->
     <!--script src='{{ STATIC_URL }}js/base.js'></script-->
+    <link rel="stylesheet" href="{{ url_for(".static", filename="css/base.css") }}" type="text/css" media="screen, projection">
 </script>
 </head>
 <header>
     <hgroup>
         <h1>
             <a href="{{ url_for( "index" ) }}">
-                nrp
+                nathanrosspowell.com
             </a>
         </h1>
         <h2>
-            wobsite
+            Personal Website
         </h2>
     </hgroup>
     <nav id='global'>
@@ -58,7 +60,7 @@
             <footer></footer>
         </div>
         <aside>
-            <section>
+            <!--section>
                 <h1>
                     Stay in Touch
                 </h1>
@@ -82,8 +84,8 @@
                         subscribers
                     </li>
                 </ul>
-            </section>
-            <nav>
+            </section-->
+            <!--nav>
                 <h1>
                     Blogroll
                 </h1>
@@ -109,15 +111,15 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
-            <section>
+            </nav-->
+            <!--section>
                 <blockquote>
                     It's as cunning as a fox that used to be the Professor of Cunning at Oxford University
                 </blockquote>
                 <a class='twitterHandle' href='#'>
                     @TheBlackAdder
                 </a>
-            </section>
+            </section-->
         </aside>
         {% if debug %}
             {% include 'includes/debug.html' %}
@@ -139,7 +141,7 @@
     {% endblock %}
 </body>
 <footer class='clearfix'>
-  <section>
+  <!--section>
    <h1>
                 Popular Posts
    </h1>
@@ -172,8 +174,8 @@
                     </a>
     </li>
    </ul>
-  </section>
-  <section>
+  </section-->
+  <!--section>
    <h1>
                 Recent Comments
    </h1>
@@ -213,24 +215,21 @@
      </span>
     </li>
    </ul>
-  </section>
+  </section-->
   <section>
    <h1>
                 Nathan Ross Powell Bio
    </h1>
    <p>
-                A person with fingers, that likes to touch keyboards.
-   </p>
-   <p>
-                Creator of games and other things of less interest to the outside world.
+                Normal guy with a tiny presence on the internet. Creator of games and other things the will one day be of interest to the outside world.
    </p>
   </section>
- <p class='copyright'>
-        Copyright &copy; 2011
+ <section class='copyright'>
+        Copyright &copy; 2012
         <strong>
             nathanrosspowell.com
         </strong>
-        <div>All Rights Reserved.</div>
- </p>
+        All Rights Reserved.
+ </section>
 </footer>
 </html>

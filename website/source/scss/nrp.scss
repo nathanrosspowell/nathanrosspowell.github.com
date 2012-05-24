@@ -1,0 +1,285 @@
+/******************************************************************
+
+HElloooooooo
+
+*******************************************************************/
+/* nrp.sass */
+@import "all";
+
+/******************************************************************/
+/* Colours */
+
+$col-text: white;
+$col-background: black;
+$col-background-alpha: 0.7;
+
+$col-flavor: #970000;
+
+$col-twitter: #4da3bf;
+$col-twitter-dark: #73b6cc;
+$col-rss: #d98b3c;
+$col-rss-dark: #e1a467;
+
+/******************************************************************/
+/* Sizes */
+$sz-body: 800px;
+$sz-margin: 12px;
+$sz-pad: 20px;
+
+$sz-tab: 45px;
+
+$sz-large-text: 250%;
+
+/******************************************************************/
+/* constants */
+/* options */
+$c-tab-options: 4;
+$c-tab-width: ( $sz-body - ( $sz-margin *  ( $c-tab-options - 1 ) ) ) / $c-tab-options;
+
+/******************************************************************/
+/* Mixins */
+@mixin clear-spacer( $vertMargin ) {
+    margin: $vertMargin $sz-margin $sz-margin $sz-margin;
+    padding: $sz-pad $sz-pad $sz-pad $sz-pad;
+}
+
+@mixin main-spacer( $vertMargin ) {
+    @include clear-spacer( $vertMargin );
+    @include rgba( $col-background, $col-background-alpha );
+}
+
+@mixin complex-box-shadow( $one, $two, $three ) {
+    -moz-box-shadow: $one, $two, $three;
+	-o-box-shadow: $one, $two, $three;
+    -webkit-box-shadow: $one, $two, $three;
+    box-shadow: $one, $two, $three;
+}
+
+/******************************************************************/
+/* Styles */
+html {
+ 
+}
+
+body {
+    width: $sz-body;
+    text-align: justify;
+    margin: 0 auto;
+    color: $col-text;
+    background: $col-background;
+    /* NASA: http://apod.nasa.gov/apod/image/1005/rhoregion_andreo_big.jpg */
+    background-image:url('../jpg/back.jpg');
+    background-attachment:fixed;
+    background-position:center; 
+}
+
+p {
+
+}
+
+strong {
+    font-weight: bold
+}
+
+em { 
+    font-style: italic
+}
+
+a { 
+    &:hover {
+        
+    }
+    &:active {
+        
+    }
+}
+
+
+h1 {
+
+}
+
+/******************************************************************/
+/* HEADER */
+hgroup{
+    text-align: center;
+    @include main-spacer( 0px );
+    h1{
+        
+    }
+    h2{
+        font-size:$sz-large-text;
+    }
+    a {
+    
+    }
+}
+hgroup h1 a:hover { border: none }
+
+/* Navigation */
+nav#global {
+    margin: $sz-margin $sz-margin $sz-margin $sz-margin ;
+    /*padding: $sz-pad $sz-pad $sz-pad 0;*/
+    ul {
+        vertical-align:middle;
+        text-align:center;
+        a { 
+            @include rgba( $col-background, $col-background-alpha );
+            display: inline-block;
+            width: $c-tab-width ;
+            height: $sz-tab ;
+            font-size:$sz-large-text;
+            text-align:center;
+            &:hover {
+                    background-image: -moz-linear-gradient(bottom, #ca0000, #970000);
+                    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca0000), color-stop(1, #970000));
+                }
+        }
+    }
+}
+
+
+/* MAIN */
+#content {
+
+}
+
+article {
+    @include main-spacer( $sz-margin );
+    header {
+        padding: 0 0 $sz-pad 0;
+        h1 { 
+        
+        }
+    }
+}
+
+.headline {
+    background-color: #222;
+    .date{
+        display: inline;
+    }
+    .title{
+        display: inline;
+        font-weight:bold;
+    }
+    .comments{
+        float: right;
+    }
+}
+
+
+.tags {
+    &:hover {
+	
+    }
+}
+
+.button {
+    &:before {
+
+    }
+    &:hover {
+          background-image: -moz-linear-gradient(bottom, #ca0000, #970000);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca0000), color-stop(1, #970000));
+    }
+}
+
+/******************************************************************/
+footer {
+    padding: $sz-pad 0 0 0;
+    p { 
+        margin: 0;
+    }
+}
+
+
+/******************************************************************/
+/* SIDEBAR */
+aside {
+    nav, section {
+        @include main-spacer( $sz-margin );
+    }
+}
+
+aside h1, footer h1 {
+
+}
+
+aside section:last-child { margin-bottom: 0 }
+
+/******************************************************************/
+
+#inTouch {
+    li {
+        span {
+        
+        }
+    }
+}
+
+.twitter {
+
+}
+
+.twitterHandle {
+    &:hover {
+    }
+}
+
+
+.rss {
+
+}
+
+.links {
+    li {
+    
+    }
+}
+.links li:hover {
+    margin-left: 5px;
+}
+.links li a:hover {
+    border: none;
+}
+
+
+/******************************************************************/
+/* blockquote  */
+blockquote {
+    &:before {
+
+    }
+    &:after {
+
+    }
+    &:hover {
+
+    }
+}
+
+
+/******************************************************************/
+/* FOOTER */
+footer {
+    section {
+        @include main-spacer( $sz-margin );
+
+	}
+}
+footer section:first-child { 
+
+}
+
+#comments {
+    li {
+        .newLine {
+        
+        }
+	}
+}
+
+.copyright {
+
+}

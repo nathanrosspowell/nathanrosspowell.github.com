@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for page in pages %}
+        <article>
+            <header>
+                <div class='headline'>
+                    <div class='comments'>
+                        177
+                    </div>
+                    <div class='date'>
+                        {{ page.published }}
+                    </div>
+                    <div class='title'>
+                        {{ page.title|title }}
+                    </div>
+                </div>
+            </header>
+            <p>
+                {{ page.body[:100] }}...
+            </p>
+            <footer>
+                <em>
+                    Written by:
+                </em>
+                <strong>
+                    {% if page.author %}
+                        {{ page.author|title }}
+                    {% else %}
+                        Nathan Ross Powell
+                    {% endif %}
+                </strong>
+                <span class='newline'>
+                    <em>
+                        Tags:
+                    </em>
+                    {% for tag in page.tags %}
+                        <a class='tags'>{{ tag }}</a>
+                    {% else %}
+                        <a class='tags'>-no-tags-</a>
+                    {% endfor %}
+                </span>
+                    {% if page.url %}
+                        <a class='button' href="{{ url_for("page", page_path=page.path) }}" >
+                            Continue Reading
+                        </a>
+                    {% endif %}
+            </footer>
+        </article>
+    {% endfor %}
+{% endblock %}

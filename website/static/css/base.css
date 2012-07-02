@@ -21,10 +21,11 @@ body {
   margin: 0 auto;
   color: white;
   background: black;
-  /* NASA: http://apod.nasa.gov/apod/image/1005/rhoregion_andreo_big.jpg */
-  background-image: url("../jpg/back.jpg");
+  /* used to be... nasa: http://apod.nasa.gov/apod/image/1005/rhoregion_andreo_big.jpg */
+  background-image: url("../jpg/back2.jpg");
   background-attachment: fixed;
-  background-position: center; }
+  background-position: center;
+  background-repeat: no-repeat; }
 
 strong {
   font-weight: bold; }
@@ -39,7 +40,7 @@ hgroup {
   margin: 0px 12px 12px 12px;
   padding: 20px 20px 20px 20px;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.85); }
   hgroup h2 {
     font-size: 250%; }
 
@@ -54,7 +55,7 @@ nav#global h6 {
   margin: 0px 12px 0px 12px; }
   nav#global h6 a {
     background-color: black;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.85);
     display: inline-block;
     width: 203.5px;
     height: 45px;
@@ -69,7 +70,7 @@ article {
   margin: 12px 12px 12px 12px;
   padding: 20px 20px 20px 20px;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.85); }
   article header {
     padding: 0 0 20px 0; }
 
@@ -99,7 +100,7 @@ aside nav, aside section {
   margin: 12px 12px 12px 12px;
   padding: 20px 20px 20px 20px;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.85); }
 
 aside section:last-child {
   margin-bottom: 0; }
@@ -119,4 +120,4 @@ footer section {
   margin: 12px 12px 12px 12px;
   padding: 20px 20px 20px 20px;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.85); }

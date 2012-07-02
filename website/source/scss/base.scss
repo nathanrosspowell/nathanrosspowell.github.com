@@ -11,7 +11,7 @@ HElloooooooo
 
 $col-text: white;
 $col-background: black;
-$col-background-alpha: 0.7;
+$col-background-alpha: 0.85;
 
 $col-flavor: #970000;
 
@@ -70,10 +70,11 @@ body {
     margin: 0 auto;
     color: $col-text;
     background: $col-background;
-    /* NASA: http://apod.nasa.gov/apod/image/1005/rhoregion_andreo_big.jpg */
-    background-image:url('../jpg/back.jpg');
+    /* used to be... nasa: http://apod.nasa.gov/apod/image/1005/rhoregion_andreo_big.jpg */
+    background-image:url('../jpg/back2.jpg');
     background-attachment:fixed;
     background-position:center; 
+    background-repeat: no-repeat;
 }
 
 p {

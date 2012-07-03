@@ -21,7 +21,6 @@ body {
   margin: 0 auto;
   color: white;
   background: black;
-  /* used to be... nasa: http://apod.nasa.gov/apod/image/1005/rhoregion_andreo_big.jpg */
   background-image: url("../jpg/back2.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -32,6 +31,12 @@ strong {
 
 em {
   font-style: italic; }
+
+a:link, a:visited, a:active {
+  color: #bf1169; }
+
+a:hover {
+  color: white; }
 
 /******************************************************************/
 /* HEADER */
@@ -62,8 +67,8 @@ nav#global h6 {
     font-size: 250%;
     text-align: center; }
     nav#global h6 a:hover {
-      background-image: -moz-linear-gradient(bottom, #ca0000, #970000);
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca0000), color-stop(1, #970000)); }
+      background-image: -moz-linear-gradient(bottom, #7a0f45, #bf1169);
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7a0f45), color-stop(1, #bf1169)); }
 
 /* MAIN */
 article {

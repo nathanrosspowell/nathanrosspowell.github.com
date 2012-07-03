@@ -59,4 +59,5 @@ def blog():
 def page( page_path ):
     page = pages.get_or_404( page_path )
     template = page.meta.get( "template", blog_post_html )
-    return render_template( template, pages=[pages] ) 
+    print "####", page_path, template
+    return render_template( template, pages=[page] ) 

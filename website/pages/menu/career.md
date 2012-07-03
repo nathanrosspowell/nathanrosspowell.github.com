@@ -1,5 +1,6 @@
 title: Career
 comments: False
+template: "article.html"
 
 TODO:
 

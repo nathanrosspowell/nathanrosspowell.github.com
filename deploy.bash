@@ -1,4 +1,5 @@
 pushd ~/projects/dev-web
+python freeze.py
 git pull
 git add *
 git commit -m "[ADD] Doing a deploy from latest code"
@@ -13,3 +14,4 @@ git add *
 git commit -m "[ADD] Doing a deploy from latest code"
 git push origin master
 popd
+

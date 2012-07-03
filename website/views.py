@@ -51,8 +51,10 @@ def career():
 
 @app.route( "/blog/" )
 def blog():
+    print "Blog start"
     dir = os.path.join( app.config[ "ROOT_DIR" ], app.config[ "FLATPAGES_ROOT" ] )
     blogs = [ post for post in latest_pages( 5, dir, "blog" ) ]
+    print "Blog end", blogs, "NOPE"
     return render_template( blog_html, pages = blogs ) 
 
 @app.route( "/<path:page_path>/" )

@@ -10,14 +10,17 @@
                     <div class='date'>
                         {{ page.published }}
                     </div>
-                    <div class='title'>xample with your forum shortname
-
+                    <div class='title'>
                         {{ page.title|title }}
                     </div>
                 </div>
             </header>
             <p>
-                {{ page.body[:100] }}...
+                {% if page.short %}
+                    {{ page.short}}...
+                {% else %}
+                    {{ page.body[:100] }}...
+                {% endif %}
             </p>
             <footer>
                 <em>

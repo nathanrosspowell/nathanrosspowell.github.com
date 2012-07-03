@@ -41,6 +41,7 @@ def main( dir ):
     body = """title: %s
 published: %s
 url: %s
+comments: True
 tags:
 - blog
 

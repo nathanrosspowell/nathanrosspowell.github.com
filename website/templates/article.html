@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for page in pages %}
+        <article>
+            <header>
+                <div class='headline'>
+                    <div class='title'>
+                        {{ page.title|title }}
+                    </div>
+                </div>
+            </header>
+            <p>
+                {{ page.html|safe }}
+            </p>
+            <footer>
+                {% if page.comments %}
+                    {% include "disqus_comment_thread.html" %}
+                {% endif %}
+            </footer>
+        </article>
+    {% endfor %}
+{% endblock %}

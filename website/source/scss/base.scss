@@ -13,10 +13,9 @@ $col-text: white;
 $col-background: black;
 $col-background-alpha: 0.85;
 
-$col-flavor: #970000;
+$col-flavor: #BF1169;
+$col-flavor-dark: #7A0F45;
 
-$col-twitter: #4da3bf;
-$col-twitter-dark: #73b6cc;
 $col-rss: #d98b3c;
 $col-rss-dark: #e1a467;
 
@@ -70,7 +69,6 @@ body {
     margin: 0 auto;
     color: $col-text;
     background: $col-background;
-    /* used to be... nasa: http://apod.nasa.gov/apod/image/1005/rhoregion_andreo_big.jpg */
     background-image:url('../jpg/back2.jpg');
     background-attachment:fixed;
     background-position:center; 
@@ -103,6 +101,12 @@ h1 {
 
 }
 
+        a:link, a:visited, a:active {
+            color: $col-flavor;
+        }
+        a:hover {
+            color: $col-text;
+        }
 /******************************************************************/
 /* HEADER */
 hgroup{
@@ -126,7 +130,7 @@ nav#global {
         white-space: nowrap;
         vertical-align:middle;
         list-style-type: none;
-    margin: 0px $sz-margin 0px $sz-margin;
+        margin: 0px $sz-margin 0px $sz-margin;
         a { 
             @include rgba( $col-background, $col-background-alpha );
             display: inline-block;
@@ -135,10 +139,11 @@ nav#global {
             font-size:$sz-large-text;
             text-align:center;
             &:hover {
-                    background-image: -moz-linear-gradient(bottom, #ca0000, #970000);
-                    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca0000), color-stop(1, #970000));
+                    background-image: -moz-linear-gradient(bottom, $col-flavor-dark, $col-flavor);
+                    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $col-flavor-dark), color-stop(1, $col-flavor));
                 }
         }
+
     }
 }
 

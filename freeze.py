@@ -5,7 +5,7 @@ import os
 freezer = Freezer( app )
 
 @freezer.register_generator
-def page():
+def blogs():
     dir = os.path.join( app.config[ "ROOT_DIR" ], app.config[ "FLATPAGES_ROOT" ] )
     for page_path in walk.walk( os.path.join( dir, "blog" ), walk.newest ):
         urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]

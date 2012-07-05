@@ -1,5 +1,7 @@
 title: Connect
 comments: True
+template: "article.html"
+
 
 Here are a collection of links to my online profile, please feel free to connect with me!
 

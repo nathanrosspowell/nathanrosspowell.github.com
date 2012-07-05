@@ -36,8 +36,6 @@ $c-tab-options: 4;
 $c-tab-extra: 0px;
 $c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-options ) + $c-tab-extra;
 
-
-
 /******************************************************************/
 /* Mixins */
 @mixin clear-spacer( $vertMargin ) {
@@ -55,6 +53,11 @@ $c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-
 	-o-box-shadow: $one, $two, $three;
     -webkit-box-shadow: $one, $two, $three;
     box-shadow: $one, $two, $three;
+}
+
+@mixin flavor-background(){
+    background-image: -moz-linear-gradient(bottom, $col-flavor-dark, $col-flavor);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $col-flavor-dark), color-stop(1, $col-flavor));
 }
 
 /******************************************************************/
@@ -101,12 +104,14 @@ h1 {
 
 }
 
-        a:link, a:visited, a:active {
-            color: $col-flavor;
-        }
-        a:hover {
-            color: $col-text;
-        }
+a:link, a:visited, a:active {
+    color: $col-flavor;
+    text-decoration: none;
+}
+a:hover {
+    color: $col-text;
+    text-decoration: underline;
+}
 /******************************************************************/
 /* HEADER */
 hgroup{
@@ -139,9 +144,8 @@ nav#global {
             font-size:$sz-large-text;
             text-align:center;
             &:hover {
-                    background-image: -moz-linear-gradient(bottom, $col-flavor-dark, $col-flavor);
-                    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $col-flavor-dark), color-stop(1, $col-flavor));
-                }
+                @include flavor-background();
+            }
         }
 
     }
@@ -160,12 +164,13 @@ article {
         padding: 0 0 $sz-pad 0;
         h1 { 
         
+            padding: 0 0 $sz-pad 0;
         }
     }
 }
 
 .headline {
-    background-color: #222;
+    @include flavor-background();
     .date{
         display: inline;
     }
@@ -174,6 +179,7 @@ article {
         font-weight:bold;
     }
     .comments{
+        font-weight: bold;
         float: right;
     }
 }
@@ -181,7 +187,7 @@ article {
 
 .tags {
     &:hover {
-	
+        @include flavor-background();
     }
 }
 
@@ -190,8 +196,7 @@ article {
 
     }
     &:hover {
-          background-image: -moz-linear-gradient(bottom, #ca0000, #970000);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca0000), color-stop(1, #970000));
+        @include flavor-background();
     }
 }
 
@@ -291,5 +296,9 @@ footer section:first-child {
 }
 
 .copyright {
-
+    a{
+        font-weight: bold;
+        font-weight: bold;
+        font-weight: bold;
+    }
 }

@@ -1,5 +1,7 @@
 title: Code 
 comments: False
+template: "article.html"
+comments: True
 
 TODO:
 

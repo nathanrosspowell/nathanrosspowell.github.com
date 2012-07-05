@@ -1,5 +1,5 @@
 title: Career
-comments: False
+comments: True
 template: "article.html"
 
 TODO:

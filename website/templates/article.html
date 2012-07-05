@@ -1,22 +1,24 @@
 {% extends "base.html" %}
+{% import "macro_heading.html" as headings %}
+
 {% block content %}
     {% for page in pages %}
         <article>
-            <header>
-                <div class='headline'>
-                    <div class='title'>
-                        {{ page.title|title }}
-                    </div>
-                </div>
-            </header>
+            {% call headings.article() %}
+                {{ page.title }}
+            {% endcall %}
             <p>
                 {{ page.html|safe }}
             </p>
-            <footer>
-                {% if page.comments %}
-                    {% include "disqus_comment_thread.html" %}
-                {% endif %}
-            </footer>
         </article>
+
+        {% if page.comments %}
+            <article>
+            {% call headings.article() %}
+                Comments for {{ page.title|title }}
+            {% endcall %}
+            {% include "disqus_comment_thread.html" %}
+            </article>
+        {% endif %}
     {% endfor %}
 {% endblock %}

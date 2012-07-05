@@ -1,0 +1,9 @@
+{% macro article() -%}
+    <header>
+        <div class='headline'>
+            <div class='title'>
+                {{ caller() }}
+            </div>
+        </div>
+    </header>
+{%- endmacro %}

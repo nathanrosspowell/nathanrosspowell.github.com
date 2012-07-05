@@ -1,20 +1,15 @@
-/******************************************************************
-
-HElloooooooo
-
-*******************************************************************/
-/* nrp.sass */
+/******************************************************************/
+/* base.scss */
 @import "all";
 
 /******************************************************************/
 /* Colours */
-
-$col-text: white;
+$col-text: #D9CCCC;
 $col-background: black;
 $col-background-alpha: 0.85;
 
-$col-flavor: #BF1169;
-$col-flavor-dark: #7A0F45;
+$col-flavor: #C90A50;
+$col-flavor-dark: #4F0101;
 
 $col-rss: #d98b3c;
 $col-rss-dark: #e1a467;
@@ -56,14 +51,12 @@ $c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-
 }
 
 @mixin flavor-background(){
-    background-image: -moz-linear-gradient(bottom, $col-flavor-dark, $col-flavor);
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $col-flavor-dark), color-stop(1, $col-flavor));
+    @include linear-gradient($col-flavor-dark, $col-flavor);
 }
 
 /******************************************************************/
 /* Styles */
 html {
- 
 }
 
 body {
@@ -79,7 +72,6 @@ body {
 }
 
 p {
-
 }
 
 strong {
@@ -92,42 +84,42 @@ em {
 
 a { 
     &:hover {
-        
     }
     &:active {
-        
     }
 }
 
 
 h1 {
-
 }
 
 a:link, a:visited, a:active {
     color: $col-flavor;
     text-decoration: none;
 }
+
 a:hover {
     color: $col-text;
     text-decoration: underline;
 }
+
 /******************************************************************/
 /* HEADER */
 hgroup{
     text-align: center;
     @include main-spacer( 0px );
     h1{
-        
     }
     h2{
         font-size:$sz-large-text;
     }
     a {
-    
     }
 }
-hgroup h1 a:hover { border: none }
+
+hgroup h1 a:hover {
+    border: none
+}
 
 /* Navigation */
 nav#global {
@@ -147,15 +139,12 @@ nav#global {
                 @include flavor-background();
             }
         }
-
     }
 }
 
-
+/******************************************************************/
 /* MAIN */
 #content {
-
-
 }
 
 article {
@@ -224,17 +213,14 @@ aside h1, footer h1 {
 aside section:last-child { margin-bottom: 0 }
 
 /******************************************************************/
-
 #inTouch {
     li {
         span {
-        
         }
     }
 }
 
 .twitter {
-
 }
 
 .twitterHandle {
@@ -244,12 +230,10 @@ aside section:last-child { margin-bottom: 0 }
 
 
 .rss {
-
 }
 
 .links {
     li {
-    
     }
 }
 .links li:hover {
@@ -264,33 +248,26 @@ aside section:last-child { margin-bottom: 0 }
 /* blockquote  */
 blockquote {
     &:before {
-
     }
     &:after {
-
     }
     &:hover {
-
     }
 }
-
 
 /******************************************************************/
 /* FOOTER */
 footer {
     section {
         @include main-spacer( $sz-margin );
-
 	}
 }
 footer section:first-child { 
-
 }
 
 #comments {
     li {
         .newLine {
-        
         }
 	}
 }
@@ -301,4 +278,19 @@ footer section:first-child {
         font-weight: bold;
         font-weight: bold;
     }
+}
+
+
+/******************************************************************/
+/* Disqus */
+#dsq-content{ 
+    color:$col-text !important;
+}
+
+#dsq-content .dsq-moderate .dsq-comment-header{
+    background: $col-flavor;
+}
+
+.dsq-comment-body{
+    color:$col-text !important;
 }

@@ -60,6 +60,7 @@ $useIEFilters: 0; // might be 0 or 1. disabled by default.
   -moz-transform: rotate(#{$deg}deg);
   -o-transform: rotate(#{$deg}deg);
   -webkit-transform: rotate(#{$deg}deg);
+  transform: rotate(#{$deg}deg);
   // not ready, impediment: cos required!
   //@if $ie == 1 {
   //  filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.99144486137381, M12=--0.130526192220052, M21=0.130526192220052, M22=0.99144486137381);
@@ -73,5 +74,12 @@ $useIEFilters: 0; // might be 0 or 1. disabled by default.
   -o-transition: $value;
   -webkit-transition: $value;
   transition: $value;
+}
+
+@mixin scale($x, $y , $ie: $useIEFilters) {
+  -moz-transform: scale($x,$y);
+  -o-transform:  scale($x,$y);
+  -webkit-transform:  scale($x,$y);
+  transform:  scale($x,$y);
 }
 // ==== /CSS3 SASS MIXINS ====

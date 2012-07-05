@@ -1,9 +1,5 @@
-/******************************************************************
-
-HElloooooooo
-
-*******************************************************************/
-/* nrp.sass */
+/******************************************************************/
+/* base.scss */
 /******************************************************************/
 /* Colours */
 /******************************************************************/
@@ -19,7 +15,7 @@ body {
   width: 850px;
   text-align: justify;
   margin: 0 auto;
-  color: white;
+  color: #d9cccc;
   background: black;
   background-image: url("../jpg/back2.jpg");
   background-attachment: fixed;
@@ -33,11 +29,11 @@ em {
   font-style: italic; }
 
 a:link, a:visited, a:active {
-  color: #bf1169;
+  color: #c90a50;
   text-decoration: none; }
 
 a:hover {
-  color: white;
+  color: #d9cccc;
   text-decoration: underline; }
 
 /******************************************************************/
@@ -69,9 +65,13 @@ nav#global h6 {
     font-size: 250%;
     text-align: center; }
     nav#global h6 a:hover {
-      background-image: -moz-linear-gradient(bottom, #7a0f45, #bf1169);
-      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7a0f45), color-stop(1, #bf1169)); }
+      background-color: #c90a50;
+      background-image: -moz-linear-gradient(#4f0101, #c90a50);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4f0101), color-stop(1, #c90a50));
+      background-image: -webkit-linear-gradient(#4f0101, #c90a50);
+      background-image: -o-linear-gradient(#4f0101, #c90a50); }
 
+/******************************************************************/
 /* MAIN */
 article {
   margin: 12px 12px 12px 12px;
@@ -84,8 +84,11 @@ article {
       padding: 0 0 20px 0; }
 
 .headline {
-  background-image: -moz-linear-gradient(bottom, #7a0f45, #bf1169);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7a0f45), color-stop(1, #bf1169)); }
+  background-color: #c90a50;
+  background-image: -moz-linear-gradient(#4f0101, #c90a50);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4f0101), color-stop(1, #c90a50));
+  background-image: -webkit-linear-gradient(#4f0101, #c90a50);
+  background-image: -o-linear-gradient(#4f0101, #c90a50); }
   .headline .date {
     display: inline; }
   .headline .title {
@@ -96,12 +99,18 @@ article {
     float: right; }
 
 .tags:hover {
-  background-image: -moz-linear-gradient(bottom, #7a0f45, #bf1169);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7a0f45), color-stop(1, #bf1169)); }
+  background-color: #c90a50;
+  background-image: -moz-linear-gradient(#4f0101, #c90a50);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4f0101), color-stop(1, #c90a50));
+  background-image: -webkit-linear-gradient(#4f0101, #c90a50);
+  background-image: -o-linear-gradient(#4f0101, #c90a50); }
 
 .button:hover {
-  background-image: -moz-linear-gradient(bottom, #7a0f45, #bf1169);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7a0f45), color-stop(1, #bf1169)); }
+  background-color: #c90a50;
+  background-image: -moz-linear-gradient(#4f0101, #c90a50);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4f0101), color-stop(1, #c90a50));
+  background-image: -webkit-linear-gradient(#4f0101, #c90a50);
+  background-image: -o-linear-gradient(#4f0101, #c90a50); }
 
 /******************************************************************/
 footer {
@@ -141,3 +150,14 @@ footer section {
   font-weight: bold;
   font-weight: bold;
   font-weight: bold; }
+
+/******************************************************************/
+/* Disqus */
+#dsq-content {
+  color: #d9cccc !important; }
+
+#dsq-content .dsq-moderate .dsq-comment-header {
+  background: #c90a50; }
+
+.dsq-comment-body {
+  color: #d9cccc !important; }

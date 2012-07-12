@@ -4,12 +4,16 @@
 
 /******************************************************************/
 /* Colours */
-$col-text: #D9CCCC;
-$col-background: black;
+$col-text: #F2ECD5;
+$col-text-dark: #C4BEA9;
+$col-background: #240605;
 $col-background-alpha: 0.85;
 
-$col-flavor: #C90A50;
-$col-flavor-dark: #4F0101;
+$col-flavor: #A079B0;
+$col-flavor-dark: #724D82;
+
+$col-alt: #D1745A;
+$col-alt-dark: #A3472e;
 
 $col-rss: #d98b3c;
 $col-rss-dark: #e1a467;
@@ -65,7 +69,7 @@ body {
     margin: 0 auto;
     color: $col-text;
     background: $col-background;
-    background-image:url('../jpg/back2.jpg');
+    background-image:url('../jpg/back3.jpg');
     background-attachment:fixed;
     background-position:center; 
     background-repeat: no-repeat;

@@ -6,7 +6,7 @@ git commit -m "[ADD] Doing a deploy from latest code"
 git push origin dev
 popd
 pushd ~/projects
-bash deploy-web.bash
+cp -r dev-web/website/build/* build-web/
 popd
 pushd ~/projects/build-web
 git pull

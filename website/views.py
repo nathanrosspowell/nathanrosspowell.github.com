@@ -26,13 +26,15 @@ blog_post_html = "blog_post.html"
 def latest_pages( n, dir, subdir ):
     for page_path in walk.take( n, os.path.join( dir, subdir ), walk.newest ):
         urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
-        yield pages.get_or_404( urlpath ) 
+        yield pages.get_or_404( urlpath )
 
 def get_pages( page_path ):
     return [page]
+
+def base_render_template( template, **kwargs ):
     kwargs[ "credits" ] = pages.get_or_404( "menu/credits_short" )
     kwargs[ "bio" ] = pages.get_or_404( "menu/bio" )
-    return render_template( template, **kwargs ) 
+    return render_template( template, **kwargs )
 
 #-----------------------------------------------------------------------------
 # Redirects.
@@ -64,18 +66,15 @@ def career():
 # Dynamic pages.
 @app.route( "/blog/" )
 def blog():
-    print "Blog start"
     dir = os.path.join( app.config[ "ROOT_DIR" ], app.config[ "FLATPAGES_ROOT" ] )
     blogs = [ post for post in latest_pages( 5, dir, "blog" ) ]
-    print "Blog end", blogs, "NOPE"
-    return base_render_template( blog_html, pages = blogs ) 
+    return base_render_template( blog_html, pages = blogs )
 
 @app.route( "/<path:page_path>/" )
 def page( page_path ):
     page = pages.get_or_404( page_path )
     template = page.meta.get( "template", blog_post_html )
-    print "####", page_path, template
-    return base_render_template( template, pages=[page] ) 
+    return base_render_template( template, pages=[page] )
 
 #-----------------------------------------------------------------------------
 # Error pages.

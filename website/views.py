@@ -30,25 +30,9 @@ def latest_pages( n, dir, subdir ):
 
 def get_pages( page_path ):
     return [page]
-
-def bio():
-    return pages.get_or_404( "menu/bio" )
-
-def credits_short():
-    return pages.get_or_404( "menu/credit_short" )
-
-def base_render_template( template, **kwargs ):
-    print "1. rend_templ", template, kwargs
     kwargs[ "credits" ] = pages.get_or_404( "menu/credits_short" )
     kwargs[ "bio" ] = pages.get_or_404( "menu/bio" )
-    print "1.5", kwargs
-    print "1.6"
-    print "1.75"
-    print "2. kwargs", kwargs
-    print "3. rend_templ", template, kwargs
-    temp = render_template( template, **kwargs ) 
-    print "4. rendered."
-    return temp
+    return render_template( template, **kwargs ) 
 
 #-----------------------------------------------------------------------------
 # Redirects.

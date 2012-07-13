@@ -12,8 +12,11 @@ $col-background-alpha: 0.85;
 $col-flavor: #A079B0;
 $col-flavor-dark: #724D82;
 
-$col-alt: #D1745A;
-$col-alt-dark: #A3472e;
+$col-alt: #B079A5;
+$col-alt-dark: #75506E;
+
+$col-rss: #D1745A;
+$col-rss-dark: #A3472e;
 
 $col-rss: #d98b3c;
 $col-rss-dark: #e1a467;
@@ -55,7 +58,11 @@ $c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-
 }
 
 @mixin flavor-background(){
-    @include linear-gradient($col-flavor-dark, $col-flavor);
+    @include linear-gradient( $col-flavor-dark, $col-flavor );
+}
+
+@mixin alt-background(){
+    @include linear-gradient( $col-alt-dark, $col-alt );
 }
 
 /******************************************************************/
@@ -162,9 +169,16 @@ article {
             padding: 0 0 $sz-pad 0;
         }
     }
+    section { 
+        padding: 0 0 $sz-pad 0;
+    }
+    section:last-child { 
+        padding: 0 0 0 0;
+    }
 }
 
 .headline {
+    font-size: x-large; 
     @include flavor-background();
     .date{
         display: inline;
@@ -179,6 +193,10 @@ article {
     }
 }
 
+section header div.headline {
+    font-size: medium; 
+    @include alt-background();
+}
 
 .tags {
     &:hover {

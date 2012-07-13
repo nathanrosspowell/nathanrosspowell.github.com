@@ -31,6 +31,9 @@ def latest_pages( n, dir, subdir ):
 def get_pages( page_path ):
     return [page]
 
+def bio():
+    return pages.get_or_404( "menu/bio" )
+
 #-----------------------------------------------------------------------------
 # Stuff.
 @app.route('/')
@@ -45,6 +48,10 @@ def connect():
 def code():
     return page( "menu/code" )
 
+@app.route("/games")
+def games():
+    return page( "menu/games" )
+
 @app.route("/career/")
 def career():
     return page( "menu/career" )
@@ -55,11 +62,11 @@ def blog():
     dir = os.path.join( app.config[ "ROOT_DIR" ], app.config[ "FLATPAGES_ROOT" ] )
     blogs = [ post for post in latest_pages( 5, dir, "blog" ) ]
     print "Blog end", blogs, "NOPE"
-    return render_template( blog_html, pages = blogs ) 
+    return render_template( blog_html, pages = blogs, bio = bio() ) 
 
 @app.route( "/<path:page_path>/" )
 def page( page_path ):
     page = pages.get_or_404( page_path )
     template = page.meta.get( "template", blog_post_html )
     print "####", page_path, template
-    return render_template( template, pages=[page] ) 
+    return render_template( template, pages=[page], bio = bio() ) 

@@ -7,8 +7,9 @@
 <head>
     <meta charset='utf-8' />
     <title>
-        nathanrosspowell.com 
+        nathanrosspowell.com - 
         {% block page_title %}
+            Personal Website
         {% endblock %}
     </title>
     <meta content='{% block meta_description %}Webpage{% endblock %}' name='description' />
@@ -26,11 +27,9 @@
                 nathanrosspowell.com
             </a>
         </h1>
-        <h4>
-            {% block page_quote %}
-                "An intelligent hell would be better than a stupid paradise."
-            {% endblock page_quote %}
-        </h4>
+        <h2>
+            Personal Website
+        </h2>
     </hgroup>
     <nav id='global'>
         <h6>
@@ -39,9 +38,6 @@
             </a>
             <a href="{{ url_for( "code" ) }}">
                 Code
-            </a>
-            <a href="{{ url_for( "games" ) }}">
-                Games
             </a>
             <a href="{{ url_for( "career" ) }}">
                 Career
@@ -90,7 +86,7 @@
                 Nathan Ross Powell Bio
    </h1>
    <p>
-        {{ bio.html|safe }}
+   I am a [computer programmer][career] who makes a living working on [computer games][games], which happens to be a very nice job. 
    </p>
   </section>
  <section class='copyright'>

@@ -31,8 +31,8 @@ $sz-large-text: 250%;
 /******************************************************************/
 /* constants */
 /* options */
-$c-tab-options: 4;
-$c-tab-extra: 0px;
+$c-tab-options: 5;
+$c-tab-extra: 3px;
 $c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-options ) + $c-tab-extra;
 
 /******************************************************************/
@@ -69,10 +69,11 @@ body {
     margin: 0 auto;
     color: $col-text;
     background: $col-background;
-    background-image:url('../jpg/back3.jpg');
+    @include image-linear-gradient( '../jpg/back3.jpg', $col-background, $col-flavor-dark);
     background-attachment:fixed;
-    background-position:center; 
-    background-repeat: no-repeat;
+    background-position:center top; 
+    background-repeat: repeat-y;
+    border: 10px, $col-flavor; 
 }
 
 p {
@@ -127,6 +128,7 @@ hgroup h1 a:hover {
 
 /* Navigation */
 nav#global {
+    margin-bottom: 1.5cm;
     h6 {
         white-space: nowrap;
         vertical-align:middle;

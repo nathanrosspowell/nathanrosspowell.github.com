@@ -1,5 +1,5 @@
 title: Hello, world!
-short: This is the first _blog_ entry onto my newly made website
+short: This is the first blog entry onto my newly made website.
 published: 2012/07/03
 url: 2012/07/03/hello-world
 comments: True

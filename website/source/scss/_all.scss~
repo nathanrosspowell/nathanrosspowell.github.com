@@ -46,15 +46,17 @@ $useIEFilters: 0; // might be 0 or 1. disabled by default.
   @if $ie != 1 {
     background-color: $to;
   }
+  
+  background-image: url( $url); 
+  background-image: url( $url), -moz-linear-gradient($from, $to);
+  background-image: url( $url), -webkit-gradient(linear,left top,left bottom,color-stop(0, $from),color-stop(1, $to));
+  background-image: url( $url), -webkit-linear-gradient($from, $to);
+  background-image: url( $url), -o-linear-gradient($from, $to);
 
-background-image: url( $url ); /* fallback */
-background-image: url( $url ), -webkit-gradient(linear, left top, left bottom, from($from), to($to)); /* Saf4+, Chrome */
-background-image: url( $url ), -webkit-linear-gradient(top, $from, $to); /* Chrome 10+, Saf5.1+ */
-background-image: url( $url ),    -moz-linear-gradient(top, $from, $to); /* FF3.6+ */
-background-image: url( $url ),     -ms-linear-gradient(top, $from, $to); /* IE10 */
-background-image: url( $url ),      -o-linear-gradient(top, $from, $to); /* Opera 11.10+ */
-background-image: url( $url ),         linear-gradient(top, $from, $to); /* W3C */
-
+  @if $ie == 1 { 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+    -ms-filter: quote(progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}'));
+  }
 }
 
 @mixin rgba($hex, $alpha, $ie: $useIEFilters) {     

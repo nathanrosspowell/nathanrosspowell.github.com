@@ -17,10 +17,25 @@ body {
   margin: 0 auto;
   color: #f2ecd5;
   background: #240605;
+  background-color: #724d82;
   background-image: url("../jpg/back3.jpg");
+  /* fallback */
+  background-image: url("../jpg/back3.jpg"), -webkit-gradient(linear, left top, left bottom, from(#240605), to(#724d82));
+  /* Saf4+, Chrome */
+  background-image: url("../jpg/back3.jpg"), -webkit-linear-gradient(top, #240605, #724d82);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../jpg/back3.jpg"), -moz-linear-gradient(top, #240605, #724d82);
+  /* FF3.6+ */
+  background-image: url("../jpg/back3.jpg"), -ms-linear-gradient(top, #240605, #724d82);
+  /* IE10 */
+  background-image: url("../jpg/back3.jpg"), -o-linear-gradient(top, #240605, #724d82);
+  /* Opera 11.10+ */
+  background-image: url("../jpg/back3.jpg"), linear-gradient(top, #240605, #724d82);
+  /* W3C */
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat; }
+  background-position: center top;
+  background-repeat: repeat-y;
+  border: 10px, #a079b0; }
 
 strong {
   font-weight: bold; }
@@ -51,25 +66,27 @@ hgroup h1 a:hover {
   border: none; }
 
 /* Navigation */
-nav#global h6 {
-  white-space: nowrap;
-  vertical-align: middle;
-  list-style-type: none;
-  margin: 0px 12px 0px 12px; }
-  nav#global h6 a {
-    background-color: #240605;
-    background-color: rgba(36, 6, 5, 0.85);
-    display: inline-block;
-    width: 203.5px;
-    height: 45px;
-    font-size: 250%;
-    text-align: center; }
-    nav#global h6 a:hover {
-      background-color: #a079b0;
-      background-image: -moz-linear-gradient(#724d82, #a079b0);
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #724d82), color-stop(1, #a079b0));
-      background-image: -webkit-linear-gradient(#724d82, #a079b0);
-      background-image: -o-linear-gradient(#724d82, #a079b0); }
+nav#global {
+  margin-bottom: 1.5cm; }
+  nav#global h6 {
+    white-space: nowrap;
+    vertical-align: middle;
+    list-style-type: none;
+    margin: 0px 12px 0px 12px; }
+    nav#global h6 a {
+      background-color: #240605;
+      background-color: rgba(36, 6, 5, 0.85);
+      display: inline-block;
+      width: 163.4px;
+      height: 45px;
+      font-size: 250%;
+      text-align: center; }
+      nav#global h6 a:hover {
+        background-color: #a079b0;
+        background-image: -moz-linear-gradient(#724d82, #a079b0);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #724d82), color-stop(1, #a079b0));
+        background-image: -webkit-linear-gradient(#724d82, #a079b0);
+        background-image: -o-linear-gradient(#724d82, #a079b0); }
 
 /******************************************************************/
 /* MAIN */

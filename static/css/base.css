@@ -99,8 +99,13 @@ article {
     padding: 0 0 20px 0; }
     article header h1 {
       padding: 0 0 20px 0; }
+  article section {
+    padding: 0 0 20px 0; }
+  article section:last-child {
+    padding: 0 0 0 0; }
 
 .headline {
+  font-size: x-large;
   background-color: #a079b0;
   background-image: -moz-linear-gradient(#724d82, #a079b0);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #724d82), color-stop(1, #a079b0));
@@ -114,6 +119,14 @@ article {
   .headline .comments {
     font-weight: bold;
     float: right; }
+
+section header div.headline {
+  font-size: medium;
+  background-color: #b079a5;
+  background-image: -moz-linear-gradient(#75506e, #b079a5);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #75506e), color-stop(1, #b079a5));
+  background-image: -webkit-linear-gradient(#75506e, #b079a5);
+  background-image: -o-linear-gradient(#75506e, #b079a5); }
 
 .tags:hover {
   background-color: #a079b0;

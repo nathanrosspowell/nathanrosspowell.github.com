@@ -10,4 +10,4 @@ Thanks,
 
 Nathan
 
-[connect]: http://www.nathanrosspowell.com/connect "Connect with Nathan"
+[connect]: http://nathanrosspowell.com/connect "Connect with Nathan"

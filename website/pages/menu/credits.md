@@ -9,5 +9,5 @@ To create this website I used the following technologys:
 * Github pages
 * Disqus
 
-[home]: http://www.nathanrosspowell.com/ "Home"
-[games]: http://ww.nathanrosspowell.com/credits "Nathan's credits"
+[home]: http://nathanrosspowell.com/ "Home"
+[games]: http://nathanrosspowell.com/credits "Nathan's credits"

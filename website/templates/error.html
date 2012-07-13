@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% import "macro_heading.html" as headings %}
+{% block content %}
+    <article>
+            {% call headings.article() %}
+                Looks like we got 
+                {% if error %}
+                a {{ error }}
+                {% else %}
+                an 
+                {% endif %}
+                error...
+            {% endcall %}
+            <p>
+                {% if error is sameas "404" %}
+                    404 - page is no where to be found.
+                {% elif error is sameas "403" %}
+                    403 - access is forbidden for you, sadly.
+                {% elif error is sameas "410" %}
+                    410 - this page used to be here, but not any more.
+                {% elif error is sameas "500" %}
+                    500 - internal server error, something has gone bang!
+                {% else %}
+                ... who knows what it was.
+                {% endif %}
+            </p>
+            <p>
+                Please make your way back to where you came from.
+            </p>
+        </article>
+{% endblock %}

@@ -8,81 +8,102 @@
     <meta charset='utf-8' />
     <title>
         nathanrosspowell.com 
-        {% block page_title %}
-        {% endblock %}
+        
+        
     </title>
-    <meta content='{% block meta_description %}Webpage{% endblock %}' name='description' />
-    <meta content='{% block meta_author %}Nathan Ross Powell{% endblock %}' name='author' />
+    <meta content='Webpage' name='description' />
+    <meta content='Nathan Ross Powell' name='author' />
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0;' name='viewport' />
 <!-- Load in the CSS with the template added JSON object. -->
-    <!--script src='{{ STATIC_URL }}js/base.js'></script-->
-    <link rel="stylesheet" href="{{ url_for(".static", filename="css/base.css") }}" type="text/css" media="screen, projection">
+    <!--script src='js/base.js'></script-->
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css" media="screen, projection">
 </script>
 </head>
 <header>
     <hgroup>
         <h1>
-            <a href="{{ url_for( "index" ) }}">
+            <a href="/">
                 nathanrosspowell.com
             </a>
         </h1>
         <h4>
-            {% block page_quote %}
+            
                 "An intelligent hell would be better than a stupid paradise."
-            {% endblock page_quote %}
+            
         </h4>
     </hgroup>
     <nav id='global'>
         <h6>
-            <a href="{{ url_for( "blog" ) }}">
+            <a href="/blog/">
                 Blog
             </a>
-            <a href="{{ url_for( "code" ) }}">
+            <a href="/code/">
                 Code
             </a>
-            <a href="{{ url_for( "games" ) }}">
+            <a href="/games/">
                 Games
             </a>
-            <a href="{{ url_for( "career" ) }}">
+            <a href="/career/">
                 Career
             </a>
-            <a href="{{ url_for( "connect" ) }}">
+            <a href="/connect/">
                 Connect
             </a>
         </h6>
     </nav>
 </header>
-<body class='{% block body_class %}{% endblock %}'>
-    {% block body %}
+<body class=''>
+    
         <div id='container'>
             <header></header>
             <div id='main' role='main'>
-                {% block content %}
-<!-- content here --> MAIN CONTENT BLOCK HERE!!!!!!
-                {% endblock %}
+                
+    
+        <article>
+            <header>
+        <div class='headline'>
+            <div class='title'>
+                
+                Credits
+            
+            </div>
+        </div>
+    </header>
+            <p>
+                <p>To create this website I used the following technologys:</p>
+<ul>
+<li>Flask</li>
+<li>Frozen Flask</li>
+<li>Github pages</li>
+<li>Disqus</li>
+</ul>
+            </p>
+        </article>
+
+        
+    
+
             </div>
             <footer></footer>
         </div>
         <aside>
         </aside>
-        {% if debug %}
-            {% include 'includes/debug.html' %}
-        {% endif %}
-        {% block loading %}
-        {% endblock %}
-        {% block js_inline %}
+        
+        
+        
+        
 <!-- js here -->
 <!-- :javascript -->
-        {% endblock %}
+        
 <!--[if lt IE 7 ]>
-    <script src="{{ STATIC_URL }}js/dd_belatedpng.js"></script>
+    <script src="js/dd_belatedpng.js"></script>
 <script type='text/javascript'>
 // <![CDATA[
             <script> DD_belatedPNG.fix('img, .png_bg');</script>
 // ]]>
 </script>
 <![endif]-->
-    {% endblock %}
+    
 </body>
 <footer class='clearfix'>
   <section>
@@ -90,11 +111,11 @@
                 Nathan Ross Powell Bio
    </h1>
    <p>
-        {{ bio.html|safe }}
+        <p>I am a <a href="http://www.nathanrosspowell.com/career" title="Nathan's Career">computer programmer</a> who makes a living working on <a href="http://www.nathanrosspowell.com/games" title="Nathan's Games">computer games</a> which happens to be a very nice job, indeed. </p>
    </p>
   </section>
   <section class='copyright'>
-    {{ credits.html|safe }}
+    <p><a href="http://www.nathanrosspowell.com/" title="Home">nathanrosspowell.com</a> - Copyright ©2012 - All Rights Reserved - <a href="http://ww.nathanrosspowell.com/credits" title="Nathan's credits">Credits</a>.</p>
   </section>
 </footer>
 </html>

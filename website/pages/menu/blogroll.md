@@ -2,7 +2,7 @@ title: Blogroll
 comments: True
 template: "article.html"
 
-* [Elliot J Powell][elliot] - My brother, talented dancer, singer, performer. The _Mentalist_.
+* [Elliot Powell][elliot] - My brother, talented dancer, singer, performer. The _Mentalist_.
 * [Chris Douglass][doug] - The MMAthlete, pro fighter Chris "The Body" Douglass.
 * [Ryan Anderson][randle] - Touring cyclist from Toon.
 * [Matt Lacey][lacey] - Reggae Reggae Source Control expert.

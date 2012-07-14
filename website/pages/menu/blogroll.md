@@ -4,7 +4,7 @@ template: "article.html"
 
 * [Elliot Powell][elliot] - My brother, talented dancer, singer, performer. The _Mentalist_.
 * [Chris Douglass][doug] - The MMAthlete, pro fighter Chris "The Body" Douglass.
-* [Ryan Anderson][randle] - Touring cyclist from Toon.
+* [Ryan Anderson][randle] - Touring cyclist and Toon lover.
 * [Matt Lacey][lacey] - Reggae Reggae Source Control expert.
 * [Peter Alexander][peter] - Programmer, Mac gamer, _D_ lover.
 

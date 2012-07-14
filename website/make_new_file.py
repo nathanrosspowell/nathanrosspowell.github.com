@@ -3,6 +3,10 @@ import os
 import re
 
 #-----------------------------------------------------------------------------
+# Globals.
+datefolders = ( "blog", )
+
+#-----------------------------------------------------------------------------
 # URL slug creation via http://djangosnippets.org/snippets/29/
 def slugify(inStr):
     removelist = ["a", "an", "as", "at", "before", "but",   \
@@ -23,29 +27,41 @@ def input( output ):
 # Create a new file of the given name in the correct folder.
 # Sets the YAML metadata including URL.
 def main( dir ):
-    title = input( "Blog title>" )
+    folder = input ( "Top folder>" )
+    title = input( "Title>" )
+    template = input( "Template (.html)>" )
+    comments = input( "Comments> y/n>" )
+    if comments == 'n' or comments == 'N':
+        comments = False
+    else:
+        comments = True
     titlename = slugify( title )
     responce = input ( "Create '%s' y/n>" % ( titlename, ) )
     if responce != "y" and responce != "Y":
         return "Bailed"
-    if not os.path.exists( "blog" ):
-        os.mkdir( "blog" )
+    if not os.path.exists( folder ):
+        os.mkdir( folder )
     now = datetime.datetime.now()
     date = now.strftime( "%Y/%m/%d" )
-    urlpath = "blog/%s/" % ( date,)
-    path = os.path.join( dir, urlpath )
+    if folder in datefolders:
+        urlpath = "blog/%s/" % ( date,)
+        path = os.path.join( dir, urlpath )
+        url = os.path.join( date, titlename )
+    else:
+        path = os.path.join( dir, folder )
+        url = os.path.join( folder, titlename )
     if not os.path.exists( path ):
         os.makedirs( path )
-    url = os.path.join( date, titlename )
     titlepath = os.path.join( path, titlename )
     body = """title: %s
 published: %s
 url: %s
-comments: True
+template: "%s"
+comments: %s
 tags:
-- blog
+- %s
 
-Heres is the post body.""" % ( title, date, url )
+Heres is the post body.""" % ( title, date, url, template, comments, folder )
     with open( titlepath+".md", 'w' ) as file:
         file.write( body )
 

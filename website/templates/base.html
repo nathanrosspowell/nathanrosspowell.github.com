@@ -14,8 +14,6 @@
     <meta content='{% block meta_description %}Webpage{% endblock %}' name='description' />
     <meta content='{% block meta_author %}Nathan Ross Powell{% endblock %}' name='author' />
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0;' name='viewport' />
-<!-- Load in the CSS with the template added JSON object. -->
-    <!--script src='{{ STATIC_URL }}js/base.js'></script-->
     <link rel="stylesheet" href="{{ url_for(".static", filename="css/base.css") }}" type="text/css" media="screen, projection">
 </script>
 </head>
@@ -31,23 +29,28 @@
                 "An intelligent hell would be better than a stupid paradise."
             {% endblock page_quote %}
         </h4>
+        <h5>
+            {% block page_quote_source %}
+                - Victor Hugo
+            {% endblock page_quote_source %}
+        </h5>
     </hgroup>
     <nav id='global'>
         <h6>
             <a href="{{ url_for( "blog" ) }}">
-                Blog
+                BLOG
             </a>
             <a href="{{ url_for( "code" ) }}">
-                Code
+                CODE
             </a>
             <a href="{{ url_for( "games" ) }}">
-                Games
+                GAMES
             </a>
             <a href="{{ url_for( "career" ) }}">
-                Career
+                CAREER
             </a>
             <a href="{{ url_for( "connect" ) }}">
-                Connect
+                CONNECT
             </a>
         </h6>
     </nav>

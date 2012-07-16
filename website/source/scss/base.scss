@@ -65,6 +65,39 @@ $c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-
     @include linear-gradient( $col-alt-dark, $col-alt );
 }
 
+@mixin body-font(){
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif; 
+}
+
+@mixin title-font(){
+    font-family: 'CorpulentCapsShadowRg';
+}
+
+/******************************************************************/
+/* Fonts */
+@font-face {
+    font-family: 'CorpulentCapsShadowRg';
+    src: url('../ttf/ccapshad.eot');
+    src: url('../ttf/ccapshad.eot?#iefix') format('embedded-opentype'),
+         url('../ttf/ccapshad.woff') format('woff'),
+         url('../ttf/ccapshad.ttf') format('truetype'),
+         url('../ttf/ccapshad.svg#CorpulentCapsShadowRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CorpulentCapsRegular';
+    src: url('../ttf/ccaps.eot');
+    src: url('../ttf/ccaps.eot?#iefix') format('embedded-opentype'),
+         url('../ttf/ccaps.woff') format('woff'),
+         url('../ttf/ccaps.ttf') format('truetype'),
+         url('../ttf/ccaps.svg#CorpulentCapsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /******************************************************************/
 /* Styles */
 html {
@@ -73,6 +106,8 @@ html {
 body {
     width: $sz-body;
     text-align: justify;
+    @include body-font();
+    font-weight: 300;
     margin: 0 auto;
     color: $col-text;
     background: $col-background;
@@ -103,6 +138,7 @@ a {
 
 
 h1 {
+    @include title-font();
 }
 
 a:link, a:visited, a:active {
@@ -119,16 +155,23 @@ a:hover {
 /* HEADER */
 hgroup{
     text-align: center;
-    @include main-spacer( 0px );
-    h1{
+    @include main-spacer( 0px ); 
+    h1 {
+        @include title-font();
+        font-size:$sz-large-text;
     }
-    h2{
+    h2 {
+        @include title-font();
         font-size:$sz-large-text;
     }
     a {
     }
 }
 
+header nav h6 a{
+    
+    
+}
 hgroup h1 a:hover {
     border: none
 }
@@ -146,6 +189,7 @@ nav#global {
             display: inline-block;
             width: $c-tab-width ;
             height: $sz-tab ;
+            @include title-font();
             font-size:$sz-large-text;
             text-align:center;
             &:hover {
@@ -178,6 +222,7 @@ article {
 }
 
 .headline {
+    @include title-font();
     font-size: x-large; 
     @include flavor-background();
     .date{
@@ -194,6 +239,7 @@ article {
 }
 
 section header div.headline {
+    @include body-font();
     font-size: medium; 
     @include alt-background();
 }

@@ -106,7 +106,8 @@ nav#global {
       height: 45px;
       font-family: 'CorpulentCapsShadowRg';
       font-size: 250%;
-      text-align: center; }
+      text-align: center;
+      vertical-align: bottom; }
       nav#global h6 a:hover {
         background-color: #a079b0;
         background-image: -moz-linear-gradient(#724d82, #a079b0);
@@ -204,10 +205,10 @@ footer section {
   background-color: #240605;
   background-color: rgba(36, 6, 5, 0.85); }
 
-.copyright a {
-  font-weight: bold;
-  font-weight: bold;
-  font-weight: bold; }
+.copyright {
+  text-align: center; }
+  .copyright a {
+    font-weight: bold; }
 
 /******************************************************************/
 /* Disqus */

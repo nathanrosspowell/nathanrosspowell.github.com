@@ -168,10 +168,6 @@ hgroup{
     }
 }
 
-header nav h6 a{
-    
-    
-}
 hgroup h1 a:hover {
     border: none
 }
@@ -192,6 +188,7 @@ nav#global {
             @include title-font();
             font-size:$sz-large-text;
             text-align:center;
+            vertical-align:bottom;
             &:hover {
                 @include flavor-background();
             }
@@ -343,9 +340,8 @@ footer section:first-child {
 }
 
 .copyright {
+    text-align:center;
     a{
-        font-weight: bold;
-        font-weight: bold;
         font-weight: bold;
     }
 }

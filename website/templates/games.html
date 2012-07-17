@@ -1,16 +1,10 @@
-{% extends "base.html" %}
+{% extends "article.html" %}
 {% import "macro_heading.html" as headings %}
-{% block content %}
     
-    <article id="games">
-        {% call headings.article() %}
-            {{ games.title|title }}
-        {% endcall %}
-        <p>
-            {{ games.html|safe }}
-        </p>
-    </article>
+{% block article_pages_format %}
 
+    {% set article = pages|first %}
+    {% include "base_article.html" %} 
 
     <article id="gameslist">      
         {% call headings.article() %}
@@ -18,40 +12,31 @@
         {% endcall %}
 
         {% for page in pages %}
-        <section id="{{ page.named }}">
-                <header>
-                    <div class='headline'>
-                        <div class='date'>
-                            {{ page.published }} - 
+        {% if page.index is sameas 1 %}
+        {% else %}
+            <section id="{{ page.named }}">
+                    <header>
+                        <div class='headline'>
+                            <div class='date'>
+                                {{ page.published }} - 
+                            </div>
+                            <div class='title'>
+                                {{ page.title|title }}
+                            </div>
                         </div>
-                        <div class='title'>
-                            {{ page.title|title }}
-                        </div>
-                    </div>
-                </header>
-                    {% if page.short %}
-                        {{ page.short }}...
-                    {% else %}
-                        {{ page.body[:100] }}...
-                    {% endif %}
-                    {% if page.url %}
-                        <a class='button' href="{{ url_for("page", page_path=page.path) }}" >
-                            Continue Reading
-                        </a>
-                    {% endif %}
-            </section>
+                    </header>
+                        {% if page.short %}
+                            {{ page.short }}...
+                        {% else %}
+                            {{ page.body[:100] }}...
+                        {% endif %}
+                        {% if page.url %}
+                            <a class='button' href="{{ url_for("page", page_path=page.path) }}" >
+                                Continue Reading
+                            </a>
+                        {% endif %}
+                </section>
+            {% endif %}
         {% endfor %}
     </article>
-
-    {% set page_id = comment_override_id %} 
-    {% set page_title = comment_override_title %}
-    {% if page_id %}
-        <article id="comments">
-            {% call headings.article() %}
-                Comments for {{ page_title|title }}
-            {% endcall %}
-            {% include "disqus_comment_thread.html" %}
-        </article>
-    {% endif %}
-
-{% endblock %}
+{% endblock article_pages_format %}

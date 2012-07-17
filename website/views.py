@@ -62,8 +62,8 @@ def code():
 def games():
     games = pages.get_or_404( "menu/games" )
     games_list = list( pages.get_or_404( "games/%s" % ( name, ) ) for name in games_order )
+    games_list.insert( 0, games )
     return base_render_template( games_html,
-            games = games,
             pages = games_list, 
             comment_override_id = "/menu/games/",
             comment_override_title = "games"

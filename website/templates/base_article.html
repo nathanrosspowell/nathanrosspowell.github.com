@@ -1,0 +1,9 @@
+{% import "macro_heading.html" as headings %}
+<article id="{{ article.named }}">
+    {% call headings.article() %}
+        {{ article.title|title }}
+    {% endcall %}
+    <p>
+        {{ article.html|safe }}
+    </p>
+</article>

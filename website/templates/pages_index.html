@@ -1,15 +1,27 @@
+{% import "macro_heading.html" as headings %}
 {% if pages|length is sameas 0 %}
 {% elif pages|length is sameas 1%}
 {% else %}
     <article named="pages-index">
+        {% call headings.article() %}
+            {% set index_first_page = pages|first %}
+            Index for {{ index_first_page.title|title }}
+        {% endcall %}
         <ol>
             {% for page in pages %}
                 <li>
-                <a href="#{{ page.named }}">
+                    <a href="#{{ page.named }}">
                         {{ page.title }}
                     </a>
                 </li>
             {% endfor %}
+            {% if comments_are_on %}
+                <li>
+                    <a href="#comments">
+                        Comments
+                    </a>
+                </li>
+            {% endif %}
         </ol>
     </article>
 {% endif %}

@@ -3,31 +3,30 @@
 
 {% block content %}
 
-    {% include "pages_index.html" %}
-
-    {% for page in pages %}
-        <article id="{{ page.named }}">
-            {% call headings.article() %}
-                {{ page.title }}
-            {% endcall %}
-            <p>
-                {{ page.html|safe }}
-            </p>
-        </article>
-    {% endfor %}
-
-
+    {# Calculate if there are comments #}
     {% set comment_page = pages|first %}
     {% if comment_override_id %}
         {% set page_id = comment_override_id %} 
         {% set page_title = comment_override_title %}
+        {% set comments_are_on = True %}
     {% else %}
         {% if comment_page.comments %}
             {% set page_id = url_for( "page", page_path=comment_page.path ) %}
             {% set page_title = comment_page.title %}
+            {% set comments_are_on = True %}
         {% endif %}
     {% endif %}
-    {% if page_id %}
+
+    {% include "pages_index.html" %}
+
+    {% block article_pages_format %}
+        {% for article in pages %}
+            {% include "base_article.html" %}
+        {% endfor %}
+    {% endblock article_pages_format %}
+
+
+    {% if comments_are_on %}
         <article id="comments">
             {% call headings.article() %}
                 Comments for {{ page_title|title }}

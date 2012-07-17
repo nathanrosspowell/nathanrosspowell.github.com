@@ -1,3 +1,4 @@
+named: connect
 title: Connect
 comments: True
 template: "article.html"

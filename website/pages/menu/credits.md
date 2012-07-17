@@ -1,3 +1,4 @@
+named: credits
 title: Credits 
 comments: False
 template: "article.html"

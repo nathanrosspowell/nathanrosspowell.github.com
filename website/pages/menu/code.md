@@ -1,3 +1,4 @@
+named: code
 title: Code 
 template: "article.html"
 comments: True

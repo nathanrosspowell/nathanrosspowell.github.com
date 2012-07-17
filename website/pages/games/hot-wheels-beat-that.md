@@ -1,3 +1,4 @@
+named: hot-wheels-beat-that
 title: Hot Wheels: Beat That!
 published: 2012/07/14
 url: games/hot-wheels-beat-that

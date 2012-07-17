@@ -1,3 +1,4 @@
+named: 2nd-test
 title: 2nd test
 published: 2012/07/03
 url: 2012/07/03/2nd-test

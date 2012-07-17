@@ -1,3 +1,4 @@
+named: credits_short
 title: Credits 
 comments: False
 template: "article.html"

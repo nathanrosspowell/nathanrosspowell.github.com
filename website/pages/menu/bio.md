@@ -1,3 +1,4 @@
+named: bio
 title: Bio 
 comments: False
 template: "article.html"

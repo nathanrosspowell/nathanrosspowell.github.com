@@ -1,3 +1,4 @@
+named: hello-world
 title: Hello, world!
 short: This is the first blog entry onto my newly made website.
 published: 2012/07/03

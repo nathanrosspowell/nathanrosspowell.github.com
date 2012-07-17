@@ -1,3 +1,4 @@
+named: operation-flashpoint-red-river
 title: Operation Flashpoint: Red River
 published: 2012/07/14
 url: games/operation-flashpoint-red-river

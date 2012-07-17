@@ -1,3 +1,4 @@
+named: career
 title: Career
 comments: True
 template: "article.html"

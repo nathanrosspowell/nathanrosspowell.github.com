@@ -1,3 +1,4 @@
+named: ferrari-the-race-experince
 title: Ferrari The Race Experince
 published: 2012/07/14
 url: games/ferrari-the-race-experince

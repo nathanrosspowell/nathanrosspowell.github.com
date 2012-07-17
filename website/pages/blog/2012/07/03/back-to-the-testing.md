@@ -1,3 +1,4 @@
+named: back-to-the-testing
 title: back to the testing
 published: 2012/07/03
 url: 2012/07/03/back-to-the-testing

@@ -1,3 +1,4 @@
+named: home_page
 title: Welcome!
 comments: False
 template: "article.html"

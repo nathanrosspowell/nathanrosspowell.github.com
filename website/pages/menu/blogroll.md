@@ -1,3 +1,4 @@
+named: blogroll
 title: Blogroll
 comments: True
 template: "article.html"

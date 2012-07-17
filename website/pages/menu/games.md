@@ -1,3 +1,4 @@
+named: games
 title: Games 
 template: "article.html"
 comments: True

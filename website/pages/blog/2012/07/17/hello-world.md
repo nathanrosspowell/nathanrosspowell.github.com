@@ -1,4 +1,4 @@
-source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2012/07/17/hello-world"
+source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2012/07/17/hello-world.md"
 named: "hello-world"
 title: "Hello, world!"
 published: "2012/07/17"

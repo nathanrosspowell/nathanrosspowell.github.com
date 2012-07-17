@@ -5,6 +5,7 @@ import sys
 # Globals.
 root_dir = os.path.split( os.path.realpath( __file__ ) )[ 0 ]
 root = os.path.join( root_dir, "pages" )
+base_url = "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages"
 
 #-----------------------------------------------------------------------------
 # Edit all files.
@@ -32,7 +33,6 @@ def add_named( path, name, lines ):
     return lines
 
 def add_github_source( path, name, lines ):
-    base_url = "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages"
     short_path = os.path.join( path, name).replace( root, "" )
     url = "%s%s" % ( base_url, short_path, )
     source = 'source: "%s"\n' % ( url, )
@@ -40,6 +40,12 @@ def add_github_source( path, name, lines ):
     lines.insert( 0, source )
     return lines
 
+def edit_github_source( path, name, lines ):
+    for i, line in enumerate( lines ):
+        if line.startswith( 'source:'): 
+            lines[ i ] = lines[ i ][ :-2 ] + ".md\n"
+    return lines
+
 if __name__ == "__main__":
     dry_run = True
-    #edit_files( add_github_source, dry_run )
+    edit_files( edit_github_source, dry_run )

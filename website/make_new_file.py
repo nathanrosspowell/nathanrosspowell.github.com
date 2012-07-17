@@ -55,7 +55,7 @@ def main( dir ):
         os.makedirs( path )
     titlepath = os.path.join( path, titlename )
     source = "%s%s" % ( base_url, url )
-    body = """source: "%s"
+    body = """source: "%s.md"
 named: "%s"
 title: "%s"
 published: "%s"

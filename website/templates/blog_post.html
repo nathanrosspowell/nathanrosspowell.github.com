@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+
+    {% include "pages_index.html" %}
+
     {% for page in pages %}
-        <article>
+    <article named="{{ page.named }}">
             <header>
                 <div class='headline'>
                     <div class='comments'>

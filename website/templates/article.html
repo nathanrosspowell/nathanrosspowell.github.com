@@ -2,8 +2,11 @@
 {% import "macro_heading.html" as headings %}
 
 {% block content %}
+
+    {% include "pages_index.html" %}
+
     {% for page in pages %}
-        <article>
+    <article named="{{ page.named }}">
             {% call headings.article() %}
                 {{ page.title }}
             {% endcall %}

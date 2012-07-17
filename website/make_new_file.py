@@ -53,7 +53,8 @@ def main( dir ):
     if not os.path.exists( path ):
         os.makedirs( path )
     titlepath = os.path.join( path, titlename )
-    body = """title: %s
+    body = """named: %s
+title: %s
 published: %s
 url: %s
 template: "%s"
@@ -61,7 +62,7 @@ comments: %s
 tags:
 - %s
 
-Heres is the post body.""" % ( title, date, url, template, comments, folder )
+Heres is the post body.""" % ( titlename, title, date, url, template, comments, folder )
     with open( titlepath+".md", 'w' ) as file:
         file.write( body )
 

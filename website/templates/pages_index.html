@@ -1,0 +1,15 @@
+{% if pages|length is sameas 0 %}
+{% elif pages|length is sameas 1%}
+{% else %}
+    <article named="pages-index">
+        <ol>
+            {% for page in pages %}
+                <li>
+                <a href="#{{ page.named }}">
+                        {{ page.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ol>
+    </article>
+{% endif %}

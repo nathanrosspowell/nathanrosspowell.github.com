@@ -22,11 +22,12 @@ blog_html = "blog.html"
 blog_post_html = "blog_post.html"
 games_html = "games.html"
 games_order = (
-    "dirt-showdown",
-    "operation-flashpoint-red-river",
-    "ferrari-the-race-experience",
-    "ride-to-hell",
-    "hot-wheels-beat-that",
+    "menu/games",
+    "games/dirt-showdown",
+    "games/operation-flashpoint-red-river",
+    "games/ferrari-the-race-experience",
+    "games/ride-to-hell",
+    "games/hot-wheels-beat-that",
 )
 
 #-----------------------------------------------------------------------------
@@ -44,6 +45,18 @@ def base_render_template( template, **kwargs ):
     kwargs[ "bio" ] = pages.get_or_404( "menu/bio" )
     return render_template( template, **kwargs )
 
+def article_page( template, page_list ):
+    pages_list = list( pages.get_or_404( name ) for name in page_list )
+    title = pages_list[ 0 ] 
+    print title, title.meta
+    comment_id = "/%s/" % page_list[ 0 ]
+    comment_title = title.meta.get( "title", "No Title" )
+    return base_render_template( template,
+            pages = pages_list, 
+            comment_override_id = comment_id,
+            comment_override_title = comment_title,
+    )
+    
 #-----------------------------------------------------------------------------
 # Redirects.
 @app.route('/')
@@ -60,14 +73,7 @@ def code():
 
 @app.route("/games/")
 def games():
-    games = pages.get_or_404( "menu/games" )
-    games_list = list( pages.get_or_404( "games/%s" % ( name, ) ) for name in games_order )
-    games_list.insert( 0, games )
-    return base_render_template( games_html,
-            pages = games_list, 
-            comment_override_id = "/menu/games/",
-            comment_override_title = "games"
-    )
+    return article_page( games_html, games_order )
 
 @app.route("/credits/")
 def credits():

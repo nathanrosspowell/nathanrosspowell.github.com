@@ -12,7 +12,7 @@
         {% endcall %}
 
         {% for page in pages %}
-        {% if page.index is sameas 1 %}
+        {% if loop.index is sameas 1 %}
         {% else %}
             <section id="{{ page.named }}">
                     <header>

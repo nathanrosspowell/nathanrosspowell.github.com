@@ -1,4 +1,4 @@
-named: home_page
+named: home-page
 title: Welcome!
 comments: False
 template: "article.html"

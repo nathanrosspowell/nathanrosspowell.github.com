@@ -32,7 +32,7 @@ def get_pages( page_path ):
     return [page]
 
 def base_render_template( template, **kwargs ):
-    kwargs[ "credits" ] = pages.get_or_404( "menu/credits_short" )
+    kwargs[ "credits" ] = pages.get_or_404( "menu/credits-short" )
     kwargs[ "bio" ] = pages.get_or_404( "menu/bio" )
     return render_template( template, **kwargs )
 
@@ -40,7 +40,7 @@ def base_render_template( template, **kwargs ):
 # Redirects.
 @app.route('/')
 def index():
-    return page( "menu/home_page" )
+    return page( "menu/home-page" )
 
 @app.route("/connect")
 def connect():

@@ -42,36 +42,39 @@ def base_render_template( template, **kwargs ):
 def index():
     return page( "menu/home_page" )
 
-@app.route("/connect/")
+@app.route("/connect")
 def connect():
     return page( "menu/connect" )
 
-@app.route("/code/")
+@app.route("/code")
 def code():
     return page( "menu/code" )
 
-@app.route("/games/")
+@app.route("/games")
 def games():
     return page( "menu/games" )
 
-@app.route("/credits/")
+@app.route("/credits")
 def credits():
     return page( "menu/credits" )
 
-@app.route("/career/")
+@app.route("/career")
 def career():
-    return page( "menu/career" )
+    career = pages.get_or_404( "menu/career" )
+    career1 = pages.get_or_404( "menu/credits" )
+    career2 = pages.get_or_404( "menu/games" )
+    return base_render_template( article_html, pages= [ career, career2, career1] )
 
 #-----------------------------------------------------------------------------
 # Dynamic pages.
-@app.route( "/blog/" )
+@app.route( "/blog" )
 def blog():
     dir = os.path.join( app.config[ "ROOT_DIR" ], app.config[ "FLATPAGES_ROOT" ] )
     blogs = [ post for post in latest_pages( 5, dir, "blog" ) ]
     blogroll = pages.get_or_404( "menu/blogroll" )
     return base_render_template( blog_html, pages = blogs, blogroll = blogroll )
 
-@app.route( "/<path:page_path>/" )
+@app.route( "/<path:page_path>" )
 def page( page_path ):
     page = pages.get_or_404( page_path )
     template = page.meta.get( "template", blog_post_html )

@@ -1,3 +1,4 @@
+source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/menu/career.md"
 named: career
 title: Career
 comments: True

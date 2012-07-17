@@ -5,6 +5,7 @@ import re
 #-----------------------------------------------------------------------------
 # Globals.
 datefolders = ( "blog", )
+base_url = "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/"
 
 #-----------------------------------------------------------------------------
 # URL slug creation via http://djangosnippets.org/snippets/29/
@@ -46,23 +47,26 @@ def main( dir ):
     if folder in datefolders:
         urlpath = "blog/%s/" % ( date,)
         path = os.path.join( dir, urlpath )
-        url = os.path.join( date, titlename )
+        url = os.path.join( folder, os.path.join( date, titlename ) )
     else:
         path = os.path.join( dir, folder )
         url = os.path.join( folder, titlename )
     if not os.path.exists( path ):
         os.makedirs( path )
     titlepath = os.path.join( path, titlename )
-    body = """named: %s
-title: %s
-published: %s
-url: %s
+    source = "%s%s" % ( base_url, url )
+    body = """source: "%s"
+named: "%s"
+title: "%s"
+published: "%s"
+url: "%s"
 template: "%s"
 comments: %s
+short: "Here is the post short."
 tags:
 - %s
 
-Heres is the post body.""" % ( titlename, title, date, url, template, comments, folder )
+Heres is the post body.""" % ( source, titlename, title, date, url, template, comments, folder )
     with open( titlepath+".md", 'w' ) as file:
         file.write( body )
 

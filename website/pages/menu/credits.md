@@ -1,3 +1,4 @@
+source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/menu/credits.md"
 named: credits
 title: Credits 
 comments: False

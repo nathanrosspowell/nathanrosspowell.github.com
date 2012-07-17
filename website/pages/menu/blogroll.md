@@ -1,3 +1,4 @@
+source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/menu/blogroll.md"
 named: blogroll
 title: Blogroll
 comments: True

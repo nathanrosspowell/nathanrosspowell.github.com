@@ -1,3 +1,4 @@
+source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/menu/connect.md"
 named: connect
 title: Connect
 comments: True

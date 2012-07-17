@@ -1,8 +1,9 @@
+source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2012/07/03/hello-world.md"
 named: hello-world
 title: Hello, world!
 short: This is the first blog entry onto my newly made website.
 published: 2012/07/03
-url: 2012/07/03/hello-world
+url: blog/2012/07/03/hello-world
 comments: True
 tags:
 - blog

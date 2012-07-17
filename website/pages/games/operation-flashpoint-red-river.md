@@ -1,3 +1,4 @@
+source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/games/operation-flashpoint-red-river.md"
 named: operation-flashpoint-red-river
 title: "Operation Flashpoint: Red River"
 published: 2012/07/14

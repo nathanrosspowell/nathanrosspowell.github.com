@@ -73,6 +73,10 @@ $c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-
     font-family: 'CorpulentCapsShadowRg';
 }
 
+@mixin alt-font(){
+    font-family: 'CorpulentCapsRegular';
+}
+
 /******************************************************************/
 /* Fonts */
 @font-face {
@@ -224,6 +228,7 @@ article {
     @include flavor-background();
     .date{
         display: inline;
+        @include alt-font();
     }
     .title{
         display: inline;
@@ -232,6 +237,7 @@ article {
     .comments{
         font-weight: bold;
         float: right;
+        @include alt-font();
     }
 }
 

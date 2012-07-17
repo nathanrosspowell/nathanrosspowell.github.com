@@ -140,13 +140,15 @@ article {
   background-image: -webkit-linear-gradient(#724d82, #a079b0);
   background-image: -o-linear-gradient(#724d82, #a079b0); }
   .headline .date {
-    display: inline; }
+    display: inline;
+    font-family: 'CorpulentCapsRegular'; }
   .headline .title {
     display: inline;
     font-weight: bold; }
   .headline .comments {
     font-weight: bold;
-    float: right; }
+    float: right;
+    font-family: 'CorpulentCapsRegular'; }
 
 section header div.headline {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif;

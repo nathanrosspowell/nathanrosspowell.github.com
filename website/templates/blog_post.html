@@ -32,6 +32,7 @@
                         Nathan Ross Powell
                     {% endif %}
                 </strong>
+                |
                 <span class='newline'>
                     <em>
                         Tags:
@@ -41,6 +42,10 @@
                     {% else %}
                         <a class='tags'>-no-tags-</a>
                     {% endfor %}
+                </span>
+                |
+                <span class="markdown">
+                    <a href="{{ page.source }}">View markdown on GitHub</a>
                 </span>
                 {% set page_title = page.title %}
                 {% set page_id = url_for( "page", page_path=page.path ) %}

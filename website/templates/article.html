@@ -6,7 +6,7 @@
     {% include "pages_index.html" %}
 
     {% for page in pages %}
-    <article id="{{ page.named }}">
+        <article id="{{ page.named }}">
             {% call headings.article() %}
                 {{ page.title }}
             {% endcall %}
@@ -14,14 +14,26 @@
                 {{ page.html|safe }}
             </p>
         </article>
+    {% endfor %}
 
-        {% if page.comments %}
-            <article>
+
+    {% set comment_page = pages|first %}
+    {% if comment_override_id %}
+        {% set page_id = comment_override_id %} 
+        {% set page_title = comment_override_title %}
+    {% else %}
+        {% if comment_page.comments %}
+            {% set page_id = url_for( "page", page_path=comment_page.path ) %}
+            {% set page_title = comment_page.title %}
+        {% endif %}
+    {% endif %}
+    {% if page_id %}
+        <article id="comments">
             {% call headings.article() %}
-                Comments for {{ page.title|title }}
+                Comments for {{ page_title|title }}
             {% endcall %}
             {% include "disqus_comment_thread.html" %}
-            </article>
-        {% endif %}
-    {% endfor %}
+        </article>
+    {% endif %}
+
 {% endblock %}

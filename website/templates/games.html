@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% import "macro_heading.html" as headings %}
+{% block content %}
+    
+    <article id="games">
+        {% call headings.article() %}
+            {{ games.title|title }}
+        {% endcall %}
+        <p>
+            {{ games.html|safe }}
+        </p>
+    </article>
+
+
+    <article id="gameslist">      
+        {% call headings.article() %}
+            Games List
+        {% endcall %}
+
+        {% for page in pages %}
+        <section id="{{ page.named }}">
+                <header>
+                    <div class='headline'>
+                        <div class='date'>
+                            {{ page.published }} - 
+                        </div>
+                        <div class='title'>
+                            {{ page.title|title }}
+                        </div>
+                    </div>
+                </header>
+                    {% if page.short %}
+                        {{ page.short }}...
+                    {% else %}
+                        {{ page.body[:100] }}...
+                    {% endif %}
+                    {% if page.url %}
+                        <a class='button' href="{{ url_for("page", page_path=page.path) }}" >
+                            Continue Reading
+                        </a>
+                    {% endif %}
+            </section>
+        {% endfor %}
+    </article>
+
+    {% set page_id = comment_override_id %} 
+    {% set page_title = comment_override_title %}
+    {% if page_id %}
+        <article id="comments">
+            {% call headings.article() %}
+                Comments for {{ page_title|title }}
+            {% endcall %}
+            {% include "disqus_comment_thread.html" %}
+        </article>
+    {% endif %}
+
+{% endblock %}

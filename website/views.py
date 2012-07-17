@@ -20,6 +20,14 @@ flash
 article_html = "article.html"
 blog_html = "blog.html"
 blog_post_html = "blog_post.html"
+games_html = "games.html"
+games_order = (
+    "dirt-showdown",
+    "operation-flashpoint-red-river",
+    "ferrari-the-race-experience",
+    "ride-to-hell",
+    "hot-wheels-beat-that",
+)
 
 #-----------------------------------------------------------------------------
 # Helpers.
@@ -52,7 +60,14 @@ def code():
 
 @app.route("/games/")
 def games():
-    return page( "menu/games" )
+    games = pages.get_or_404( "menu/games" )
+    games_list = list( pages.get_or_404( "games/%s" % ( name, ) ) for name in games_order )
+    return base_render_template( games_html,
+            games = games,
+            pages = games_list, 
+            comment_override_id = "/menu/games/",
+            comment_override_title = "games"
+    )
 
 @app.route("/credits/")
 def credits():
@@ -81,16 +96,16 @@ def page( page_path ):
 # Error pages.
 @app.errorhandler( 404 )
 def page_not_found( e ):
-    return base_render_template( "error.html", error="404" )
+    return base_render_template( "error.html", details = e, error="404" )
 
 @app.errorhandler( 403 )
 def page_not_found( e ):
-    return base_render_template( "error.html", error="403" )
+    return base_render_template( "error.html", details = e, error="403" )
 
 @app.errorhandler( 410 )
 def page_not_found( e ):
-    return base_render_template( "error.html", error="410" )
+    return base_render_template( "error.html", details = e, error="410" )
 
 @app.errorhandler( 500 )
 def page_not_found( e ):
-    return base_render_template( "error.html", error="500" )
+    return base_render_template( "error.html", details = e, error="500" )

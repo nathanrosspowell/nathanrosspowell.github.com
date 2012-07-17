@@ -19,12 +19,12 @@ I always want to be working with people who strive for perfection and to make ga
 Industry Experience
 ===
 
-Codemasters
+[Codemasters][codies]
 ---
 
 08/2010 - Present : Game Programmer to Experienced Game Programmer (09/2011)
 
-### DiRT Showdown
+### [DiRT Showdown][showdown]
 
 09/2011 - 05/2012 : Arcade racing with destruction modes (X360/PS3/PC) 
 
@@ -54,7 +54,7 @@ Technical research on fitness for purpose on a selection of available middleware
 
 Underwent internal design training and leadership testing (Strength.Deployment.Inventory). Being directly in- volved in the design process of new ideas, a large part of my work was rapidly prototyping UI and game mechanics to use in presentations and live demos.  
 
-### Operation Flashpoint: Red River 
+### [Operation Flashpoint: Red River][redriver] 
 
 08/2010 - 06/2011 : Authentic military co-op FPS (X360/PS3/PC).
 
@@ -85,12 +85,12 @@ Worked on an always synced ‘Actions’ system to simplify coding new static an
 Strong experience debugging release crash dumps on all platforms. Team member picked to be part of the rapid prototyping scrum. Working in a fully Agile team. Graded ‘Straight A’ in internal appraisals.
 
 
-Eutechnyx
+[Eutechnyx][etx]
 ---
 
 06/2007 - 07/2010 : Game Programmer
 
-### Ferrari The Race Experience
+### [Ferrari The Race Experience][ferrari]
 
 Licensed circuit racer (PSN/WII) 03/2010 - 07/2010
 
@@ -101,7 +101,7 @@ Platform lead for Wii release of a remix of Ferrari Challenge and all it’s DLC
 Extensive work with upgrading to the 3.1 SDK, controller code, channel/banner tools, disk mastering and passing lotcheck. Close work with art department leads to get vehicle and track assets to fit into the memory budget. Resurrected the decrepit Bink video integration to work in the latest cross platform code.  
 
 
-### Ride To Hell
+### [Ride To Hell][ridetohell]
 
 3rd person open world action (X360/PS3/PC - Shelved) 10/2007 - 03/2010
 
@@ -124,7 +124,7 @@ Lightweight ‘Props’ object hierarchy for spawning weapons and dynamic object
 Created the build process and game interfaces to use a custom audio engine. Global, per-context and per- mission archive loading. Baked archive offsets so strings didn’t have to be used outside of loading code.
 
 
-### Hot Wheels: Beat That!
+### [Hot Wheels: Beat That!][hotwheels]
 
 Kart-like power-up’d racing (X360/PS2/Wii/PC) 06/2007 - 10/2007
 
@@ -174,3 +174,11 @@ Conyers College/School
 * A-levels - I.C.T, Mathematics, Physics, Business Studies
 * GCSEs - 11 including Mathematics and Dual Science
 
+
+[codies]: http://codemasters.com "Codemasters" 
+[etx]: http://www.eutechnyx.com "Eutechnyx"
+[showdown]: http://nathanrosspowell.com/games/dirt-showdown "DiRT Showdown"
+[redriver]: http://nathanrosspowell.com/games/operation-flashpoint-red-river "Operation Flashpoint: Red River"
+[ferrari]: http://nathanrosspowell.com/games/ferrari-the-race-experince "Ferrari The Race Experience"
+[ridetohell]: http://nathanrosspowell.com/games/ride-to-hell "Ride To Hell"
+[hotwheels]: http://nathanrosspowell.com/games/hot-wheels-beat-that "Hot Wheels: Beat That!"

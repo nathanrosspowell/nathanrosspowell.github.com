@@ -6,7 +6,7 @@
     {% include "pages_index.html" %}
 
     {% for page in pages %}
-    <article named="{{ page.named }}">
+    <article id="{{ page.named }}">
             {% call headings.article() %}
                 {{ page.title }}
             {% endcall %}

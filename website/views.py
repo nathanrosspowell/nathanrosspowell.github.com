@@ -48,7 +48,6 @@ def base_render_template( template, **kwargs ):
 def article_page( template, page_list ):
     pages_list = list( pages.get_or_404( name ) for name in page_list )
     title = pages_list[ 0 ] 
-    print title, title.meta
     comment_id = "/%s/" % page_list[ 0 ]
     comment_title = title.meta.get( "title", "No Title" )
     return base_render_template( template,

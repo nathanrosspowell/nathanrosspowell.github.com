@@ -4,24 +4,27 @@ title: Career
 comments: True
 template: "article.html"
 
+This section is a little bit dry for casual reading, I have to admit. This first section is 90% a translation of my current CV for easier reading on the web. The [Other Experience][otherxp] section is a bit more explanitory on my outside-of-work programming and learnings. Lastly you can find the PDF version of my CV for download if you so wish.
+
+
 Biogrpahy
-===
+===========================================================
 
 Brief
----
+-----------------------------------------------------------
 
 Five years professional experience. Well rounded generalist programmer. Proven hard worker and quick learner. Positive attitude towards work and challenges. Works best in multi-disciplinary teams making ideas and designs come to life. Four credited releases; worked on eight different projects.
 
 Goals
----
+-----------------------------------------------------------
 
 I always want to be working with people who strive for perfection and to make games with technical brilliance and mass appeal. To become a better programmer and be more knowledgeable about the details of people and project management.
 
 Industry Experience
-===
+===========================================================
 
 [Codemasters][codies]
----
+-----------------------------------------------------------
 
 08/2010 - Present : Game Programmer to Experienced Game Programmer (09/2011)
 
@@ -87,7 +90,7 @@ Strong experience debugging release crash dumps on all platforms. Team member pi
 
 
 [Eutechnyx][etx]
----
+-----------------------------------------------------------
 
 06/2007 - 07/2010 : Game Programmer
 
@@ -140,7 +143,7 @@ Working with in house tech/tools to get the front end working. Localisation of a
 Carry over of platform check knowledge to bug fix the Load/Save code. Extensive work on the PS2.
 
 Skills
-===
+===========================================================
 
 * Solid experience on all consoles and also moblie experience: Xbox 360, PS3, PC, Wii, iOS, Android.
 * Specialist areas worked in: UI, gameplay, audio, systems & tools, physics.
@@ -158,10 +161,10 @@ Skills
 * Perforce, SVN, Git, Visual Studio, Vim, SQL Server, MS Access, Jira, Confluence.
 
 Education
-===
+===========================================================
 
 Northumbria University
----
+-----------------------------------------------------------
 
 * 09/05 - 06/10 : Full time and part time study
 * Computer Games Software Engineering BSc - First Class Honours (1:1)
@@ -169,7 +172,7 @@ Northumbria University
 * A DirectX11 GPGPU marching cubes implementation with height map and noise inputs.
 
 Conyers College/School
----
+-----------------------------------------------------------
 
 * 09/98 - 05/05 : Full time study
 * A-levels - I.C.T, Mathematics, Physics, Business Studies
@@ -183,3 +186,4 @@ Conyers College/School
 [ferrari]: http://nathanrosspowell.com/games/ferrari-the-race-experince "Ferrari The Race Experience"
 [ridetohell]: http://nathanrosspowell.com/games/ride-to-hell "Ride To Hell"
 [hotwheels]: http://nathanrosspowell.com/games/hot-wheels-beat-that "Hot Wheels: Beat That!"
+[otherxp]: #other-experience

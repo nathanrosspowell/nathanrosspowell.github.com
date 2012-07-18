@@ -1,0 +1,122 @@
+<atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
+  <atom:id>http://nathanrosspowell.com</atom:id>
+  <atom:title>nathanrosspowell.com</atom:title>
+  <atom:updated>2012-07-18T02:12:23+00:00</atom:updated>
+  <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
+
+  <atom:author>
+    <atom:name>Nathan Ross Powell</atom:name>
+    <atom:email>nathanrosspowell@gmail.com</atom:email>
+  </atom:author>
+
+  
+  <atom:entry>
+    <atom:title>2Nd Chance Sunday</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/18/2nd-chance-sunday/</atom:id>
+    <atom:updated>2012-07-18T02:01:29+00:00</atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/18/2nd-chance-sunday/"/>
+    <atom:summary>Here is the post short.</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>Heres is the post body.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>Hello, World!</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/17/hello-world/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/17/hello-world/"/>
+    <atom:summary>Here is the post short.</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>Heres is the post body.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    <atom:category term="test"/>
+    <atom:category term="having-some-fun"/>
+    <atom:category term="tag-city"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>Page Never Run On The Dev Server</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/page-never-run-on-the-dev-server/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/page-never-run-on-the-dev-server/"/>
+    <atom:summary></atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>Heres is the post body.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>Hello, World!</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/hello-world/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/hello-world/"/>
+    <atom:summary>This is the first blog entry onto my newly made website.</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>This is the first <em>blog</em> entry onto my newly made website. I'm not sure what is going to end up on this page, but hopefully it will be a means to communicate my hobby code to the wider world.</p>
+<p>I've got a comment system working (<a href="http://disqus.com" title="Disqus commenting">Disqus</a>) and the next thing to add is code highlighting. A filter for <em>tags</em> needs to be set up for all of the blog conntent and 
+fFinally, the style could do with some work, but this is as nice as a v0.1 as any.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>Fail Testing Fo Real</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/fail-testing-fo-real/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/fail-testing-fo-real/"/>
+    <atom:summary></atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>Heres is the post body.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>Back To The Testing</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/back-to-the-testing/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/back-to-the-testing/"/>
+    <atom:summary></atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>Heres is the post body.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>2Nd Test</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/2nd-test/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/2nd-test/"/>
+    <atom:summary></atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>Heres is the post body.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>Nathans Rubbish</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/nathans-rubbish/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/nathans-rubbish/"/>
+    <atom:summary></atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>Heres is the post body.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    
+  </atom:entry>
+  
+</atom:feed>

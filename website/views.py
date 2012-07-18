@@ -1,6 +1,7 @@
 import os
 import datetime
 import walk_dates as walk
+from time_stamp import get_w3c_date
 from website import \
 app,                \
 pages
@@ -20,6 +21,7 @@ flash
 article_html = "article.html"
 blog_html = "blog.html"
 blog_post_html = "blog_post.html"
+atom_xml = "atom.xml"
 games_html = "games.html"
 games_order = (
     "menu/games",
@@ -29,11 +31,21 @@ games_order = (
     "games/ride-to-hell",
     "games/hot-wheels-beat-that",
 )
+career_order = (
+    "menu/career",
+    "career/other-experience",
+    "career/cv",
+)
 
 #-----------------------------------------------------------------------------
 # Helpers.
 def latest_pages( n, dir, subdir ):
     for page_path in walk.take( n, os.path.join( dir, subdir ), walk.newest ):
+        urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
+        yield pages.get_or_404( urlpath )
+
+def all_pages( dir, subdir ):
+    for page_path in walk.walk( os.path.join( dir, subdir ), walk.newest ):
         urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
         yield pages.get_or_404( urlpath )
 
@@ -80,7 +92,7 @@ def credits():
 
 @app.route("/career/")
 def career():
-    return page( "menu/career" )
+    return article_page( article_html, career_order )
 
 #-----------------------------------------------------------------------------
 # Dynamic pages.
@@ -96,6 +108,13 @@ def page( page_path ):
     page = pages.get_or_404( page_path )
     template = page.meta.get( "template", blog_post_html )
     return base_render_template( template, pages=[page] )
+
+@app.route( "/feeds/atom.xml" )
+def atom():
+    dir = os.path.join( app.config[ "ROOT_DIR" ], app.config[ "FLATPAGES_ROOT" ] )
+    blogs = [ post for post in all_pages( dir, "blog" ) ]
+    w3c_update = get_w3c_date()
+    return base_render_template( atom_xml, pages = blogs, w3c_update = w3c_update ), 200, {'Content-Type': 'application/xml; charset=utf-8'}
 
 #-----------------------------------------------------------------------------
 # Error pages.

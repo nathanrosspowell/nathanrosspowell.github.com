@@ -1,6 +1,7 @@
 import datetime
 import os
 import re
+from time_stamp import get_w3c_date
 
 #-----------------------------------------------------------------------------
 # Globals.
@@ -44,6 +45,7 @@ def main( dir ):
         os.mkdir( folder )
     now = datetime.datetime.now()
     date = now.strftime( "%Y/%m/%d" )
+    time = now.strftime( "%H:%M:%S" )
     if folder in datefolders:
         urlpath = "blog/%s/" % ( date,)
         path = os.path.join( dir, urlpath )
@@ -59,6 +61,8 @@ def main( dir ):
 named: "%s"
 title: "%s"
 published: "%s"
+time: "%s"
+w3c: "%s"
 url: "%s"
 template: "%s"
 comments: %s
@@ -66,7 +70,18 @@ short: "Here is the post short."
 tags:
 - %s
 
-Heres is the post body.""" % ( source, titlename, title, date, url, template, comments, folder )
+Heres is the post body.""" % ( 
+        source, 
+        titlename, 
+        title, 
+        date, 
+        time,
+        get_w3c_date(),
+        url,
+        template, 
+        comments, 
+        folder
+    )
     with open( titlepath+".md", 'w' ) as file:
         file.write( body )
 

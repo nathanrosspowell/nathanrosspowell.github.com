@@ -8,5 +8,8 @@ comments: True
 short: "Here is the post short."
 tags:
 - blog
+- test
+- having-some-fun
+- tag-city
 
 Heres is the post body.

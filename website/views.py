@@ -114,7 +114,7 @@ def atom():
     dir = os.path.join( app.config[ "ROOT_DIR" ], app.config[ "FLATPAGES_ROOT" ] )
     blogs = [ post for post in all_pages( dir, "blog" ) ]
     w3c_update = get_w3c_date()
-    return base_render_template( atom_xml, pages = blogs, w3c_update = w3c_update ), 200, {'Content-Type': 'application/xml; charset=utf-8'}
+    return base_render_template( atom_xml, pages = blogs, w3c_update = w3c_update ), 200, {'Content-Type': 'application/atom+xml; charset=utf-8'}
 
 #-----------------------------------------------------------------------------
 # Error pages.

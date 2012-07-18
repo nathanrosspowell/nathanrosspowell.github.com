@@ -1,5 +1,5 @@
-<atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
-  <atom:id>http://nathanrosspowell.com</atom:id>
+<atom:feed xmlns="http://www.w3.org/2005/Atom">
+    <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
   <atom:updated>{{ w3c_update }}</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>

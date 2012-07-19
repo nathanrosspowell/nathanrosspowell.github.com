@@ -3,7 +3,5 @@
     {% call headings.article() %}
         {{ article.title|title }}
     {% endcall %}
-    <p>
-        {{ article.html|safe }}
-    </p>
+    {{ article.html|safe }}
 </article>

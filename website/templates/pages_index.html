@@ -2,7 +2,7 @@
 {% if pages|length is sameas 0 %}
 {% elif pages|length is sameas 1%}
 {% else %}
-    <article named="pages-index">
+    <article id="pages-index">
         {% call headings.article() %}
             {% set index_first_page = pages|first %}
             Index for {{ index_first_page.title|title }}

@@ -16,6 +16,9 @@
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0;' name='viewport' />
     <link rel="stylesheet" href="{{ url_for(".static", filename="css/base.css") }}" type="text/css" media="screen, projection"/>
 </head>
+{% block body_tag %}
+<body>
+{% endblock %}
 <header>
     <hgroup>
         <h1>
@@ -64,9 +67,6 @@
         </ul>
     </nav>
 </header>
-{% block body_tag %}
-<body>
-{% endblock %}
     {% block body %}
         <div id='container'>
             <header></header>

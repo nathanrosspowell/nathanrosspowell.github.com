@@ -2,7 +2,7 @@ source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev
 named: connect
 title: Connect
 comments: True
-template: "article.html"
+template: "connect.html"
 
 
 Here are a collection of links to my online profile, please feel free to connect with me!

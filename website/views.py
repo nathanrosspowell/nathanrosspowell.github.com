@@ -22,6 +22,7 @@ flash
 article_html = "article.html"
 blog_html = "blog.html"
 blog_post_html = "blog_post.html"
+connect_html = "connect.html"
 atom_xml = "atom.xml"
 games_html = "games.html"
 games_order = (

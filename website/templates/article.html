@@ -19,12 +19,17 @@
 
     {% include "pages_index.html" %}
 
-    {% block article_pages_format %}
+    {% block article_pre_pages %}
+    {% endblock article_pre_pages %}
+
+    {% block article_pages %}
         {% for article in pages %}
             {% include "base_article.html" %}
         {% endfor %}
-    {% endblock article_pages_format %}
+    {% endblock article_pages %}
 
+    {% block article_post_pages %}
+    {% endblock article_post_pages %}
 
     {% if comments_are_on %}
         <article id="comments">

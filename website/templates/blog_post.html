@@ -4,7 +4,7 @@
     {% include "pages_index.html" %}
 
     {% for page in pages %}
-    <article named="{{ page.named }}">
+    <article id="{{ page.named }}">
             <header>
                 <div class='headline'>
                     <div class='comments'>
@@ -18,9 +18,7 @@
                     </div>
                 </div>
             </header>
-            <p>
-                {{ page.html|safe }}
-            </p>
+            {{ page.html|safe }}
             <footer>
                 <em>
                     Written by:

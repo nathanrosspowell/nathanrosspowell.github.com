@@ -19,7 +19,6 @@
                             {{ tag }} ({{ freq }})
                         </a>
                     </li>
-                        </a>
                     {% set tag_highlight = False %}
                 {% endfor %}
             </ul>
@@ -52,7 +51,7 @@
             <header>
                 <div class='headline'>
                     <div class='comments'>
-                        <a href"http://www.nathanrosspowell.com{{ url_for("page", page_path=page.path) }}#disqus_thread" data-disqus-identifier="{{ url_for("page", page_path=page.path) }}">0</a>
+                        <a href="http://www.nathanrosspowell.com{{ url_for("page", page_path=page.path) }}#disqus_thread" data-disqus-identifier="{{ url_for("page", page_path=page.path) }}">0</a>
                     </div>
                     <div class='date'>
                         {{ page.published }} - 

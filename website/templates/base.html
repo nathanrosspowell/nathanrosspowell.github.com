@@ -64,7 +64,9 @@
         </ul>
     </nav>
 </header>
-<body {% block body_class %}{% endblock %}>
+{% block body_tag %}
+<body>
+{% endblock %}
     {% block body %}
         <div id='container'>
             <header></header>
@@ -96,7 +98,7 @@
 <![endif]-->
     {% endblock %}
 </body>
-<footer class='clearfix'>
+<footer>
   <section>
    <h1>
                 Nathan Ross Powell Bio

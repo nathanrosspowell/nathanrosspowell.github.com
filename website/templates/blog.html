@@ -2,25 +2,19 @@
 {% import "macro_heading.html" as headings %}
 {% block content %}
 
-    <ul id='navbar'>
-        <li>
-            <a class="toplevel" href='#'>:)</a>
-        </li>
-        <li>
-            <a class="toplevel" href='#'>:)</a>
-        </li>
+    <ul class='navbar' id='blog-nav'>
         <li>
             <a class="toplevel" href='#'>Top Tags</a>
             <ul>
                 {% for tag in tags %}
                     <li id="{{ tag}}"
-                        {% if tag_selection is defined %}
+                        {% if tag_selection %}
                             {% if tag is equalto tag_selection %}
                                 class="highlight"
                             {% endif %}
                         {% endif %}
                     >
-                        <a href="{{ url_for( "blog_tag", tag=tag) }}">
+                        <a href="{{ url_for( "blog_tag", tag=tag) }}#blog-nav">
                             {% set freq = getkey( tag_freq, tag ) %}
                             {{ tag }} ({{ freq }})
                         </a>
@@ -34,7 +28,13 @@
             <a class="toplevel" href='#'>All Tags</a>
         </li>
         <li>
-            <a class="toplevel" href='#'>All Tags</a>
+            <a class="toplevel" href='#'>Empty</a>
+        </li>
+        <li>
+            <a class="toplevel" href='#'>:)</a>
+        </li>
+        <li>
+            <a class="toplevel" href='#'>:)</a>
         </li>
     </ul>
 
@@ -42,13 +42,13 @@
         
         {% call headings.article() %}
             Latest Blogs
-            {% if tag_selection is defined %}
+            {% if tag_selection %}
                 Tagged: {{ tag_selection }}
             {% endif %}
         {% endcall %}
 
     {% for page in pages %}
-        <section named="post{{ loop.index }}">
+    <section id="{{ page.named }}">
             <header>
                 <div class='headline'>
                     <div class='comments'>

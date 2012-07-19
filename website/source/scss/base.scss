@@ -181,14 +181,14 @@ nav {
     margin-bottom: 1.5cm;
 }
 
-#navbar {
+.navbar {
     white-space: nowrap;
     vertical-align:middle;
     list-style-type: none;
     margin: 0px $sz-margin 0px $sz-margin;
     padding: 0 0 0 0;
 }
-#navbar li { 
+.navbar li { 
     @include rgba( $col-background, $col-background-alpha );
     display: inline-block;
     width: $c-tab-width ;
@@ -197,42 +197,42 @@ nav {
     font-size: 175%;
     text-align:center;
 }
-#navbar a {
+.navbar a {
     width: $c-tab-width ;
     height: $sz-tab ;
 }
-#navbar ul li {
+.navbar ul li {
     background-color: $col-background;
     margin-top: 5px;
     word-wrap: break-word;
     font-size: 50%;
     @include body-font();
 }
-#navbar ul li:first-child {
+.navbar ul li:first-child {
     margin-top: 25px;
 }
-#navbar li a {
+.navbar li a {
     display: block; 
 }
-#navbar li ul {
+.navbar li ul {
     display: none;
     li {
         display: block;
     }
 }
-#navbar li:hover {
+.navbar li:hover {
     @include flavor-background();
     a.toplevel {
         color: $col-text;
     }
 }
-#navbar li:hover ul {
+.navbar li:hover ul {
     display: block;
     position: absolute;
     margin: 0;
     padding: 0;
 }
-#navbar li:hover li {
+.navbar li:hover li {
     float: none;
 }
 

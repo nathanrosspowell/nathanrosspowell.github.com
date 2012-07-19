@@ -35,7 +35,7 @@ $sz-large-text: 250%;
 /* constants */
 /* options */
 $c-tab-options: 5;
-$c-tab-extra: 3px;
+$c-tab-extra: 2px;
 $c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-options ) + $c-tab-extra;
 
 /******************************************************************/
@@ -177,27 +177,63 @@ hgroup h1 a:hover {
 }
 
 /* Navigation */
-nav#global {
+nav {
     margin-bottom: 1.5cm;
-    h6 {
-        white-space: nowrap;
-        vertical-align:middle;
-        list-style-type: none;
-        margin: 0px $sz-margin 0px $sz-margin;
-        a { 
-            @include rgba( $col-background, $col-background-alpha );
-            display: inline-block;
-            width: $c-tab-width ;
-            height: $sz-tab ;
-            @include title-font();
-            font-size:$sz-large-text;
-            text-align:center;
-            vertical-align:bottom;
-            &:hover {
-                @include flavor-background();
-            }
-        }
+}
+
+#navbar {
+    white-space: nowrap;
+    vertical-align:middle;
+    list-style-type: none;
+    margin: 0px $sz-margin 0px $sz-margin;
+    padding: 0 0 0 0;
+}
+#navbar li { 
+    @include rgba( $col-background, $col-background-alpha );
+    display: inline-block;
+    width: $c-tab-width ;
+    height: $sz-tab ;
+    @include title-font();
+    font-size: 175%;
+    text-align:center;
+}
+#navbar a {
+    width: $c-tab-width ;
+    height: $sz-tab ;
+}
+#navbar ul li {
+    background-color: $col-background;
+    margin-top: 5px;
+    word-wrap: break-word;
+    font-size: 50%;
+    @include body-font();
+}
+#navbar ul li:first-child {
+    margin-top: 25px;
+}
+#navbar li a {
+    display: block; 
+}
+#navbar li ul {
+    display: none;
+    li {
+        display: block;
     }
+}
+#navbar li:hover {
+    @include flavor-background();
+    a.toplevel {
+        color: $col-text;
+    }
+}
+#navbar li:hover ul {
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+#navbar li:hover li {
+    float: none;
 }
 
 /******************************************************************/
@@ -366,3 +402,4 @@ footer section:first-child {
 .dsq-comment-body{
     color:$col-text !important;
 }
+

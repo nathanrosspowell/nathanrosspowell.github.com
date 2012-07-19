@@ -91,29 +91,65 @@ hgroup h1 a:hover {
   border: none; }
 
 /* Navigation */
-nav#global {
+nav {
   margin-bottom: 1.5cm; }
-  nav#global h6 {
-    white-space: nowrap;
-    vertical-align: middle;
-    list-style-type: none;
-    margin: 0px 12px 0px 12px; }
-    nav#global h6 a {
-      background-color: #240605;
-      background-color: rgba(36, 6, 5, 0.85);
-      display: inline-block;
-      width: 163.4px;
-      height: 45px;
-      font-family: 'CorpulentCapsShadowRg';
-      font-size: 250%;
-      text-align: center;
-      vertical-align: bottom; }
-      nav#global h6 a:hover {
-        background-color: #a079b0;
-        background-image: -moz-linear-gradient(#724d82, #a079b0);
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #724d82), color-stop(1, #a079b0));
-        background-image: -webkit-linear-gradient(#724d82, #a079b0);
-        background-image: -o-linear-gradient(#724d82, #a079b0); }
+
+#navbar {
+  white-space: nowrap;
+  vertical-align: middle;
+  list-style-type: none;
+  margin: 0px 12px 0px 12px;
+  padding: 0 0 0 0; }
+
+#navbar li {
+  background-color: #240605;
+  background-color: rgba(36, 6, 5, 0.85);
+  display: inline-block;
+  width: 162.4px;
+  height: 45px;
+  font-family: 'CorpulentCapsShadowRg';
+  font-size: 175%;
+  text-align: center; }
+
+#navbar a {
+  width: 162.4px;
+  height: 45px; }
+
+#navbar ul li {
+  background-color: #240605;
+  margin-top: 5px;
+  word-wrap: break-word;
+  font-size: 50%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif; }
+
+#navbar ul li:first-child {
+  margin-top: 25px; }
+
+#navbar li a {
+  display: block; }
+
+#navbar li ul {
+  display: none; }
+  #navbar li ul li {
+    display: block; }
+
+#navbar li:hover {
+  background-color: #a079b0;
+  background-image: -moz-linear-gradient(#724d82, #a079b0);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #724d82), color-stop(1, #a079b0));
+  background-image: -webkit-linear-gradient(#724d82, #a079b0);
+  background-image: -o-linear-gradient(#724d82, #a079b0); }
+  #navbar li:hover a.toplevel {
+    color: #f2ecd5; }
+
+#navbar li:hover ul {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0; }
+
+#navbar li:hover li {
+  float: none; }
 
 /******************************************************************/
 /* MAIN */

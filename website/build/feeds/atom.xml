@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
-  <atom:updated>2012-07-18T02:25:24+00:00</atom:updated>
+  <atom:updated>2012-07-19T01:58:50+00:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -40,15 +40,31 @@
   </atom:entry>
   
   <atom:entry>
-    <atom:title>Page Never Run On The Dev Server</atom:title>
-    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/page-never-run-on-the-dev-server/</atom:id>
+    <atom:title>Nathans Rubbish</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/nathans-rubbish/</atom:id>
     <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/page-never-run-on-the-dev-server/"/>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/nathans-rubbish/"/>
     <atom:summary></atom:summary>
     <atom:content type="html">
         <![CDATA[ <p>Heres is the post body.</p> ]]>
     </atom:content>
     <atom:category term="blog"/>
+    <atom:category term="nathan"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>2Nd Test</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/2nd-test/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/2nd-test/"/>
+    <atom:summary></atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>Heres is the post body.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    <atom:category term="zzz"/>
+    <atom:category term="aaa"/>
     
   </atom:entry>
   
@@ -64,6 +80,7 @@
 fFinally, the style could do with some work, but this is as nice as a v0.1 as any.</p> ]]>
     </atom:content>
     <atom:category term="blog"/>
+    <atom:category term="aaa"/>
     
   </atom:entry>
   
@@ -77,6 +94,7 @@ fFinally, the style could do with some work, but this is as nice as a v0.1 as an
         <![CDATA[ <p>Heres is the post body.</p> ]]>
     </atom:content>
     <atom:category term="blog"/>
+    <atom:category term="zzz"/>
     
   </atom:entry>
   
@@ -90,27 +108,15 @@ fFinally, the style could do with some work, but this is as nice as a v0.1 as an
         <![CDATA[ <p>Heres is the post body.</p> ]]>
     </atom:content>
     <atom:category term="blog"/>
+    <atom:category term="zzz"/>
     
   </atom:entry>
   
   <atom:entry>
-    <atom:title>2Nd Test</atom:title>
-    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/2nd-test/</atom:id>
+    <atom:title>Page Never Run On The Dev Server</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/page-never-run-on-the-dev-server/</atom:id>
     <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/2nd-test/"/>
-    <atom:summary></atom:summary>
-    <atom:content type="html">
-        <![CDATA[ <p>Heres is the post body.</p> ]]>
-    </atom:content>
-    <atom:category term="blog"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Nathans Rubbish</atom:title>
-    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/nathans-rubbish/</atom:id>
-    <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/nathans-rubbish/"/>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/page-never-run-on-the-dev-server/"/>
     <atom:summary></atom:summary>
     <atom:content type="html">
         <![CDATA[ <p>Heres is the post body.</p> ]]>

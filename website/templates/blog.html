@@ -1,14 +1,50 @@
 {% extends "base.html" %}
 {% import "macro_heading.html" as headings %}
 {% block content %}
-    <!--article>
-        Tags, filters, etc.
-    </article-->
-    
-    <article named="blogs">
+
+    <ul id='navbar'>
+        <li>
+            <a class="toplevel" href='#'>:)</a>
+        </li>
+        <li>
+            <a class="toplevel" href='#'>:)</a>
+        </li>
+        <li>
+            <a class="toplevel" href='#'>Top Tags</a>
+            <ul>
+                {% for tag in tags %}
+                    <li id="{{ tag}}"
+                        {% if tag_selection is defined %}
+                            {% if tag is equalto tag_selection %}
+                                class="highlight"
+                            {% endif %}
+                        {% endif %}
+                    >
+                        <a href="{{ url_for( "blog_tag", tag=tag) }}">
+                            {% set freq = getkey( tag_freq, tag ) %}
+                            {{ tag }} ({{ freq }})
+                        </a>
+                    </li>
+                        </a>
+                    {% set tag_highlight = False %}
+                {% endfor %}
+            </ul>
+        </li>
+        <li>
+            <a class="toplevel" href='#'>All Tags</a>
+        </li>
+        <li>
+            <a class="toplevel" href='#'>All Tags</a>
+        </li>
+    </ul>
+
+    <article id="blogs">
         
         {% call headings.article() %}
             Latest Blogs
+            {% if tag_selection is defined %}
+                Tagged: {{ tag_selection }}
+            {% endif %}
         {% endcall %}
 
     {% for page in pages %}

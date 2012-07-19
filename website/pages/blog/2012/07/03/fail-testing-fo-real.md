@@ -6,5 +6,6 @@ url: blog/2012/07/03/fail-testing-fo-real
 comments: True
 tags:
 - blog
+- zzz
 
 Heres is the post body.

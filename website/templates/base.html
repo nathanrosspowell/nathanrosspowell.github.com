@@ -35,24 +35,34 @@
             {% endblock page_quote_source %}
         </h5>
     </hgroup>
-    <nav id='global'>
-        <h6>
-            <a href="{{ url_for( "blog" ) }}">
-                Blog
-            </a>
-            <a href="{{ url_for( "code" ) }}">
-                Code
-            </a>
-            <a href="{{ url_for( "games" ) }}">
-                Games
-            </a>
-            <a href="{{ url_for( "career" ) }}">
-                Career
-            </a>
-            <a href="{{ url_for( "connect" ) }}">
-                Connect
-            </a>
-        </h6>
+    <nav>
+        <ul id='navbar'>
+            <li>
+                <a href="{{ url_for( "blog" ) }}">
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for( "code" ) }}">
+                    Code
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for( "games" ) }}">
+                    Games
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for( "career" ) }}">
+                    Career
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for( "connect" ) }}">
+                    Connect
+                </a>
+            </li>
+        </ul>
     </nav>
 </header>
 <body class='{% block body_class %}{% endblock %}'>

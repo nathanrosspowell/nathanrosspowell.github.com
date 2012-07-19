@@ -1,5 +1,6 @@
 import os
 import datetime
+import operator
 import walk_dates as walk
 from time_stamp import get_w3c_date
 from website import \
@@ -38,7 +39,22 @@ career_order = (
 )
 
 #-----------------------------------------------------------------------------
+# Jinja2 additions.
+def getkey( dic, key ):
+    return dic[ key ]
+app.jinja_env.globals.update( getkey = getkey )
+
+def equalto( x, y ):
+    return x == y
+app.jinja_env.tests.update( equalto = equalto )
+
+#-----------------------------------------------------------------------------
 # Helpers.
+def directory():
+    return os.path.join( app.config[ "ROOT_DIR" ],
+        app.config[ "FLATPAGES_ROOT" ]
+    )
+
 def latest_pages( n, dir, subdir ):
     for page_path in walk.take( n, os.path.join( dir, subdir ), walk.newest ):
         urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
@@ -68,6 +84,29 @@ def article_page( template, page_list ):
             comment_override_title = comment_title,
     )
     
+def get_tags( freq_sort = False, take_n = None ):
+    tags = {}
+    for post in all_pages( directory(), "blog" ):
+        for tag in post.meta.get( "tags", [] ):
+            if tags.has_key( tag ):
+                tags[ tag ] += 1
+            else:
+                tags[ tag ] = 1
+    tag_list = []
+    if freq_sort:
+        tuple_list = sorted( tags.iteritems(),
+            key=operator.itemgetter( 1 ),
+            reverse = True
+        )   
+        tag_list = [ tup[ 0 ] for tup in tuple_list ]
+    else:
+        tag_list = sorted( tags.keys() )
+    return ( tag_list, tags ) if take_n is None else ( tag_list[ : take_n ], tags )
+
+def tag_pages( tag ):
+    for post in all_pages( directory(), "blog" ):
+        if tag in post.meta.get( "tags", [] ):
+            yield post
 #-----------------------------------------------------------------------------
 # Redirects.
 @app.route('/')
@@ -97,11 +136,28 @@ def career():
 #-----------------------------------------------------------------------------
 # Dynamic pages.
 @app.route( "/blog/" )
-def blog():
-    dir = os.path.join( app.config[ "ROOT_DIR" ], app.config[ "FLATPAGES_ROOT" ] )
-    blogs = [ post for post in latest_pages( 5, dir, "blog" ) ]
+def blog( select_blogs = None, tag_selection = None ):
+    if select_blogs is not None:
+        blogs = select_blogs
+    else:
+        blogs = [ post for post in latest_pages( 5, directory(), "blog" ) ]
     blogroll = pages.get_or_404( "menu/blogroll" )
-    return base_render_template( blog_html, pages = blogs, blogroll = blogroll )
+    tags = get_tags( freq_sort = True, take_n = 5)
+    return base_render_template( blog_html,
+        pages = blogs,
+        blogroll = blogroll,
+        tags = tags[ 0 ],
+        tag_freq = tags[ 1 ], 
+        tag_selection = tag_selection
+    )
+
+@app.route( "/blog/tag/<path:tag>/" )
+def blog_tag( tag ):
+    if tag not in get_tags()[ 0 ]:
+        return base_render_template( "error.html", error="400" ), 400
+    blogs = [ post for post in tag_pages( tag ) ]
+    return blog( select_blogs = blogs, tag_selection = tag )
+
 
 @app.route( "/<path:page_path>/" )
 def page( page_path ):
@@ -111,10 +167,12 @@ def page( page_path ):
 
 @app.route( "/feeds/atom.xml" )
 def atom():
-    dir = os.path.join( app.config[ "ROOT_DIR" ], app.config[ "FLATPAGES_ROOT" ] )
-    blogs = [ post for post in all_pages( dir, "blog" ) ]
+    blogs = [ post for post in all_pages( directory(), "blog" ) ]
     w3c_update = get_w3c_date()
-    return base_render_template( atom_xml, pages = blogs, w3c_update = w3c_update ), 200, {'Content-Type': 'application/atom+xml; charset=utf-8'}
+    return base_render_template( atom_xml, 
+        pages = blogs, 
+        w3c_update = w3c_update 
+    ), 200, {'Content-Type': 'application/atom+xml; charset=utf-8'}
 
 #-----------------------------------------------------------------------------
 # Error pages.

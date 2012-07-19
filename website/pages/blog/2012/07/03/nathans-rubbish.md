@@ -6,5 +6,6 @@ url: blog/2012/07/03/nathans-rubbish
 comments: True
 tags:
 - blog
+- nathan
 
 Heres is the post body.

@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
-  <atom:updated>2012-07-19T20:05:08+00:00</atom:updated>
+  <atom:updated>2012-07-19T20:09:33+00:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -40,6 +40,22 @@
   </atom:entry>
   
   <atom:entry>
+    <atom:title>Hello, World!</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/hello-world/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/hello-world/"/>
+    <atom:summary>This is the first blog entry onto my newly made website.</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>This is the first <em>blog</em> entry onto my newly made website. I'm not sure what is going to end up on this page, but hopefully it will be a means to communicate my hobby code to the wider world.</p>
+<p>I've got a comment system working (<a href="http://disqus.com" title="Disqus commenting">Disqus</a>) and the next thing to add is code highlighting. A filter for <em>tags</em> needs to be set up for all of the blog conntent and 
+fFinally, the style could do with some work, but this is as nice as a v0.1 as any.</p> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    <atom:category term="aaa"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
     <atom:title>Nathans Rubbish</atom:title>
     <atom:id>http://nathanrosspowell.com/blog/2012/07/03/nathans-rubbish/</atom:id>
     <atom:updated></atom:updated>
@@ -64,22 +80,6 @@
     </atom:content>
     <atom:category term="blog"/>
     <atom:category term="zzz"/>
-    <atom:category term="aaa"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Hello, World!</atom:title>
-    <atom:id>http://nathanrosspowell.com/blog/2012/07/03/hello-world/</atom:id>
-    <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/blog/2012/07/03/hello-world/"/>
-    <atom:summary>This is the first blog entry onto my newly made website.</atom:summary>
-    <atom:content type="html">
-        <![CDATA[ <p>This is the first <em>blog</em> entry onto my newly made website. I'm not sure what is going to end up on this page, but hopefully it will be a means to communicate my hobby code to the wider world.</p>
-<p>I've got a comment system working (<a href="http://disqus.com" title="Disqus commenting">Disqus</a>) and the next thing to add is code highlighting. A filter for <em>tags</em> needs to be set up for all of the blog conntent and 
-fFinally, the style could do with some work, but this is as nice as a v0.1 as any.</p> ]]>
-    </atom:content>
-    <atom:category term="blog"/>
     <atom:category term="aaa"/>
     
   </atom:entry>

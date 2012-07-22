@@ -103,6 +103,23 @@
                 Nathan Ross Powell Bio
    </h1>
     {{ bio.html|safe }}
+    <div style="icon">
+        <a href="http://feeds.feedburner.com/nathanrosspowell">
+            <img class="icon" src="{{ url_for(".static", filename="png/rss-basic.png") }}" />
+        </a>
+        <a href="http://twitter.com/@nathanross">
+            <img class="icon" src="{{ url_for(".static", filename="png/twitter.png") }}" />
+        </a>
+        <a href="http://facebook.com/nathanrosspowell">
+            <img class="icon" src="{{ url_for(".static", filename="png/facebook-logo.png") }}" /> 
+        </a>
+        <a href="http://linkedin.com/in/nathanrosspowell">
+            <img class="icon" src="{{ url_for(".static", filename="png/linkedin-logo.png") }}" />
+        </a>
+        <a href="http://last.fm/user/partyboypowell">
+            <img class="icon" src="{{ url_for(".static", filename="png/lastfm.png") }}" />
+        </a>
+    </div>
   </section>
   <section class='copyright'>
     {{ credits.html|safe }}

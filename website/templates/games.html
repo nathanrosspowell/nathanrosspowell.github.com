@@ -1,7 +1,7 @@
 {% extends "article.html" %}
 {% import "macro_heading.html" as headings %}
     
-{% block article_pages_format %}
+{% block article_pages %}
 
     {% set article = pages|first %}
     {% include "base_article.html" %} 
@@ -39,4 +39,4 @@
             {% endif %}
         {% endfor %}
     </article>
-{% endblock article_pages_format %}
+{% endblock %}

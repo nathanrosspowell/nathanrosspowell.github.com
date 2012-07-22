@@ -1,7 +1,14 @@
 {% extends "article.html" %}
 {% import "macro_heading.html" as headings %}
 
-{% block article_pre_pages %}
+{% block article_post_pages %}
+    <article id="social">
+        {% call headings.article() %}
+            Social Links
+        {% endcall %}
+        {% include "social_connect.html" %}
+    </article>
+
     <article id="email">
         {% call headings.article() %}
             Email Me
@@ -28,4 +35,4 @@ while(x=eval(x));
 
         </p>
     </article>
-{% endblock article_pre_pages %}
+{% endblock article_post_pages %}

@@ -1,0 +1,46 @@
+{% set items = [ 
+    {   
+        "link": "http://feeds.feedburner.com/nathanrosspowell", 
+        "icon": "rss",
+        "title": "Feedburner",
+    },
+    {   
+        "link": "http://last.fm/user/partyboypowell",
+        "icon": "last-fm",
+        "title": "Last.fm",
+    },
+    {
+        "link": "http://linkedin.com/in/nathanrosspowell",
+        "icon": "linkedin",
+        "title": "LinkedIN",
+    },
+    {
+        "link": "http://github.com/nathanrosspowell",
+        "icon": "github",
+        "title": "GitHub",
+    },
+    {
+        "link": "http://twitter.com/nathanross",
+        "icon": "twitter",
+        "title": "Twitter",
+    },
+    {
+        "link": "http://facebook.com/nathanrosspowell", 
+        "icon": "facebook",
+        "title": "Facebook",
+    },
+    {
+        "link": "https://plus.google.com/u/0/117956868987272677661", 
+        "icon": "google+",
+        "title": "Google+",
+    },
+] %}
+
+{% block social_display %}
+    {% for value in items %}
+        {% set filename = "png/" + value.icon + ".png" %}
+        <a href="{{ value.link }}" title="{{ value.title }}">
+            <img class="icon" src="{{ url_for(".static", filename=filename ) }}" />
+        </a>
+    {% endfor %}
+{% endblock social_display %}

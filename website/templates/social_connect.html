@@ -1,0 +1,21 @@
+{% extends "social.html" %}
+{% block social_display %}
+<table>
+    {% for value in items %}
+        <tr> 
+            <td>
+                {% set filename = "png/" + value.icon + ".png" %}
+                <a href="{{ value.link }}" title="{{ value.title }}">
+                    <img class="icon" src="{{ url_for(".static", filename=filename ) }}" />
+                </a>
+            </td>
+            <td>
+                -
+                <a href="{{ value.link }}" title="{{ value.title }}">
+                    {{ value.title }}
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock social_display %}

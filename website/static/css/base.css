@@ -184,7 +184,7 @@ article {
   .headline .comments {
     font-weight: bold;
     float: right;
-    font-family: 'CorpulentCapsRegular'; }
+    font-family: 'CorpulentCapsShadowRg'; }
 
 section header div.headline {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif;
@@ -258,3 +258,51 @@ footer section {
 
 .dsq-comment-body {
   color: #f2ecd5 !important; }
+
+.ref {
+  color: #240605;
+  position: absolute;
+  right: 20%;
+  top: 22%; }
+  .ref a:link, .ref a:visited, .ref a:active {
+    color: #240605;
+    text-decoration: none; }
+  .ref a:hover {
+    color: #a783b6;
+    text-decoration: underline; }
+
+section header a:link, section header a:visited, section header a:active {
+  color: #f2ecd5;
+  text-decoration: none; }
+section header a:hover {
+  text-decoration: underline; }
+
+.ref {
+  color: #240605;
+  position: absolute;
+  right: 20%;
+  top: 22%; }
+  .ref a:link, .ref a:visited, .ref a:active {
+    color: #240605;
+    text-decoration: none; }
+  .ref a:hover {
+    color: #a783b6;
+    text-decoration: underline; }
+
+.buttons img {
+  width: 32;
+  height: 32px; }
+
+article#gameslist img.cover {
+  max-height: 250px;
+  width: auto; }
+article#gameslist section {
+  min-height: 300px; }
+  article#gameslist section div.cover {
+    padding-left: 24px;
+    padding-right: 24px;
+    float: left;
+    clear: right; }
+article#gameslist section:nth-child(odd) div.cover {
+  float: right;
+  clear: left; }

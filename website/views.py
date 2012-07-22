@@ -23,10 +23,13 @@ article_html = "article.html"
 blog_html = "blog.html"
 blog_post_html = "blog_post.html"
 connect_html = "connect.html"
+index_html = "index.html"
 atom_xml = "atom.xml"
 games_html = "games.html"
 games_order = (
     "menu/games",
+    "games/dirt-showdown",
+    "games/dirt-showdown",
     "games/dirt-showdown",
     "games/operation-flashpoint-red-river",
     "games/ferrari-the-race-experience",
@@ -76,15 +79,15 @@ def base_render_template( template, **kwargs ):
 
 def article_page( template, page_list ):
     pages_list = list( pages.get_or_404( name ) for name in page_list )
-    title = pages_list[ 0 ] 
+    title = pages_list[ 0 ]
     comment_id = "/%s/" % page_list[ 0 ]
     comment_title = title.meta.get( "title", "No Title" )
     return base_render_template( template,
-            pages = pages_list, 
+            pages = pages_list,
             comment_override_id = comment_id,
             comment_override_title = comment_title,
     )
-    
+
 def get_tags( freq_sort = False, take_n = None ):
     tags = {}
     for post in all_pages( directory(), "blog" ):
@@ -98,7 +101,7 @@ def get_tags( freq_sort = False, take_n = None ):
         tuple_list = sorted( tags.iteritems(),
             key=operator.itemgetter( 1 ),
             reverse = True
-        )   
+        )
         tag_list = [ tup[ 0 ] for tup in tuple_list ]
     else:
         tag_list = sorted( tags.keys() )
@@ -112,7 +115,7 @@ def tag_pages( tag ):
 # Redirects.
 @app.route('/')
 def index():
-    return page( "menu/home-page" )
+    return article_page( index_html, ( "menu/home-page", ) )
 
 @app.route("/connect/")
 def connect():
@@ -148,7 +151,7 @@ def blog( select_blogs = None, tag_selection = None ):
         pages = blogs,
         blogroll = blogroll,
         tags = tags[ 0 ],
-        tag_freq = tags[ 1 ], 
+        tag_freq = tags[ 1 ],
         tag_selection = tag_selection
     )
 
@@ -170,9 +173,9 @@ def page( page_path ):
 def atom():
     blogs = [ post for post in all_pages( directory(), "blog" ) ]
     w3c_update = get_w3c_date()
-    return base_render_template( atom_xml, 
-        pages = blogs, 
-        w3c_update = w3c_update 
+    return base_render_template( atom_xml,
+        pages = blogs,
+        w3c_update = w3c_update
     ), 200, {'Content-Type': 'application/atom+xml; charset=utf-8'}
 
 #-----------------------------------------------------------------------------

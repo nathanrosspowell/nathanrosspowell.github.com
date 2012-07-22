@@ -14,27 +14,45 @@
         {% for page in pages %}
         {% if loop.index is sameas 1 %}
         {% else %}
-            <section id="{{ page.named }}">
+            <section id="{{ page.named }}"
+                class=
+                {% if page.major %}
+                    "majorrelease"
+                {% else %}
+                    "minorrelease"
+                {% endif %}
+                >
                     <header>
                         <div class='headline'>
                             <div class='date'>
-                                {{ page.published }} - 
+                                {% if page.published %}
+                                    {{ page.published }} 
+                                {% else %}
+                                    Not Released
+                                {% endif %}
                             </div>
+                            -
                             <div class='title'>
-                                {{ page.title|title }}
+                                <a href="{{ page.website}}">{{ page.title|title }}</a>
                             </div>
                         </div>
                     </header>
-                        {% if page.short %}
-                            {{ page.short }}...
-                        {% else %}
-                            {{ page.body[:100] }}...
-                        {% endif %}
-                        {% if page.url %}
-                            <a class='button' href="{{ url_for("page", page_path=page.path) }}" >
-                                Continue Reading
-                            </a>
-                        {% endif %}
+                    <div class="cover">
+                        <img class="cover" src="{{ url_for( ".static", filename=page.cover ) }}" title="{{ page.title }}"/> 
+                    </div>
+                    {% if page.short %}
+                        {{ page.short }}..
+                    {% else %}
+                        {{ page.body[:100] }}...
+                    {% endif %}
+                    {% if page.url %}
+                        <a class='button' href="{{ url_for("page", page_path=page.path) }}" >
+                            Continue Reading
+                        </a>
+                    {% endif %}
+                    <div class="buttons" >
+                        {% include "games_bar.html" %}
+                    </div>
                 </section>
             {% endif %}
         {% endfor %}

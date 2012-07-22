@@ -31,13 +31,13 @@
                  "In one of the many places you're not, I am."
             
         </h4>
-        <h5>
+        <h6 class="ref">
             
             -
             <a href="http://en.wikipedia.org/wiki/Why%3F_(American_band)" title="Wikipedia: WHY?">Yoni Wolf</a>,
             <a href="http://www.youtube.com/watch?v=qQi7Dm2hfxE&hd=1" title="Youtube: By Torpedo Or Crohn's">WHY?</a>
             
-        </h5>
+        </h6>
     </hgroup>
     <nav>
         <ul class='navbar'>
@@ -78,6 +78,8 @@
     
     
     
+         
+        
         
     
 
@@ -109,8 +111,69 @@
     
 
     
-    
+<article>
 
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 5,
+  interval: 30000,
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#C4bea9',
+      color: '#f2ecd5'
+    },
+    tweets: {
+      background: '#240605',
+      color: '#f2ecd5',
+      links: '#a079b0'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    behavior: 'all'
+  }
+}).render().setUser('nathanross').start();
+</script>
+
+</article>
+
+
+    
+        <article id="comments">
+            <header>
+        <div class='headline'>
+            <div class='title'>
+                
+                Comments for Welcome!
+            
+            </div>
+        </div>
+    </header>
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
+    var disqus_url = "http://www.nathanrosspowell.com/menu/home-page/";
+    var disqus_identifier = "/menu/home-page/";
+    var disqus_title = "Welcome!";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
     
 
 

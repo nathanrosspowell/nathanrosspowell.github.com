@@ -1,12 +1,37 @@
-{% extends "base.html" %}
+{% extends "article.html" %}
 
-{%block page_title %}Index Page{% endblock page_title %}
 
-{% block content %}
+{% block article_post_pages %}
 <article>
-So, here is the index page which will be a tradition home page...
-So, here is the index page which will be a tradition home page...
-So, here is the index page which will be a tradition home page...
-So, here is the index page which will be a tradition home page...
+
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 5,
+  interval: 30000,
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#C4bea9',
+      color: '#f2ecd5'
+    },
+    tweets: {
+      background: '#240605',
+      color: '#f2ecd5',
+      links: '#a079b0'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    behavior: 'all'
+  }
+}).render().setUser('nathanross').start();
+</script>
+
 </article>
-{% endblock content %}
+{% endblock %}

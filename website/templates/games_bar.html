@@ -1,0 +1,21 @@
+{% if page.metacritic %}
+<a href="{{ page.metacritic }}">
+    <img src="{{ url_for( ".static", filename="png/metacritic-logo.png" ) }}" title="{{ "Metacritic for " + page.title }}" />
+</a>
+{% endif %}
+{% if page.facebook %}
+<a href="{{ page.facebook }}">
+    <img src="{{ url_for( ".static", filename="png/facebook-logo.png" ) }}" title="{{ "Facebook for " + page.title }}" />
+</a>
+{% endif %}
+{% if page.twitter %}
+<a href="{{ page.twitter }}">
+    <img src="{{ url_for( ".static", filename="png/twitter-logo.png" ) }}" title="{{ "Twitter for " + page.title }}" />
+</a>
+{% endif %}
+{% if page.websiteimg%}
+<a href="{{ page.websiteimg }}">
+    <img src="{{ url_for( ".static", filename=page.websiteimg ) }}" title="{{ "Website for " + page.title }}" />
+</a>
+{% endif %}
+

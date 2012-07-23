@@ -25,6 +25,7 @@ blog_post_html = "blog_post.html"
 connect_html = "connect.html"
 index_html = "index.html"
 tag_html = "tag.html"
+archive_html = "archive.html"
 atom_xml = "atom.xml"
 games_html = "games.html"
 games_order = (
@@ -45,8 +46,14 @@ career_order = (
 
 #-----------------------------------------------------------------------------
 # Jinja2 additions.
-def getkey( dic, key ):
-    return dic.get( key, "0" )
+def getkey( d, key ):
+    e = "_ERROR_"
+    r = d.get( key, e )
+    if r == e:
+        print "\tDEBUG: asked for", key 
+        print "\tDEBUG: dic:", dic 
+        return "0"
+    return r
 app.jinja_env.globals.update( getkey = getkey )
 
 def equalto( x, y ):
@@ -89,14 +96,17 @@ def article_page( template, page_list ):
             comment_override_title = comment_title,
     )
 
+def add_to_dict( d, key ):
+    if d.has_key( key ):
+        d[ key ] += 1
+    else:
+        d[ key ] = 1
+
 def get_tags( freq_sort = False, take_n = None ):
     tags = {}
     for post in all_pages( directory(), "blog" ):
         for tag in post.meta.get( "tags", [] ):
-            if tags.has_key( tag ):
-                tags[ tag ] += 1
-            else:
-                tags[ tag ] = 1
+            add_to_dict( tags, tag )
     tag_list = []
     if freq_sort:
         tuple_list = sorted( tags.iteritems(),
@@ -106,12 +116,41 @@ def get_tags( freq_sort = False, take_n = None ):
         tag_list = [ tup[ 0 ] for tup in tuple_list ]
     else:
         tag_list = sorted( tags.keys() )
-    return ( tag_list, tags ) if take_n is None else ( tag_list[ : take_n ], tags )
+    return (tag_list, tags) if take_n is None else (tag_list[ :take_n ], tags)
 
 def tag_pages( tag ):
     for post in all_pages( directory(), "blog" ):
         if tag in post.meta.get( "tags", [] ):
             yield post
+
+def get_archive( specific = None, take_n = None ):
+    years = {}
+    months = {}
+    days = {}
+    for post in all_pages( directory(), "blog" ):
+        path = post.path.replace( "blog", "" )
+        year, month, day, title = [ x for x in path.split( "/" ) if x ]
+        add_to_dict( years, year )
+        month_path = os.path.join( year, month )
+        add_to_dict( months, month_path )
+        day_path = os.path.join( month_path, day )
+        add_to_dict( days, day_path )
+    arcs = dict( 
+        years.items() +
+        months.items() +
+        days.items()
+    )
+    if specific == "years":
+        arc_list = years.keys()
+    elif specific == "months":
+        arc_list = months.keys()
+    elif specific == "days":
+        arc_list = days.keys()
+    else:
+        arc_list = arcs.keys()
+    arc_list = sorted( arc_list, reverse = True )
+    return (arc_list, arcs) if take_n is None else (arc_list[ :take_n], arcs)
+
 #-----------------------------------------------------------------------------
 # Redirects.
 @app.route('/')
@@ -141,47 +180,72 @@ def career():
 #-----------------------------------------------------------------------------
 # Dynamic pages.
 @app.route( "/blog/" )
-def blog( select_blogs = None, tag_selection = None ):
+def blog( template = blog_html, page_list = None, select_blogs = None, tag_selection = None, **kwargs ):
     if select_blogs is not None:
         blogs = select_blogs
+    elif page_list is not None:
+        blogs = page_list
     else:
         blogs = [ post for post in latest_pages( 5, directory(), "blog" ) ]
     blogroll = pages.get_or_404( "menu/blogroll" )
     take_n = 20 
     all_tags = get_tags( take_n = take_n )
     top_tags = get_tags( freq_sort = True, take_n = take_n )
-    return base_render_template( blog_html,
+    arc_years = get_archive( specific = "years", take_n = take_n )
+    arc_months = get_archive( specific = "months", take_n = take_n )
+    arc_days = get_archive( specific = "days", take_n = take_n )
+    return base_render_template( template,
         pages = blogs,
         blogroll = blogroll,
-        all_tags = all_tags[ 0 ],
+        all_tags_n = all_tags[ 0 ],
+        top_tags_n = top_tags[ 0 ],
         tag_freq = all_tags[ 1 ],
-        top_tags = top_tags[ 0 ],
-        tag_selection = tag_selection
+        tag_selection = tag_selection,
+        arc_years_n = arc_years[ 0 ],
+        arc_months_n = arc_months[ 0 ],
+        arc_days_n = arc_days[ 0 ],
+        arc_freq = arc_years[ 1 ],
+        **kwargs
     )
 
 @app.route( "/blog/tag/" )
 def blog_tags():
     all_tags = get_tags()
     top_tags = get_tags( freq_sort = True )
-    return base_render_template( tag_html,
+    return blog( 
+        template = tag_html,
         all_tags = all_tags[ 0 ],
-        tag_freq = all_tags[ 1 ],
         top_tags = top_tags[ 0 ],
     )
 
-@app.route( "/blog/tag/<path:tag>/" )
-def blog_tag( tag ):
-    if tag not in get_tags()[ 0 ]:
+@app.route( "/blog/archive/" )
+def blog_archives():
+    arcs = get_archive()
+    return blog( 
+        template = archive_html,
+        arcs = arcs[ 0 ],
+    )
+
+@app.route( "/blog/tag/<path:item>/" )
+def blog_tag( item ):
+    if item not in get_tags()[ 0 ]:
         return base_render_template( "error.html", error="400" ), 400
-    blogs = [ post for post in tag_pages( tag ) ]
-    return blog( select_blogs = blogs, tag_selection = tag )
+    blogs = [ post for post in tag_pages( item ) ]
+    return blog( select_blogs = blogs, tag_selection = item )
+
+@app.route( "/blog/archive/<path:item>/" )
+def blog_archive( item ):
+    return blog()
 
 
 @app.route( "/<path:page_path>/" )
 def page( page_path ):
     page = pages.get_or_404( page_path )
     template = page.meta.get( "template", blog_post_html )
-    return base_render_template( template, pages=[page] )
+    return blog( 
+        template = template,
+        page_list = [ page ] 
+    )
 
 @app.route( "/feeds/atom.xml" )
 def atom():

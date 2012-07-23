@@ -2,9 +2,8 @@ source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev
 named: code
 title: Code 
 template: "article.html"
-comments: True
+comments: False
 
-TODO:
+Here will be a list of all of my code projects (games or otherwise) which are public facing.
 
-
-List of game projects that I'm working on. Link to any blog (blog tags, at some point).
+Hopefully at some point soon...

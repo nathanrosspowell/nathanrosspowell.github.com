@@ -1,0 +1,15 @@
+{% extends "blog.html" %}
+{% import "macro_heading.html" as headings %}
+{% block blog_content %}
+    {% set item_type = "blog_archive" %}
+    <article id="archive">
+        {% call headings.article() %}
+            Blog Archive 
+        {% endcall %}
+        {% set items = arcs %}
+        {% set freq = arc_freq %}
+        <ul>
+            {% include "blog_tag_list.html" %}
+        </ul>
+    </article>
+{% endblock %}

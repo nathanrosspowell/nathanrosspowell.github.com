@@ -194,6 +194,12 @@ section header div.headline {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #75506e), color-stop(1, #b079a5));
   background-image: -webkit-linear-gradient(#75506e, #b079a5);
   background-image: -o-linear-gradient(#75506e, #b079a5); }
+  section header div.headline a:link, section header div.headline a:visited, section header div.headline a:active {
+    color: #f2ecd5;
+    text-decoration: none; }
+  section header div.headline a:hover {
+    color: #f2ecd5;
+    text-decoration: underline; }
 
 .tags:hover {
   background-color: #a079b0;

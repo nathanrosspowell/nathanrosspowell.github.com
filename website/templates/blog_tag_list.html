@@ -1,16 +1,16 @@
-{% for tag in tags %}
-    <li id="{{ tag }}"
-        {% if tag_selection %}
-            {% if tag is equalto tag_selection %}
+{% for item in items %}
+    <li id="{{ item }}"
+        {% if item_selection %}
+            {% if item is equalto item_selection %}
                 class="highlight"
             {% endif %}
         {% endif %}
     >
-        {% set freq = getkey( tag_freq, tag ) %}
-        <a href="{{ url_for( "blog_tag", tag=tag) }}#blog-nav"
-            title="{{ "Blog filter for: " + tag }}"
+        {% set item_freq = getkey( freq, item ) %}
+        <a href="{{ url_for( item_type, item=item ) }}#blog-nav"
+            title="{{ "Blog filter for: " + item }}"
         >
-            {{ tag }}:  {{ freq }}
+            {{ item }}:  {{ item_freq }}
         </a> 
     </li>
 {% endfor %}

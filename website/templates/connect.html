@@ -2,18 +2,12 @@
 {% import "macro_heading.html" as headings %}
 
 {% block article_post_pages %}
-    <article id="social">
-        {% call headings.article() %}
-            Social Links
-        {% endcall %}
-        {% include "social_connect.html" %}
-    </article>
-
     <article id="email">
         {% call headings.article() %}
             Email Me
         {% endcall %}
         <p>
+
 <script type="text/javascript">
 //<![CDATA[
 <!--
@@ -35,4 +29,12 @@ while(x=eval(x));
 
         </p>
     </article>
+
+    <article id="social">
+        {% call headings.article() %}
+            Social Links
+        {% endcall %}
+        {% include "social_connect.html" %}
+    </article>
+
 {% endblock article_post_pages %}

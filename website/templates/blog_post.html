@@ -38,7 +38,7 @@
                     </em>
                     {% for tag in page.tags %}
                         <a class='tags'
-                            href="{{ url_for( "blog_tag", tag=tag ) }}"
+                            href="{{ url_for( "blog_tag", item=tag ) }}"
                             title="{{ "Blog filter for: " + tag }}"
                         >
                             {{ tag }}

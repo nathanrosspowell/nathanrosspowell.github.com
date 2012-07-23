@@ -4,6 +4,24 @@
 {% block article_post_pages %}
 <article>
 
+<table width="100%">
+    <col width="300" />
+    <col width="300" />
+    <tr>
+        <th>
+            {% call headings.article() %}
+                Twitter
+            {% endcall %}
+        </th>
+        <th>
+            {% call headings.article() %}
+                Recent Comments
+            {% endcall %}
+        </th>
+    </tr>
+    <tr>
+        <td class="horipad">
+
 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
 new TWTR.Widget({
@@ -25,13 +43,23 @@ new TWTR.Widget({
     }
   },
   features: {
-    scrollbar: true,
+    scrollbar: false,
     loop: false,
     live: true,
     behavior: 'all'
   }
 }).render().setUser('nathanross').start();
 </script>
+
+        </td>
+        <td class="horipad">
+
+<div id="recentcomments" class="dsq-widget"><script type="text/javascript" src="http://nathanrosspowell.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200"></script></div>
+
+        </td>
+    </tr>
+</table>
+
 
 </article>
 {% endblock %}

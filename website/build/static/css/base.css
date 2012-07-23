@@ -294,3 +294,7 @@ article#gameslist section {
 article#gameslist section:nth-child(odd) div.cover {
   float: right;
   clear: left; }
+
+.horipad {
+  padding-left: 18px;
+  padding-right: 18px; }

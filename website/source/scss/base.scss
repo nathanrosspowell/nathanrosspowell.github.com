@@ -459,3 +459,8 @@ article#gameslist {
         }   
     }
 }
+
+.horipad {
+    padding-left: $sz-margin * 1.5;
+    padding-right: $sz-margin * 1.5;
+}

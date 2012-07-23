@@ -1,0 +1,37 @@
+{% extends "blog.html" %}
+{% import "macro_heading.html" as headings %}
+{% block blog_content %}
+    <article id="blogtags">
+        {% call headings.article() %}
+             Blog Tags
+        {% endcall %}
+        <table>
+            <tr>
+                <th>
+                    {% call headings.article() %}
+                        Populatiry
+                    {% endcall %}
+                </th>
+                <th>
+                    {% call headings.article() %}
+                        Alphabetical
+                    {% endcall %}
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    {% set tags = top_tags %}
+                    <ul>
+                        {% include "blog_tag_list.html" %}
+                    </ul>
+                </td>
+                <td>
+                    {% set tags = all_tags %}
+                    <ul>
+                        {% include "blog_tag_list.html" %}
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </article>
+{% endblock %}

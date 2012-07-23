@@ -261,26 +261,8 @@ footer section {
 
 .ref {
   color: #240605;
-  position: absolute;
-  right: 20%;
-  top: 22%; }
-  .ref a:link, .ref a:visited, .ref a:active {
-    color: #240605;
-    text-decoration: none; }
-  .ref a:hover {
-    color: #a783b6;
-    text-decoration: underline; }
-
-section header a:link, section header a:visited, section header a:active {
-  color: #f2ecd5;
-  text-decoration: none; }
-section header a:hover {
-  text-decoration: underline; }
-
-.ref {
-  color: #240605;
-  position: absolute;
-  right: 20%;
+  position: relative;
+  left: 35%;
   top: 22%; }
   .ref a:link, .ref a:visited, .ref a:active {
     color: #240605;

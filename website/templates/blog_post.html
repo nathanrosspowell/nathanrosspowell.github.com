@@ -1,5 +1,5 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "blog.html" %}
+{% block blog_content %}
 
     {% include "pages_index.html" %}
 
@@ -24,7 +24,11 @@
                     {% if page.author %}
                         {{ page.author|title }}
                     {% else %}
-                        Nathan Ross Powell
+                        <a href="{{ url_for( "connect" )}}"
+                           title="Contact Nathan Ross Powell" 
+                        >
+                            Nathan Ross Powell
+                        </a>
                     {% endif %}
                 </strong>
                 |
@@ -33,14 +37,20 @@
                         Tags:
                     </em>
                     {% for tag in page.tags %}
-                        <a class='tags'>{{ tag }}</a>
+                        <a class='tags'
+                            href="{{ url_for( "blog_tag", tag=tag ) }}"
+                            title="{{ "Blog filter for: " + tag }}"
+                        >
+                            {{ tag }}
+                        </a>
+
                     {% else %}
-                        <a class='tags'>-no-tags-</a>
+                        n/a
                     {% endfor %}
                 </span>
                 |
                 <span class="markdown">
-                    <a href="{{ page.source }}">View markdown on GitHub</a>
+                    <a href="{{ page.source }}" title="Go to GitHub source">View markdown on GitHub</a>
                 </span>
                 {% set page_title = page.title %}
                 {% set page_id = url_for( "page", page_path=page.path ) %}

@@ -4,11 +4,6 @@
         "icon": "rss",
         "title": "Feedburner",
     },
-    {   
-        "link": "http://last.fm/user/partyboypowell",
-        "icon": "last-fm",
-        "title": "Last.fm",
-    },
     {
         "link": "http://linkedin.com/in/nathanrosspowell",
         "icon": "linkedin",
@@ -18,6 +13,11 @@
         "link": "http://github.com/nathanrosspowell",
         "icon": "github",
         "title": "GitHub",
+    },
+    {   
+        "link": "http://last.fm/user/partyboypowell",
+        "icon": "last-fm",
+        "title": "Last.fm",
     },
     {
         "link": "http://twitter.com/nathanross",
@@ -39,7 +39,10 @@
 {% block social_display %}
     {% for value in items %}
         {% set filename = "png/" + value.icon + ".png" %}
-        <a href="{{ value.link }}" title="{{ value.title }}">
+        <a class="icon"
+           href="{{ value.link }}" 
+           title="{{ value.title }}"
+        >
             <img class="icon" src="{{ url_for(".static", filename=filename ) }}" />
         </a>
     {% endfor %}

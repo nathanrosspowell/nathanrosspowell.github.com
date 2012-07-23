@@ -24,6 +24,7 @@ blog_html = "blog.html"
 blog_post_html = "blog_post.html"
 connect_html = "connect.html"
 index_html = "index.html"
+tag_html = "tag.html"
 atom_xml = "atom.xml"
 games_html = "games.html"
 games_order = (
@@ -45,7 +46,7 @@ career_order = (
 #-----------------------------------------------------------------------------
 # Jinja2 additions.
 def getkey( dic, key ):
-    return dic[ key ]
+    return dic.get( key, "0" )
 app.jinja_env.globals.update( getkey = getkey )
 
 def equalto( x, y ):
@@ -146,13 +147,26 @@ def blog( select_blogs = None, tag_selection = None ):
     else:
         blogs = [ post for post in latest_pages( 5, directory(), "blog" ) ]
     blogroll = pages.get_or_404( "menu/blogroll" )
-    tags = get_tags( freq_sort = True, take_n = 5)
+    take_n = 20 
+    all_tags = get_tags( take_n = take_n )
+    top_tags = get_tags( freq_sort = True, take_n = take_n )
     return base_render_template( blog_html,
         pages = blogs,
         blogroll = blogroll,
-        tags = tags[ 0 ],
-        tag_freq = tags[ 1 ],
+        all_tags = all_tags[ 0 ],
+        tag_freq = all_tags[ 1 ],
+        top_tags = top_tags[ 0 ],
         tag_selection = tag_selection
+    )
+
+@app.route( "/blog/tag/" )
+def blog_tags():
+    all_tags = get_tags()
+    top_tags = get_tags( freq_sort = True )
+    return base_render_template( tag_html,
+        all_tags = all_tags[ 0 ],
+        tag_freq = all_tags[ 1 ],
+        top_tags = top_tags[ 0 ],
     )
 
 @app.route( "/blog/tag/<path:tag>/" )

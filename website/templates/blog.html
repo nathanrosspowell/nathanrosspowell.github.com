@@ -4,27 +4,24 @@
 
     <ul class='navbar' id='blog-nav'>
         <li>
-            <a class="toplevel" href='#'>Top Tags</a>
+            <a class="toplevel" href="{{ url_for( "blog_tags" ) }}">Top Tags</a>
             <ul>
-                {% for tag in tags %}
-                    <li id="{{ tag}}"
-                        {% if tag_selection %}
-                            {% if tag is equalto tag_selection %}
-                                class="highlight"
-                            {% endif %}
-                        {% endif %}
-                    >
-                        <a href="{{ url_for( "blog_tag", tag=tag) }}#blog-nav">
-                            {% set freq = getkey( tag_freq, tag ) %}
-                            {{ tag }} ({{ freq }})
-                        </a>
-                    </li>
-                    {% set tag_highlight = False %}
-                {% endfor %}
+                {% set tags = top_tags %}
+                {% include "blog_tag_list.html" %}
+                <li>
+                <a href="{{ url_for( "blog_tags" ) }}" title="See more tags">More...</a>
+                </li>
             </ul>
         </li>
         <li>
-            <a class="toplevel" href='#'>All Tags</a>
+            <a class="toplevel" href="{{ url_for( "blog_tags" ) }}">All Tags</a>
+            <ul>
+                {% set tags = all_tags %}
+                {% include "blog_tag_list.html" %}
+                <li>
+                <a href="{{ url_for( "blog_tags" ) }}" title="See more tags">More...</a>
+                </li>
+            </ul>
         </li>
         <li>
             <a class="toplevel" href='#'>Empty</a>
@@ -36,6 +33,8 @@
             <a class="toplevel" href='#'>:)</a>
         </li>
     </ul>
+
+    {% block blog_content %}
 
     <article id="blogs">
         
@@ -57,7 +56,7 @@
                         {{ page.published }} - 
                     </div>
                     <div class='title'>
-                        {{ page.title|title }}
+                        {{ page.title }}
                     </div>
                 </div>
             </header>
@@ -92,5 +91,9 @@
         s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
+
     </script>
+
+    {% endblock blog_content %}
+
 {% endblock %}

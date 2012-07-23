@@ -5,13 +5,19 @@
         <tr> 
             <td>
                 {% set filename = "png/" + value.icon + ".png" %}
-                <a href="{{ value.link }}" title="{{ value.title }}">
+                <a class="icon"
+                   href="{{ value.link }}" 
+                   title="{{ value.title }}"
+                >
                     <img class="icon" src="{{ url_for(".static", filename=filename ) }}" />
                 </a>
             </td>
             <td>
                 -
-                <a href="{{ value.link }}" title="{{ value.title }}">
+                <a class="button"
+                   href="{{ value.link }}" 
+                   title="{{ value.title }}"
+                >
                     {{ value.title }}
                 </a>
             </td>

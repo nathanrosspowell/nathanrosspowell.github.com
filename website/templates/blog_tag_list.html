@@ -1,0 +1,16 @@
+{% for tag in tags %}
+    <li id="{{ tag }}"
+        {% if tag_selection %}
+            {% if tag is equalto tag_selection %}
+                class="highlight"
+            {% endif %}
+        {% endif %}
+    >
+        {% set freq = getkey( tag_freq, tag ) %}
+        <a href="{{ url_for( "blog_tag", tag=tag) }}#blog-nav"
+            title="{{ "Blog filter for: " + tag }}"
+        >
+            {{ tag }}:  {{ freq }}
+        </a> 
+    </li>
+{% endfor %}

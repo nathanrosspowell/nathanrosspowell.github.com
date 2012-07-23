@@ -261,15 +261,28 @@ def atom():
 @app.errorhandler( 404 )
 def page_not_found( e ):
     return base_render_template( "error.html", details = e, error="404" )
+@app.route( "/404.html" )
+def error404():
+    return base_render_template( "error.html", error="404" )
 
 @app.errorhandler( 403 )
 def page_not_found( e ):
     return base_render_template( "error.html", details = e, error="403" )
+@app.route( "/403.html" )
+def error403():
+    return base_render_template( "error.html", error="403" )
 
 @app.errorhandler( 410 )
 def page_not_found( e ):
     return base_render_template( "error.html", details = e, error="410" )
+@app.route( "/410.html" )
+def error410():
+    return base_render_template( "error.html", error="410" )
 
 @app.errorhandler( 500 )
 def page_not_found( e ):
     return base_render_template( "error.html", details = e, error="500" )
+@app.route( "/500.html" )
+def error500():
+    return base_render_template( "error.html", error="500" )
+

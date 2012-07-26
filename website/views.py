@@ -52,11 +52,40 @@ def getkey( d, key ):
     e = "_ERROR_"
     r = d.get( key, e )
     if r == e:
-        print "\tDEBUG: asked for", key 
-        print "\tDEBUG: dic:", dic 
+        print "\tDEBUG: asked for", key
+        print "\tDEBUG: dic:", dic
         return "0"
     return r
 app.jinja_env.globals.update( getkey = getkey )
+
+def getdate( value, type ):
+    if type == "month":
+        return [ "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+        ][ int( value ) - 1 ]
+    elif type == "day":
+        day = str( int( value ) )
+        post = "th"
+        if day[ -1 ] == "1":
+            post = "st"
+        elif day[ 0 ] == "2":
+            post = "nd"
+        elif day[ 0 ] == "3":
+            post = "rd"
+        return "%s%s" % ( day, post, )
+
+    return "_ERROR_"
+app.jinja_env.globals.update( getdate = getdate )
 
 def equalto( x, y ):
     return x == y
@@ -77,8 +106,6 @@ def latest_pages( n, dir, subdir ):
 def archive_pages_dated( date, dir, subdir ):
     for page_path in walk.walk( os.path.join( dir, subdir ), walk.newest ):
         urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
-        print "P", page_path, "R", 
-        print "D", date
         if page_path.split( "/blog/" )[ 1 ].startswith( date ):
             yield pages.get_or_404( urlpath )
 
@@ -105,8 +132,8 @@ def article_page( template, page_list ):
         comment_id = "/%s/" % page_list[ 0 ]
         comment_title = title.meta.get( "title", "No Title" )
     else:
-        comment_id = None 
-        comment_title = None 
+        comment_id = None
+        comment_title = None
     return base_render_template( template,
             pages = pages_list,
             comment_override_id = comment_id,
@@ -152,7 +179,7 @@ def get_archive( specific = None, take_n = None ):
         add_to_dict( months, month_path )
         day_path = os.path.join( month_path, day )
         add_to_dict( days, day_path )
-    arcs = dict( 
+    arcs = dict(
         years.items() +
         months.items() +
         days.items()
@@ -196,9 +223,9 @@ def career():
 
 #-----------------------------------------------------------------------------
 # Dynamic pages.
-def blog( template = blog_html, 
-          page_list = None, 
-          select_blogs = None, 
+def blog( template = blog_html,
+          page_list = None,
+          select_blogs = None,
           tag_selection = None, **kwargs ):
     if select_blogs is not None:
         blogs = select_blogs
@@ -207,7 +234,7 @@ def blog( template = blog_html,
     else:
         blogs = [ post for post in latest_pages( ( 0, blogs_per_page ), directory(), "blog" ) ]
     blogroll = pages.get_or_404( "menu/blogroll" )
-    take_n = 20 
+    take_n = 20
     all_tags = get_tags( take_n = take_n )
     top_tags = get_tags( freq_sort = True, take_n = take_n )
     arc_years = get_archive( specific = "years", take_n = take_n )
@@ -233,31 +260,26 @@ def blog_page_0():
 @app.route( "/blog/<int:page>/" )
 def blog_page( page ):
     lower = 0
-    higher = blogs_per_page 
+    higher = blogs_per_page
     if page > 1:
         lower = blogs_per_page * ( page - 1 )
         higher = blogs_per_page * page
     page_list = [ post for post in latest_pages( ( lower, higher ), directory(), "blog" ) ]
     num_pages = page_count( directory(), "blog" )
-    print "num", num_pages
-    print "blogs", blogs_per_page
-    navpages =  num_pages / blogs_per_page 
-    print "nav", navpages
-    print "mod", num_pages % blogs_per_page
+    navpages =  num_pages / blogs_per_page
     if num_pages % blogs_per_page != 0:
         navpages += 1
-        print "plus one", navpages
     return blog( template = blog_all_html,
         page_list = page_list,
         currentpage = page if page > 0 else 1,
-        navpages = navpages, 
+        navpages = navpages,
     )
 
 @app.route( "/blog/tag/" )
 def blog_tags():
     all_tags = get_tags()
     top_tags = get_tags( freq_sort = True )
-    return blog( 
+    return blog(
         template = tag_html,
         all_tags = all_tags[ 0 ],
         top_tags = top_tags[ 0 ],
@@ -265,10 +287,19 @@ def blog_tags():
 
 @app.route( "/blog/archive/" )
 def blog_archives():
-    arcs = get_archive()
-    return blog( 
+    dates = {}
+    for key, value in get_archive()[ 1 ].items():
+        date = ""
+        parts = key.split( "/" )
+        d = dates
+        for part in parts:
+            date = os.path.join( date, part )
+            if not d.has_key( part):
+                d[ part ] = ( date, {} )
+            d = d[ part ][ 1 ]
+    return blog(
         template = archive_html,
-        arcs = arcs[ 0 ],
+        arcs = dates 
     )
 
 @app.route( "/blog/tag/<path:item>/" )
@@ -288,9 +319,9 @@ def blog_archive( item ):
 def page( page_path ):
     page = pages.get_or_404( page_path )
     template = page.meta.get( "template", blog_post_html )
-    return blog( 
+    return blog(
         template = template,
-        page_list = [ page ] 
+        page_list = [ page ]
     )
 
 @app.route( "/feeds/atom.xml" )

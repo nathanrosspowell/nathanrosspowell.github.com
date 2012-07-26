@@ -2,14 +2,45 @@
 {% import "macro_heading.html" as headings %}
 {% block blog_content %}
     {% set item_type = "blog_archive" %}
+    {% set freq = arc_freq %}
     <article id="archive">
         {% call headings.article() %}
             Blog Archive 
         {% endcall %}
-        {% set items = arcs %}
-        {% set freq = arc_freq %}
         <ul>
-            {% include "blog_tag_list.html" %}
+            {% for ykey, yvalue in arcs.iteritems() %}
+                {% set item_freq = getkey( freq, yvalue[ 0 ] ) %}
+                <li>{{ ykey }} -
+                <a href="{{ url_for( "blog_archive", item = yvalue[ 0 ] ) }}#blog_nav"
+                   title="{{ "Blogs during " + yvalue[ 0 ] }}"
+                >
+                     {{ item_freq }} Blogs</li>
+                </a>
+                <ul>
+                    {% for mkey, mvalue in yvalue[ 1 ].iteritems() %}
+                        {% set item_freq = getkey( freq, mvalue[ 0 ] ) %}
+                        <li>{{ getdate( mkey, "month" ) }} - 
+                            <a href="{{ url_for( "blog_archive", item = mvalue[ 0 ] ) }}#blog_nav"
+                               title="{{ "Blogs during " + mvalue[ 0 ] }}"
+                            >
+                                 {{ item_freq }} Blogs</li>
+                            </a>
+                        </li>
+                        <ul>
+                            {% for dkey, dvalue in mvalue[ 1 ].iteritems() %}
+                                {% set item_freq = getkey( freq, dvalue[ 0 ] ) %}
+                                <li>{{ getdate( dkey, "day" ) }} - 
+                                    <a href="{{ url_for( "blog_archive", item = dvalue[ 0 ] ) }}#blog_nav"
+                                       title="{{ "Blogs during " + dvalue[ 0 ] }}"
+                                    >
+                                         {{ item_freq }} Blogs</li>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
         </ul>
     </article>
 {% endblock %}

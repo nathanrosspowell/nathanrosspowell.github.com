@@ -1,0 +1,16 @@
+{% for item in items %}
+    <li id="{{ item }}"
+        {% if item_selection %}
+            {% if item is equalto item_selection %}
+                class="highlight"
+            {% endif %}
+        {% endif %}
+    >
+        {% set item_freq = getkey( freq, item ) %}
+        <a href="{{ url_for( item_type, item=item ) }}#blog-nav"
+            title="{{ "Blog filter for: " + item }}"
+        >
+            {{ makedate( item ) }}:  {{ item_freq }}
+        </a> 
+    </li>
+{% endfor %}

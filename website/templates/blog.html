@@ -33,7 +33,7 @@
                 {% set item_type = "blog_archive" %}
                 {% set items = arc_years_n %}
                 {% set freq = arc_freq %}
-                {% include "blog_tag_list.html" %}
+                {% include "blog_archive_list.html" %}
                 <li>
                 <a href="{{ url_for( "blog_archives" ) }}" title="See more tags">More...</a>
                 </li>
@@ -45,7 +45,7 @@
                 {% set item_type = "blog_archive" %}
                 {% set items = arc_months_n %}
                 {% set freq = arc_freq %}
-                {% include "blog_tag_list.html" %}
+                {% include "blog_archive_list.html" %}
                 <li>
                 <a href="{{ url_for( "blog_archives" ) }}" title="See more tags">More...</a>
                 </li>
@@ -57,7 +57,7 @@
                 {% set item_type = "blog_archive" %}
                 {% set items = arc_days_n %}
                 {% set freq = arc_freq %}
-                {% include "blog_tag_list.html" %}
+                {% include "blog_archive_list.html" %}
                 <li>
                 <a href="{{ url_for( "blog_archives" ) }}" title="See more tags">More...</a>
                 </li>

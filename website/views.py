@@ -58,6 +58,23 @@ def getkey( d, key ):
     return r
 app.jinja_env.globals.update( getkey = getkey )
 
+def makedate( value ):
+    ret = ""
+    year = ""
+    month = ""
+    day = ""
+    print "Value", value
+    for i, part in enumerate( value.split( "/" ) ):
+        print "i", i, "part", part
+        if i == 0:
+            year = part
+        elif i == 1:
+            month = ", %s" % getdate( part, "month" )
+        elif i == 2:
+            day = getdate( part, "day" )
+    return "%s%s %s" % ( year, month, day )
+app.jinja_env.globals.update( makedate = makedate )
+
 def getdate( value, type ):
     if type == "month":
         return [ "Jan",

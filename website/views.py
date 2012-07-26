@@ -101,8 +101,12 @@ def base_render_template( template, **kwargs ):
 def article_page( template, page_list ):
     pages_list = list( pages.get_or_404( name ) for name in page_list )
     title = pages_list[ 0 ]
-    comment_id = "/%s/" % page_list[ 0 ]
-    comment_title = title.meta.get( "title", "No Title" )
+    if pages_list[ 0 ].meta.get( "comments", False ):
+        comment_id = "/%s/" % page_list[ 0 ]
+        comment_title = title.meta.get( "title", "No Title" )
+    else:
+        comment_id = None 
+        comment_title = None 
     return base_render_template( template,
             pages = pages_list,
             comment_override_id = comment_id,

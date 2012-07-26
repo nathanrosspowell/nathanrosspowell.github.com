@@ -1,0 +1,70 @@
+{% extends "blog.html" %}
+{% import "macro_heading.html" as headings %}
+{% block blog_content %}
+
+{% for page in pages %}
+    <article class="blog" id="{{ page.named }}">
+        <header>
+            <div class='headline'>
+                <div class='date'>
+                    {{ page.published }} - 
+                </div>
+                <div class='title'>
+                    {{ page.title }}
+                </div>
+            </div>
+        </header>
+            {{ page.html|safe }}
+            {% if page.url %}
+                <p>
+                    {% include "disqus_comment_count.html" %}
+                </p>
+            {% endif %}
+    </article>
+{% endfor %}
+
+<article id="pagesnav">
+    {% for nav in range( 1, navpages + 1 ) %}
+        {% if currentpage is equalto nav %}
+            {{ nav }}
+        {% else %}
+            {% if nav is equalto 1 %}
+                <a href="{{ url_for( "blog_page_0" ) }}" 
+                    title="{{ "Blog page %d"|format( nav ) }}"
+                >
+                    {{ nav }}
+                </a>
+            {% else %}
+                <a href="{{ url_for( "blog_page", page = nav ) }}" 
+                    title="{{ "Blog page %d"|format( nav ) }}"
+                >
+                    {{ nav }}
+                </a>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</article>
+
+
+<article id="blogroll">
+    {% call headings.article() %}
+        {{ blogroll.title }}
+    {% endcall %}
+    {{ blogroll.html|safe }}
+</article>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+
+</script>
+
+{% endblock blog_content %}
+

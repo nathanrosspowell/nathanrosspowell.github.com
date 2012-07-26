@@ -19,8 +19,10 @@ flash
 
 #-----------------------------------------------------------------------------
 # Global template names
+blogs_per_page = 5
 article_html = "article.html"
 blog_html = "blog.html"
+blog_all_html = "blog_all.html"
 blog_post_html = "blog_post.html"
 connect_html = "connect.html"
 index_html = "index.html"
@@ -72,10 +74,21 @@ def latest_pages( n, dir, subdir ):
         urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
         yield pages.get_or_404( urlpath )
 
+def archive_pages_dated( date, dir, subdir ):
+    for page_path in walk.walk( os.path.join( dir, subdir ), walk.newest ):
+        urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
+        print "P", page_path, "R", 
+        print "D", date
+        if page_path.split( "/blog/" )[ 1 ].startswith( date ):
+            yield pages.get_or_404( urlpath )
+
 def all_pages( dir, subdir ):
     for page_path in walk.walk( os.path.join( dir, subdir ), walk.newest ):
         urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
         yield pages.get_or_404( urlpath )
+
+def page_count( dir, subdir ):
+    return len( [ a for a in walk.walk( os.path.join( dir, subdir ) ) ] )
 
 def get_pages( page_path ):
     return [page]
@@ -179,14 +192,16 @@ def career():
 
 #-----------------------------------------------------------------------------
 # Dynamic pages.
-@app.route( "/blog/" )
-def blog( template = blog_html, page_list = None, select_blogs = None, tag_selection = None, **kwargs ):
+def blog( template = blog_html, 
+          page_list = None, 
+          select_blogs = None, 
+          tag_selection = None, **kwargs ):
     if select_blogs is not None:
         blogs = select_blogs
     elif page_list is not None:
         blogs = page_list
     else:
-        blogs = [ post for post in latest_pages( 5, directory(), "blog" ) ]
+        blogs = [ post for post in latest_pages( ( 0, blogs_per_page ), directory(), "blog" ) ]
     blogroll = pages.get_or_404( "menu/blogroll" )
     take_n = 20 
     all_tags = get_tags( take_n = take_n )
@@ -206,6 +221,32 @@ def blog( template = blog_html, page_list = None, select_blogs = None, tag_selec
         arc_days_n = arc_days[ 0 ],
         arc_freq = arc_years[ 1 ],
         **kwargs
+    )
+
+@app.route( "/blog/" )
+def blog_page_0():
+    return blog_page( 0 )
+@app.route( "/blog/<int:page>/" )
+def blog_page( page ):
+    lower = 0
+    higher = blogs_per_page 
+    if page > 1:
+        lower = blogs_per_page * ( page - 1 )
+        higher = blogs_per_page * page
+    page_list = [ post for post in latest_pages( ( lower, higher ), directory(), "blog" ) ]
+    num_pages = page_count( directory(), "blog" )
+    print "num", num_pages
+    print "blogs", blogs_per_page
+    navpages =  num_pages / blogs_per_page 
+    print "nav", navpages
+    print "mod", num_pages % blogs_per_page
+    if num_pages % blogs_per_page != 0:
+        navpages += 1
+        print "plus one", navpages
+    return blog( template = blog_all_html,
+        page_list = page_list,
+        currentpage = page if page > 0 else 1,
+        navpages = navpages, 
     )
 
 @app.route( "/blog/tag/" )
@@ -235,7 +276,8 @@ def blog_tag( item ):
 
 @app.route( "/blog/archive/<path:item>/" )
 def blog_archive( item ):
-    return blog()
+    select_blogs = [ post for post in archive_pages_dated( item, directory(), "blog" ) ]
+    return blog( select_blogs = select_blogs, date_selection = item )
 
 
 @app.route( "/<path:page_path>/" )

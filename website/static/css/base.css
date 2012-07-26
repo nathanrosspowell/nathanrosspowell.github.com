@@ -186,7 +186,7 @@ article {
     float: right;
     font-family: 'CorpulentCapsShadowRg'; }
 
-section header div.headline {
+section header div.headline, acrticle.blog header div.headline {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif;
   font-size: medium;
   background-color: #b079a5;
@@ -194,10 +194,10 @@ section header div.headline {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #75506e), color-stop(1, #b079a5));
   background-image: -webkit-linear-gradient(#75506e, #b079a5);
   background-image: -o-linear-gradient(#75506e, #b079a5); }
-  section header div.headline a:link, section header div.headline a:visited, section header div.headline a:active {
+  section header div.headline a:link, section header div.headline a:visited, section header div.headline a:active, acrticle.blog header div.headline a:link, acrticle.blog header div.headline a:visited, acrticle.blog header div.headline a:active {
     color: #f2ecd5;
     text-decoration: none; }
-  section header div.headline a:hover {
+  section header div.headline a:hover, acrticle.blog header div.headline a:hover {
     color: #f2ecd5;
     text-decoration: underline; }
 
@@ -264,18 +264,6 @@ footer section {
 
 .dsq-comment-body {
   color: #f2ecd5 !important; }
-
-.ref {
-  color: #240605;
-  position: relative;
-  left: 35%;
-  top: 22%; }
-  .ref a:link, .ref a:visited, .ref a:active {
-    color: #240605;
-    text-decoration: none; }
-  .ref a:hover {
-    color: #a783b6;
-    text-decoration: underline; }
 
 .buttons img {
   width: 32;

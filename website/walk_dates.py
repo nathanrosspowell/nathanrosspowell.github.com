@@ -5,20 +5,28 @@ import os
 # The path below the dir should be set out in date format.
 # path example: /YYYY/MM/DD/file.ext
 # path example: /2012/01/30/file.txt
-def walk( dir, function, desc = True ):
+def walk( dir, function = None, desc = True ):
     for walking in os.walk( dir, topdown = desc ):
         walking[ 1 ].sort( reverse = desc )
-        for result in function( *walking, desc = desc ):
-            yield result
+        if function is None:
+            j = os.path.join
+            paths = [ j( walking[ 0 ], x ) for x in walking[ 2 ] if x[0] != "." ]
+            for path in paths:
+                yield path
+        else:
+            for result in function( *walking, desc = desc ):
+                yield result
 
 # Talke n from walk.
 def take( n, dir, function, desc = True ):
+    low, high = n
+    count = 0
     for f in walk( dir, function, desc ):
-        if n > 0:
+        if count >= high:
+            break
+        elif low <= count:
             yield f
-            n -= 1
-        else:
-            break;
+        count += 1
 
 # Example function for returning latest/'up to date' files.
 def newest( dirname, dirnames, filenames, desc = True ):

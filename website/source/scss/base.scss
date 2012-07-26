@@ -277,7 +277,7 @@ article {
     }
 }
 
-section header div.headline {
+section header div.headline, acrticle.blog header div.headline {
     @include body-font();
     font-size: medium; 
     @include alt-background();
@@ -410,21 +410,6 @@ footer section:first-child {
 
 .dsq-comment-body{
     color:$col-text !important;
-}
-
-.ref{
-    color: $col-background; 
-    position: relative;
-    left: 35%;
-    top: 22%;
-    a:link, a:visited, a:active {
-        color: $col-background; 
-        text-decoration: none;
-    }
-    a:hover {
-        color: lighten( $col-flavor, 3% );
-        text-decoration: underline;
-    }
 }
 
 img.cover {

@@ -70,9 +70,12 @@
     <article id="blogs">
         
         {% call headings.article() %}
-            Latest Blogs
             {% if tag_selection %}
-                Tagged: {{ tag_selection }}
+                Blogs Tagged: {{ tag_selection }}
+            {% elif date_selection %}
+                Blogs From: {{ date_selection }}
+            {% else %}
+                Latest Blogs
             {% endif %}
         {% endcall %}
 

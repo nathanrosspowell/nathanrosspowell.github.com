@@ -10,17 +10,22 @@
     <tr>
         <th>
             {% call headings.article() %}
-                Twitter
+                Recent Comments
             {% endcall %}
         </th>
         <th>
             {% call headings.article() %}
-                Recent Comments
+                Twitter
             {% endcall %}
         </th>
     </tr>
     <tr>
-        <td class="horipad">
+        <td>
+
+<div id="recentcomments" class="dsq-widget"><script type="text/javascript" src="http://nathanrosspowell.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200"></script></div>
+
+        </td>
+        <td> 
 
 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
@@ -33,7 +38,7 @@ new TWTR.Widget({
   height: 300,
   theme: {
     shell: {
-      background: '#C4bea9',
+      background: '#333333',
       color: '#f2ecd5'
     },
     tweets: {
@@ -45,16 +50,11 @@ new TWTR.Widget({
   features: {
     scrollbar: false,
     loop: false,
-    live: true,
+    live: false,
     behavior: 'all'
   }
 }).render().setUser('nathanross').start();
 </script>
-
-        </td>
-        <td class="horipad">
-
-<div id="recentcomments" class="dsq-widget"><script type="text/javascript" src="http://nathanrosspowell.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200"></script></div>
 
         </td>
     </tr>

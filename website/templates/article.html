@@ -1,21 +1,26 @@
 {% extends "base.html" %}
 {% import "macro_heading.html" as headings %}
 
+{# Calculate if there are comments #}
+{% set comment_page = pages|first %}
+{% if comment_override_id %}
+    {% set page_id = comment_override_id %} 
+    {% set page_title = comment_override_title %}
+    {% set comments_are_on = True %}
+{% else %}
+    {% if comment_page.comments %}
+        {% set page_id = url_for( "page", page_path=comment_page.path ) %}
+        {% set page_title = comment_page.title %}
+        {% set comments_are_on = True %}
+    {% endif %}
+{% endif %}
+
+{% block page_title %}
+    {{ comment_page.title }}
+{% endblock %}
+
 {% block content %}
 
-    {# Calculate if there are comments #}
-    {% set comment_page = pages|first %}
-    {% if comment_override_id %}
-        {% set page_id = comment_override_id %} 
-        {% set page_title = comment_override_title %}
-        {% set comments_are_on = True %}
-    {% else %}
-        {% if comment_page.comments %}
-            {% set page_id = url_for( "page", page_path=comment_page.path ) %}
-            {% set page_title = comment_page.title %}
-            {% set comments_are_on = True %}
-        {% endif %}
-    {% endif %}
 
     {% include "pages_index.html" %}
 

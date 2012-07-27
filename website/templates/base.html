@@ -7,8 +7,9 @@
 <head>
     <meta charset='utf-8' />
     <title>
-        nathanrosspowell.com 
+        N.R.P. -  
         {% block page_title %}
+        Personal Website
         {% endblock %}
     </title>
     <meta content='{% block meta_description %}Webpage{% endblock %}' name='description' />
@@ -40,33 +41,7 @@
         </h6-->
     </hgroup>
     <nav>
-        <ul class='navbar'>
-            <li>
-                <a href="{{ url_for( "blog_page_0" ) }}">
-                    Blog
-                </a>
-            </li>
-            <li>
-                <a href="{{ url_for( "code" ) }}">
-                    Code
-                </a>
-            </li>
-            <li>
-                <a href="{{ url_for( "games" ) }}">
-                    Games
-                </a>
-            </li>
-            <li>
-                <a href="{{ url_for( "career" ) }}">
-                    Career
-                </a>
-            </li>
-            <li>
-                <a href="{{ url_for( "connect" ) }}">
-                    Connect
-                </a>
-            </li>
-        </ul>
+        {% include "nav_bar.html" %}
     </nav>
 </header>
     {% block body %}
@@ -113,18 +88,6 @@
     {{ credits.html|safe }}
   </section>
 </footer>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-33462621-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+{% include "google_analytics.html" %}
 </body>
 </html>

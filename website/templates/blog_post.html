@@ -1,4 +1,10 @@
 {% extends "blog.html" %}
+
+{% set comment_page = pages|first %}
+{% block page_title %}
+    {{ comment_page.title }}
+{% endblock %}
+
 {% block blog_content %}
 
     {% include "pages_index.html" %}

@@ -1,0 +1,18 @@
+{% set items = [
+    ( "blog_page_0",    "Blog" ),
+    ( "code",           "Code" ),
+    ( "games",          "Games" ),
+    ( "career",         "Career" ),
+    ( "connect",        "Connect" ),
+] %}
+<ul class='navbar'>
+    {% for item in items %}
+        <li>
+            <a href="{{ url_for( item[ 0 ] ) }}"
+                title="{{ item[ 1 ] }}"
+            >
+                {{ item[ 1 ] }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

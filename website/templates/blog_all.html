@@ -23,7 +23,41 @@
     </article>
 {% endfor %}
 
+
+{% macro linky( text, number, url, active ) -%}
+    {% if active is sameas true %}
+        <span
+            {% if text is equalto( "<" ) %}
+                class="bookend"
+            {% elif text is equalto( ">" ) %}
+                class="bookend"
+            {% endif %}
+        >
+            {{ text }}
+        </span>
+    {% else %}
+        <a 
+            {% if url is equalto( "blog_page_0" ) %}
+                href="{{ url_for( url ) }}" 
+            {% else %}
+                href="{{ url_for( url, page = number ) }}" 
+            {% endif %}
+            title="{{ "Blog page %d"|format( number ) }}"
+            {% if text is equalto( "<" ) %}
+                class="bookend"
+            {% elif text is equalto( ">" ) %}
+                class="bookend"
+            {% endif %}
+            
+        >
+            {{ text }}
+        </a>
+    {% endif %}
+{%- endmacro %}
+
+{% if navpages is compare( ">", 1 ) %}
 <article id="pagesnav">
+    {{ linky( "<", currentpage - 1, "blog_page_0", currentpage is compare( "==", 1 )) }} 
     {% for nav in range( 1, navpages + 1 ) %}
         {% if currentpage is equalto nav %}
             {{ nav }}
@@ -43,7 +77,9 @@
             {% endif %}
         {% endif %}
     {% endfor %}
+    {{ linky( ">", currentpage + 1, "blog_page", currentpage is compare( "==", navpages  )) }} 
 </article>
+{% endif %}
 
 
 <article id="blogroll">

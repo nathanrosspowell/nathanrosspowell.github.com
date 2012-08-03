@@ -222,7 +222,7 @@ nav {
     line-height: $sz-tab - 1px;
 }
 .navbar ul li {
-    background-color: $col-background;
+    @include rgba( $col-background, $col-background-alpha );
     margin-top: 5px;
     word-wrap: break-word;
     font-size: 50%;
@@ -485,10 +485,19 @@ article#gameslist {
 }
 
 .icons {
-    padding-left: 250px;
+    padding-left: 266px;
     li{
         display: inline-block;
     }
     list-style-type: none;
+}
 
+#pagesnav {
+    font-size: large; 
+    text-align: center;
+        @include title-font();
+    .bookend {
+        @include alt-font();
+        font-size: x-large; 
+    }
 }

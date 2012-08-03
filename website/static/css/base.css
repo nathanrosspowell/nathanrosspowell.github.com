@@ -135,6 +135,7 @@ nav {
 
 .navbar ul li {
   background-color: #240605;
+  background-color: rgba(36, 6, 5, 0.85);
   margin-top: 5px;
   word-wrap: break-word;
   font-size: 50%;
@@ -354,7 +355,15 @@ article#gameslist section:nth-child(odd) div.cover {
   margin-right: auto; }
 
 .icons {
-  padding-left: 250px;
+  padding-left: 266px;
   list-style-type: none; }
   .icons li {
     display: inline-block; }
+
+#pagesnav {
+  font-size: large;
+  text-align: center;
+  font-family: 'CorpulentCapsShadowRg'; }
+  #pagesnav .bookend {
+    font-family: 'CorpulentCapsRegular';
+    font-size: x-large; }

@@ -58,6 +58,10 @@ def getkey( d, key ):
     return r
 app.jinja_env.globals.update( getkey = getkey )
 
+def compare( x, type, y ):
+    return eval( "x %s y " % ( type, ) )
+app.jinja_env.tests.update( compare = compare )
+
 def makedate( value ):
     ret = ""
     year = ""

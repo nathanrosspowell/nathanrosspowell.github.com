@@ -1,0 +1,35 @@
+{% extends "article.html" %}
+{% import "macro_heading.html" as headings %}
+
+{% macro youtube( url, params = "" ) -%}
+
+<iframe width="560" 
+    height="315" 
+    src="{{ "http://www.youtube.com/embed/" + url }}" 
+    frameborder="0" 
+    allowfullscreen
+>
+</iframe>
+
+{%- endmacro %}
+
+
+{% set article = pages|first %}
+    
+{% block page_title %}
+    {{ article.title }}
+{% endblock %}
+    
+{% block article_pages %}
+    {% set numyoutube = ( youtubevideos|length %}
+    {% if numyoutube is compare( ">", 1 ) %}
+        <article id="youtube">
+            {% call headings.article() %}
+                Videos
+            {% endcall %}
+            {% for url in youtubevideos %}
+                {{ youtube( url ) }}
+            {% endfor %}
+        </article>
+    {% endif %}
+{% endblock %}

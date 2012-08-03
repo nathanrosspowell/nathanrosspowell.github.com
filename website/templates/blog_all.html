@@ -2,105 +2,94 @@
 {% import "macro_heading.html" as headings %}
 {% block blog_content %}
 
-{% for page in pages %}
-    <article class="blog" id="{{ page.named }}">
-        <header>
-            <div class='headline'>
-                <div class='date'>
-                    {{ page.published }} - 
+    {% for page in pages %}
+        <article class="blog" id="{{ page.named }}">
+            <header>
+                <div class='headline'>
+                    <div class='date'>
+                        {{ page.published }} - 
+                    </div>
+                    <div class='title'>
+                        {{ page.title }}
+                    </div>
                 </div>
-                <div class='title'>
-                    {{ page.title }}
-                </div>
-            </div>
-        </header>
-            {{ page.html|safe }}
-            {% if page.url %}
-                <p>
-                    {% include "disqus_comment_count.html" %}
-                </p>
-            {% endif %}
-    </article>
-{% endfor %}
-
-
-{% macro linky( text, number, url, active ) -%}
-    {% if active is sameas true %}
-        <span
-            {% if text is equalto( "<" ) %}
-                class="bookend"
-            {% elif text is equalto( ">" ) %}
-                class="bookend"
-            {% endif %}
-        >
-            {{ text }}
-        </span>
-    {% else %}
-        <a 
-            {% if url is equalto( "blog_page_0" ) %}
-                href="{{ url_for( url ) }}" 
-            {% else %}
-                href="{{ url_for( url, page = number ) }}" 
-            {% endif %}
-            title="{{ "Blog page %d"|format( number ) }}"
-            {% if text is equalto( "<" ) %}
-                class="bookend"
-            {% elif text is equalto( ">" ) %}
-                class="bookend"
-            {% endif %}
-            
-        >
-            {{ text }}
-        </a>
-    {% endif %}
-{%- endmacro %}
-
-{% if navpages is compare( ">", 1 ) %}
-<article id="pagesnav">
-    {{ linky( "<", currentpage - 1, "blog_page_0", currentpage is compare( "==", 1 )) }} 
-    {% for nav in range( 1, navpages + 1 ) %}
-        {% if currentpage is equalto nav %}
-            {{ nav }}
-        {% else %}
-            {% if nav is equalto 1 %}
-                <a href="{{ url_for( "blog_page_0" ) }}" 
-                    title="{{ "Blog page %d"|format( nav ) }}"
-                >
-                    {{ nav }}
-                </a>
-            {% else %}
-                <a href="{{ url_for( "blog_page", page = nav ) }}" 
-                    title="{{ "Blog page %d"|format( nav ) }}"
-                >
-                    {{ nav }}
-                </a>
-            {% endif %}
-        {% endif %}
+            </header>
+                {{ page.html|safe }}
+                {% if page.url %}
+                    <p>
+                        {% include "disqus_comment_count.html" %}
+                    </p>
+                {% endif %}
+        </article>
     {% endfor %}
-    {{ linky( ">", currentpage + 1, "blog_page", currentpage is compare( "==", navpages  )) }} 
-</article>
-{% endif %}
 
 
-<article id="blogroll">
-    {% call headings.article() %}
-        {{ blogroll.title }}
-    {% endcall %}
-    {{ blogroll.html|safe }}
-</article>
+    {% macro linky( text, number, url, active ) -%}
+        {% if active is sameas true %}
+            <span
+                {% if text is equalto( "<" ) %}
+                    class="bookend"
+                {% elif text is equalto( ">" ) %}
+                    class="bookend"
+                {% endif %}
+            >
+                {{ text }}
+            </span>
+        {% else %}
+            <a 
+                {% if url is equalto( "blog_page_0" ) %}
+                    href="{{ url_for( url ) }}" 
+                {% else %}
+                    href="{{ url_for( url, page = number ) }}" 
+                {% endif %}
+                title="{{ "Blog page %d"|format( number ) }}"
+                {% if text is equalto( "<" ) %}
+                    class="bookend"
+                {% elif text is equalto( ">" ) %}
+                    class="bookend"
+                {% endif %}
+                
+            >
+                {{ text }}
+            </a>
+        {% endif %}
+    {%- endmacro %}
 
-<script type="text/javascript">
-/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
-/* * * DON'T EDIT BELOW THIS LINE * * */
-(function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
+    {% if navpages is compare( ">", 1 ) %}
+    <article id="pagesnav">
+        {{ linky( "<", currentpage - 1, "blog_page_0", currentpage is compare( "==", 1 )) }} 
+        {% for nav in range( 1, navpages + 1 ) %}
+            {% if currentpage is equalto nav %}
+                {{ nav }}
+            {% else %}
+                {% if nav is equalto 1 %}
+                    <a href="{{ url_for( "blog_page_0" ) }}" 
+                        title="{{ "Blog page %d"|format( nav ) }}"
+                    >
+                        {{ nav }}
+                    </a>
+                {% else %}
+                    <a href="{{ url_for( "blog_page", page = nav ) }}" 
+                        title="{{ "Blog page %d"|format( nav ) }}"
+                    >
+                        {{ nav }}
+                    </a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        {{ linky( ">", currentpage + 1, "blog_page", currentpage is compare( "==", navpages  )) }} 
+    </article>
+    {% endif %}
 
-</script>
+
+    <article id="blogroll">
+        {% call headings.article() %}
+            {{ blogroll.title }}
+        {% endcall %}
+        {{ blogroll.html|safe }}
+    </article>
+
+    {% include "disqus_comment_count_script.html" %}
 
 {% endblock blog_content %}
 

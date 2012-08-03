@@ -6,7 +6,8 @@ url: games/ride-to-hell
 template: "article.html"
 comments: True
 published: No
+gametrailer: http://www.gametrailers.com/videos/j0pzns/ride-to-hell-teaser
+cover: "jpg/cover-ride-to-hell.jpg"
 tags:
 - games
 
-Heres is the post body.

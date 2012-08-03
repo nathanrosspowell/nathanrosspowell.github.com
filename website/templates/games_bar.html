@@ -1,21 +1,35 @@
-{% if page.metacritic %}
-<a href="{{ page.metacritic }}">
-    <img src="{{ url_for( ".static", filename="png/metacritic-logo.png" ) }}" title="{{ "Metacritic for " + page.title }}" />
-</a>
-{% endif %}
-{% if page.facebook %}
-<a href="{{ page.facebook }}">
-    <img src="{{ url_for( ".static", filename="png/facebook-logo.png" ) }}" title="{{ "Facebook for " + page.title }}" />
-</a>
-{% endif %}
-{% if page.twitter %}
-<a href="{{ page.twitter }}">
-    <img src="{{ url_for( ".static", filename="png/twitter-logo.png" ) }}" title="{{ "Twitter for " + page.title }}" />
-</a>
-{% endif %}
-{% if page.websiteimg%}
-<a href="{{ page.websiteimg }}">
-    <img src="{{ url_for( ".static", filename=page.websiteimg ) }}" title="{{ "Website for " + page.title }}" />
-</a>
-{% endif %}
+{% set items = [
+    {
+        "type": page.metacritic,
+        "icon": "png/metacritic-logo.png",
+        "title": "Metacritic for "
+    },
+    {
+        "type": page.facebook,
+        "icon": "png/facebook-logo.png",
+        "title": "Facebook for ",
+    },
+    {
+        "type": page.twitter,
+        "icon": "png/twitter-logo.png",
+        "title": "Twitter for ",
+    },
+    {
+        "type": page.gametrailer,
+        "icon": "jpg/game-trailers-logo.jpg",
+        "title": "GameTrailer for ",
+    },
+    {
+        "type": page.website,
+        "icon": page.websiteimg,
+        "title": "Website for ",
+    }
+] %}
 
+{% for item in items %}
+    {% if item.type %}
+        <a href="{{ item.type }}">
+            <img src="{{ url_for( ".static", filename=item.icon ) }}" title="{{ item.title + page.title }}" />
+        </a>
+    {% endif %}
+{% endfor %}

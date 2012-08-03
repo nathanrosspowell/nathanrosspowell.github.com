@@ -8,7 +8,7 @@ major: True
 published: May 2012
 cover: "png/cover-dirt-showdown.png"
 metacritic: http://www.metacritic.com/game/xbox-360/dirt-showdown
-videoreview: http://www.gametrailers.com/reviews/6iffak/dirt-showdown-review
+gametrailer: http://www.gametrailers.com/reviews/6iffak/dirt-showdown-review
 website: http://www.codemasters.com/uk/dirtshowdown/360/
 websiteimg: "png/codemasters-logo.png"
 racenet: http://racenet.codemasters.com/Driver/Profile/60

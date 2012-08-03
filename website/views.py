@@ -33,8 +33,6 @@ games_html = "games.html"
 games_order = (
     "menu/games",
     "games/dirt-showdown",
-    "games/dirt-showdown",
-    "games/dirt-showdown",
     "games/operation-flashpoint-red-river",
     "games/ferrari-the-race-experience",
     "games/ride-to-hell",

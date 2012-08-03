@@ -2,17 +2,24 @@
 {% import "macro_heading.html" as headings %}
 
 {% macro youtube( url, params = "" ) -%}
-
-<iframe width="560" 
-    height="315" 
-    src="{{ "http://www.youtube.com/embed/" + url }}" 
-    frameborder="0" 
-    allowfullscreen
->
-</iframe>
-
+    <iframe width="560" 
+        height="315" 
+        src="{{ "http://www.youtube.com/embed/" + url }}" 
+        frameborder="0" 
+        allowfullscreen
+    >
+    </iframe>
 {%- endmacro %}
 
+{% macro image( url ) -%}
+    {% set imgurl = url_for( ".static", filename=url ) %} 
+    <a href="{{ imgurl }}">
+        <img src="{{ imgurl }}"
+            height=200
+            width=200
+        />
+    </a>
+{%- endmacro %}
 
 {% set article = pages|first %}
     
@@ -21,15 +28,36 @@
 {% endblock %}
     
 {% block article_pages %}
-    {% set numyoutube = ( youtubevideos|length %}
-    {% if numyoutube is compare( ">", 1 ) %}
+    {% set numyoutube = article.youtubevideos|length %}
+    {% if numyoutube is compare( ">", 0 ) %}
         <article id="youtube">
             {% call headings.article() %}
                 Videos
             {% endcall %}
-            {% for url in youtubevideos %}
+            {% for url in article.youtubevideos %}
                 {{ youtube( url ) }}
             {% endfor %}
         </article>
     {% endif %}
+
+    {% set numpic = article.pics|length %}
+    {% if numpic is compare( ">", 0 ) %}
+        <article id="pictures">
+            {% call headings.article() %}
+                Pictures
+            {% endcall %}
+            {% for url in article.pics %}
+                {{ image( url ) }}
+            {% endfor %}
+        </article>
+    {% endif %}
+
+    <article id="summary">
+        {% call headings.article() %}
+            {{ article.title|title }}
+            Summary
+        {% endcall %}
+        {{ article.html|safe }}
+    </article>
+
 {% endblock %}

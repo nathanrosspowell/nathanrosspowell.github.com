@@ -1,5 +1,9 @@
 {% extends "blog.html" %}
 
+{% block css_link %}
+    <link rel="stylesheet" href="{{ url_for(".static", filename="css/sprite.css") }}" type="text/css" media="screen, projection"/>
+{% endblock css_link %}
+
 {% set comment_page = pages|first %}
 {% block page_title %}
     {{ comment_page.title }}
@@ -60,8 +64,10 @@
                 </span>
                 {% set page_title = page.title %}
                 {% set page_id = url_for( "page", page_path=page.path ) %}
+                {% include "bookmarks_html.html" %}
                 {% include "disqus_comment_thread.html" %}
             </footer>
         </article>
     {% endfor %}
+    {% include "bookmarks.html" %}
 {% endblock %}

@@ -2,7 +2,7 @@ source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev
 named: dirt-showdown
 title: DiRT Showdown
 url: games/dirt-showdown
-template: "article.html"
+template: "game.html"
 comments: True
 major: True
 published: May 2012
@@ -16,6 +16,10 @@ facebook: https://www.facebook.com/dirtgame
 twitter: http://www.twitter.com/@dirtgame
 tags:
 - games
+youtubevideos:
+- 4wtFta60FQI 
+pics:
+- "png/codemasters-logo.png"
 
 DiRT Showdown is the new arcade racing game from the team that brought you the award-winning DiRT series, uncaged in 2012. Pick up and play controls combine with electrifying events, frenzied crowds and stunning graphics to deliver high octane, dive in and drive thrills from event one.
 

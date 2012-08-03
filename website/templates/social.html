@@ -37,13 +37,17 @@
 ] %}
 
 {% block social_display %}
-    {% for value in items %}
-        {% set filename = "png/" + value.icon + ".png" %}
-        <a class="icon"
-           href="{{ value.link }}" 
-           title="{{ value.title }}"
-        >
-            <img class="icon" src="{{ url_for(".static", filename=filename ) }}" />
-        </a>
-    {% endfor %}
+    <ul class="icons">
+        {% for value in items %}
+            {% set filename = "png/" + value.icon + ".png" %}
+            <li>
+                <a class="icon"
+                   href="{{ value.link }}" 
+                   title="{{ value.title }}"
+                >
+                    <img class="icon" src="{{ url_for(".static", filename=filename ) }}" />
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock social_display %}

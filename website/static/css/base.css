@@ -53,7 +53,9 @@ body {
   background-attachment: fixed;
   background-position: center top;
   background-repeat: repeat-y;
-  border: 10px, #a079b0; }
+  border: 10px, #a079b0;
+  position: relative;
+  top: -10px; }
 
 strong {
   font-weight: bold; }
@@ -78,8 +80,15 @@ hgroup {
   text-align: center;
   margin: 0px 12px 12px 12px;
   padding: 20px 20px 20px 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   background-color: #240605;
-  background-color: rgba(36, 6, 5, 0.85); }
+  background-color: rgba(36, 6, 5, 0.85);
+  -moz-box-shadow: 0 0 15px black;
+  -o-box-shadow: 0 0 15px black;
+  -webkit-box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px black; }
   hgroup h1 {
     font-family: 'CorpulentCapsShadowRg';
     font-size: 250%; }
@@ -96,12 +105,20 @@ nav {
 
 .navbar {
   white-space: nowrap;
-  vertical-align: middle;
   list-style-type: none;
   margin: 0px 12px 0px 12px;
   padding: 0 0 0 0; }
 
 .navbar li {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #240605;
+  background-color: rgba(36, 6, 5, 0.85);
+  -moz-box-shadow: 0 0 15px black;
+  -o-box-shadow: 0 0 15px black;
+  -webkit-box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px black;
   background-color: #240605;
   background-color: rgba(36, 6, 5, 0.85);
   display: inline-block;
@@ -113,17 +130,22 @@ nav {
 
 .navbar a {
   width: 162.4px;
-  height: 45px; }
+  height: 45px;
+  line-height: 44px; }
 
 .navbar ul li {
   background-color: #240605;
   margin-top: 5px;
   word-wrap: break-word;
   font-size: 50%;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif; }
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif;
+  -moz-box-shadow: 0 0 15px #a079b0;
+  -o-box-shadow: 0 0 15px #a079b0;
+  -webkit-box-shadow: 0 0 15px #a079b0;
+  box-shadow: 0 0 15px #a079b0; }
 
 .navbar ul li:first-child {
-  margin-top: 25px; }
+  margin-top: 10px; }
 
 .navbar li a {
   display: block; }
@@ -138,7 +160,11 @@ nav {
   background-image: -moz-linear-gradient(#724d82, #a079b0);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #724d82), color-stop(1, #a079b0));
   background-image: -webkit-linear-gradient(#724d82, #a079b0);
-  background-image: -o-linear-gradient(#724d82, #a079b0); }
+  background-image: -o-linear-gradient(#724d82, #a079b0);
+  -moz-box-shadow: 0 0 15px #a079b0;
+  -o-box-shadow: 0 0 15px #a079b0;
+  -webkit-box-shadow: 0 0 15px #a079b0;
+  box-shadow: 0 0 15px #a079b0; }
   .navbar li:hover a.toplevel {
     color: #f2ecd5; }
 
@@ -156,8 +182,15 @@ nav {
 article {
   margin: 12px 12px 12px 12px;
   padding: 20px 20px 20px 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   background-color: #240605;
-  background-color: rgba(36, 6, 5, 0.85); }
+  background-color: rgba(36, 6, 5, 0.85);
+  -moz-box-shadow: 0 0 15px black;
+  -o-box-shadow: 0 0 15px black;
+  -webkit-box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px black; }
   article header {
     padding: 0 0 20px 0; }
     article header h1 {
@@ -169,6 +202,13 @@ article {
 
 .headline {
   font-family: 'CorpulentCapsShadowRg';
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #240605;
+  background-color: rgba(36, 6, 5, 0.85);
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: x-large;
   background-color: #a079b0;
   background-image: -moz-linear-gradient(#724d82, #a079b0);
@@ -184,9 +224,15 @@ article {
   .headline .comments {
     font-weight: bold;
     float: right;
-    font-family: 'CorpulentCapsShadowRg'; }
+    font-family: 'CorpulentCapsShadowRg';
+    padding-top: 2px; }
 
 section header div.headline, acrticle.blog header div.headline {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #240605;
+  background-color: rgba(36, 6, 5, 0.85);
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif;
   font-size: medium;
   background-color: #b079a5;
@@ -226,8 +272,15 @@ footer {
 aside nav, aside section {
   margin: 12px 12px 12px 12px;
   padding: 20px 20px 20px 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   background-color: #240605;
-  background-color: rgba(36, 6, 5, 0.85); }
+  background-color: rgba(36, 6, 5, 0.85);
+  -moz-box-shadow: 0 0 15px black;
+  -o-box-shadow: 0 0 15px black;
+  -webkit-box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px black; }
 
 aside section:last-child {
   margin-bottom: 0; }
@@ -246,8 +299,15 @@ aside section:last-child {
 footer section {
   margin: 12px 12px 12px 12px;
   padding: 20px 20px 20px 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   background-color: #240605;
-  background-color: rgba(36, 6, 5, 0.85); }
+  background-color: rgba(36, 6, 5, 0.85);
+  -moz-box-shadow: 0 0 15px black;
+  -o-box-shadow: 0 0 15px black;
+  -webkit-box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px black; }
 
 .copyright {
   text-align: center; }
@@ -286,3 +346,15 @@ article#gameslist section:nth-child(odd) div.cover {
 .horipad {
   padding-left: 18px;
   padding-right: 18px; }
+
+.iconlist {
+  width: 850px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.icons {
+  padding-left: 250px;
+  list-style-type: none; }
+  .icons li {
+    display: inline-block; }

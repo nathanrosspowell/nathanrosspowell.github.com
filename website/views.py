@@ -63,9 +63,7 @@ def makedate( value ):
     year = ""
     month = ""
     day = ""
-    print "Value", value
     for i, part in enumerate( value.split( "/" ) ):
-        print "i", i, "part", part
         if i == 0:
             year = part
         elif i == 1:

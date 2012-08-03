@@ -8,7 +8,6 @@ $col-text: #F2ECD5;
 $col-text-dark: #C4BEA9;
 $col-background: #240605;
 $col-background-alpha: 0.85;
-
 $col-flavor: #A079B0;
 $col-flavor-dark: #724D82;
 
@@ -31,6 +30,9 @@ $sz-tab: 45px;
 
 $sz-large-text: 250%;
 
+$sz-corners: 10px;
+$sz-borders: 10px;
+
 /******************************************************************/
 /* constants */
 /* options */
@@ -45,9 +47,23 @@ $c-tab-width: ( ( $sz-body - ( $sz-margin * ( $c-tab-options - 1 ) ) ) / $c-tab-
     padding: $sz-pad $sz-pad $sz-pad $sz-pad;
 }
 
+@mixin background-coloring(){
+    @include rgba( $col-background, $col-background-alpha );
+}
+
+@mixin background-styling( $size : $sz-corners ) {
+    @include border-radius( $size );
+    @include background-coloring();
+}
+
+@mixin shadow( $col : black ) {
+    @include box-shadow( 0, 0, $sz-corners + 5px, $col );
+}
+
 @mixin main-spacer( $vertMargin ) {
     @include clear-spacer( $vertMargin );
-    @include rgba( $col-background, $col-background-alpha );
+    @include background-styling();
+    @include shadow();
 }
 
 @mixin complex-box-shadow( $one, $two, $three ) {
@@ -120,6 +136,8 @@ body {
     background-position:center top; 
     background-repeat: repeat-y;
     border: 10px, $col-flavor; 
+    position: relative;
+    top: -$sz-corners;
 }
 
 p {
@@ -183,12 +201,13 @@ nav {
 
 .navbar {
     white-space: nowrap;
-    vertical-align:middle;
     list-style-type: none;
     margin: 0px $sz-margin 0px $sz-margin;
     padding: 0 0 0 0;
 }
 .navbar li { 
+    @include background-styling();
+    @include shadow();
     @include rgba( $col-background, $col-background-alpha );
     display: inline-block;
     width: $c-tab-width ;
@@ -200,6 +219,7 @@ nav {
 .navbar a {
     width: $c-tab-width ;
     height: $sz-tab ;
+    line-height: $sz-tab - 1px;
 }
 .navbar ul li {
     background-color: $col-background;
@@ -207,9 +227,10 @@ nav {
     word-wrap: break-word;
     font-size: 50%;
     @include body-font();
+    @include shadow( $col-flavor );
 }
 .navbar ul li:first-child {
-    margin-top: 25px;
+    margin-top: 10px;
 }
 .navbar li a {
     display: block; 
@@ -222,6 +243,7 @@ nav {
 }
 .navbar li:hover {
     @include flavor-background();
+    @include shadow( $col-flavor );
     a.toplevel {
         color: $col-text;
     }
@@ -260,6 +282,9 @@ article {
 
 .headline {
     @include title-font();
+    @include background-styling();
+    padding-left: $sz-corners;
+    padding-right: $sz-corners;
     font-size: x-large; 
     @include flavor-background();
     .date{
@@ -274,10 +299,12 @@ article {
         font-weight: bold;
         float: right;
         @include title-font();
+        padding-top: 2px;
     }
 }
 
 section header div.headline, acrticle.blog header div.headline {
+    @include background-styling();
     @include body-font();
     font-size: medium; 
     @include alt-background();
@@ -448,4 +475,20 @@ article#gameslist {
 .horipad {
     padding-left: $sz-margin * 1.5;
     padding-right: $sz-margin * 1.5;
+}
+
+.iconlist {
+    width: $sz-body;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icons {
+    padding-left: 250px;
+    li{
+        display: inline-block;
+    }
+    list-style-type: none;
+
 }

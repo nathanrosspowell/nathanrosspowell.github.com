@@ -13,8 +13,6 @@ website: http://www.codemasters.com/uk/operation-flashpoint-red-river/360/
 facebook: https://www.facebook.com/flashpointredriver
 twitter: http://twitter.com/flashpointgame
 websiteimg: "png/codemasters-logo.png"
-short: Taking a small step into the future, Red River depicts a fictional conflict with contemporary geopolitical themes, which will unfold over three distinct acts in both single player and drop-in-drop-out co-operative play for up to four players online. Faced with new counter-insurgency combat and the returning threat of the Chinese PLA, players will feel the tension, brutality and carnage of modern conflict from the perspective of a marine fireteam on deployment in a hostile country, thousands of miles from home.
-
 tags:
 - games
 

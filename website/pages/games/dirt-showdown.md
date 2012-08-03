@@ -14,7 +14,6 @@ websiteimg: "png/codemasters-logo.png"
 racenet: http://racenet.codemasters.com/Driver/Profile/60
 facebook: https://www.facebook.com/dirtgame
 twitter: http://www.twitter.com/@dirtgame
-short: DiRT Showdown is the new arcade racing game from the team that brought you the award-winning DiRT series, uncaged in 2012. Pick up and play controls combine with electrifying events, frenzied crowds and stunning graphics to deliver high octane, dive in and drive thrills from event one.
 tags:
 - games
 

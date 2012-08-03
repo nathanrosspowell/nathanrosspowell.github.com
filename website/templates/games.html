@@ -50,7 +50,7 @@
                     {% if page.short %}
                         {{ page.short }}..
                     {% else %}
-                        {{ page.body[:300] }}...
+                        {{ page.body[:400] }}...
                     {% endif %}
                     {% if page.url %}
                         <a class='button' href="{{ url_for("page", page_path=page.path) }}" >

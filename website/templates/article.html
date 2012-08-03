@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% import "macro_heading.html" as headings %}
 
+{% block css_link %}
+    <link rel="stylesheet" href="{{ url_for(".static", filename="css/sprite.css") }}" type="text/css" media="screen, projection"/>
+{% endblock css_link %}
+
 {# Calculate if there are comments #}
 {% set comment_page = pages|first %}
 {% if comment_override_id %}
@@ -36,13 +40,27 @@
     {% block article_post_pages %}
     {% endblock article_post_pages %}
 
-    {% if comments_are_on %}
-        <article id="comments">
-            {% call headings.article() %}
-                Comments for {{ page_title|title }}
-            {% endcall %}
-            {% include "disqus_comment_thread.html" %}
-        </article>
-    {% endif %}
+    {% block article_share %}
+        {% if comments_are_on %}
+            <article id="bookmarks">
+                {% call headings.article() %}
+                    Share {{ page_title|title }}
+                {% endcall %}
+                {% include "bookmarks_html.html" %}
+            </article>
+            {% include "bookmarks.html" %}
+        {% endif %}
+    {% endblock article_share %}
+
+    {% block article_comments %}
+        {% if comments_are_on %}
+            <article id="comments">
+                {% call headings.article() %}
+                    Comments for {{ page_title|title }}
+                {% endcall %}
+                {% include "disqus_comment_thread.html" %}
+            </article>
+        {% endif %}
+    {% endblock article_comments %}
 
 {% endblock %}

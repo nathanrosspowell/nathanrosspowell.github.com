@@ -13,7 +13,10 @@
 {% macro image( url ) -%}
 
 {% set imgurl = url_for( ".static", filename=url ) %} 
-<img src="{{ imgurl }}"/>
+
+<img src="{{ imgurl }}"
+style="max-width:600px"
+/>
         
 {%- endmacro %}
 

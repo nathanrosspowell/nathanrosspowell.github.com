@@ -47,5 +47,9 @@
             Summary
         {% endcall %}
         {{ article.html|safe }}
+        <div class="buttons" >
+            {% set page = pages|first %}
+            {% include "games_bar.html" %}
+        </div>
     </article>
 {% endblock %}

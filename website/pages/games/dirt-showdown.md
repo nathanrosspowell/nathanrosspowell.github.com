@@ -15,10 +15,13 @@ racenet: http://racenet.codemasters.com/Driver/Profile/60
 facebook: https://www.facebook.com/dirtgame
 twitter: http://www.twitter.com/@dirtgame
 mediabar:
-- { "type":"image", "src":"png/cover-dirt-showdown.png", "title":"Box art" }
+- { "type":"image", "src":"png/dirt-showdown-screen-4.png", "title":"Elimiator game mode" }
 - { "type":"gametrailer", "src":"3b374ed0-fa21-44cc-acff-d3e3dc829cb0", "title":"Gametrailers review" }
+- { "type":"image", "src":"jpg/dirt-showdown-screen-3.jpg", "title":"Race game mode" }
 - { "type":"youtube", "src":"4wtFta60FQI", "title":"Launch trailer" }
+- { "type":"image", "src":"jpg/dirt-showdown-screen-2.jpg", "title":"Gymkhana replay" }
 - { "type":"youtube", "src":"qveoRp8Vlrs", "title":"Gameplay trailer" }
+- { "type":"image", "src":"jpg/dirt-showdown-screen-5.jpg", "title":"Damage physics" }
 tags:
 - games
 

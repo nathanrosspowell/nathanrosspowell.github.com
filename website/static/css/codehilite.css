@@ -5,9 +5,10 @@
   border-radius: 10px;
   background-color: #240605;
   background-color: rgba(36, 6, 5, 0.85);
-  border: 1px solid #a079b0;
+  border: 2px solid #a079b0;
   margin: 12px 12px 12px 12px;
-  padding: 20px 20px 20px 20px; }
+  padding: 20px 20px 20px 20px;
+  font-family: Consolas, Inconsolata, "Lucida Console", "DejaVu Sans Mono", "Courier New", monospace; }
 
 .codehilite .hll {
   background-color: #222222; }

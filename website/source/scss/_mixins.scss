@@ -49,3 +49,6 @@
     font-family: 'CorpulentCapsRegular';
 }
 
+@mixin mono-font(){
+    font-family: Consolas, Inconsolata, "Lucida Console", "DejaVu Sans Mono", "Courier New", monospace;
+}

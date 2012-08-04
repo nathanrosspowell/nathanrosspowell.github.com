@@ -9,7 +9,11 @@ template: "blog_post.html"
 comments: True
 short: "Here is the post short."
 tags:
-- blog
+- code
+- test
+- python
+- c++
+- basic 
 
 This is the test for code syntax highlighting from markdown source.
 

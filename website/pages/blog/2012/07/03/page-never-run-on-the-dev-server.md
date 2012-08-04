@@ -5,6 +5,6 @@ published: 2012/07/03
 url: blog/2012/07/03/page-never-run-on-the-dev-server
 comments: True
 tags:
-- blog
+- test 
 
 Heres is the post body.

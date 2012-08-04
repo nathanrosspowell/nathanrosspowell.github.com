@@ -5,7 +5,6 @@ published: 2012/07/03
 url: blog/2012/07/03/2nd-test
 comments: True
 tags:
-- blog
 - zzz
 - aaa
 

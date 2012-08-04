@@ -6,8 +6,7 @@ published: 2012/07/03
 url: blog/2012/07/03/hello-world
 comments: True
 tags:
-- blog
-- aaa
+- update
 
 This is the first _blog_ entry onto my newly made website. I'm not sure what is going to end up on this page, but hopefully it will be a means to communicate my hobby code to the wider world.
 

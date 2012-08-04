@@ -37,8 +37,9 @@ $vi:#ffffc7;
 .codehilite code,.codehilite pre {
     color:$col;
     @include background-styling();
-    border: 1px solid $col-flavor; 
+    border: 2px solid $col-flavor; 
     @include clear-spacer( $sz-margin );
+    @include mono-font();
 }
 .codehilite .hll{background-color:$hll}
 .codehilite .c{color:$c}

@@ -80,6 +80,8 @@
                 Blogs Tagged: {{ tag_selection }}
             {% elif date_selection %}
                 Blogs From: {{ date_selection }}
+            {% elif custom_blog_title %}
+                {{ custom_blog_title }}
             {% else %}
                 Latest Blogs
             {% endif %}

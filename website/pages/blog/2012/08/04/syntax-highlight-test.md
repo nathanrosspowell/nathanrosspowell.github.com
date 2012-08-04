@@ -17,12 +17,12 @@ tags:
 
 This is the test for code syntax highlighting from markdown source.
 
-[Goodbye world in BASIC][bas]:
+Goodbye world in [BASIC][bas]:
 
     :::basic
     10 PRINT "Goodbye, World!"
 
-[Fibonacci sequence in python][py]:
+Fibonacci sequence in [python][py]:
 
     :::python
     def fibRec(n):
@@ -31,7 +31,7 @@ This is the test for code syntax highlighting from markdown source.
         else:
             return fibRec(n-1) + fibRec(n-2)
 
-[Sieve of Eratosthenes in C++][cpp]:
+Sieve of Eratosthenes in [C++][cpp]:
 
     :::c++
     // yield all prime numbers less than limit. 

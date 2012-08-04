@@ -331,6 +331,10 @@ def blog_archive( item ):
     select_blogs = [ post for post in archive_pages_dated( item, directory(), "blog" ) ]
     return blog( select_blogs = select_blogs, date_selection = item )
 
+@app.route( "/blog/all/" )
+def blog_all():
+    select_blogs = [ post for post in all_pages( directory(), "blog" ) ]
+    return blog( select_blogs = select_blogs, custom_blog_title = "All Blogs" )
 
 @app.route( "/<path:page_path>/" )
 def page( page_path ):

@@ -352,88 +352,70 @@
 
     
 
+    <article id="blogs">
+        
+        <header>
+        <div class='headline'>
+            <div class='title'>
+                
+            
+                All Blogs
+            
+        
+            </div>
+        </div>
+    </header>
+
     
-        <article class="blog" id="syntax-highlight-test">
+    <section id="syntax-highlight-test">
             <header>
                 <div class='headline'>
+                    <div class='comments'>
+                        <a href="http://www.nathanrosspowell.com/blog/2012/08/04/syntax-highlight-test/#disqus_thread" data-disqus-identifier="/blog/2012/08/04/syntax-highlight-test/">Loading...</a>
+                    </div>
                     <div class='date'>
                         2012/08/04 - 
                     </div>
                     <div class='title'>
-                        <a href="/blog/2012/08/04/syntax-highlight-test/">Syntax Highlight Test</a>
+                        Syntax Highlight Test
                     </div>
                 </div>
             </header>
-                <p>This is the test for code syntax highlighting from markdown source.</p>
-<p>Goodbye world in <a href="http://rosettacode.org/wiki/Hello_world#BASIC">BASIC</a>:</p>
-<div class="codehilite"><pre><span class="mi">10</span> <span class="n">PRINT</span> <span class="s">&quot;Goodbye, World!&quot;</span>
-</pre></div>
-
-
-<p>Fibonacci sequence in <a href="http://rosettacode.org/wiki/Fibonacci_sequence#Python">python</a>:</p>
-<div class="codehilite"><pre><span class="k">def</span> <span class="nf">fibRec</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">fibRec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibRec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-
-<p>Sieve of Eratosthenes in <a href="http://rosettacode.org/wiki/Sieve_of_Eratosthenes#C.2B.2B">C++</a>:</p>
-<div class="codehilite"><pre><span class="c1">// yield all prime numbers less than limit. </span>
-<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">UnaryFunction</span><span class="o">&gt;</span>
-<span class="kt">void</span> <span class="n">primesupto</span><span class="p">(</span><span class="kt">int</span> <span class="n">limit</span><span class="p">,</span> <span class="n">UnaryFunction</span> <span class="n">yield</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-
-  <span class="k">const</span> <span class="kt">int</span> <span class="n">sqrt_limit</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">limit</span><span class="p">));</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">sqrt_limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
-    <span class="n">yield</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-
-    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="n">k</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="n">ulim</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">limit</span><span class="p">);</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">ulim</span><span class="p">;</span> <span class="n">k</span> <span class="o">+=</span> <span class="n">n</span><span class="p">)</span> 
-      <span class="c1">//NOTE: &quot;unsigned&quot; is used to avoid an overflow in `k+=n` for `limit` near INT_MAX</span>
-      <span class="n">is_prime</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
-
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">sqrt_limit</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
-    <span class="n">yield</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
                 
-                    <p>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/04/syntax-highlight-test/#disqus_thread" data-disqus-identifier="/blog/2012/08/04/syntax-highlight-test/">Loading...</a>
-                    </p>
+                    This is the test for code syntax highlighting from markdown source....
                 
-        </article>
+                
+                    <a class='button' href="/blog/2012/08/04/syntax-highlight-test/" >
+                        Continue Reading
+                    </a>
+                
+        </section>
     
-        <article class="blog" id="hello-world-2">
+    <section id="hello-world-2">
             <header>
                 <div class='headline'>
+                    <div class='comments'>
+                        <a href="http://www.nathanrosspowell.com/blog/2012/07/03/hello-world/#disqus_thread" data-disqus-identifier="/blog/2012/07/03/hello-world/">Loading...</a>
+                    </div>
                     <div class='date'>
                         2012/07/03 - 
                     </div>
                     <div class='title'>
-                        <a href="/blog/2012/07/03/hello-world/">Hello, world!</a>
+                        Hello, world!
                     </div>
                 </div>
             </header>
-                <p>This is the first <em>blog</em> entry onto my newly made website. I'm not sure what is going to end up on this page, but hopefully it will be a means to communicate my hobby code to the wider world.</p>
-<p>I've got a comment system working (<a href="http://disqus.com" title="Disqus commenting">Disqus</a>) and the next thing to add is code highlighting. A filter for <em>tags</em> needs to be set up for all of the blog conntent and finally, the style could do with some work, but this is as nice as a v0.1 as any.</p>
                 
-                    <p>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/07/03/hello-world/#disqus_thread" data-disqus-identifier="/blog/2012/07/03/hello-world/">Loading...</a>
-                    </p>
+                    This is the first blog entry onto my newly made website....
                 
-        </article>
+                
+                    <a class='button' href="/blog/2012/07/03/hello-world/" >
+                        Continue Reading
+                    </a>
+                
+        </section>
     
-
-
-    
-
-    
-
+    </article>
 
     <article id="blogroll">
         <header>
@@ -454,20 +436,8 @@
 </ul>
     </article>
 
-     <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-
-
+    
 
      <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

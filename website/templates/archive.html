@@ -7,6 +7,8 @@
         {% call headings.article() %}
             Blog Archive 
         {% endcall %}
+        View <a href="{{ url_for( "blog_all" ) }}" title="View all blog titles">all blogs</a>.
+        <hr/>
         <ul>
             {% for ykey, yvalue in arcs.iteritems() %}
                 {% set item_freq = getkey( freq, yvalue[ 0 ] ) %}

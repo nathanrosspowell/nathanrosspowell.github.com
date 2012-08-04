@@ -83,6 +83,17 @@ a:hover {
     text-decoration: underline;
 }
 
+article, section {
+    a:link, a:visited, a:active {
+        color: $col-text-link;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $col-text;
+        text-decoration: underline;
+    }
+}
+
 /******************************************************************/
 /* HEADER */
 hgroup{

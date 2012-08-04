@@ -63,6 +63,13 @@ a:hover {
   color: #dcdccc;
   text-decoration: underline; }
 
+article a:link, article a:visited, article a:active, section a:link, section a:visited, section a:active {
+  color: #bea3c9;
+  text-decoration: none; }
+article a:hover, section a:hover {
+  color: #dcdccc;
+  text-decoration: underline; }
+
 /******************************************************************/
 /* HEADER */
 hgroup {

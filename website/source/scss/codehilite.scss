@@ -1,0 +1,111 @@
+@import "all";
+@import "cols";
+@import "const";
+@import "mixins";
+
+$col: #fdce93;
+$backc: $col-background;
+$c: #7f9f7f;
+$err: #e37170;
+$errb: #3d3535;
+$hll: #222;
+$k:#f0dfaf; 
+$l:#ccc;
+$n: #dcdccc;
+$o:#f0efd0;
+$p:#41706f;
+$cs:#cd0000;
+$gr:red;
+$gi:#00cd00;
+$go:gray;
+$gu:purple;
+$gt:#0040D0;
+$kc:#dca3a3;
+$kd:#ffff86;
+$kn:#dfaf8f;
+$kp:#cdcf99;
+$kr:#cdcd00;
+$ld:#cc9393;
+$m:#8cd0d3;
+$na:#9ac39f;
+$nb:#efef8f;
+$ni:#c28182;
+$ne:#c3bf9f;
+$nn:#8fbede;
+$vi:#ffffc7;
+
+.codehilite code,.codehilite pre {
+    color:$col;
+    @include background-styling();
+    border: 1px solid $col-flavor; 
+    @include clear-spacer( $sz-margin );
+}
+.codehilite .hll{background-color:$hll}
+.codehilite .c{color:$c}
+.codehilite .err{color:$err;background-color:$errb}
+.codehilite .g{color:$c}
+.codehilite .k{color:$k}
+.codehilite .l{color:$l}
+.codehilite .n{color:$n}
+.codehilite .o{color:$o}
+.codehilite .x{color:$l}
+.codehilite .p{color:$p}
+.codehilite .cm{color:$c}
+.codehilite .cp{color:$c}
+.codehilite .c1{color:$c}
+.codehilite .cs{color:$cs;font-weight:bold}
+.codehilite .gd{color:$cs}
+.codehilite .ge{color:$l;font-style:italic}
+.codehilite .gr{color:$gr}
+.codehilite .gh{color:$n;font-weight:bold}
+.codehilite .gi{color:$gi}
+.codehilite .go{color:$go}
+.codehilite .gp{color:$n;font-weight:bold}
+.codehilite .gs{color:$l;font-weight:bold}
+.codehilite .gu{color:$gu;font-weight:bold}
+.codehilite .gt{color:$gt}
+.codehilite .kc{color:$kc}
+.codehilite .kd{color:$kd}
+.codehilite .kn{color:$kn;font-weight:bold}
+.codehilite .kp{color:$kp}
+.codehilite .kr{color:$kr}
+.codehilite .kt{color:$gi}
+.codehilite .ld{color:$ld}
+.codehilite .m{color:$m}
+.codehilite .s{color:$ld}
+.codehilite .na{color:$na}
+.codehilite .nb{color:$nb}
+.codehilite .nc{color:$nb}
+.codehilite .no{color:$l}
+.codehilite .nd{color:$l}
+.codehilite .ni{color:$ni}
+.codehilite .ne{color:$ne;font-weight:bold}
+.codehilite .nf{color:$nb}
+.codehilite .nl{color:$l}
+.codehilite .nn{color:$nn}
+.codehilite .nx{color:$l}
+.codehilite .py{color:$l}
+.codehilite .nt{color:$na}
+.codehilite .nv{color:$n}
+.codehilite .ow{color:$o}
+.codehilite .w{color:$l}
+.codehilite .mf{color:$m}
+.codehilite .mh{color:$m}
+.codehilite .mi{color:$m}
+.codehilite .mo{color:$m}
+.codehilite .sb{color:$ld}
+.codehilite .sc{color:$ld}
+.codehilite .sd{color:$ld}
+.codehilite .s2{color:$ld}
+.codehilite .se{color:$ld}
+.codehilite .sh{color:$ld}
+.codehilite .si{color:$ld}
+.codehilite .sx{color:$ld}
+.codehilite .sr{color:$ld}
+.codehilite .s1{color:$ld}
+.codehilite .ss{color:$ld}
+.codehilite .bp{color:$nb}
+.codehilite .vc{color:$nb}
+.codehilite .vg{color:$n}
+.codehilite .vi{color:$vi}
+.codehilite .il{color:$m}

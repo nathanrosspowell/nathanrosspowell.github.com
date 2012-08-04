@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
-  <atom:updated>2012-08-03T21:47:11+00:00</atom:updated>
+  <atom:updated>2012-08-04T02:41:09+00:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -9,6 +9,55 @@
     <atom:email>nathanrosspowell@gmail.com</atom:email>
   </atom:author>
 
+  
+  <atom:entry>
+    <atom:title>Syntax Highlight Test</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/08/04/syntax-highlight-test/</atom:id>
+    <atom:updated>2012-08-04T00:44:54+00:00</atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/08/04/syntax-highlight-test/"/>
+    <atom:summary>Here is the post short.</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>This is the test for code syntax highlighting from markdown source.</p>
+<p><a href="http://rosettacode.org/wiki/Hello_world#BASIC">Goodbye world in BASIC</a>:</p>
+<div class="codehilite"><pre><span class="mi">10</span> <span class="n">PRINT</span> <span class="s">&quot;Goodbye, World!&quot;</span>
+</pre></div>
+
+
+<p><a href="http://rosettacode.org/wiki/Fibonacci_sequence#Python">Fibonacci sequence in python</a>:</p>
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">fibRec</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibRec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibRec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a href="http://rosettacode.org/wiki/Sieve_of_Eratosthenes#C.2B.2B">Sieve of Eratosthenes in C++</a>:</p>
+<div class="codehilite"><pre><span class="c1">// yield all prime numbers less than limit. </span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">UnaryFunction</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">primesupto</span><span class="p">(</span><span class="kt">int</span> <span class="n">limit</span><span class="p">,</span> <span class="n">UnaryFunction</span> <span class="n">yield</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+  <span class="k">const</span> <span class="kt">int</span> <span class="n">sqrt_limit</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">limit</span><span class="p">));</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">sqrt_limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
+    <span class="n">yield</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="n">k</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="n">ulim</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">limit</span><span class="p">);</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">ulim</span><span class="p">;</span> <span class="n">k</span> <span class="o">+=</span> <span class="n">n</span><span class="p">)</span> 
+      <span class="c1">//NOTE: &quot;unsigned&quot; is used to avoid an overflow in `k+=n` for `limit` near INT_MAX</span>
+      <span class="n">is_prime</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">sqrt_limit</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+    <span class="n">yield</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div> ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    
+  </atom:entry>
   
   <atom:entry>
     <atom:title>2Nd Chance Sunday</atom:title>

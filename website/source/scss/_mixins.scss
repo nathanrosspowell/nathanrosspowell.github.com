@@ -1,0 +1,51 @@
+@mixin clear-spacer( $vertMargin ) {
+    margin: $vertMargin $sz-margin $sz-margin $sz-margin;
+    padding: $sz-pad $sz-pad $sz-pad $sz-pad;
+}
+
+@mixin background-coloring(){
+    @include rgba( $col-background, $col-background-alpha );
+}
+
+@mixin background-styling( $size : $sz-corners ) {
+    @include border-radius( $size );
+    @include background-coloring();
+}
+
+@mixin shadow( $col : black ) {
+    @include box-shadow( 0, 0, $sz-corners + 5px, $col );
+}
+
+@mixin main-spacer( $vertMargin ) {
+    @include clear-spacer( $vertMargin );
+    @include background-styling();
+    @include shadow();
+}
+
+@mixin complex-box-shadow( $one, $two, $three ) {
+    -moz-box-shadow: $one, $two, $three;
+	-o-box-shadow: $one, $two, $three;
+    -webkit-box-shadow: $one, $two, $three;
+    box-shadow: $one, $two, $three;
+}
+
+@mixin flavor-background(){
+    @include linear-gradient( $col-flavor-dark, $col-flavor );
+}
+
+@mixin alt-background(){
+    @include linear-gradient( $col-alt-dark, $col-alt );
+}
+
+@mixin body-font(){
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif; 
+}
+
+@mixin title-font(){
+    font-family: 'CorpulentCapsShadowRg';
+}
+
+@mixin alt-font(){
+    font-family: 'CorpulentCapsRegular';
+}
+

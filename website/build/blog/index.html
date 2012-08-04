@@ -17,7 +17,8 @@
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0;' name='viewport' />
     <link rel="stylesheet" href="/static/css/base.css" type="text/css" media="screen, projection"/>
     
-    
+    <link rel="stylesheet" href="/static/css/codehilite.css" type="text/css" media="screen, projection"/>
+
 </head>
 
 <body>
@@ -110,7 +111,7 @@
         <a href="/blog/tag/blog/#blog-nav"
             title="Blog filter for: blog"
         >
-            blog:  8
+            blog:  9
         </a> 
     </li>
 
@@ -210,7 +211,7 @@
         <a href="/blog/tag/blog/#blog-nav"
             title="Blog filter for: blog"
         >
-            blog:  8
+            blog:  9
         </a> 
     </li>
 
@@ -288,7 +289,7 @@
         <a href="/blog/archive/2012/#blog-nav"
             title="Blog filter for: 2012"
         >
-            2012 :  8
+            2012 :  9
         </a> 
     </li>
 
@@ -304,6 +305,17 @@
                 
                 
                 
+    <li id="2012/08"
+        
+    >
+        
+        <a href="/blog/archive/2012/08/#blog-nav"
+            title="Blog filter for: 2012/08"
+        >
+            2012, Aug :  1
+        </a> 
+    </li>
+
     <li id="2012/07"
         
     >
@@ -327,6 +339,17 @@
                 
                 
                 
+    <li id="2012/08/04"
+        
+    >
+        
+        <a href="/blog/archive/2012/08/04/#blog-nav"
+            title="Blog filter for: 2012/08/04"
+        >
+            2012, Aug 4th:  1
+        </a> 
+    </li>
+
     <li id="2012/07/18"
         
     >
@@ -369,6 +392,61 @@
 
     
 
+    
+        <article class="blog" id="syntax-highlight-test">
+            <header>
+                <div class='headline'>
+                    <div class='date'>
+                        2012/08/04 - 
+                    </div>
+                    <div class='title'>
+                        Syntax Highlight Test
+                    </div>
+                </div>
+            </header>
+                <p>This is the test for code syntax highlighting from markdown source.</p>
+<p><a href="http://rosettacode.org/wiki/Hello_world#BASIC">Goodbye world in BASIC</a>:</p>
+<div class="codehilite"><pre><span class="mi">10</span> <span class="n">PRINT</span> <span class="s">&quot;Goodbye, World!&quot;</span>
+</pre></div>
+
+
+<p><a href="http://rosettacode.org/wiki/Fibonacci_sequence#Python">Fibonacci sequence in python</a>:</p>
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">fibRec</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibRec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibRec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a href="http://rosettacode.org/wiki/Sieve_of_Eratosthenes#C.2B.2B">Sieve of Eratosthenes in C++</a>:</p>
+<div class="codehilite"><pre><span class="c1">// yield all prime numbers less than limit. </span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">UnaryFunction</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">primesupto</span><span class="p">(</span><span class="kt">int</span> <span class="n">limit</span><span class="p">,</span> <span class="n">UnaryFunction</span> <span class="n">yield</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+  <span class="k">const</span> <span class="kt">int</span> <span class="n">sqrt_limit</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">limit</span><span class="p">));</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">sqrt_limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
+    <span class="n">yield</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="n">k</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="n">ulim</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">limit</span><span class="p">);</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">ulim</span><span class="p">;</span> <span class="n">k</span> <span class="o">+=</span> <span class="n">n</span><span class="p">)</span> 
+      <span class="c1">//NOTE: &quot;unsigned&quot; is used to avoid an overflow in `k+=n` for `limit` near INT_MAX</span>
+      <span class="n">is_prime</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">sqrt_limit</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+    <span class="n">yield</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+                
+                    <p>
+                        <a href="http://www.nathanrosspowell.com/blog/2012/08/04/syntax-highlight-test/#disqus_thread" data-disqus-identifier="/blog/2012/08/04/syntax-highlight-test/">Loading...</a>
+                    </p>
+                
+        </article>
     
         <article class="blog" id="2nd-chance-sunday">
             <header>
@@ -444,25 +522,6 @@ fFinally, the style could do with some work, but this is as nice as a v0.1 as an
                 
                     <p>
                         <a href="http://www.nathanrosspowell.com/blog/2012/07/03/nathans-rubbish/#disqus_thread" data-disqus-identifier="/blog/2012/07/03/nathans-rubbish/">Loading...</a>
-                    </p>
-                
-        </article>
-    
-        <article class="blog" id="2nd-test">
-            <header>
-                <div class='headline'>
-                    <div class='date'>
-                        2012/07/03 - 
-                    </div>
-                    <div class='title'>
-                        2nd test
-                    </div>
-                </div>
-            </header>
-                <p>Heres is the post body.</p>
-                
-                    <p>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/07/03/2nd-test/#disqus_thread" data-disqus-identifier="/blog/2012/07/03/2nd-test/">Loading...</a>
                     </p>
                 
         </article>

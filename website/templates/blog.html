@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% import "macro_heading.html" as headings %}
+{% block css_link %}
+    <link rel="stylesheet" href="{{ url_for(".static", filename="css/codehilite.css") }}" type="text/css" media="screen, projection"/>
+{% endblock css_link %}
 {% block page_title %}
     Blog
 {% endblock %}

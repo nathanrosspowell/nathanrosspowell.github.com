@@ -1,15 +1,4 @@
 /******************************************************************/
-/* base.scss */
-/******************************************************************/
-/* Colours */
-/******************************************************************/
-/* Sizes */
-/******************************************************************/
-/* constants */
-/* options */
-/******************************************************************/
-/* Mixins */
-/******************************************************************/
 /* Fonts */
 @font-face {
   font-family: 'CorpulentCapsShadowRg';
@@ -33,7 +22,7 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif;
   font-weight: 300;
   margin: 0 auto;
-  color: #f2ecd5;
+  color: #dcdccc;
   background: #240605;
   background-color: #724d82;
   background-image: url("../jpg/back3.jpg");
@@ -71,7 +60,7 @@ a:link, a:visited, a:active {
   text-decoration: none; }
 
 a:hover {
-  color: #f2ecd5;
+  color: #dcdccc;
   text-decoration: underline; }
 
 /******************************************************************/
@@ -167,7 +156,7 @@ nav {
   -webkit-box-shadow: 0 0 15px #a079b0;
   box-shadow: 0 0 15px #a079b0; }
   .navbar li:hover a.toplevel {
-    color: #f2ecd5; }
+    color: #dcdccc; }
 
 .navbar li:hover ul {
   display: block;
@@ -242,10 +231,10 @@ section header div.headline, acrticle.blog header div.headline {
   background-image: -webkit-linear-gradient(#75506e, #b079a5);
   background-image: -o-linear-gradient(#75506e, #b079a5); }
   section header div.headline a:link, section header div.headline a:visited, section header div.headline a:active, acrticle.blog header div.headline a:link, acrticle.blog header div.headline a:visited, acrticle.blog header div.headline a:active {
-    color: #f2ecd5;
+    color: #dcdccc;
     text-decoration: none; }
   section header div.headline a:hover, acrticle.blog header div.headline a:hover {
-    color: #f2ecd5;
+    color: #dcdccc;
     text-decoration: underline; }
 
 .tags:hover {
@@ -318,13 +307,13 @@ footer section {
 /******************************************************************/
 /* Disqus */
 #dsq-content {
-  color: #f2ecd5 !important; }
+  color: #dcdccc !important; }
 
 #dsq-content .dsq-moderate .dsq-comment-header {
   background: #a079b0; }
 
 .dsq-comment-body {
-  color: #f2ecd5 !important; }
+  color: #dcdccc !important; }
 
 .buttons img {
   width: 32;

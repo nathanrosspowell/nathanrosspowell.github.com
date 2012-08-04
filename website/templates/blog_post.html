@@ -2,6 +2,7 @@
 
 {% block css_link %}
     <link rel="stylesheet" href="{{ url_for(".static", filename="css/sprite.css") }}" type="text/css" media="screen, projection"/>
+    <link rel="stylesheet" href="{{ url_for(".static", filename="css/codehilite.css") }}" type="text/css" media="screen, projection"/>
 {% endblock css_link %}
 
 {% set comment_page = pages|first %}
@@ -64,9 +65,7 @@
                 </span>
                 {% set page_title = page.title %}
                 {% set page_id = url_for( "page", page_path=page.path ) %}
-                <div class="center">
-                    {% include "bookmarks_html.html" %}
-                </div>
+                {% include "bookmarks_html.html" %}
                 {% include "disqus_comment_thread.html" %}
             </footer>
         </article>

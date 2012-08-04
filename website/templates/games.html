@@ -51,14 +51,20 @@
                         {{ page.short }}..
                     {% else %}
                         {{ page.body[:400] }}
-                        <a class='button' href="{{ url_for("page", page_path=page.path) }}#summary" >
+                        <a class='button'
+                            href="{{ url_for("page", page_path=page.path) }}#summary"
+                            title="Continue reading"    
+                        >
                             ...
                         </a>
                     {% endif %}
                     {% if page.url %}
                         <p>
-                            <a class='button' href="{{ url_for("page", page_path=page.path) }}" >
-                               More infomation 
+                            <a class='button' 
+                               href="{{ url_for("page", page_path=page.path) }}"
+                               title="Videos, pictures and full summary"
+                            >
+                               More media and infomation 
                             </a>
                         </p>
                     {% endif %}

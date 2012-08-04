@@ -3,7 +3,7 @@ named: ferrari-the-race-experince
 title: Ferrari The Race Experince
 published: 2012/07/14
 url: games/ferrari-the-race-experince
-template: "article.html"
+template: "game.html"
 comments: True
 published: August 2010
 cover: "jpg/cover-ferrari.jpg"
@@ -13,6 +13,12 @@ websiteimg: jpg/logo-eutechnyx.jpg
 twitter: http://twitter.com/ferrariraceexp
 tags:
 - games
+mediabar:
+- { "type":"image", "src":"jpg/ferrari-screen-3.jpg", "title":"Ferrari 599XX" }
+- { "type":"youtube", "src":"belERBbt42w", "title":"Cinematic trailer" }
+- { "type":"image", "src":"jpg/ferrari-screen-1.jpg", "title":"Ferrari FXX" }
+- { "type":"youtube", "src":"xdpUWBgP-WY", "title":"Ferrari F430 Spider lap" }
+- { "type":"image", "src":"jpg/ferrari-screen-2.jpg", "title":"Ferrari 575 GTC" }
 
 
 Ferrari's latest and hottest marques, along with its motors past and present, are poised to vroom onto PlayStation3 with the September 29 launch of Ferrari The Race Experience.

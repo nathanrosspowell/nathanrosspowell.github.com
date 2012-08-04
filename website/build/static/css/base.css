@@ -251,6 +251,18 @@ section header div.headline, acrticle.blog header div.headline {
   background-image: -webkit-linear-gradient(#724d82, #a079b0);
   background-image: -o-linear-gradient(#724d82, #a079b0); }
 
+.bigbutton {
+  font-size: xx-large;
+  position: relative;
+  top: -6px;
+  font-family: 'CorpulentCapsShadowRg'; }
+  .bigbutton:hover {
+    background-color: #a079b0;
+    background-image: -moz-linear-gradient(#724d82, #a079b0);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #724d82), color-stop(1, #a079b0));
+    background-image: -webkit-linear-gradient(#724d82, #a079b0);
+    background-image: -o-linear-gradient(#724d82, #a079b0); }
+
 /******************************************************************/
 footer {
   padding: 20px 0 0 0; }

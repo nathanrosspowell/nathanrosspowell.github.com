@@ -28,7 +28,8 @@ Industry Experience
 
 08/2010 - Present : Game Programmer to Experienced Game Programmer (09/2011)
 
-### [DiRT Showdown][showdown]
+<a id="dirt-showdown"/>
+### [DiRT Showdown][showdown] 
 
 09/2011 - 05/2012 : Arcade racing with destruction modes (X360/PS3/PC) 
 
@@ -58,7 +59,8 @@ Technical research on fitness for purpose on a selection of available middleware
 
 Underwent internal design training and leadership testing (Strength.Deployment.Inventory). Being directly in- volved in the design process of new ideas, a large part of my work was rapidly prototyping UI and game mechanics to use in presentations and live demos.  
 
-### [Operation Flashpoint: Red River][redriver] 
+<a id="operation-flashpoint-red-river"/>
+### [Operation Flashpoint: Red River][redriver]
 
 08/2010 - 06/2011 : Authentic military co-op FPS (X360/PS3/PC).
 
@@ -94,6 +96,7 @@ Strong experience debugging release crash dumps on all platforms. Team member pi
 
 06/2007 - 07/2010 : Game Programmer
 
+<a id="ferrari-the-race-experience"/>
 ### [Ferrari The Race Experience][ferrari]
 
 Licensed circuit racer (PSN/WII) 03/2010 - 07/2010
@@ -104,7 +107,7 @@ Platform lead for Wii release of a remix of Ferrari Challenge and all it’s DLC
 
 Extensive work with upgrading to the 3.1 SDK, controller code, channel/banner tools, disk mastering and passing lotcheck. Close work with art department leads to get vehicle and track assets to fit into the memory budget. Resurrected the decrepit Bink video integration to work in the latest cross platform code.  
 
-
+<a id="ride-to-hell"/>
 ### [Ride To Hell][ridetohell]
 
 3rd person open world action (X360/PS3/PC - Shelved) 10/2007 - 03/2010
@@ -127,7 +130,7 @@ Lightweight ‘Props’ object hierarchy for spawning weapons and dynamic object
 
 Created the build process and game interfaces to use a custom audio engine. Global, per-context and per- mission archive loading. Baked archive offsets so strings didn’t have to be used outside of loading code.
 
-
+<a id="hot-wheels-beat-that"/>
 ### [Hot Wheels: Beat That!][hotwheels]
 
 Kart-like power-up’d racing (X360/PS2/Wii/PC) 06/2007 - 10/2007

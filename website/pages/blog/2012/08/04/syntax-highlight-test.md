@@ -7,7 +7,7 @@ w3c: "2012-08-04T00:44:54+00:00"
 url: "blog/2012/08/04/syntax-highlight-test"
 template: "blog_post.html"
 comments: True
-short: "Here is the post short."
+short: This is the test for code syntax highlighting from markdown source.
 tags:
 - code
 - test

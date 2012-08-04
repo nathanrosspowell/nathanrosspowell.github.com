@@ -3,6 +3,8 @@
 
 {% block css_link %}
     <link rel="stylesheet" href="{{ url_for(".static", filename="css/sprite.css") }}" type="text/css" media="screen, projection"/>
+    {% block article_css_link %}
+    {% endblock article_css_link %}
 {% endblock css_link %}
 
 {# Calculate if there are comments #}

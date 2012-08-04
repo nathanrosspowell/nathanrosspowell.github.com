@@ -17,9 +17,8 @@ twitter: http://www.twitter.com/@dirtgame
 tags:
 - games
 youtubevideos:
-- 4wtFta60FQI 
-- 4wtFta60FQI 
-- 4wtFta60FQI 
+- 4wtFta60FQI
+- qveoRp8Vlrs 
 pics:
 - "png/cover-dirt-showdown.png"
 

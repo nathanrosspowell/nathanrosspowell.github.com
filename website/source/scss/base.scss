@@ -213,20 +213,21 @@ article {
     }
 }
 
-section header div.headline, acrticle.blog header div.headline {
-    @include background-styling();
-    @include body-font();
-    font-size: medium; 
-    @include alt-background();
+article.blog header div.headline, section header div.headline {
     a:link, a:visited, a:active {
         color: $col-text;
         text-decoration: none;
     }
-
     a:hover {
         color: $col-text;
         text-decoration: underline;
     }
+}
+section header div.headline {
+    @include background-styling();
+    @include body-font();
+    font-size: medium; 
+    @include alt-background();
 }
 
 .tags {

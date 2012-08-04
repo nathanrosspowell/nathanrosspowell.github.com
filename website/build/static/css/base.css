@@ -217,7 +217,14 @@ article {
     font-family: 'CorpulentCapsShadowRg';
     padding-top: 2px; }
 
-section header div.headline, acrticle.blog header div.headline {
+article.blog header div.headline a:link, article.blog header div.headline a:visited, article.blog header div.headline a:active, section header div.headline a:link, section header div.headline a:visited, section header div.headline a:active {
+  color: #dcdccc;
+  text-decoration: none; }
+article.blog header div.headline a:hover, section header div.headline a:hover {
+  color: #dcdccc;
+  text-decoration: underline; }
+
+section header div.headline {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -230,12 +237,6 @@ section header div.headline, acrticle.blog header div.headline {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #75506e), color-stop(1, #b079a5));
   background-image: -webkit-linear-gradient(#75506e, #b079a5);
   background-image: -o-linear-gradient(#75506e, #b079a5); }
-  section header div.headline a:link, section header div.headline a:visited, section header div.headline a:active, acrticle.blog header div.headline a:link, acrticle.blog header div.headline a:visited, acrticle.blog header div.headline a:active {
-    color: #dcdccc;
-    text-decoration: none; }
-  section header div.headline a:hover, acrticle.blog header div.headline a:hover {
-    color: #dcdccc;
-    text-decoration: underline; }
 
 .tags:hover {
   background-color: #a079b0;

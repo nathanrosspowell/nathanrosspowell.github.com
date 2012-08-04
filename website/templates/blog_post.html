@@ -52,9 +52,7 @@
                             href="{{ url_for( "blog_tag", item=tag ) }}"
                             title="{{ "Blog filter for: " + tag }}"
                         >
-                            {{ tag }}
-                        </a>
-
+                        {{ tag }}</a>{% if loop.last %}{% else %},{% endif %}
                     {% else %}
                         n/a
                     {% endfor %}

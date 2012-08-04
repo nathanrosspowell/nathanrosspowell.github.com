@@ -10,7 +10,7 @@
                         {{ page.published }} - 
                     </div>
                     <div class='title'>
-                        {{ page.title }}
+                        <a href="{{ url_for( "page", page_path=page.path ) }}">{{ page.title }}</a>
                     </div>
                 </div>
             </header>

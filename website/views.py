@@ -218,10 +218,6 @@ def get_archive( specific = None, take_n = None ):
 def index():
     return article_page( index_html, ( "menu/home-page", ) )
 
-@app.route('/anythingslider/')
-def index():
-    return render_template( "anythingslider.html" )
-
 @app.route("/connect/")
 def connect():
     return page( "menu/connect" )

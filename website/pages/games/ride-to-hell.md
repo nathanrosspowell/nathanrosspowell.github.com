@@ -3,13 +3,21 @@ named: ride-to-hell
 title: Ride To Hell
 published: 2012/07/14
 url: games/ride-to-hell
-template: "article.html"
+template: "game.html"
 comments: True
 published: No
 gametrailer: http://www.gametrailers.com/videos/j0pzns/ride-to-hell-teaser
 cover: "jpg/cover-ride-to-hell.jpg"
 tags:
 - games
+mediabar:
+- { "type":"image", "src":"jpg/ride-to-hell-logo2.jpg", "title":"Splash screen" }
+- { "type":"gametrailer", "src":"180b6e89-ff33-4a16-bc37-d753c01a1912", "title":"Teaser" }
+- { "type":"image", "src":"jpg/ride-to-hell-logo.jpg", "title":"Main characters" }
+- { "type":"gametrailer", "src":"ba978124-d937-4de0-a323-c2141637d446", "title":"Interview" }
+- { "type":"image", "src":"jpg/ride-to-hell-poster.jpg", "title":"Art style" }
+- { "type":"youtube", "src":"oHg5SJYRHA0", "title":"Game ending" }
+
 
 The game is set in the last years of the roaring 1960’s, a time of Sex, Drugs and Rock ‘N Roll. The biker movement, rock music and the hippie counterculture all add to the fascinating atmosphere to be experienced in ‘Ride to Hell’.  
 

@@ -3,7 +3,7 @@ named: operation-flashpoint-red-river
 title: "Operation Flashpoint: Red River"
 published: 2012/07/14
 url: games/operation-flashpoint-red-river
-template: "article.html"
+template: "game.html"
 comments: True
 published: May 2011
 cover: "jpg/cover-red-river.jpg"
@@ -13,6 +13,14 @@ website: http://www.codemasters.com/uk/operation-flashpoint-red-river/360/
 facebook: https://www.facebook.com/flashpointredriver
 twitter: http://twitter.com/flashpointgame
 websiteimg: "png/codemasters-logo.png"
+mediabar:
+- { "type":"image", "src":"jpg/red-river-screen-1.jpg", "title":"Promo image" }
+- { "type":"youtube", "src":"K8PyszQuTNY", "title":"Cinematic intro" }
+- { "type":"image", "src":"jpg/red-river-screen-3.jpg", "title":"Sniper scope" }
+- { "type":"gametrailer", "src":"f8b7ac06-69cc-4cad-adb6-5203f7406b83", "title":"Gametrailers review" }
+- { "type":"image", "src":"jpg/red-river-screen-2.jpg", "title":"Squad based gameplay" }
+- { "type":"youtube", "src":"48aRbR8xv8m", "title":"Launch trailer" }
+- { "type":"image", "src":"jpg/red-river-screen-4.jpg", "title":"Tactical gameplay" }
 tags:
 - games
 

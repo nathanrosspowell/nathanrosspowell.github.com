@@ -32,6 +32,8 @@
                             {{ media.youtube( data.src ) }}
                         {% elif data.type is equalto( "image" ) %}
                             {{ media.image( data.src ) }}
+                        {% elif data.type is equalto( "gametrailer" ) %}
+                            {{ media.gametrailer( data.src ) }}
                         {% endif %}
                     </li>
                 {% endfor %}

@@ -9,6 +9,7 @@ published: August 2010
 cover: "jpg/cover-ferrari.jpg"
 metacritic: http://www.metacritic.com/game/playstation-3/ferrari-the-race-experience 
 website: http://ferrari.system3.com
+websiteimg: jpg/logo-eutechnyx.jpg
 twitter: http://twitter.com/ferrariraceexp
 tags:
 - games

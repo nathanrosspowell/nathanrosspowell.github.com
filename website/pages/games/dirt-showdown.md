@@ -16,6 +16,7 @@ facebook: https://www.facebook.com/dirtgame
 twitter: http://www.twitter.com/@dirtgame
 mediabar:
 - { "type":"image", "src":"png/cover-dirt-showdown.png", "title":"Box art" }
+- { "type":"gametrailer", "src":"3b374ed0-fa21-44cc-acff-d3e3dc829cb0", "title":"Gametrailers review" }
 - { "type":"youtube", "src":"4wtFta60FQI", "title":"Launch trailer" }
 - { "type":"youtube", "src":"qveoRp8Vlrs", "title":"Gameplay trailer" }
 tags:

@@ -18,8 +18,10 @@ tags:
 - games
 youtubevideos:
 - 4wtFta60FQI 
+- 4wtFta60FQI 
+- 4wtFta60FQI 
 pics:
-- "png/codemasters-logo.png"
+- "png/cover-dirt-showdown.png"
 
 DiRT Showdown is the new arcade racing game from the team that brought you the award-winning DiRT series, uncaged in 2012. Pick up and play controls combine with electrifying events, frenzied crowds and stunning graphics to deliver high octane, dive in and drive thrills from event one.
 

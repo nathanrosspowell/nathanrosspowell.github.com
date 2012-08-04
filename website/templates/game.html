@@ -1,6 +1,14 @@
 {% extends "article.html" %}
 {% import "macro_heading.html" as headings %}
 
+{% block css_link %}
+    <link rel="stylesheet" href="{{ url_for(".static", filename="css/sprite.css") }}" type="text/css" media="screen, projection"/>
+    {% include "slider_link.html" %}
+{% endblock css_link %}
+{% block js_link %}
+    {% include "slider_js.html" %}
+{% endblock js_link %}
+
 {% macro youtube( url, params = "" ) -%}
     <iframe width="560" 
         height="315" 
@@ -32,26 +40,18 @@
     {% if numyoutube is compare( ">", 0 ) %}
         <article id="youtube">
             {% call headings.article() %}
-                Videos
+            {{ article.title }} Media 
             {% endcall %}
-            {% for url in article.youtubevideos %}
-                {{ youtube( url ) }}
-            {% endfor %}
-        </article>
-    {% endif %}
-
-    {% set numpic = article.pics|length %}
-    {% if numpic is compare( ">", 0 ) %}
-        <article id="pictures">
-            {% call headings.article() %}
-                Pictures
-            {% endcall %}
+			<ul id="slider1">
             {% for url in article.pics %}
-                {{ image( url ) }}
+            <li>{{ image( url ) }}</li>
             {% endfor %}
+                {% for url in article.youtubevideos %}
+                <li>{{ youtube( url ) }}</li>
+                {% endfor %}
+            </ul>
         </article>
     {% endif %}
-
     <article id="summary">
         {% call headings.article() %}
             {{ article.title|title }}

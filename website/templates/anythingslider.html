@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>AnythingSlider</title>
+
+	<!-- jQuery (required) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ url_for( ".static", filename="js/jquery.min.js" ) }}"><\/script>')</script>
+
+	<!-- Anything Slider optional plugins -->
+    <script src="{{ url_for( ".static", filename="js/jquery.easing.1.2.js" ) }}"></script>
+	<!-- http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js -->
+    <script src="{{ url_for( ".static", filename="js/swfobject.js" ) }}"></script>
+
+	<!-- AnythingSlider -->
+    <link rel="stylesheet" href="{{ url_for( ".static", filename="css/anythingslider.css" ) }}">
+    <script src="{{ url_for( ".static", filename="js/jquery.anythingslider.js" ) }}"></script>
+    
+
+	<!-- AnythingSlider video extension; optional, but needed to control video pause/play -->
+    <script src="{{ url_for( ".static", filename="js/jquery.anythingslider.video.js" ) }}"`></script>
+
+	<!-- Ideally, add the stylesheet(s) you are going to use here,
+	 otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
+         <link rel="stylesheet" href="{{ url_for( ".static", filename="css/theme-metallic.css" ) }}">
+         <link rel="stylesheet" href="{{ url_for( ".static", filename="css/theme-minimalist-round.css" ) }}">
+         <link rel="stylesheet" href="{{ url_for( ".static", filename="css/theme-minimalist-square.css" ) }}">
+         <link rel="stylesheet" href="{{ url_for( ".static", filename="css/theme-construction.css" ) }}">
+         <link rel="stylesheet" href="{{ url_for( ".static", filename="css/theme-cs-portfolio.css" ) }}">
+
+	<script>
+		// Demo functions
+		// **************
+		$(function(){
+
+			// External Link
+			$("a.muppet").click(function(){
+				$('#slider1').anythingSlider(5);
+				$(document).scrollTop(0); // make the page scroll to the top so you can watch the video
+				return false;
+			});
+
+			// Report Events to console & features list
+			$('#slider1, #slider2').bind('before_initialize initialized swf_completed slideshow_start slideshow_stop slideshow_paused slideshow_unpaused slide_init slide_begin slide_complete', function(e, slider){
+				// show object ID + event (e.g. "slider1: slide_begin")
+				var txt = slider.$el[0].id + ': ' + e.type + ', now on panel #' + slider.currentPage;
+				$('#status').text(txt);
+				if (window.console && window.console.firebug){ console.debug(txt); } // added window.console.firebug to make this work in Opera
+			});
+
+			// Theme Selector (This is really for demo purposes only)
+			var themes = ['minimalist-round','minimalist-square','metallic','construction','cs-portfolio'];
+			$('#currentTheme').change(function(){
+				var theme = $(this).val();
+				$('#slider1').closest('div.anythingSlider')
+					.removeClass( $.map(themes, function(t){ return 'anythingSlider-' + t; }).join(' ') )
+					.addClass('anythingSlider-' + theme);
+				$('#slider1').anythingSlider(); // update slider - needed to fix navigation tabs
+			});
+
+			// Add a slide
+			var imageNumber = 1;
+			$('button.add').click(function(){
+				$('#slider1')
+					.append('<li><img src="demos/images/slide-tele-' + (++imageNumber%2 + 1)  + '.jpg" alt="" /></li>')
+					.anythingSlider(); // update the slider
+			});
+			$('button.remove').click(function(){
+				$('#slider1 > li:not(.cloned):last').remove();
+				$('#slider1').anythingSlider(); // update the slider
+			});
+
+		});
+
+	</script>
+
+	<script>
+		// Set up Sliders
+		// **************
+		$(function(){
+
+			$('#slider1').anythingSlider({
+				theme           : 'metallic',
+				easing          : 'easeInOutBack',
+				navigationFormatter : function(index, panel){
+					return ['Slab', 'Parking Lot', 'Drive', 'Glorius Dawn', 'Bjork?', 'Traffic Circle'][index - 1];
+				},
+				onSlideComplete : function(slider){
+					// alert('Welcome to Slide #' + slider.currentPage);
+				}
+			});
+
+			$('#slider2').anythingSlider({
+				mode                : 'f',   // fade mode - new in v1.8!
+				resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
+				navigationSize      : 3,     // Set this to the maximum number of visible navigation tabs; false to disable
+				navigationFormatter : function(index, panel){ // Format navigation labels with text
+					return ['Recipe', 'Quote', 'Image', 'Quote #2', 'Image #2'][index - 1];
+				},
+				onSlideBegin: function(e,slider) {
+					// keep the current navigation tab in view
+					slider.navWindow( slider.targetPage );
+				}
+			});
+
+			// tooltips for first demo
+			$.jatt();
+
+		});
+	</script>
+</head>
+
+<body id="main">
+
+		<h1>AnythingSlider</h1>
+
+			<div class="themeselector">
+				Theme:
+				<select id="currentTheme">
+					<option value="default">Default</option>
+					<option value="minimalist-round">Minimalist-Round</option>
+					<option value="minimalist-square">Minimalist-Square</option>
+					<option value="metallic" selected="selected">Metallic</option>
+					<option value="construction">Construction</option>
+					<option value="cs-portfolio">CS-Portfolio</option>
+				</select>
+				<button class="add">Add Slide</button>
+				<button class="remove">Remove Slide</button>
+			</div>
+
+			<br><br>
+
+			<!-- AnythingSlider #1 -->
+			<ul id="slider1">
+
+				<li><img src="demos/images/slide-civil-1.jpg" alt=""></li>
+
+				<li><img src="demos/images/slide-env-1.jpg" alt=""></li>
+
+				<li><img src="demos/images/slide-civil-2.jpg" alt=""></li>
+
+				<li><object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/zSgiXGELjbc&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/zSgiXGELjbc&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object></li>
+
+				<li class="panel5">
+					<div>
+						<div class="textSlide">
+						<span class="rightside"><object width="500" height="325"><param name="movie" value="http://www.youtube.com/v/2Qj8PhxSnhg&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/2Qj8PhxSnhg&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="500" height="325"></embed></object></span>
+							<h3>Other Information</h3>
+							<br>
+							<ul>
+								<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet accumsan eros, et iaculis massa fringilla auctor.</li>
+								<li>Proin a mi ante, ut lobortis risus. Sed fringilla augue sed enim faucibus eget aliquam tellus ultricies.</li>
+								<li>Morbi a magna eu ligula scelerisque lobortis vel non nisi.</li>
+								<li>Aliquam condimentum libero eget elit ultrices sit amet ullamcorper felis gravida.</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+				<li><img src="demos/images/slide-env-2.jpg" alt=""></li>
+
+			</ul>  <!-- END AnythingSlider #1 -->
+
+			<br><br>
+
+			<!-- AnythingSlider #2 -->
+			<ul id="slider2">
+
+				<li class="panel1">
+					<div>
+						<div class="textSlide">
+							<img src="demos/images/251356.jpg" alt="tomato sandwich" style="float: right; margin: 0 0 2px 10px; width: 250px; height: 250px;" />
+							<h3>Queenie's Killer Tomato Bagel Sandwich</h3>
+							<h4>Ingredients</h4>
+							<ul>
+								<li>1 bagel, split and toasted</li>
+								<li>2 tablespoons cream cheese</li>
+								<li>1 roma (plum) tomatoes, thinly sliced</li>
+								<li>salt and pepper to taste</li>
+								<li>4 leaves fresh basil</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+				<li class="panel2">
+					<div class="quoteSlide">
+						<blockquote>In awe I watched the waxing moon ride across the zenith of the heavens like an ambered chariot towards the ebon void of infinite space wherein the tethered belts of Jupiter and Mars hang forever festooned in their orbital majesty. And as I looked at all this I thought... I must put a roof on this lavatory.<br>-- Les Dawson</blockquote>
+					</div>
+				</li>
+
+				<li class="panel3">
+					<img src="demos/images/slide-tele-1.jpg" alt="">
+				</li>
+
+				<li class="panel4">
+					<div class="quoteSlide">
+						<blockquote>Life is conversational. Web design should be the same way. On the web, you&#8217;re talking to someone you&#8217;ve probably never met - so it&#8217;s important to be clear and precise. Thus, well structured navigation and content organization goes hand in hand with having a good conversation.</blockquote>
+						<p> - <a id='perma' href='http://quotesondesign.com/chikezie-ejiasi/'>Chikezie Ejiasi</a></p>
+					</div>
+				</li>
+
+				<li class="panel5">
+					<img src="demos/images/slide-tele-2.jpg" alt="">
+				</li>
+
+			</ul>
+			<!-- END AnythingSlider #2 -->
+</body>
+
+</html>
+

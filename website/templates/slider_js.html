@@ -1,0 +1,48 @@
+<!-- jQuery (required) -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ url_for( ".static", filename="js/jquery.min.js" ) }}"><\/script>')</script>
+<!-- Anything Slider optional plugins -->
+<script src="{{ url_for( ".static", filename="js/jquery.easing.1.2.js" ) }}"></script>
+<!-- http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js -->
+<script src="{{ url_for( ".static", filename="js/swfobject.js" ) }}"></script>
+<!-- AnythingSlider -->
+<script src="{{ url_for( ".static", filename="js/jquery.anythingslider.js" ) }}"></script>
+<!-- AnythingSlider video extension; optional, but needed to control video pause/play -->
+<script src="{{ url_for( ".static", filename="js/jquery.anythingslider.video.js" ) }}"`></script>
+<!-- Ideally, add the stylesheet(s) you are going to use here,
+otherwise they are loaded and appended to the <head> automatically and will over-ride the IE stylesheet below -->
+<script>
+    // Set up Sliders
+    // **************
+    $(function(){
+
+        $('#slider1').anythingSlider({
+            theme               : 'minimalist-round',
+            easing              : 'easeInOutBack',
+            mode                : 'f',   // fade mode - new in v1.8!
+            resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
+            navigationFormatter : function(index, panel){
+                return ['Slab', 'Parking Lot', 'Drive', 'Glorius Dawn', 'Bjork?', 'Traffic Circle'][index - 1];
+            },
+            onSlideComplete : function(slider){
+                // alert('Welcome to Slide #' + slider.currentPage);
+            }
+        });
+        $('#slider1').anythingSlider(); // update the slider
+
+        $('#slider2').anythingSlider({
+            theme               : 'minimalist-round',
+            mode                : 'f',   // fade mode - new in v1.8!
+            resizeContents      : true, // If true, solitary images/objects in the panel will expand to fit the viewport
+            navigationSize      : 3,     // Set this to the maximum number of visible navigation tabs; false to disable
+            navigationFormatter : function(index, panel){ // Format navigation labels with text
+                return ['Recipe', 'Quote', 'Image', 'Quote #2', 'Image #2'][index - 1];
+            },
+            onSlideBegin: function(e,slider) {
+                // keep the current navigation tab in view
+                slider.navWindow( slider.targetPage );
+            }
+        });
+        $('#slider2').anythingSlider(); // update the slider
+    });
+</script>

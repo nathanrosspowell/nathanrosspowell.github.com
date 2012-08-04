@@ -1,3 +1,5 @@
+{% macro js( mediabar ) -%}
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ url_for( ".static", filename="js/jquery.min.js" ) }}"><\/script>')</script>
 <script src="{{ url_for( ".static", filename="js/swfobject.js" ) }}"></script>
@@ -16,7 +18,11 @@ $(function(){
         mode                : 'f',   // fade mode - new in v1.8!
         resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
         navigationFormatter : function(index, panel){
-            return ['Slab', 'Parking Lot', 'Drive', 'Glorius Dawn', 'Bjork?', 'Traffic Circle'][index - 1];
+            return [
+                {% for data in mediabar %}
+                    "{{ data.title }}",
+                {% endfor %}
+            ][index - 1];
         },
         onSlideComplete : function(slider){
             // alert('Welcome to Slide #' + slider.currentPage);
@@ -25,3 +31,5 @@ $(function(){
 });
 
 </script>
+
+{%- endmacro %}

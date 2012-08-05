@@ -33,7 +33,9 @@
 {% block yepnope_complete%}
     {% block article_complete%}
     {% endblock article_complete%}
-    {% include "disqus_comment_thread.js" %}
+    {% if comments_are_on %}
+        {% include "disqus_comment_thread.js" %}
+    {% endif %}
 {% endblock yepnope_complete%}
 
 {% block page_title %}

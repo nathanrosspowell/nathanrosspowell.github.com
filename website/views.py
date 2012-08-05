@@ -93,12 +93,13 @@ def getdate( value, type ):
     elif type == "day":
         day = str( int( value ) )
         post = "th"
-        if day[ -1 ] == "1":
-            post = "st"
-        elif day[ 0 ] == "2":
-            post = "nd"
-        elif day[ 0 ] == "3":
-            post = "rd"
+        if day != "11" and day != "12" and day != "13":
+            if day[ -1 ] == "1"
+                post = "st"
+            elif day[ 0 ] == "2":
+                post = "nd"
+            elif day[ 0 ] == "3":
+                post = "rd"
         return "%s%s" % ( day, post, )
 
     return "_ERROR_"

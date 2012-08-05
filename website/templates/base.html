@@ -18,29 +18,33 @@
     {% block js_link %}
     {% endblock js_link %}
     <script>
-     	Modernizr.load({
-            load : {
-                {% block no_jquery_load %}
-                    'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
-                {% endblock no_jquery_load %}
-                {% block yepnope_load %}
-                {% endblock yepnope_load %}
-            },
-            callback : {
-                {% block yepnope_callback %}
-                {% endblock yepnope_callback %}
-            },
-            complete : function() {
-                {% block no_jquery_load2 %}
-                    if ( !window.jQuery ) {
-                        Modernizr.load('js/libs/jquery-1.7.1.min.js');
-                    }
-                {% endblock no_jquery_load2 %}
-                {% block yepnope_complete%}
-                {% endblock yepnope_complete%}
-                {% include "google_analytics.js" %}
+//<![CDATA[
+<!--
+Modernizr.load({
+    load : {
+        {% block no_jquery_load %}
+            'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
+        {% endblock no_jquery_load %}
+        {% block yepnope_load %}
+        {% endblock yepnope_load %}
+    },
+    callback : {
+        {% block yepnope_callback %}
+        {% endblock yepnope_callback %}
+    },
+    complete : function() {
+        {% block no_jquery_load2 %}
+            if ( !window.jQuery ) {
+                Modernizr.load('js/libs/jquery-1.7.1.min.js');
             }
-		});
+        {% endblock no_jquery_load2 %}
+        {% block yepnope_complete%}
+        {% endblock yepnope_complete%}
+        {% include "google_analytics.js" %}
+    }
+});
+//-->
+//]]>
     </script>
 {% endblock html5_head %}
 

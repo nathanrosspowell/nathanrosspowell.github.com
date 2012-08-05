@@ -1,12 +1,6 @@
 {% extends "base.html" %}
 {% import "macro_heading.html" as headings %}
 
-{% block css_link %}
-    <link rel="stylesheet" href="{{ url_for(".static", filename="css/sprite.css") }}" type="text/css" media="screen, projection"/>
-    {% block article_css_link %}
-    {% endblock article_css_link %}
-{% endblock css_link %}
-
 {# Calculate if there are comments #}
 {% set comment_page = pages|first %}
 {% if comment_override_id %}
@@ -20,6 +14,27 @@
         {% set comments_are_on = True %}
     {% endif %}
 {% endif %}
+
+{% block yepnope_load %}
+    "spritecss" : "{{ url_for(".static", filename="css/sprite.css") }}",
+    "shareholicjs" : "{{ url_for(".static", filename="js/shareholic.js") }}",
+    {% block article_load %}
+    {% endblock article_load %}
+{% endblock yepnope_load %}
+
+{% block yepnope_callback %}
+    'shareholicjs' : function(url, result, key){        
+        {% include "bookmarks.js" %}
+    }, 
+    {% block article_callback %}
+    {% endblock article_callback %}
+{% endblock yepnope_callback %}
+
+{% block yepnope_complete%}
+    {% block article_complete%}
+    {% endblock article_complete%}
+    {% include "disqus_comment_thread.js" %}
+{% endblock yepnope_complete%}
 
 {% block page_title %}
     {{ comment_page.title }}
@@ -50,7 +65,6 @@
                 {% endcall %}
                 {% include "bookmarks_html.html" %}
             </article>
-            {% include "bookmarks.html" %}
         {% endif %}
     {% endblock article_share %}
 

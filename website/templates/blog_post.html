@@ -1,9 +1,25 @@
 {% extends "blog.html" %}
 
-{% block css_link %}
-    <link rel="stylesheet" href="{{ url_for(".static", filename="css/sprite.css") }}" type="text/css" media="screen, projection"/>
-    <link rel="stylesheet" href="{{ url_for(".static", filename="css/codehilite.css") }}" type="text/css" media="screen, projection"/>
-{% endblock css_link %}
+{% block blog_load %}
+    "spritecss" : "{{ url_for(".static", filename="css/sprite.css") }}",
+    "shareholicjs" : "{{ url_for(".static", filename="js/shareholic.js") }}",
+    {% block blog_post_load %}
+    {% endblock blog_post_load %}
+{% endblock blog_load %}
+
+{% block blog_callback %}
+    'shareholicjs' : function(url, result, key){        
+        {% include "bookmarks.js" %}
+    }, 
+    {% block blog_post_callback %}
+    {% endblock blog_post_callback %}
+{% endblock blog_callback %}
+
+{% block blog_complete%}
+    {% block blog_post_complete%}
+    {% endblock blog_post_complete%}
+    {% include "disqus_comment_thread.js" %}
+{% endblock blog_complete%}
 
 {% set comment_page = pages|first %}
 {% block page_title %}
@@ -68,5 +84,4 @@
             </footer>
         </article>
     {% endfor %}
-    {% include "bookmarks.html" %}
 {% endblock %}

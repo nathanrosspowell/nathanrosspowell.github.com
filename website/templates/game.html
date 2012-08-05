@@ -1,29 +1,29 @@
 {% extends "article.html" %}
 {% import "macro_heading.html" as headings %}
 {% import "macro_media.html" as media %}
-{% import "slider_js.html" as slider %}
+{% import "slider_js.js" as slider %}
 {% set article = pages|first %}
 
-{% block article_css_link %}
-    {% include "slider_link.html" %}
-{% endblock article_css_link %}
+{% block article_load %}
+    {% include "slider_link.js" %}
+{% endblock article_load %}
 
-{% block js_link %}
-    {{ slider.js( article.mediabar ) }}
-{% endblock js_link %}
+{% block article_complete%}
+    {% autoescape false %}
+        {{ slider.js( article.mediabar ) }}
+    {% endautoescape %}
+{% endblock article_complete%}
 
-
-    
 {% block page_title %}
     {{ article.title }}
 {% endblock %}
-    
+
 {% block article_pages %}
     {% set numyoutube = article.mediabar|length %}
     {% if numyoutube is compare( ">", 0 ) %}
         <article id="mediabar">
             {% call headings.article() %}
-                {{ article.title }} Media 
+                {{ article.title }} Media
             {% endcall %}
 			<ul id="slider1">
                 {% for data in article.mediabar %}

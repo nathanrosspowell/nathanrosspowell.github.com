@@ -1,31 +1,50 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-{% block vars %}
-{% endblock vars %}
-<head>
-    <meta charset='utf-8' />
-    <title>
-        NRP -  
-        {% block page_title %}
+{% extends "html5boiler.html" %}
+
+{% block html5_title %}
+    NRP -
+    {% block page_title %}
         Personal Website
-        {% endblock %}
-    </title>
+    {% endblock %}
+{% endblock html5_title %}
+
+{% block html5_meta %}
     <meta content='{% block meta_description %}Webpage{% endblock %}' name='description' />
     <meta content='{% block meta_author %}Nathan Ross Powell{% endblock %}' name='author' />
-    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0;' name='viewport' />
-    <link rel="stylesheet" href="{{ url_for(".static", filename="css/base.css") }}" type="text/css" media="screen, projection"/>
+{% endblock html5_meta %}
+
+{% block html5_head %}
     {% block css_link %}
     {% endblock css_link %}
     {% block js_link %}
     {% endblock js_link %}
-</head>
-{% block body_tag %}
-<body>
-{% endblock %}
+    <script>
+     	Modernizr.load({
+            load : {
+                {% block no_jquery_load %}
+                    'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
+                {% endblock no_jquery_load %}
+                {% block yepnope_load %}
+                {% endblock yepnope_load %}
+            },
+            callback : {
+                {% block yepnope_callback %}
+                {% endblock yepnope_callback %}
+            },
+            complete : function() {
+                {% block no_jquery_load2 %}
+                    if ( !window.jQuery ) {
+                        Modernizr.load('js/libs/jquery-1.7.1.min.js');
+                    }
+                {% endblock no_jquery_load2 %}
+                {% block yepnope_complete%}
+                {% endblock yepnope_complete%}
+                {% include "google_analytics.js" %}
+            }
+		});
+    </script>
+{% endblock html5_head %}
+
+{% block html5_body %}
 <header>
     <hgroup>
         <h1>
@@ -38,62 +57,56 @@
                  "In one of the many places you're not, I am."
             {% endblock page_quote %}
         </h4>
-        <!--h6 class="ref">
-            {% block page_quote_source %}
-            -
-            <a href="http://en.wikipedia.org/wiki/Why%3F_(American_band)" title="Wikipedia: WHY?">Yoni Wolf</a>,
-            <a href="http://www.youtube.com/watch?v=qQi7Dm2hfxE&hd=1" title="Youtube: By Torpedo Or Crohn's">WHY?</a>
-            {% endblock page_quote_source %}
-        </h6-->
     </hgroup>
     <nav>
-        {% include "nav_bar.html" %}
+        {% block body_nav %}
+            {% include "nav_bar.html" %}
+        {% endblock body_nav %}
     </nav>
 </header>
-    {% block body %}
-        <div id='container'>
-            <header></header>
-            <div id='main' role='main'>
-                {% block content %}
+{% block body %}
+    <div id='container'>
+        <header></header>
+        <div id='main' role='main'>
+            {% block content %}
 <!-- content here --> MAIN CONTENT BLOCK HERE!!!!!!
-                {% endblock %}
-            </div>
-            <footer></footer>
+            {% endblock content %}
         </div>
-        <aside>
-        </aside>
-        {% if debug %}
-            {% include 'includes/debug.html' %}
-        {% endif %}
-        {% block loading %}
-        {% endblock %}
-        {% block js_inline %}
+        <footer></footer>
+    </div>
+    <aside>
+    </aside>
+    {% if debug %}
+        {% include 'includes/debug.html' %}
+    {% endif %}
+    {% block loading %}
+    {% endblock loading %}
+    {% block js_inline %}
 <!-- js here -->
 <!-- :javascript -->
-        {% endblock %}
+    {% endblock js_inline %}
 <!--[if lt IE 7 ]>
-    <script src="{{ STATIC_URL }}js/dd_belatedpng.js"></script>
+<script src="{{ url_for( "index", filename="js/dd_belatedpng.js" ) }}"></script>
 <script type='text/javascript'>
 // <![CDATA[
-            <script> DD_belatedPNG.fix('img, .png_bg');</script>
+        <script> DD_belatedPNG.fix('img, .png_bg');</script>
 // ]]>
 </script>
 <![endif]-->
-    {% endblock %}
+{% endblock body %}
+
 <footer>
-  <section>
-   <h1>
-                Nathan Ross Powell Bio
-   </h1>
-    {{ bio.html|safe }}
-    <div class="iconlist">
-        {% include "social.html" %}
-    </div>
-  </section>
-  <section class='copyright'>
-    {{ credits.html|safe }}
-  </section>
+    <section>
+        <h1>
+            Nathan Ross Powell Bio
+        </h1>
+        {{ bio.html|safe }}
+        <div class="iconlist">
+            {% include "social.html" %}
+        </div>
+    </section>
+    <section class='copyright'>
+        {{ credits.html|safe }}
+    </section>
 </footer>
-{% include "google_analytics.html" %}
-</body>
-</html>
+{% endblock html5_body %}

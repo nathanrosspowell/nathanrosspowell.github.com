@@ -43,6 +43,9 @@ Here are a collection of links to my online profile, please feel free to connect
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 - - -
 <a href="http://www.last.fm/user/Partyboypowell/?chartstyle=audioscrobbler"><img src="http://imagegen.last.fm/audioscrobbler/artists/10/Partyboypowell.gif" border="0" /></a>
+- - -
+<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+<a href="skype:nathanrosspowell?call"><img class="whitepad" src="http://mystatus.skype.com/bigclassic/nathanrosspowell" style="border: none;" width="182" height="44" alt="My status" /></a>
 
 
 

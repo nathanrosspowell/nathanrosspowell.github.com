@@ -364,7 +364,7 @@ article#gameslist section:nth-child(odd) div.cover {
   margin-right: auto; }
 
 .icons {
-  padding-left: 266px;
+  padding-left: 217px;
   list-style-type: none; }
   .icons li {
     display: inline-block; }
@@ -376,3 +376,10 @@ article#gameslist section:nth-child(odd) div.cover {
   #pagesnav .bookend {
     font-family: 'CorpulentCapsRegular';
     font-size: x-large; }
+
+.whitepad {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: white;
+  padding: 10px 10px 10px 10px; }

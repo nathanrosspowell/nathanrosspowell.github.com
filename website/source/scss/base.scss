@@ -419,7 +419,7 @@ article#gameslist {
 }
 
 .icons {
-    padding-left: 266px;
+    padding-left: 217px;
     li{
         display: inline-block;
     }
@@ -434,4 +434,10 @@ article#gameslist {
         @include alt-font();
         font-size: x-large; 
     }
+}
+
+.whitepad {
+    @include border-radius( $sz-corners );
+    background: white;
+    padding: $sz-corners $sz-corners $sz-corners $sz-corners ;
 }

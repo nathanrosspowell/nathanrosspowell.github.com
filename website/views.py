@@ -118,7 +118,6 @@ def directory():
 
 def latest_pages( n, dir, subdir ):
     for page_path in walk.take( n, os.path.join( dir, subdir ), walk.newest ):
-        print "path", page_path
         if page_path[ -1 ] != "~":
             urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
             yield pages.get_or_404( urlpath )

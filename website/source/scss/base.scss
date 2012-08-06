@@ -43,9 +43,9 @@ body {
     background: $col-background;
     @include image-linear-gradient( '../jpg/back3.jpg', $col-background, $col-flavor-dark);
     background-attachment:fixed;
-    background-position:center top; 
+    background-position:center top;
     background-repeat: repeat-y;
-    border: 10px, $col-flavor; 
+    border: 10px, $col-flavor;
     position: relative;
     top: -$sz-corners;
 }
@@ -57,11 +57,11 @@ strong {
     font-weight: bold
 }
 
-em { 
+em {
     font-style: italic
 }
 
-a { 
+a {
     &:hover {
     }
     &:active {
@@ -98,7 +98,7 @@ article, section {
 /* HEADER */
 hgroup{
     text-align: center;
-    @include main-spacer( 0px ); 
+    @include main-spacer( 0px );
     h1 {
         @include title-font();
         font-size:$sz-large-text;
@@ -126,7 +126,7 @@ nav {
     margin: 0px $sz-margin 0px $sz-margin;
     padding: 0 0 0 0;
 }
-.navbar li { 
+.navbar li {
     @include background-styling();
     @include shadow();
     @include rgba( $col-background, $col-background-alpha );
@@ -154,7 +154,7 @@ nav {
     margin-top: 10px;
 }
 .navbar li a {
-    display: block; 
+    display: block;
 }
 .navbar li ul {
     display: none;
@@ -188,15 +188,15 @@ article {
     @include main-spacer( $sz-margin );
     header {
         padding: 0 0 $sz-pad 0;
-        h1 { 
-        
+        h1 {
+
             padding: 0 0 $sz-pad 0;
         }
     }
-    section { 
+    section {
         padding: 0 0 $sz-pad 0;
     }
-    section:last-child { 
+    section:last-child {
         padding: 0 0 0 0;
     }
 }
@@ -206,7 +206,7 @@ article {
     @include background-styling();
     padding-left: $sz-corners;
     padding-right: $sz-corners;
-    font-size: x-large; 
+    font-size: x-large;
     @include flavor-background();
     .date{
         display: inline;
@@ -237,7 +237,7 @@ article.blog header div.headline, section header div.headline {
 section header div.headline {
     @include background-styling();
     @include body-font();
-    font-size: medium; 
+    font-size: medium;
     @include alt-background();
 }
 
@@ -256,7 +256,7 @@ section header div.headline {
     }
 }
 .bigbutton {
-    font-size: xx-large; 
+    font-size: xx-large;
     position: relative;
     top: -6px;
     @include title-font();
@@ -271,7 +271,7 @@ section header div.headline {
 /******************************************************************/
 footer {
     padding: $sz-pad 0 0 0;
-    p { 
+    p {
         margin: 0;
     }
 }
@@ -341,7 +341,7 @@ footer {
         @include main-spacer( $sz-margin );
 	}
 }
-footer section:first-child { 
+footer section:first-child {
 }
 
 #comments {
@@ -361,7 +361,7 @@ footer section:first-child {
 
 /******************************************************************/
 /* Disqus */
-#dsq-content{ 
+#dsq-content{
     color:$col-text !important;
 }
 
@@ -402,7 +402,7 @@ article#gameslist {
         div.cover{
             float: right;
             clear: left;
-        }   
+        }
     }
 }
 
@@ -427,12 +427,12 @@ article#gameslist {
 }
 
 #pagesnav {
-    font-size: large; 
+    font-size: large;
     text-align: center;
         @include title-font();
     .bookend {
         @include alt-font();
-        font-size: x-large; 
+        font-size: x-large;
     }
 }
 
@@ -440,4 +440,13 @@ article#gameslist {
     @include border-radius( $sz-corners );
     background: white;
     padding: $sz-corners $sz-corners $sz-corners $sz-corners ;
+}
+
+img.article {
+    border: 2px solid $col-flavor; 
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

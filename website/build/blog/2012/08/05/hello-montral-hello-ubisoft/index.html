@@ -10,7 +10,7 @@
         
     NRP -
     
-    Blog
+    Hello, Montréal. Hello, Ubisoft!
 
 
     </title>
@@ -45,13 +45,27 @@ Modernizr.load({
         
     "codehilitecss" : "/static/css/codehilite.css", 
     
+    "spritecss" : "/static/css/sprite.css",
+    "shareholicjs" : "/static/js/shareholic.js",
     
+    
+
 
     },
     callback : {
         
     
+    'shareholicjs' : function(url, result, key){        
+        (function() {
+var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;
+sb.src = ("https:" == document.location.protocol ? "https://dtym7iokkjlif.cloudfront.net" : "http://cdn.shareaholic.com") + "/media/js/jquery.shareaholic-publishers-sb.min.js";
+var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb, s);
+})();
+
+    }, 
     
+    
+
 
     },
     complete : function() {
@@ -63,6 +77,17 @@ Modernizr.load({
         
     
     
+    
+    var disqus_shortname = 'nathanrosspowell';
+var disqus_url = "http://www.nathanrosspowell.com";
+var disqus_identifier = "";
+var disqus_title = "";
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+
 
         var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-33462621-1']);
@@ -505,287 +530,84 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     </ul>
 
     
+
     
-    <article id="blogtags">
-        <header>
-        <div class='headline'>
-            <div class='title'>
+
+
+
+    
+    <article id="hello-montral-hello-ubisoft">
+            <header>
+                <div class='headline'>
+                    <div class='date'>
+                        2012/08/05
+                    </div>
+                    <div class='title'>
+                        Hello, Montréal. Hello, Ubisoft!
+                    </div>
+                </div>
+            </header>
+            <p>So tomorrow is the start of a new chapter in my career and life as I will be starting work at Ubisoft Montréal on the muchly anticipated Watch_Dogs video game.</p>
+<p>I've been in the country for a couple of days now and have just about adapted to the time and the heat.</p>
+<p><a href="http://imgur.com/4X0wz">
+<img class="article" title="Downtown Montréal from the 15th floor of the Trylon" src="http://i.imgur.com/9Vsiu.jpg" alt=""/>
+</a></p>
+<p>Not much else to say for now other than my French is embarrassingly terrible and I feel like a total dingus whenever I try and converse with a Francophone. Time to see if there is any crossover from being multi-lingual in programming languages...</p>
+            <footer>
+                <em>
+                    Written by:
+                </em>
+                <strong>
+                    
+                        <a href="/connect/"
+                           title="Contact Nathan Ross Powell" 
+                        >
+                            Nathan Ross Powell
+                        </a>
+                    
+                </strong>
+                |
+                <span class='newline'>
+                    <em>
+                        Tags:
+                    </em>
+                    
+                        <a class='tags'
+                            href="/blog/tag/life/"
+                            title="Blog filter for: life"
+                        >
+                        life</a>,
+                    
+                        <a class='tags'
+                            href="/blog/tag/ubisoft/"
+                            title="Blog filter for: ubisoft"
+                        >
+                        ubisoft</a>,
+                    
+                        <a class='tags'
+                            href="/blog/tag/montreal/"
+                            title="Blog filter for: montreal"
+                        >
+                        montreal</a>,
+                    
+                        <a class='tags'
+                            href="/blog/tag/picture/"
+                            title="Blog filter for: picture"
+                        >
+                        picture</a>
+                    
+                </span>
+                |
+                <span class="markdown">
+                    <a href="http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2012/08/05/hello-montral-hello-ubisoft.md" title="Go to GitHub source">View markdown on GitHub</a>
+                </span>
                 
-             Blog Tags
-        
-            </div>
-        </div>
-    </header>
-        <section>
-        View <a href="/blog/all/" title="View all blog titles">all blogs</a>.
-        <br/>
-        <br/>
-        <table width="100%">
-            <col width="300" />
-            <col width="300" />
-            <tr>
-                <th>
-                    <header>
-        <div class='headline'>
-            <div class='title'>
                 
-                        Populatiry
-                    
-            </div>
-        </div>
-    </header>
-                </th>
-                <th>
-                    <header>
-        <div class='headline'>
-            <div class='title'>
-                
-                        Alphabetical
-                    
-            </div>
-        </div>
-    </header>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    
-                    
-                    <ul>
-                        
-    <li id="picture"
-        
-    >
-        
-        <a href="/blog/tag/picture/#blog-nav"
-            title="Blog filter for: picture"
-        >
-            picture:  2
-        </a> 
-    </li>
-
-    <li id="life"
-        
-    >
-        
-        <a href="/blog/tag/life/#blog-nav"
-            title="Blog filter for: life"
-        >
-            life:  2
-        </a> 
-    </li>
-
-    <li id="ubisoft"
-        
-    >
-        
-        <a href="/blog/tag/ubisoft/#blog-nav"
-            title="Blog filter for: ubisoft"
-        >
-            ubisoft:  2
-        </a> 
-    </li>
-
-    <li id="montreal"
-        
-    >
-        
-        <a href="/blog/tag/montreal/#blog-nav"
-            title="Blog filter for: montreal"
-        >
-            montreal:  2
-        </a> 
-    </li>
-
-    <li id="code"
-        
-    >
-        
-        <a href="/blog/tag/code/#blog-nav"
-            title="Blog filter for: code"
-        >
-            code:  1
-        </a> 
-    </li>
-
-    <li id="python"
-        
-    >
-        
-        <a href="/blog/tag/python/#blog-nav"
-            title="Blog filter for: python"
-        >
-            python:  1
-        </a> 
-    </li>
-
-    <li id="update"
-        
-    >
-        
-        <a href="/blog/tag/update/#blog-nav"
-            title="Blog filter for: update"
-        >
-            update:  1
-        </a> 
-    </li>
-
-    <li id="c++"
-        
-    >
-        
-        <a href="/blog/tag/c%2B%2B/#blog-nav"
-            title="Blog filter for: c++"
-        >
-            c++:  1
-        </a> 
-    </li>
-
-    <li id="basic"
-        
-    >
-        
-        <a href="/blog/tag/basic/#blog-nav"
-            title="Blog filter for: basic"
-        >
-            basic:  1
-        </a> 
-    </li>
-
-    <li id="test"
-        
-    >
-        
-        <a href="/blog/tag/test/#blog-nav"
-            title="Blog filter for: test"
-        >
-            test:  1
-        </a> 
-    </li>
-
-                    </ul>
-                </td>
-                <td>
-                    
-                    
-                    <ul>
-                        
-    <li id="basic"
-        
-    >
-        
-        <a href="/blog/tag/basic/#blog-nav"
-            title="Blog filter for: basic"
-        >
-            basic:  1
-        </a> 
-    </li>
-
-    <li id="c++"
-        
-    >
-        
-        <a href="/blog/tag/c%2B%2B/#blog-nav"
-            title="Blog filter for: c++"
-        >
-            c++:  1
-        </a> 
-    </li>
-
-    <li id="code"
-        
-    >
-        
-        <a href="/blog/tag/code/#blog-nav"
-            title="Blog filter for: code"
-        >
-            code:  1
-        </a> 
-    </li>
-
-    <li id="life"
-        
-    >
-        
-        <a href="/blog/tag/life/#blog-nav"
-            title="Blog filter for: life"
-        >
-            life:  2
-        </a> 
-    </li>
-
-    <li id="montreal"
-        
-    >
-        
-        <a href="/blog/tag/montreal/#blog-nav"
-            title="Blog filter for: montreal"
-        >
-            montreal:  2
-        </a> 
-    </li>
-
-    <li id="picture"
-        
-    >
-        
-        <a href="/blog/tag/picture/#blog-nav"
-            title="Blog filter for: picture"
-        >
-            picture:  2
-        </a> 
-    </li>
-
-    <li id="python"
-        
-    >
-        
-        <a href="/blog/tag/python/#blog-nav"
-            title="Blog filter for: python"
-        >
-            python:  1
-        </a> 
-    </li>
-
-    <li id="test"
-        
-    >
-        
-        <a href="/blog/tag/test/#blog-nav"
-            title="Blog filter for: test"
-        >
-            test:  1
-        </a> 
-    </li>
-
-    <li id="ubisoft"
-        
-    >
-        
-        <a href="/blog/tag/ubisoft/#blog-nav"
-            title="Blog filter for: ubisoft"
-        >
-            ubisoft:  2
-        </a> 
-    </li>
-
-    <li id="update"
-        
-    >
-        
-        <a href="/blog/tag/update/#blog-nav"
-            title="Blog filter for: update"
-        >
-            update:  1
-        </a> 
-    </li>
-
-                    </ul>
-                </td>
-            </tr>
-        </table>
-        </section>
-    </article>
+                <div class="shr_class shareaholic-show-on-load" > </div>
+                <div id="disqus_thread"></div>
+            </footer>
+        </article>
+    
 
 
      <script type="text/javascript">

@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
-  <atom:updated>2012-08-05T16:06:22+00:00</atom:updated>
+  <atom:updated>2012-08-05T22:03:37+00:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -9,6 +9,48 @@
     <atom:email>nathanrosspowell@gmail.com</atom:email>
   </atom:author>
 
+  
+  <atom:entry>
+    <atom:title>Hello, Montréal. Hello, Ubisoft!</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/</atom:id>
+    <atom:updated>2012-08-05T21:16:12+00:00</atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/"/>
+    <atom:summary>Preperation for my latest &#39;first day&#39; as I start work for Ubisoft Montréal</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>So tomorrow is the start of a new chapter in my career and life as I will be starting work at Ubisoft Montréal on the muchly anticipated Watch_Dogs video game.</p>
+<p>I've been in the country for a couple of days now and have just about adapted to the time and the heat.</p>
+<p><a href="http://imgur.com/4X0wz">
+<img class="article" title="Downtown Montréal from the 15th floor of the Trylon" src="http://i.imgur.com/9Vsiu.jpg" alt=""/>
+</a></p>
+<p>Not much else to say for now other than my French is embarrassingly terrible and I feel like a total dingus whenever I try and converse with a Francophone. Time to see if there is any crossover from being multi-lingual in programming languages...</p> ]]>
+    </atom:content>
+    <atom:category term="life"/>
+    <atom:category term="ubisoft"/>
+    <atom:category term="montreal"/>
+    <atom:category term="picture"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>Hello, Montréal. Hello, Ubisoft!</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/</atom:id>
+    <atom:updated>2012-08-05T21:16:12+00:00</atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/"/>
+    <atom:summary>Preperation for my latest &#39;first day&#39; as I start work for Ubisoft Montréal</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ <p>So tomorrow is the start of a new chapter in my career and life as I will be starting work at Ubisoft Montréal on the muchly anticipated Watch_Dogs video game.</p>
+<p>I've been in the country for a couple of days now and have just about adapted to the time and the heat.</p>
+<p><a href="http://imgur.com/4X0wz">
+<img class="article" title="Downtown Montréal from the 15th floor of the Trylon" src="http://i.imgur.com/9Vsiu.jpg" alt=""/>
+</a></p>
+<p>Not much else to say for now other than my French is embarrassingly terrible and I feel like a total dingus whenever I try and converse with a Francophone. Time to see if there is any crossover from being multi-lingual in programming languages...</p> ]]>
+    </atom:content>
+    <atom:category term="life"/>
+    <atom:category term="ubisoft"/>
+    <atom:category term="montreal"/>
+    <atom:category term="picture"/>
+    
+  </atom:entry>
   
   <atom:entry>
     <atom:title>Syntax Highlight Test</atom:title>

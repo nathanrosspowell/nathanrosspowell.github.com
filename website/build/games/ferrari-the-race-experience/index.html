@@ -35,12 +35,14 @@
     
     
     <script>
-     	Modernizr.load({
-            load : {
-                
-                    'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
-                
-                
+//<![CDATA[
+<!--
+Modernizr.load({
+    load : {
+        
+            'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
+        
+        
     "spritecss" : "/static/css/sprite.css",
     "shareholicjs" : "/static/js/shareholic.js",
     
@@ -52,9 +54,9 @@
 "anythingslidervideojs" : "/static/js/jquery.anythingslider.video.js",
 
 
-            },
-            callback : {
-                
+    },
+    callback : {
+        
     'shareholicjs' : function(url, result, key){        
         (function() {
 var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;
@@ -66,14 +68,14 @@ var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb
     
     
 
-            },
-            complete : function() {
-                
-                    if ( !window.jQuery ) {
-                        Modernizr.load('js/libs/jquery-1.7.1.min.js');
-                    }
-                
-                
+    },
+    complete : function() {
+        
+            if ( !window.jQuery ) {
+                Modernizr.load('js/libs/jquery-1.7.1.min.js');
+            }
+        
+        
     
     
         // Set up Sliders
@@ -119,7 +121,7 @@ var disqus_title = "";
 })();
     
 
-                var _gaq = _gaq || [];
+        var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-33462621-1']);
 _gaq.push(['_trackPageview']);
 
@@ -128,8 +130,10 @@ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
-            }
-		});
+    }
+});
+//-->
+//]]>
     </script>
 
 

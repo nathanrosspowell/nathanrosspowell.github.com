@@ -94,7 +94,7 @@ def getdate( value, type ):
         day = str( int( value ) )
         post = "th"
         if day != "11" and day != "12" and day != "13":
-            if day[ -1 ] == "1"
+            if day[ -1 ] == "1":
                 post = "st"
             elif day[ 0 ] == "2":
                 post = "nd"

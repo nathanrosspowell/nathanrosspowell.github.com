@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
-  <atom:updated>2012-08-05T22:03:37+00:00</atom:updated>
+  <atom:updated>2012-08-05T22:13:51+00:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -11,7 +11,7 @@
 
   
   <atom:entry>
-    <atom:title>Hello, Montréal. Hello, Ubisoft!</atom:title>
+    <atom:title>Hello, Montreal. Hello, Ubisoft!</atom:title>
     <atom:id>http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/</atom:id>
     <atom:updated>2012-08-05T21:16:12+00:00</atom:updated>
     <atom:link href="http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/"/>
@@ -32,7 +32,7 @@
   </atom:entry>
   
   <atom:entry>
-    <atom:title>Hello, Montréal. Hello, Ubisoft!</atom:title>
+    <atom:title>Hello, Montreal. Hello, Ubisoft!</atom:title>
     <atom:id>http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/</atom:id>
     <atom:updated>2012-08-05T21:16:12+00:00</atom:updated>
     <atom:link href="http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/"/>

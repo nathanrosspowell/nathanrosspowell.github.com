@@ -1,6 +1,6 @@
 source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2012/08/05/hello-montral-hello-ubisoft.md"
 named: "hello-montral-hello-ubisoft"
-title: "Hello, Montréal. Hello, Ubisoft!"
+title: "Hello, Montreal. Hello, Ubisoft!"
 published: "2012/08/05"
 time: "21:16:12"
 w3c: "2012-08-05T21:16:12+00:00"

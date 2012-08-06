@@ -118,8 +118,10 @@ def directory():
 
 def latest_pages( n, dir, subdir ):
     for page_path in walk.take( n, os.path.join( dir, subdir ), walk.newest ):
-        urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
-        yield pages.get_or_404( urlpath )
+        print "path", page_path
+        if page_path[ -1 ] != "~":
+            urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
+            yield pages.get_or_404( urlpath )
 
 def archive_pages_dated( date, dir, subdir ):
     for page_path in walk.walk( os.path.join( dir, subdir ), walk.newest ):
@@ -283,6 +285,7 @@ def blog_page( page ):
         lower = blogs_per_page * ( page - 1 )
         higher = blogs_per_page * page
     page_list = [ post for post in latest_pages( ( lower, higher ), directory(), "blog" ) ]
+    print "PL>>>", page_list, ( lower, higher ), directory()
     num_pages = page_count( directory(), "blog" )
     navpages =  num_pages / blogs_per_page
     if num_pages % blogs_per_page != 0:

@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
-  <atom:updated>2012-08-07T21:40:14+00:00</atom:updated>
+  <atom:updated>2012-08-07T21:43:25+00:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -20,7 +20,7 @@
         <![CDATA[ <p>I've just update the test code for my <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">Project Euler</a> testing scripts. Now a list of <code>Execute</code> classes will run on each language implementation. I've started by adding Clang to the GCC tests.</p>
 <p><a href="http://imgur.com/WOllJ"><img class="article" src="http://i.imgur.com/WOllJ.png" alt="" title="run.py working it's magic on CPP 2 and 12" /></a></p>
 <p>Also I stopped the nasty red <em>ERROR</em> messages for files that exist when there is an answer for that problem, but it's not finished in a specific language (problem 11 is only sloved in <code>python</code> currently).</p>
-<p>Time to get cracking on the next problem, currently <a href="http://projecteuler.net/problem=16" title="Project Euler problem 16">PE16</a></p> ]]>
+<p>Time to get cracking on the next problem, currently [PE15][pe15] (I've got up to PE16, but only after I chickened out on PE15...)</p> ]]>
     </atom:content>
     <atom:category term="blog"/>
     <atom:category term="project-euler"/>

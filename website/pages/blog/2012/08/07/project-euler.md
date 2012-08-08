@@ -21,7 +21,7 @@ I've just update the test code for my [Project Euler][pe] testing scripts. Now a
 
 Also I stopped the nasty red *ERROR* messages for files that exist when there is an answer for that problem, but it's not finished in a specific language (problem 11 is only sloved in `python` currently).
 
-Time to get cracking on the next problem, currently [PE16][pe16]
+Time to get cracking on the next problem, currently [PE15][pe15] (I've got up to PE16, but only after I chickened out on PE15...)
 
 [pe]: http://github.com/nathanrosspowell/euler "Project Euler on GitHub"
-[pe16]: http://projecteuler.net/problem=16 "Project Euler problem 16"
+[pe16]: http://projecteuler.net/problem=15 "Project Euler problem 16"

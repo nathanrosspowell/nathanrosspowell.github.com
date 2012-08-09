@@ -41,8 +41,9 @@ def main( dir ):
     responce = input ( "Create '%s' y/n>" % ( titlename, ) )
     if responce != "y" and responce != "Y":
         return "Bailed"
-    if not os.path.exists( folder ):
-        os.mkdir( folder )
+    dir_folder = os.path.join( dir, folder )
+    if not os.path.exists( dir_folder ):
+        os.mkdir( dir_folder )
     now = datetime.datetime.now()
     date = now.strftime( "%Y/%m/%d" )
     time = now.strftime( "%H:%M:%S" )
@@ -70,16 +71,16 @@ short: "Here is the post short."
 tags:
 - %s
 
-Heres is the post body.""" % ( 
-        source, 
-        titlename, 
-        title, 
-        date, 
+Heres is the post body.""" % (
+        source,
+        titlename,
+        title,
+        date,
         time,
         get_w3c_date(),
         url,
-        template, 
-        comments, 
+        template,
+        comments,
         folder
     )
     with open( titlepath+".md", 'w' ) as file:

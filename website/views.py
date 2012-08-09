@@ -276,6 +276,7 @@ def blog( template = blog_html,
 @app.route( "/blog/" )
 def blog_page_0():
     return blog_page( 0 )
+
 @app.route( "/blog/<int:page>/" )
 def blog_page( page ):
     lower = 0
@@ -319,7 +320,7 @@ def blog_archives():
             d = d[ part ][ 1 ]
     return blog(
         template = archive_html,
-        arcs = dates 
+        arcs = dates
     )
 
 @app.route( "/blog/tag/<path:item>/" )
@@ -351,7 +352,25 @@ def page( page_path ):
 @app.route( "/feeds/atom.xml" )
 def atom():
     blogs = [ post for post in all_pages( directory(), "blog" ) ]
-    w3c_update = get_w3c_date()
+    with open( "website/feed_content.txt", 'r' ) as feed_cache:
+        cache_blogs = feed_cache.readlines()
+    changed = False
+    if len( blogs ) != len( cache_blogs ):
+        changed = True
+    if not changed:
+        for index, blog in enumerate( blogs ):
+            if blog.path != cache_blogs[ index ].strip():
+                changed = True
+                break
+    if changed:
+        w3c_update = get_w3c_date()
+        with open( "website/feed_content.txt", 'w' ) as new_feed:
+            new_feed.writelines( [ blog.path+"\n" for blog in blogs ] )
+        with open( "website/feed_time.txt", 'w' ) as new_time:
+            new_time.write( w3c_update )
+    else:
+        with open( "website/feed_time.txt", 'r' ) as cache_time:
+            w3c_update = cache_time.read().strip()
     return base_render_template( atom_xml,
         pages = blogs,
         w3c_update = w3c_update

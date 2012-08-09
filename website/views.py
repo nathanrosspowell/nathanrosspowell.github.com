@@ -285,7 +285,6 @@ def blog_page( page ):
         lower = blogs_per_page * ( page - 1 )
         higher = blogs_per_page * page
     page_list = [ post for post in latest_pages( ( lower, higher ), directory(), "blog" ) ]
-    print "PL>>>", page_list, ( lower, higher ), directory()
     num_pages = page_count( directory(), "blog" )
     navpages =  num_pages / blogs_per_page
     if num_pages % blogs_per_page != 0:

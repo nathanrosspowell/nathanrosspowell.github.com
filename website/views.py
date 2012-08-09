@@ -351,6 +351,7 @@ def page( page_path ):
 
 @app.route( "/feeds/atom.xml" )
 def atom():
+    get_w3c_date()
     blogs = [ post for post in all_pages( directory(), "blog" ) ]
     with open( "website/feed_content.txt", 'r' ) as feed_cache:
         cache_blogs = feed_cache.readlines()

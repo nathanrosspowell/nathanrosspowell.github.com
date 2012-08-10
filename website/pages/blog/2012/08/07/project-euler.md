@@ -23,5 +23,8 @@ Also I stopped the nasty red *ERROR* messages for files that exist when there is
 
 Time to get cracking on the next problem, currently [PE15][pe15] (I've got up to PE16, but only after I chickened out on PE15...)
 
+See my `code` page [here][nrppe].
+
 [pe]: http://github.com/nathanrosspowell/euler "Project Euler on GitHub"
 [pe15]: http://projecteuler.net/problem=15 "Project Euler problem 15"
+[nrppe]:http://nathanrosspowell.com/code/project-euler "NRP - Code - Project Euler" 

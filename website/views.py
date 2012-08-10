@@ -29,7 +29,12 @@ index_html = "index.html"
 tag_html = "tag.html"
 archive_html = "archive.html"
 atom_xml = "atom.xml"
+code_html = "code.html"
 games_html = "games.html"
+code_order = (
+    "menu/code",
+    "code/project-euler",
+)
 games_order = (
     "menu/games",
     "games/dirt-showdown",
@@ -109,6 +114,11 @@ def equalto( x, y ):
     return x == y
 app.jinja_env.tests.update( equalto = equalto )
 
+def get_tagged_blogs( tag ):
+    if tag not in get_tags()[ 0 ]:
+        return []
+    return [ post for post in tag_pages( tag) ]
+app.jinja_env.globals.update( get_tagged_blogs = get_tagged_blogs )
 #-----------------------------------------------------------------------------
 # Helpers.
 def directory():
@@ -226,7 +236,7 @@ def connect():
 
 @app.route("/code/")
 def code():
-    return page( "menu/code" )
+    return article_page( code_html, code_order )
 
 @app.route("/games/")
 def games():
@@ -324,9 +334,9 @@ def blog_archives():
 
 @app.route( "/blog/tag/<path:item>/" )
 def blog_tag( item ):
-    if item not in get_tags()[ 0 ]:
+    blogs =  get_tagged_blogs( item )
+    if blogs == []:
         return base_render_template( "error.html", error="400" ), 400
-    blogs = [ post for post in tag_pages( item ) ]
     return blog( select_blogs = blogs, tag_selection = item )
 
 @app.route( "/blog/archive/<path:item>/" )

@@ -1,0 +1,65 @@
+{% extends "article.html" %}
+{% import "macro_heading.html" as headings %}
+
+{% block page_title %}
+Code
+{% endblock %}
+    
+{% block article_pages %}
+
+    {% set article = pages|first %}
+    {% include "base_article.html" %} 
+
+    <article id="codelist">      
+        {% call headings.article() %}
+            Code List
+        {% endcall %}
+
+        {% for page in pages %}
+            {% set url = url_for( "page", page_path=page.path) %}
+            {% if loop.index is sameas 1 %}
+            {% else %}
+                <section id="{{ page.named }}"
+                    class=
+                    {% if page.major %}
+                        "majorrelease"
+                    {% else %}
+                        "minorrelease"
+                    {% endif %}
+                    >
+                    <header>
+                        <div class='headline'>
+                            <div class='date'>
+                                {{ page.published }} 
+                            </div>
+                            -
+                            {% if page.version %}
+                                <div class='date'>
+                                    {{ page.version }} 
+                                </div>
+                                -
+                            {% endif %}
+                            <div class='title'>
+                                <a href="{{ page.website}}">{{ page.title|title }}</a>
+                            </div>
+                        </div>
+                    </header>
+                    <!--div class="cover">
+                        <a href="{{ url }}">
+                            <img class="cover" src="{{ url_for( ".static", filename=page.cover ) }}" title="{{ page.title }}"/> 
+                        </a>
+                    </div-->
+                    {{ page.short }}
+                    <p>
+                        <a class='button' 
+                            href="{{ url }}"
+                           title="Videos, pictures and full summary"
+                        >
+                            Full Details
+                        </a>
+                    </p>
+                </section>
+            {% endif %}
+        {% endfor %}
+    </article>
+{% endblock %}

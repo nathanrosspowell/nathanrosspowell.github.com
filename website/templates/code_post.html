@@ -1,0 +1,49 @@
+{% extends "article.html" %}
+{% import "macro_heading.html" as headings %}
+
+{% block page_title %}
+    {% set article = pages|first %}
+    Code - {{ article.title }}
+{% endblock %}
+
+{% block article_pages %}
+    {% set article = pages|first %}
+    {% include "base_article.html" %}
+
+    {% set tagpages= get_tagged_blogs( article.named ) %} 
+    {% set tagpagecount = tagpages|count %}
+    {% if tagpagecount is compare( ">", 0 ) %}
+        <article id="taggedposts">
+            {% call headings.article() %}
+                Blogs tagged as "{{ article.named }}"
+            {% endcall %}
+            {% for page in tagpages %}
+                <section id="{{ page.named }}">
+                    <header>
+                        <div class='headline'>
+                            <div class='comments'>
+                                {% include "disqus_comment_count.html" %}
+                            </div>
+                            <div class='date'>
+                                {{ page.published }} - 
+                            </div>
+                            <div class='title'>
+                                {{ page.title }}
+                            </div>
+                        </div>
+                    </header>
+                        {% if page.short %}
+                            {{ page.short }}...
+                        {% else %}
+                            {{ page.body[:100] }}...
+                        {% endif %}
+                        {% if page.url %}
+                            <a class='button' href="{{ url_for("page", page_path=page.path) }}" >
+                                Continue Reading
+                            </a>
+                        {% endif %}
+                </section>
+            {% endfor %}
+        </article>
+    {% endif %}
+{% endblock article_pages %}

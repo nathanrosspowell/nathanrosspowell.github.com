@@ -10,8 +10,9 @@
         
     NRP -
     
-        Personal Website
     
+    Code - Project Euler
+
 
     </title>
     <meta name="description" content="">
@@ -43,11 +44,25 @@ Modernizr.load({
             'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
         
         
-        
+    "spritecss" : "/static/css/sprite.css",
+    "shareholicjs" : "/static/js/shareholic.js",
+    
+    
+
     },
     callback : {
         
-        
+    'shareholicjs' : function(url, result, key){        
+        (function() {
+var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;
+sb.src = ("https:" == document.location.protocol ? "https://dtym7iokkjlif.cloudfront.net" : "http://cdn.shareaholic.com") + "/media/js/jquery.shareaholic-publishers-sb.min.js";
+var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb, s);
+})();
+
+    }, 
+    
+    
+
     },
     complete : function() {
         
@@ -56,7 +71,20 @@ Modernizr.load({
             }
         
         
-        
+    
+    
+    
+        var disqus_shortname = 'nathanrosspowell';
+var disqus_url = "http://www.nathanrosspowell.com";
+var disqus_identifier = "";
+var disqus_title = "";
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+    
+
         var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-33462621-1']);
 _gaq.push(['_trackPageview']);
@@ -147,29 +175,110 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <header></header>
         <div id='main' role='main'>
             
-    <article>
+
+
+    
+
+
+
+    
+    
+
+    
+    
+    
+<article id="project-euler">
+    <header>
+        <div class='headline'>
+            <div class='title'>
+                
+        Project Euler
+    
+            </div>
+        </div>
+    </header>
+    <p>Vist my GitHub <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">repro</a> to see all the latest code. Most of the solutions have been programmed and left alone once solving the problem - it is not all perfect optimized code!</p>
+</article>
+
+     
+    
+    
+        <article id="taggedposts">
             <header>
         <div class='headline'>
             <div class='title'>
                 
-                Looks like we got
-                
-                a 404
-                
-                error...
+                Blogs tagged as "project-euler"
             
             </div>
         </div>
     </header>
-            <p>
-                
-                    404 - page is no where to be found.
-                
-            </p>
-            <p>
-                Please make your way back to where you came from.
-            </p>
+            
+                <section id="project-euler">
+                    <header>
+                        <div class='headline'>
+                            <div class='comments'>
+                                <a href="http://www.nathanrosspowell.com/blog/2012/08/07/project-euler/#disqus_thread" data-disqus-identifier="/blog/2012/08/07/project-euler/">Loading...</a>
+                            </div>
+                            <div class='date'>
+                                2012/08/07 - 
+                            </div>
+                            <div class='title'>
+                                Project Euler
+                            </div>
+                        </div>
+                    </header>
+                        
+                            An update to the compilers used in my Project Euler testbed...
+                        
+                        
+                            <a class='button' href="/blog/2012/08/07/project-euler/" >
+                                Continue Reading
+                            </a>
+                        
+                </section>
+            
         </article>
+    
+
+
+    
+    
+
+    
+        
+            <article id="bookmarks">
+                <header>
+        <div class='headline'>
+            <div class='title'>
+                
+                    Share Project Euler
+                
+            </div>
+        </div>
+    </header>
+                <div class="shr_class shareaholic-show-on-load" > </div>
+            </article>
+        
+    
+
+    
+        
+            <article id="comments">
+                <header>
+        <div class='headline'>
+            <div class='title'>
+                
+                    Comments for Project Euler
+                
+            </div>
+        </div>
+    </header>
+                <div id="disqus_thread"></div>
+            </article>
+        
+    
+
 
         </div>
         <footer></footer>

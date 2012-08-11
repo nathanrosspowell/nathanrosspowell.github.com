@@ -17,7 +17,7 @@ tags:
 
 I've just update the test code for my [Project Euler][pe] testing scripts. Now a list of `Execute` classes will run on each language implementation. I've started by adding Clang to the GCC tests.
 
-<a href="http://imgur.com/WOllJ"><img class="article" src="http://i.imgur.com/WOllJ.png" alt="" title="run.py working it's magic on CPP 2 and 11" /></a>
+<a href="http://imgur.com/WOllJ"><img class="article" src="http://i.imgur.com/WOllJ.png" alt="" title="run.py working it's magic on CPP 2 and 12" /></a>
 
 Also I stopped the nasty red *ERROR* messages for files that exist when there is an answer for that problem, but it's not finished in a specific language (problem 11 is only sloved in `python` currently).
 

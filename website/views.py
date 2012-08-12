@@ -1,8 +1,11 @@
 import os
 import datetime
 import operator
+import urllib2
+import time
 import walk_dates as walk
 from time_stamp import get_w3c_date
+from flaskext.markdown import Markdown
 from website import \
 app,                \
 pages
@@ -17,6 +20,12 @@ abort,              \
 render_template,    \
 flash
 
+#-----------------------------------------------------------------------------
+# Markdown set up.
+Markdown(app)
+
+#-----------------------------------------------------------------------------
+Markdown(app)
 #-----------------------------------------------------------------------------
 # Global template names
 blogs_per_page = 5
@@ -134,14 +143,16 @@ def latest_pages( n, dir, subdir ):
 
 def archive_pages_dated( date, dir, subdir ):
     for page_path in walk.walk( os.path.join( dir, subdir ), walk.newest ):
-        urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
-        if page_path.split( "/blog/" )[ 1 ].startswith( date ):
-            yield pages.get_or_404( urlpath )
+        if page_path[ -1 ] != "~":
+            urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
+            if page_path.split( "/blog/" )[ 1 ].startswith( date ):
+                yield pages.get_or_404( urlpath )
 
 def all_pages( dir, subdir ):
     for page_path in walk.walk( os.path.join( dir, subdir ), walk.newest ):
-        urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
-        yield pages.get_or_404( urlpath )
+        if page_path[ -1 ] != "~":
+            urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
+            yield pages.get_or_404( urlpath )
 
 def page_count( dir, subdir ):
     return len( [ a for a in walk.walk( os.path.join( dir, subdir ) ) ] )
@@ -154,7 +165,7 @@ def base_render_template( template, **kwargs ):
     kwargs[ "bio" ] = pages.get_or_404( "menu/bio" )
     return render_template( template, **kwargs )
 
-def article_page( template, page_list ):
+def article_page( template, page_list, *args, **kwargs ):
     pages_list = list( pages.get_or_404( name ) for name in page_list )
     title = pages_list[ 0 ]
     if pages_list[ 0 ].meta.get( "comments", False ):
@@ -167,6 +178,8 @@ def article_page( template, page_list ):
             pages = pages_list,
             comment_override_id = comment_id,
             comment_override_title = comment_title,
+            *args,
+            **kwargs
     )
 
 def add_to_dict( d, key ):
@@ -225,10 +238,37 @@ def get_archive( specific = None, take_n = None ):
     return (arc_list, arcs) if take_n is None else (arc_list[ :take_n], arcs)
 
 #-----------------------------------------------------------------------------
+# Key word arg helpers.
+def code_kwargs( page_path, page ):
+    readme = page.meta.get( "readme", None )
+    if readme:
+        responce = urllib2.urlopen( readme )
+        readme = responce.read()
+    kwargs = {
+        "readme" : readme, 
+    }
+    return kwargs
+
+def index_kwargs():
+    wdatetime = get_w3c_date()
+    date = makedate( wdatetime[ :10].replace( "-", "/" ) )
+    stime = wdatetime[ 11:19 ]
+    addition = wdatetime[ 19: ]
+    kwargs = {
+        "date" : date,
+        "time" : "%s %s which is %s ontop of UTC/GMT" % ( 
+            stime, 
+            time.tzname[ 0 ], 
+            addition 
+        ), 
+    }
+    return kwargs
+#-----------------------------------------------------------------------------
 # Redirects.
 @app.route('/')
 def index():
-    return article_page( index_html, ( "menu/home-page", ) )
+    kwargs = index_kwargs() 
+    return article_page( index_html, ( "menu/home-page", ), **kwargs )
 
 @app.route("/connect/")
 def connect():
@@ -353,9 +393,15 @@ def blog_all():
 def page( page_path ):
     page = pages.get_or_404( page_path )
     template = page.meta.get( "template", blog_post_html )
+    spliturl = page_path.split( "/" )
+    kwargs = {}
+    if len( spliturl ) > 1:
+        if spliturl[ 0 ] == "code":
+            kwargs = code_kwargs( page_path, page )
     return blog(
         template = template,
-        page_list = [ page ]
+        page_list = [ page ],
+        **kwargs
     )
 
 @app.route( "/feeds/atom.xml" )

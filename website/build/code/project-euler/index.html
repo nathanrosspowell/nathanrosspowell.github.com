@@ -72,7 +72,14 @@ var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb
         
         
     
-    
+    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+
     
         var disqus_shortname = 'nathanrosspowell';
 var disqus_url = "http://www.nathanrosspowell.com";
@@ -175,8 +182,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <header></header>
         <div id='main' role='main'>
             
-
-
     
 
 
@@ -186,19 +191,65 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 
     
     
-    
-<article id="project-euler">
-    <header>
+        <article id="project-euler">
+        <header>
         <div class='headline'>
             <div class='title'>
                 
-        Project Euler
-    
+            Project Euler
+        
             </div>
         </div>
     </header>
-    <p>Vist my GitHub <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">repro</a> to see all the latest code. Most of the solutions have been programmed and left alone once solving the problem - it is not all perfect optimized code!</p>
-</article>
+        <p>Vist my GitHub <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">repro</a> to see all the latest code. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.</p>
+
+        
+            <p>
+            Below is the <a href="http://raw.github.com/nathanrosspowell/euler/master/README.markdown">readme</a> for the project.
+            </p>
+            <hr/>
+            <p>
+                <h1>PROJECT EULER</h1>
+<p><img src="http://projecteuler.net/profile/nathanrosspowell.png" /></p>
+<p>I have been attempting the Project Euler challenges as a learning exercise - 
+primarily to enhance my problem solving skills
+and secondly to aid in the learning of new programming languages.</p>
+<h2>Languages</h2>
+<p>Currently solutions are presented in</p>
+<ul>
+<li>C++</li>
+<li>Python</li>
+<li>Haskell</li>
+</ul>
+<h2>Installing</h2>
+<p>This repro is tested against these versions</p>
+<ul>
+<li>Ubuntu 12.04 &amp; 11.10</li>
+<li>Python 2.6.6</li>
+<li>GCC 4.4.5</li>
+<li>Clang 2.9</li>
+<li>Glasgow Compiler 6.12.1</li>
+</ul>
+<p>Call the bash script <code>install.bash</code> to get the needed software.</p>
+<h2>Executing</h2>
+<p>Completed problems will be ran by the testing utility and double checked against the correct answer</p>
+<pre><code>python testing/run.py
+</code></pre>
+<p>To filter the testing add a language (or list of them) and a problem number (or list of them)</p>
+<pre><code>python testing/run.py cpp
+python testing/run.py python
+python testing/run.py cpp python
+python testing/run.py cpp 1
+python testing/run.py cpp 1 2 99 142
+python testing/run.py cpp haskell 1
+python testing/run.py cpp haskell 42 69
+</code></pre>
+<h2>Solutions</h2>
+<p>Nothing here is groundbreaking, super minimal or extremely optimal code. The solutions are of the most part coded upto to getting the correct answer, then plopped into source control. It's the actual completion of the problems that I'm aiming for!</p>
+            </p>
+        
+    </article>
+
 
      
     
@@ -238,6 +289,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                         
                 </section>
             
+
+
+
         </article>
     
 
@@ -252,7 +306,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <div class='headline'>
             <div class='title'>
                 
-                    Share Project Euler
+                    Share "Project Euler"
                 
             </div>
         </div>
@@ -269,7 +323,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <div class='headline'>
             <div class='title'>
                 
-                    Comments for Project Euler
+                    Comments for "Project Euler"
                 
             </div>
         </div>
@@ -278,7 +332,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
             </article>
         
     
-
 
         </div>
         <footer></footer>

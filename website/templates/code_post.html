@@ -1,6 +1,10 @@
 {% extends "article.html" %}
 {% import "macro_heading.html" as headings %}
 
+{% block article_complete %}
+    {% include "disqus_comment_count_script.js"%}
+{% endblock article_complete %}
+
 {% block page_title %}
     {% set article = pages|first %}
     Code - {{ article.title }}
@@ -8,7 +12,23 @@
 
 {% block article_pages %}
     {% set article = pages|first %}
-    {% include "base_article.html" %}
+        <article id="{{ article.named }}">
+        {% call headings.article() %}
+            {{ article.title|title }}
+        {% endcall %}
+        {{ article.html|safe }}
+
+        {% if article.readme %}
+            <p>
+            Below is the <a href="{{ article.readme }}">readme</a> for the project.
+            </p>
+            <hr/>
+            <p>
+                {{ readme|markdown }}
+            </p>
+        {% endif %}
+    </article>
+
 
     {% set tagpages= get_tagged_blogs( article.named ) %} 
     {% set tagpagecount = tagpages|count %}
@@ -44,6 +64,9 @@
                         {% endif %}
                 </section>
             {% endfor %}
+
+
+
         </article>
     {% endif %}
 {% endblock article_pages %}

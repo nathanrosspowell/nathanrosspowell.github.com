@@ -61,6 +61,13 @@ Modernizr.load({
             }
         
         
+    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
     
     
 
@@ -163,28 +170,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                 
                 
                 
-    <li id="picture"
-        
-    >
-        
-        <a href="/blog/tag/picture/#blog-nav"
-            title="Blog filter for: picture"
-        >
-            picture:  2
-        </a> 
-    </li>
-
-    <li id="life"
-        
-    >
-        
-        <a href="/blog/tag/life/#blog-nav"
-            title="Blog filter for: life"
-        >
-            life:  2
-        </a> 
-    </li>
-
     <li id="c++"
         
     >
@@ -196,25 +181,25 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         </a> 
     </li>
 
-    <li id="montreal"
+    <li id="picture"
         
     >
         
-        <a href="/blog/tag/montreal/#blog-nav"
-            title="Blog filter for: montreal"
+        <a href="/blog/tag/picture/#blog-nav"
+            title="Blog filter for: picture"
         >
-            montreal:  2
+            picture:  1
         </a> 
     </li>
 
-    <li id="ubisoft"
+    <li id="life"
         
     >
         
-        <a href="/blog/tag/ubisoft/#blog-nav"
-            title="Blog filter for: ubisoft"
+        <a href="/blog/tag/life/#blog-nav"
+            title="Blog filter for: life"
         >
-            ubisoft:  2
+            life:  1
         </a> 
     </li>
 
@@ -273,6 +258,17 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         </a> 
     </li>
 
+    <li id="montreal"
+        
+    >
+        
+        <a href="/blog/tag/montreal/#blog-nav"
+            title="Blog filter for: montreal"
+        >
+            montreal:  1
+        </a> 
+    </li>
+
     <li id="project-euler"
         
     >
@@ -303,6 +299,17 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
             title="Blog filter for: test"
         >
             test:  1
+        </a> 
+    </li>
+
+    <li id="ubisoft"
+        
+    >
+        
+        <a href="/blog/tag/ubisoft/#blog-nav"
+            title="Blog filter for: ubisoft"
+        >
+            ubisoft:  1
         </a> 
     </li>
 
@@ -391,7 +398,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/tag/life/#blog-nav"
             title="Blog filter for: life"
         >
-            life:  2
+            life:  1
         </a> 
     </li>
 
@@ -413,7 +420,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/tag/montreal/#blog-nav"
             title="Blog filter for: montreal"
         >
-            montreal:  2
+            montreal:  1
         </a> 
     </li>
 
@@ -424,7 +431,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/tag/picture/#blog-nav"
             title="Blog filter for: picture"
         >
-            picture:  2
+            picture:  1
         </a> 
     </li>
 
@@ -468,7 +475,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/tag/ubisoft/#blog-nav"
             title="Blog filter for: ubisoft"
         >
-            ubisoft:  2
+            ubisoft:  1
         </a> 
     </li>
 
@@ -502,7 +509,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/archive/2012/#blog-nav"
             title="Blog filter for: 2012"
         >
-            2012 :  5
+            2012 :  4
         </a> 
     </li>
 
@@ -525,7 +532,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/archive/2012/08/#blog-nav"
             title="Blog filter for: 2012/08"
         >
-            2012, Aug :  4
+            2012, Aug :  3
         </a> 
     </li>
 
@@ -570,7 +577,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/archive/2012/08/05/#blog-nav"
             title="Blog filter for: 2012/08/05"
         >
-            2012, Aug 5th:  2
+            2012, Aug 5th:  1
         </a> 
     </li>
 
@@ -668,30 +675,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                 
         </section>
     
-        <section id="hello-montral-hello-ubisoft">
-            <header>
-                <div class='headline'>
-                    <div class='comments'>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/#disqus_thread" data-disqus-identifier="/blog/2012/08/05/hello-montral-hello-ubisoft/">Loading...</a>
-                    </div>
-                    <div class='date'>
-                        2012/08/05 - 
-                    </div>
-                    <div class='title'>
-                        Hello, Montreal. Hello, Ubisoft!
-                    </div>
-                </div>
-            </header>
-                
-                    Preperation for my latest &#39;first day&#39; as I start work for Ubisoft Montréal...
-                
-                
-                    <a class='button' href="/blog/2012/08/05/hello-montral-hello-ubisoft/" >
-                        Continue Reading
-                    </a>
-                
-        </section>
-    
         <section id="syntax-highlight-test">
             <header>
                 <div class='headline'>
@@ -736,23 +719,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <li><a href="http://poita.org" title="Writes code, makes games">Peter Alexander</a> - Programmer, Mac gamer, <em>D</em> lover.</li>
 </ul>
     </article>
-
-
     
-
-     <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-
 
         </div>
         <footer></footer>

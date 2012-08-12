@@ -15,6 +15,7 @@
 {% endblock yepnope_callback %}
 
 {% block yepnope_complete%}
+    {% include"disqus_comment_count_script.js"%}
     {% block blog_complete%}
     {% endblock blog_complete%}
 {% endblock yepnope_complete%}
@@ -137,10 +138,5 @@
         {% endcall %}
         {{ blogroll.html|safe }}
     </article>
-
-
     {% endblock blog_content %}
-
-    {% include "disqus_comment_count_script.html" %}
-
 {% endblock %}

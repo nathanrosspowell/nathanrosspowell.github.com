@@ -75,6 +75,13 @@ var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb
             }
         
         
+    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
     
     
     
@@ -188,28 +195,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                 
                 
                 
-    <li id="picture"
-        
-    >
-        
-        <a href="/blog/tag/picture/#blog-nav"
-            title="Blog filter for: picture"
-        >
-            picture:  2
-        </a> 
-    </li>
-
-    <li id="life"
-        
-    >
-        
-        <a href="/blog/tag/life/#blog-nav"
-            title="Blog filter for: life"
-        >
-            life:  2
-        </a> 
-    </li>
-
     <li id="c++"
         
     >
@@ -221,25 +206,25 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         </a> 
     </li>
 
-    <li id="montreal"
+    <li id="picture"
         
     >
         
-        <a href="/blog/tag/montreal/#blog-nav"
-            title="Blog filter for: montreal"
+        <a href="/blog/tag/picture/#blog-nav"
+            title="Blog filter for: picture"
         >
-            montreal:  2
+            picture:  1
         </a> 
     </li>
 
-    <li id="ubisoft"
+    <li id="life"
         
     >
         
-        <a href="/blog/tag/ubisoft/#blog-nav"
-            title="Blog filter for: ubisoft"
+        <a href="/blog/tag/life/#blog-nav"
+            title="Blog filter for: life"
         >
-            ubisoft:  2
+            life:  1
         </a> 
     </li>
 
@@ -298,6 +283,17 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         </a> 
     </li>
 
+    <li id="montreal"
+        
+    >
+        
+        <a href="/blog/tag/montreal/#blog-nav"
+            title="Blog filter for: montreal"
+        >
+            montreal:  1
+        </a> 
+    </li>
+
     <li id="project-euler"
         
     >
@@ -328,6 +324,17 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
             title="Blog filter for: test"
         >
             test:  1
+        </a> 
+    </li>
+
+    <li id="ubisoft"
+        
+    >
+        
+        <a href="/blog/tag/ubisoft/#blog-nav"
+            title="Blog filter for: ubisoft"
+        >
+            ubisoft:  1
         </a> 
     </li>
 
@@ -416,7 +423,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/tag/life/#blog-nav"
             title="Blog filter for: life"
         >
-            life:  2
+            life:  1
         </a> 
     </li>
 
@@ -438,7 +445,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/tag/montreal/#blog-nav"
             title="Blog filter for: montreal"
         >
-            montreal:  2
+            montreal:  1
         </a> 
     </li>
 
@@ -449,7 +456,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/tag/picture/#blog-nav"
             title="Blog filter for: picture"
         >
-            picture:  2
+            picture:  1
         </a> 
     </li>
 
@@ -493,7 +500,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/tag/ubisoft/#blog-nav"
             title="Blog filter for: ubisoft"
         >
-            ubisoft:  2
+            ubisoft:  1
         </a> 
     </li>
 
@@ -527,7 +534,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/archive/2012/#blog-nav"
             title="Blog filter for: 2012"
         >
-            2012 :  5
+            2012 :  4
         </a> 
     </li>
 
@@ -550,7 +557,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/archive/2012/08/#blog-nav"
             title="Blog filter for: 2012/08"
         >
-            2012, Aug :  4
+            2012, Aug :  3
         </a> 
     </li>
 
@@ -595,7 +602,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <a href="/blog/archive/2012/08/05/#blog-nav"
             title="Blog filter for: 2012/08/05"
         >
-            2012, Aug 5th:  2
+            2012, Aug 5th:  1
         </a> 
     </li>
 
@@ -647,7 +654,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                 </div>
             </header>
             <p>I've just update the test code for my <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">Project Euler</a> testing scripts. Now a list of <code>Execute</code> classes will run on each language implementation. I've started by adding Clang to the GCC tests.</p>
-<p><a href="http://imgur.com/WOllJ"><img class="article" src="http://i.imgur.com/WOllJ.png" alt="" title="run.py working it's magic on CPP 2 and 12" /></a></p>
+<p><a href="http://imgur.com/WOllJ"><img class="article" src="http://i.imgur.com/WOllJ.png" alt="" title="run.py working it's magic on CPP 2 and 11" /></a></p>
 <p>Also I stopped the nasty red <em>ERROR</em> messages for files that exist when there is an answer for that problem, but it's not finished in a specific language (problem 11 is only sloved in <code>python</code> currently).</p>
 <p>Time to get cracking on the next problem, currently <a href="http://projecteuler.net/problem=15" title="Project Euler problem 15">PE15</a> (I've got up to PE16, but only after I chickened out on PE15...)</p>
 <p>See my <code>code</code> page <a href="http://nathanrosspowell.com/code/project-euler" title="NRP - Code - Project Euler">here</a>.</p>
@@ -712,20 +719,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
             </footer>
         </article>
     
-
-
-     <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
 
 
         </div>

@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
-  <atom:updated>2012-08-09T00:28:31-05:00</atom:updated>
+  <atom:updated>2012-08-12T18:36:08-05:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -20,7 +20,7 @@
         <![CDATA[ 
 
         <p>I've just update the test code for my <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">Project Euler</a> testing scripts. Now a list of <code>Execute</code> classes will run on each language implementation. I've started by adding Clang to the GCC tests.</p>
-<p><a href="http://imgur.com/WOllJ"><img class="article" src="http://i.imgur.com/WOllJ.png" alt="" title="run.py working it's magic on CPP 2 and 12" /></a></p>
+<p><a href="http://imgur.com/WOllJ"><img class="article" src="http://i.imgur.com/WOllJ.png" alt="" title="run.py working it's magic on CPP 2 and 11" /></a></p>
 <p>Also I stopped the nasty red <em>ERROR</em> messages for files that exist when there is an answer for that problem, but it's not finished in a specific language (problem 11 is only sloved in <code>python</code> currently).</p>
 <p>Time to get cracking on the next problem, currently <a href="http://projecteuler.net/problem=15" title="Project Euler problem 15">PE15</a> (I've got up to PE16, but only after I chickened out on PE15...)</p>
 <p>See my <code>code</code> page <a href="http://nathanrosspowell.com/code/project-euler" title="NRP - Code - Project Euler">here</a>.</p>
@@ -33,32 +33,6 @@
     <atom:category term="c++"/>
     <atom:category term="bash"/>
     <atom:category term="linux"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Hello, Montreal. Hello, Ubisoft!</atom:title>
-    <atom:id>http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/</atom:id>
-    <atom:updated>2012-08-05T21:16:12+00:00</atom:updated>
-    <atom:link href="http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/"/>
-    <atom:summary>Preperation for my latest &#39;first day&#39; as I start work for Ubisoft Montréal</atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>So tomorrow is the start of a new chapter in my career and life as I will be starting work at Ubisoft Montréal on the muchly anticipated Watch_Dogs video game.</p>
-<p>I've been in the country for a couple of days now and have just about adapted to the time and the heat.</p>
-<p><a href="http://imgur.com/4X0wz">
-<img class="article" title="Downtown Montréal from the 15th floor of the Trylon" src="http://i.imgur.com/9Vsiu.jpg" alt=""/>
-</a></p>
-<p>Not much else to say for now other than my French is embarrassingly terrible and I feel like a total dingus whenever I try and converse with a Francophone. Time to see if there is any crossover from being multi-lingual in programming languages...</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="life"/>
-    <atom:category term="ubisoft"/>
-    <atom:category term="montreal"/>
-    <atom:category term="picture"/>
     
   </atom:entry>
   

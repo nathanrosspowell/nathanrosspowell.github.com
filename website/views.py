@@ -137,22 +137,19 @@ def directory():
 
 def latest_pages( n, dir, subdir ):
     for page_path in walk.take( n, os.path.join( dir, subdir ), walk.newest ):
-        if page_path[ -1 ] != "~":
-            urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
-            yield pages.get_or_404( urlpath )
+        urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
+        yield pages.get_or_404( urlpath )
 
 def archive_pages_dated( date, dir, subdir ):
     for page_path in walk.walk( os.path.join( dir, subdir ), walk.newest ):
-        if page_path[ -1 ] != "~":
-            urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
-            if page_path.split( "/blog/" )[ 1 ].startswith( date ):
-                yield pages.get_or_404( urlpath )
+        urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
+        if page_path.split( "/blog/" )[ 1 ].startswith( date ):
+            yield pages.get_or_404( urlpath )
 
 def all_pages( dir, subdir ):
     for page_path in walk.walk( os.path.join( dir, subdir ), walk.newest ):
-        if page_path[ -1 ] != "~":
-            urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
-            yield pages.get_or_404( urlpath )
+        urlpath = os.path.splitext( page_path.replace( dir, "" )[1:] )[ 0 ]
+        yield pages.get_or_404( urlpath )
 
 def page_count( dir, subdir ):
     return len( [ a for a in walk.walk( os.path.join( dir, subdir ) ) ] )

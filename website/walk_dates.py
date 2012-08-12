@@ -8,6 +8,10 @@ import os
 def walk( dir, function = None, desc = True ):
     for walking in os.walk( dir, topdown = desc ):
         walking[ 1 ].sort( reverse = desc )
+        filenames = walking[ 2 ][ : ]
+        for filename in filenames:
+            if filename[ -1 ] == '~':
+                walking[ 2 ].remove( filename )
         if function is None:
             j = os.path.join
             paths = [ j( walking[ 0 ], x ) for x in walking[ 2 ] if x[0] != "." ]

@@ -100,7 +100,7 @@ Modernizr.load({
 {% endblock body %}
 
 <footer>
-    <section>
+    <section id="bioshort">
         <h1>
             Nathan Ross Powell Bio
         </h1>
@@ -109,8 +109,16 @@ Modernizr.load({
             {% include "social.html" %}
         </div>
     </section>
-    <section class='copyright'>
-        {{ credits.html|safe }}
+    <section id="copyright" class='copyright'>
+        {% if date %}
+        <p id="udpdated">
+            This website was last statically updated: {{ date }} at {{ time }}.
+        </p>
+        <hr/>
+        {% endif %}
+        <p>
+            {{ credits.html|safe }}
+        </p>
     </section>
 </footer>
 {% endblock html5_body %}

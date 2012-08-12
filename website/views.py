@@ -161,6 +161,16 @@ def get_pages( page_path ):
     return [page]
 
 def base_render_template( template, **kwargs ):
+    wdatetime = get_w3c_date()
+    date = makedate( wdatetime[ :10].replace( "-", "/" ) )
+    stime = wdatetime[ 11:19 ]
+    addition = wdatetime[ 19: ]
+    kwargs[ "date" ] = date
+    kwargs[ "time" ] = "%s %s which is %s ontop of UTC/GMT" % ( 
+        stime, 
+        time.tzname[ 0 ], 
+        addition 
+    ) 
     kwargs[ "credits" ] = pages.get_or_404( "menu/credits-short" )
     kwargs[ "bio" ] = pages.get_or_404( "menu/bio" )
     return render_template( template, **kwargs )
@@ -250,25 +260,12 @@ def code_kwargs( page_path, page ):
     return kwargs
 
 def index_kwargs():
-    wdatetime = get_w3c_date()
-    date = makedate( wdatetime[ :10].replace( "-", "/" ) )
-    stime = wdatetime[ 11:19 ]
-    addition = wdatetime[ 19: ]
-    kwargs = {
-        "date" : date,
-        "time" : "%s %s which is %s ontop of UTC/GMT" % ( 
-            stime, 
-            time.tzname[ 0 ], 
-            addition 
-        ), 
-    }
     return kwargs
 #-----------------------------------------------------------------------------
 # Redirects.
 @app.route('/')
 def index():
-    kwargs = index_kwargs() 
-    return article_page( index_html, ( "menu/home-page", ), **kwargs )
+    return article_page( index_html, ( "menu/home-page", ) )
 
 @app.route("/connect/")
 def connect():

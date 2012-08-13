@@ -5,8 +5,9 @@ import urllib2
 import time
 import walk_dates as walk
 from time_stamp import                      \
-get_w3c_date,                                \
-get_time_zone
+get_w3c_date,                               \
+get_time_zone,                              \
+get_gmt_time
 from flaskext.markdown import Markdown
 from website import                         \
 app,                                        \
@@ -165,11 +166,18 @@ def base_render_template( template, **kwargs ):
     stime = wdatetime[ 11:19 ]
     addition = wdatetime[ 19: ]
     kwargs[ "date" ] = date
-    kwargs[ "time" ] = "%s %s which is %s ontop of UTC/GMT" % ( 
-        stime, 
-        get_time_zone(),
-        addition 
-    ) 
+    timezone = get_time_zone()
+    if timezone.upper() == "GMT":
+        kwargs[ "time" ] = "%s %s" % ( 
+            stime, 
+            timezone,
+        ) 
+    else:
+        kwargs[ "time" ] = "%s %s which is %s UTC/GMT" % ( 
+            stime, 
+            timezone,
+            get_gmt_time(), 
+        ) 
     kwargs[ "credits" ] = pages.get_or_404( "menu/credits-short" )
     kwargs[ "bio" ] = pages.get_or_404( "menu/bio" )
     return render_template( template, **kwargs )

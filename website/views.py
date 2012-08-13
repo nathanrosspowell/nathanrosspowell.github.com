@@ -4,20 +4,22 @@ import operator
 import urllib2
 import time
 import walk_dates as walk
-from time_stamp import get_w3c_date
+from time_stamp import                      \
+get_w3c_date,                                \
+get_time_zone
 from flaskext.markdown import Markdown
-from website import \
-app,                \
+from website import                         \
+app,                                        \
 pages
-from flask import   \
-Flask,              \
-request,            \
-session,            \
-g,                  \
-redirect,           \
-url_for,            \
-abort,              \
-render_template,    \
+from flask import                           \
+Flask,                                      \
+request,                                    \
+session,                                    \
+g,                                          \
+redirect,                                   \
+url_for,                                    \
+abort,                                      \
+render_template,                            \
 flash
 
 #-----------------------------------------------------------------------------
@@ -165,7 +167,7 @@ def base_render_template( template, **kwargs ):
     kwargs[ "date" ] = date
     kwargs[ "time" ] = "%s %s which is %s ontop of UTC/GMT" % ( 
         stime, 
-        time.tzname[ 0 ], 
+        get_time_zone(),
         addition 
     ) 
     kwargs[ "credits" ] = pages.get_or_404( "menu/credits-short" )

@@ -9,8 +9,7 @@ template: "blog_post.html"
 comments: True
 short: "An update to the compilers used in my Project Euler testbed"
 tags:
-- blog
-- "project-euler"
+- project-euler
 - c++
 - bash
 - linux

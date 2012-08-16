@@ -10,10 +10,9 @@ comments: True
 readme: "http://raw.github.com/nathanrosspowell/euler/master/README.markdown"
 tags:
 - code
-short: A Set of code challenges solved in various programming languages.
+short: A Set of code challenges solved in various programming languages. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.
 
 Vist my GitHub [repro][pe] to see all the latest code. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.
-
 
 [pe]: http://github.com/nathanrosspowell/euler "Project Euler on GitHub"
 

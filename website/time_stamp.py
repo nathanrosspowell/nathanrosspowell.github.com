@@ -36,12 +36,16 @@ def get_gmt_time():
     time = date[ 11: ]
     hours = int( time[ :2 ] )
     mins = int( time[ 3:5 ] ) 
-    hours += int( tz[ :3 ] )
+    hours -= int( tz[ :3 ] )
     if hours < 0:
         hours += 24
-    mins += int( tz[ 4:6 ] )
+    elif hours >= 24:
+        hours -= 24
+    mins -= int( tz[ 4:6 ] )
     if mins < 0:
         mins += 60
+    if mins >= 60:
+        mins -= 60
     time2 = "%02d:%02d:%s" % ( hours, mins, time[ 6: ] )
     return time2
 

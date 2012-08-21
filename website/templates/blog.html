@@ -50,7 +50,7 @@
             </ul>
         </li>
         <li>
-            <a class="toplevel" href='#'>Years</a>
+            <a class="toplevel" href="{{ url_for( "blog_archives" ) }}">Years</a>
             <ul>
                 {% set item_type = "blog_archive" %}
                 {% set items = arc_years_n %}
@@ -62,7 +62,7 @@
             </ul>
         </li>
         <li>
-            <a class="toplevel" href='#'>Months</a>
+            <a class="toplevel" href="{{ url_for( "blog_archives" ) }}">Months</a>
             <ul>
                 {% set item_type = "blog_archive" %}
                 {% set items = arc_months_n %}
@@ -74,7 +74,7 @@
             </ul>
         </li>
         <li>
-            <a class="toplevel" href='#'>Days</a>
+            <a class="toplevel" href="{{ url_for( "blog_archives" ) }}">Days</a>
             <ul>
                 {% set item_type = "blog_archive" %}
                 {% set items = arc_days_n %}

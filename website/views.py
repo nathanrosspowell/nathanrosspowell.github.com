@@ -57,8 +57,9 @@ games_order = (
 )
 career_order = (
     "menu/career",
-    "career/other-experience",
     "career/cv",
+    "career/cv_pdf",
+    "career/other-experience",
 )
 
 #-----------------------------------------------------------------------------

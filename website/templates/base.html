@@ -62,6 +62,12 @@ Modernizr.load({
             {% endblock page_quote %}
         </h4>
     </hgroup>
+    <!--[if IE]>
+		<div id="IEalert">
+            You're using Internet Explorer. I don't test for that. If somethings broken, feel free to get
+            <a href="http://www.google.com/chrome">Google Chrome</a>.
+		</div>
+    <![endif]-->
     <nav>
         {% block body_nav %}
             {% include "nav_bar.html" %}

@@ -450,3 +450,7 @@ img.article {
     margin-left: auto;
     margin-right: auto;
 }
+
+#IEalert {
+    @include main-spacer( $sz-margin );
+}

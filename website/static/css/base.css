@@ -391,3 +391,16 @@ img.article {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+#IEalert {
+  margin: 12px 12px 12px 12px;
+  padding: 20px 20px 20px 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #240605;
+  background-color: rgba(36, 6, 5, 0.85);
+  -moz-box-shadow: 0 0 15px black;
+  -o-box-shadow: 0 0 15px black;
+  -webkit-box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px black; }

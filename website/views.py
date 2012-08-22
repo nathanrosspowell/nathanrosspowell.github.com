@@ -267,8 +267,24 @@ def code_kwargs( page_path, page ):
     }
     return kwargs
 
-def index_kwargs():
+def blog_kwargs( page_path, page ):
+    kwargs = {}
+    blogs = [ post for post in latest_pages( ( 0, blogs_per_page ), directory(), "blog" ) ]
+    length = len( blogs )
+    index = -1
+    for blog in blogs:
+        if blog.path == page.path:
+            index = blogs.index( blog )
+            break
+    if index > -1:
+        prevBlog  = index - 1
+        if prevBlog >= 0:
+            kwargs[ "prevBlog" ] = blogs[ prevBlog ]
+        nextBlog = index + 1
+        if nextBlog < length:
+            kwargs[ "nextBlog" ] = blogs[ nextBlog ]
     return kwargs
+
 #-----------------------------------------------------------------------------
 # Redirects.
 @app.route('/')
@@ -401,7 +417,9 @@ def page( page_path ):
     spliturl = page_path.split( "/" )
     kwargs = {}
     if len( spliturl ) > 1:
-        if spliturl[ 0 ] == "code":
+        if spliturl[ 0 ] == "blog":
+            kwargs = blog_kwargs( page_path, page )
+        elif spliturl[ 0 ] == "code":
             kwargs = code_kwargs( page_path, page )
     return blog(
         template = template,

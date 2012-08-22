@@ -404,3 +404,11 @@ img.article {
   -o-box-shadow: 0 0 15px black;
   -webkit-box-shadow: 0 0 15px black;
   box-shadow: 0 0 15px black; }
+
+#nextandprev .next {
+  float: right; }
+#nextandprev .prev {
+  display: inline; }
+#nextandprev .big {
+  font-family: 'CorpulentCapsShadowRg';
+  font-weight: bold; }

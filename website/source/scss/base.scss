@@ -454,3 +454,16 @@ img.article {
 #IEalert {
     @include main-spacer( $sz-margin );
 }
+
+#nextandprev {
+    .next {
+        float: right;
+    }
+    .prev {
+        display: inline;
+    }
+    .big {
+        @include title-font();
+        font-weight: bold;
+    }
+}

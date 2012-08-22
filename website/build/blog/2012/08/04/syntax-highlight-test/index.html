@@ -132,6 +132,12 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
             
         </h4>
     </hgroup>
+    <!--[if IE]>
+		<div id="IEalert">
+            You're using Internet Explorer. I don't test for that. If something's broken, feel free to get
+            <a href="http://www.google.com/chrome">Google Chrome</a>.
+		</div>
+    <![endif]-->
     <nav>
         
             
@@ -713,24 +719,38 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     </ul>
 
     
-
-    
-
-
+    <article id="nextandprev">
+        <div class="prev">
+            
+                <a href="/blog/2012/08/05/hello-montral-hello-ubisoft/" title="Previous Blog">
+                    <span class="big"><</span>
+                    Hello, Montreal. Hello, Ubisoft!
+                </a>
+            
+        </div>
+        <div class="next">
+            
+                <a href="/blog/2012/07/03/hello-world/" title="Next Blog">
+                    Hello, World!
+                    <span class="big">></span>
+                </a>
+            
+        </div>
+    </article>
 
     
     <article id="syntax-highlight-test">
-            <header>
-                <div class='headline'>
-                    <div class='date'>
-                        2012/08/04
-                    </div>
-                    <div class='title'>
-                        Syntax Highlight Test
-                    </div>
+        <header>
+            <div class='headline'>
+                <div class='date'>
+                    2012/08/04
                 </div>
-            </header>
-            <p>This is the test for code syntax highlighting from markdown source.</p>
+                <div class='title'>
+                    Syntax Highlight Test
+                </div>
+            </div>
+        </header>
+        <p>This is the test for code syntax highlighting from markdown source.</p>
 <p>Goodbye world in <a href="http://rosettacode.org/wiki/Hello_world#BASIC">BASIC</a>:</p>
 <div class="codehilite"><pre><span class="mi">10</span> <span class="n">PRINT</span> <span class="s">&quot;Goodbye, World!&quot;</span>
 </pre></div>
@@ -767,67 +787,66 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <span class="n">yield</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
-            <footer>
+        <footer>
+            <em>
+                Written by:
+            </em>
+            <strong>
+                
+                    <a href="/connect/"
+                       title="Contact Nathan Ross Powell" 
+                    >
+                        Nathan Ross Powell
+                    </a>
+                
+            </strong>
+            |
+            <span class='newline'>
                 <em>
-                    Written by:
+                    Tags:
                 </em>
-                <strong>
-                    
-                        <a href="/connect/"
-                           title="Contact Nathan Ross Powell" 
-                        >
-                            Nathan Ross Powell
-                        </a>
-                    
-                </strong>
-                |
-                <span class='newline'>
-                    <em>
-                        Tags:
-                    </em>
-                    
-                        <a class='tags'
-                            href="/blog/tag/code/"
-                            title="Blog filter for: code"
-                        >
-                        code</a>,
-                    
-                        <a class='tags'
-                            href="/blog/tag/test/"
-                            title="Blog filter for: test"
-                        >
-                        test</a>,
-                    
-                        <a class='tags'
-                            href="/blog/tag/python/"
-                            title="Blog filter for: python"
-                        >
-                        python</a>,
-                    
-                        <a class='tags'
-                            href="/blog/tag/c%2B%2B/"
-                            title="Blog filter for: c++"
-                        >
-                        c++</a>,
-                    
-                        <a class='tags'
-                            href="/blog/tag/basic/"
-                            title="Blog filter for: basic"
-                        >
-                        basic</a>
-                    
-                </span>
-                |
-                <span class="markdown">
-                    <a href="http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2012/08/04/syntax-highlight-test.md" title="Go to GitHub source">View markdown on GitHub</a>
-                </span>
                 
+                    <a class='tags'
+                        href="/blog/tag/code/"
+                        title="Blog filter for: code"
+                    >
+                    code</a>,
                 
-                <div class="shr_class shareaholic-show-on-load" > </div>
-                <div id="disqus_thread"></div>
-            </footer>
-        </article>
-    
+                    <a class='tags'
+                        href="/blog/tag/test/"
+                        title="Blog filter for: test"
+                    >
+                    test</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/python/"
+                        title="Blog filter for: python"
+                    >
+                    python</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/c%2B%2B/"
+                        title="Blog filter for: c++"
+                    >
+                    c++</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/basic/"
+                        title="Blog filter for: basic"
+                    >
+                    basic</a>
+                
+            </span>
+            |
+            <span class="markdown">
+                <a href="http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2012/08/04/syntax-highlight-test.md" title="Go to GitHub source">View markdown on GitHub</a>
+            </span>
+            
+            
+            <div class="shr_class shareaholic-show-on-load" > </div>
+            <div id="disqus_thread"></div>
+        </footer>
+    </article>
 
 
         </div>
@@ -991,7 +1010,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <section id="copyright" class='copyright'>
         
         <p id="udpdated">
-            This website was last statically updated: 2012, Aug 21st at 00:03:36 EDT which is 04:03:36 UTC/GMT.
+            This website was last statically updated: 2012, Aug 21st at 21:39:57 EDT which is 01:39:57 UTC/GMT.
         </p>
         <hr/>
         

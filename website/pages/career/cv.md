@@ -187,4 +187,3 @@ Conyers College/School
 [ferrari]: http://nathanrosspowell.com/games/ferrari-the-race-experince "Ferrari The Race Experience"
 [ridetohell]: http://nathanrosspowell.com/games/ride-to-hell "Ride To Hell"
 [hotwheels]: http://nathanrosspowell.com/games/hot-wheels-beat-that "Hot Wheels: Beat That!"
-[otherxp]: #other-experience

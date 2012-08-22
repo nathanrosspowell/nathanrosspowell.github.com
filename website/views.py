@@ -279,10 +279,10 @@ def blog_kwargs( page_path, page ):
     if index > -1:
         prevBlog  = index - 1
         if prevBlog >= 0:
-            kwargs[ "prevBlog" ] = blogs[ prevBlog ]
+            kwargs[ "nextBlog" ] = blogs[ prevBlog ]
         nextBlog = index + 1
         if nextBlog < length:
-            kwargs[ "nextBlog" ] = blogs[ nextBlog ]
+            kwargs[ "prevBlog" ] = blogs[ nextBlog ]
     return kwargs
 
 #-----------------------------------------------------------------------------

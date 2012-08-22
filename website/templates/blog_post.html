@@ -31,23 +31,23 @@
         <div class="prev">
             {% if prevBlog %}
                 <a href="{{ url_for( "page", page_path=prevBlog.path ) }}" title="Previous Blog">
-                    <span class="big"><</span>
                     {{ prevBlog.title|title }}
+                    <span class="big">></span>
                 </a>
             {% else %}
-                <span class="big"><</span>
-                No newer blogs...
+                No older blogs
+                <span class="big">></span>
             {% endif %}
         </div>
         <div class="next">
             {% if nextBlog %}
                 <a href="{{ url_for( "page", page_path=nextBlog.path ) }}" title="Next Blog">
+                    <span class="big"><</span>
                     {{ nextBlog.title|title }}
-                    <span class="big">></span>
                 </a>
             {% else %}
-                No older blogs...
-                <span class="big">></span>
+                <span class="big"><</span>
+                No newer blogs
             {% endif %}
         </div>
     </article>

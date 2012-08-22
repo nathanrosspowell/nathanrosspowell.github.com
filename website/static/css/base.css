@@ -406,9 +406,9 @@ img.article {
   box-shadow: 0 0 15px black; }
 
 #nextandprev .next {
-  float: right; }
-#nextandprev .prev {
   display: inline; }
+#nextandprev .prev {
+  float: right; }
 #nextandprev .big {
   font-family: 'CorpulentCapsShadowRg';
   font-weight: bold; }

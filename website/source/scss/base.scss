@@ -457,10 +457,10 @@ img.article {
 
 #nextandprev {
     .next {
-        float: right;
-    }
-    .prev {
         display: inline;
+    }
+    .prev{
+        float: right;
     }
     .big {
         @include title-font();

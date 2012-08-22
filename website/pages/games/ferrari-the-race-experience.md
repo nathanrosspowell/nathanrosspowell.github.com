@@ -6,7 +6,9 @@ url: games/ferrari-the-race-experince
 template: "game.html"
 comments: True
 published: August 2010
+release: major
 cover: "jpg/cover-ferrari.jpg"
+cv: True
 metacritic: http://www.metacritic.com/game/playstation-3/ferrari-the-race-experience 
 website: http://ferrari.system3.com
 websiteimg: jpg/logo-eutechnyx.jpg

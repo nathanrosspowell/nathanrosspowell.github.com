@@ -6,7 +6,9 @@ url: games/hot-wheels-beat-that
 template: "game.html"
 comments: True
 published: September 2007
+release: major
 cover: "jpg/cover-hot-wheels.jpg"
+cv: True
 gametrailer: http://www.gametrailers.com/videos/vpw5ck/hot-wheels--beat-that--debut-trailer
 metacritic: http://www.metacritic.com/game/xbox-360/hot-wheels-beat-that!
 tags:

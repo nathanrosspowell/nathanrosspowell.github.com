@@ -6,7 +6,9 @@ template: "game.html"
 comments: True
 major: True
 published: May 2012
+release: major
 cover: "png/cover-dirt-showdown.png"
+cv: True
 metacritic: http://www.metacritic.com/game/xbox-360/dirt-showdown
 gametrailer: http://www.gametrailers.com/reviews/6iffak/dirt-showdown-review
 website: http://www.codemasters.com/uk/dirtshowdown/360/

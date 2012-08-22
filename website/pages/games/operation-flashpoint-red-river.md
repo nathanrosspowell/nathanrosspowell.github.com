@@ -6,7 +6,9 @@ url: games/operation-flashpoint-red-river
 template: "game.html"
 comments: True
 published: May 2011
+release: major
 cover: "jpg/cover-red-river.jpg"
+cv: True
 metacritic: http://www.metacritic.com/game/xbox-360/operation-flashpoint-red-river
 gametrailer: http://www.gametrailers.com/reviews/jpfpva/operation-flashpoint--red-river-review
 website: http://www.codemasters.com/uk/operation-flashpoint-red-river/360/

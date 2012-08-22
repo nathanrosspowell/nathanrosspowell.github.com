@@ -8,6 +8,7 @@ url: "code/project-euler"
 template: "code_post.html"
 comments: True
 readme: "http://raw.github.com/nathanrosspowell/euler/master/README.markdown"
+release: minor 
 tags:
 - code
 short: A Set of code challenges solved in various programming languages. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.

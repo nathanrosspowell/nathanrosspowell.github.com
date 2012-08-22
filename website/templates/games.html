@@ -42,10 +42,16 @@
                         </div>
                     </header>
                     <div class="cover">
-                        <a href="{{ page.website}}">
+                        {% if page.website %}
+                            <a href="{{ page.website}}">
+                        {% endif %}
+                        {% if page.cover %}
                             <!-- Change to pop up full size image -->
                             <img class="cover" src="{{ url_for( ".static", filename=page.cover ) }}" title="{{ page.title }}"/> 
-                        </a>
+                        {% endif %}
+                        {% if page.website %}
+                            </a>
+                        {% endif %}
                     </div>
                     {% if page.short %}
                         {{ page.short }}..

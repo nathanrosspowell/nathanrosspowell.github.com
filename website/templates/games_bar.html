@@ -33,9 +33,11 @@
         </a>
     {% endif %}
 {% endfor %}
+{% if page.cv %}
     <a class="bigbutton" 
        href="{{ url_for( "career" ) }}#{{ page.named }}"
        title="Link to my CV section for {{ page.title }}"
     >
         CV
     </a>
+{% endif %}

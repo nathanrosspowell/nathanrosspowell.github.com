@@ -6,8 +6,10 @@ url: games/ride-to-hell
 template: "game.html"
 comments: True
 published: No
+release: none
 gametrailer: http://www.gametrailers.com/videos/j0pzns/ride-to-hell-teaser
 cover: "jpg/cover-ride-to-hell.jpg"
+cv: True
 tags:
 - games
 mediabar:

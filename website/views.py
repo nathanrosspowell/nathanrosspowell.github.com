@@ -54,6 +54,8 @@ games_order = (
     "games/ferrari-the-race-experience",
     "games/ride-to-hell",
     "games/hot-wheels-beat-that",
+    "games/snake-3d",
+    "games/asteroid-escape",
 )
 career_order = (
     "menu/career",

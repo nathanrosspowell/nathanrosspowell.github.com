@@ -111,7 +111,7 @@ So, I'm learning about real world *best practices* for python and also looking i
 
 <a id="solution"></a>
 
-_*if you manage to reverse engineer the code and figure out which problem this is the solution too, SPOILER ALERT, I guess..._
+_*if you manage to reverse engineer the code and figure out which problem this is the solution to, SPOILER ALERT, I guess..._
 
 [sol]: #solution "If you manage to reverse engineer the code and figure out which problem this is the solution too, SPOILER ALERT, I guess..."
 [luah]: http://learnyouahaskell.com/ "Learn You a Haskell for Great Good"

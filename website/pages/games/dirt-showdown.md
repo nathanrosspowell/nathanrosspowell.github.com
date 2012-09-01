@@ -4,7 +4,6 @@ title: DiRT Showdown
 url: games/dirt-showdown
 template: "game.html"
 comments: True
-major: True
 published: May 2012
 release: major
 cover: "png/cover-dirt-showdown.png"

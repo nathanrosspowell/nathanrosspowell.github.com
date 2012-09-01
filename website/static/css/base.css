@@ -412,3 +412,24 @@ img.article {
 #nextandprev .big {
   font-family: 'CorpulentCapsShadowRg';
   font-weight: bold; }
+
+section.releasemajor header div.headline {
+  background-color: red;
+  background-image: -moz-linear-gradient(black, red);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, black), color-stop(1, red));
+  background-image: -webkit-linear-gradient(black, red);
+  background-image: -o-linear-gradient(black, red); }
+
+section.releaseminor header div.headline {
+  background-color: lime;
+  background-image: -moz-linear-gradient(black, lime);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, black), color-stop(1, lime));
+  background-image: -webkit-linear-gradient(black, lime);
+  background-image: -o-linear-gradient(black, lime); }
+
+section.releasenone header div.headline {
+  background-color: blue;
+  background-image: -moz-linear-gradient(black, blue);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, black), color-stop(1, blue));
+  background-image: -webkit-linear-gradient(black, blue);
+  background-image: -o-linear-gradient(black, blue); }

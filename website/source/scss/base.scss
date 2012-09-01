@@ -467,3 +467,20 @@ img.article {
         font-weight: bold;
     }
 }
+
+// Release styles.
+section.releasemajor {
+    header div.headline {
+        @include feature-highest-background();
+    }
+}
+section.releaseminor {
+    header div.headline {
+        @include feature-middle-background();
+    }
+}
+section.releasenone {
+    header div.headline {
+        @include feature-lowest-background();
+    }
+}

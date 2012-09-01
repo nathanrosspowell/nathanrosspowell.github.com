@@ -8,7 +8,7 @@ url: "games/snake-3d"
 template: "game.html"
 comments: True
 published: No
-release: none
+release: minor 
 tags:
 - games
 

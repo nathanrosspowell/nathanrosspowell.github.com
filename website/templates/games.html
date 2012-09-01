@@ -20,22 +20,30 @@
         {% else %}
             <section id="{{ page.named }}"
                 class=
-                {% if page.major %}
-                    "majorrelease"
+                {% if page.release%}
+                    "release{{ page.release }}"
                 {% else %}
-                    "minorrelease"
+                    "releaseminor"
                 {% endif %}
                 >
                     <header>
                         <div class='headline'>
-                            <div class='date'>
-                                {% if page.published %}
-                                    {{ page.published }} 
-                                {% else %}
-                                    Not Released
+                            <div class='comments'>
+                                {% if page.release%}
+                                    {% if page.release is equalto( "major" ) %}
+                                        Major release
+                                    {% elif page.release is equalto( "minor" ) %}
+                                        Minor release
+                                    {% elif page.release is equalto( "none" ) %}
+                                        Unreleased
+                                    {% endif %}
                                 {% endif %}
                             </div>
-                            -
+                            <div class='date'>
+                                {% if page.published %}
+                                    {{ page.published }} -
+                                {% endif %}
+                            </div>
                             <div class='title'>
                                 <a href="{{ page.website}}">{{ page.title|title }}</a>
                             </div>

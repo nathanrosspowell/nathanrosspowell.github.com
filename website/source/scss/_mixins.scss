@@ -37,6 +37,16 @@
     @include linear-gradient( $col-alt-dark, $col-alt );
 }
 
+@mixin feature-highest-background(){
+    @include linear-gradient( $col-feature-highest-dark, $col-feature-highest );
+}
+@mixin feature-middle-background(){
+    @include linear-gradient( $col-feature-middle-dark, $col-feature-middle );
+}
+@mixin feature-lowest-background(){
+    @include linear-gradient( $col-feature-lowest-dark, $col-feature-lowest );
+}
+
 @mixin body-font(){
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", “Liberation Sans”, sans-serif; 
 }

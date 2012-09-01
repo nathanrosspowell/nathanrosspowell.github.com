@@ -21,14 +21,17 @@ Code
             {% else %}
                 <section id="{{ page.named }}"
                     class=
-                    {% if page.major %}
-                        "majorrelease"
+                    {% if page.release%}
+                        "release{{ page.release }}"
                     {% else %}
-                        "minorrelease"
+                        "releaseminor"
                     {% endif %}
                     >
                     <header>
                         <div class='headline'>
+                            <div class='comments'>
+                                {% include "release_info.html" %}
+                            </div>
                             <div class='date'>
                                 {{ page.published }} 
                             </div>

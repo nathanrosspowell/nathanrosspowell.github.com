@@ -13,6 +13,9 @@
                     <a href="#{{ page.named }}">
                         {{ page.title }}
                     </a>
+                    {% if page.release %}
+                        - {% include "release_info.html" %}
+                    {% endif %}
                 </li>
             {% endfor %}
             {% if comments_are_on %}

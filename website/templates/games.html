@@ -29,15 +29,7 @@
                     <header>
                         <div class='headline'>
                             <div class='comments'>
-                                {% if page.release%}
-                                    {% if page.release is equalto( "major" ) %}
-                                        Major release
-                                    {% elif page.release is equalto( "minor" ) %}
-                                        Minor release
-                                    {% elif page.release is equalto( "none" ) %}
-                                        Unreleased
-                                    {% endif %}
-                                {% endif %}
+                                {% include "release_info.html" %}
                             </div>
                             <div class='date'>
                                 {% if page.published %}

@@ -1,0 +1,7 @@
+{% if page.release is equalto( "major" ) %}
+    Major release
+{% elif page.release is equalto( "minor" ) %}
+    Minor release
+{% elif page.release is equalto( "none" ) %}
+    Unreleased
+{% endif %}

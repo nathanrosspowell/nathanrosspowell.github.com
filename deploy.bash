@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env sh
 pushd ~/projects/dev-web
 python freeze.py
 git pull

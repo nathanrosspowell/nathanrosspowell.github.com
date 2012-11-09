@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% import "macro_heading.html" as headings %}
+{% import "macro_media.html" as media %}
 
 {# Calculate if there are comments #}
 {% set comment_page = pages|first %}
@@ -34,7 +35,7 @@
     {% block article_complete%}
     {% endblock article_complete%}
     {% if comments_are_on %}
-        {% include "disqus_comment_thread.js" %}
+        {{ media.disqus_thread( page_id, page_title ) }}
     {% endif %}
 {% endblock yepnope_complete%}
 

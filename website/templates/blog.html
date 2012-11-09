@@ -9,19 +9,10 @@
     {% endblock blog_load %}
 {% endblock yepnope_load %}
 
-{% block yepnope_callback %}
-    {% block blog_callback %}
-    {% endblock blog_callback %}
-{% endblock yepnope_callback %}
-
-{% block yepnope_complete%}
-    {% include"disqus_comment_count_script.js"%}
-    {% block blog_complete%}
-    {% endblock blog_complete%}
-{% endblock yepnope_complete%}
 {% block page_title %}
     Blog
 {% endblock %}
+
 {% block body_nav_extras %}
     <hr/>
     <ul class='navbar' id='blog-nav'>
@@ -141,4 +132,9 @@
         {{ blogroll.html|safe }}
     </article>
     {% endblock blog_content %}
+
+<script>
+    {% include"disqus_comment_count_script.js"%}
+</script>
+
 {% endblock %}

@@ -1,5 +1,15 @@
 {% extends "blog.html" %}
 
+{% import "macro_media.html" as media %}
+
+{% set comment_page = pages|first %}
+{% block page_title %}
+    {{ comment_page.title }}
+{% endblock %}
+
+{% set page_title = comment_page.title %}
+{% set page_id = url_for( "page", page_path=comment_page.path ) %}
+
 {% block blog_load %}
     "spritecss" : "{{ url_for(".static", filename="css/sprite.css") }}",
     "shareholicjs" : "{{ url_for(".static", filename="js/shareholic.js") }}",
@@ -18,13 +28,8 @@
 {% block blog_complete%}
     {% block blog_post_complete%}
     {% endblock blog_post_complete%}
-    {% include "disqus_comment_thread.js" %}
+    {{ media.disqus_thread( page_id, page_title ) }}
 {% endblock blog_complete%}
-
-{% set comment_page = pages|first %}
-{% block page_title %}
-    {{ comment_page.title }}
-{% endblock %}
 
 {% block blog_content %}
     <article id="nextandprev">
@@ -111,8 +116,6 @@
     </article>
 
     <article id="comments">
-            {% set page_title = page.title %}
-            {% set page_id = url_for( "page", page_path=page.path ) %}
         {% call headings.article() %}
             Comments for "{{ page_title|title }}"
         {% endcall %}

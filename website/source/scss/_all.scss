@@ -13,6 +13,28 @@ $useIEFilters: 0; // might be 0 or 1. disabled by default.
   border-radius: $values;
 }
 
+@mixin border-left-radius ($values) {
+  -moz-border-top-left-radius: $values;
+  -moz-border-bottom-left-radius: $values;
+  -webkit-border-top-left-radius: $values;
+  -webkit-border-bottom-left-radius: $values;
+  -o-border-top-left-radius: $values;
+  -o-border-bottom-left-radius: $values;
+  border-top-left-radius: $values;
+  border-bottom-left-radius: $values;
+}
+
+@mixin border-right-radius ($values) {
+  -moz-border-top-right-radius: $values;
+  -moz-border-bottom-right-radius: $values;
+  -webkit-border-top-right-radius: $values;
+  -webkit-border-bottom-right-radius: $values;
+  -o-border-top-right-radius: $values;
+  -o-border-bottom-right-radius: $values;
+  border-top-right-radius: $values;
+  border-bottom-right-radius: $values;
+}
+
 @mixin box-shadow ($x, $y, $offset, $hex, $ie: $useIEFilters) {
   -moz-box-shadow: $x $y $offset $hex;
   -o-box-shadow: $x $y $offset $hex;
@@ -26,6 +48,18 @@ $useIEFilters: 0; // might be 0 or 1. disabled by default.
   }
 }
 
+@mixin box-shadow-spread ($x, $y, $offset, $spread, $hex, $ie: $useIEFilters) {
+  -moz-box-shadow: $x $y $offset $spread $hex;
+  -o-box-shadow: $x $y $offset $spread $hex;
+  -webkit-box-shadow: $x $y $offset $spread $hex;
+  box-shadow: $x $y $offset $spread $hex;
+  
+  @if $ie == 1 {
+    $iecolor: '#' + red($hex) + green($hex) + blue($hex);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=#{$x}, OffY=#{$y}, Color='#{$iecolor}');
+    -ms-filter: quote(progid:DXImageTransform.Microsoft.dropshadow(OffX=#{$x}, OffY=#{$y}, Color='#{$iecolor}'));
+  }
+}
 @mixin linear-gradient($from, $to, $ie: $useIEFilters) {
   @if $ie != 1 {
     background-color: $to;

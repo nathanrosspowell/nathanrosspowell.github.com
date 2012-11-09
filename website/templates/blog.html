@@ -22,8 +22,8 @@
 {% block page_title %}
     Blog
 {% endblock %}
-{% block content %}
-
+{% block body_nav_extras %}
+    <hr/>
     <ul class='navbar' id='blog-nav'>
         <li>
             <a class="toplevel" href="{{ url_for( "blog_tags" ) }}">Top Tags</a>
@@ -87,6 +87,8 @@
         </li>
     </ul>
 
+{% endblock body_nav_extras %}
+{% block content %}
     {% block blog_content %}
 
     <article id="blogs">

@@ -1,23 +1,25 @@
-$col-text: #dcdccc;
-$col-text-dark: #C4BEA9;
-$col-background: #240605;
+$s-darken: 13%;
+$s-lighten: 13%;
+
+$col-background: #41363C;
 $col-background-alpha: 0.85;
-$col-flavor: #A079B0;
-$col-flavor-dark: #724D82;
-$col-text-link: lighten( $col-flavor, 13% );
+
+$col-text: #dcdccc;
+$col-text-dark: #FFF;//darken( $col-text, 20% );
+$col-text-dark: $col-background; 
+
+$col-flavor: #8CD0D3;
+$col-flavor-dark: darken( $col-flavor, $s-darken );
+$col-text-link: lighten( $col-flavor, $s-lighten );
 
 $col-alt: #B079A5;
-$col-alt-dark: #75506E;
+$col-alt-dark: darken( $col-alt, $s-darken );
 
-$col-rss: #D1745A;
-$col-rss-dark: #A3472e;
+$col-feature-highest: #FFCFAF;
+$col-feature-highest-dark: darken( $col-feature-highest, $s-darken );
 
-$col-rss: #d98b3c;
-$col-rss-dark: #e1a467;
+$col-feature-middle: #DCA3A3;
+$col-feature-middle-dark: darken( $col-feature-middle, $s-darken );
 
-$col-feature-highest: #981BE0;
-$col-feature-highest-dark: #000;
-$col-feature-middle: #0F0;
-$col-feature-middle-dark: #000;
-$col-feature-lowest: #00F;
-$col-feature-lowest-dark: #000;
+$col-feature-lowest: #EFEF8F;
+$col-feature-lowest-dark: darken( $col-feature-lowest, $s-darken );

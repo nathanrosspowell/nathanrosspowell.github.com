@@ -71,6 +71,8 @@ Modernizr.load({
     <nav>
         {% block body_nav %}
             {% include "nav_bar.html" %}
+            {% block body_nav_extras %}
+            {% endblock body_nav_extras %}
         {% endblock body_nav %}
     </nav>
 </header>

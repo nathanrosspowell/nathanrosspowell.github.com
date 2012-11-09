@@ -77,11 +77,11 @@
 */
 /* slider window - top & bottom borders, active state */
 .anythingSlider-minimalist-round.activeSlider .anythingWindow {
-  border-color: #a079b0; }
+  border-color: #8cd0d3; }
 
 /* Navigation buttons, active state */
 .anythingSlider-minimalist-round.activeSlider .anythingControls a {
-  background-color: #a079b0;
+  background-color: #8cd0d3;
   color: #fff; }
 
 /* Navigation current button, active state */

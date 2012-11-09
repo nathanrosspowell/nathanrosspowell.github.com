@@ -8,7 +8,14 @@
 }
 
 @mixin background-styling( $size : $sz-corners ) {
-    @include border-radius( $size );
+    @include border-right-radius( $size );
+    @include border-left-radius( 0px );
+    @include background-coloring();
+}
+
+@mixin nav-styling( $size : $sz-corners ) {
+    @include border-right-radius( 0px );
+    @include border-left-radius( $size );
     @include background-coloring();
 }
 
@@ -16,10 +23,31 @@
     @include box-shadow( 0, 0, $sz-corners + 5px, $col );
 }
 
+@mixin shadow-right( $col : black ) {
+    $sizer : $sz-corners + 5px;
+    @include box-shadow-spread( $sizer * 2, 0, $sizer, -$sizer, $col );
+}
+
 @mixin main-spacer( $vertMargin ) {
     @include clear-spacer( $vertMargin );
     @include background-styling();
     @include shadow();
+}
+
+@mixin header-style() {
+    @include background-coloring();
+    @include shadow();
+}
+
+@mixin footer-style() {
+    @include background-coloring();
+    @include shadow();
+    left:0;
+    right:0;
+}
+
+@mixin header-spacer() {
+    position: relative;
 }
 
 @mixin complex-box-shadow( $one, $two, $three ) {

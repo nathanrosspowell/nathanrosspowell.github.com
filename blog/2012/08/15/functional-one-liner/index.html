@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+        
+    NRP -
+    
+    Functional One Liner
+
+
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    
+    <meta content='Webpage' name='description' />
+    <meta content='Nathan Ross Powell' name='author' />
+
+
+    
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+    
+    
+    <link rel="stylesheet" href="/static/css/base.css"/>
+    <script src="/static/js/modernizr-2.6.1.min.js"></script>
+
+    
+    
+
+    
+    
+    <script>
+//<![CDATA[
+<!--
+Modernizr.load({
+    load : {
+        
+            'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
+        
+        
+    "codehilitecss" : "/static/css/codehilite.css", 
+    
+    "spritecss" : "/static/css/sprite.css",
+    "shareholicjs" : "/static/js/shareholic.js",
+    
+    
+
+
+    },
+    callback : {
+        
+    
+    'shareholicjs' : function(url, result, key){        
+        (function() {
+var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;
+sb.src = ("https:" == document.location.protocol ? "https://dtym7iokkjlif.cloudfront.net" : "http://cdn.shareaholic.com") + "/media/js/jquery.shareaholic-publishers-sb.min.js";
+var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb, s);
+})();
+
+    }, 
+    
+    
+
+
+    },
+    complete : function() {
+        
+            if ( !window.jQuery ) {
+                Modernizr.load('js/libs/jquery-1.7.1.min.js');
+            }
+        
+        
+    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+    
+    
+    
+    var disqus_shortname = 'nathanrosspowell';
+var disqus_url = "http://www.nathanrosspowell.com";
+var disqus_identifier = "";
+var disqus_title = "";
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+
+
+        var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33462621-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+    }
+});
+//-->
+//]]>
+    </script>
+
+
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    
+<header>
+    <hgroup>
+        <h1>
+            <a href="/">
+                nathanrosspowell.com
+            </a>
+        </h1>
+        <h4>
+            
+                 "In one of the many places you're not, I am."
+            
+        </h4>
+    </hgroup>
+    <!--[if IE]>
+		<div id="IEalert">
+            You're using Internet Explorer. I don't test for that. If something's broken, feel free to get
+            <a href="http://www.google.com/chrome">Google Chrome</a>.
+		</div>
+    <![endif]-->
+    <nav>
+        
+            
+<ul class='navbar'>
+    
+        <li>
+            <a href="/blog/"
+                title="Blog"
+            >
+                Blog
+            </a>
+        </li>
+    
+        <li>
+            <a href="/code/"
+                title="Code"
+            >
+                Code
+            </a>
+        </li>
+    
+        <li>
+            <a href="/games/"
+                title="Games"
+            >
+                Games
+            </a>
+        </li>
+    
+        <li>
+            <a href="/career/"
+                title="Career"
+            >
+                Career
+            </a>
+        </li>
+    
+        <li>
+            <a href="/connect/"
+                title="Connect"
+            >
+                Connect
+            </a>
+        </li>
+    
+</ul>
+            
+    <hr/>
+    <ul class='navbar' id='blog-nav'>
+        <li>
+            <a class="toplevel" href="/blog/tag/">Top Tags</a>
+            <ul>
+                
+                
+                
+                
+    <li id="python"
+        
+    >
+        
+        <a href="/blog/tag/python/#blog-nav"
+            title="Blog filter for: python"
+        >
+            python:  2
+        </a> 
+    </li>
+
+    <li id="project-euler"
+        
+    >
+        
+        <a href="/blog/tag/project-euler/#blog-nav"
+            title="Blog filter for: project-euler"
+        >
+            project-euler:  2
+        </a> 
+    </li>
+
+    <li id="c++"
+        
+    >
+        
+        <a href="/blog/tag/c%2B%2B/#blog-nav"
+            title="Blog filter for: c++"
+        >
+            c++:  2
+        </a> 
+    </li>
+
+    <li id="picture"
+        
+    >
+        
+        <a href="/blog/tag/picture/#blog-nav"
+            title="Blog filter for: picture"
+        >
+            picture:  1
+        </a> 
+    </li>
+
+    <li id="life"
+        
+    >
+        
+        <a href="/blog/tag/life/#blog-nav"
+            title="Blog filter for: life"
+        >
+            life:  1
+        </a> 
+    </li>
+
+    <li id="code"
+        
+    >
+        
+        <a href="/blog/tag/code/#blog-nav"
+            title="Blog filter for: code"
+        >
+            code:  1
+        </a> 
+    </li>
+
+    <li id="pycast"
+        
+    >
+        
+        <a href="/blog/tag/pycast/#blog-nav"
+            title="Blog filter for: pycast"
+        >
+            pycast:  1
+        </a> 
+    </li>
+
+    <li id="basic"
+        
+    >
+        
+        <a href="/blog/tag/basic/#blog-nav"
+            title="Blog filter for: basic"
+        >
+            basic:  1
+        </a> 
+    </li>
+
+    <li id="programming"
+        
+    >
+        
+        <a href="/blog/tag/programming/#blog-nav"
+            title="Blog filter for: programming"
+        >
+            programming:  1
+        </a> 
+    </li>
+
+    <li id="functional"
+        
+    >
+        
+        <a href="/blog/tag/functional/#blog-nav"
+            title="Blog filter for: functional"
+        >
+            functional:  1
+        </a> 
+    </li>
+
+    <li id="ubisoft"
+        
+    >
+        
+        <a href="/blog/tag/ubisoft/#blog-nav"
+            title="Blog filter for: ubisoft"
+        >
+            ubisoft:  1
+        </a> 
+    </li>
+
+    <li id="montreal"
+        
+    >
+        
+        <a href="/blog/tag/montreal/#blog-nav"
+            title="Blog filter for: montreal"
+        >
+            montreal:  1
+        </a> 
+    </li>
+
+    <li id="linux"
+        
+    >
+        
+        <a href="/blog/tag/linux/#blog-nav"
+            title="Blog filter for: linux"
+        >
+            linux:  1
+        </a> 
+    </li>
+
+    <li id="test"
+        
+    >
+        
+        <a href="/blog/tag/test/#blog-nav"
+            title="Blog filter for: test"
+        >
+            test:  1
+        </a> 
+    </li>
+
+    <li id="update"
+        
+    >
+        
+        <a href="/blog/tag/update/#blog-nav"
+            title="Blog filter for: update"
+        >
+            update:  1
+        </a> 
+    </li>
+
+    <li id="gui"
+        
+    >
+        
+        <a href="/blog/tag/gui/#blog-nav"
+            title="Blog filter for: gui"
+        >
+            gui:  1
+        </a> 
+    </li>
+
+    <li id="bash"
+        
+    >
+        
+        <a href="/blog/tag/bash/#blog-nav"
+            title="Blog filter for: bash"
+        >
+            bash:  1
+        </a> 
+    </li>
+
+                <li>
+                <a href="/blog/tag/" title="See more tags">More...</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toplevel" href="/blog/tag/">All Tags</a>
+            <ul>
+                
+                
+                
+                
+    <li id="bash"
+        
+    >
+        
+        <a href="/blog/tag/bash/#blog-nav"
+            title="Blog filter for: bash"
+        >
+            bash:  1
+        </a> 
+    </li>
+
+    <li id="basic"
+        
+    >
+        
+        <a href="/blog/tag/basic/#blog-nav"
+            title="Blog filter for: basic"
+        >
+            basic:  1
+        </a> 
+    </li>
+
+    <li id="c++"
+        
+    >
+        
+        <a href="/blog/tag/c%2B%2B/#blog-nav"
+            title="Blog filter for: c++"
+        >
+            c++:  2
+        </a> 
+    </li>
+
+    <li id="code"
+        
+    >
+        
+        <a href="/blog/tag/code/#blog-nav"
+            title="Blog filter for: code"
+        >
+            code:  1
+        </a> 
+    </li>
+
+    <li id="functional"
+        
+    >
+        
+        <a href="/blog/tag/functional/#blog-nav"
+            title="Blog filter for: functional"
+        >
+            functional:  1
+        </a> 
+    </li>
+
+    <li id="gui"
+        
+    >
+        
+        <a href="/blog/tag/gui/#blog-nav"
+            title="Blog filter for: gui"
+        >
+            gui:  1
+        </a> 
+    </li>
+
+    <li id="life"
+        
+    >
+        
+        <a href="/blog/tag/life/#blog-nav"
+            title="Blog filter for: life"
+        >
+            life:  1
+        </a> 
+    </li>
+
+    <li id="linux"
+        
+    >
+        
+        <a href="/blog/tag/linux/#blog-nav"
+            title="Blog filter for: linux"
+        >
+            linux:  1
+        </a> 
+    </li>
+
+    <li id="montreal"
+        
+    >
+        
+        <a href="/blog/tag/montreal/#blog-nav"
+            title="Blog filter for: montreal"
+        >
+            montreal:  1
+        </a> 
+    </li>
+
+    <li id="picture"
+        
+    >
+        
+        <a href="/blog/tag/picture/#blog-nav"
+            title="Blog filter for: picture"
+        >
+            picture:  1
+        </a> 
+    </li>
+
+    <li id="programming"
+        
+    >
+        
+        <a href="/blog/tag/programming/#blog-nav"
+            title="Blog filter for: programming"
+        >
+            programming:  1
+        </a> 
+    </li>
+
+    <li id="project-euler"
+        
+    >
+        
+        <a href="/blog/tag/project-euler/#blog-nav"
+            title="Blog filter for: project-euler"
+        >
+            project-euler:  2
+        </a> 
+    </li>
+
+    <li id="pycast"
+        
+    >
+        
+        <a href="/blog/tag/pycast/#blog-nav"
+            title="Blog filter for: pycast"
+        >
+            pycast:  1
+        </a> 
+    </li>
+
+    <li id="python"
+        
+    >
+        
+        <a href="/blog/tag/python/#blog-nav"
+            title="Blog filter for: python"
+        >
+            python:  2
+        </a> 
+    </li>
+
+    <li id="test"
+        
+    >
+        
+        <a href="/blog/tag/test/#blog-nav"
+            title="Blog filter for: test"
+        >
+            test:  1
+        </a> 
+    </li>
+
+    <li id="ubisoft"
+        
+    >
+        
+        <a href="/blog/tag/ubisoft/#blog-nav"
+            title="Blog filter for: ubisoft"
+        >
+            ubisoft:  1
+        </a> 
+    </li>
+
+    <li id="update"
+        
+    >
+        
+        <a href="/blog/tag/update/#blog-nav"
+            title="Blog filter for: update"
+        >
+            update:  1
+        </a> 
+    </li>
+
+                <li>
+                <a href="/blog/tag/" title="See more tags">More...</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toplevel" href="/blog/archive/">Years</a>
+            <ul>
+                
+                
+                
+                
+    <li id="2012"
+        
+    >
+        
+        <a href="/blog/archive/2012/#blog-nav"
+            title="Blog filter for: 2012"
+        >
+            2012 :  5
+        </a> 
+    </li>
+
+                <li>
+                <a href="/blog/archive/" title="See more tags">More...</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toplevel" href="/blog/archive/">Months</a>
+            <ul>
+                
+                
+                
+                
+    <li id="2012/08"
+        
+    >
+        
+        <a href="/blog/archive/2012/08/#blog-nav"
+            title="Blog filter for: 2012/08"
+        >
+            2012, Aug :  4
+        </a> 
+    </li>
+
+    <li id="2012/07"
+        
+    >
+        
+        <a href="/blog/archive/2012/07/#blog-nav"
+            title="Blog filter for: 2012/07"
+        >
+            2012, Jul :  1
+        </a> 
+    </li>
+
+                <li>
+                <a href="/blog/archive/" title="See more tags">More...</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="toplevel" href="/blog/archive/">Days</a>
+            <ul>
+                
+                
+                
+                
+    <li id="2012/08/15"
+        
+    >
+        
+        <a href="/blog/archive/2012/08/15/#blog-nav"
+            title="Blog filter for: 2012/08/15"
+        >
+            2012, Aug 15th:  1
+        </a> 
+    </li>
+
+    <li id="2012/08/07"
+        
+    >
+        
+        <a href="/blog/archive/2012/08/07/#blog-nav"
+            title="Blog filter for: 2012/08/07"
+        >
+            2012, Aug 7th:  1
+        </a> 
+    </li>
+
+    <li id="2012/08/05"
+        
+    >
+        
+        <a href="/blog/archive/2012/08/05/#blog-nav"
+            title="Blog filter for: 2012/08/05"
+        >
+            2012, Aug 5th:  1
+        </a> 
+    </li>
+
+    <li id="2012/08/04"
+        
+    >
+        
+        <a href="/blog/archive/2012/08/04/#blog-nav"
+            title="Blog filter for: 2012/08/04"
+        >
+            2012, Aug 4th:  1
+        </a> 
+    </li>
+
+    <li id="2012/07/03"
+        
+    >
+        
+        <a href="/blog/archive/2012/07/03/#blog-nav"
+            title="Blog filter for: 2012/07/03"
+        >
+            2012, Jul 3rd:  1
+        </a> 
+    </li>
+
+                <li>
+                <a href="/blog/archive/" title="See more tags">More...</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+        
+    </nav>
+</header>
+
+    <div id='container'>
+        <header></header>
+        <div id='main' role='main'>
+            
+    
+    <article id="nextandprev">
+        <div class="prev">
+            
+                <a href="/blog/2012/08/07/project-euler/" title="Previous Blog">
+                    Project Euler
+                    <span class="big">></span>
+                </a>
+            
+        </div>
+        <div class="next">
+            
+                <span class="big"><</span>
+                No newer blogs
+            
+        </div>
+    </article>
+
+    
+    <article id="functional-one-liner">
+        <header>
+            <div class='headline'>
+                <div class='date'>
+                    2012/08/15
+                </div>
+                <div class='title'>
+                    Functional One Liner
+                </div>
+            </div>
+        </header>
+        <p>I'd like to share a Project Euler solution <a href="#solution" title="If you manage to reverse engineer the code and figure out which problem this is the solution too, SPOILER ALERT, I guess...">(I'll not say which)*</a> that I am particularly fond of. Like all true wonders of code, it is a mighty one liner:</p>
+<div class="codehilite"><pre><span class="nb">reduce</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span> <span class="n">x</span> <span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span> <span class="n">y</span> <span class="p">),</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">reduce</span><span class="p">(</span> <span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">101</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>While I'm still very much a novice with functional programming, I'm using a few tricks that I picked up when I last sat down and tried to <a href="http://learnyouahaskell.com/" title="Learn You a Haskell for Great Good">'Learn <em>me</em> a Haskell'</a> by using a range generator, folds and an ananonymous function.</p>
+<p>I managed to power through a couple of the easier P.E problems a few ahead of my current sticking point, using the python language. It made me want to try and do something a little more <strong>useful</strong> with the language. Enter the last big python <a href="https://gist.github.com/2603334" title="Gist powered by Github">gist</a> I created <code>podcast.py</code> - a crued but configurable mass podcast downloader.</p>
+<h3><a href="https://gist.github.com/2603334#file_podcast.py" title="podcast.py - Gist powered by GitHub"><code>podcast.py</code></a></h3>
+<div class="codehilite"><pre><span class="c"># Snippet from jumbo file podcast.py</span>
+
+<span class="k">def</span> <span class="nf">downloadAll</span><span class="p">(</span> <span class="n">newDict</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">):</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">priority</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">newDict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span> <span class="n">key</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">print</span> <span class="s">&quot;Downloading </span><span class="si">%s</span><span class="s"> from: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">value</span> <span class="p">),</span> <span class="n">key</span> <span class="p">)</span>
+        <span class="n">value</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span> <span class="s">&quot;date&quot;</span> <span class="p">]</span> <span class="p">)</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
+            <span class="n">download</span><span class="p">(</span> <span class="n">item</span><span class="p">[</span> <span class="s">&quot;url&quot;</span> <span class="p">],</span> <span class="n">item</span><span class="p">[</span> <span class="s">&quot;fullFilePath&quot;</span> <span class="p">],</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span> <span class="n">xmlFile</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">):</span>
+    <span class="n">settings</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="n">getSettingsAndPriority</span><span class="p">(</span> <span class="n">xmlFile</span> <span class="p">)</span>
+    <span class="n">newFiles</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">settings</span><span class="p">[</span> <span class="s">&quot;feeds&quot;</span> <span class="p">]</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">listNewFiles</span><span class="p">(</span> <span class="n">settings</span><span class="p">[</span> <span class="s">&quot;folder&quot;</span> <span class="p">],</span> <span class="n">value</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="n">new</span> <span class="o">!=</span> <span class="p">[]:</span>
+            <span class="n">newFiles</span><span class="p">[</span> <span class="n">key</span> <span class="p">]</span> <span class="o">=</span> <span class="n">new</span>
+    <span class="k">if</span> <span class="n">newFileStatus</span><span class="p">(</span> <span class="n">newFiles</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">verbose</span> <span class="p">):</span>
+        <span class="n">downloadAll</span><span class="p">(</span> <span class="n">newFiles</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;Usage: &lt;podcast: xml file&gt; &lt;verbose: 1 or 0&gt; &lt;dryrun: 1 or 0&gt;&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">podcastXML</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span> <span class="mi">1</span> <span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">verbose</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span> <span class="mi">2</span> <span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">verbose</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dryRun</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span> <span class="mi">3</span> <span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">dryRun</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">main</span><span class="p">(</span> <span class="n">podcastXML</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>Being very anti-iTunes (due to it being a system resource hog) and failing to find a suitable alternative for 'managing' podcasts I decided to grab the favorite feeds straight from the source and download ALL the things at once. Running the script whenever I booted my computer to get all the latest audio treats for myself to keep.</p>
+<p>An example of my config that powered the script (note the embeded python code used to format the titles!).</p>
+<h3><a href="https://gist.github.com/2603334#file_podcast.xml" title="podcast.xml - Gist powered by GitHub"><code>podcast.xml</code></a></h3>
+<div class="codehilite"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;podcast&gt;</span>
+    <span class="c">&lt;!-- Root folder to download to. --&gt;</span>
+    <span class="nt">&lt;folder</span> <span class="na">value=</span><span class="s">&quot;Z:\Media\Podcast\&quot;</span> <span class="nt">/&gt;</span>
+    <span class="c">&lt;!-- RSS feeds to download, listed highest priority to lowest. </span>
+<span class="c">        Fields to set:</span>
+<span class="c">            name= print out name of the feed </span>
+<span class="c">            folder= sub folder used</span>
+<span class="c">            rss= RSS URI</span>
+<span class="c">        Optional Fields:</span>
+<span class="c">            seperator= &#39;-&#39;</span>
+<span class="c">            space= &#39;_&#39;</span>
+<span class="c">            dateFormat= how the datetime will be displayed</span>
+<span class="c">            nameFormat= tuple for custom file name format: %s+seperator+%s</span>
+<span class="c">                        can use title (string) and dateFormat (string)</span>
+<span class="c">                        e.g &quot;JRE+title, dateFormat</span>
+<span class="c">    --&gt;</span>
+    <span class="nt">&lt;feeds&gt;</span>
+        <span class="nt">&lt;feed</span> <span class="na">name=</span><span class="s">&quot;Lavender Hour&quot;</span> 
+              <span class="na">folder=</span><span class="s">&quot;Lavender Hour&quot;</span> 
+              <span class="na">rss=</span><span class="s">&quot;http://lavenderhour.libsyn.com/rss&quot;</span>
+              <span class="na">nameFormat=</span><span class="s">&quot;dateFormat, title&quot;</span>
+              <span class="na">dateFormat=</span><span class="s">&quot;%Y-%m-%d&quot;</span>
+        <span class="nt">/&gt;</span>
+        <span class="nt">&lt;feed</span> <span class="na">name=</span><span class="s">&quot;Joe Rogan Experience&quot;</span> 
+              <span class="na">folder=</span><span class="s">&quot;JRE&quot;</span> 
+              <span class="na">rss=</span><span class="s">&quot;http://joeroganexp.joerogan.libsynpro.com/irss&quot;</span>
+              <span class="na">nameFormat=</span><span class="s">&quot;title[ title.find(&#39;#&#39;)+1: ], dateFormat&quot;</span>
+        <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/feeds&gt;</span>
+<span class="nt">&lt;/podcast&gt;</span>
+</pre></div>
+
+
+<p>After not looking at the actual script for a good few months I totally forget how I wired it up and <strong>oh my GLOB</strong>... debugging python scripts is about as much fun as ironing wrinkly parts of your body. After a few hours of self.torture I managed to split up core parts of the functionality with the final aim of using the code inside of an actual GUI of some kind. The functionality I'd like would be to pick (or filter) the podcasts that I download instead of just ending up with tens of GBs of files sitting on my NAS.</p>
+<p>So, I'm learning about real world <em>best practices</em> for python and also looking into the Qt/PySide GUI framework. Look out for an operational <a href="https://github.com/nathanrosspowell/pycast">PyCast</a> <s>app</s> program some time soon!</p>
+<p><a id="solution"></a></p>
+<p><em>*if you manage to reverse engineer the code and figure out which problem this is the solution to, SPOILER ALERT, I guess...</em></p>
+        <footer>
+            <em>
+                Written by:
+            </em>
+            <strong>
+                
+                    <a href="/connect/"
+                       title="Contact Nathan Ross Powell" 
+                    >
+                        Nathan Ross Powell
+                    </a>
+                
+            </strong>
+            |
+            <span class='newline'>
+                <em>
+                    Tags:
+                </em>
+                
+                    <a class='tags'
+                        href="/blog/tag/project-euler/"
+                        title="Blog filter for: project-euler"
+                    >
+                    project-euler</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/python/"
+                        title="Blog filter for: python"
+                    >
+                    python</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/gui/"
+                        title="Blog filter for: gui"
+                    >
+                    gui</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/functional/"
+                        title="Blog filter for: functional"
+                    >
+                    functional</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/programming/"
+                        title="Blog filter for: programming"
+                    >
+                    programming</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/pycast/"
+                        title="Blog filter for: pycast"
+                    >
+                    pycast</a>
+                
+            </span>
+            |
+            <span class="markdown">
+                <a href="http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2012/08/15/functional-one-liner.md" title="Go to GitHub source">View markdown on GitHub</a>
+            </span>
+        </footer>
+    </article>
+    <article id="bookmarks">
+            
+            
+        <header>
+        <div class='headline'>
+            <div class='title'>
+                
+            Share "Functional One Liner"
+        
+            </div>
+        </div>
+    </header>
+        <div class="shr_class shareaholic-show-on-load" > </div>
+    </article>
+
+    <article id="comments">
+            
+            
+        <header>
+        <div class='headline'>
+            <div class='title'>
+                
+            Comments for "Functional One Liner"
+        
+            </div>
+        </div>
+    </header>
+        <div id="disqus_thread"></div>
+    </article>
+
+
+        </div>
+        <footer></footer>
+    </div>
+    <aside>
+    </aside>
+    
+    
+    
+    
+<!-- js here -->
+<!-- :javascript -->
+    
+<!--[if lt IE 7 ]>
+<script src="/?filename=js%2Fdd_belatedpng.js"></script>
+<script type='text/javascript'>
+// <![CDATA[
+        <script> DD_belatedPNG.fix('img, .png_bg');</script>
+// ]]>
+</script>
+<![endif]-->
+
+
+<footer>
+    <section id="bioshort">
+        <h1>
+            Nathan Ross Powell Bio
+        </h1>
+        <p>I am a <a href="http://nathanrosspowell.com/career" title="Nathan's Career">computer programmer</a> who makes a living working on <a href="http://nathanrosspowell.com/games" title="Nathan's Games">video games</a> which happens to be a very nice job. </p>
+        <div class="iconlist">
+            
+
+
+    <ul class="icons">
+        
+            
+            <li>
+                <a class="icon"
+                   href="http://feeds.feedburner.com/nathanrosspowell" 
+                   title="Feedburner"
+                >
+                    <img class="icon" src="/static/png/rss.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="http://linkedin.com/in/nathanrosspowell" 
+                   title="LinkedIN"
+                >
+                    <img class="icon" src="/static/png/linkedin.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="http://zerply.com/nathanrosspowell" 
+                   title="Zerply"
+                >
+                    <img class="icon" src="/static/png/zerply.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="http://github.com/nathanrosspowell" 
+                   title="GitHub"
+                >
+                    <img class="icon" src="/static/png/github.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="skype:nathanrosspowell?call" 
+                   title="Skype"
+                >
+                    <img class="icon" src="/static/png/skype.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="http://last.fm/user/partyboypowell" 
+                   title="Last.fm"
+                >
+                    <img class="icon" src="/static/png/last-fm.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="http://twitter.com/nathanross" 
+                   title="Twitter"
+                >
+                    <img class="icon" src="/static/png/twitter.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="http://facebook.com/nathanrosspowell" 
+                   title="Facebook"
+                >
+                    <img class="icon" src="/static/png/facebook.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="https://plus.google.com/u/0/117956868987272677661" 
+                   title="Google+"
+                >
+                    <img class="icon" src="/static/png/google%2B.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="https://vimeo.com/nathanrosspowell" 
+                   title="Vimeo"
+                >
+                    <img class="icon" src="/static/png/vimeo.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="http://www.youtube.com/user/nathanrosspowell" 
+                   title="Youtube"
+                >
+                    <img class="icon" src="/static/png/youtube.png" />
+                </a>
+            </li>
+        
+            
+            <li>
+                <a class="icon"
+                   href="http://www.flickr.com/photos/nathanrosspowell/" 
+                   title="Flickr"
+                >
+                    <img class="icon" src="/static/png/flickr.png" />
+                </a>
+            </li>
+        
+    </ul>
+
+        </div>
+    </section>
+    <section id="copyright" class='copyright'>
+        
+        <p id="udpdated">
+            This website was last statically updated: 2012, Nov 8th at 23:36:01 EDT which is 03:36:01 UTC/GMT.
+        </p>
+        <hr/>
+        
+        <p>
+            <p>Copyright ©2012 - <a href="http://nathanrosspowell.com" title="Home">nathanrosspowell.com</a> - All Rights Reserved - <a href="http://nathanrosspowell.com/credits" title="Nathan's credits">Credits</a>.</p>
+        </p>
+    </section>
+</footer>
+
+
+</body>
+</html>

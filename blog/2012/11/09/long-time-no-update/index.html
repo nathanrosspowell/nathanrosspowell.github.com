@@ -10,7 +10,7 @@
         
     NRP -
     
-    Blog
+    Long time no update
 
 
     </title>
@@ -45,13 +45,27 @@ Modernizr.load({
         
     "codehilitecss" : "/static/css/codehilite.css", 
     
+    "spritecss" : "/static/css/sprite.css",
+    "shareholicjs" : "/static/js/shareholic.js",
     
+    
+
 
     },
     callback : {
         
     
+    'shareholicjs' : function(url, result, key){        
+        (function() {
+var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;
+sb.src = ("https:" == document.location.protocol ? "https://dtym7iokkjlif.cloudfront.net" : "http://cdn.shareaholic.com") + "/media/js/jquery.shareaholic-publishers-sb.min.js";
+var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb, s);
+})();
+
+    }, 
     
+    
+
 
     },
     complete : function() {
@@ -63,6 +77,18 @@ Modernizr.load({
         
     
     
+    
+    var disqus_shortname = 'nathanrosspowell';
+var disqus_url = "http://www.nathanrosspowell.com/blog/2012/11/09/long-time-no-update/";
+var disqus_identifier = "/blog/2012/11/09/long-time-no-update/";
+var disqus_title = "Long time no update";
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+//    DOOOOOOOOOOOOOOOOBERRRRRR
+
 
         var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-33462621-1']);
@@ -733,71 +759,109 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <div id='main' role='main'>
             
     
-
-    <article id="blogs">
-        
-        <header>
-        <div class='headline'>
-            <div class='title'>
-                
+    <article id="nextandprev">
+        <div class="prev">
             
-                Blogs Tagged: basic
+                <a href="/blog/2012/08/15/functional-one-liner/" title="Previous Blog">
+                    Functional One Liner
+                    <span class="big">></span>
+                </a>
             
-        
-            </div>
         </div>
-    </header>
+        <div class="next">
+            
+                <span class="big"><</span>
+                No newer blogs
+            
+        </div>
+    </article>
 
     
-        <section id="syntax-highlight-test">
-            <header>
-                <div class='headline'>
-                    <div class='comments'>
-                        <a href="http://nathanrosspowell.com/blog/2012/08/04/syntax-highlight-test/#disqus_thread"
-    data-disqus-identifier="/blog/2012/08/04/syntax-highlight-test/">
-    Loading...
-</a>
-                    </div>
-                    <div class='date'>
-                        2012/08/04 - 
-                    </div>
-                    <div class='title'>
-                        Syntax Highlight Test
-                    </div>
+    <article id="long-time-no-update">
+        <header>
+            <div class='headline'>
+                <div class='date'>
+                    2012/11/09
                 </div>
-            </header>
+                <div class='title'>
+                    Long Time No Update
+                </div>
+            </div>
+        </header>
+        <p>Well the website fell away to rot for a bit... Other things were more important, but today I finished a pass on making it nice and shiny again!</p>
+<p>Some effort has gone into fixing the litter errors that crept in last time I tried to optimise the Javascript execution on the pages.
+Along with that and a small redesign and palette change we end up here, with what you see before you.</p>
+<p>Code wise I have been working on a Linux based SDL powered 'game engine'. 
+A typical task for most programmers, and I'm falling into the classic gotchas of over engineering things yadda yadda - end of the day, it's fun.
+This is currently in one of my private githuv repros, but it will surface as soon as some kind of tech demo is working.</p>
+<p>As usual I'm updating my site as a gust of enthusiasm has taken over me. Not sure how long it will last.</p>
+<p>This post was brough to you by: Beer.</p>
+        <footer>
+            <em>
+                Written by:
+            </em>
+            <strong>
                 
-                    This is the test for code syntax highlighting from markdown source....
-                
-                
-                    <a class='button' href="/blog/2012/08/04/syntax-highlight-test/" >
-                        Continue Reading
+                    <a href="/connect/"
+                       title="Contact Nathan Ross Powell" 
+                    >
+                        Nathan Ross Powell
                     </a>
                 
-        </section>
-    
+            </strong>
+            |
+            <span class='newline'>
+                <em>
+                    Tags:
+                </em>
+                
+                    <a class='tags'
+                        href="/blog/tag/blog/"
+                        title="Blog filter for: blog"
+                    >
+                    blog</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/update/"
+                        title="Blog filter for: update"
+                    >
+                    update</a>
+                
+            </span>
+            |
+            <span class="markdown">
+                <a href="http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2012/11/09/long-time-no-update.md" title="Go to GitHub source">View markdown on GitHub</a>
+            </span>
+        </footer>
     </article>
-
-    <article id="blogroll">
+    <article id="bookmarks">
+            
+            
         <header>
         <div class='headline'>
             <div class='title'>
                 
-            Other Blogs And Pages
+            Share "Long Time No Update"
         
             </div>
         </div>
     </header>
-        <ul>
-<li><a href="http://elliotpowell.co.uk" title="Brother and Dancer">Elliot Powell</a> - My brother, talented dancer, singer, performer. The <em>Mentalist</em>.</li>
-<li><a href="http://doug-the-body.blogspot.co.uk" title="Fighter and statistician">Chris Douglass</a> - The MMAthlete, pro fighter Chris "The Body" Douglass.</li>
-<li><a href="http://lifeonabike.co.uk" title="Touring cyclist">Ryan Anderson</a> - Touring cyclist and Toon lover.</li>
-<li><a href="http://www.domtaylor.co.uk/" title="PoppaDom">Dom Taylor</a> - Line drawer and shape buster.</li>
-<li><a href="http://poita.org" title="Writes code, makes games">Peter Alexander</a> - Programmer, Mac gamer, <em>D</em> lover.</li>
-<li><a href="http://matt-lacey.com" title="'Dodgy as piss, man!">Matt Lacey</a> - Reggae Reggae Source Control expert.</li>
-</ul>
+        <div class="shr_class shareaholic-show-on-load" > </div>
     </article>
-    
+
+    <article id="comments">
+        <header>
+        <div class='headline'>
+            <div class='title'>
+                
+            Comments for "Long Time No Update"
+        
+            </div>
+        </div>
+    </header>
+        <div id="disqus_thread"></div>
+    </article>
+
 
 <script>
     var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname

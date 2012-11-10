@@ -9,6 +9,17 @@
     {% endblock blog_load %}
 {% endblock yepnope_load %}
 
+
+{% block yepnope_callback %}
+    {% block blog_callback %}
+    {% endblock blog_callback %}
+{% endblock yepnope_callback %}
+
+{% block yepnope_complete %}
+    {% block blog_complete %}
+    {% endblock blog_complete %}
+{% endblock yepnope_complete %}
+
 {% block page_title %}
     Blog
 {% endblock %}

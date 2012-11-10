@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
-  <atom:updated>2012-08-16T00:37:05-04:00</atom:updated>
+  <atom:updated>2012-11-09T21:43:11-04:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -9,6 +9,32 @@
     <atom:email>nathanrosspowell@gmail.com</atom:email>
   </atom:author>
 
+  
+  <atom:entry>
+    <atom:title>Long Time No Update</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2012/11/09/long-time-no-update/</atom:id>
+    <atom:updated>2012-11-09T21:32:21-04:00</atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2012/11/09/long-time-no-update/"/>
+    <atom:summary>Well the website fell away to rot for a bit... Other things were more important, but today I finish a payyyyss on making it nice and shiny again!</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ 
+
+        <p>Well the website fell away to rot for a bit... Other things were more important, but today I finished a pass on making it nice and shiny again!</p>
+<p>Some effort has gone into fixing the litter errors that crept in last time I tried to optimise the Javascript execution on the pages.
+Along with that and a small redesign and palette change we end up here, with what you see before you.</p>
+<p>Code wise I have been working on a Linux based SDL powered 'game engine'. 
+A typical task for most programmers, and I'm falling into the classic gotchas of over engineering things yadda yadda - end of the day, it's fun.
+This is currently in one of my private githuv repros, but it will surface as soon as some kind of tech demo is working.</p>
+<p>As usual I'm updating my site as a gust of enthusiasm has taken over me. Not sure how long it will last.</p>
+<p>This post was brough to you by: Beer.</p>
+        <p><a title="Comments" href="http://nathanrosspowell.com/blog/2012/11/09/long-time-no-update/#disqus_thread">Comments</a></p>
+
+        ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    <atom:category term="update"/>
+    
+  </atom:entry>
   
   <atom:entry>
     <atom:title>Functional One Liner</atom:title>
@@ -20,7 +46,7 @@
         <![CDATA[ 
 
         <p>I'd like to share a Project Euler solution <a href="#solution" title="If you manage to reverse engineer the code and figure out which problem this is the solution too, SPOILER ALERT, I guess...">(I'll not say which)*</a> that I am particularly fond of. Like all true wonders of code, it is a mighty one liner:</p>
-<div class="codehilite"><pre><span class="nb">reduce</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span> <span class="n">x</span> <span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span> <span class="n">y</span> <span class="p">),</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">reduce</span><span class="p">(</span> <span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">101</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+<div class="codehilite"><pre><span class="nb">sum</span><span class="p">(</span> <span class="nb">map</span><span class="p">(</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">reduce</span><span class="p">(</span> <span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">101</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
 

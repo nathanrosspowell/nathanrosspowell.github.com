@@ -19,7 +19,7 @@ tags:
 I'd like to share a Project Euler solution [(I'll not say which)*][sol] that I am particularly fond of. Like all true wonders of code, it is a mighty one liner:
 
     :::python
-    reduce( lambda x, y: int( x ) + int( y ), str( reduce( operator.mul, xrange( 2, 101 ) ) )
+    sum( map( int, str( reduce( operator.mul, xrange( 2, 101 ) ) ) ) )
 
 While I'm still very much a novice with functional programming, I'm using a few tricks that I picked up when I last sat down and tried to ['Learn *me* a Haskell'][luah] by using a range generator, folds and an ananonymous function.
 

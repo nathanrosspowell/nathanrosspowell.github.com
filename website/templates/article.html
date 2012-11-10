@@ -62,7 +62,7 @@
         {% if comments_are_on %}
             <article id="bookmarks">
                 {% call headings.article() %}
-                    Share "{{ page_title|title }}"
+                    Share '{{ page_title|title }}'
                 {% endcall %}
                 {% include "bookmarks_html.html" %}
             </article>
@@ -73,7 +73,7 @@
         {% if comments_are_on %}
             <article id="comments">
                 {% call headings.article() %}
-                    Comments for "{{ page_title|title }}"
+                    Comments for '{{ page_title|title }}'
                 {% endcall %}
                 {% include "disqus_comment_thread.html" %}
             </article>

@@ -29,7 +29,6 @@
     {% block blog_post_complete%}
     {% endblock blog_post_complete%}
     {{ media.disqus_thread( page_id, page_title ) }}
-//    DOOOOOOOOOOOOOOOOBERRRRRR
 {% endblock blog_complete%}
 
 {% block blog_content %}
@@ -72,6 +71,7 @@
         </header>
         {{ page.html|safe }}
         <footer>
+            <hr/>
             <em>
                 Written by:
             </em>
@@ -86,7 +86,7 @@
                     </a>
                 {% endif %}
             </strong>
-            |
+            <br/> 
             <span class='newline'>
                 <em>
                     Tags:
@@ -111,14 +111,14 @@
             {% set page_title = page.title %}
             {% set page_id = url_for( "page", page_path=page.path ) %}
         {% call headings.article() %}
-            Share "{{ page_title|title }}"
+            Share '{{ page_title|title }}'
         {% endcall %}
         {% include "bookmarks_html.html" %}
     </article>
 
     <article id="comments">
         {% call headings.article() %}
-            Comments for "{{ page_title|title }}"
+            Comments for '{{ page_title|title }}'
         {% endcall %}
         {% include "disqus_comment_thread.html" %}
     </article>

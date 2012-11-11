@@ -445,7 +445,7 @@ var disqus_title = "Asteroid Escape";
     <section id="copyright" class='copyright'>
         
         <p id="udpdated">
-            This website was last statically updated: 2012, Nov 10th at 20:40:41 EDT which is 00:40:41 UTC/GMT.
+            This website was last statically updated: 2012, Nov 10th at 21:17:22 EDT which is 01:17:22 UTC/GMT.
         </p>
         <hr/>
         
@@ -461,7 +461,14 @@ var disqus_title = "Asteroid Escape";
 //<![CDATA[
 <!--
     
-    
+    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+
     var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-33462621-1']);
 _gaq.push(['_trackPageview']);

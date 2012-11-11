@@ -80,3 +80,7 @@
         {% endif %}
     {% endblock article_comments %}
 {% endblock %}
+
+{% block end_scripts %}
+    {% include"disqus_comment_count_script.js"%}
+{% endblock end_scripts %}

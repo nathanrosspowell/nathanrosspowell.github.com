@@ -1,5 +1,3 @@
-{% macro disqus_thread( page_id, page_title ) -%}
-
 var disqus_shortname = 'nathanrosspowell';
 var disqus_url = "http://www.nathanrosspowell.com{{ page_id }}";
 var disqus_identifier = "{{ page_id }}";
@@ -9,5 +7,3 @@ var disqus_title = "{{ page_title }}";
     dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
-
-{%- endmacro %}

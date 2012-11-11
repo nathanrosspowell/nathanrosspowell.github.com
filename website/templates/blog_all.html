@@ -16,6 +16,7 @@
             </header>
                 {{ page.html|safe }}
                 {% if page.url %}
+                    <hr/>
                     <p>
                         {% include "disqus_comment_count.html" %}
                     </p>

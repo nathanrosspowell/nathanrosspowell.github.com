@@ -26,12 +26,12 @@ flash
 #-----------------------------------------------------------------------------
 # Markdown set up.
 Markdown(app)
-
 #-----------------------------------------------------------------------------
-Markdown(app)
+# Set up. 
+blogs_per_page = 5
+sub_menu_max = 8
 #-----------------------------------------------------------------------------
 # Global template names
-blogs_per_page = 5
 article_html = "article.html"
 blog_html = "blog.html"
 blog_all_html = "blog_all.html"
@@ -271,7 +271,7 @@ def code_kwargs( page_path, page ):
 
 def blog_kwargs( page_path, page ):
     kwargs = {}
-    blogs = [ post for post in latest_pages( ( 0, blogs_per_page ), directory(), "blog" ) ]
+    blogs = [ post for post in all_pages( directory(), "blog" ) ]
     length = len( blogs )
     index = -1
     for blog in blogs:
@@ -326,7 +326,7 @@ def blog( template = blog_html,
     else:
         blogs = [ post for post in latest_pages( ( 0, blogs_per_page ), directory(), "blog" ) ]
     blogroll = pages.get_or_404( "menu/blogroll" )
-    take_n = 20
+    take_n = sub_menu_max
     all_tags = get_tags( take_n = take_n )
     top_tags = get_tags( freq_sort = True, take_n = take_n )
     arc_years = get_archive( specific = "years", take_n = take_n )

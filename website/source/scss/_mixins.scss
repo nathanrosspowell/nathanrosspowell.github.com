@@ -1,5 +1,5 @@
 @mixin clear-spacer( $vertMargin ) {
-    margin: $vertMargin $sz-margin $sz-margin $sz-margin;
+    margin: $vertMargin 0px $sz-margin 0px;
     padding: $sz-pad $sz-pad $sz-pad $sz-pad;
 }
 

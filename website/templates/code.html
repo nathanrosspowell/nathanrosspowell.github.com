@@ -43,7 +43,7 @@ Code
                                 -
                             {% endif %}
                             <div class='title'>
-                                <a href="{{ page.website}}">{{ page.title|title }}</a>
+                                <a href="{{ url}}">{{ page.title|title }}</a>
                             </div>
                         </div>
                     </header>
@@ -53,16 +53,18 @@ Code
                         </a>
                     </div-->
                     {{ page.short }}
-                    <p>
-                        <a class='button' 
-                            href="{{ url }}"
-                           title="Videos, pictures and full summary"
-                        >
-                            Full Details
-                        </a>
-                    </p>
+                    {% if page.comments %}
+                        <hr/>
+                        <p>
+                            {% include "disqus_comment_count.html" %}
+                        </p>
+                    {% endif %}
                 </section>
             {% endif %}
         {% endfor %}
     </article>
 {% endblock %}
+
+{% block end_scripts %}
+    {% include"disqus_comment_count_script.js"%}
+{% endblock end_scripts %}

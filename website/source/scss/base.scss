@@ -114,32 +114,32 @@ hgroup h1 a:hover {
 
 /* Navigation */
 nav {
-    //margin-bottom: 1.5cm;
     float: left;
     clear: left;
     display: block;
-    width: 190px;
-    @include header-spacer();
-
+    width: $c-tab-width;
+    hr {
+        position:relative;
+        top: -$sz-nav-spacer;
+    }
 }
 
 .navbar {
-    margin-bottom: $sz-nav-spacer;
     white-space: nowrap;
     list-style-type: none;
-    margin: 0px $sz-margin 0px $sz-margin;
     padding: 0 0 0 0;
 }
 .navbar li {
     margin-bottom: $sz-nav-spacer;
     @include nav-styling();
     @include shadow();
-    //display: inline-block;
-    width: $c-tab-width ;
+    width: $c-tab-width;
     height: $sz-tab ;
     @include title-font();
     font-size: 175%;
     text-align:center;
+    position:relative;
+    top: -$sz-nav-spacer;
 }
 .navbar a {
     width: $c-tab-width;
@@ -148,16 +148,17 @@ nav {
 }
 
 .navbar ul {
-    margin-bottom: $sz-nav-spacer;
+    margin-bottom: $sz-pad;
 }
 
 .navbar ul li {
-    margin-bottom: $sz-nav-spacer;
+    margin-bottom: $sz-pad;
     @include background-styling();
     word-wrap: break-word;
     font-size: 50%;
     @include body-font();
     @include shadow();
+    top: 0px;
 }
 .navbar ul li:first-child {
     margin-top: -$sz-tab;
@@ -191,7 +192,7 @@ nav {
 /******************************************************************/
 /* MAIN */
 #container {
-    margin-left: 190px;
+    margin-left: $c-tab-width + $sz-pad;
     @include header-spacer();
 }
 
@@ -234,6 +235,11 @@ article {
         @include title-font();
         padding-top: 2px;
     }
+}
+
+table tr th header div.headline div.title {
+    display: block;
+    text-align: left;
 }
 
 article.blog header div.headline, section header div.headline {
@@ -340,6 +346,8 @@ blockquote {
 /* FOOTER */
 footer {
     text-align: center;
+}
+footer#Bio {
     section {
         @include footer-style();
     }
@@ -465,6 +473,8 @@ img.article {
 }
 
 #nextandprev {
+    height: 26px ;
+    vertical-align: bottom;
     .next {
         display: inline;
     }

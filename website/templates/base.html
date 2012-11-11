@@ -40,7 +40,6 @@ Modernizr.load({
         {% endblock no_jquery_load2 %}
         {% block yepnope_complete%}
         {% endblock yepnope_complete%}
-        {% include "google_analytics.js" %}
     }
 });
 //-->
@@ -106,8 +105,8 @@ Modernizr.load({
 </script>
 <![endif]-->
 {% endblock body %}
-
-<footer>
+<br/>
+<footer id="Bio">
     <section id="bioshort">
         <h1>
             Nathan Ross Powell Bio
@@ -129,4 +128,17 @@ Modernizr.load({
         </p>
     </section>
 </footer>
+
+
+{% block base_end_scripts %}
+    <script>
+//<![CDATA[
+<!--
+    {% block end_scripts %}
+    {% endblock end_scripts %}
+    {% include "google_analytics.js" %}
+//-->
+//]]>
+    </script>
+{% endblock base_end_scripts %}
 {% endblock html5_body %}

@@ -130,7 +130,7 @@ nav {
     padding: 0 0 0 0;
 }
 .navbar li {
-    margin-bottom: $sz-nav-spacer;
+    margin-bottom: $sz-pad;
     @include nav-styling();
     @include shadow();
     width: $c-tab-width;

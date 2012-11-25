@@ -19,10 +19,9 @@ Along with that and a small redesign and palette change we end up here, with wha
 
 Code wise I have been working on a Linux based SDL powered 'game engine'. 
 A typical task for most programmers, and I'm falling into the classic gotchas of over engineering things yadda yadda - end of the day, it's fun.
-This is currently in one of my private githuv repros, but it will surface as soon as some kind of tech demo is working.
+This is currently in one of my private github repros, but it will surface as soon as some kind of tech demo is working.
 
 As usual I'm updating my site as a gust of enthusiasm has taken over me. Not sure how long it will last.
 
-This post was brough to you by: Beer.
-
+This post was brought to you by: Beer.
 

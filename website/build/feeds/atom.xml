@@ -28,7 +28,10 @@
 
         ]]>
     </atom:content>
-    <atom:category term="blog"/>
+    <atom:category term="website"/>
+    <atom:category term="code"/>
+    <atom:category term="announcement"/>
+    <atom:category term="personal-website"/>
     
   </atom:entry>
   
@@ -53,7 +56,6 @@ This is currently in one of my private github repros, but it will surface as soo
 
         ]]>
     </atom:content>
-    <atom:category term="blog"/>
     <atom:category term="update"/>
     
   </atom:entry>

@@ -8,7 +8,10 @@ url: "blog/2013/02/09/website-maintainance"
 comments: True
 short: "I updated some colours on the website... oh, and finally added the website source to the code section"
 tags:
-- blog
+- website
+- code
+- announcement
+- "personal-website"
 
 I updated some colours on the website... oh, and finally added the [website source][website] to the code section.
 

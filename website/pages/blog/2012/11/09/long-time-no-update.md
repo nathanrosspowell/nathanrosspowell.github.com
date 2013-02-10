@@ -9,7 +9,6 @@ template: "blog_post.html"
 comments: True
 short: "Well the website fell away to rot for a bit... Other things were more important, but today I finish a payyyyss on making it nice and shiny again!"
 tags:
-- blog
 - update
 
 Well the website fell away to rot for a bit... Other things were more important, but today I finished a pass on making it nice and shiny again!

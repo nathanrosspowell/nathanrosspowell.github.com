@@ -10,7 +10,7 @@ short: "I updated some colours on the website... oh, and finally added the websi
 tags:
 - blog
 
-I updated some colours on the website... oh, and finally added the website source to the code section.
+I updated some colours on the website... oh, and finally added the [website source][website] to the code section.
 
 The colours that I picked for the accents where inside the colour pallette I was working from, but looked pretty gross. I changes them up to use only the blues, greens/yellows from the [Zenburn][zenburn] colour scheme which I am in love with for use in a [IDE][ide].
 
@@ -23,3 +23,4 @@ More info to follow!
 
 [zenburn]: http://deletionpedia.dbatley.com/w/index.php?title=Zenburn_%28deleted_28_Apr_2008_at_16:13%29
 [ide]: http://en.wikipedia.org/wiki/Integrated_development_environment
+[website]:http://nathanrosspowell.com/code/personal-website "NRP - Code - Personal Website" 

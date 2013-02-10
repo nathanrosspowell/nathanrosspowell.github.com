@@ -10,7 +10,8 @@
         
     NRP -
     
-    Blog
+    
+    Code - personal website
 
 
     </title>
@@ -31,7 +32,7 @@
 
     
     
-
+    
     
     
     <script>
@@ -43,13 +44,22 @@ Modernizr.load({
             'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
         
         
-    "codehilitecss" : "/static/css/codehilite.css", 
+    "spritecss" : "/static/css/sprite.css",
+    "shareholicjs" : "/static/js/shareholic.js",
     
     
 
     },
     callback : {
         
+    'shareholicjs' : function(url, result, key){        
+        (function() {
+var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;
+sb.src = ("https:" == document.location.protocol ? "https://dtym7iokkjlif.cloudfront.net" : "http://cdn.shareaholic.com") + "/media/js/jquery.shareaholic-publishers-sb.min.js";
+var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb, s);
+})();
+
+    }, 
     
     
 
@@ -62,7 +72,6 @@ Modernizr.load({
         
         
     
-    
     var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
 (function () {
     var s = document.createElement('script'); s.async = true;
@@ -70,6 +79,18 @@ Modernizr.load({
     s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 }());
+
+    
+        var disqus_shortname = 'nathanrosspowell';
+var disqus_url = "http://nathanrosspowell.com/code/personal-website/";
+var disqus_identifier = "/code/personal-website/";
+var disqus_title = "personal website";
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+    
 
     }
 });
@@ -151,357 +172,7 @@ Modernizr.load({
     
 </ul>
             
-    <hr/>
-    <ul class='navbar' id='blog-nav'>
-        <li>
-            <a class="toplevel" href="/blog/tag/">Top Tags</a>
-            <ul>
-                
-                
-                
-                
-    <li id="python"
-        
-    >
-        
-        <a href="/blog/tag/python/#blog-nav"
-            title="Blog filter for: python"
-        >
-            python:  2
-        </a> 
-    </li>
-
-    <li id="update"
-        
-    >
-        
-        <a href="/blog/tag/update/#blog-nav"
-            title="Blog filter for: update"
-        >
-            update:  2
-        </a> 
-    </li>
-
-    <li id="project-euler"
-        
-    >
-        
-        <a href="/blog/tag/project-euler/#blog-nav"
-            title="Blog filter for: project-euler"
-        >
-            project-euler:  2
-        </a> 
-    </li>
-
-    <li id="c++"
-        
-    >
-        
-        <a href="/blog/tag/c%2B%2B/#blog-nav"
-            title="Blog filter for: c++"
-        >
-            c++:  2
-        </a> 
-    </li>
-
-    <li id="picture"
-        
-    >
-        
-        <a href="/blog/tag/picture/#blog-nav"
-            title="Blog filter for: picture"
-        >
-            picture:  1
-        </a> 
-    </li>
-
-    <li id="life"
-        
-    >
-        
-        <a href="/blog/tag/life/#blog-nav"
-            title="Blog filter for: life"
-        >
-            life:  1
-        </a> 
-    </li>
-
-    <li id="code"
-        
-    >
-        
-        <a href="/blog/tag/code/#blog-nav"
-            title="Blog filter for: code"
-        >
-            code:  1
-        </a> 
-    </li>
-
-    <li id="gui"
-        
-    >
-        
-        <a href="/blog/tag/gui/#blog-nav"
-            title="Blog filter for: gui"
-        >
-            gui:  1
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/tag/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li>
-        <!--li>
-            <a class="toplevel" href="/blog/tag/">All Tags</a>
-            <ul>
-                
-                
-                
-                
-    <li id="bash"
-        
-    >
-        
-        <a href="/blog/tag/bash/#blog-nav"
-            title="Blog filter for: bash"
-        >
-            bash:  1
-        </a> 
-    </li>
-
-    <li id="basic"
-        
-    >
-        
-        <a href="/blog/tag/basic/#blog-nav"
-            title="Blog filter for: basic"
-        >
-            basic:  1
-        </a> 
-    </li>
-
-    <li id="blog"
-        
-    >
-        
-        <a href="/blog/tag/blog/#blog-nav"
-            title="Blog filter for: blog"
-        >
-            blog:  1
-        </a> 
-    </li>
-
-    <li id="c++"
-        
-    >
-        
-        <a href="/blog/tag/c%2B%2B/#blog-nav"
-            title="Blog filter for: c++"
-        >
-            c++:  2
-        </a> 
-    </li>
-
-    <li id="code"
-        
-    >
-        
-        <a href="/blog/tag/code/#blog-nav"
-            title="Blog filter for: code"
-        >
-            code:  1
-        </a> 
-    </li>
-
-    <li id="functional"
-        
-    >
-        
-        <a href="/blog/tag/functional/#blog-nav"
-            title="Blog filter for: functional"
-        >
-            functional:  1
-        </a> 
-    </li>
-
-    <li id="gui"
-        
-    >
-        
-        <a href="/blog/tag/gui/#blog-nav"
-            title="Blog filter for: gui"
-        >
-            gui:  1
-        </a> 
-    </li>
-
-    <li id="life"
-        
-    >
-        
-        <a href="/blog/tag/life/#blog-nav"
-            title="Blog filter for: life"
-        >
-            life:  1
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/tag/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li-->
-        <li>
-            <a class="toplevel" href="/blog/archive/">Years</a>
-            <ul>
-                
-                
-                
-                
-    <li id="2012"
-        
-    >
-        
-        <a href="/blog/archive/2012/#blog-nav"
-            title="Blog filter for: 2012"
-        >
-            2012 :  6
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/archive/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a class="toplevel" href="/blog/archive/">Months</a>
-            <ul>
-                
-                
-                
-                
-    <li id="2012/11"
-        
-    >
-        
-        <a href="/blog/archive/2012/11/#blog-nav"
-            title="Blog filter for: 2012/11"
-        >
-            2012, Nov :  1
-        </a> 
-    </li>
-
-    <li id="2012/08"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/#blog-nav"
-            title="Blog filter for: 2012/08"
-        >
-            2012, Aug :  4
-        </a> 
-    </li>
-
-    <li id="2012/07"
-        
-    >
-        
-        <a href="/blog/archive/2012/07/#blog-nav"
-            title="Blog filter for: 2012/07"
-        >
-            2012, Jul :  1
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/archive/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a class="toplevel" href="/blog/archive/">Days</a>
-            <ul>
-                
-                
-                
-                
-    <li id="2012/11/09"
-        
-    >
-        
-        <a href="/blog/archive/2012/11/09/#blog-nav"
-            title="Blog filter for: 2012/11/09"
-        >
-            2012, Nov 9th:  1
-        </a> 
-    </li>
-
-    <li id="2012/08/15"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/15/#blog-nav"
-            title="Blog filter for: 2012/08/15"
-        >
-            2012, Aug 15th:  1
-        </a> 
-    </li>
-
-    <li id="2012/08/07"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/07/#blog-nav"
-            title="Blog filter for: 2012/08/07"
-        >
-            2012, Aug 7th:  1
-        </a> 
-    </li>
-
-    <li id="2012/08/05"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/05/#blog-nav"
-            title="Blog filter for: 2012/08/05"
-        >
-            2012, Aug 5th:  1
-        </a> 
-    </li>
-
-    <li id="2012/08/04"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/04/#blog-nav"
-            title="Blog filter for: 2012/08/04"
-        >
-            2012, Aug 4th:  1
-        </a> 
-    </li>
-
-    <li id="2012/07/03"
-        
-    >
-        
-        <a href="/blog/archive/2012/07/03/#blog-nav"
-            title="Blog filter for: 2012/07/03"
-        >
-            2012, Jul 3rd:  1
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/archive/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-
+            
         
     </nav>
 </header>
@@ -512,68 +183,83 @@ Modernizr.load({
             
     
 
-    <article id="blogs">
-        
+
+
+    
+    
+
+    
+    
+        <article id="personal-website">
         <header>
         <div class='headline'>
             <div class='title'>
                 
-            
-                Blogs From: 2012/08/05
-            
+            Personal Website
         
             </div>
         </div>
     </header>
+        <p>This is the source for the second personal website that I wrote from scratch, but the very first that made it online. Previously I had played with the Django web framework. While Django is very powerful, it was a bit much for my usage. </p>
+<p>After learning of the Jekyll software which serves up static websites I looked for a python equivalent (as that is something I am comfortable with) and found the Frozen Flask app for the Flask framework. The rest is, as they say, history.</p>
 
-    
-        <section id="hello-montral-hello-ubisoft">
-            <header>
-                <div class='headline'>
-                    <div class='comments'>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/#disqus_thread">
-    Loading...
-</a>
-                    </div>
-                    <div class='date'>
-                        2012/08/05 - 
-                    </div>
-                    <div class='title'>
-                        Hello, Montreal. Hello, Ubisoft!
-                    </div>
-                </div>
-            </header>
-                
-                    Preperation for my latest &#39;first day&#39; as I start work for Ubisoft Montréal...
-                
-                
-                    <a class='button' href="/blog/2012/08/05/hello-montral-hello-ubisoft/" >
-                        Continue Reading
-                    </a>
-                
-        </section>
-    
+        
+            <p>
+            Below is the <a href="https://raw.github.com/nathanrosspowell/nathanrosspowell.github.com/dev/README.md">readme</a> for the <a href ="http://github.com/nathanrosspowell/nathanrosspowell.github.com">project</a>.
+            </p>
+            <hr/>
+            <p>
+                <h1>Project: website</h1>
+<p>Personal website made using Flask and Frozen-Flask.</p>
+<h1>Install</h1>
+<p>Run <code>install.bash</code> to get all of the required software for development.</p>
+<h1>Branches</h1>
+<p>The website is developed in the <code>dev</code> branch. The deployed GitHub Pages source is held in <code>Master</code>.</p>
+            </p>
+        
     </article>
 
-    <article id="blogroll">
-        <header>
+
+     
+    
+    
+
+
+    
+    
+
+    
+        
+            <article id="bookmarks">
+                <header>
         <div class='headline'>
             <div class='title'>
                 
-            Other Blogs And Pages
-        
+                    Share 'Personal Website'
+                
             </div>
         </div>
     </header>
-        <ul>
-<li><a href="http://elliotpowell.co.uk" title="Brother and Dancer">Elliot Powell</a> - My brother, talented dancer, singer, performer. The <em>Mentalist</em>.</li>
-<li><a href="http://doug-the-body.blogspot.co.uk" title="Fighter and statistician">Chris Douglass</a> - The MMAthlete, pro fighter Chris "The Body" Douglass.</li>
-<li><a href="http://lifeonabike.co.uk" title="Touring cyclist">Ryan Anderson</a> - Touring cyclist and Toon lover.</li>
-<li><a href="http://www.domtaylor.co.uk/" title="PoppaDom">Dom Taylor</a> - Line drawer and shape buster.</li>
-<li><a href="http://poita.org" title="Writes code, makes games">Peter Alexander</a> - Programmer, Mac gamer, <em>D</em> lover.</li>
-<li><a href="http://matt-lacey.com" title="'Dodgy as piss, man!">Matt Lacey</a> - Reggae Reggae Source Control expert.</li>
-</ul>
-    </article>
+                <div class="shr_class shareaholic-show-on-load" > </div>
+            </article>
+        
+    
+
+    
+        
+            <article id="comments">
+                <header>
+        <div class='headline'>
+            <div class='title'>
+                
+                    Comments for 'Personal Website'
+                
+            </div>
+        </div>
+    </header>
+                <div id="disqus_thread"></div>
+            </article>
+        
     
 
         </div>

@@ -10,7 +10,7 @@
         
     NRP -
     
-    Blog
+    Website Maintainance
 
 
     </title>
@@ -45,13 +45,27 @@ Modernizr.load({
         
     "codehilitecss" : "/static/css/codehilite.css", 
     
+    "spritecss" : "/static/css/sprite.css",
+    "shareholicjs" : "/static/js/shareholic.js",
     
+    
+
 
     },
     callback : {
         
     
+    'shareholicjs' : function(url, result, key){        
+        (function() {
+var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;
+sb.src = ("https:" == document.location.protocol ? "https://dtym7iokkjlif.cloudfront.net" : "http://cdn.shareaholic.com") + "/media/js/jquery.shareaholic-publishers-sb.min.js";
+var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb, s);
+})();
+
+    }, 
     
+    
+
 
     },
     complete : function() {
@@ -63,6 +77,17 @@ Modernizr.load({
         
     
     
+    
+    var disqus_shortname = 'nathanrosspowell';
+var disqus_url = "http://nathanrosspowell.com/blog/2013/02/09/website-maintainance/";
+var disqus_identifier = "/blog/2013/02/09/website-maintainance/";
+var disqus_title = "Website Maintainance";
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+
     var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
 (function () {
     var s = document.createElement('script'); s.async = true;
@@ -544,70 +569,101 @@ Modernizr.load({
         <div id='main' role='main'>
             
     
-
-    <article id="blogs">
-        
-        <header>
-        <div class='headline'>
-            <div class='title'>
-                
+    <article id="nextandprev">
+        <div class="prev">
             
-                Blogs Tagged: ubisoft
+                <a href="/blog/2012/11/09/long-time-no-update/" title="Previous Blog">
+                    Long Time No Update
+                    <span class="big">></span>
+                </a>
             
-        
-            </div>
         </div>
-    </header>
+        <div class="next">
+            
+                <span class="big"><</span>
+                No newer blogs
+            
+        </div>
+    </article>
 
     
-        <section id="hello-montral-hello-ubisoft">
-            <header>
-                <div class='headline'>
-                    <div class='comments'>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/#disqus_thread">
-    Loading...
-</a>
-                    </div>
-                    <div class='date'>
-                        2012/08/05 - 
-                    </div>
-                    <div class='title'>
-                        Hello, Montreal. Hello, Ubisoft!
-                    </div>
+    <article id="website-maintainance">
+        <header>
+            <div class='headline'>
+                <div class='date'>
+                    2013/02/09
                 </div>
-            </header>
+                <div class='title'>
+                    Website Maintainance
+                </div>
+            </div>
+        </header>
+        <p>I updated some colours on the website... oh, and finally added the website source to the code section.</p>
+<p>The colours that I picked for the accents where inside the colour pallette I was working from, but looked pretty gross. I changes them up to use only the blues, greens/yellows from the <a href="http://deletionpedia.dbatley.com/w/index.php?title=Zenburn_%28deleted_28_Apr_2008_at_16:13%29">Zenburn</a> colour scheme which I am in love with for use in a <a href="http://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>.</p>
+<p>I had thought about changing up the CSS to look a bit more modern, but scew it. I don't really have any kind of eye for these things and the site is perfectly functional. What I have decided on is to try and make a generic 'boilerplate' version of the site I developed along with a better method of deploying changes. Why? <strong>SUPER SECRET HIDDEN ANNOUNCEMENT:</strong> Because I have registered another web domain to present actual games that I will theoretically actually make! I have the code section on this site that will be more weighted to programs, tools, experiments, computer science style stuff etc. then this new website will show off the 'finished' goods.</p>
+<p>More info to follow!</p>
+<p>(Also I will try and integrate some kind of spell checker into my deployment flow...)</p>
+        <footer>
+            <hr/>
+            <em>
+                Written by:
+            </em>
+            <strong>
                 
-                    Preperation for my latest &#39;first day&#39; as I start work for Ubisoft Montréal...
-                
-                
-                    <a class='button' href="/blog/2012/08/05/hello-montral-hello-ubisoft/" >
-                        Continue Reading
+                    <a href="/connect/"
+                       title="Contact Nathan Ross Powell" 
+                    >
+                        Nathan Ross Powell
                     </a>
                 
-        </section>
-    
+            </strong>
+            <br/> 
+            <span class='newline'>
+                <em>
+                    Tags:
+                </em>
+                
+                    <a class='tags'
+                        href="/blog/tag/blog/"
+                        title="Blog filter for: blog"
+                    >
+                    blog</a>
+                
+            </span>
+            |
+            <span class="markdown">
+                <a href="http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2013/02/09/website-maintainance.md" title="Go to GitHub source">View markdown on GitHub</a>
+            </span>
+        </footer>
     </article>
-
-    <article id="blogroll">
+    <article id="bookmarks">
+            
+            
         <header>
         <div class='headline'>
             <div class='title'>
                 
-            Other Blogs And Pages
+            Share 'Website Maintainance'
         
             </div>
         </div>
     </header>
-        <ul>
-<li><a href="http://elliotpowell.co.uk" title="Brother and Dancer">Elliot Powell</a> - My brother, talented dancer, singer, performer. The <em>Mentalist</em>.</li>
-<li><a href="http://doug-the-body.blogspot.co.uk" title="Fighter and statistician">Chris Douglass</a> - The MMAthlete, pro fighter Chris "The Body" Douglass.</li>
-<li><a href="http://lifeonabike.co.uk" title="Touring cyclist">Ryan Anderson</a> - Touring cyclist and Toon lover.</li>
-<li><a href="http://www.domtaylor.co.uk/" title="PoppaDom">Dom Taylor</a> - Line drawer and shape buster.</li>
-<li><a href="http://poita.org" title="Writes code, makes games">Peter Alexander</a> - Programmer, Mac gamer, <em>D</em> lover.</li>
-<li><a href="http://matt-lacey.com" title="'Dodgy as piss, man!">Matt Lacey</a> - Reggae Reggae Source Control expert.</li>
-</ul>
+        <div class="shr_class shareaholic-show-on-load" > </div>
     </article>
-    
+
+    <article id="comments">
+        <header>
+        <div class='headline'>
+            <div class='title'>
+                
+            Comments for 'Website Maintainance'
+        
+            </div>
+        </div>
+    </header>
+        <div id="disqus_thread"></div>
+    </article>
+
 
         </div>
         <footer></footer>

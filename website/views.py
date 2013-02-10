@@ -45,6 +45,7 @@ code_html = "code.html"
 games_html = "games.html"
 code_order = (
     "menu/code",
+    "code/personal-website",
     "code/project-euler",
 )
 games_order = (

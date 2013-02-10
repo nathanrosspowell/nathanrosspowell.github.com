@@ -50,6 +50,7 @@ code_order = (
 )
 games_order = (
     "menu/games",
+    "games/watch_dogs",
     "games/dirt-showdown",
     "games/operation-flashpoint-red-river",
     "games/ferrari-the-race-experience",

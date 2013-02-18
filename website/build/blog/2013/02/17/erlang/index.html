@@ -10,7 +10,7 @@
         
     NRP -
     
-    Blog
+    Erlang
 
 
     </title>
@@ -45,13 +45,27 @@ Modernizr.load({
         
     "codehilitecss" : "/static/css/codehilite.css", 
     
+    "spritecss" : "/static/css/sprite.css",
+    "shareholicjs" : "/static/js/shareholic.js",
     
+    
+
 
     },
     callback : {
         
     
+    'shareholicjs' : function(url, result, key){        
+        (function() {
+var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;
+sb.src = ("https:" == document.location.protocol ? "https://dtym7iokkjlif.cloudfront.net" : "http://cdn.shareaholic.com") + "/media/js/jquery.shareaholic-publishers-sb.min.js";
+var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb, s);
+})();
+
+    }, 
     
+    
+
 
     },
     complete : function() {
@@ -63,6 +77,17 @@ Modernizr.load({
         
     
     
+    
+    var disqus_shortname = 'nathanrosspowell';
+var disqus_url = "http://nathanrosspowell.com/blog/2013/02/17/erlang/";
+var disqus_identifier = "/blog/2013/02/17/erlang/";
+var disqus_title = "Erlang";
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+
     var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
 (function () {
     var s = document.createElement('script'); s.async = true;
@@ -555,148 +580,111 @@ Modernizr.load({
         <div id='main' role='main'>
             
     
+    <article id="nextandprev">
+        <div class="prev">
+            
+                <a href="/blog/2013/02/09/website-maintainance/" title="Previous Blog">
+                    Website Maintainance
+                    <span class="big">></span>
+                </a>
+            
+        </div>
+        <div class="next">
+            
+                <span class="big"><</span>
+                No newer blogs
+            
+        </div>
+    </article>
 
-    <article id="blogs">
-        
+    
+    <article id="erlang">
+        <header>
+            <div class='headline'>
+                <div class='date'>
+                    2013/02/17
+                </div>
+                <div class='title'>
+                    Erlang
+                </div>
+            </div>
+        </header>
+        <p>I was feeling functional, so I added <a href="http://erlang.org">Erlang</a> to the supported functions in my Project Euler codebase. While I have done some functional programming already, there are a few features in Erlang that I have never seem before (atoms, etc).
+I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Erlang For Great Good!</a> which is in the same vein as the Haskell publication.</p>
+<div class="codehilite"><pre><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">e0001</span><span class="p">).</span>
+<span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">start</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+
+<span class="nf">start</span><span class="p">()</span> <span class="o">-&gt;</span>
+    <span class="nv">Result</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="n">sum</span><span class="p">([</span> <span class="nv">X</span> <span class="p">||</span> <span class="nv">X</span> <span class="o">&lt;-</span> <span class="nn">lists</span><span class="p">:</span><span class="n">seq</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">999</span> <span class="p">),</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">3</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">5</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]),</span>
+    <span class="nn">io</span><span class="p">:</span><span class="n">fwrite</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~w</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Result</span><span class="p">]).</span>
+</pre></div>
+        <footer>
+            <hr/>
+            <em>
+                Written by:
+            </em>
+            <strong>
+                
+                    <a href="/connect/"
+                       title="Contact Nathan Ross Powell" 
+                    >
+                        Nathan Ross Powell
+                    </a>
+                
+            </strong>
+            <br/> 
+            <span class='newline'>
+                <em>
+                    Tags:
+                </em>
+                
+                    <a class='tags'
+                        href="/blog/tag/blog/"
+                        title="Blog filter for: blog"
+                    >
+                    blog</a>,
+                
+                    <a class='tags'
+                        href="/blog/tag/project-euler/"
+                        title="Blog filter for: project-euler"
+                    >
+                    project-euler</a>
+                
+            </span>
+            |
+            <span class="markdown">
+                <a href="http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/blog/2013/02/17/erlang.md" title="Go to GitHub source">View markdown on GitHub</a>
+            </span>
+        </footer>
+    </article>
+    <article id="bookmarks">
+            
+            
         <header>
         <div class='headline'>
             <div class='title'>
                 
-            
-                Blogs From: 2012/08
-            
+            Share 'Erlang'
         
             </div>
         </div>
     </header>
-
-    
-        <section id="functional-one-liner">
-            <header>
-                <div class='headline'>
-                    <div class='comments'>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/15/functional-one-liner/#disqus_thread">
-    Loading...
-</a>
-                    </div>
-                    <div class='date'>
-                        2012/08/15 - 
-                    </div>
-                    <div class='title'>
-                        Functional One Liner
-                    </div>
-                </div>
-            </header>
-                
-                    A little Project Euler solution that I&#39;m fond of. I&#39;m also currently taking a smallish python script and trying to make it into a more full featured program with a GUI....
-                
-                
-                    <a class='button' href="/blog/2012/08/15/functional-one-liner/" >
-                        Continue Reading
-                    </a>
-                
-        </section>
-    
-        <section id="project-euler">
-            <header>
-                <div class='headline'>
-                    <div class='comments'>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/07/project-euler/#disqus_thread">
-    Loading...
-</a>
-                    </div>
-                    <div class='date'>
-                        2012/08/07 - 
-                    </div>
-                    <div class='title'>
-                        Project Euler
-                    </div>
-                </div>
-            </header>
-                
-                    An update to the compilers used in my Project Euler testbed...
-                
-                
-                    <a class='button' href="/blog/2012/08/07/project-euler/" >
-                        Continue Reading
-                    </a>
-                
-        </section>
-    
-        <section id="hello-montral-hello-ubisoft">
-            <header>
-                <div class='headline'>
-                    <div class='comments'>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/05/hello-montral-hello-ubisoft/#disqus_thread">
-    Loading...
-</a>
-                    </div>
-                    <div class='date'>
-                        2012/08/05 - 
-                    </div>
-                    <div class='title'>
-                        Hello, Montreal. Hello, Ubisoft!
-                    </div>
-                </div>
-            </header>
-                
-                    Preperation for my latest &#39;first day&#39; as I start work for Ubisoft Montréal...
-                
-                
-                    <a class='button' href="/blog/2012/08/05/hello-montral-hello-ubisoft/" >
-                        Continue Reading
-                    </a>
-                
-        </section>
-    
-        <section id="syntax-highlight-test">
-            <header>
-                <div class='headline'>
-                    <div class='comments'>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/04/syntax-highlight-test/#disqus_thread">
-    Loading...
-</a>
-                    </div>
-                    <div class='date'>
-                        2012/08/04 - 
-                    </div>
-                    <div class='title'>
-                        Syntax Highlight Test
-                    </div>
-                </div>
-            </header>
-                
-                    This is the test for code syntax highlighting from markdown source....
-                
-                
-                    <a class='button' href="/blog/2012/08/04/syntax-highlight-test/" >
-                        Continue Reading
-                    </a>
-                
-        </section>
-    
+        <div class="shr_class shareaholic-show-on-load" > </div>
     </article>
 
-    <article id="blogroll">
+    <article id="comments">
         <header>
         <div class='headline'>
             <div class='title'>
                 
-            Other Blogs And Pages
+            Comments for 'Erlang'
         
             </div>
         </div>
     </header>
-        <ul>
-<li><a href="http://elliotpowell.co.uk" title="Brother and Dancer">Elliot Powell</a> - My brother, talented dancer, singer, performer. The <em>Mentalist</em>.</li>
-<li><a href="http://doug-the-body.blogspot.co.uk" title="Fighter and statistician">Chris Douglass</a> - The MMAthlete, pro fighter Chris "The Body" Douglass.</li>
-<li><a href="http://lifeonabike.co.uk" title="Touring cyclist">Ryan Anderson</a> - Touring cyclist and Toon lover.</li>
-<li><a href="http://www.domtaylor.co.uk/" title="PoppaDom">Dom Taylor</a> - Line drawer and shape buster.</li>
-<li><a href="http://poita.org" title="Writes code, makes games">Peter Alexander</a> - Programmer, Mac gamer, <em>D</em> lover.</li>
-<li><a href="http://matt-lacey.com" title="'Dodgy as piss, man!">Matt Lacey</a> - Reggae Reggae Source Control expert.</li>
-</ul>
+        <div id="disqus_thread"></div>
     </article>
-    
+
 
         </div>
         <footer></footer>

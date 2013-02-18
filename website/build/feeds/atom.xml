@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>nathanrosspowell.com</atom:title>
-  <atom:updated>2013-02-09T21:05:43-04:00</atom:updated>
+  <atom:updated>2013-02-17T20:29:01-04:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -9,6 +9,33 @@
     <atom:email>nathanrosspowell@gmail.com</atom:email>
   </atom:author>
 
+  
+  <atom:entry>
+    <atom:title>Erlang</atom:title>
+    <atom:id>http://nathanrosspowell.com/blog/2013/02/17/erlang/</atom:id>
+    <atom:updated>2013-02-17T20:13:17-04:00</atom:updated>
+    <atom:link href="http://nathanrosspowell.com/blog/2013/02/17/erlang/"/>
+    <atom:summary>Feeling functional, so I added Erlang to the supported functions in my Project Euler codebase</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ 
+
+        <p>I was feeling functional, so I added <a href="http://erlang.org">Erlang</a> to the supported functions in my Project Euler codebase. While I have done some functional programming already, there are a few features in Erlang that I have never seem before (atoms, etc).
+I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Erlang For Great Good!</a> which is in the same vein as the Haskell publication.</p>
+<div class="codehilite"><pre><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">e0001</span><span class="p">).</span>
+<span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">start</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+
+<span class="nf">start</span><span class="p">()</span> <span class="o">-&gt;</span>
+    <span class="nv">Result</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="n">sum</span><span class="p">([</span> <span class="nv">X</span> <span class="p">||</span> <span class="nv">X</span> <span class="o">&lt;-</span> <span class="nn">lists</span><span class="p">:</span><span class="n">seq</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">999</span> <span class="p">),</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">3</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">5</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]),</span>
+    <span class="nn">io</span><span class="p">:</span><span class="n">fwrite</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~w</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Result</span><span class="p">]).</span>
+</pre></div>
+        <p><a title="Comments" href="http://nathanrosspowell.com/blog/2013/02/17/erlang/#disqus_thread">Comments</a></p>
+
+        ]]>
+    </atom:content>
+    <atom:category term="blog"/>
+    <atom:category term="project-euler"/>
+    
+  </atom:entry>
   
   <atom:entry>
     <atom:title>Website Maintainance</atom:title>

@@ -20,6 +20,7 @@ websiteimg: "jpg/ubisoft-logo.jpg"
 short: "'Everything is connected. Connection is power.'. Watch Dogs developed and published by Ubisoft. Welcome to the Fan Page! Platforms: Xbox 360, PS3, PC. Release Date: TBA"
 mediabar:
 - { "type":"youtube", "src":"FcMRkyoHKeA", "title":"Game Demo Video" }
+- { "type":"youtube", "src":"6LZM3_wp2ps", "title":"Open world gameplay from the PS4 presentatoin" }
 - { "type":"gametrailer", "src":"39710f97-659a-44ef-bf83-6fcbff3782b5", "title":"Gametrailers Blueprint" }
 tags:
 - games

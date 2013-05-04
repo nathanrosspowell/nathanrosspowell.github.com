@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            
+            
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+
+        
+        
+
+        
+        
+
+        <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script>
+//<![CDATA[
+<!--
+Modernizr.load({
+    load : {
+        
+            'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+        
+        'bootstrap' : "/static/js/vendor/bootstrap.min.js",
+        
+    
+    "codehilitecss" : "/static/css/codehilite.css", 
+    
+    
+
+
+    },
+    callback : {
+        
+    
+    
+    
+
+
+    },
+    complete : function() {
+        
+            if ( !window.jQuery ) {
+                Modernizr.load('js/libs/jquery-1.9.1.min.js');
+            }
+            
+        Modernizr.load('/static/js/main.js');
+        
+    
+    
+        var disqus_shortname = 'nathanrosspowell';
+        var disqus_url = "http://nathanrosspowell.com";
+        var disqus_identifier = "";
+        var disqus_title = "";
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    
+    
+    
+
+
+    }
+});
+//-->
+//]]>
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a type='button' class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/">
+    NathanRossPowell 
+</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                
+    
+        
+            
+                
+                    
+                     
+                    <li
+        
+    >
+        <a href="/connect/">
+            Connect
+        </a>
+    </li>
+                
+            
+            
+         
+    
+         
+             
+            
+            <li
+        
+             class="dropdown active"
+         
+    >
+        <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown">
+            Blog
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/blog/">
+            Index page
+        </a>
+    </li>
+                
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/erlang/">
+            Erlang
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/website-maintainance/">
+            Website Maintainance
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/long-time-no-update/">
+            Long Time No Update
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+             class="active"
+         
+    >
+        <a href="/blog/functional-one-liner/">
+            Functional One Liner
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/project-euler/">
+            Project Euler
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                    
+                        <li
+        
+    >
+        <a href="/blog/">
+            ... more pages
+        </a>
+    </li>
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/career/" class="dropdown-toggle" data-toggle="dropdown">
+            Career
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/career/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/cv/">
+            Curriculum Vitae
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/cv_pdf/">
+            Curriculum Vitae Pdf Link
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/other-experience/">
+            Other Experience
+        </a>
+    </li>
+                        
+                    
+                    
+                
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/code/" class="dropdown-toggle" data-toggle="dropdown">
+            Code
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/code/">
+            Index page
+        </a>
+    </li>
+                
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/code/project-euler/">
+            Project Euler
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/code/personal-website/">
+            Personal Website
+        </a>
+    </li>
+                        
+                    
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/games/" class="dropdown-toggle" data-toggle="dropdown">
+            Games
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/games/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/asteroid-escape/">
+            Asteroid Escape
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/ride-to-hell/">
+            Ride To Hell
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/snake-3d/">
+            Snake 3D
+        </a>
+    </li>
+                        
+                    
+                    
+                
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/watch_dogs/">
+            Watch_Dogs
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/ferrari-the-race-experience/">
+            Ferrari The Race Experince
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That!
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/dirt-showdown/">
+            Dirt Showdown
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River
+        </a>
+    </li>
+                        
+                    
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/menu/" class="dropdown-toggle" data-toggle="dropdown">
+            Menu
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/menu/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/bio/">
+            Bio
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/career/">
+            Career
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/code/">
+            Code
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/connect/">
+            Connect
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/credits-short/">
+            Credits
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                    
+                        <li
+        
+    >
+        <a href="/menu/">
+            ... more pages
+        </a>
+    </li>
+                    
+                
+                
+            
+        </ul>
+    </li>
+         
+    
+
+                            </ul>
+                            
+    <form class="navbar-form pull-right" method="get" action="http://www.google.com/search">
+        <input class="span2" type="text" name="q" placeholder="Site search..." />
+        <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
+        <button type="submit" value="Google Search" class="btn">Search</button>
+    </form>
+
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <!-- Main hero unit for a primary marketing message or call to action -->
+                <div class="hero-unit">
+                    
+    <h1>
+        Functional One Liner
+    </h1>
+    <p>
+        <p>I'd like to share a Project Euler solution <a href="#solution" title="If you manage to reverse engineer the code and figure out which problem this is the solution too, SPOILER ALERT, I guess...">(I'll not say which)*</a> that I am particularly fond of. Like all true wonders of code, it is a mighty one liner:</p>
+<div class="codehilite"><pre><span class="nb">sum</span><span class="p">(</span> <span class="nb">map</span><span class="p">(</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">reduce</span><span class="p">(</span> <span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">101</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>While I'm still very much a novice with functional programming, I'm using a few tricks that I picked up when I last sat down and tried to <a href="http://learnyouahaskell.com/" title="Learn You a Haskell for Great Good">'Learn <em>me</em> a Haskell'</a> by using a range generator, folds and an ananonymous function.</p>
+<p>I managed to power through a couple of the easier P.E problems a few ahead of my current sticking point, using the python language. It made me want to try and do something a little more <strong>useful</strong> with the language. Enter the last big python <a href="https://gist.github.com/2603334" title="Gist powered by Github">gist</a> I created <code>podcast.py</code> - a crued but configurable mass podcast downloader.</p>
+<h3><a href="https://gist.github.com/2603334#file_podcast.py" title="podcast.py - Gist powered by GitHub"><code>podcast.py</code></a></h3>
+<div class="codehilite"><pre><span class="c"># Snippet from jumbo file podcast.py</span>
+
+<span class="k">def</span> <span class="nf">downloadAll</span><span class="p">(</span> <span class="n">newDict</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">):</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">priority</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">newDict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span> <span class="n">key</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">print</span> <span class="s">&quot;Downloading </span><span class="si">%s</span><span class="s"> from: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">value</span> <span class="p">),</span> <span class="n">key</span> <span class="p">)</span>
+        <span class="n">value</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span> <span class="s">&quot;date&quot;</span> <span class="p">]</span> <span class="p">)</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
+            <span class="n">download</span><span class="p">(</span> <span class="n">item</span><span class="p">[</span> <span class="s">&quot;url&quot;</span> <span class="p">],</span> <span class="n">item</span><span class="p">[</span> <span class="s">&quot;fullFilePath&quot;</span> <span class="p">],</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span> <span class="n">xmlFile</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">):</span>
+    <span class="n">settings</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="n">getSettingsAndPriority</span><span class="p">(</span> <span class="n">xmlFile</span> <span class="p">)</span>
+    <span class="n">newFiles</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">settings</span><span class="p">[</span> <span class="s">&quot;feeds&quot;</span> <span class="p">]</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">listNewFiles</span><span class="p">(</span> <span class="n">settings</span><span class="p">[</span> <span class="s">&quot;folder&quot;</span> <span class="p">],</span> <span class="n">value</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="n">new</span> <span class="o">!=</span> <span class="p">[]:</span>
+            <span class="n">newFiles</span><span class="p">[</span> <span class="n">key</span> <span class="p">]</span> <span class="o">=</span> <span class="n">new</span>
+    <span class="k">if</span> <span class="n">newFileStatus</span><span class="p">(</span> <span class="n">newFiles</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">verbose</span> <span class="p">):</span>
+        <span class="n">downloadAll</span><span class="p">(</span> <span class="n">newFiles</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;Usage: &lt;podcast: xml file&gt; &lt;verbose: 1 or 0&gt; &lt;dryrun: 1 or 0&gt;&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">podcastXML</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span> <span class="mi">1</span> <span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">verbose</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span> <span class="mi">2</span> <span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">verbose</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dryRun</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span> <span class="mi">3</span> <span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">dryRun</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">main</span><span class="p">(</span> <span class="n">podcastXML</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>Being very anti-iTunes (due to it being a system resource hog) and failing to find a suitable alternative for 'managing' podcasts I decided to grab the favorite feeds straight from the source and download ALL the things at once. Running the script whenever I booted my computer to get all the latest audio treats for myself to keep.</p>
+<p>An example of my config that powered the script (note the embeded python code used to format the titles!).</p>
+<h3><a href="https://gist.github.com/2603334#file_podcast.xml" title="podcast.xml - Gist powered by GitHub"><code>podcast.xml</code></a></h3>
+<div class="codehilite"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;podcast&gt;</span>
+    <span class="c">&lt;!-- Root folder to download to. --&gt;</span>
+    <span class="nt">&lt;folder</span> <span class="na">value=</span><span class="s">&quot;Z:\Media\Podcast\&quot;</span> <span class="nt">/&gt;</span>
+    <span class="c">&lt;!-- RSS feeds to download, listed highest priority to lowest. </span>
+<span class="c">        Fields to set:</span>
+<span class="c">            name= print out name of the feed </span>
+<span class="c">            folder= sub folder used</span>
+<span class="c">            rss= RSS URI</span>
+<span class="c">        Optional Fields:</span>
+<span class="c">            seperator= &#39;-&#39;</span>
+<span class="c">            space= &#39;_&#39;</span>
+<span class="c">            dateFormat= how the datetime will be displayed</span>
+<span class="c">            nameFormat= tuple for custom file name format: %s+seperator+%s</span>
+<span class="c">                        can use title (string) and dateFormat (string)</span>
+<span class="c">                        e.g &quot;JRE+title, dateFormat</span>
+<span class="c">    --&gt;</span>
+    <span class="nt">&lt;feeds&gt;</span>
+        <span class="nt">&lt;feed</span> <span class="na">name=</span><span class="s">&quot;Lavender Hour&quot;</span> 
+              <span class="na">folder=</span><span class="s">&quot;Lavender Hour&quot;</span> 
+              <span class="na">rss=</span><span class="s">&quot;http://lavenderhour.libsyn.com/rss&quot;</span>
+              <span class="na">nameFormat=</span><span class="s">&quot;dateFormat, title&quot;</span>
+              <span class="na">dateFormat=</span><span class="s">&quot;%Y-%m-%d&quot;</span>
+        <span class="nt">/&gt;</span>
+        <span class="nt">&lt;feed</span> <span class="na">name=</span><span class="s">&quot;Joe Rogan Experience&quot;</span> 
+              <span class="na">folder=</span><span class="s">&quot;JRE&quot;</span> 
+              <span class="na">rss=</span><span class="s">&quot;http://joeroganexp.joerogan.libsynpro.com/irss&quot;</span>
+              <span class="na">nameFormat=</span><span class="s">&quot;title[ title.find(&#39;#&#39;)+1: ], dateFormat&quot;</span>
+        <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/feeds&gt;</span>
+<span class="nt">&lt;/podcast&gt;</span>
+</pre></div>
+
+
+<p>After not looking at the actual script for a good few months I totally forget how I wired it up and <strong>oh my GLOB</strong>... debugging python scripts is about as much fun as ironing wrinkly parts of your body. After a few hours of self.torture I managed to split up core parts of the functionality with the final aim of using the code inside of an actual GUI of some kind. The functionality I'd like would be to pick (or filter) the podcasts that I download instead of just ending up with tens of GBs of files sitting on my NAS.</p>
+<p>So, I'm learning about real world <em>best practices</em> for python and also looking into the Qt/PySide GUI framework. Look out for an operational <a href="https://github.com/nathanrosspowell/pycast">PyCast</a> <s>app</s> program some time soon!</p>
+<p><a id="solution"></a></p>
+<p><em>*if you manage to reverse engineer the code and figure out which problem this is the solution to, SPOILER ALERT, I guess...</em></p>
+    </p>                        
+    
+        <p>
+        <a class="btn btn-primary btn-large" href="#disqus_thread">
+            Comments
+        </a>
+    </p>
+    
+
+                </div>
+
+                <!-- Example row of columns -->
+                <div class="row">
+                    
+    
+        
+            <div class="span4">
+        <h2>
+            Long time no update
+        </h2>
+        <p>
+            
+                Well the website fell away to rot for a bit... Other things were more important, but today I finish a payyyyss on making it nice and shiny again!
+            
+        </p>
+        <p>
+        <a class="btn" href="/blog/long-time-no-update/">
+            Read previous
+        </a>
+    </p>
+    </div>
+        
+        
+        <div class="span4">
+        <h2>
+            Index Page
+        </h2>
+        <p>
+            
+            Go back to the index page for blog to see all of the pages like this.
+            Or, skip to the next or previous pages.
+        
+        </p>
+        <p>
+        <a class="btn" href="/blog/">
+            Blog
+        </a>
+    </p>
+    </div>
+        
+            <div class="span4">
+        <h2>
+            Project Euler
+        </h2>
+        <p>
+            
+                An update to the compilers used in my Project Euler testbed
+            
+        </p>
+        <p>
+        <a class="btn" href="/blog/project-euler/">
+            Read next
+        </a>
+    </p>
+    </div>
+        
+    
+
+                </div>
+
+                
+    
+        <hr/>
+        <div id="disqus_thread"></div>
+    
+
+
+                <hr>
+
+                <footer>
+                    
+    <h5>
+    &copy; NathanRossPowell 2013
+    </h5>
+    <p>
+        This website was last statically updated: 2013, May 4th at 16:35:28 EDT. Which is 20:35:28 UTC/GMT.
+    </p>
+
+                </footer>
+
+            </div> <!-- /container -->
+            
+
+                <script>
+                    var _gaq=[['_setAccount','
+    DERP
+'],['_trackPageview']];
+                    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                    s.parentNode.insertBefore(g,s)}(document,'script'));
+                </script>
+                
+                
+            
+        
+    </body>
+</html>

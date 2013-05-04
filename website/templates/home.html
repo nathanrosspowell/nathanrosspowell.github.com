@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block base_load %}
+    {% block home_load %}
+    {% endblock home_load %}
+{% endblock base_load %}
+
+{% block base_callback %}
+    {% block home_callback %}
+    {% endblock home_callback %}
+{% endblock base_callback %}
+
+{% block base_complete %}
+    {% block home_complete %}
+    {% endblock home_complete %}
+{% endblock base_complete %}
+
+{% block boilerplate_hero_unit %}
+    <h1>
+       Nathan's Website 
+    </h1>
+    <p>
+Here is my slice of the Internet - finally!
+Not too much is here at the moment but hopefully I will put up some of my coding projects up for the world to see.
+In the meantime, if you want to get in touch, check out the connect page.
+<br/>
+<br/>
+Thanks,
+<br/>
+Nathan
+    </p>                        
+    {{ macros.button_primary( "Follow this link", "#" ) }}
+{% endblock boilerplate_hero_unit %}
+
+{% block boilerplate_row %}
+{% call macros.row_span( "Recent Comments", "Disqus", "http://disqus.com/" + disqus_name ) %}
+
+<div id="recentcomments" class="dsq-widget">
+<script type="text/javascript" src="http://{{ disqus_name }}.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200">
+    </script>
+</div>
+
+    {% endcall %}
+    {% call macros.row_span( "Twitter", "Follow me", "http://twitter.com/" + twitter_name ) %}
+
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 5,
+  interval: 30000,
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#f2ecd5'
+    },
+    tweets: {
+      background:'#41363C',
+      color: '#f2ecd5',
+      links: '#8CD0D3'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    behavior: 'all'
+  }
+}).render().setUser('{{ twitter_name }}').start();
+</script>
+
+    {% endcall %}
+    {% call macros.row_span( "Last.fm", "My charts", "http://www.last.fm/user/" + lastfm_name ) %}
+
+<div>
+    <a href="http://www.last.fm/user/{{ lastfm_name }}/?chartstyle=minimalLight">
+        <img src="http://imagegen.last.fm/minimalLight/artists/10/{{ lastfm_name }}.gif" border="0" />
+    </a>
+</div>
+
+    {% endcall %}
+{% endblock boilerplate_row %}

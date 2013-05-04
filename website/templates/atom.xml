@@ -1,0 +1,31 @@
+<atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
+  <atom:id>{{ web_root }}/</atom:id>
+  <atom:title>{{ title }}</atom:title>
+  <atom:updated>{{ w3c_update }}</atom:updated>
+  <atom:link href="{{ web_root }}/feeds/atom.xml" rel="self"/>
+
+  <atom:author>
+    <atom:name>{{ author }}</atom:name>
+    <atom:email>{{ email }}</atom:email>
+  </atom:author>
+
+  {% for page in pages %}
+  <atom:entry>
+    <atom:title>{{ page.title|title }}</atom:title>
+    <atom:id>{{ web_root }}{{ url_for( "page", page_path = page.path ) }}</atom:id>
+    <atom:updated>{{ page.date }}</atom:updated>
+    <atom:link href="{{ web_root }}{{ url_for( "page", page_path = page.path ) }}"/>
+    <atom:summary>{{ page.short }}</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ 
+
+        {{ page.html|safe }}
+        <p><a title="Comments" href="{{ web_root }}{{ url_for( "page", page_path = page.path ) }}#disqus_thread">Comments</a></p>
+
+        ]]>
+    </atom:content>
+    {% for tag in page.tags %}<atom:category term="{{ tag }}"/>
+    {% endfor %}
+  </atom:entry>
+  {% endfor %}
+</atom:feed>

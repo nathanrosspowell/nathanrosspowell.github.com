@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            
+            
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+
+        
+        
+
+        
+        
+
+        <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script>
+//<![CDATA[
+<!--
+Modernizr.load({
+    load : {
+        
+            'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+        
+        'bootstrap' : "/static/js/vendor/bootstrap.min.js",
+        
+    
+    "codehilitecss" : "/static/css/codehilite.css", 
+    
+    
+
+
+    },
+    callback : {
+        
+    
+    
+    
+
+
+    },
+    complete : function() {
+        
+            if ( !window.jQuery ) {
+                Modernizr.load('js/libs/jquery-1.9.1.min.js');
+            }
+            
+        Modernizr.load('/static/js/main.js');
+        
+    
+    
+        var disqus_shortname = 'nathanrosspowell';
+        var disqus_url = "http://nathanrosspowell.com";
+        var disqus_identifier = "";
+        var disqus_title = "";
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    
+    
+    
+
+
+    }
+});
+//-->
+//]]>
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a type='button' class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/">
+    NathanRossPowell 
+</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                
+    
+        
+            
+                
+                    
+                     
+                    <li
+        
+    >
+        <a href="/connect/">
+            Connect
+        </a>
+    </li>
+                
+            
+            
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown">
+            Blog
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/blog/">
+            Index page
+        </a>
+    </li>
+                
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/erlang/">
+            Erlang
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/website-maintainance/">
+            Website Maintainance
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/long-time-no-update/">
+            Long Time No Update
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/functional-one-liner/">
+            Functional One Liner
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/project-euler/">
+            Project Euler
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                    
+                        <li
+        
+    >
+        <a href="/blog/">
+            ... more pages
+        </a>
+    </li>
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+             class="dropdown active"
+         
+    >
+        <a href="/career/" class="dropdown-toggle" data-toggle="dropdown">
+            Career
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/career/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/cv/">
+            Curriculum Vitae
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/cv_pdf/">
+            Curriculum Vitae Pdf Link
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+             class="active"
+         
+    >
+        <a href="/career/other-experience/">
+            Other Experience
+        </a>
+    </li>
+                        
+                    
+                    
+                
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/code/" class="dropdown-toggle" data-toggle="dropdown">
+            Code
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/code/">
+            Index page
+        </a>
+    </li>
+                
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/code/project-euler/">
+            Project Euler
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/code/personal-website/">
+            Personal Website
+        </a>
+    </li>
+                        
+                    
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/games/" class="dropdown-toggle" data-toggle="dropdown">
+            Games
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/games/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/asteroid-escape/">
+            Asteroid Escape
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/ride-to-hell/">
+            Ride To Hell
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/snake-3d/">
+            Snake 3D
+        </a>
+    </li>
+                        
+                    
+                    
+                
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/watch_dogs/">
+            Watch_Dogs
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/ferrari-the-race-experience/">
+            Ferrari The Race Experince
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That!
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/dirt-showdown/">
+            Dirt Showdown
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River
+        </a>
+    </li>
+                        
+                    
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/menu/" class="dropdown-toggle" data-toggle="dropdown">
+            Menu
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/menu/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/bio/">
+            Bio
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/career/">
+            Career
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/code/">
+            Code
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/connect/">
+            Connect
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/credits-short/">
+            Credits
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                    
+                        <li
+        
+    >
+        <a href="/menu/">
+            ... more pages
+        </a>
+    </li>
+                    
+                
+                
+            
+        </ul>
+    </li>
+         
+    
+
+                            </ul>
+                            
+    <form class="navbar-form pull-right" method="get" action="http://www.google.com/search">
+        <input class="span2" type="text" name="q" placeholder="Site search..." />
+        <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
+        <button type="submit" value="Google Search" class="btn">Search</button>
+    </form>
+
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <!-- Main hero unit for a primary marketing message or call to action -->
+                <div class="hero-unit">
+                    
+    <h1>
+        Other Experience
+    </h1>
+    <p>
+        <p>Outside of work I am a keep hobbiest programmer. I am keen on learning new ways to solve problems wether it is via learning new frameworks, engines, or completely new (to me) programming paradigms.</p>
+<h1>Python</h1>
+<p>I was introduced to the <a href="http://python.org">Python</a> programming language from my time working at Eutechnyx. It was mainly used for the asset building system scripts. There was a good level of understanding of the language in the office, but only a select set of it's features where regularly used (C written in Python). 
+After some very interesting converstations inside the office I took my learning home and opened my post-graduate C++ programmers mind to all kinds of <em>exotic</em> concepts: List comprehension, generators, descriptors, curries, partial functions and so on.</p>
+<p>I don't claim to be a master at <a href="http://python.org">Python</a> (or <a href="http://www.cplusplus.com/">C++</a>), but I has made me a very <em>multi-lingual</em> programmer. I pick up and can work in different languages/domains relativly easily. I'm also hungry to learn about as many programming concepts and languages as I can find time to.</p>
+<h1>Linux &amp; Websites</h1>
+<p>Linux programming was something that I was vasty unawear of. I touched on working with the terminal while in university, but it never really clicked with me. Like most curiosities of mine, the effort to stick at it was missing until I found a good project to sink my teeth into. I was previously working on a <a href="https://www.djangoproject.com">Django</a> based website under Windows 7 but started to run into issues with my Python install, the package manager and othe web tech such as Apache. I made the jump over to Ubuntu and after many days of hair pulling I got the first signs of life out of my website codebase. After some trial and error I was at the point I stopped at on Windows and ran straight onto the battlefield of the <a href="http://en.wikipedia.org/wiki/Editor_war"><em>"Text Editor Wars"</em></a>... A few more weeks and I was able to edit text again indside of <a href="http://vim.org">VIM</a>. Finally after adding some new features to my website I had to find a new version control system. With <a href="http://git-scm.com">Git</a> the stage was set for my to actually work code in a linux enviroment!</p>
+<p>Sadly the Django project never took the the web due how basic it was compaired to the extra cost from the webservice needed to run it. Lucily all of that template knowledge was transfered to <a href="http://flask.pocoo.org/">Flask</a> and [Jinja2][jina] which is what my current dot com is running off; full tech specs on the <a href="http://nathanrosspowell.com/credits">credits</a> page.</p>
+<p>A favorite thing about Linux is that my multiple machines all have access to git and there fore are a few commands from cloning and installing (via a bash script) my entire working enviroment from my <a href="http://github.com/nathanrosspowell/dotfiles">dotfiles</a> repository. The power, speed and <em>simplicity</em> of a CLI has really helped my productivity (cliched Linux claim, I know).<br />
+</p>
+<h1>Project Euler</h1>
+<p>To keep my Linux skills sharp I needed some projects and from the recommendation of a friend I found the <em>endless</em> challenge of <a href="http://projecteuler.net">Project Euler</a> to try and get my teeth around. My point of entry for expanding my mind on problem sovling. My <a href="https://github.com/nathanrosspowell/euler/#project-euler">euler</a> Github repro where my current solutions (and work in progresses) can be found. Most are solved with C++ and Python, but I've been starting to use <a href="http://www.haskell.org">Haskell</a> to get to grips with the quirks and advantages of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a>. </p>
+<h1>Unity</h1>
+<p><a href="http://unity3d.com">Unity</a> is the engine that I have been doing my game play experiments in. Using Unity I'm able to attach <a href="http://msdn.microsoft.com/en-us/vstudio/hh388566.aspx">C#</a> scripts to objects in the game world and get experimenting with my ideas that I have for game play. It's a very useful tool to remove distraction from the trap of programming a game <em>engine</em> instead of an actual game.</p>
+<p>Hopefully at some point I will be hosting some demos and small games through the Unity we plugin on my site.</p>
+    </p>                        
+    
+        <p>
+        <a class="btn btn-primary btn-large" href="#disqus_thread">
+            Comments
+        </a>
+    </p>
+    
+
+                </div>
+
+                <!-- Example row of columns -->
+                <div class="row">
+                    
+    
+        
+            <div class="span4">
+        <h2>
+            Curriculum Vitae PDF Link
+        </h2>
+        <p>
+            
+                Link to the CV
+            
+        </p>
+        <p>
+        <a class="btn" href="/career/cv_pdf/">
+            Read previous
+        </a>
+    </p>
+    </div>
+        
+        
+        <div class="span4">
+        <h2>
+            Index Page
+        </h2>
+        <p>
+            
+            Go back to the index page for career to see all of the pages like this.
+            Or, skip to the next or previous pages.
+        
+        </p>
+        <p>
+        <a class="btn" href="/career/">
+            Career
+        </a>
+    </p>
+    </div>
+        
+            <div class="span4">
+    </div>
+        
+    
+
+                </div>
+
+                
+    
+        <hr/>
+        <div id="disqus_thread"></div>
+    
+
+
+                <hr>
+
+                <footer>
+                    
+    <h5>
+    &copy; NathanRossPowell 2013
+    </h5>
+    <p>
+        This website was last statically updated: 2013, May 4th at 16:35:29 EDT. Which is 20:35:29 UTC/GMT.
+    </p>
+
+                </footer>
+
+            </div> <!-- /container -->
+            
+
+                <script>
+                    var _gaq=[['_setAccount','
+    DERP
+'],['_trackPageview']];
+                    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                    s.parentNode.insertBefore(g,s)}(document,'script'));
+                </script>
+                
+                
+            
+        
+    </body>
+</html>

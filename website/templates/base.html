@@ -1,0 +1,121 @@
+{% extends "boilerplate.html" %}
+{% import "macros.html" as macros %}
+
+{% block yepnope_load %}
+    {% block base_load %}
+    {% endblock base_load %}
+{% endblock yepnope_load %}
+
+{% block yepnope_callback %}
+    {% block base_callback %}
+    {% endblock base_callback %}
+{% endblock yepnope_callback %}
+
+{% block yepnope_complete%}
+    {% block base_complete %}
+    {% endblock base_complete %}
+{% endblock yepnope_complete%}
+
+{% block boilerplate_project_name %}
+    {{ title }} 
+{% endblock boilerplate_project_name %}
+
+{% block boilerplate_navbar %}
+    {% for key, value in navbar %}
+        {% if key is equalto( "" ) %}
+            {% if value[ 0 ]|length > 0 %}
+                {% for data in value[ 0 ] %}
+                    {% set page_link = url_for( "page", page_path = data.path ) %}
+                    {% set active = menu_selected is equalto( data.path ) %} 
+                    {{ macros.menu_link_item( data.title|title, page_link, active ) }}
+                {% endfor %}
+            {% endif %}
+            {% if value[ 1 ]|length > 0 %}
+                {% for data in value[ 1 ] %}
+                    {% set page_link = url_for( "page", page_path = data.path ) %}
+                    {% set active = menu_selected is equalto( data.path ) %} 
+                    {{ macros.menu_link_item( data.title|title, page_link, active ) }}
+                {% endfor %}
+            {% endif %}
+        {% elif value|length is compute( ">", 1 ) %} 
+            {% set active = menu_selected is equalto( key ) %} 
+            {% set drop_link = url_for( "page", page_path = key ) %}
+            {% call macros.menu_dropdown( key|title, drop_link, active ) %}
+                {% set no_page = page_selected is equalto( False ) %} 
+                {{ macros.menu_link_item( "Index page", drop_link, active and no_page ) }}
+                {% if value[ 0 ]|length > 0 %}
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    {% for data in value[ 0 ] %}
+                        {% set page_active = page_selected is equalto( data.path ) %} 
+                        {% set page_link = url_for( "page", page_path = data.path ) %}
+                        {% if loop.index0 < submenu_page_limit %}
+                            {{ macros.menu_link_item( data.title|title, page_link, page_active ) }}
+                        {% endif %}
+                    {% endfor %}
+                    {% if value[ 0 ]|length is compute( ">", submenu_page_limit ) %}
+                        {{ macros.menu_link_item( "... more pages", drop_link, False ) }}
+                    {% endif %}
+                {% endif %}
+                {% if value[ 1 ]|length > 0 %}
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    {% for data in value[ 1 ]  %}
+                        {% set page_active = page_selected is equalto( data.path ) %} 
+                        {% set page_link = url_for( "page", page_path = data.path ) %}
+                        {% if loop.index0 < submenu_article_limit %}
+                            {{ macros.menu_link_item( data.title|title, page_link, page_active ) }}
+                        {% endif %}
+                    {% endfor %}
+                    {% if value[ 1 ]|length is compute( ">", submenu_article_limit ) %}
+                        {{ macros.menu_link_item( "... more pages", drop_link, False ) }}
+                    {% endif %}
+                {% endif %}
+            {% endcall %}
+        {% endif %} 
+    {% endfor %}
+{% endblock boilerplate_navbar %}
+
+{% block boilerplate_form %}
+    <form class="navbar-form pull-right" method="get" action="http://www.google.com/search">
+        <input class="span2" type="text" name="q" placeholder="Site search..." />
+        <input type="hidden"  name="sitesearch" value="{{ web_root }}" />
+        <button type="submit" value="Google Search" class="btn">Search</button>
+    </form>
+{% endblock boilerplate_form %}
+
+{% block boilerplate_hero_unit %}
+    <h1>
+       Awwww yeaaaa! 
+       {{ menu_selected }} 
+    </h1>
+    <p>
+        This is all simple template stuff in here!
+        I can just put anything and it comes up in bootstrap the hero unit.
+    </p>                        
+{% endblock boilerplate_hero_unit %}
+
+{% block boilerplate_row %}
+    {% call macros.row_span( "Heading 1", "Home", "#" ) %}
+        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    {% endcall %}
+    {% call macros.row_span( "Heading 2", "Home", "#" ) %}
+        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    {% endcall %}
+    {% call macros.row_span( "Heading 3", "Home", "#" ) %}
+        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    {% endcall %}
+{% endblock boilerplate_row %}
+
+{% block boilerplate_footer %}
+    <h5>
+    &copy; {{ title }} {{ year }}
+    </h5>
+    <p>
+        This website was last statically updated: {{ date }} at {{ time }}.
+    </p>
+{% endblock boilerplate_footer %}
+
+{% block boilerplate_google %}
+    {{ google_analytics }}
+{% endblock boilerplate_google %}

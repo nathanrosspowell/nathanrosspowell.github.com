@@ -3,1048 +3,778 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            
+            
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+
         
-    NRP -
-    
-    Blog
+        
 
+        
+        
 
-    </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-
-    
-    <meta content='Webpage' name='description' />
-    <meta content='Nathan Ross Powell' name='author' />
-
-
-    
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-    
-    
-    <link rel="stylesheet" href="/static/css/base.css"/>
-    <script src="/static/js/modernizr-2.6.1.min.js"></script>
-
-    
-    
-
-    
-    
-    <script>
+        <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script>
 //<![CDATA[
 <!--
 Modernizr.load({
     load : {
         
-            'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
+            'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
         
+        'bootstrap' : "/static/js/vendor/bootstrap.min.js",
         
+    
     "codehilitecss" : "/static/css/codehilite.css", 
-    
-    
+
 
     },
     callback : {
         
     
-    
+
 
     },
     complete : function() {
         
             if ( !window.jQuery ) {
-                Modernizr.load('js/libs/jquery-1.7.1.min.js');
+                Modernizr.load('js/libs/jquery-1.9.1.min.js');
             }
-        
+            
+        Modernizr.load('/static/js/main.js');
         
     
     
-    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
-(function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
+
 
     }
 });
 //-->
 //]]>
-    </script>
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-
-</head>
-<body>
-    <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-    <![endif]-->
-
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a type='button' class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/">
+    NathanRossPowell 
+</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                
     
-<header>
-    <hgroup>
-        <h1>
-            <a href="/">
-                nathanrosspowell.com
-            </a>
-        </h1>
-        <h4>
-            
-                 "In one of the many places you're not, I am."
-            
-        </h4>
-    </hgroup>
-    <!--[if IE]>
-		<div id="IEalert">
-            You're using Internet Explorer. I don't test for that. If something's broken, feel free to get
-            <a href="http://www.google.com/chrome">Google Chrome</a>.
-		</div>
-    <![endif]-->
-    <nav>
         
             
-<ul class='navbar'>
-    
-        <li>
-            <a href="/blog/"
-                title="Blog"
-            >
-                Blog
-            </a>
-        </li>
-    
-        <li>
-            <a href="/code/"
-                title="Code"
-            >
-                Code
-            </a>
-        </li>
-    
-        <li>
-            <a href="/games/"
-                title="Games"
-            >
-                Games
-            </a>
-        </li>
-    
-        <li>
-            <a href="/career/"
-                title="Career"
-            >
-                Career
-            </a>
-        </li>
-    
-        <li>
-            <a href="/connect/"
-                title="Connect"
-            >
-                Connect
-            </a>
-        </li>
-    
-</ul>
+                
+                    
+                     
+                    <li
+        
+    >
+        <a href="/connect/">
+            Connect
+        </a>
+    </li>
+                
             
-    <hr/>
-    <ul class='navbar' id='blog-nav'>
-        <li>
-            <a class="toplevel" href="/blog/tag/">Top Tags</a>
-            <ul>
-                
-                
-                
-                
-    <li id="project-euler"
-        
-    >
-        
-        <a href="/blog/tag/project-euler/#blog-nav"
-            title="Blog filter for: project-euler"
-        >
-            project-euler:  3
-        </a> 
-    </li>
-
-    <li id="code"
-        
-    >
-        
-        <a href="/blog/tag/code/#blog-nav"
-            title="Blog filter for: code"
-        >
-            code:  2
-        </a> 
-    </li>
-
-    <li id="python"
-        
-    >
-        
-        <a href="/blog/tag/python/#blog-nav"
-            title="Blog filter for: python"
-        >
-            python:  2
-        </a> 
-    </li>
-
-    <li id="update"
-        
-    >
-        
-        <a href="/blog/tag/update/#blog-nav"
-            title="Blog filter for: update"
-        >
-            update:  2
-        </a> 
-    </li>
-
-    <li id="c++"
-        
-    >
-        
-        <a href="/blog/tag/c%2B%2B/#blog-nav"
-            title="Blog filter for: c++"
-        >
-            c++:  2
-        </a> 
-    </li>
-
-    <li id="website"
-        
-    >
-        
-        <a href="/blog/tag/website/#blog-nav"
-            title="Blog filter for: website"
-        >
-            website:  1
-        </a> 
-    </li>
-
-    <li id="announcement"
-        
-    >
-        
-        <a href="/blog/tag/announcement/#blog-nav"
-            title="Blog filter for: announcement"
-        >
-            announcement:  1
-        </a> 
-    </li>
-
-    <li id="life"
-        
-    >
-        
-        <a href="/blog/tag/life/#blog-nav"
-            title="Blog filter for: life"
-        >
-            life:  1
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/tag/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li>
-        <!--li>
-            <a class="toplevel" href="/blog/tag/">All Tags</a>
-            <ul>
-                
-                
-                
-                
-    <li id="announcement"
-        
-    >
-        
-        <a href="/blog/tag/announcement/#blog-nav"
-            title="Blog filter for: announcement"
-        >
-            announcement:  1
-        </a> 
-    </li>
-
-    <li id="bash"
-        
-    >
-        
-        <a href="/blog/tag/bash/#blog-nav"
-            title="Blog filter for: bash"
-        >
-            bash:  1
-        </a> 
-    </li>
-
-    <li id="basic"
-        
-    >
-        
-        <a href="/blog/tag/basic/#blog-nav"
-            title="Blog filter for: basic"
-        >
-            basic:  1
-        </a> 
-    </li>
-
-    <li id="blog"
-        
-    >
-        
-        <a href="/blog/tag/blog/#blog-nav"
-            title="Blog filter for: blog"
-        >
-            blog:  1
-        </a> 
-    </li>
-
-    <li id="c++"
-        
-    >
-        
-        <a href="/blog/tag/c%2B%2B/#blog-nav"
-            title="Blog filter for: c++"
-        >
-            c++:  2
-        </a> 
-    </li>
-
-    <li id="code"
-        
-    >
-        
-        <a href="/blog/tag/code/#blog-nav"
-            title="Blog filter for: code"
-        >
-            code:  2
-        </a> 
-    </li>
-
-    <li id="functional"
-        
-    >
-        
-        <a href="/blog/tag/functional/#blog-nav"
-            title="Blog filter for: functional"
-        >
-            functional:  1
-        </a> 
-    </li>
-
-    <li id="gui"
-        
-    >
-        
-        <a href="/blog/tag/gui/#blog-nav"
-            title="Blog filter for: gui"
-        >
-            gui:  1
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/tag/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li-->
-        <li>
-            <a class="toplevel" href="/blog/archive/">Years</a>
-            <ul>
-                
-                
-                
-                
-    <li id="2013"
-        
-    >
-        
-        <a href="/blog/archive/2013/#blog-nav"
-            title="Blog filter for: 2013"
-        >
-            2013 :  2
-        </a> 
-    </li>
-
-    <li id="2012"
-        
-    >
-        
-        <a href="/blog/archive/2012/#blog-nav"
-            title="Blog filter for: 2012"
-        >
-            2012 :  6
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/archive/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a class="toplevel" href="/blog/archive/">Months</a>
-            <ul>
-                
-                
-                
-                
-    <li id="2013/02"
-        
-    >
-        
-        <a href="/blog/archive/2013/02/#blog-nav"
-            title="Blog filter for: 2013/02"
-        >
-            2013, Feb :  2
-        </a> 
-    </li>
-
-    <li id="2012/11"
-        
-    >
-        
-        <a href="/blog/archive/2012/11/#blog-nav"
-            title="Blog filter for: 2012/11"
-        >
-            2012, Nov :  1
-        </a> 
-    </li>
-
-    <li id="2012/08"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/#blog-nav"
-            title="Blog filter for: 2012/08"
-        >
-            2012, Aug :  4
-        </a> 
-    </li>
-
-    <li id="2012/07"
-        
-    >
-        
-        <a href="/blog/archive/2012/07/#blog-nav"
-            title="Blog filter for: 2012/07"
-        >
-            2012, Jul :  1
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/archive/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a class="toplevel" href="/blog/archive/">Days</a>
-            <ul>
-                
-                
-                
-                
-    <li id="2013/02/17"
-        
-    >
-        
-        <a href="/blog/archive/2013/02/17/#blog-nav"
-            title="Blog filter for: 2013/02/17"
-        >
-            2013, Feb 17th:  1
-        </a> 
-    </li>
-
-    <li id="2013/02/09"
-        
-    >
-        
-        <a href="/blog/archive/2013/02/09/#blog-nav"
-            title="Blog filter for: 2013/02/09"
-        >
-            2013, Feb 9th:  1
-        </a> 
-    </li>
-
-    <li id="2012/11/09"
-        
-    >
-        
-        <a href="/blog/archive/2012/11/09/#blog-nav"
-            title="Blog filter for: 2012/11/09"
-        >
-            2012, Nov 9th:  1
-        </a> 
-    </li>
-
-    <li id="2012/08/15"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/15/#blog-nav"
-            title="Blog filter for: 2012/08/15"
-        >
-            2012, Aug 15th:  1
-        </a> 
-    </li>
-
-    <li id="2012/08/07"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/07/#blog-nav"
-            title="Blog filter for: 2012/08/07"
-        >
-            2012, Aug 7th:  1
-        </a> 
-    </li>
-
-    <li id="2012/08/05"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/05/#blog-nav"
-            title="Blog filter for: 2012/08/05"
-        >
-            2012, Aug 5th:  1
-        </a> 
-    </li>
-
-    <li id="2012/08/04"
-        
-    >
-        
-        <a href="/blog/archive/2012/08/04/#blog-nav"
-            title="Blog filter for: 2012/08/04"
-        >
-            2012, Aug 4th:  1
-        </a> 
-    </li>
-
-    <li id="2012/07/03"
-        
-    >
-        
-        <a href="/blog/archive/2012/07/03/#blog-nav"
-            title="Blog filter for: 2012/07/03"
-        >
-            2012, Jul 3rd:  1
-        </a> 
-    </li>
-
-                <li>
-                <a href="/blog/archive/" title="See more tags">More...</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-
-        
-    </nav>
-</header>
-
-    <div id='container'>
-        <header></header>
-        <div id='main' role='main'>
             
-    
-
-    
-        <article class="blog" id="erlang">
-            <header>
-                <div class='headline'>
-                    <div class='date'>
-                        2013/02/17 - 
-                    </div>
-                    <div class='title'>
-                        <a href="/blog/2013/02/17/erlang/">Erlang</a>
-                    </div>
-                </div>
-            </header>
-                <p>I was feeling functional, so I added <a href="http://erlang.org">Erlang</a> to the supported functions in my Project Euler codebase. While I have done some functional programming already, there are a few features in Erlang that I have never seem before (atoms, etc).
-I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Erlang For Great Good!</a> which is in the same vein as the Haskell publication.</p>
-<div class="codehilite"><pre><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">e0001</span><span class="p">).</span>
-<span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">start</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
-
-<span class="nf">start</span><span class="p">()</span> <span class="o">-&gt;</span>
-    <span class="nv">Result</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="n">sum</span><span class="p">([</span> <span class="nv">X</span> <span class="p">||</span> <span class="nv">X</span> <span class="o">&lt;-</span> <span class="nn">lists</span><span class="p">:</span><span class="n">seq</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">999</span> <span class="p">),</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">3</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">5</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]),</span>
-    <span class="nn">io</span><span class="p">:</span><span class="n">fwrite</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~w</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Result</span><span class="p">]).</span>
-</pre></div>
-                
-                    <hr/>
-                    <p>
-                        <a href="http://www.nathanrosspowell.com/blog/2013/02/17/erlang/#disqus_thread">
-    Loading...
-</a>
-                    </p>
-                
-        </article>
-    
-        <article class="blog" id="website-maintainance">
-            <header>
-                <div class='headline'>
-                    <div class='date'>
-                        2013/02/09 - 
-                    </div>
-                    <div class='title'>
-                        <a href="/blog/2013/02/09/website-maintainance/">Website Maintainance</a>
-                    </div>
-                </div>
-            </header>
-                <p>I updated some colours on the website... oh, and finally added the <a href="http://nathanrosspowell.com/code/personal-website" title="NRP - Code - Personal Website">website source</a> to the code section.</p>
-<p>The colours that I picked for the accents where inside the colour pallette I was working from, but looked pretty gross. I changes them up to use only the blues, greens/yellows from the <a href="http://deletionpedia.dbatley.com/w/index.php?title=Zenburn_%28deleted_28_Apr_2008_at_16:13%29">Zenburn</a> colour scheme which I am in love with for use in a <a href="http://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>.</p>
-<p>I had thought about changing up the CSS to look a bit more modern, but scew it. I don't really have any kind of eye for these things and the site is perfectly functional. What I have decided on is to try and make a generic 'boilerplate' version of the site I developed along with a better method of deploying changes. Why? <strong>SUPER SECRET HIDDEN ANNOUNCEMENT:</strong> Because I have registered another web domain to present actual games that I will theoretically actually make! I have the code section on this site that will be more weighted to programs, tools, experiments, computer science style stuff etc. then this new website will show off the 'finished' goods.</p>
-<p>More info to follow!</p>
-<p>(Also I will try and integrate some kind of spell checker into my deployment flow...)</p>
-                
-                    <hr/>
-                    <p>
-                        <a href="http://www.nathanrosspowell.com/blog/2013/02/09/website-maintainance/#disqus_thread">
-    Loading...
-</a>
-                    </p>
-                
-        </article>
-    
-        <article class="blog" id="long-time-no-update">
-            <header>
-                <div class='headline'>
-                    <div class='date'>
-                        2012/11/09 - 
-                    </div>
-                    <div class='title'>
-                        <a href="/blog/2012/11/09/long-time-no-update/">Long time no update</a>
-                    </div>
-                </div>
-            </header>
-                <p>Well the website fell away to rot for a bit... Other things were more important, but today I finished a pass on making it nice and shiny again!</p>
-<p>Some effort has gone into fixing the litter errors that crept in last time I tried to optimise the Javascript execution on the pages.
-Along with that and a small redesign and palette change we end up here, with what you see before you.</p>
-<p>Code wise I have been working on a Linux based SDL powered 'game engine'. 
-A typical task for most programmers, and I'm falling into the classic gotchas of over engineering things yadda yadda - end of the day, it's fun.
-This is currently in one of my private github repros, but it will surface as soon as some kind of tech demo is working.</p>
-<p>As usual I'm updating my site as a gust of enthusiasm has taken over me. Not sure how long it will last.</p>
-<p>This post was brought to you by: Beer.</p>
-                
-                    <hr/>
-                    <p>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/11/09/long-time-no-update/#disqus_thread">
-    Loading...
-</a>
-                    </p>
-                
-        </article>
-    
-        <article class="blog" id="functional-one-liner">
-            <header>
-                <div class='headline'>
-                    <div class='date'>
-                        2012/08/15 - 
-                    </div>
-                    <div class='title'>
-                        <a href="/blog/2012/08/15/functional-one-liner/">Functional One Liner</a>
-                    </div>
-                </div>
-            </header>
-                <p>I'd like to share a Project Euler solution <a href="#solution" title="If you manage to reverse engineer the code and figure out which problem this is the solution too, SPOILER ALERT, I guess...">(I'll not say which)*</a> that I am particularly fond of. Like all true wonders of code, it is a mighty one liner:</p>
-<div class="codehilite"><pre><span class="nb">sum</span><span class="p">(</span> <span class="nb">map</span><span class="p">(</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span> <span class="nb">reduce</span><span class="p">(</span> <span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="nb">xrange</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">101</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
-</pre></div>
-
-
-<p>While I'm still very much a novice with functional programming, I'm using a few tricks that I picked up when I last sat down and tried to <a href="http://learnyouahaskell.com/" title="Learn You a Haskell for Great Good">'Learn <em>me</em> a Haskell'</a> by using a range generator, folds and an ananonymous function.</p>
-<p>I managed to power through a couple of the easier P.E problems a few ahead of my current sticking point, using the python language. It made me want to try and do something a little more <strong>useful</strong> with the language. Enter the last big python <a href="https://gist.github.com/2603334" title="Gist powered by Github">gist</a> I created <code>podcast.py</code> - a crued but configurable mass podcast downloader.</p>
-<h3><a href="https://gist.github.com/2603334#file_podcast.py" title="podcast.py - Gist powered by GitHub"><code>podcast.py</code></a></h3>
-<div class="codehilite"><pre><span class="c"># Snippet from jumbo file podcast.py</span>
-
-<span class="k">def</span> <span class="nf">downloadAll</span><span class="p">(</span> <span class="n">newDict</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">):</span>
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">priority</span><span class="p">:</span>
-        <span class="n">value</span> <span class="o">=</span> <span class="n">newDict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span> <span class="n">key</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
-            <span class="k">continue</span>
-        <span class="k">print</span> <span class="s">&quot;Downloading </span><span class="si">%s</span><span class="s"> from: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span> <span class="n">value</span> <span class="p">),</span> <span class="n">key</span> <span class="p">)</span>
-        <span class="n">value</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span> <span class="s">&quot;date&quot;</span> <span class="p">]</span> <span class="p">)</span>
-        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
-            <span class="n">download</span><span class="p">(</span> <span class="n">item</span><span class="p">[</span> <span class="s">&quot;url&quot;</span> <span class="p">],</span> <span class="n">item</span><span class="p">[</span> <span class="s">&quot;fullFilePath&quot;</span> <span class="p">],</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">(</span> <span class="n">xmlFile</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">):</span>
-    <span class="n">settings</span><span class="p">,</span> <span class="n">priority</span> <span class="o">=</span> <span class="n">getSettingsAndPriority</span><span class="p">(</span> <span class="n">xmlFile</span> <span class="p">)</span>
-    <span class="n">newFiles</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">settings</span><span class="p">[</span> <span class="s">&quot;feeds&quot;</span> <span class="p">]</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
-        <span class="n">new</span> <span class="o">=</span> <span class="n">listNewFiles</span><span class="p">(</span> <span class="n">settings</span><span class="p">[</span> <span class="s">&quot;folder&quot;</span> <span class="p">],</span> <span class="n">value</span> <span class="p">)</span>
-        <span class="k">if</span> <span class="n">new</span> <span class="o">!=</span> <span class="p">[]:</span>
-            <span class="n">newFiles</span><span class="p">[</span> <span class="n">key</span> <span class="p">]</span> <span class="o">=</span> <span class="n">new</span>
-    <span class="k">if</span> <span class="n">newFileStatus</span><span class="p">(</span> <span class="n">newFiles</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">verbose</span> <span class="p">):</span>
-        <span class="n">downloadAll</span><span class="p">(</span> <span class="n">newFiles</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">)</span>
-
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&quot;Usage: &lt;podcast: xml file&gt; &lt;verbose: 1 or 0&gt; &lt;dryrun: 1 or 0&gt;&quot;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">podcastXML</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span> <span class="mi">1</span> <span class="p">]</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">verbose</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span> <span class="mi">2</span> <span class="p">]</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="n">verbose</span> <span class="o">=</span> <span class="bp">False</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">dryRun</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span> <span class="mi">3</span> <span class="p">]</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="n">dryRun</span> <span class="o">=</span> <span class="bp">False</span>
-        <span class="n">main</span><span class="p">(</span> <span class="n">podcastXML</span><span class="p">,</span> <span class="n">verbose</span><span class="p">,</span> <span class="n">dryRun</span> <span class="p">)</span>
-</pre></div>
-
-
-<p>Being very anti-iTunes (due to it being a system resource hog) and failing to find a suitable alternative for 'managing' podcasts I decided to grab the favorite feeds straight from the source and download ALL the things at once. Running the script whenever I booted my computer to get all the latest audio treats for myself to keep.</p>
-<p>An example of my config that powered the script (note the embeded python code used to format the titles!).</p>
-<h3><a href="https://gist.github.com/2603334#file_podcast.xml" title="podcast.xml - Gist powered by GitHub"><code>podcast.xml</code></a></h3>
-<div class="codehilite"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;podcast&gt;</span>
-    <span class="c">&lt;!-- Root folder to download to. --&gt;</span>
-    <span class="nt">&lt;folder</span> <span class="na">value=</span><span class="s">&quot;Z:\Media\Podcast\&quot;</span> <span class="nt">/&gt;</span>
-    <span class="c">&lt;!-- RSS feeds to download, listed highest priority to lowest. </span>
-<span class="c">        Fields to set:</span>
-<span class="c">            name= print out name of the feed </span>
-<span class="c">            folder= sub folder used</span>
-<span class="c">            rss= RSS URI</span>
-<span class="c">        Optional Fields:</span>
-<span class="c">            seperator= &#39;-&#39;</span>
-<span class="c">            space= &#39;_&#39;</span>
-<span class="c">            dateFormat= how the datetime will be displayed</span>
-<span class="c">            nameFormat= tuple for custom file name format: %s+seperator+%s</span>
-<span class="c">                        can use title (string) and dateFormat (string)</span>
-<span class="c">                        e.g &quot;JRE+title, dateFormat</span>
-<span class="c">    --&gt;</span>
-    <span class="nt">&lt;feeds&gt;</span>
-        <span class="nt">&lt;feed</span> <span class="na">name=</span><span class="s">&quot;Lavender Hour&quot;</span> 
-              <span class="na">folder=</span><span class="s">&quot;Lavender Hour&quot;</span> 
-              <span class="na">rss=</span><span class="s">&quot;http://lavenderhour.libsyn.com/rss&quot;</span>
-              <span class="na">nameFormat=</span><span class="s">&quot;dateFormat, title&quot;</span>
-              <span class="na">dateFormat=</span><span class="s">&quot;%Y-%m-%d&quot;</span>
-        <span class="nt">/&gt;</span>
-        <span class="nt">&lt;feed</span> <span class="na">name=</span><span class="s">&quot;Joe Rogan Experience&quot;</span> 
-              <span class="na">folder=</span><span class="s">&quot;JRE&quot;</span> 
-              <span class="na">rss=</span><span class="s">&quot;http://joeroganexp.joerogan.libsynpro.com/irss&quot;</span>
-              <span class="na">nameFormat=</span><span class="s">&quot;title[ title.find(&#39;#&#39;)+1: ], dateFormat&quot;</span>
-        <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/feeds&gt;</span>
-<span class="nt">&lt;/podcast&gt;</span>
-</pre></div>
-
-
-<p>After not looking at the actual script for a good few months I totally forget how I wired it up and <strong>oh my GLOB</strong>... debugging python scripts is about as much fun as ironing wrinkly parts of your body. After a few hours of self.torture I managed to split up core parts of the functionality with the final aim of using the code inside of an actual GUI of some kind. The functionality I'd like would be to pick (or filter) the podcasts that I download instead of just ending up with tens of GBs of files sitting on my NAS.</p>
-<p>So, I'm learning about real world <em>best practices</em> for python and also looking into the Qt/PySide GUI framework. Look out for an operational <a href="https://github.com/nathanrosspowell/pycast">PyCast</a> <s>app</s> program some time soon!</p>
-<p><a id="solution"></a></p>
-<p><em>*if you manage to reverse engineer the code and figure out which problem this is the solution to, SPOILER ALERT, I guess...</em></p>
-                
-                    <hr/>
-                    <p>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/15/functional-one-liner/#disqus_thread">
-    Loading...
-</a>
-                    </p>
-                
-        </article>
-    
-        <article class="blog" id="project-euler">
-            <header>
-                <div class='headline'>
-                    <div class='date'>
-                        2012/08/07 - 
-                    </div>
-                    <div class='title'>
-                        <a href="/blog/2012/08/07/project-euler/">Project Euler</a>
-                    </div>
-                </div>
-            </header>
-                <p>I've just update the test code for my <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">Project Euler</a> testing scripts. Now a list of <code>Execute</code> classes will run on each language implementation. I've started by adding Clang to the GCC tests.</p>
-<p><a href="http://imgur.com/WOllJ"><img class="article" src="http://i.imgur.com/WOllJ.png" alt="" title="run.py working it's magic on CPP 2 and 11" /></a></p>
-<p>Also I stopped the nasty red <em>ERROR</em> messages for files that exist when there is an answer for that problem, but it's not finished in a specific language (problem 11 is only sloved in <code>python</code> currently).</p>
-<p>Time to get cracking on the next problem, currently <a href="http://projecteuler.net/problem=15" title="Project Euler problem 15">PE15</a> (I've got up to PE16, but only after I chickened out on PE15...)</p>
-<p>See my <code>code</code> page <a href="http://nathanrosspowell.com/code/project-euler" title="NRP - Code - Project Euler">here</a>.</p>
-                
-                    <hr/>
-                    <p>
-                        <a href="http://www.nathanrosspowell.com/blog/2012/08/07/project-euler/#disqus_thread">
-    Loading...
-</a>
-                    </p>
-                
-        </article>
-    
-
-
-    
-
-    
-    <article id="pagesnav">
-        
-            <span
-                
-                    class="bookend"
-                
-            >
-                &lt;
-            </span>
          
-        
-            
-                1
-            
-        
-            
-                
-                    <a href="/blog/2/" 
-                        title="Blog page 2"
-                    >
-                        2
-                    </a>
-                
-            
-        
-        
-            <a 
-                
-                    href="/blog/2/" 
-                
-                title="Blog page 2"
-                
-                    class="bookend"
-                
-                
-            >
-                &gt;
-            </a>
+    
          
-    </article>
+             
+            
+            <li
+        
+             class="dropdown active"
+         
+    >
+        <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown">
+            Blog
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+             class="active"
+         
+    >
+        <a href="/blog/">
+            Index page
+        </a>
+    </li>
+                
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/erlang/">
+            Erlang
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/website-maintainance/">
+            Website Maintainance
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/long-time-no-update/">
+            Long Time No Update
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/functional-one-liner/">
+            Functional One Liner
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/project-euler/">
+            Project Euler
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                    
+                        <li
+        
+    >
+        <a href="/blog/">
+            ... more pages
+        </a>
+    </li>
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/career/" class="dropdown-toggle" data-toggle="dropdown">
+            Career
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/career/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/cv/">
+            Curriculum Vitae
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/cv_pdf/">
+            Curriculum Vitae Pdf Link
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/other-experience/">
+            Other Experience
+        </a>
+    </li>
+                        
+                    
+                    
+                
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/code/" class="dropdown-toggle" data-toggle="dropdown">
+            Code
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/code/">
+            Index page
+        </a>
+    </li>
+                
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/code/project-euler/">
+            Project Euler
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/code/personal-website/">
+            Personal Website
+        </a>
+    </li>
+                        
+                    
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/games/" class="dropdown-toggle" data-toggle="dropdown">
+            Games
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/games/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/asteroid-escape/">
+            Asteroid Escape
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/ride-to-hell/">
+            Ride To Hell
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/snake-3d/">
+            Snake 3D
+        </a>
+    </li>
+                        
+                    
+                    
+                
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/watch_dogs/">
+            Watch_Dogs
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/ferrari-the-race-experience/">
+            Ferrari The Race Experince
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That!
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/dirt-showdown/">
+            Dirt Showdown
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River
+        </a>
+    </li>
+                        
+                    
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/menu/" class="dropdown-toggle" data-toggle="dropdown">
+            Menu
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/menu/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="nav-header">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/bio/">
+            Bio
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/career/">
+            Career
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/code/">
+            Code
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/connect/">
+            Connect
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/menu/credits-short/">
+            Credits
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                    
+                        <li
+        
+    >
+        <a href="/menu/">
+            ... more pages
+        </a>
+    </li>
+                    
+                
+                
+            
+        </ul>
+    </li>
+         
     
 
+                            </ul>
+                            
+    <form class="navbar-form pull-right" method="get" action="http://www.google.com/search">
+        <input class="span2" type="text" name="q" placeholder="Site search..." />
+        <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
+        <button type="submit" value="Google Search" class="btn">Search</button>
+    </form>
 
-    <article id="blogroll">
-        <header>
-        <div class='headline'>
-            <div class='title'>
-                
-            Other Blogs And Pages
-        
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
-        <ul>
-<li><a href="http://elliotpowell.co.uk" title="Brother and Dancer">Elliot Powell</a> - My brother, talented dancer, singer, performer. The <em>Mentalist</em>.</li>
-<li><a href="http://doug-the-body.blogspot.co.uk" title="Fighter and statistician">Chris Douglass</a> - The MMAthlete, pro fighter Chris "The Body" Douglass.</li>
-<li><a href="http://lifeonabike.co.uk" title="Touring cyclist">Ryan Anderson</a> - Touring cyclist and Toon lover.</li>
-<li><a href="http://www.domtaylor.co.uk/" title="PoppaDom">Dom Taylor</a> - Line drawer and shape buster.</li>
-<li><a href="http://poita.org" title="Writes code, makes games">Peter Alexander</a> - Programmer, Mac gamer, <em>D</em> lover.</li>
-<li><a href="http://matt-lacey.com" title="'Dodgy as piss, man!">Matt Lacey</a> - Reggae Reggae Source Control expert.</li>
-</ul>
-    </article>
 
+            <div class="container">
 
-        </div>
-        <footer></footer>
-    </div>
-    <aside>
-    </aside>
+                <!-- Main hero unit for a primary marketing message or call to action -->
+                <div class="hero-unit">
+                    
+    <h1>
+        Blog
+    </h1>
+    <p>
+        
+             
+        
+            
+                
+                
+                    <p>Articles</p>
+                    
+                        
+                        <li
+        
+    >
+        <a href="/blog/erlang/">
+            Erlang
+        </a>
+    </li>
+                    
+                        
+                        <li
+        
+    >
+        <a href="/blog/website-maintainance/">
+            Website Maintainance
+        </a>
+    </li>
+                    
+                        
+                        <li
+        
+    >
+        <a href="/blog/long-time-no-update/">
+            Long time no update
+        </a>
+    </li>
+                    
+                        
+                        <li
+        
+    >
+        <a href="/blog/functional-one-liner/">
+            Functional One Liner
+        </a>
+    </li>
+                    
+                        
+                        <li
+        
+    >
+        <a href="/blog/project-euler/">
+            Project Euler
+        </a>
+    </li>
+                    
+                        
+                        <li
+        
+    >
+        <a href="/blog/hello-montral-hello-ubisoft/">
+            Hello, Montreal. Hello, Ubisoft!
+        </a>
+    </li>
+                    
+                        
+                        <li
+        
+    >
+        <a href="/blog/syntax-highlight-test/">
+            Syntax Highlight Test
+        </a>
+    </li>
+                    
+                        
+                        <li
+        
+    >
+        <a href="/blog/hello-world/">
+            Hello, world!
+        </a>
+    </li>
+                    
+                
+             
+        
+             
+        
+             
+        
+             
+        
+             
+        
+    </p>                        
     
-    
-    
-    
-<!-- js here -->
-<!-- :javascript -->
-    
-<!--[if lt IE 7 ]>
-<script src="/?filename=js%2Fdd_belatedpng.js"></script>
-<script type='text/javascript'>
-// <![CDATA[
-        <script> DD_belatedPNG.fix('img, .png_bg');</script>
-// ]]>
-</script>
-<![endif]-->
 
-<br/>
-<footer id="Bio">
-    <section id="bioshort">
-        <h1>
-            Nathan Ross Powell Bio
-        </h1>
-        <p>I am a <a href="http://nathanrosspowell.com/career" title="Nathan's Career">computer programmer</a> who makes a living working on <a href="http://nathanrosspowell.com/games" title="Nathan's Games">video games</a>, which happens to be a very nice job. </p>
-        <div class="iconlist">
-            
+                </div>
 
-
-    <ul class="icons">
-        
-            
-            <li>
-                <a class="icon"
-                   href="http://feeds.feedburner.com/nathanrosspowell" 
-                   title="Feedburner"
-                >
-                    <img class="icon" src="/static/png/rss.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="http://linkedin.com/in/nathanrosspowell" 
-                   title="LinkedIN"
-                >
-                    <img class="icon" src="/static/png/linkedin.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="http://zerply.com/nathanrosspowell" 
-                   title="Zerply"
-                >
-                    <img class="icon" src="/static/png/zerply.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="http://github.com/nathanrosspowell" 
-                   title="GitHub"
-                >
-                    <img class="icon" src="/static/png/github.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="skype:nathanrosspowell?call" 
-                   title="Skype"
-                >
-                    <img class="icon" src="/static/png/skype.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="http://last.fm/user/partyboypowell" 
-                   title="Last.fm"
-                >
-                    <img class="icon" src="/static/png/last-fm.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="http://twitter.com/nathanross" 
-                   title="Twitter"
-                >
-                    <img class="icon" src="/static/png/twitter.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="http://facebook.com/nathanrosspowell" 
-                   title="Facebook"
-                >
-                    <img class="icon" src="/static/png/facebook.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="https://plus.google.com/u/0/117956868987272677661" 
-                   title="Google+"
-                >
-                    <img class="icon" src="/static/png/google%2B.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="https://vimeo.com/nathanrosspowell" 
-                   title="Vimeo"
-                >
-                    <img class="icon" src="/static/png/vimeo.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="http://www.youtube.com/user/nathanrosspowell" 
-                   title="Youtube"
-                >
-                    <img class="icon" src="/static/png/youtube.png" />
-                </a>
-            </li>
-        
-            
-            <li>
-                <a class="icon"
-                   href="http://www.flickr.com/photos/nathanrosspowell/" 
-                   title="Flickr"
-                >
-                    <img class="icon" src="/static/png/flickr.png" />
-                </a>
-            </li>
-        
-    </ul>
-
-        </div>
-    </section>
-    <section id="copyright" class='copyright'>
-        
-        <p id="udpdated">
-            This website was last statically updated: 2013, Mar 12th at 00:00:07 EDT which is 04:00:07 UTC/GMT.
-        </p>
-        <hr/>
-        
+                <!-- Example row of columns -->
+                <div class="row">
+                    
+    <div class="span4">
+        <h2>
+            Get back home
+        </h2>
         <p>
-            <p>Copyright ©2013 - <a href="http://nathanrosspowell.com" title="Home">nathanrosspowell.com</a> - All Rights Reserved - <a href="http://nathanrosspowell.com/credits" title="Nathan's credits">Credits</a>.</p>
-        </p>
-    </section>
-</footer>
-
-
-
-    <script>
-//<![CDATA[
-<!--
+            
+        Go to the home page.
     
-    var disqus_shortname = 'nathanrosspowell'; // required: replace example with your forum shortname
-(function () {
-    var s = document.createElement('script'); s.async = true;
-    s.type = 'text/javascript';
-    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-}());
+        </p>
+        <p>
+        <a class="btn" href="/">
+            Home
+        </a>
+    </p>
+    </div>
 
-    var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-33462621-1']);
-_gaq.push(['_trackPageview']);
+                </div>
 
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-//-->
-//]]>
-    </script>
+                
+                
 
+                <hr>
 
+                <footer>
+                    
+    <h5>
+    &copy; NathanRossPowell 2013
+    </h5>
+    <p>
+        This website was last statically updated: 2013, May 4th at 16:35:29 EDT. Which is 20:35:29 UTC/GMT.
+    </p>
 
-</body>
+                </footer>
+
+            </div> <!-- /container -->
+            
+
+                <script>
+                    var _gaq=[['_setAccount','
+    DERP
+'],['_trackPageview']];
+                    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                    s.parentNode.insertBefore(g,s)}(document,'script'));
+                </script>
+                
+                
+            
+        
+    </body>
 </html>

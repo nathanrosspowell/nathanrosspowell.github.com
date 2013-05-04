@@ -129,7 +129,7 @@ Modernizr.load({
             
             <li
         
-            class="dropdown"
+             class="dropdown active"
          
     >
         <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown">
@@ -371,7 +371,7 @@ Modernizr.load({
             
             <li
         
-             class="dropdown active"
+            class="dropdown"
          
     >
         <a href="/games/" class="dropdown-toggle" data-toggle="dropdown">
@@ -487,8 +487,6 @@ Modernizr.load({
                         
                             <li
         
-             class="active"
-         
     >
         <a href="/games/operation-flashpoint-red-river/">
             Operation Flashpoint: Red River
@@ -641,21 +639,46 @@ Modernizr.load({
                 <div class="hero-unit">
                     
     <h1>
-        Operation Flashpoint: Red River
+        Syntax Highlight Test
     </h1>
     <p>
-        <p>Taking a small step into the future, Red River depicts a fictional conflict with contemporary geopolitical themes, which will unfold over three distinct acts in both single player and drop-in-drop-out co-operative play for up to four players online. Faced with new counter-insurgency combat and the returning threat of the Chinese PLA, players will feel the tension, brutality and carnage of modern conflict from the perspective of a marine fireteam on deployment in a hostile country, thousands of miles from home.</p>
-<hr />
-<p>Tajikistan, 2013.</p>
-<p>Between Afghanistan and China, the world’s next flashpoint is about to erupt. The valleys, towns and mountains of Tajikistan will become bloody frontlines for the might of the People’s Liberation Army, insurgent guerrilla fighters and the United States Marine Corps.</p>
-<p>You and your fireteam can make a difference. How much is up to you. It’s not the soldier with the most expensive gun or the biggest heart who wins on the battlefield. It’s the smartest. Semper Fi, Marine.</p>
-<p>Game Features</p>
-<p>Go closer to the experience of the US Marines on campaign with the ultimate tactical infantry shooter</p>
-<p>Stand together with 4 player drop-in drop-out online co-op multiplayer in campaign mode and standalone Fire Team Engagements</p>
-<p>Become immersed in an engrossing narrative which unfolds over three acts in campaign mode</p>
-<p>Play as Grenadier, Scout, Rifleman and Automatic Rifleman classes, each with unique strengths and weaknesses for increased replayability</p>
-<p>Earn and spend XP on weapons, attachments and abilities for each of the fireteam’s specialists</p>
-<p>Call in Combat Support such as Mortars, Howitzers and JDAMs, whilst AH-1Z Helicopters and A-10 Ground Attack Aircraft provide Close Air Support</p>
+        <p>This is the test for code syntax highlighting from markdown source.</p>
+<p>Goodbye world in <a href="http://rosettacode.org/wiki/Hello_world#BASIC">BASIC</a>:</p>
+<div class="codehilite"><pre>10 <span class="n">PRINT</span> &quot;<span class="n">Goodbye</span><span class="p">,</span> <span class="n">World</span>!&quot;
+</pre></div>
+
+
+<p>Fibonacci sequence in <a href="http://rosettacode.org/wiki/Fibonacci_sequence#Python">python</a>:</p>
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">fibRec</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibRec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibRec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Sieve of Eratosthenes in <a href="http://rosettacode.org/wiki/Sieve_of_Eratosthenes#C.2B.2B">C++</a>:</p>
+<div class="codehilite"><pre><span class="c1">// yield all prime numbers less than limit. </span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">UnaryFunction</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">primesupto</span><span class="p">(</span><span class="kt">int</span> <span class="n">limit</span><span class="p">,</span> <span class="n">UnaryFunction</span> <span class="n">yield</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+  <span class="k">const</span> <span class="kt">int</span> <span class="n">sqrt_limit</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">limit</span><span class="p">));</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">sqrt_limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
+    <span class="n">yield</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="n">k</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="n">ulim</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">limit</span><span class="p">);</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">ulim</span><span class="p">;</span> <span class="n">k</span> <span class="o">+=</span> <span class="n">n</span><span class="p">)</span> 
+      <span class="c1">//NOTE: &quot;unsigned&quot; is used to avoid an overflow in `k+=n` for `limit` near INT_MAX</span>
+      <span class="n">is_prime</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">sqrt_limit</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+    <span class="n">yield</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
     </p>                        
     
         <p>
@@ -674,15 +697,15 @@ Modernizr.load({
         
             <div class="span4">
         <h2>
-            DiRT Showdown
+            Hello, Montreal. Hello, Ubisoft!
         </h2>
         <p>
             
-                
+                Preperation for my latest 'first day' as I start work for Ubisoft Montréal
             
         </p>
         <p>
-        <a class="btn" href="/games/dirt-showdown/">
+        <a class="btn" href="/blog/hello-montral-hello-ubisoft/">
             Read previous
         </a>
     </p>
@@ -695,18 +718,31 @@ Modernizr.load({
         </h2>
         <p>
             
-            Go back to the index page for games to see all of the pages like this.
+            Go back to the index page for blog to see all of the pages like this.
             Or, skip to the next or previous pages.
         
         </p>
         <p>
-        <a class="btn" href="/games/">
-            Games
+        <a class="btn" href="/blog/">
+            Blog
         </a>
     </p>
     </div>
         
             <div class="span4">
+        <h2>
+            Hello, world!
+        </h2>
+        <p>
+            
+                This is the first blog entry onto my newly made website.
+            
+        </p>
+        <p>
+        <a class="btn" href="/blog/hello-world/">
+            Read next
+        </a>
+    </p>
     </div>
         
     
@@ -728,7 +764,7 @@ Modernizr.load({
     &copy; NathanRossPowell 2013
     </h5>
     <p>
-        This website was last statically updated: 2013, May 4th at 16:35:29 EDT. Which is 20:35:29 UTC/GMT.
+        This website was last statically updated: 2013, May 4th at 16:35:28 EDT. Which is 20:35:28 UTC/GMT.
     </p>
 
                 </footer>

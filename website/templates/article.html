@@ -33,12 +33,26 @@
         {{ article.title|title }}
     </h1>
     <p>
-        {{ article.html|safe }}
+        {{ article.short }}
     </p>                        
+    {{ macros.button_primary( "Bookmarks", "#bookmarks_bar" ) }}
+    {{ macros.button_primary( "Navigation", "#navigation_rows" ) }}
     {% if article.comments %}
         {{ macros.button_primary( "Comments", "#disqus_thread" ) }}
     {% endif %}
 {% endblock boilerplate_hero_unit %}
+
+{% block boilerplate_post_hero_unit %}
+    <hr/>
+    {{ article.html|safe }}
+    <hr/>
+    <h1> Bookmarks </h1>
+    <div class="shr_class shareaholic-show-on-load" id="bookmarks_bar" > </div>
+    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons' id="bookmarks_bar"></div>
+    <hr/>
+    <h1> Navigation </h1>
+    <div id="navigation_rows"></div>
+{% endblock boilerplate_post_hero_unit %}
 
 {% block boilerplate_row %}
     {% if page_selected is equalto( False ) %}
@@ -72,6 +86,27 @@
 {% block boilerplate_body_extra %}
     {% if article.comments %}
         <hr/>
+        <h1> Comments </h1>
         <div id="disqus_thread"></div>
     {% endif %}
 {% endblock boilerplate_body_extra %}
+
+{% block boilerplate_scripts_extra %}
+<script type="text/javascript">
+//<![CDATA[
+  (function() {
+    var shr = document.createElement('script');
+    shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
+    shr.type = 'text/javascript'; shr.async = 'true';
+    shr.onload = shr.onreadystatechange = function() {
+      var rs = this.readyState;
+      if (rs && rs != 'complete' && rs != 'loaded') return;
+      var apikey = '31bc8c4e73516916c418aa093caa7703'
+      try { Shareaholic.init(apikey); } catch (e) {}
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(shr, s);
+  })();
+//]]>
+</script>
+{% endblock boilerplate_scripts_extra %}

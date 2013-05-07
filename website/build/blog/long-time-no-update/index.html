@@ -644,7 +644,25 @@ Modernizr.load({
         Long Time No Update
     </h1>
     <p>
-        <p>Well the website fell away to rot for a bit... Other things were more important, but today I finished a pass on making it nice and shiny again!</p>
+        Well the website fell away to rot for a bit... Other things were more important, but today I finish a payyyyss on making it nice and shiny again!
+    </p>                        
+    <a class="btn btn-primary btn-large" href="#bookmarks_bar">
+            Bookmarks
+        </a>
+    <a class="btn btn-primary btn-large" href="#navigation_rows">
+            Navigation
+        </a>
+    
+        <a class="btn btn-primary btn-large" href="#disqus_thread">
+            Comments
+        </a>
+    
+
+                </div>
+
+                
+    <hr/>
+    <p>Well the website fell away to rot for a bit... Other things were more important, but today I finished a pass on making it nice and shiny again!</p>
 <p>Some effort has gone into fixing the litter errors that crept in last time I tried to optimise the Javascript execution on the pages.
 Along with that and a small redesign and palette change we end up here, with what you see before you.</p>
 <p>Code wise I have been working on a Linux based SDL powered 'game engine'. 
@@ -652,16 +670,14 @@ A typical task for most programmers, and I'm falling into the classic gotchas of
 This is currently in one of my private github repros, but it will surface as soon as some kind of tech demo is working.</p>
 <p>As usual I'm updating my site as a gust of enthusiasm has taken over me. Not sure how long it will last.</p>
 <p>This post was brought to you by: Beer.</p>
-    </p>                        
-    
-        <p>
-        <a class="btn btn-primary btn-large" href="#disqus_thread">
-            Comments
-        </a>
-    </p>
-    
+    <hr/>
+    <h1> Bookmarks </h1>
+    <div class="shr_class shareaholic-show-on-load" id="bookmarks_bar" > </div>
+    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons' id="bookmarks_bar"></div>
+    <hr/>
+    <h1> Navigation </h1>
+    <div id="navigation_rows"></div>
 
-                </div>
 
                 <!-- Example row of columns -->
                 <div class="row">
@@ -725,6 +741,7 @@ This is currently in one of my private github repros, but it will surface as soo
                 
     
         <hr/>
+        <h1> Comments </h1>
         <div id="disqus_thread"></div>
     
 
@@ -737,7 +754,7 @@ This is currently in one of my private github repros, but it will surface as soo
     &copy; NathanRossPowell 2013
     </h5>
     <p>
-        This website was last statically updated: 2013, May 4th at 16:35:28 EDT. Which is 20:35:28 UTC/GMT.
+        This website was last statically updated: 2013, May 6th at 23:17:38 EDT. Which is 03:17:38 UTC/GMT.
     </p>
 
                 </footer>
@@ -754,7 +771,24 @@ This is currently in one of my private github repros, but it will surface as soo
                     s.parentNode.insertBefore(g,s)}(document,'script'));
                 </script>
                 
-                
+<script type="text/javascript">
+//<![CDATA[
+  (function() {
+    var shr = document.createElement('script');
+    shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
+    shr.type = 'text/javascript'; shr.async = 'true';
+    shr.onload = shr.onreadystatechange = function() {
+      var rs = this.readyState;
+      if (rs && rs != 'complete' && rs != 'loaded') return;
+      var apikey = '31bc8c4e73516916c418aa093caa7703'
+      try { Shareaholic.init(apikey); } catch (e) {}
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(shr, s);
+  })();
+//]]>
+</script>
+
             
         
     </body>

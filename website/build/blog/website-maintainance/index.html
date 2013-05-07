@@ -644,21 +644,37 @@ Modernizr.load({
         Website Maintainance
     </h1>
     <p>
-        <p>I updated some colours on the website... oh, and finally added the <a href="http://nathanrosspowell.com/code/personal-website" title="NRP - Code - Personal Website">website source</a> to the code section.</p>
+        I updated some colours on the website... oh, and finally added the website source to the code section
+    </p>                        
+    <a class="btn btn-primary btn-large" href="#bookmarks_bar">
+            Bookmarks
+        </a>
+    <a class="btn btn-primary btn-large" href="#navigation_rows">
+            Navigation
+        </a>
+    
+        <a class="btn btn-primary btn-large" href="#disqus_thread">
+            Comments
+        </a>
+    
+
+                </div>
+
+                
+    <hr/>
+    <p>I updated some colours on the website... oh, and finally added the <a href="http://nathanrosspowell.com/code/personal-website" title="NRP - Code - Personal Website">website source</a> to the code section.</p>
 <p>The colours that I picked for the accents where inside the colour pallette I was working from, but looked pretty gross. I changes them up to use only the blues, greens/yellows from the <a href="http://deletionpedia.dbatley.com/w/index.php?title=Zenburn_%28deleted_28_Apr_2008_at_16:13%29">Zenburn</a> colour scheme which I am in love with for use in a <a href="http://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>.</p>
 <p>I had thought about changing up the CSS to look a bit more modern, but scew it. I don't really have any kind of eye for these things and the site is perfectly functional. What I have decided on is to try and make a generic 'boilerplate' version of the site I developed along with a better method of deploying changes. Why? <strong>SUPER SECRET HIDDEN ANNOUNCEMENT:</strong> Because I have registered another web domain to present actual games that I will theoretically actually make! I have the code section on this site that will be more weighted to programs, tools, experiments, computer science style stuff etc. then this new website will show off the 'finished' goods.</p>
 <p>More info to follow!</p>
 <p>(Also I will try and integrate some kind of spell checker into my deployment flow...)</p>
-    </p>                        
-    
-        <p>
-        <a class="btn btn-primary btn-large" href="#disqus_thread">
-            Comments
-        </a>
-    </p>
-    
+    <hr/>
+    <h1> Bookmarks </h1>
+    <div class="shr_class shareaholic-show-on-load" id="bookmarks_bar" > </div>
+    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons' id="bookmarks_bar"></div>
+    <hr/>
+    <h1> Navigation </h1>
+    <div id="navigation_rows"></div>
 
-                </div>
 
                 <!-- Example row of columns -->
                 <div class="row">
@@ -722,6 +738,7 @@ Modernizr.load({
                 
     
         <hr/>
+        <h1> Comments </h1>
         <div id="disqus_thread"></div>
     
 
@@ -734,7 +751,7 @@ Modernizr.load({
     &copy; NathanRossPowell 2013
     </h5>
     <p>
-        This website was last statically updated: 2013, May 4th at 16:35:28 EDT. Which is 20:35:28 UTC/GMT.
+        This website was last statically updated: 2013, May 6th at 23:17:38 EDT. Which is 03:17:38 UTC/GMT.
     </p>
 
                 </footer>
@@ -751,7 +768,24 @@ Modernizr.load({
                     s.parentNode.insertBefore(g,s)}(document,'script'));
                 </script>
                 
-                
+<script type="text/javascript">
+//<![CDATA[
+  (function() {
+    var shr = document.createElement('script');
+    shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
+    shr.type = 'text/javascript'; shr.async = 'true';
+    shr.onload = shr.onreadystatechange = function() {
+      var rs = this.readyState;
+      if (rs && rs != 'complete' && rs != 'loaded') return;
+      var apikey = '31bc8c4e73516916c418aa093caa7703'
+      try { Shareaholic.init(apikey); } catch (e) {}
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(shr, s);
+  })();
+//]]>
+</script>
+
             
         
     </body>

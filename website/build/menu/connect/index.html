@@ -644,7 +644,25 @@ Modernizr.load({
         Connect
     </h1>
     <p>
-        <p>Feel free to email me via:</p>
+        
+    </p>                        
+    <a class="btn btn-primary btn-large" href="#bookmarks_bar">
+            Bookmarks
+        </a>
+    <a class="btn btn-primary btn-large" href="#navigation_rows">
+            Navigation
+        </a>
+    
+        <a class="btn btn-primary btn-large" href="#disqus_thread">
+            Comments
+        </a>
+    
+
+                </div>
+
+                
+    <hr/>
+    <p>Feel free to email me via:</p>
 <script type="text/javascript">
 //<![CDATA[
 <!--
@@ -670,16 +688,14 @@ while(x=eval(x));
 //-->
 //]]>
 </script>
-    </p>                        
-    
-        <p>
-        <a class="btn btn-primary btn-large" href="#disqus_thread">
-            Comments
-        </a>
-    </p>
-    
+    <hr/>
+    <h1> Bookmarks </h1>
+    <div class="shr_class shareaholic-show-on-load" id="bookmarks_bar" > </div>
+    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons' id="bookmarks_bar"></div>
+    <hr/>
+    <h1> Navigation </h1>
+    <div id="navigation_rows"></div>
 
-                </div>
 
                 <!-- Example row of columns -->
                 <div class="row">
@@ -743,6 +759,7 @@ while(x=eval(x));
                 
     
         <hr/>
+        <h1> Comments </h1>
         <div id="disqus_thread"></div>
     
 
@@ -755,7 +772,7 @@ while(x=eval(x));
     &copy; NathanRossPowell 2013
     </h5>
     <p>
-        This website was last statically updated: 2013, May 4th at 16:35:29 EDT. Which is 20:35:29 UTC/GMT.
+        This website was last statically updated: 2013, May 6th at 23:17:39 EDT. Which is 03:17:39 UTC/GMT.
     </p>
 
                 </footer>
@@ -772,7 +789,24 @@ while(x=eval(x));
                     s.parentNode.insertBefore(g,s)}(document,'script'));
                 </script>
                 
-                
+<script type="text/javascript">
+//<![CDATA[
+  (function() {
+    var shr = document.createElement('script');
+    shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
+    shr.type = 'text/javascript'; shr.async = 'true';
+    shr.onload = shr.onreadystatechange = function() {
+      var rs = this.readyState;
+      if (rs && rs != 'complete' && rs != 'loaded') return;
+      var apikey = '31bc8c4e73516916c418aa093caa7703'
+      try { Shareaholic.init(apikey); } catch (e) {}
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(shr, s);
+  })();
+//]]>
+</script>
+
             
         
     </body>

@@ -644,7 +644,25 @@ Modernizr.load({
         Other Experience
     </h1>
     <p>
-        <p>Outside of work I am a keep hobbiest programmer. I am keen on learning new ways to solve problems wether it is via learning new frameworks, engines, or completely new (to me) programming paradigms.</p>
+        Othere experience outside of my daily work life.
+    </p>                        
+    <a class="btn btn-primary btn-large" href="#bookmarks_bar">
+            Bookmarks
+        </a>
+    <a class="btn btn-primary btn-large" href="#navigation_rows">
+            Navigation
+        </a>
+    
+        <a class="btn btn-primary btn-large" href="#disqus_thread">
+            Comments
+        </a>
+    
+
+                </div>
+
+                
+    <hr/>
+    <p>Outside of work I am a keep hobbiest programmer. I am keen on learning new ways to solve problems wether it is via learning new frameworks, engines, or completely new (to me) programming paradigms.</p>
 <h1>Python</h1>
 <p>I was introduced to the <a href="http://python.org">Python</a> programming language from my time working at Eutechnyx. It was mainly used for the asset building system scripts. There was a good level of understanding of the language in the office, but only a select set of it's features where regularly used (C written in Python). 
 After some very interesting converstations inside the office I took my learning home and opened my post-graduate C++ programmers mind to all kinds of <em>exotic</em> concepts: List comprehension, generators, descriptors, curries, partial functions and so on.</p>
@@ -659,16 +677,14 @@ After some very interesting converstations inside the office I took my learning 
 <h1>Unity</h1>
 <p><a href="http://unity3d.com">Unity</a> is the engine that I have been doing my game play experiments in. Using Unity I'm able to attach <a href="http://msdn.microsoft.com/en-us/vstudio/hh388566.aspx">C#</a> scripts to objects in the game world and get experimenting with my ideas that I have for game play. It's a very useful tool to remove distraction from the trap of programming a game <em>engine</em> instead of an actual game.</p>
 <p>Hopefully at some point I will be hosting some demos and small games through the Unity we plugin on my site.</p>
-    </p>                        
-    
-        <p>
-        <a class="btn btn-primary btn-large" href="#disqus_thread">
-            Comments
-        </a>
-    </p>
-    
+    <hr/>
+    <h1> Bookmarks </h1>
+    <div class="shr_class shareaholic-show-on-load" id="bookmarks_bar" > </div>
+    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons' id="bookmarks_bar"></div>
+    <hr/>
+    <h1> Navigation </h1>
+    <div id="navigation_rows"></div>
 
-                </div>
 
                 <!-- Example row of columns -->
                 <div class="row">
@@ -719,6 +735,7 @@ After some very interesting converstations inside the office I took my learning 
                 
     
         <hr/>
+        <h1> Comments </h1>
         <div id="disqus_thread"></div>
     
 
@@ -731,7 +748,7 @@ After some very interesting converstations inside the office I took my learning 
     &copy; NathanRossPowell 2013
     </h5>
     <p>
-        This website was last statically updated: 2013, May 4th at 16:35:29 EDT. Which is 20:35:29 UTC/GMT.
+        This website was last statically updated: 2013, May 6th at 23:17:39 EDT. Which is 03:17:39 UTC/GMT.
     </p>
 
                 </footer>
@@ -748,7 +765,24 @@ After some very interesting converstations inside the office I took my learning 
                     s.parentNode.insertBefore(g,s)}(document,'script'));
                 </script>
                 
-                
+<script type="text/javascript">
+//<![CDATA[
+  (function() {
+    var shr = document.createElement('script');
+    shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
+    shr.type = 'text/javascript'; shr.async = 'true';
+    shr.onload = shr.onreadystatechange = function() {
+      var rs = this.readyState;
+      if (rs && rs != 'complete' && rs != 'loaded') return;
+      var apikey = '31bc8c4e73516916c418aa093caa7703'
+      try { Shareaholic.init(apikey); } catch (e) {}
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(shr, s);
+  })();
+//]]>
+</script>
+
             
         
     </body>

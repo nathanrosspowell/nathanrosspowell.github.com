@@ -644,21 +644,37 @@ Modernizr.load({
         Asteroid Escape
     </h1>
     <p>
-        <p>This was my first 'full' game that I made under my own steam. I had been feeling like I had very little to show in the way of a portfolio and I starting to think about applying for placement year jobs.</p>
+        
+    </p>                        
+    <a class="btn btn-primary btn-large" href="#bookmarks_bar">
+            Bookmarks
+        </a>
+    <a class="btn btn-primary btn-large" href="#navigation_rows">
+            Navigation
+        </a>
+    
+        <a class="btn btn-primary btn-large" href="#disqus_thread">
+            Comments
+        </a>
+    
+
+                </div>
+
+                
+    <hr/>
+    <p>This was my first 'full' game that I made under my own steam. I had been feeling like I had very little to show in the way of a portfolio and I starting to think about applying for placement year jobs.</p>
 <p>I gave myself a small twist on the classic game of [Asteroids][ateroid] by introducing gravity pull. When you got into the lower section of the screen (where the image of the planet was) the ships sields would lower and make an annoying alert noise. Too long, and you'd explode losing one life. Leave the danger zone and the shields would recharge.</p>
 <p>A number of pickups where introuced being three sizes of bullet and finally a triple fire laser. You would get points for shooting the asteroids and the high scores would save out to a data file.</p>
 <p>Sadly the code was built against a custom engine written by my lecture at the time and I cannot seem to get the correct libs on my computer to compile it (Visual Studio 2005 and Direct Draw).</p>
 <p>I have a plan to either port the code to another 'engine' or to remake the gameplay in Unity3D.</p>
-    </p>                        
-    
-        <p>
-        <a class="btn btn-primary btn-large" href="#disqus_thread">
-            Comments
-        </a>
-    </p>
-    
+    <hr/>
+    <h1> Bookmarks </h1>
+    <div class="shr_class shareaholic-show-on-load" id="bookmarks_bar" > </div>
+    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons' id="bookmarks_bar"></div>
+    <hr/>
+    <h1> Navigation </h1>
+    <div id="navigation_rows"></div>
 
-                </div>
 
                 <!-- Example row of columns -->
                 <div class="row">
@@ -709,6 +725,7 @@ Modernizr.load({
                 
     
         <hr/>
+        <h1> Comments </h1>
         <div id="disqus_thread"></div>
     
 
@@ -721,7 +738,7 @@ Modernizr.load({
     &copy; NathanRossPowell 2013
     </h5>
     <p>
-        This website was last statically updated: 2013, May 4th at 16:35:29 EDT. Which is 20:35:29 UTC/GMT.
+        This website was last statically updated: 2013, May 6th at 23:17:39 EDT. Which is 03:17:39 UTC/GMT.
     </p>
 
                 </footer>
@@ -738,7 +755,24 @@ Modernizr.load({
                     s.parentNode.insertBefore(g,s)}(document,'script'));
                 </script>
                 
-                
+<script type="text/javascript">
+//<![CDATA[
+  (function() {
+    var shr = document.createElement('script');
+    shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
+    shr.type = 'text/javascript'; shr.async = 'true';
+    shr.onload = shr.onreadystatechange = function() {
+      var rs = this.readyState;
+      if (rs && rs != 'complete' && rs != 'loaded') return;
+      var apikey = '31bc8c4e73516916c418aa093caa7703'
+      try { Shareaholic.init(apikey); } catch (e) {}
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(shr, s);
+  })();
+//]]>
+</script>
+
             
         
     </body>

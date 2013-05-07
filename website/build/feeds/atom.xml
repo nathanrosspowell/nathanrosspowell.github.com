@@ -346,7 +346,7 @@ This is currently in one of my private github repros, but it will surface as soo
   <atom:entry>
     <atom:title>Hello, World!</atom:title>
     <atom:id>http://nathanrosspowell.com/blog/hello-world/</atom:id>
-    <atom:updated></atom:updated>
+    <atom:updated>2012-01-01T00:00:12+00:00</atom:updated>
     <atom:link href="http://nathanrosspowell.com/blog/hello-world/"/>
     <atom:summary>This is the first blog entry onto my newly made website.</atom:summary>
     <atom:content type="html">

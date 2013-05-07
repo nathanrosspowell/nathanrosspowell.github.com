@@ -36,8 +36,10 @@
     <p>
         {{ article.short }}
     </p>                        
-    <hr/>
-    Posted: {{ makedate( article.date ) }}
+    {% if article.date %}
+        <hr/>
+        Posted: {{ makedate( article.date ) }}
+    {% endif %}
     <hr/>
     {{ macros.button_primary( "Bookmarks", "#bookmarks_heading" ) }}
     {{ macros.button_primary( "Navigation", "#navigation_heading" ) }}

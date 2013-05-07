@@ -32,13 +32,17 @@
     <h1>
         {{ article.title|title }}
     </h1>
+    <hr/>
     <p>
         {{ article.short }}
     </p>                        
-    {{ macros.button_primary( "Bookmarks", "#bookmarks_bar" ) }}
-    {{ macros.button_primary( "Navigation", "#navigation_rows" ) }}
+    <hr/>
+    Posted: {{ makedate( article.date ) }}
+    <hr/>
+    {{ macros.button_primary( "Bookmarks", "#bookmarks_heading" ) }}
+    {{ macros.button_primary( "Navigation", "#navigation_heading" ) }}
     {% if article.comments %}
-        {{ macros.button_primary( "Comments", "#disqus_thread" ) }}
+        {{ macros.button_primary( "Comments", "#disqus_heading" ) }}
     {% endif %}
 {% endblock boilerplate_hero_unit %}
 
@@ -46,12 +50,10 @@
     <hr/>
     {{ article.html|safe }}
     <hr/>
-    <h1> Bookmarks </h1>
-    <div class="shr_class shareaholic-show-on-load" id="bookmarks_bar" > </div>
-    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons' id="bookmarks_bar"></div>
+    <h1 id="bookmark_heading"> Bookmarks </h1>
+    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons'></div>
     <hr/>
-    <h1> Navigation </h1>
-    <div id="navigation_rows"></div>
+    <h1 id="navigation_heading"> Navigation </h1>
 {% endblock boilerplate_post_hero_unit %}
 
 {% block boilerplate_row %}
@@ -86,7 +88,7 @@
 {% block boilerplate_body_extra %}
     {% if article.comments %}
         <hr/>
-        <h1> Comments </h1>
+        <h1 id="disqus_heading"> Comments </h1>
         <div id="disqus_thread"></div>
     {% endif %}
 {% endblock boilerplate_body_extra %}

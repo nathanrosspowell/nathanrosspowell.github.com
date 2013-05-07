@@ -48,6 +48,7 @@ def compute( x, type, y ):
 app.jinja_env.tests.update( compute = compute )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def makedate( value ):
+    value = value[ :10 ].replace( "-", "/" )
     ret = ""
     year = ""
     month = ""
@@ -56,10 +57,10 @@ def makedate( value ):
         if i == 0:
             year = part
         elif i == 1:
-            month = ", %s" % getdate( part, "month" )
+            month = getdate( part, "month" )
         elif i == 2:
             day = getdate( part, "day" )
-    return "%s%s %s" % ( year, month, day )
+    return "%s, %s %s" % ( year, month, day )
 app.jinja_env.globals.update( makedate = makedate )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def getdate( value, type ):

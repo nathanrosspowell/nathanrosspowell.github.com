@@ -1,9 +1,7 @@
-source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/games/dirt-showdown.md"
-named: dirt-showdown
 title: DiRT Showdown
-url: games/dirt-showdown
+template: game.html
 comments: True
-published: May 2012
+released: 2012/05/01
 release: major
 cover: "png/cover-dirt-showdown.png"
 cv: True

@@ -1,12 +1,8 @@
-source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/games/watch_dogs.md"
-named: "watch_dogs"
 title: "Watch_Dogs"
-published: "2013/02/09"
-time: "21:24:19"
-w3c: "2013-02-09T21:24:19-04:00"
-url: "games/watch_dogs"
+template: game.html
+date: "2013-02-09T21:24:19-04:00"
 comments: True
-published: Future Release 
+released: Future Release 
 release: major
 cover: "jpg/cover-watch-dogs.jpg"
 cv: False

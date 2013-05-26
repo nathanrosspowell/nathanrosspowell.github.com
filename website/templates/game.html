@@ -1,0 +1,35 @@
+{% extends "article.html" %}
+{% import "macros.html" as macros %}
+{% import "slider_js.js" as slider %}
+
+{% block article_load %}
+    {% include "slider_link.js" %}
+{% endblock article_load %}
+
+{% block article_complete%}
+    {% autoescape false %}
+        {{ slider.js( article.mediabar ) }}
+    {% endautoescape %}
+{% endblock article_complete%}
+
+{% block article_pre %}
+    {% if article.mediabar %}
+        <hr/>
+        <p id="mediabar">
+            {{ article.title }} Media
+			<ul id="slider1">
+                {% for data in article.mediabar %}
+                    <li>
+                        {% if data.type is equalto( "youtube" ) %}
+                            {{ macros.youtube( data.src ) }}
+                        {% elif data.type is equalto( "image" ) %}
+                            {{ macros.image( data.src ) }}
+                        {% elif data.type is equalto( "gametrailer" ) %}
+                            {{ macros.gametrailer( data.src ) }}
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </p>
+    {% endif %}
+{% endblock article_pre %}

@@ -1,0 +1,6 @@
+"sliderthemecss"        : "{{ url_for( ".static", filename="css/theme-metallic.css" ) }}",
+"anythingslidercss"     : "{{ url_for( ".static", filename="css/anythingslider.css" ) }}",
+"swfobjectjs"           : "{{ url_for( ".static", filename="js/swfobject.js" ) }}",
+"jqueryeasingjs"        : "{{ url_for( ".static", filename="js/jquery.easing.1.2.js" ) }}",
+"anythingsliderjs"      : "{{ url_for( ".static", filename="js/jquery.anythingslider.min.js" ) }}",
+"anythingslidervideojs" : "{{ url_for( ".static", filename="js/jquery.anythingslider.video.min.js" ) }}",

@@ -1,8 +1,13 @@
 source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/menu/connect.md"
-named: connect
-title: Connect
+title: About Me
 comments: True
 
+Bio
+===
+I am a [computer programmer][career] who makes a living working on [video games][games], which happens to be a very nice job. 
+
+Connect
+=======
 Feel free to email me via:
 
 <script type="text/javascript">
@@ -30,3 +35,22 @@ while(x=eval(x));
 //-->
 //]]>
 </script>
+
+Blogroll
+========
+* [Elliot Powell][elliot] - My brother, talented dancer, singer, performer. The _Mentalist_.
+* [Chris Douglass][doug] - The MMAthlete, pro fighter Chris "The Body" Douglass.
+* [Ryan Anderson][randle] - Touring cyclist and Toon lover.
+* [Dom Taylor][poppadom] - Line drawer and shape buster.
+* [Peter Alexander][peter] - Programmer, Mac gamer, _D_ lover.
+* [Matt Lacey][lacey] - Reggae Reggae Source Control expert.
+
+
+[career]: http://nathanrosspowell.com/career "Nathan's Career"
+[games]: http://nathanrosspowell.com/games "Nathan's Games"
+[elliot]: http://elliotpowell.co.uk "Brother and Dancer"
+[doug]: http://doug-the-body.blogspot.co.uk "Fighter and statistician"
+[randle]: http://lifeonabike.co.uk "Touring cyclist"
+[poppadom]: http://www.domtaylor.co.uk/ "PoppaDom"
+[lacey]: http://matt-lacey.com "'Dodgy as piss, man!"
+[peter]: http://poita.org "Writes code, makes games"

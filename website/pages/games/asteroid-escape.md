@@ -1,13 +1,10 @@
-source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/games/asteroid-escape.md"
-named: "asteroid-escape"
 title: "Asteroid Escape"
-published: "2012/08/21"
-time: "22:06:23"
-w3c: "2012-08-21T22:06:23-04:00"
-url: "games/asteroid-escape"
+template: game.html
+date: "2012-08-21T22:06:23-04:00"
 comments: True
-published: No
+released: N/A
 release: minor 
+template: "game.html"
 tags:
 - games
 

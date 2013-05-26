@@ -32,10 +32,12 @@
     <h1>
         {{ article.title|title }}
     </h1>
+    {% if article.short %}
     <hr/>
-    <p>
-        {{ article.short }}
-    </p>                        
+        <p>
+            {{ article.short }}
+        </p>                        
+    {% endif %}
     {% if article.date %}
         <hr/>
         Posted: {{ makedate( article.date ) }}
@@ -49,9 +51,13 @@
 {% endblock boilerplate_hero_unit %}
 
 {% block boilerplate_post_hero_unit %}
+    {% block article_pre %}
+    {% endblock article_pre %}
     <hr/>
     {{ article.html|safe }}
     <hr/>
+    {% block article_post %}
+    {% endblock article_post %}
     <h1 id="bookmark_heading"> Bookmarks </h1>
     <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons'></div>
     <hr/>
@@ -59,6 +65,8 @@
 {% endblock boilerplate_post_hero_unit %}
 
 {% block boilerplate_row %}
+    {% block article_pre_row %}
+    {% endblock article_pre_row %}
     {% if page_selected is equalto( False ) %}
         {% set link = url_for( ".index" ) %}
         {% call macros.row_span( "Home", "Home", link ) %}
@@ -85,6 +93,8 @@
             {{ macros.row_span_empty() }}
         {% endif %}
     {% endif %}
+    {% block article_post_row %}
+    {% endblock article_post_row %}
 {% endblock boilerplate_row %}
 
 {% block boilerplate_body_extra %}

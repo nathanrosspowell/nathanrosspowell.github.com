@@ -1,12 +1,9 @@
-source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/games/snake-3d.md"
-named: "snake-3d"
 title: "Snake 3D"
-published: "2012/08/21"
+template: game.html
 time: "22:07:35"
-w3c: "2012-08-21T22:07:35-04:00"
-url: "games/snake-3d"
+date: "2012-08-21T22:07:35-04:00"
 comments: True
-published: No
+released: N/A
 release: minor 
 tags:
 - games

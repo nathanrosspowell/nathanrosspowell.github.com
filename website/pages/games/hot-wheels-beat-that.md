@@ -1,10 +1,7 @@
-source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/games/hot-wheels-beat-that.md"
-named: hot-wheels-beat-that
 title: "Hot Wheels: Beat That!"
-published: 2012/07/14
-url: games/hot-wheels-beat-that
+template: game.html
 comments: True
-published: September 2007
+released: September 2007
 release: major
 cover: "jpg/cover-hot-wheels.jpg"
 cv: True

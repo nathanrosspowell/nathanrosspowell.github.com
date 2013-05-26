@@ -23,4 +23,4 @@ tags:
 
 'Everything is connected. Connection is power.'
 
-Watch Dogs developed and published by Ubisoft. Welcome to the Fan Page! Platforms: Xbox 360, PS3, PC. Release Date: TBA
+Watch Dogs developed and published by Ubisoft.

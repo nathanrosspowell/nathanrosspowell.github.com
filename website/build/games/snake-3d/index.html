@@ -43,7 +43,13 @@ Modernizr.load({
     
     "codehilitecss" : "/static/css/codehilite.css", 
     
-    
+    "sliderthemecss"        : "/static/css/theme-metallic.css",
+"anythingslidercss"     : "/static/css/anythingslider.css",
+"swfobjectjs"           : "/static/js/swfobject.js",
+"jqueryeasingjs"        : "/static/js/jquery.easing.1.2.js",
+"anythingsliderjs"      : "/static/js/jquery.anythingslider.min.js",
+"anythingslidervideojs" : "/static/js/jquery.anythingslider.video.min.js",
+
 
 
     },
@@ -77,6 +83,27 @@ Modernizr.load({
     
     
     
+        // Set up Sliders
+// **************
+$(function(){
+
+    $("#slider1").anythingSlider({
+        theme               : "metallic",
+        easing              : "easeInOutBack",
+        mode                : "f",   // fade mode - new in v1.8!
+        resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
+        navigationFormatter : function(index, panel){
+            return [
+                
+            ][index - 1];
+        },
+        onSlideComplete : function(slider){
+            // alert("Welcome to Slide #" + slider.currentPage);
+        }
+    });
+});
+    
+
 
 
     }
@@ -115,8 +142,8 @@ Modernizr.load({
                     <li
         
     >
-        <a href="/connect/">
-            Connect
+        <a href="/about_me/">
+            About Me
         </a>
     </li>
                 
@@ -410,40 +437,8 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/ride-to-hell/">
-            Ride To Hell
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-             class="active"
-         
-    >
-        <a href="/games/snake-3d/">
-            Snake 3D
-        </a>
-    </li>
-                        
-                    
-                    
-                
-                
-                    <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/games/watch_dogs/">
-            Watch_Dogs
+        <a href="/games/dirt-showdown/">
+            Dirt Showdown
         </a>
     </li>
                         
@@ -478,119 +473,10 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/dirt-showdown/">
-            Dirt Showdown
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
         <a href="/games/operation-flashpoint-red-river/">
             Operation Flashpoint: Red River
         </a>
     </li>
-                        
-                    
-                    
-                
-            
-        </ul>
-    </li>
-         
-    
-         
-             
-            
-            <li
-        
-            class="dropdown"
-         
-    >
-        <a href="/menu/" class="dropdown-toggle" data-toggle="dropdown">
-            Menu
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            
-                 
-                <li
-        
-    >
-        <a href="/menu/">
-            Index page
-        </a>
-    </li>
-                
-                    <li class="divider"></li>
-                    <li class="nav-header">Pages</li>
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/menu/bio/">
-            Bio
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/menu/career/">
-            Career
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/menu/code/">
-            Code
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/menu/connect/">
-            Connect
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/menu/credits-short/">
-            Credits
-        </a>
-    </li>
-                        
-                    
-                         
-                        
                         
                     
                          
@@ -609,7 +495,7 @@ Modernizr.load({
                         <li
         
     >
-        <a href="/menu/">
+        <a href="/games/">
             ... more pages
         </a>
     </li>
@@ -643,10 +529,10 @@ Modernizr.load({
     <h1>
         Snake 3D
     </h1>
-    <hr/>
-    <p>
-        
-    </p>                        
+    
+    
+        <hr/>
+        Posted: 2012, Aug 21st
     
     <hr/>
     <a class="btn btn-primary btn-large" href="#bookmarks_heading">
@@ -664,12 +550,17 @@ Modernizr.load({
                 </div>
 
                 
+    
+    
+
     <hr/>
     <p>Snake 3D was my design for my 'Gamecube Programming' module in Uni. I wanted to take the two dimensional playing field of a normal game of [snake][snake] and add one more dimension to it so that it was taking place inside of a cube.</p>
 <p>I learned a great deal about how interesting ideas do not always turn out to be fun game play wise! Traversing the extra dimension was not easy for a player to get their head around and extra markers had to be made help indicate depth in the wireframe grid/cube/level.</p>
 <p>Luckily as it was a programming assigment I managed to tick all of the game requirements and get good marks. Still to this day I am puzzled over how it would be best to navigate the three dimensions whithout the average player losing their bearings.</p>
 <p>Hopefully I will be able to find the files to run it in an emulator of some sorts to get some screen caps.</p>
     <hr/>
+    
+    
     <h1 id="bookmark_heading"> Bookmarks </h1>
     <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons'></div>
     <hr/>
@@ -679,6 +570,8 @@ Modernizr.load({
                 <!-- Example row of columns -->
                 <div class="row">
                     
+    
+    
     
         
             <div class="span4">
@@ -732,6 +625,8 @@ Modernizr.load({
     </div>
         
     
+    
+    
 
                 </div>
 
@@ -751,7 +646,7 @@ Modernizr.load({
     &copy; NathanRossPowell 2013
     </h5>
     <p>
-        This website was last statically updated: 2013, May 6th at 23:50:21 EDT. Which is 03:50:21 UTC/GMT.
+        This website was last statically updated: 2013, May 26nd at 15:32:09 EDT. Which is 19:32:09 UTC/GMT.
     </p>
 
                 </footer>

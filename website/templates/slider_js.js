@@ -5,8 +5,6 @@
 $(function(){
 
     $("#slider1").anythingSlider({
-        theme               : "metallic",
-        easing              : "easeInOutBack",
         resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
         navigationFormatter : function(index, panel){
             return [

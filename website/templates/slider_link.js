@@ -3,4 +3,3 @@
 "anythingslidercss"     : "{{ url_for( ".static", filename="css/anythingslider.css" ) }}",
 "anythingsliderjs"      : "{{ url_for( ".static", filename="js/jquery.anythingslider.min.js" ) }}",
 "anythingslidervideojs" : "{{ url_for( ".static", filename="js/jquery.anythingslider.video.min.js" ) }}",
-"sliderthemecss"        : "{{ url_for( ".static", filename="css/theme-metallic.css" ) }}",

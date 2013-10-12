@@ -34,7 +34,7 @@
 }
 /* Navigation buttons + start/stop button, default state */
 .anythingSlider-metallic .anythingControls a {
-	background: transparent url(../images/arrows-metallic.png) -68px -40px repeat-x;
+	background: transparent url("../png/arrows-metallic.png") -68px -40px repeat-x;
 	color: #000;
 	border: #000 1px solid;
 	border-radius: 5px;
@@ -130,7 +130,7 @@
 	margin: -47.5px 0 0 0; /* half height of image */
 	text-align: center;
 	outline: 0;
-	background: url(../images/arrows-metallic.png) no-repeat;
+	background: url("../png/arrows-metallic.png)" no-repeat;
 }
 
 /* back arrow */

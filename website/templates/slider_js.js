@@ -7,7 +7,6 @@ $(function(){
     $("#slider1").anythingSlider({
         theme               : "metallic",
         easing              : "easeInOutBack",
-        mode                : "f",   // fade mode - new in v1.8!
         resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
         navigationFormatter : function(index, panel){
             return [

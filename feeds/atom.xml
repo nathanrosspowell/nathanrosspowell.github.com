@@ -590,7 +590,7 @@ case "first":
 break;
 }
 });
-u.initPlugin(jQuery("#unityPlayer")[0], "Web.unity3d");
+u.initPlugin(jQuery("#unityPlayer")[0], "../../static/unity3d/Web.unity3d");
 });
 -->
 </script>

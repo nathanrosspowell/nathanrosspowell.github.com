@@ -45,7 +45,7 @@
                 {{ macros.menu_link_item( "Index page", drop_link, active and no_page ) }}
                 {% if value[ 0 ]|length > 0 %}
                     <li class="divider"></li>
-                    <li class="nav-header">Pages</li>
+                    <li class="dropdown-header text-primary">Pages</li>
                     {% for data in value[ 0 ] %}
                         {% set page_active = page_selected is equalto( data.path ) %} 
                         {% set page_link = url_for( "page", page_path = data.path ) %}
@@ -59,7 +59,7 @@
                 {% endif %}
                 {% if value[ 1 ]|length > 0 %}
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Articles</li>
                     {% for data in value[ 1 ]  %}
                         {% set page_active = page_selected is equalto( data.path ) %} 
                         {% set page_link = url_for( "page", page_path = data.path ) %}

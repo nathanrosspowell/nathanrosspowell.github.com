@@ -1,7 +1,7 @@
 import os
 import sqlite3
 from contextlib import closing
-from flaskext.flatpages import FlatPages
+from flask_flatpages import FlatPages
 from flask import   \
 Flask,              \
 request,            \

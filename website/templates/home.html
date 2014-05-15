@@ -44,34 +44,8 @@ Nathan
     {% endcall %}
     {% call macros.row_span( "Twitter", "Follow me", "http://twitter.com/" + twitter_name ) %}
 
-<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'profile',
-  rpp: 5,
-  interval: 30000,
-  width: 'auto',
-  height: 300,
-  theme: {
-    shell: {
-      background: '#333333',
-      color: '#f2ecd5'
-    },
-    tweets: {
-      background:'#41363C',
-      color: '#f2ecd5',
-      links: '#8CD0D3'
-    }
-  },
-  features: {
-    scrollbar: false,
-    loop: false,
-    live: false,
-    behavior: 'all'
-  }
-}).render().setUser('{{ twitter_name }}').start();
-</script>
+<a class="twitter-timeline" href="https://twitter.com/{{ twitter_name }}" data-widget-id="389099304515690496">Tweets by @nathanross</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
     {% endcall %}
     {% call macros.row_span( "Last.fm", "My charts", "http://www.last.fm/user/" + lastfm_name ) %}

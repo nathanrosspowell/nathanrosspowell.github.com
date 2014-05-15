@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            
+            
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+
+        
+        
+
+        
+        
+
+        <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script>
+//<![CDATA[
+<!--
+Modernizr.load({
+    load : {
+        
+            'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+        
+        'bootstrap' : "/static/js/vendor/bootstrap.min.js",
+        
+    
+    "codehilitecss" : "/static/css/codehilite.css", 
+    
+    "jqueryeasingjs"        : "/static/js/jquery.easing.1.2.js",
+"swfobjectjs"           : "/static/js/swfobject.js",
+"anythingslidercss"     : "/static/css/anythingslider.css",
+"anythingsliderjs"      : "/static/js/jquery.anythingslider.min.js",
+"anythingslidervideojs" : "/static/js/jquery.anythingslider.video.min.js",
+
+
+
+    },
+    callback : {
+        
+    
+    
+    
+
+
+    },
+    complete : function() {
+        
+            if ( !window.jQuery ) {
+                Modernizr.load('js/libs/jquery-1.9.1.min.js');
+            }
+            
+        Modernizr.load('/static/js/main.js');
+        
+    
+    
+        var disqus_shortname = 'nathanrosspowell';
+        var disqus_url = "http://nathanrosspowell.com";
+        var disqus_identifier = "";
+        var disqus_title = "";
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    
+    
+    
+        // Set up Sliders
+// **************
+$(function(){
+
+    $("#slider1").anythingSlider({
+        resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
+        navigationFormatter : function(index, panel){
+            return [
+                
+                    "Elimiator game mode",
+                
+                    "Gametrailers review",
+                
+                    "Race game mode",
+                
+                    "Launch trailer",
+                
+                    "Gymkhana replay",
+                
+                    "Gameplay trailer",
+                
+                    "Damage physics",
+                
+            ][index - 1];
+        },
+        onSlideComplete : function(slider){
+            // alert("Welcome to Slide #" + slider.currentPage);
+        }
+    });
+});
+    
+
+
+
+    }
+});
+//-->
+//]]>
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">
+    NathanRossPowell 
+</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    
+    
+        
+            
+                
+                    
+                     
+                    <li
+        
+    >
+        <a href="/about_me/">
+            About Me
+        </a>
+    </li>
+                
+            
+            
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown">
+            Blog
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/blog/">
+            Index page
+        </a>
+    </li>
+                
+                
+                    <li class="divider"></li>
+                    <li class="dropdown-header text-primary">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/erlang/">
+            Erlang
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/website-maintainance/">
+            Website Maintainance
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/long-time-no-update/">
+            Long Time No Update
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/functional-one-liner/">
+            Functional One Liner
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/project-euler/">
+            Project Euler
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                    
+                        <li
+        
+    >
+        <a href="/blog/">
+            ... more pages
+        </a>
+    </li>
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/career/" class="dropdown-toggle" data-toggle="dropdown">
+            Career
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/career/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="dropdown-header text-primary">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/cv/">
+            Curriculum Vitae
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/cv_pdf/">
+            Curriculum Vitae Pdf Link
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/career/other-experience/">
+            Other Experience
+        </a>
+    </li>
+                        
+                    
+                    
+                
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+            class="dropdown"
+         
+    >
+        <a href="/code/" class="dropdown-toggle" data-toggle="dropdown">
+            Code
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/code/">
+            Index page
+        </a>
+    </li>
+                
+                
+                    <li class="divider"></li>
+                    <li class="dropdown-header text-primary">Articles</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/code/personal-website/">
+            Personal Website
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/code/project-euler/">
+            Project Euler
+        </a>
+    </li>
+                        
+                    
+                    
+                
+            
+        </ul>
+    </li>
+         
+    
+         
+             
+            
+            <li
+        
+             class="dropdown active"
+         
+    >
+        <a href="/games/" class="dropdown-toggle" data-toggle="dropdown">
+            Games
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            
+                 
+                <li
+        
+    >
+        <a href="/games/">
+            Index page
+        </a>
+    </li>
+                
+                    <li class="divider"></li>
+                    <li class="dropdown-header text-primary">Pages</li>
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/asteroid-escape/">
+            Asteroid Escape
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+             class="active"
+         
+    >
+        <a href="/games/dirt-showdown/">
+            Dirt Showdown
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/ferrari-the-race-experience/">
+            Ferrari The Race Experince
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That!
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                         
+                        
+                        
+                    
+                    
+                        <li
+        
+    >
+        <a href="/games/">
+            ... more pages
+        </a>
+    </li>
+                    
+                
+                
+            
+        </ul>
+    </li>
+         
+    
+
+                  </ul>
+                  
+    <form class="navbar-form navbar-right" role="form" method="get" action="http://www.google.com/search">
+        <div class="form-group">
+            <input class="form-control" type="text" name="q" placeholder="Site search..." />
+            <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
+        </div>
+        <div class="form-group">
+            <button type="submit" value="Google Search" class="btn">Search</button>
+        </div>
+    </form>
+
+                </div><!--/.nav-collapse -->
+              </div>
+            </div>
+
+        <div class="navbar-collapse collapse">
+        
+        </div><!--/.navbar-collapse -->
+
+            <div class="container">
+
+                <!-- Main hero unit for a primary marketing message or call to action -->
+                <div class="jumbotron">
+                    <div class="container">
+                        
+    <h1>
+        Dirt Showdown
+    </h1>
+    
+    
+    <hr/>
+    <a class="btn btn-primary btn-large" href="#bookmarks_heading">
+            Bookmarks
+        </a>
+    <a class="btn btn-primary btn-large" href="#navigation_heading">
+            Navigation
+        </a>
+    
+        <a class="btn btn-primary btn-large" href="#disqus_heading">
+            Comments
+        </a>
+    
+
+                    </div>
+                </div>
+
+                
+    
+    
+        <hr/>
+        <p id="mediabar">
+            DiRT Showdown Media
+			<ul id="slider1">
+                
+                    <li>
+                        
+                             
+
+<img src="/static/png/dirt-showdown-screen-4.png"
+style="max-width:600px"
+/>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <!--iframe src="http://media.mtvnservices.com/embed/mgid:arc:video:gametrailers.com:3b374ed0-fa21-44cc-acff-d3e3dc829cb0" width="560" height="315" frameborder="0"></iframe-->
+
+<embed wmode="opaque" width="560" height="315" src="http://media.mtvnservices.com/mgid:arc:video:gametrailers.com:3b374ed0-fa21-44cc-acff-d3e3dc829cb0"  quality="high" bgcolor="000000" name="efp" align="middle" type="application/x-shockwave-flash"  pluginspage="http://www.macromedia.com/go/getflashplayer"  flashvars="autoPlay=false"  allowfullscreen="true"></embed>
+                        
+                    </li>
+                
+                    <li>
+                        
+                             
+
+<img src="/static/jpg/dirt-showdown-screen-3.jpg"
+style="max-width:600px"
+/>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <iframe title="YouTube video player" width="560" height="315" src="http://www.youtube.com/embed/4wtFta60FQI" frameborder="0" allowfullscreen></iframe>
+                        
+                    </li>
+                
+                    <li>
+                        
+                             
+
+<img src="/static/jpg/dirt-showdown-screen-2.jpg"
+style="max-width:600px"
+/>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <iframe title="YouTube video player" width="560" height="315" src="http://www.youtube.com/embed/qveoRp8Vlrs" frameborder="0" allowfullscreen></iframe>
+                        
+                    </li>
+                
+                    <li>
+                        
+                             
+
+<img src="/static/jpg/dirt-showdown-screen-5.jpg"
+style="max-width:600px"
+/>
+                        
+                    </li>
+                
+            </ul>
+        </p>
+    
+
+    <hr/>
+    <p>DiRT Showdown is the new arcade racing game from the team that brought you the award-winning DiRT series, uncaged in 2012. Pick up and play controls combine with electrifying events, frenzied crowds and stunning graphics to deliver high octane, dive in and drive thrills from event one.</p>
+<p>SPEED, STYLE AND DESTRUCTION – LET LOOSE ON A TOUR OF MOTORISED MAYHEM:</p>
+<p>NO HOLDS BARRED RACING EVENTS - Trade paint and use nitrous to blast past rivals in DiRT Showdown’s racing modes. Courses are littered with obstacles, pinch points, multiple-routes and ramps to deliver adrenaline-fuelled racing across spectacular courses.</p>
+<p>BONE CRUNCHING DEMOLITION DERBY EVENTS - Crash, smash and bash your way through a range of demolition derby events, pushing our stunning damage engine to its spectacular limits.</p>
+<p>EDGE OF CONTROL HOONIGAN EVENTS - A new accessible handling system lets you go wild in free-roaming, freestyle stunt parks. Compounds flooded with obstacles play host to a range of new challenges, from performing trick runs to competitive stunt events, explorations challenges and more.</p>
+<p>DiRT Showdown comes with phenomenal graphical performance, bone-jarring damage, and social online and split-screen multiplayer as standard. Welcome to DiRT Showdown - a new world of driving delirium.</p>
+    <hr/>
+    
+    
+    <h1 id="bookmark_heading"> Bookmarks </h1>
+    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons'></div>
+    <hr/>
+    <h1 id="navigation_heading"> Navigation </h1>
+
+
+                <!-- Example row of columns -->
+                <div class="row">
+                    
+    
+    
+    
+        
+            <div class="col-md-4">
+        <h2>
+            Asteroid Escape
+        </h2>
+        <p>
+            
+                
+            
+        </p>
+        <p>
+        <a class="btn" href="/games/asteroid-escape/">
+            Read previous
+        </a>
+    </p>
+    </div>
+        
+        
+        <div class="col-md-4">
+        <h2>
+            Index Page
+        </h2>
+        <p>
+            
+            Go back to the index page for games to see all of the pages like this.
+            Or, skip to the next or previous pages.
+        
+        </p>
+        <p>
+        <a class="btn" href="/games/">
+            Games
+        </a>
+    </p>
+    </div>
+        
+            <div class="col-md-4">
+        <h2>
+            Ferrari The Race Experince
+        </h2>
+        <p>
+            
+                
+            
+        </p>
+        <p>
+        <a class="btn" href="/games/ferrari-the-race-experience/">
+            Read next
+        </a>
+    </p>
+    </div>
+        
+    
+    
+    
+
+                </div>
+
+                
+    
+        <hr/>
+        <h1 id="disqus_heading"> Comments </h1>
+        <div id="disqus_thread"></div>
+    
+
+
+                <hr>
+
+                <footer>
+                    
+    <h5>
+    &copy; NathanRossPowell 2014
+    </h5>
+    <p>
+        This website was last statically updated: 2014, May 14th at 23:10:46 EDT. Which is 03:10:46 UTC/GMT.
+    </p>
+
+                </footer>
+
+            </div> <!-- /container -->
+            
+
+                <script>
+                    var _gaq=[['_setAccount','
+    UA-33462621-1
+'],['_trackPageview']];
+                    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                    s.parentNode.insertBefore(g,s)}(document,'script'));
+                </script>
+                
+<script type="text/javascript">
+//<![CDATA[
+  (function() {
+    var shr = document.createElement('script');
+    shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
+    shr.type = 'text/javascript'; shr.async = 'true';
+    shr.onload = shr.onreadystatechange = function() {
+      var rs = this.readyState;
+      if (rs && rs != 'complete' && rs != 'loaded') return;
+      var apikey = '31bc8c4e73516916c418aa093caa7703'
+      try { Shareaholic.init(apikey); } catch (e) {}
+    };
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(shr, s);
+  })();
+//]]>
+</script>
+
+            
+        
+    </body>
+</html>

@@ -1,3 +1,5 @@
+code/personal-website
+code/project-euler
 blog/erlang
 blog/website-maintainance
 blog/long-time-no-update
@@ -6,5 +8,3 @@ blog/project-euler
 blog/hello-montral-hello-ubisoft
 blog/syntax-highlight-test
 blog/hello-world
-code/project-euler
-code/personal-website

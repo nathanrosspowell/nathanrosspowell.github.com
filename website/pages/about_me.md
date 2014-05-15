@@ -2,6 +2,9 @@ source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev
 title: About Me
 comments: True
 
+<p><a href="http://imgur.com/WOllJ"><img class="img-responsive img-thumbnail" src="http://imgur.com/60QayFc.png" alt="My face herp derp" title="My face herp derp" /></a></p>
+
+
 Bio
 ===
 I am a [computer programmer][career] who makes a living working on [video games][games], which happens to be a very nice job. 

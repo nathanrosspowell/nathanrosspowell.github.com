@@ -100,15 +100,23 @@ Modernizr.load({
                     {% endblock boilerplate_navbar %}
                   </ul>
                   {% block boilerplate_form %}
-                        <form class="navbar-form pull-right">
-                            <input class="span2" type="text" placeholder="Email">
-                            <input class="span2" type="password" placeholder="Password">
-                            <button type="submit" class="btn">Sign in</button>
-                        </form>
-                    {% endblock boilerplate_form %}
+                     <form class="navbar-form navbar-right" role="form">
+                         <div class="form-group">
+                           <input type="text" placeholder="Email" class="form-control">
+                         </div>
+                         <div class="form-group">
+                           <input type="password" placeholder="Password" class="form-control">
+                         </div>
+                        <button type="submit" class="btn btn-success">Sign in</button>
+                    </form>
+                  {% endblock boilerplate_form %}
                 </div><!--/.nav-collapse -->
               </div>
             </div>
+
+        <div class="navbar-collapse collapse">
+        
+        </div><!--/.navbar-collapse -->
 
             <div class="container">
 

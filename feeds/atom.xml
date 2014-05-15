@@ -1,7 +1,7 @@
 <atom:feed xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:id>http://nathanrosspowell.com/</atom:id>
   <atom:title>NathanRossPowell</atom:title>
-  <atom:updated>2013-10-12T16:53:40-04:00</atom:updated>
+  <atom:updated>2014-05-14T23:10:43-04:00</atom:updated>
   <atom:link href="http://nathanrosspowell.com/feeds/atom.xml" rel="self"/>
 
   <atom:author>
@@ -9,6 +9,43 @@
     <atom:email>nathanrosspowell@gmail.com</atom:email>
   </atom:author>
 
+  
+  <atom:entry>
+    <atom:title>Personal Website</atom:title>
+    <atom:id>http://nathanrosspowell.com/code/personal-website/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/code/personal-website/"/>
+    <atom:summary>This very website! A static pages site delevoped with Flash and Frozen Flask python software and hosted on GitHub Pages</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ 
+
+        <p>This is the source for the second personal website that I wrote from scratch, but the very first that made it online. Previously I had played with the Django web framework. While Django is very powerful, it was a bit much for my usage. </p>
+<p>After learning of the Jekyll software which serves up static websites I looked for a python equivalent (as that is something I am comfortable with) and found the Frozen Flask app for the Flask framework. The rest is, as they say, history.</p>
+        <p><a title="Comments" href="http://nathanrosspowell.com/code/personal-website/#disqus_thread">Comments</a></p>
+
+        ]]>
+    </atom:content>
+    <atom:category term="code"/>
+    
+  </atom:entry>
+  
+  <atom:entry>
+    <atom:title>Project Euler</atom:title>
+    <atom:id>http://nathanrosspowell.com/code/project-euler/</atom:id>
+    <atom:updated></atom:updated>
+    <atom:link href="http://nathanrosspowell.com/code/project-euler/"/>
+    <atom:summary>A Set of code challenges solved in various programming languages. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.</atom:summary>
+    <atom:content type="html">
+        <![CDATA[ 
+
+        <p>Vist my GitHub <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">repro</a> to see all the latest code. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.</p>
+        <p><a title="Comments" href="http://nathanrosspowell.com/code/project-euler/#disqus_thread">Comments</a></p>
+
+        ]]>
+    </atom:content>
+    <atom:category term="code"/>
+    
+  </atom:entry>
   
   <atom:entry>
     <atom:title>Erlang</atom:title>
@@ -25,8 +62,8 @@ I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Er
 <span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">start</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
 
 <span class="nf">start</span><span class="p">()</span> <span class="o">-&gt;</span>
-    <span class="nv">Result</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="n">sum</span><span class="p">([</span> <span class="nv">X</span> <span class="p">||</span> <span class="nv">X</span> <span class="o">&lt;-</span> <span class="nn">lists</span><span class="p">:</span><span class="n">seq</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">999</span> <span class="p">),</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">3</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">5</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]),</span>
-    <span class="nn">io</span><span class="p">:</span><span class="n">fwrite</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~w</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Result</span><span class="p">]).</span>
+    <span class="nv">Result</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">sum</span><span class="p">([</span> <span class="nv">X</span> <span class="p">||</span> <span class="nv">X</span> <span class="o">&lt;-</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">seq</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">999</span> <span class="p">),</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">3</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">5</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]),</span>
+    <span class="nn">io</span><span class="p">:</span><span class="nf">fwrite</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~w</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Result</span><span class="p">]).</span>
 </pre></div>
         <p><a title="Comments" href="http://nathanrosspowell.com/blog/erlang/#disqus_thread">Comments</a></p>
 
@@ -259,7 +296,7 @@ This is currently in one of my private github repros, but it will surface as soo
 
         <p>This is the test for code syntax highlighting from markdown source.</p>
 <p>Goodbye world in <a href="http://rosettacode.org/wiki/Hello_world#BASIC">BASIC</a>:</p>
-<div class="codehilite"><pre>10 <span class="n">PRINT</span> &quot;<span class="n">Goodbye</span><span class="p">,</span> <span class="n">World</span>!&quot;
+<div class="codehilite"><pre><span class="mi">10</span> <span class="n">PRINT</span> <span class="s">&quot;Goodbye, World!&quot;</span>
 </pre></div>
 
 
@@ -277,7 +314,7 @@ This is currently in one of my private github repros, but it will surface as soo
 <span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">UnaryFunction</span><span class="o">&gt;</span>
 <span class="kt">void</span> <span class="n">primesupto</span><span class="p">(</span><span class="kt">int</span> <span class="n">limit</span><span class="p">,</span> <span class="n">UnaryFunction</span> <span class="n">yield</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
 
   <span class="k">const</span> <span class="kt">int</span> <span class="n">sqrt_limit</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">limit</span><span class="p">));</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">sqrt_limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
@@ -286,7 +323,7 @@ This is currently in one of my private github repros, but it will surface as soo
 
     <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="n">k</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="n">ulim</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">limit</span><span class="p">);</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">ulim</span><span class="p">;</span> <span class="n">k</span> <span class="o">+=</span> <span class="n">n</span><span class="p">)</span> 
       <span class="c1">//NOTE: &quot;unsigned&quot; is used to avoid an overflow in `k+=n` for `limit` near INT_MAX</span>
-      <span class="n">is_prime</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="n">is_prime</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
     <span class="p">}</span>
 
   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">sqrt_limit</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="p">;</span> <span class="o">++</span><span class="n">n</span><span class="p">)</span>
@@ -322,302 +359,6 @@ This is currently in one of my private github repros, but it will surface as soo
         ]]>
     </atom:content>
     <atom:category term="update"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Personal Website</atom:title>
-    <atom:id>http://nathanrosspowell.com/code/personal-website/</atom:id>
-    <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/code/personal-website/"/>
-    <atom:summary>This very website! A static pages site delevoped with Flash and Frozen Flask python software and hosted on GitHub Pages</atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>This is the source for the second personal website that I wrote from scratch, but the very first that made it online. Previously I had played with the Django web framework. While Django is very powerful, it was a bit much for my usage. </p>
-<p>After learning of the Jekyll software which serves up static websites I looked for a python equivalent (as that is something I am comfortable with) and found the Frozen Flask app for the Flask framework. The rest is, as they say, history.</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/code/personal-website/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="code"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Project Euler</atom:title>
-    <atom:id>http://nathanrosspowell.com/code/project-euler/</atom:id>
-    <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/code/project-euler/"/>
-    <atom:summary>A Set of code challenges solved in various programming languages. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.</atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>Vist my GitHub <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">repro</a> to see all the latest code. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/code/project-euler/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="code"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Watch_Dogs</atom:title>
-    <atom:id>http://nathanrosspowell.com/games/watch_dogs/</atom:id>
-    <atom:updated>2013-02-09T21:24:19-04:00</atom:updated>
-    <atom:link href="http://nathanrosspowell.com/games/watch_dogs/"/>
-    <atom:summary>&#39;Everything is connected. Connection is power.&#39; Watch Dogs developed and published by Ubisoft.</atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>'Everything is connected. Connection is power.'</p>
-<p>Set in Chicago, where a central network of computers connects everyone and everything, Watch_Dogs explores the impact of technology within our society. Using the city as your weapon, you will embark on a personal mission to inflict your own brand of justice.</p>
-<p>Chicago's overarching network is known as the Central Operating System (ctOS), and it controls almost all of the city's technology and information - including key data on all of the city's residents.</p>
-<p>You play as Aiden Pearce, a brilliant hacker and former thug, whose criminal past led to a violent family tragedy. While seeking justice for those events, you'll monitor and hack those around you by manipulating the ctOS from the palm of your hand. You'll access omnipresent security cameras, download personal information to locate a target, control traffic lights and public transportation to stop the enemy... and more.</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/games/watch_dogs/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="games"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Dirt Showdown</atom:title>
-    <atom:id>http://nathanrosspowell.com/games/dirt-showdown/</atom:id>
-    <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/games/dirt-showdown/"/>
-    <atom:summary></atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>DiRT Showdown is the new arcade racing game from the team that brought you the award-winning DiRT series, uncaged in 2012. Pick up and play controls combine with electrifying events, frenzied crowds and stunning graphics to deliver high octane, dive in and drive thrills from event one.</p>
-<p>SPEED, STYLE AND DESTRUCTION – LET LOOSE ON A TOUR OF MOTORISED MAYHEM:</p>
-<p>NO HOLDS BARRED RACING EVENTS - Trade paint and use nitrous to blast past rivals in DiRT Showdown’s racing modes. Courses are littered with obstacles, pinch points, multiple-routes and ramps to deliver adrenaline-fuelled racing across spectacular courses.</p>
-<p>BONE CRUNCHING DEMOLITION DERBY EVENTS - Crash, smash and bash your way through a range of demolition derby events, pushing our stunning damage engine to its spectacular limits.</p>
-<p>EDGE OF CONTROL HOONIGAN EVENTS - A new accessible handling system lets you go wild in free-roaming, freestyle stunt parks. Compounds flooded with obstacles play host to a range of new challenges, from performing trick runs to competitive stunt events, explorations challenges and more.</p>
-<p>DiRT Showdown comes with phenomenal graphical performance, bone-jarring damage, and social online and split-screen multiplayer as standard. Welcome to DiRT Showdown - a new world of driving delirium.</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/games/dirt-showdown/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="games"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Operation Flashpoint: Red River</atom:title>
-    <atom:id>http://nathanrosspowell.com/games/operation-flashpoint-red-river/</atom:id>
-    <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/games/operation-flashpoint-red-river/"/>
-    <atom:summary></atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>Taking a small step into the future, Red River depicts a fictional conflict with contemporary geopolitical themes, which will unfold over three distinct acts in both single player and drop-in-drop-out co-operative play for up to four players online. Faced with new counter-insurgency combat and the returning threat of the Chinese PLA, players will feel the tension, brutality and carnage of modern conflict from the perspective of a marine fireteam on deployment in a hostile country, thousands of miles from home.</p>
-<hr />
-<p>Tajikistan, 2013.</p>
-<p>Between Afghanistan and China, the world’s next flashpoint is about to erupt. The valleys, towns and mountains of Tajikistan will become bloody frontlines for the might of the People’s Liberation Army, insurgent guerrilla fighters and the United States Marine Corps.</p>
-<p>You and your fireteam can make a difference. How much is up to you. It’s not the soldier with the most expensive gun or the biggest heart who wins on the battlefield. It’s the smartest. Semper Fi, Marine.</p>
-<p>Game Features</p>
-<p>Go closer to the experience of the US Marines on campaign with the ultimate tactical infantry shooter</p>
-<p>Stand together with 4 player drop-in drop-out online co-op multiplayer in campaign mode and standalone Fire Team Engagements</p>
-<p>Become immersed in an engrossing narrative which unfolds over three acts in campaign mode</p>
-<p>Play as Grenadier, Scout, Rifleman and Automatic Rifleman classes, each with unique strengths and weaknesses for increased replayability</p>
-<p>Earn and spend XP on weapons, attachments and abilities for each of the fireteam’s specialists</p>
-<p>Call in Combat Support such as Mortars, Howitzers and JDAMs, whilst AH-1Z Helicopters and A-10 Ground Attack Aircraft provide Close Air Support</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/games/operation-flashpoint-red-river/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="games"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Ferrari The Race Experince</atom:title>
-    <atom:id>http://nathanrosspowell.com/games/ferrari-the-race-experience/</atom:id>
-    <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/games/ferrari-the-race-experience/"/>
-    <atom:summary></atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>Ferrari's latest and hottest marques, along with its motors past and present, are poised to vroom onto PlayStation3 with the September 29 launch of Ferrari The Race Experience.</p>
-<p>Ferrari The Race Experience will be available exclusively from the PlayStation Network Store in this major videogames industry breakthrough.  Players of all disciplines – yes, even novices to the track – can recreate the excitement, the sounds, the action and the vibrant colours of real-life racing for hours of motoring enjoyment.</p>
-<p>Poised for action on the starting line are Ferrari’s new much-acclaimed 458 Italia and the powerhouse that is the 599XX. They are just two of the many new models introduced into Ferrari The Race Experience, which follows hot on the wheels of the much-acclaimed Ferrari Challenge that launched two years ago.</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/games/ferrari-the-race-experience/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="games"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Ride To Hell</atom:title>
-    <atom:id>http://nathanrosspowell.com/games/ride-to-hell/</atom:id>
-    <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/games/ride-to-hell/"/>
-    <atom:summary></atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>The game is set in the last years of the roaring 1960’s, a time of Sex, Drugs and Rock ‘N Roll. The biker movement, rock music and the hippie counterculture all add to the fascinating atmosphere to be experienced in ‘Ride to Hell’.<br />
-</p>
-<p>Action loaded from the very start with free roaming environments, players can immerse themselves in the liberty and freedom of riding full throttle with their gang on a multitude of different vehicles through the dusty flats of Western America. Protecting their turf, their brothers and their machines from rival gangs is just a taste of what this epic game will involve.<br />
-</p>
-<p>‘Ride to Hell’ is not for the faint hearted; it’s aimed heavily at the player who wants to become fully involved in the original West Coast biker culture. With its hard drinking, bare knuckle environment, this is as close to the action as you can get.<br />
-</p>
-<p>In a movie style production model, the internal Deep Silver studio is teaming up with leading creative companies such as Eutechnyx, Perspective Studios, and others, to bring the authentic and massive game world of ‘Ride to Hell’ to life.<br />
-</p>
-<p>“The Deep Silver development team has worked on some of the greatest and grittiest, freeform-style games to ever hit the market,” Cathy Tische, Vice President of Sales and Marketing at Deep Silver, Inc. “They are pulling out all the stops to bring the biker gang world alive in Ride to Hell, from the 1960s art style, music and scenery to the completely raw and intense game play.”<br />
-</p>
-<p>"Ride to Hell is one of Deep Silver’s largest global multiplatform game launches to date and one that will put Deep Silver on the map in the US,” says Hannes Seifert, Managing Director at the Deep Silver development studio. “Ride to Hell captures the spirit of the biker movement in the 1960s, while delivering an authentic, action-packed game play experience.”<br />
-</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/games/ride-to-hell/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="games"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Hot Wheels: Beat That!</atom:title>
-    <atom:id>http://nathanrosspowell.com/games/hot-wheels-beat-that/</atom:id>
-    <atom:updated></atom:updated>
-    <atom:link href="http://nathanrosspowell.com/games/hot-wheels-beat-that/"/>
-    <atom:summary>A arcade power-up filled racer.</atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>Put the pedal to the metal and show off your racing skills in "Hot Wheels: Beat That!" Speed, Power, Performance, and Attitude are what determines success here. Choose your car, grab the wheel, and let her rip! Then challenge your friends to "BEAT THAT!" 30 cars authentically modeled directly from Hot Wheels design specs. 12 pulse-pounding tracks and 4 battle arenas. Stunt action with high-flying jumps and high-speed drifting. 5 competitive modes: Race, Eliminator, Rampage, Tournament, and Battle. Collect competitive weaponry as power-ups. Physics-based racing with visible vehicle damage and amazing wipe-outs. [Activision] </p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/games/hot-wheels-beat-that/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="games"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Asteroid Escape</atom:title>
-    <atom:id>http://nathanrosspowell.com/games/asteroid-escape/</atom:id>
-    <atom:updated>2007-01-01T00:00:20-00:00</atom:updated>
-    <atom:link href="http://nathanrosspowell.com/games/asteroid-escape/"/>
-    <atom:summary></atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>This was my first 'full' game that I made under my own steam. I had been feeling like I had very little to show in the way of a portfolio and I starting to think about applying for placement year jobs.</p>
-<p>I gave myself a small twist on the classic game of [Asteroids][ateroid] by introducing gravity pull. When you got into the lower section of the screen (where the image of the planet was) the ships sields would lower and make an annoying alert noise. Too long, and you'd explode losing one life. Leave the danger zone and the shields would recharge.</p>
-<p>A number of pickups where introuced being three sizes of bullet and finally a triple fire laser. You would get points for shooting the asteroids and the high scores would save out to a data file.</p>
-<p>Sadly the code was built against a custom engine written by my lecture at the time and I cannot seem to get the correct libs on my computer to compile it (Visual Studio 2005 and Direct Draw).</p>
-<p>I have a plan to either port the code to another 'engine' or to remake the gameplay in Unity3D.</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/games/asteroid-escape/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="games"/>
-    
-  </atom:entry>
-  
-  <atom:entry>
-    <atom:title>Snake 3D</atom:title>
-    <atom:id>http://nathanrosspowell.com/games/snake-3d/</atom:id>
-    <atom:updated>2012-08-21T22:07:35-04:00</atom:updated>
-    <atom:link href="http://nathanrosspowell.com/games/snake-3d/"/>
-    <atom:summary></atom:summary>
-    <atom:content type="html">
-        <![CDATA[ 
-
-        <p>Snake 3D was my design for my 'Gamecube Programming' module in Uni. I wanted to take the two dimensional playing field of a normal game of [snake][snake] and add one more dimension to it so that it was taking place inside of a cube.</p>
-<p>I learned a great deal about how interesting ideas do not always turn out to be fun game play wise! Traversing the extra dimension was not easy for a player to get their head around and extra markers had to be made help indicate depth in the wireframe grid/cube/level.</p>
-<p>Luckily as it was a programming assigment I managed to tick all of the game requirements and get good marks. Still to this day I am puzzled over how it would be best to navigate the three dimensions whithout the average player losing their bearings.</p>
-<p>Hopefully I will be able to find the files to run it in an emulator of some sorts to get some screen caps.</p>
-<script type="text/javascript">
-<!--
-var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-if (document.location.protocol == 'https:')
-unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
--->
-</script>
-
-<script type="text/javascript">
-<!--
-var config = {
-width: 960, 
-height: 600,
-params: { enableDebugging:"0" }
-
-};
-var u = new UnityObject2(config);
-
-jQuery(function() {
-
-var $missingScreen = jQuery("#unityPlayer").find(".missing");
-var $brokenScreen = jQuery("#unityPlayer").find(".broken");
-$missingScreen.hide();
-$brokenScreen.hide();
-
-u.observeProgress(function (progress) {
-switch(progress.pluginStatus) {
-case "broken":
-$brokenScreen.find("a").click(function (e) {
-e.stopPropagation();
-e.preventDefault();
-u.installPlugin();
-return false;
-});
-$brokenScreen.show();
-break;
-case "missing":
-$missingScreen.find("a").click(function (e) {
-e.stopPropagation();
-e.preventDefault();
-u.installPlugin();
-return false;
-});
-$missingScreen.show();
-break;
-case "installed":
-$missingScreen.remove();
-break;
-case "first":
-break;
-}
-});
-u.initPlugin(jQuery("#unityPlayer")[0], "../../static/unity3d/Web.unity3d");
-});
--->
-</script>
-
-<p class="header"><span>Unity Web Player | </span>Snake3D</p>
-
-<div class="content">
-<div id="unityPlayer">
-<div class="missing">
-<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-</a>
-</div>
-<div class="broken">
-<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
-</a>
-</div>
-</div>
-</div>
-
-<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
-        <p><a title="Comments" href="http://nathanrosspowell.com/games/snake-3d/#disqus_thread">Comments</a></p>
-
-        ]]>
-    </atom:content>
-    <atom:category term="games"/>
     
   </atom:entry>
   

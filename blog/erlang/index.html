@@ -92,20 +92,22 @@ Modernizr.load({
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
         
-            <div class="navbar navbar-fixed-top">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <a type='button' class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <a class="brand" href="/">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">
     NathanRossPowell 
 </a>
-                        <div class="nav-collapse collapse">
-                            <ul class="nav">
-                                
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    
     
         
             
@@ -149,7 +151,7 @@ Modernizr.load({
                 
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Articles</li>
                     
                          
                         
@@ -264,7 +266,7 @@ Modernizr.load({
     </li>
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Pages</li>
+                    <li class="dropdown-header text-primary">Pages</li>
                     
                          
                         
@@ -335,7 +337,7 @@ Modernizr.load({
                 
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Articles</li>
                     
                          
                         
@@ -391,9 +393,8 @@ Modernizr.load({
         </a>
     </li>
                 
-                
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Pages</li>
                     
                          
                         
@@ -401,8 +402,8 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/watch_dogs/">
-            Watch_Dogs
+        <a href="/games/asteroid-escape/">
+            Asteroid Escape
         </a>
     </li>
                         
@@ -425,18 +426,6 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/operation-flashpoint-red-river/">
-            Operation Flashpoint: Red River
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
         <a href="/games/ferrari-the-race-experience/">
             Ferrari The Race Experince
         </a>
@@ -449,8 +438,20 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/ride-to-hell/">
-            Ride To Hell
+        <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That!
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River
         </a>
     </li>
                         
@@ -477,30 +478,39 @@ Modernizr.load({
     </li>
                     
                 
+                
             
         </ul>
     </li>
          
     
 
-                            </ul>
-                            
-    <form class="navbar-form pull-right" method="get" action="http://www.google.com/search">
-        <input class="span2" type="text" name="q" placeholder="Site search..." />
-        <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
-        <button type="submit" value="Google Search" class="btn">Search</button>
+                  </ul>
+                  
+    <form class="navbar-form navbar-right" role="form" method="get" action="http://www.google.com/search">
+        <div class="form-group">
+            <input class="form-control" type="text" name="q" placeholder="Site search..." />
+            <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
+        </div>
+        <div class="form-group">
+            <button type="submit" value="Google Search" class="btn">Search</button>
+        </div>
     </form>
 
-                        </div><!--/.nav-collapse -->
-                    </div>
-                </div>
+                </div><!--/.nav-collapse -->
+              </div>
             </div>
+
+        <div class="navbar-collapse collapse">
+        
+        </div><!--/.navbar-collapse -->
 
             <div class="container">
 
                 <!-- Main hero unit for a primary marketing message or call to action -->
-                <div class="hero-unit">
-                    
+                <div class="jumbotron">
+                    <div class="container">
+                        
     <h1>
         Erlang
     </h1>
@@ -527,6 +537,7 @@ Modernizr.load({
         </a>
     
 
+                    </div>
                 </div>
 
                 
@@ -539,8 +550,8 @@ I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Er
 <span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">start</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
 
 <span class="nf">start</span><span class="p">()</span> <span class="o">-&gt;</span>
-    <span class="nv">Result</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="n">sum</span><span class="p">([</span> <span class="nv">X</span> <span class="p">||</span> <span class="nv">X</span> <span class="o">&lt;-</span> <span class="nn">lists</span><span class="p">:</span><span class="n">seq</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">999</span> <span class="p">),</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">3</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">5</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]),</span>
-    <span class="nn">io</span><span class="p">:</span><span class="n">fwrite</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~w</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Result</span><span class="p">]).</span>
+    <span class="nv">Result</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">sum</span><span class="p">([</span> <span class="nv">X</span> <span class="p">||</span> <span class="nv">X</span> <span class="o">&lt;-</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">seq</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">999</span> <span class="p">),</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">3</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">5</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]),</span>
+    <span class="nn">io</span><span class="p">:</span><span class="nf">fwrite</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~w</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Result</span><span class="p">]).</span>
 </pre></div>
     <hr/>
     
@@ -562,7 +573,7 @@ I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Er
     </div>
         
         
-        <div class="span4">
+        <div class="col-md-4">
         <h2>
             Index Page
         </h2>
@@ -579,7 +590,7 @@ I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Er
     </p>
     </div>
         
-            <div class="span4">
+            <div class="col-md-4">
         <h2>
             Website Maintainance
         </h2>
@@ -614,10 +625,10 @@ I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Er
                 <footer>
                     
     <h5>
-    &copy; NathanRossPowell 2013
+    &copy; NathanRossPowell 2014
     </h5>
     <p>
-        This website was last statically updated: 2013, Nov 19th at 21:43:12 EDT. Which is 01:43:12 UTC/GMT.
+        This website was last statically updated: 2014, May 14th at 23:10:44 EDT. Which is 03:10:44 UTC/GMT.
     </p>
 
                 </footer>

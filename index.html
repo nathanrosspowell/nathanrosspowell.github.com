@@ -80,20 +80,22 @@ Modernizr.load({
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
         
-            <div class="navbar navbar-fixed-top">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <a type='button' class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <a class="brand" href="/">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">
     NathanRossPowell 
 </a>
-                        <div class="nav-collapse collapse">
-                            <ul class="nav">
-                                
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    
     
         
             
@@ -137,7 +139,7 @@ Modernizr.load({
                 
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Articles</li>
                     
                          
                         
@@ -250,7 +252,7 @@ Modernizr.load({
     </li>
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Pages</li>
+                    <li class="dropdown-header text-primary">Pages</li>
                     
                          
                         
@@ -321,7 +323,7 @@ Modernizr.load({
                 
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Articles</li>
                     
                          
                         
@@ -377,9 +379,8 @@ Modernizr.load({
         </a>
     </li>
                 
-                
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Pages</li>
                     
                          
                         
@@ -387,8 +388,8 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/watch_dogs/">
-            Watch_Dogs
+        <a href="/games/asteroid-escape/">
+            Asteroid Escape
         </a>
     </li>
                         
@@ -411,18 +412,6 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/operation-flashpoint-red-river/">
-            Operation Flashpoint: Red River
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
         <a href="/games/ferrari-the-race-experience/">
             Ferrari The Race Experince
         </a>
@@ -435,8 +424,20 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/ride-to-hell/">
-            Ride To Hell
+        <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That!
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River
         </a>
     </li>
                         
@@ -463,30 +464,39 @@ Modernizr.load({
     </li>
                     
                 
+                
             
         </ul>
     </li>
          
     
 
-                            </ul>
-                            
-    <form class="navbar-form pull-right" method="get" action="http://www.google.com/search">
-        <input class="span2" type="text" name="q" placeholder="Site search..." />
-        <input type="hidden"  name="sitesearch" value="" />
-        <button type="submit" value="Google Search" class="btn">Search</button>
+                  </ul>
+                  
+    <form class="navbar-form navbar-right" role="form" method="get" action="http://www.google.com/search">
+        <div class="form-group">
+            <input class="form-control" type="text" name="q" placeholder="Site search..." />
+            <input type="hidden"  name="sitesearch" value="" />
+        </div>
+        <div class="form-group">
+            <button type="submit" value="Google Search" class="btn">Search</button>
+        </div>
     </form>
 
-                        </div><!--/.nav-collapse -->
-                    </div>
-                </div>
+                </div><!--/.nav-collapse -->
+              </div>
             </div>
+
+        <div class="navbar-collapse collapse">
+        
+        </div><!--/.navbar-collapse -->
 
             <div class="container">
 
                 <!-- Main hero unit for a primary marketing message or call to action -->
-                <div class="hero-unit">
-                    
+                <div class="jumbotron">
+                    <div class="container">
+                        
     <h1>
        Nathan's Website 
     </h1>
@@ -500,10 +510,11 @@ Thanks,
 <br/>
 Nathan
     </p>                        
-    <a class="btn btn-primary btn-large" href="/games/watch_dogs/">
-            I&#39;m currently working on Watch_Dogs
+    <a class="btn btn-primary btn-large" href="#">
+            Follow this link
         </a>
 
+                    </div>
                 </div>
 
                 
@@ -512,15 +523,61 @@ Nathan
                 <!-- Example row of columns -->
                 <div class="row">
                     
-    <div class="span4">
+<div class="col-md-4">
+        <h2>
+            Recent Comments
+        </h2>
+        <p>
+            
+
+<div id="recentcomments" class="dsq-widget">
+<script type="text/javascript" src="http://nathanrosspowell.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200">
+    </script>
+</div>
+
+    
+        </p>
+        <p>
+        <a class="btn" href="http://disqus.com/nathanrosspowell">
+            Disqus
+        </a>
+    </p>
+    </div>
+    <div class="col-md-4">
         <h2>
             Twitter
         </h2>
         <p>
             
 
-<a class="twitter-timeline"  href="https://twitter.com/nathanross"  data-widget-id="389099304515690496">Tweets by @nathanross</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 5,
+  interval: 30000,
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#f2ecd5'
+    },
+    tweets: {
+      background:'#41363C',
+      color: '#f2ecd5',
+      links: '#8CD0D3'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    behavior: 'all'
+  }
+}).render().setUser('nathanross').start();
+</script>
 
     
         </p>
@@ -530,7 +587,7 @@ Nathan
         </a>
     </p>
     </div>
-    <div class="span4">
+    <div class="col-md-4">
         <h2>
             Last.fm
         </h2>
@@ -551,25 +608,6 @@ Nathan
         </a>
     </p>
     </div>
-    <div class="span4">
-        <h2>
-            Recent Comments
-        </h2>
-        <p>
-             
-
-<div id="recentcomments" class="dsq-widget"> 
-        <script type="text/javascript" src="http://nathanrosspowell.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200"> </script>
-</div>
-
-    
-        </p>
-        <p>
-        <a class="btn" href="http://disqus.com/nathanrosspowell">
-            Disqus
-        </a>
-    </p>
-    </div>
 
                 </div>
 
@@ -581,10 +619,10 @@ Nathan
                 <footer>
                     
     <h5>
-    &copy; NathanRossPowell 2013
+    &copy; NathanRossPowell 2014
     </h5>
     <p>
-        This website was last statically updated: 2013, Nov 19th at 21:43:12 EDT. Which is 01:43:12 UTC/GMT.
+        This website was last statically updated: 2014, May 14th at 23:10:44 EDT. Which is 03:10:44 UTC/GMT.
     </p>
 
                 </footer>

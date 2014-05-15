@@ -91,25 +91,11 @@ $(function(){
         navigationFormatter : function(index, panel){
             return [
                 
-                    "Cinematic trailer",
-                
-                    "You are being hacked",
-                
-                    "2013 E3 Demo",
-                
-                    "Car Slide",
-                
-                    "15 Min Gameplay Demo",
-                
-                    "Disrupted",
-                
                     "Game Demo Video",
                 
                     "Open world gameplay from the PS4 presentatoin",
                 
                     "Gametrailers Blueprint",
-                
-                    "Pre-orders",
                 
             ][index - 1];
         },
@@ -135,20 +121,22 @@ $(function(){
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
         
-            <div class="navbar navbar-fixed-top">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <a type='button' class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <a class="brand" href="/">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">
     NathanRossPowell 
 </a>
-                        <div class="nav-collapse collapse">
-                            <ul class="nav">
-                                
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    
     
         
             
@@ -192,7 +180,7 @@ $(function(){
                 
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Articles</li>
                     
                          
                         
@@ -305,7 +293,7 @@ $(function(){
     </li>
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Pages</li>
+                    <li class="dropdown-header text-primary">Pages</li>
                     
                          
                         
@@ -376,7 +364,7 @@ $(function(){
                 
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Articles</li>
                     
                          
                         
@@ -432,20 +420,17 @@ $(function(){
         </a>
     </li>
                 
-                
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Pages</li>
                     
                          
                         
                         
                             <li
         
-             class="active"
-         
     >
-        <a href="/games/watch_dogs/">
-            Watch_Dogs
+        <a href="/games/asteroid-escape/">
+            Asteroid Escape
         </a>
     </li>
                         
@@ -468,18 +453,6 @@ $(function(){
                             <li
         
     >
-        <a href="/games/operation-flashpoint-red-river/">
-            Operation Flashpoint: Red River
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
         <a href="/games/ferrari-the-race-experience/">
             Ferrari The Race Experince
         </a>
@@ -492,8 +465,20 @@ $(function(){
                             <li
         
     >
-        <a href="/games/ride-to-hell/">
-            Ride To Hell
+        <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That!
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River
         </a>
     </li>
                         
@@ -520,37 +505,46 @@ $(function(){
     </li>
                     
                 
+                
             
         </ul>
     </li>
          
     
 
-                            </ul>
-                            
-    <form class="navbar-form pull-right" method="get" action="http://www.google.com/search">
-        <input class="span2" type="text" name="q" placeholder="Site search..." />
-        <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
-        <button type="submit" value="Google Search" class="btn">Search</button>
+                  </ul>
+                  
+    <form class="navbar-form navbar-right" role="form" method="get" action="http://www.google.com/search">
+        <div class="form-group">
+            <input class="form-control" type="text" name="q" placeholder="Site search..." />
+            <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
+        </div>
+        <div class="form-group">
+            <button type="submit" value="Google Search" class="btn">Search</button>
+        </div>
     </form>
 
-                        </div><!--/.nav-collapse -->
-                    </div>
-                </div>
+                </div><!--/.nav-collapse -->
+              </div>
             </div>
+
+        <div class="navbar-collapse collapse">
+        
+        </div><!--/.navbar-collapse -->
 
             <div class="container">
 
                 <!-- Main hero unit for a primary marketing message or call to action -->
-                <div class="hero-unit">
-                    
+                <div class="jumbotron">
+                    <div class="container">
+                        
     <h1>
-        Watch_Dogs
+        Watch_dogs
     </h1>
     
     <hr/>
         <p>
-            &#39;Everything is connected. Connection is power.&#39; Watch Dogs developed and published by Ubisoft.
+            &#39;Everything is connected. Connection is power.&#39;. Watch Dogs developed and published by Ubisoft. Welcome to the Fan Page! Platforms: Xbox 360, PS3, PC. Release Date: TBA
         </p>                        
     
     
@@ -570,6 +564,7 @@ $(function(){
         </a>
     
 
+                    </div>
                 </div>
 
                 
@@ -579,48 +574,6 @@ $(function(){
         <p id="mediabar">
             Watch_Dogs Media
 			<ul id="slider1">
-                
-                    <li>
-                        
-                            <iframe title="YouTube video player" width="560" height="315" src="http://www.youtube.com/embed/-tGIB_sWeP8" frameborder="0" allowfullscreen></iframe>
-                        
-                    </li>
-                
-                    <li>
-                        
-                            <img src="http://i.imgur.com/58iOM1J.jpg"
-style="max-width:600px"
-/>
-                        
-                    </li>
-                
-                    <li>
-                        
-                            <iframe title="YouTube video player" width="560" height="315" src="http://www.youtube.com/embed/kPYgXvgS6Ww" frameborder="0" allowfullscreen></iframe>
-                        
-                    </li>
-                
-                    <li>
-                        
-                            <img src="http://i.imgur.com/vRGComs.jpg"
-style="max-width:600px"
-/>
-                        
-                    </li>
-                
-                    <li>
-                        
-                            <iframe title="YouTube video player" width="560" height="315" src="http://www.youtube.com/embed/2HbBxtmCCaI" frameborder="0" allowfullscreen></iframe>
-                        
-                    </li>
-                
-                    <li>
-                        
-                            <img src="http://i.imgur.com/XvaOZBqh.jpg"
-style="max-width:600px"
-/>
-                        
-                    </li>
                 
                     <li>
                         
@@ -636,17 +589,9 @@ style="max-width:600px"
                 
                     <li>
                         
-                            <iframe src="http://media.mtvnservices.com/embed/mgid:arc:video:gametrailers.com:39710f97-659a-44ef-bf83-6fcbff3782b5" width="560" height="315" frameborder="0"></iframe>
+                            <!--iframe src="http://media.mtvnservices.com/embed/mgid:arc:video:gametrailers.com:39710f97-659a-44ef-bf83-6fcbff3782b5" width="560" height="315" frameborder="0"></iframe-->
 
-<!--embed wmode="opaque" width="560" height="315" src="http://media.mtvnservices.com/mgid:arc:video:gametrailers.com:39710f97-659a-44ef-bf83-6fcbff3782b5"  quality="high" bgcolor="000000" name="efp" align="middle" type="application/x-shockwave-flash"  pluginspage="http://www.macromedia.com/go/getflashplayer"  flashvars="autoPlay=false"  allowfullscreen="true"></embed-->
-                        
-                    </li>
-                
-                    <li>
-                        
-                            <img src="http://i.imgur.com/e6dV5TPh.jpg"
-style="max-width:600px"
-/>
+<embed wmode="opaque" width="560" height="315" src="http://media.mtvnservices.com/mgid:arc:video:gametrailers.com:39710f97-659a-44ef-bf83-6fcbff3782b5"  quality="high" bgcolor="000000" name="efp" align="middle" type="application/x-shockwave-flash"  pluginspage="http://www.macromedia.com/go/getflashplayer"  flashvars="autoPlay=false"  allowfullscreen="true"></embed>
                         
                     </li>
                 
@@ -656,9 +601,7 @@ style="max-width:600px"
 
     <hr/>
     <p>'Everything is connected. Connection is power.'</p>
-<p>Set in Chicago, where a central network of computers connects everyone and everything, Watch_Dogs explores the impact of technology within our society. Using the city as your weapon, you will embark on a personal mission to inflict your own brand of justice.</p>
-<p>Chicago's overarching network is known as the Central Operating System (ctOS), and it controls almost all of the city's technology and information - including key data on all of the city's residents.</p>
-<p>You play as Aiden Pearce, a brilliant hacker and former thug, whose criminal past led to a violent family tragedy. While seeking justice for those events, you'll monitor and hack those around you by manipulating the ctOS from the palm of your hand. You'll access omnipresent security cameras, download personal information to locate a target, control traffic lights and public transportation to stop the enemy... and more.</p>
+<p>Watch Dogs developed and published by Ubisoft.</p>
     <hr/>
     
     
@@ -675,11 +618,24 @@ style="max-width:600px"
     
     
         
-            <div class="span4">
+            <div class="col-md-4">
+        <h2>
+            Snake 3D
+        </h2>
+        <p>
+            
+                
+            
+        </p>
+        <p>
+        <a class="btn" href="/games/snake-3d/">
+            Read previous
+        </a>
+    </p>
     </div>
         
         
-        <div class="span4">
+        <div class="col-md-4">
         <h2>
             Index Page
         </h2>
@@ -697,19 +653,6 @@ style="max-width:600px"
     </div>
         
             <div class="span4">
-        <h2>
-            DiRT Showdown
-        </h2>
-        <p>
-            
-                
-            
-        </p>
-        <p>
-        <a class="btn" href="/games/dirt-showdown/">
-            Read next
-        </a>
-    </p>
     </div>
         
     
@@ -731,10 +674,10 @@ style="max-width:600px"
                 <footer>
                     
     <h5>
-    &copy; NathanRossPowell 2013
+    &copy; NathanRossPowell 2014
     </h5>
     <p>
-        This website was last statically updated: 2013, Nov 19th at 21:43:12 EDT. Which is 01:43:12 UTC/GMT.
+        This website was last statically updated: 2014, May 14th at 23:10:46 EDT. Which is 03:10:46 UTC/GMT.
     </p>
 
                 </footer>

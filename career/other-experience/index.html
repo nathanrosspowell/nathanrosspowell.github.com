@@ -92,20 +92,22 @@ Modernizr.load({
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
         
-            <div class="navbar navbar-fixed-top">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <a type='button' class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <a class="brand" href="/">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">
     NathanRossPowell 
 </a>
-                        <div class="nav-collapse collapse">
-                            <ul class="nav">
-                                
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    
     
         
             
@@ -149,7 +151,7 @@ Modernizr.load({
                 
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Articles</li>
                     
                          
                         
@@ -262,7 +264,7 @@ Modernizr.load({
     </li>
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Pages</li>
+                    <li class="dropdown-header text-primary">Pages</li>
                     
                          
                         
@@ -335,7 +337,7 @@ Modernizr.load({
                 
                 
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Articles</li>
                     
                          
                         
@@ -391,9 +393,8 @@ Modernizr.load({
         </a>
     </li>
                 
-                
                     <li class="divider"></li>
-                    <li class="nav-header">Articles</li>
+                    <li class="dropdown-header text-primary">Pages</li>
                     
                          
                         
@@ -401,8 +402,8 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/watch_dogs/">
-            Watch_Dogs
+        <a href="/games/asteroid-escape/">
+            Asteroid Escape
         </a>
     </li>
                         
@@ -425,18 +426,6 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/operation-flashpoint-red-river/">
-            Operation Flashpoint: Red River
-        </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
         <a href="/games/ferrari-the-race-experience/">
             Ferrari The Race Experince
         </a>
@@ -449,8 +438,20 @@ Modernizr.load({
                             <li
         
     >
-        <a href="/games/ride-to-hell/">
-            Ride To Hell
+        <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That!
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River
         </a>
     </li>
                         
@@ -477,30 +478,39 @@ Modernizr.load({
     </li>
                     
                 
+                
             
         </ul>
     </li>
          
     
 
-                            </ul>
-                            
-    <form class="navbar-form pull-right" method="get" action="http://www.google.com/search">
-        <input class="span2" type="text" name="q" placeholder="Site search..." />
-        <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
-        <button type="submit" value="Google Search" class="btn">Search</button>
+                  </ul>
+                  
+    <form class="navbar-form navbar-right" role="form" method="get" action="http://www.google.com/search">
+        <div class="form-group">
+            <input class="form-control" type="text" name="q" placeholder="Site search..." />
+            <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
+        </div>
+        <div class="form-group">
+            <button type="submit" value="Google Search" class="btn">Search</button>
+        </div>
     </form>
 
-                        </div><!--/.nav-collapse -->
-                    </div>
-                </div>
+                </div><!--/.nav-collapse -->
+              </div>
             </div>
+
+        <div class="navbar-collapse collapse">
+        
+        </div><!--/.navbar-collapse -->
 
             <div class="container">
 
                 <!-- Main hero unit for a primary marketing message or call to action -->
-                <div class="hero-unit">
-                    
+                <div class="jumbotron">
+                    <div class="container">
+                        
     <h1>
         Other Experience
     </h1>
@@ -524,6 +534,7 @@ Modernizr.load({
         </a>
     
 
+                    </div>
                 </div>
 
                 
@@ -538,8 +549,7 @@ After some very interesting converstations inside the office I took my learning 
 <h1>Linux &amp; Websites</h1>
 <p>Linux programming was something that I was vasty unawear of. I touched on working with the terminal while in university, but it never really clicked with me. Like most curiosities of mine, the effort to stick at it was missing until I found a good project to sink my teeth into. I was previously working on a <a href="https://www.djangoproject.com">Django</a> based website under Windows 7 but started to run into issues with my Python install, the package manager and othe web tech such as Apache. I made the jump over to Ubuntu and after many days of hair pulling I got the first signs of life out of my website codebase. After some trial and error I was at the point I stopped at on Windows and ran straight onto the battlefield of the <a href="http://en.wikipedia.org/wiki/Editor_war"><em>"Text Editor Wars"</em></a>... A few more weeks and I was able to edit text again indside of <a href="http://vim.org">VIM</a>. Finally after adding some new features to my website I had to find a new version control system. With <a href="http://git-scm.com">Git</a> the stage was set for my to actually work code in a linux enviroment!</p>
 <p>Sadly the Django project never took the the web due how basic it was compaired to the extra cost from the webservice needed to run it. Lucily all of that template knowledge was transfered to <a href="http://flask.pocoo.org/">Flask</a> and [Jinja2][jina] which is what my current dot com is running off; full tech specs on the <a href="http://nathanrosspowell.com/credits">credits</a> page.</p>
-<p>A favorite thing about Linux is that my multiple machines all have access to git and there fore are a few commands from cloning and installing (via a bash script) my entire working enviroment from my <a href="http://github.com/nathanrosspowell/dotfiles">dotfiles</a> repository. The power, speed and <em>simplicity</em> of a CLI has really helped my productivity (cliched Linux claim, I know).<br />
-</p>
+<p>A favorite thing about Linux is that my multiple machines all have access to git and there fore are a few commands from cloning and installing (via a bash script) my entire working enviroment from my <a href="http://github.com/nathanrosspowell/dotfiles">dotfiles</a> repository. The power, speed and <em>simplicity</em> of a CLI has really helped my productivity (cliched Linux claim, I know).  </p>
 <h1>Project Euler</h1>
 <p>To keep my Linux skills sharp I needed some projects and from the recommendation of a friend I found the <em>endless</em> challenge of <a href="http://projecteuler.net">Project Euler</a> to try and get my teeth around. My point of entry for expanding my mind on problem sovling. My <a href="https://github.com/nathanrosspowell/euler/#project-euler">euler</a> Github repro where my current solutions (and work in progresses) can be found. Most are solved with C++ and Python, but I've been starting to use <a href="http://www.haskell.org">Haskell</a> to get to grips with the quirks and advantages of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a>. </p>
 <h1>Unity</h1>
@@ -561,7 +571,7 @@ After some very interesting converstations inside the office I took my learning 
     
     
         
-            <div class="span4">
+            <div class="col-md-4">
         <h2>
             Curriculum Vitae PDF Link
         </h2>
@@ -578,7 +588,7 @@ After some very interesting converstations inside the office I took my learning 
     </div>
         
         
-        <div class="span4">
+        <div class="col-md-4">
         <h2>
             Index Page
         </h2>
@@ -617,10 +627,10 @@ After some very interesting converstations inside the office I took my learning 
                 <footer>
                     
     <h5>
-    &copy; NathanRossPowell 2013
+    &copy; NathanRossPowell 2014
     </h5>
     <p>
-        This website was last statically updated: 2013, Nov 19th at 21:43:12 EDT. Which is 01:43:12 UTC/GMT.
+        This website was last statically updated: 2014, May 14th at 23:10:45 EDT. Which is 03:10:45 UTC/GMT.
     </p>
 
                 </footer>

@@ -90,10 +90,9 @@ Modernizr.load({
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
         
             <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-              <div class="container">
+              <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -499,30 +498,19 @@ Modernizr.load({
               </div>
             </div>
 
-        <div class="navbar-collapse collapse">
-        
-        </div><!--/.navbar-collapse -->
-
             <div class="container">
 
                 <!-- Main hero unit for a primary marketing message or call to action -->
                 <div class="jumbotron">
-                    <div class="container">
-                        
-    <h1>
+                    
+    <h2>
         Hello, Montreal. Hello, Ubisoft!
-    </h1>
+    </h2>
     
-    <hr/>
         <p>
             Preperation for my latest &#39;first day&#39; as I start work for Ubisoft Montréal
         </p>                        
     
-    
-        <hr/>
-        Posted: 2012, Aug 5th
-    
-    <hr/>
     <a class="btn btn-primary btn-large" href="#bookmarks_heading">
             Bookmarks
         </a>
@@ -535,29 +523,26 @@ Modernizr.load({
         </a>
     
 
-                    </div>
                 </div>
 
                 
     
-    
-    <hr/>
-    <p>So tomorrow is the start of a new chapter in my career and life as I will be starting work at Ubisoft Montréal on the muchly anticipated Watch_Dogs video game.</p>
+        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Hello, Montreal. Hello, Ubisoft! - 2012, Aug 5th</h4>
+    </div>
+    <div class="panel-body">
+        <p>So tomorrow is the start of a new chapter in my career and life as I will be starting work at Ubisoft Montréal on the muchly anticipated Watch_Dogs video game.</p>
 <p>I've been in the country for a couple of days now and have just about adapted to the time and the heat.</p>
 <p><a href="http://imgur.com/4X0wz">
 <img class="article" title="Downtown Montréal from the 15th floor of the Trylon" src="http://i.imgur.com/9Vsiu.jpg" alt=""/>
 </a></p>
-<p>Not much else to say for now other than my French is embarrassingly terrible and I feel like a total dingus whenever I try and converse with a Francophone. Time to see if there is any crossover from being multi-lingual in programming languages...</p>
-    <hr/>
+<p>Not much else to say for now other than my French is embarrassingly terrible and I feel like a total dingus whenever I try and converse with a Francophone. Time to see if there is any crossover from being multi-lingual in programming languages...</p><div class="shareaholic-canvas" data-shareaholic-widgets="share_buttons"></div>
+    </div>
+</div>
     
-    
-    <h1 id="bookmark_heading"> Bookmarks </h1>
-    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons'></div>
-    <hr/>
-    <h1 id="navigation_heading"> Navigation </h1>
 
 
-                <!-- Example row of columns -->
                 <div class="row">
                     
     
@@ -565,53 +550,53 @@ Modernizr.load({
     
         
             <div class="col-md-4">
-        <h2>
-            Project Euler
-        </h2>
-        <p>
-            
+        <div class="well">
+            <h4>
+                Project Euler
+            </h4>
+            <p>
+                
                 An update to the compilers used in my Project Euler testbed
             
-        </p>
-        <p>
-        <a class="btn" href="/blog/project-euler/">
+            </p>
+            <a class="btn btn-primary btn-large" href="/blog/project-euler/">
             Read previous
         </a>
-    </p>
+        </div>
     </div>
         
         
         <div class="col-md-4">
-        <h2>
-            Index Page
-        </h2>
-        <p>
-            
+        <div class="well">
+            <h4>
+                Index Page
+            </h4>
+            <p>
+                
             Go back to the index page for blog to see all of the pages like this.
             Or, skip to the next or previous pages.
         
-        </p>
-        <p>
-        <a class="btn" href="/blog/">
+            </p>
+            <a class="btn btn-primary btn-large" href="/blog/">
             Blog
         </a>
-    </p>
+        </div>
     </div>
         
             <div class="col-md-4">
-        <h2>
-            Syntax Highlight Test
-        </h2>
-        <p>
-            
+        <div class="well">
+            <h4>
+                Syntax Highlight Test
+            </h4>
+            <p>
+                
                 This is the test for code syntax highlighting from markdown source.
             
-        </p>
-        <p>
-        <a class="btn" href="/blog/syntax-highlight-test/">
+            </p>
+            <a class="btn btn-primary btn-large" href="/blog/syntax-highlight-test/">
             Read next
         </a>
-    </p>
+        </div>
     </div>
         
     
@@ -622,9 +607,14 @@ Modernizr.load({
 
                 
     
-        <hr/>
-        <h1 id="disqus_heading"> Comments </h1>
+        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4><div id="disqus_heading"> Comments </div></h4>
+    </div>
+    <div class="panel-body">
         <div id="disqus_thread"></div>
+    </div>
+</div>
     
 
 
@@ -632,45 +622,24 @@ Modernizr.load({
 
                 <footer>
                     
-    <h5>
-    &copy; NathanRossPowell 2014
-    </h5>
-    <p>
-        This website was last statically updated: 2014, May 14th at 23:24:08 EDT. Which is 03:24:08 UTC/GMT.
-    </p>
+    <small>
+        &copy; NathanRossPowell 2014.
+        This website was last statically updated: 2014, May 16th at 19:37:08 EDT. Which is 23:37:08 UTC/GMT.
+    </small>
 
                 </footer>
 
             </div> <!-- /container -->
             
-
-                <script>
-                    var _gaq=[['_setAccount','
+            <script>
+                var _gaq=[['_setAccount','
     UA-33462621-1
 '],['_trackPageview']];
-                    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-                    s.parentNode.insertBefore(g,s)}(document,'script'));
-                </script>
-                
-<script type="text/javascript">
-//<![CDATA[
-  (function() {
-    var shr = document.createElement('script');
-    shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
-    shr.type = 'text/javascript'; shr.async = 'true';
-    shr.onload = shr.onreadystatechange = function() {
-      var rs = this.readyState;
-      if (rs && rs != 'complete' && rs != 'loaded') return;
-      var apikey = '31bc8c4e73516916c418aa093caa7703'
-      try { Shareaholic.init(apikey); } catch (e) {}
-    };
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(shr, s);
-  })();
-//]]>
-</script>
-
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+            
             
         
     </body>

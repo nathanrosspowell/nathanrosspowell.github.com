@@ -90,10 +90,9 @@ Modernizr.load({
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
         
             <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-              <div class="container">
+              <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -501,30 +500,19 @@ Modernizr.load({
               </div>
             </div>
 
-        <div class="navbar-collapse collapse">
-        
-        </div><!--/.navbar-collapse -->
-
             <div class="container">
 
                 <!-- Main hero unit for a primary marketing message or call to action -->
                 <div class="jumbotron">
-                    <div class="container">
-                        
-    <h1>
+                    
+    <h2>
         Long Time No Update
-    </h1>
+    </h2>
     
-    <hr/>
         <p>
             Well the website fell away to rot for a bit... Other things were more important, but today I finish a payyyyss on making it nice and shiny again!
         </p>                        
     
-    
-        <hr/>
-        Posted: 2012, Nov 9th
-    
-    <hr/>
     <a class="btn btn-primary btn-large" href="#bookmarks_heading">
             Bookmarks
         </a>
@@ -537,31 +525,28 @@ Modernizr.load({
         </a>
     
 
-                    </div>
                 </div>
 
                 
     
-    
-    <hr/>
-    <p>Well the website fell away to rot for a bit... Other things were more important, but today I finished a pass on making it nice and shiny again!</p>
+        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Long Time No Update - 2012, Nov 9th</h4>
+    </div>
+    <div class="panel-body">
+        <p>Well the website fell away to rot for a bit... Other things were more important, but today I finished a pass on making it nice and shiny again!</p>
 <p>Some effort has gone into fixing the litter errors that crept in last time I tried to optimise the Javascript execution on the pages.
 Along with that and a small redesign and palette change we end up here, with what you see before you.</p>
 <p>Code wise I have been working on a Linux based SDL powered 'game engine'. 
 A typical task for most programmers, and I'm falling into the classic gotchas of over engineering things yadda yadda - end of the day, it's fun.
 This is currently in one of my private github repros, but it will surface as soon as some kind of tech demo is working.</p>
 <p>As usual I'm updating my site as a gust of enthusiasm has taken over me. Not sure how long it will last.</p>
-<p>This post was brought to you by: Beer.</p>
-    <hr/>
+<p>This post was brought to you by: Beer.</p><div class="shareaholic-canvas" data-shareaholic-widgets="share_buttons"></div>
+    </div>
+</div>
     
-    
-    <h1 id="bookmark_heading"> Bookmarks </h1>
-    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons'></div>
-    <hr/>
-    <h1 id="navigation_heading"> Navigation </h1>
 
 
-                <!-- Example row of columns -->
                 <div class="row">
                     
     
@@ -569,53 +554,53 @@ This is currently in one of my private github repros, but it will surface as soo
     
         
             <div class="col-md-4">
-        <h2>
-            Website Maintainance
-        </h2>
-        <p>
-            
+        <div class="well">
+            <h4>
+                Website Maintainance
+            </h4>
+            <p>
+                
                 I updated some colours on the website... oh, and finally added the website source to the code section
             
-        </p>
-        <p>
-        <a class="btn" href="/blog/website-maintainance/">
+            </p>
+            <a class="btn btn-primary btn-large" href="/blog/website-maintainance/">
             Read previous
         </a>
-    </p>
+        </div>
     </div>
         
         
         <div class="col-md-4">
-        <h2>
-            Index Page
-        </h2>
-        <p>
-            
+        <div class="well">
+            <h4>
+                Index Page
+            </h4>
+            <p>
+                
             Go back to the index page for blog to see all of the pages like this.
             Or, skip to the next or previous pages.
         
-        </p>
-        <p>
-        <a class="btn" href="/blog/">
+            </p>
+            <a class="btn btn-primary btn-large" href="/blog/">
             Blog
         </a>
-    </p>
+        </div>
     </div>
         
             <div class="col-md-4">
-        <h2>
-            Functional One Liner
-        </h2>
-        <p>
-            
+        <div class="well">
+            <h4>
+                Functional One Liner
+            </h4>
+            <p>
+                
                 A little Project Euler solution that I'm fond of. I'm also currently taking a smallish python script and trying to make it into a more full featured program with a GUI.
             
-        </p>
-        <p>
-        <a class="btn" href="/blog/functional-one-liner/">
+            </p>
+            <a class="btn btn-primary btn-large" href="/blog/functional-one-liner/">
             Read next
         </a>
-    </p>
+        </div>
     </div>
         
     
@@ -626,9 +611,14 @@ This is currently in one of my private github repros, but it will surface as soo
 
                 
     
-        <hr/>
-        <h1 id="disqus_heading"> Comments </h1>
+        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4><div id="disqus_heading"> Comments </div></h4>
+    </div>
+    <div class="panel-body">
         <div id="disqus_thread"></div>
+    </div>
+</div>
     
 
 
@@ -636,45 +626,24 @@ This is currently in one of my private github repros, but it will surface as soo
 
                 <footer>
                     
-    <h5>
-    &copy; NathanRossPowell 2014
-    </h5>
-    <p>
-        This website was last statically updated: 2014, May 14th at 23:24:08 EDT. Which is 03:24:08 UTC/GMT.
-    </p>
+    <small>
+        &copy; NathanRossPowell 2014.
+        This website was last statically updated: 2014, May 16th at 19:37:08 EDT. Which is 23:37:08 UTC/GMT.
+    </small>
 
                 </footer>
 
             </div> <!-- /container -->
             
-
-                <script>
-                    var _gaq=[['_setAccount','
+            <script>
+                var _gaq=[['_setAccount','
     UA-33462621-1
 '],['_trackPageview']];
-                    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-                    s.parentNode.insertBefore(g,s)}(document,'script'));
-                </script>
-                
-<script type="text/javascript">
-//<![CDATA[
-  (function() {
-    var shr = document.createElement('script');
-    shr.src = '//dtym7iokkjlif.cloudfront.net/assets/pub/shareaholic.js';
-    shr.type = 'text/javascript'; shr.async = 'true';
-    shr.onload = shr.onreadystatechange = function() {
-      var rs = this.readyState;
-      if (rs && rs != 'complete' && rs != 'loaded') return;
-      var apikey = '31bc8c4e73516916c418aa093caa7703'
-      try { Shareaholic.init(apikey); } catch (e) {}
-    };
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(shr, s);
-  })();
-//]]>
-</script>
-
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+            
             
         
     </body>

@@ -53,13 +53,15 @@
 
 {% macro row_span( heading_title, button_title, button_link ) -%}
     <div class="col-md-4">
-        <h2>
-            {{ heading_title }}
-        </h2>
-        <p>
-            {{ caller() }}
-        </p>
-        {{ button( button_title, button_link ) }}
+        <div class="well">
+            <h4>
+                {{ heading_title }}
+            </h4>
+            <p>
+                {{ caller() }}
+            </p>
+            {{ button_primary( button_title, button_link ) }}
+        </div>
     </div>
 {%- endmacro %}
 
@@ -107,3 +109,15 @@ var disqus_title = "{{ page_title }}";
 
 {%- endmacro %}
 
+{% macro panel( title, content ) -%}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>{{ title }}</h4>
+    </div>
+    <div class="panel-body">
+        {{ content }}
+    </div>
+</div>
+
+{%- endmacro %}

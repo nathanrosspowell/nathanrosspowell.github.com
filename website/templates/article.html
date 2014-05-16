@@ -29,20 +29,14 @@
 {% endblock base_complete %}
 
 {% block boilerplate_hero_unit %}
-    <h1>
+    <h2>
         {{ article.title|title }}
-    </h1>
+    </h2>
     {% if article.short %}
-    <hr/>
         <p>
             {{ article.short }}
         </p>                        
     {% endif %}
-    {% if article.date %}
-        <hr/>
-        Posted: {{ makedate( article.date ) }}
-    {% endif %}
-    <hr/>
     {{ macros.button_primary( "Bookmarks", "#bookmarks_heading" ) }}
     {{ macros.button_primary( "Navigation", "#navigation_heading" ) }}
     {% if article.comments %}
@@ -51,17 +45,19 @@
 {% endblock boilerplate_hero_unit %}
 
 {% block boilerplate_post_hero_unit %}
-    {% block article_pre %}
-    {% endblock article_pre %}
-    <hr/>
-    {{ article.html|safe }}
-    <hr/>
-    {% block article_post %}
-    {% endblock article_post %}
-    <h1 id="bookmark_heading"> Bookmarks </h1>
-    <div class='shareaholic-canvas' data-shareaholic-widgets='share_buttons'></div>
-    <hr/>
-    <h1 id="navigation_heading"> Navigation </h1>
+    {% if article.date %}
+        {{
+        macros.panel( 
+            article.title|title + " - " + makedate( article.date ), 
+            article.html|safe + '<div class="shareaholic-canvas" data-shareaholic-widgets="share_buttons"></div>'|safe)
+        }}
+    {% else %}
+        {{
+        macros.panel( 
+            article.title|title, 
+            article.html|safe )
+        }}
+    {% endif %}
 {% endblock boilerplate_post_hero_unit %}
 
 {% block boilerplate_row %}
@@ -99,9 +95,11 @@
 
 {% block boilerplate_body_extra %}
     {% if article.comments %}
-        <hr/>
-        <h1 id="disqus_heading"> Comments </h1>
-        <div id="disqus_thread"></div>
+        {{ 
+        macros.panel( 
+            '<div id="disqus_heading"> Comments </div>'|safe, 
+            '<div id="disqus_thread"></div>'|safe)
+        }}
     {% endif %}
 {% endblock boilerplate_body_extra %}
 

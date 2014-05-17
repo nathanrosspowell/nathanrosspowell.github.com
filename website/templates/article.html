@@ -82,6 +82,14 @@
             article.html|safe )
         }}
     {% endif %}
+    {% if article.readme %}
+      {% set readme = urltomarkdown( article.readme ) %}
+      {{
+        macros.panel( 
+            "Project readme file", 
+            readme|safe )
+        }}
+    {% endif %}
     <div class="well" id="bookmarks_heading">
         <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
     </div>

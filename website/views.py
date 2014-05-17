@@ -24,7 +24,9 @@ redirect,                                   \
 url_for,                                    \
 abort,                                      \
 render_template,                            \
-flash
+flash,                                      \
+Markup
+import markdown
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Markdown set up.
 Markdown(app)
@@ -96,6 +98,10 @@ app.jinja_env.globals.update( getdate = getdate )
 def equalto( x, y ):
     return x == y
 app.jinja_env.tests.update( equalto = equalto )
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def urltomarkdown( url ):
+    return Markup(markdown.markdown(urllib2.urlopen( url ).read()))
+app.jinja_env.globals.update( urltomarkdown = urltomarkdown )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Helpers.
 def directory():

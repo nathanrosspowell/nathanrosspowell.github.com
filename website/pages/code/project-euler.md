@@ -1,4 +1,4 @@
-source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/code/project-euler.md"
+source: "https://github.com/nathanrosspowell/interfacezero/blob/gh-pages/README.md"
 named: "project-euler"
 title: "Project Euler"
 published: "2012/08/09"

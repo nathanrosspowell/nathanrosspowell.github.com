@@ -29,17 +29,15 @@ In the meantime, if you want to get in touch, check out the connect page.
 Thanks,
 <br/>
 Nathan
-    </p>                        
-    {{ macros.button_primary( "Follow this link", "#" ) }}
+    </p>
+    {% set link = url_for( "page", page_path = 'games/watch_dogs' ) %}                        
+    {{ macros.button_primary( "Watch_Dogs", link ) }}
 {% endblock boilerplate_hero_unit %}
 
 {% block boilerplate_row %}
-{% call macros.row_span( "Recent Comments", "Disqus", "http://disqus.com/" + disqus_name ) %}
+    {% call macros.row_span( "Instagram", "Follow me", "http://instagram.com/" + instagram_name ) %}
 
-<div id="recentcomments" class="dsq-widget">
-<script type="text/javascript" src="http://{{ disqus_name }}.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200">
-    </script>
-</div>
+<!-- INSTANSIVE WIDGET --><script src="http://instansive.com/widget/js/instansive.js"></script><iframe src="http://instansive.com/widgets/ud3fa40b31edf1460ef46e6f8dcea675.html" scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 
     {% endcall %}
     {% call macros.row_span( "Twitter", "Follow me", "http://twitter.com/" + twitter_name ) %}
@@ -52,9 +50,31 @@ Nathan
 
 <div>
     <a href="http://www.last.fm/user/{{ lastfm_name }}/?chartstyle=minimalLight">
-        <img src="http://imagegen.last.fm/minimalLight/artists/10/{{ lastfm_name }}.gif" border="0" />
+        <img 
+            src="http://tapmusic.net/lastfm/collage.php?user={{ lastfm_name }}&type=7day&size=2x8&caption=true" 
+            border="0"
+            class="img-responsive" 
+        />
     </a>
 </div>
 
     {% endcall %}
 {% endblock boilerplate_row %}
+
+{% block boilerplate_body_extra %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Recent Comments
+    </div>
+    <div class="panel-body">
+<div id="recentcomments" class="dsq-widget">
+<script 
+    type="text/javascript" 
+    src="http://{{ disqus_name }}.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200">
+</script>
+</div>
+
+    </div>
+</div>
+{% endblock boilerplate_body_extra %}
+

@@ -173,6 +173,7 @@ def base_render_template( template, **kwargs ):
     kwargs[ "disqus_name" ] = app.config[ "DISQUS_NAME" ]
     kwargs[ "twitter_name" ] = app.config[ "TWITTER_NAME" ]
     kwargs[ "lastfm_name" ] = app.config[ "LASTFM_NAME" ]
+    kwargs[ "instagram_name" ] = app.config[ "INSTAGRAM_NAME" ]
     kwargs[ "submenu_page_limit" ] = app.config[ "SUB_MENU_PAGE_LIMIT" ]
     kwargs[ "submenu_article_limit" ] = app.config[ "SUB_MENU_ARTICLE_LIMIT" ]
     article = kwargs.get( "article", False )

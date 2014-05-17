@@ -112,10 +112,12 @@
 {% endblock boilerplate_row %}
 
 {% block boilerplate_footer %}
-    <small>
-        &copy; {{ title }} {{ year }}.
-        This website was last statically updated: {{ date }} at {{ time }}.
-    </small>
+    <div class="well">
+        <small>
+            &copy; {{ title }} {{ year }}.
+            This website was last statically updated: {{ date }} at {{ time }}.
+        </small>
+    </div>
 {% endblock boilerplate_footer %}
 
 {% block boilerplate_google %}

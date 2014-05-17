@@ -90,9 +90,11 @@
             readme|safe )
         }}
     {% endif %}
-    <div class="well" id="bookmarks_heading">
-        <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
-    </div>
+    {% call macros.panel_call( "Bookmarks" ) %}
+        <div class="well" id="bookmarks_heading">
+            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
+        </div>
+    {% endcall %}
 {% endblock boilerplate_post_hero_unit %}
 
 {% block boilerplate_row %}

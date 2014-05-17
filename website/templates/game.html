@@ -3,7 +3,7 @@
 
 {% block article_pre_row %}
     {% if article.mediabar %}
-        <div class="well">
+        {% call macros.panel_call( "Media" ) %}
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
               <ol class="carousel-indicators">
@@ -16,7 +16,6 @@
                     </li>
                 {% endfor %}
               </ol>
-
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
                 {% for data in article.mediabar %}
@@ -38,7 +37,6 @@
                     </div>
                 {% endfor %}
               </div>
-
               <!-- Controls -->
               <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -47,6 +45,6 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
               </a>
             </div>
-        </div>
+        {% endcall %}
     {% endif %}
 {% endblock article_pre_row %}

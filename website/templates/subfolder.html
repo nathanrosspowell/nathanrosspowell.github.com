@@ -33,16 +33,17 @@
                     <p>Pages</p>
                     {% for data in value[ 0 ] %}
                         {% set page_link = url_for( "page", page_path = data.path ) %}
-                        {{ macros.menu_link_item( data.title, page_link ) }}
+                        {{ macros.subfolder_link_item( data.title, page_link ) }}
                     {% endfor %}
                 {% endif %}
                 {% if value[ 1 ]|length > 0 %}
                     <p>Articles</p>
                     {% for data in value[ 1 ] %}
                         {% set page_link = url_for( "page", page_path = data.path ) %}
-                        {{ macros.menu_link_item( data.title, page_link ) }}
                         {% if data.date %}
-                             - {{ data.date}}
+                            {{ macros.subfolder_link_item( data.title, page_link, makedate( data.date ) ) }}
+                        {% else %}
+                            {{ macros.subfolder_link_item( data.title, page_link ) }}
                         {% endif %}
                     {% endfor %}
                 {% endif %}

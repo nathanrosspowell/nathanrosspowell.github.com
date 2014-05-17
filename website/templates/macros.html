@@ -23,7 +23,7 @@
          {% endif %}
     >
         <a href="{{ item_link }}">
-            {{ item_title }}
+            {{ item_title }} {{ extra }}
         </a>
     </li>
 {%- endmacro %}
@@ -35,6 +35,15 @@
 {%- endmacro %}
 {% macro menu_divider() -%}
     <li class="divider"></li>
+{%- endmacro %}
+
+{% macro subfolder_link_item( item_title, item_link, extra ) -%}
+    <li>
+        <a href="{{ item_link }}">
+            {{ item_title }} 
+        </a>
+        {{ extra }}
+    </li>
 {%- endmacro %}
 
 {% macro button_primary( button_title, button_link ) -%}

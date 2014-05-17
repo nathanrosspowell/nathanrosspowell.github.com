@@ -60,6 +60,12 @@
     </p>
 {%- endmacro %}
 
+{% macro button_xs( button_title, button_link ) -%}
+        <a class="btn btn-primary btn-xs" href="{{ button_link }}">
+            {{ button_title }}
+        </a>
+{%- endmacro %}
+
 {% macro row_span( heading_title, button_title, button_link ) -%}
     <div class="col-md-4">
         <div class="panel panel-default">
@@ -145,3 +151,23 @@ var disqus_title = "{{ page_title }}";
 
 {%- endmacro %}
 
+{% macro accordian_call( id, title ) -%}
+
+  <div class="panel-group" id="{{ id }}">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#{{ id }}" href="#{{ id }}-body">
+            {{ title }}<b class="caret"></b>
+          </a>
+        </h4>
+      </div>
+      <div id="{{ id }}-body" class="panel-collapse collapse">
+        <div class="panel-body">
+          {{ caller() }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{%- endmacro %}

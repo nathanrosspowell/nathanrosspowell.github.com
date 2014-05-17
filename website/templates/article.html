@@ -58,10 +58,10 @@
             {{ article.short }}
         </p>                        
     {% endif %}
-    {{ macros.button_primary( "Bookmarks", "#bookmarks_heading" ) }}
-    {{ macros.button_primary( "Navigation", "#navigation_heading" ) }}
+    {{ macros.button_xs( "Navigation", "#navigation_heading" ) }}
+    {{ macros.button_xs( "Bookmarks", "#bookmarks" ) }}
     {% if article.comments %}
-        {{ macros.button_primary( "Comments", "#disqus_heading" ) }}
+        {{ macros.button_xs( "Comments", "#disqus_heading" ) }}
     {% endif %}
 {% endblock boilerplate_hero_unit %}
 
@@ -90,11 +90,6 @@
             readme|safe )
         }}
     {% endif %}
-    {% call macros.panel_call( "Bookmarks" ) %}
-        <div class="well" id="bookmarks_heading">
-            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
-        </div>
-    {% endcall %}
 {% endblock boilerplate_post_hero_unit %}
 
 {% block boilerplate_row %}
@@ -130,12 +125,15 @@
 {% endblock boilerplate_row %}
 
 {% block boilerplate_body_extra %}
+    {% call macros.accordian_call( "bookmarks", "Bookmarks") %}
+        <div class="well" id="bookmarks_heading">
+            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
+        </div>
+    {% endcall %}
     {% if article.comments %}
-        {{ 
-        macros.panel( 
-            '<div id="disqus_heading"> Comments </div>'|safe, 
-            '<div id="disqus_thread"></div>'|safe)
-        }}
+        {% call macros.accordian_call( "comments", '<div id="disqus_heading"></div>Comments'|safe ) %} 
+            <div id="disqus_thread"></div>
+        {% endcall %}
     {% endif %}
 {% endblock boilerplate_body_extra %}
 

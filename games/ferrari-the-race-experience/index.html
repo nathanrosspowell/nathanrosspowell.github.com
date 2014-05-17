@@ -564,14 +564,14 @@ Modernizr.load({
         Ferrari The Race Experince
     </h1>
     
-    <a class="btn btn-primary btn-large" href="#bookmarks_heading">
-            Bookmarks
-        </a>
-    <a class="btn btn-primary btn-large" href="#navigation_heading">
+    <a class="btn btn-primary btn-xs" href="#navigation_heading">
             Navigation
         </a>
+    <a class="btn btn-primary btn-xs" href="#bookmarks">
+            Bookmarks
+        </a>
     
-        <a class="btn btn-primary btn-large" href="#disqus_heading">
+        <a class="btn btn-primary btn-xs" href="#disqus_heading">
             Comments
         </a>
     
@@ -719,18 +719,6 @@ style="max-width:600px"
 </div>
     
     
-    <div class="panel panel-default">
-    <div class="panel-heading">
-        <h4>Bookmarks</h4>
-    </div>
-    <div class="panel-body">
-        
-        <div class="well" id="bookmarks_heading">
-            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
-        </div>
-    
-    </div>
-</div>
 
 
                 <div class="row" id="navigation_heading">
@@ -798,15 +786,45 @@ style="max-width:600px"
                 </div>
 
                 
+    <div class="panel-group" id="bookmarks">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#bookmarks" href="#bookmarks-body">
+            Bookmarks<b class="caret"></b>
+          </a>
+        </h4>
+      </div>
+      <div id="bookmarks-body" class="panel-collapse collapse">
+        <div class="panel-body">
+          
+        <div class="well" id="bookmarks_heading">
+            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
+        </div>
     
-        <div class="panel panel-default">
-    <div class="panel-heading">
-        <h4><div id="disqus_heading"> Comments </div></h4>
+        </div>
+      </div>
     </div>
-    <div class="panel-body">
-        <div id="disqus_thread"></div>
+  </div>
+    
+        <div class="panel-group" id="comments">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#comments" href="#comments-body">
+            <div id="disqus_heading"></div>Comments<b class="caret"></b>
+          </a>
+        </h4>
+      </div>
+      <div id="comments-body" class="panel-collapse collapse">
+        <div class="panel-body">
+           
+            <div id="disqus_thread"></div>
+        
+        </div>
+      </div>
     </div>
-</div>
+  </div>
     
 
 
@@ -815,7 +833,7 @@ style="max-width:600px"
     <div class="well">
         <small>
             &copy; NathanRossPowell 2014.
-            This website was last statically updated: 2014, May 17th at 18:51:04 EDT. Which is 22:51:04 UTC/GMT.
+            This website was last statically updated: 2014, May 17th at 19:10:51 EDT. Which is 23:10:51 UTC/GMT.
         </small>
     </div>
 

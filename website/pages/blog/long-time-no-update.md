@@ -1,7 +1,8 @@
 title: "Long time no update"
 date: "2012-11-09T21:32:21-04:00"
 comments: True
-short: "Well the website fell away to rot for a bit... Other things were more important, but today I finish a payyyyss on making it nice and shiny again!"
+short: "Well the website fell away to rot for a bit... Other things were more important, but today I finish a pass on making it nice and shiny again!"
+showInFeed: True
 tags:
 - update
 

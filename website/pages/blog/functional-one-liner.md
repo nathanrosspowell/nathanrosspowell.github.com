@@ -2,6 +2,7 @@ title: "Functional One Liner"
 date: "2012-08-15T23:06:56-04:00"
 comments: True
 short: A little Project Euler solution that I'm fond of. I'm also currently taking a smallish python script and trying to make it into a more full featured program with a GUI. 
+showInFeed: True
 tags:
 - project-euler
 - python

@@ -2,6 +2,7 @@ title: "Project Euler"
 date: "2012-08-07T21:26:35+00:00"
 comments: True
 short: "An update to the compilers used in my Project Euler testbed"
+showInFeed: True
 tags:
 - project-euler
 - c++

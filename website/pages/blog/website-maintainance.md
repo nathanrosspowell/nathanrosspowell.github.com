@@ -2,6 +2,7 @@ title: "Website Maintainance"
 date: "2013-02-09T20:45:28-04:00"
 comments: True
 short: "I updated some colours on the website... oh, and finally added the website source to the code section"
+showInFeed: True
 tags:
 - website
 - code

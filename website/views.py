@@ -260,7 +260,7 @@ def atom():
     published = []
     for key, ( articles, itemPage ) in create_navbar().items():
         for item in itemPage:
-            if item[ "published" ]:
+            if item.get( "showInFeed", False ):
                 published.append( item[ "path" ] )
     pub = [ pages.get_or_404( itemPath ) for itemPath in published ] 
     try:

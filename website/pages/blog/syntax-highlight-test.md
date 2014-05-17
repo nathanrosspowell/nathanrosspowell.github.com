@@ -2,6 +2,7 @@ title: "Syntax Highlight Test"
 date: "2012-08-04T00:44:54+00:00"
 comments: True
 short: This is the test for code syntax highlighting from markdown source.
+showInFeed: True
 tags:
 - code
 - test

@@ -1,5 +1,4 @@
 title: "Long time no update"
-published: True
 date: "2012-11-09T21:32:21-04:00"
 comments: True
 short: "Well the website fell away to rot for a bit... Other things were more important, but today I finish a payyyyss on making it nice and shiny again!"

@@ -1,7 +1,7 @@
 title: Ferrari The Race Experince
 template: game.html
 comments: True
-released: 2010/08/01
+date: "2010-08-01"
 release: major
 cover: "jpg/cover-ferrari.jpg"
 cv: True

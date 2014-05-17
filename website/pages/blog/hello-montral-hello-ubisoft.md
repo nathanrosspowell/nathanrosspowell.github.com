@@ -1,5 +1,4 @@
 title: "Hello, Montreal. Hello, Ubisoft!"
-published: True
 date: "2012-08-05T21:16:12+00:00"
 comments: True
 short: Preperation for my latest 'first day' as I start work for Ubisoft Montréal 

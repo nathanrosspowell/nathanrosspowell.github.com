@@ -41,6 +41,9 @@
                     {% for data in value[ 1 ] %}
                         {% set page_link = url_for( "page", page_path = data.path ) %}
                         {{ macros.menu_link_item( data.title, page_link ) }}
+                        {% if data.date %}
+                             - {{ data.date}}
+                        {% endif %}
                     {% endfor %}
                 {% endif %}
             {% endif %} 

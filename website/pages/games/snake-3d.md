@@ -1,9 +1,7 @@
 title: "Snake 3D"
 template: game.html
-time: "22:07:35"
-date: "2012-08-21T22:07:35-04:00"
 comments: True
-released: N/A
+date: "2007-02-01"
 release: minor 
 tags:
 - games

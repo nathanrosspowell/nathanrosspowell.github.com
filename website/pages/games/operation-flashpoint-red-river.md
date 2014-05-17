@@ -1,7 +1,7 @@
 title: "Operation Flashpoint: Red River"
 template: game.html
 comments: True
-released: 2011/05/01
+date: "2011-05-01"
 release: major
 cover: "jpg/cover-red-river.jpg"
 cv: True

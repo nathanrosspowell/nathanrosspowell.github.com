@@ -126,22 +126,20 @@ def create_navbar():
             path = os.path.join( key, item )
             itemMeta = pages.get_or_404( path ).meta
             title = itemMeta.get( "title", item )
-            date = itemMeta.get( "date", "1999/12/31" )
-            published = itemMeta.get( "published", False )
-            sort = date if published else title
+            date = itemMeta.get( "date", False )
+            sort = date if date is not False else title
             data = {
                 "title" : title,
                 "path" : path,
                 "date" : date,
-                "published" : published,
                 "sort" : sort,
             }
-            if published: 
+            if date is not False: 
                 dateSort.append( data )    
             else:
                 alphaSort.append( data )
         sorter = lambda k: k[ "sort" ]
-        sortedAlpha = sorted( alphaSort, key=sorter  ) 
+        sortedAlpha = sorted( alphaSort, key=sorter ) 
         sortedDates = sorted( dateSort, key=sorter, reverse=True  )
         navbar[ key ] = ( sortedAlpha, sortedDates )
     return navbar

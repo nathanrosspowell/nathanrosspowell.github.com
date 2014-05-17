@@ -75,9 +75,6 @@
             article.title|title + " - " + makedate( article.date ), 
             article.html|safe)
         }}
-        <div class="well" id="bookmarks_heading">
-            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
-        </div>
     {% else %}
         {{
         macros.panel( 
@@ -85,6 +82,9 @@
             article.html|safe )
         }}
     {% endif %}
+    <div class="well" id="bookmarks_heading">
+        <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
+    </div>
 {% endblock boilerplate_post_hero_unit %}
 
 {% block boilerplate_row %}

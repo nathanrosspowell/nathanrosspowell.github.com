@@ -1,5 +1,4 @@
 title: "Erlang"
-published: True
 date: "2013-02-17T20:13:17-04:00"
 comments: True
 short: "Feeling functional, so I added Erlang to the supported functions in my Project Euler codebase"

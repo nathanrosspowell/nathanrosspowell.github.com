@@ -1,7 +1,7 @@
 title: DiRT Showdown
 template: game.html
 comments: True
-released: 2012/05/01
+date: "2012-05-01"
 release: major
 cover: "png/cover-dirt-showdown.png"
 cv: True

@@ -1,8 +1,7 @@
 title: "Watch_Dogs"
 template: game.html
-date: "2013-02-09T21:24:19-04:00"
 comments: True
-released: Future Release 
+date: "2014-05-27"
 release: major
 cover: "jpg/cover-watch-dogs.jpg"
 cv: False

@@ -1,7 +1,7 @@
 title: "Hot Wheels: Beat That!"
 template: game.html
 comments: True
-released: September 2007
+date: "2007-09-01"
 release: major
 cover: "jpg/cover-hot-wheels.jpg"
 cv: True

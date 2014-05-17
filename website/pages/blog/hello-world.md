@@ -1,6 +1,5 @@
 title: Hello, world!
 short: This is the first blog entry onto my newly made website.
-published: True
 date: "2012-01-01T00:00:12+00:00"
 tags:
 - update

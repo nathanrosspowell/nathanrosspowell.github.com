@@ -1,7 +1,7 @@
 title: Ride To Hell
 template: game.html
 comments: True
-released: N/A
+date: "2009-05-01"
 release: none
 gametrailer: http://www.gametrailers.com/videos/j0pzns/ride-to-hell-teaser
 cover: "jpg/cover-ride-to-hell.jpg"

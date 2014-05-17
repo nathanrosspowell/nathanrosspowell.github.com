@@ -1,9 +1,8 @@
 title: "Asteroid Escape"
 template: game.html
-date: "2012-08-21T22:06:23-04:00"
+date: "2007-08-01"
 comments: True
-released: N/A
-release: minor 
+release: minor
 template: "game.html"
 tags:
 - games

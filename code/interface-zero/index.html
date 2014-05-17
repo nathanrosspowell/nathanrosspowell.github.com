@@ -271,7 +271,7 @@ Modernizr.load({
             
             <li
         
-             class="dropdown active"
+            class="dropdown"
          
     >
         <a href="/career/" class="dropdown-toggle" data-toggle="dropdown">
@@ -309,8 +309,6 @@ Modernizr.load({
                         
                             <li
         
-             class="active"
-         
     >
         <a href="/career/cv_pdf/">
             Curriculum Vitae Pdf Link 
@@ -343,7 +341,7 @@ Modernizr.load({
             
             <li
         
-            class="dropdown"
+             class="dropdown active"
          
     >
         <a href="/code/" class="dropdown-toggle" data-toggle="dropdown">
@@ -369,6 +367,8 @@ Modernizr.load({
                         
                             <li
         
+             class="active"
+         
     >
         <a href="/code/interface-zero/">
             Interface Zero 
@@ -561,11 +561,11 @@ Modernizr.load({
                 <div class="jumbotron">
                     
     <h1>
-        Curriculum Vitae Pdf Link
+        Interface Zero
     </h1>
     
         <p>
-            Link to the CV
+            A mobile first responsive website made to display Interface Zero character sheers and more.
         </p>                        
     
     <a class="btn btn-primary btn-large" href="#bookmarks_heading">
@@ -589,13 +589,90 @@ Modernizr.load({
     
         <div class="panel panel-default">
     <div class="panel-heading">
-        <h4>Curriculum Vitae Pdf Link</h4>
+        <h4>Interface Zero</h4>
     </div>
     <div class="panel-body">
-        <p>Please take a copy of the <a href="http://nathanrosspowell.com/static/pdf/NathanRossPowell-CV.pdf" title="CV PDF">pdf</a> version of the above information.</p>
+        
     </div>
 </div>
     
+    
+      
+      <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Project readme file</h4>
+    </div>
+    <div class="panel-body">
+        <h1>Interface Zero</h1>
+<h2>Digital stats <a href="http://nathanrosspowell.com/interfacezero/">website</a></h2>
+<p><a href="http://rpg.drivethrustuff.com/product/124685/Interface-Zero-20-Full-Metal-Cyberpunk" title="Interface Zero homepage">Interface Zero</a> is a cyberpunk themed pen and paper RPG.
+The character sheets are made up of many stats, so I wanted to digitise them in some way. 
+This repro used the  <code>gh-pages</code> feature of GitHub to provide a website that will be up to date every time a file is updated. 
+The digitised character sheets are laid out in the human friendly data formal <a href="http://yaml.org/" title="YAML specification">YAML</a>.
+The final <a href="http://nathanrosspowell.com/interfacezero/">website</a> is powered by the <a href="https://github.com/twbs/bootstrap">Twitter Bootstrap</a> framework so it is viewed perfectly on all platforms, escpecially mobile.</p>
+<h2>How to add a character</h2>
+<p>Make a copy of one of the YAML files in the <a href="https://github.com/nathanrosspowell/interfacezero/tree/gh-pages/yaml" title="YAML data folder">gh-pages/yaml</a>  folder and rename it as <code>your_character_name.yaml</code>. (Please no spaces)</p>
+<p>Edit the values and, when you are happy with it, add it to that <a href="https://github.com/nathanrosspowell/interfacezero/tree/gh-pages/yaml" title="YAML data folder">folder</a>.
+Finally add that file name to the list in this <a href="https://github.com/nathanrosspowell/interfacezero/blob/gh-pages/js/yaml_lists.js" title="yaml_lists.js">Javascript file</a>. 
+You can do all of this through the web iterface</p>
+<p>To get permission to write directly to this repro contact <a href="http://nathanrosspowell.com/about_me/" title="Link to personal email">me</a>. 
+Alternatively you can fork this repro and issue a pull-request (you are going to have to set up Git on your computer to do this).</p>
+<h2>How to edit YAML</h2>
+<p><a href="http://yaml.org/" title="YAML specification">YAML</a> is a human friendly data serialization standard for all programming languages.
+YAML files use significant whitespace (much like the Python programming language) to group data together. The main notations to recognise are:
+* A map:</p>
+<pre><code>    key: 1
+    anotherKey: 2.0
+    Another Key: Three
+</code></pre>
+<ul>
+<li>
+<p>A list:</p>
+<pre><code>- 1
+- 2.0
+- Three
+</code></pre>
+</li>
+<li>
+<p>Strings (text) which have some extra rules because of the parsing library that is used:</p>
+<pre><code>key0: This is a string no need for quotes
+key1: "A string in quotes"
+key2: 'another string in quotes'
+key3: &gt;
+    This is a multiline string.
+    So you can do as much as you like, as long as it is indented correctly
+key4: "a string that needs 'escaping' because of the quote around that word"
+key5: 'a string that needs "escaping" because of the quote around that word'
+key5: "a string that needs escaping because of the last character :"
+key6: "a string that needs escaping because of the last characer ,"
+key7: "a string that needs escaping because of the last character ,"
+key8: &gt;
+    The multiline string can have 'all' the "crazy" characters it wants ::: ,,, !!!
+</code></pre>
+</li>
+<li>
+<p>Basic nesting:</p>
+<pre><code>id: # A map of main attributes (This is a comment)
+    name: Rodimus Prime
+    race: Autobot
+enemies: # A list of enemies. 
+    - Megatron
+    - Unicron
+friends: # A lists of maps of friend attribues!
+    - name: Ironhide
+      race: Autobot
+    - name: Daniel
+      race: Human
+</code></pre>
+</li>
+</ul>
+<h2>Technology used</h2>
+<ul>
+<li><a href="https://github.com/twbs/bootstrap">Twitter Bootstrap</a></li>
+<li><a href="https://github.com/nodeca/js-yaml">js-yaml</a></li>
+</ul>
+    </div>
+</div>
     
     <div class="well" id="bookmarks_heading">
         <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
@@ -607,20 +684,7 @@ Modernizr.load({
     
     
         
-            <div class="col-md-4">
-        <div class="well">
-            <h4>
-                Curriculum Vitae
-            </h4>
-            <p>
-                
-                
-            
-            </p>
-            <a class="btn btn-primary btn-large" href="/career/cv/">
-            Read previous
-        </a>
-        </div>
+            <div class="span4">
     </div>
         
         
@@ -631,12 +695,12 @@ Modernizr.load({
             </h4>
             <p>
                 
-            Go back to the index page for career to see all of the pages like this.
+            Go back to the index page for code to see all of the pages like this.
             Or, skip to the next or previous pages.
         
             </p>
-            <a class="btn btn-primary btn-large" href="/career/">
-            Career
+            <a class="btn btn-primary btn-large" href="/code/">
+            Code
         </a>
         </div>
     </div>
@@ -644,14 +708,14 @@ Modernizr.load({
             <div class="col-md-4">
         <div class="well">
             <h4>
-                Other Experience
+                Personal Website
             </h4>
             <p>
                 
-                Othere experience outside of my daily work life.
+                This very website! A static pages site delevoped with Flash and Frozen Flask python software and hosted on GitHub Pages
             
             </p>
-            <a class="btn btn-primary btn-large" href="/career/other-experience/">
+            <a class="btn btn-primary btn-large" href="/code/personal-website/">
             Read next
         </a>
         </div>
@@ -681,7 +745,7 @@ Modernizr.load({
     <div class="well">
         <small>
             &copy; NathanRossPowell 2014.
-            This website was last statically updated: 2014, May 17th at 18:26:39 EDT. Which is 22:26:39 UTC/GMT.
+            This website was last statically updated: 2014, May 17th at 18:26:40 EDT. Which is 22:26:40 UTC/GMT.
         </small>
     </div>
 

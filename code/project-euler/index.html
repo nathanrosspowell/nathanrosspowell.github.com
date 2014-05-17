@@ -367,11 +367,9 @@ Modernizr.load({
                         
                             <li
         
-             class="active"
-         
     >
-        <a href="/code/project-euler/">
-            Project Euler 
+        <a href="/code/interface-zero/">
+            Interface Zero 
         </a>
     </li>
                         
@@ -384,6 +382,20 @@ Modernizr.load({
     >
         <a href="/code/personal-website/">
             Personal Website 
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+             class="active"
+         
+    >
+        <a href="/code/project-euler/">
+            Project Euler 
         </a>
     </li>
                         
@@ -584,6 +596,83 @@ Modernizr.load({
     </div>
 </div>
     
+    
+      
+      <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Project readme file</h4>
+    </div>
+    <div class="panel-body">
+        <h1>PROJECT EULER</h1>
+<p><img src="http://projecteuler.net/profile/nathanrosspowell.png" /></p>
+<p>I have been attempting the Project Euler challenges as a learning exercise - 
+primarily to enhance my problem solving skills
+and secondly to aid in the learning of new programming languages.</p>
+<h2>Languages</h2>
+<p>Currently solutions are presented in</p>
+<ul>
+<li>C++</li>
+<li>Python</li>
+<li>Haskell</li>
+<li>D</li>
+<li>Erlang</li>
+<li>Go</li>
+<li>Javascript</li>
+</ul>
+<h2>Installing</h2>
+<p>This repo is tested against these versions</p>
+<ul>
+<li>Ubuntu 12.04 &amp; 11.10</li>
+<li>Python 2.6.6</li>
+<li>GCC 4.4.5</li>
+<li>Clang 2.9</li>
+<li>Glasgow Compiler 6.12.1</li>
+<li>GDC</li>
+<li>Erlang R14B04</li>
+<li>go1</li>
+<li>rhino 1.7</li>
+</ul>
+<p>Call the bash script <code>install.bash</code> to get the needed software.</p>
+<h2>Executing</h2>
+<p>Completed problems will be ran by the testing utility and double checked against the correct answer</p>
+<pre><code>python testing/run.py
+</code></pre>
+<p>To filter the testing add a language (or list of them) and a problem number (or list of them)</p>
+<pre><code>python testing/run.py cpp
+python testing/run.py python
+python testing/run.py cpp python
+python testing/run.py cpp 1
+python testing/run.py cpp 1 2 99 142
+python testing/run.py cpp haskell 1
+python testing/run.py cpp haskell 42 69
+</code></pre>
+<h2>Solutions</h2>
+<p>Nothing here is groundbreaking, super minimal or extremely optimal code.
+The solutions are of the most part coded upto getting the correct answer, then plopped into source control.
+It's the actual completion of the problems that I'm aiming for!</p>
+<h2>To do</h2>
+<ul>
+<li>Make a seperate list of C solution, move C++ to using as much C++11 features as possible.</li>
+<li>Redo testing to allow for multiple solutions in the same language. (functional and imperative solutions, differnt approaches etc.)</li>
+<li>Have different run methods for languages that have the option to be interpreted and compiled.</li>
+<li>Make and store output data from the testing functionalilty<ul>
+<li>Include stats on the best and worst solutions from each language</li>
+<li>Include some kind of graphic</li>
+<li>Make a website with the github pages feature</li>
+</ul>
+</li>
+<li>Better install code</li>
+<li>Languages to add:<ul>
+<li>Rust - tricky to install right now, but nearly at v1.0</li>
+<li>Clojure - missing some Lisp knowledge right now</li>
+<li>Split C and C++ - makes C++ use C++11 features</li>
+<li>Nimrod - seems interesting</li>
+</ul>
+</li>
+</ul>
+    </div>
+</div>
+    
     <div class="well" id="bookmarks_heading">
         <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
     </div>
@@ -594,7 +683,20 @@ Modernizr.load({
     
     
         
-            <div class="span4">
+            <div class="col-md-4">
+        <div class="well">
+            <h4>
+                Personal Website
+            </h4>
+            <p>
+                
+                This very website! A static pages site delevoped with Flash and Frozen Flask python software and hosted on GitHub Pages
+            
+            </p>
+            <a class="btn btn-primary btn-large" href="/code/personal-website/">
+            Read previous
+        </a>
+        </div>
     </div>
         
         
@@ -615,20 +717,7 @@ Modernizr.load({
         </div>
     </div>
         
-            <div class="col-md-4">
-        <div class="well">
-            <h4>
-                personal website
-            </h4>
-            <p>
-                
-                This very website! A static pages site delevoped with Flash and Frozen Flask python software and hosted on GitHub Pages
-            
-            </p>
-            <a class="btn btn-primary btn-large" href="/code/personal-website/">
-            Read next
-        </a>
-        </div>
+            <div class="span4">
     </div>
         
     
@@ -655,7 +744,7 @@ Modernizr.load({
     <div class="well">
         <small>
             &copy; NathanRossPowell 2014.
-            This website was last statically updated: 2014, May 17th at 17:21:00 EDT. Which is 21:21:00 UTC/GMT.
+            This website was last statically updated: 2014, May 17th at 18:26:41 EDT. Which is 22:26:41 UTC/GMT.
         </small>
     </div>
 

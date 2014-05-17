@@ -1,10 +1,12 @@
+/* Pad the body to accomodate the fixed navbar */
+body {
+    padding-top: 70px;
+}
 
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
+/* Stop well going outisde of it's container */
+.well {
+    box-sizing: border-box;
+}
 
 
 

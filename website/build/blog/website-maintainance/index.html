@@ -20,7 +20,25 @@
         
 
         
-        
+    <script type="text/javascript">
+    //<![CDATA[
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = '1c35154b585583fa42b61f13668f5afa';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    //]]>
+    </script>
+
 
         <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script>
@@ -210,23 +228,39 @@ Modernizr.load({
                          
                         
                         
-                    
-                         
-                        
-                        
-                    
-                         
-                        
-                        
-                    
-                    
-                        <li
+                            <li
         
     >
-        <a href="/blog/">
-            ... more pages
+        <a href="/blog/hello-montral-hello-ubisoft/">
+            Hello, Montreal. Hello, Ubisoft!
         </a>
     </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/syntax-highlight-test/">
+            Syntax Highlight Test
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/blog/hello-world/">
+            Hello, World!
+        </a>
+    </li>
+                        
+                    
                     
                 
             
@@ -451,23 +485,39 @@ Modernizr.load({
                          
                         
                         
-                    
-                         
-                        
-                        
-                    
-                         
-                        
-                        
-                    
-                    
-                        <li
+                            <li
         
     >
-        <a href="/games/">
-            ... more pages
+        <a href="/games/ride-to-hell/">
+            Ride To Hell
         </a>
     </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/snake-3d/">
+            Snake 3d
+        </a>
+    </li>
+                        
+                    
+                         
+                        
+                        
+                            <li
+        
+    >
+        <a href="/games/watch_dogs/">
+            Watch_dogs
+        </a>
+    </li>
+                        
+                    
                     
                 
                 
@@ -498,9 +548,9 @@ Modernizr.load({
                 <!-- Main hero unit for a primary marketing message or call to action -->
                 <div class="jumbotron">
                     
-    <h2>
+    <h1>
         Website Maintainance
-    </h2>
+    </h1>
     
         <p>
             I updated some colours on the website... oh, and finally added the website source to the code section
@@ -534,13 +584,16 @@ Modernizr.load({
 <p>The colours that I picked for the accents where inside the colour pallette I was working from, but looked pretty gross. I changes them up to use only the blues, greens/yellows from the <a href="http://deletionpedia.dbatley.com/w/index.php?title=Zenburn_%28deleted_28_Apr_2008_at_16:13%29">Zenburn</a> colour scheme which I am in love with for use in a <a href="http://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>.</p>
 <p>I had thought about changing up the CSS to look a bit more modern, but scew it. I don't really have any kind of eye for these things and the site is perfectly functional. What I have decided on is to try and make a generic 'boilerplate' version of the site I developed along with a better method of deploying changes. Why? <strong>SUPER SECRET HIDDEN ANNOUNCEMENT:</strong> Because I have registered another web domain to present actual games that I will theoretically actually make! I have the code section on this site that will be more weighted to programs, tools, experiments, computer science style stuff etc. then this new website will show off the 'finished' goods.</p>
 <p>More info to follow!</p>
-<p>(Also I will try and integrate some kind of spell checker into my deployment flow...)</p><div class="shareaholic-canvas" data-shareaholic-widgets="share_buttons"></div>
+<p>(Also I will try and integrate some kind of spell checker into my deployment flow...)</p>
     </div>
 </div>
+        <div class="well" id="bookmarks_heading">
+            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
+        </div>
     
 
 
-                <div class="row">
+                <div class="row" id="navigation_heading">
                     
     
     
@@ -619,7 +672,7 @@ Modernizr.load({
     <div class="well">
         <small>
             &copy; NathanRossPowell 2014.
-            This website was last statically updated: 2014, May 16th at 23:33:14 EDT. Which is 03:33:14 UTC/GMT.
+            This website was last statically updated: 2014, May 17th at 15:50:50 EDT. Which is 19:50:50 UTC/GMT.
         </small>
     </div>
 

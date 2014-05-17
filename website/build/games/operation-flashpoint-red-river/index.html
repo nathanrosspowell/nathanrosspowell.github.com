@@ -36,12 +36,7 @@ Modernizr.load({
     
     "codehilitecss" : "/static/css/codehilite.css", 
     
-    "jqueryeasingjs"        : "/static/js/jquery.easing.1.2.js",
-"swfobjectjs"           : "/static/js/swfobject.js",
-"anythingslidercss"     : "/static/css/anythingslider.css",
-"anythingsliderjs"      : "/static/js/jquery.anythingslider.min.js",
-"anythingslidervideojs" : "/static/js/jquery.anythingslider.video.min.js",
-
+    
 
 
     },
@@ -75,38 +70,6 @@ Modernizr.load({
     
     
     
-        // Set up Sliders
-// **************
-$(function(){
-
-    $("#slider1").anythingSlider({
-        resizeContents      : false, // If true, solitary images/objects in the panel will expand to fit the viewport
-        navigationFormatter : function(index, panel){
-            return [
-                
-                    "Promo image",
-                
-                    "Cinematic intro",
-                
-                    "Sniper scope",
-                
-                    "Gametrailers review",
-                
-                    "Squad based gameplay",
-                
-                    "Launch trailer",
-                
-                    "Tactical gameplay",
-                
-            ][index - 1];
-        },
-        onSlideComplete : function(slider){
-            // alert("Welcome to Slide #" + slider.currentPage);
-        }
-    });
-});
-    
-
 
 
     }
@@ -555,6 +518,166 @@ $(function(){
 
                 
     
+    
+        <div class="well">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                
+                    <li data-target="#carousel-example-generic" data-slide-to="1"
+                    
+                        class="active"
+                    
+                    >
+                    </li>
+                
+                    <li data-target="#carousel-example-generic" data-slide-to="2"
+                    
+                    >
+                    </li>
+                
+                    <li data-target="#carousel-example-generic" data-slide-to="3"
+                    
+                    >
+                    </li>
+                
+                    <li data-target="#carousel-example-generic" data-slide-to="4"
+                    
+                    >
+                    </li>
+                
+                    <li data-target="#carousel-example-generic" data-slide-to="5"
+                    
+                    >
+                    </li>
+                
+                    <li data-target="#carousel-example-generic" data-slide-to="6"
+                    
+                    >
+                    </li>
+                
+                    <li data-target="#carousel-example-generic" data-slide-to="7"
+                    
+                    >
+                    </li>
+                
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                
+                    <div class="item
+                    
+                        active
+                     
+                    ">
+                        
+                             
+
+<img src="/static/jpg/red-river-screen-1.jpg"
+style="max-width:600px"
+/>
+                        
+                      <div class="carousel-caption">
+                        Promo image
+                      </div>
+                    </div>
+                
+                    <div class="item
+                     
+                    ">
+                        
+                            <iframe title="YouTube video player" width="560" height="315" src="http://www.youtube.com/embed/K8PyszQuTNY" frameborder="0" allowfullscreen></iframe>
+                        
+                      <div class="carousel-caption">
+                        Cinematic intro
+                      </div>
+                    </div>
+                
+                    <div class="item
+                     
+                    ">
+                        
+                             
+
+<img src="/static/jpg/red-river-screen-3.jpg"
+style="max-width:600px"
+/>
+                        
+                      <div class="carousel-caption">
+                        Sniper scope
+                      </div>
+                    </div>
+                
+                    <div class="item
+                     
+                    ">
+                        
+                            <!--iframe src="http://media.mtvnservices.com/embed/mgid:arc:video:gametrailers.com:f8b7ac06-69cc-4cad-adb6-5203f7406b83" width="560" height="315" frameborder="0"></iframe-->
+
+<embed wmode="opaque" width="560" height="315" src="http://media.mtvnservices.com/mgid:arc:video:gametrailers.com:f8b7ac06-69cc-4cad-adb6-5203f7406b83"  quality="high" bgcolor="000000" name="efp" align="middle" type="application/x-shockwave-flash"  pluginspage="http://www.macromedia.com/go/getflashplayer"  flashvars="autoPlay=false"  allowfullscreen="true"></embed>
+                        
+                      <div class="carousel-caption">
+                        Gametrailers review
+                      </div>
+                    </div>
+                
+                    <div class="item
+                     
+                    ">
+                        
+                             
+
+<img src="/static/jpg/red-river-screen-2.jpg"
+style="max-width:600px"
+/>
+                        
+                      <div class="carousel-caption">
+                        Squad based gameplay
+                      </div>
+                    </div>
+                
+                    <div class="item
+                     
+                    ">
+                        
+                            <iframe title="YouTube video player" width="560" height="315" src="http://www.youtube.com/embed/48aRbR8xv8m" frameborder="0" allowfullscreen></iframe>
+                        
+                      <div class="carousel-caption">
+                        Launch trailer
+                      </div>
+                    </div>
+                
+                    <div class="item
+                     
+                    ">
+                        
+                             
+
+<img src="/static/jpg/red-river-screen-4.jpg"
+style="max-width:600px"
+/>
+                        
+                      <div class="carousel-caption">
+                        Tactical gameplay
+                      </div>
+                    </div>
+                
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+        </div>
+    
+
+
+    
         <div class="panel panel-default">
     <div class="panel-heading">
         <h4>Operation Flashpoint: Red River</h4>
@@ -579,7 +702,6 @@ $(function(){
 
                 <div class="row">
                     
-    
     
     
         
@@ -657,7 +779,7 @@ $(function(){
     <div class="well">
         <small>
             &copy; NathanRossPowell 2014.
-            This website was last statically updated: 2014, May 16th at 22:51:14 EDT. Which is 02:51:14 UTC/GMT.
+            This website was last statically updated: 2014, May 16th at 23:33:16 EDT. Which is 03:33:16 UTC/GMT.
         </small>
     </div>
 

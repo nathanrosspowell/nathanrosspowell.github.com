@@ -1,5 +1,0 @@
-"jqueryeasingjs"        : "{{ url_for( ".static", filename="js/jquery.easing.1.2.js" ) }}",
-"swfobjectjs"           : "{{ url_for( ".static", filename="js/swfobject.js" ) }}",
-"anythingslidercss"     : "{{ url_for( ".static", filename="css/anythingslider.css" ) }}",
-"anythingsliderjs"      : "{{ url_for( ".static", filename="js/jquery.anythingslider.min.js" ) }}",
-"anythingslidervideojs" : "{{ url_for( ".static", filename="js/jquery.anythingslider.video.min.js" ) }}",

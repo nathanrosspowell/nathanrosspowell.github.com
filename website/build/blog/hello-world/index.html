@@ -558,11 +558,11 @@ Modernizr.load({
             This is the first blog entry onto my newly made website.
         </p>                        
     
-    <a class="btn btn-primary btn-large" href="#bookmarks_heading">
-            Bookmarks
-        </a>
-    <a class="btn btn-primary btn-large" href="#navigation_heading">
+    <a class="btn btn-primary btn-xs" href="#navigation_heading">
             Navigation
+        </a>
+    <a class="btn btn-primary btn-xs" href="#bookmarks">
+            Bookmarks
         </a>
     
 
@@ -584,18 +584,6 @@ Modernizr.load({
 </div>
     
     
-    <div class="panel panel-default">
-    <div class="panel-heading">
-        <h4>Bookmarks</h4>
-    </div>
-    <div class="panel-body">
-        
-        <div class="well" id="bookmarks_heading">
-            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
-        </div>
-    
-    </div>
-</div>
 
 
                 <div class="row" id="navigation_heading">
@@ -649,6 +637,26 @@ Modernizr.load({
                 </div>
 
                 
+    <div class="panel-group" id="bookmarks">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#bookmarks" href="#bookmarks-body">
+            Bookmarks<b class="caret"></b>
+          </a>
+        </h4>
+      </div>
+      <div id="bookmarks-body" class="panel-collapse collapse">
+        <div class="panel-body">
+          
+        <div class="well" id="bookmarks_heading">
+            <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6669472'></div>
+        </div>
+    
+        </div>
+      </div>
+    </div>
+  </div>
     
 
 
@@ -657,7 +665,7 @@ Modernizr.load({
     <div class="well">
         <small>
             &copy; NathanRossPowell 2014.
-            This website was last statically updated: 2014, May 17th at 18:51:00 EDT. Which is 22:51:00 UTC/GMT.
+            This website was last statically updated: 2014, May 17th at 19:10:47 EDT. Which is 23:10:47 UTC/GMT.
         </small>
     </div>
 

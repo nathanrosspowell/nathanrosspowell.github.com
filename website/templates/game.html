@@ -1,25 +1,30 @@
 {% extends "article.html" %}
 {% import "macros.html" as macros %}
-{% import "slider_js.js" as slider %}
 
-{% block article_load %}
-    {% include "slider_link.js" %}
-{% endblock article_load %}
-
-{% block article_complete%}
-    {% autoescape false %}
-        {{ slider.js( article.mediabar ) }}
-    {% endautoescape %}
-{% endblock article_complete%}
-
-{% block article_pre %}
+{% block article_pre_row %}
     {% if article.mediabar %}
-        <hr/>
-        <p id="mediabar">
-            {{ article.title }} Media
-			<ul id="slider1">
+        <div class="well">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
                 {% for data in article.mediabar %}
-                    <li>
+                    <li data-target="#carousel-example-generic" data-slide-to="{{loop.index}}"
+                    {% if loop.index0 == 0 %}
+                        class="active"
+                    {% endif %}
+                    >
+                    </li>
+                {% endfor %}
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                {% for data in article.mediabar %}
+                    <div class="item
+                    {% if loop.index0 == 0 %}
+                        active
+                    {% endif %} 
+                    ">
                         {% if data.type is equalto( "youtube" ) %}
                             {{ macros.youtube( data.src ) }}
                         {% elif data.type is equalto( "image" ) %}
@@ -27,9 +32,21 @@
                         {% elif data.type is equalto( "gametrailer" ) %}
                             {{ macros.gametrailer( data.src ) }}
                         {% endif %}
-                    </li>
+                      <div class="carousel-caption">
+                        {{ data.title }}
+                      </div>
+                    </div>
                 {% endfor %}
-            </ul>
-        </p>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+        </div>
     {% endif %}
-{% endblock article_pre %}
+{% endblock article_pre_row %}

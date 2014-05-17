@@ -45,6 +45,9 @@
 {% endblock boilerplate_hero_unit %}
 
 {% block boilerplate_post_hero_unit %}
+    {% block article_pre_row %}
+    {% endblock article_pre_row %}
+
     {% if article.date %}
         {{
         macros.panel( 
@@ -61,8 +64,7 @@
 {% endblock boilerplate_post_hero_unit %}
 
 {% block boilerplate_row %}
-    {% block article_pre_row %}
-    {% endblock article_pre_row %}
+    
     {% if page_selected is equalto( False ) %}
         {% set link = url_for( ".index" ) %}
         {% call macros.row_span( "Home", "Home", link ) %}

@@ -271,7 +271,7 @@ Modernizr.load({
             
             <li
         
-            class="dropdown"
+             class="dropdown active"
          
     >
         <a href="/career/" class="dropdown-toggle" data-toggle="dropdown">
@@ -297,6 +297,8 @@ Modernizr.load({
                         
                             <li
         
+             class="active"
+         
     >
         <a href="/career/overview/">
             Career Overview 
@@ -441,7 +443,7 @@ Modernizr.load({
             
             <li
         
-             class="dropdown active"
+            class="dropdown"
          
     >
         <a href="/code/" class="dropdown-toggle" data-toggle="dropdown">
@@ -491,8 +493,6 @@ Modernizr.load({
                         
                             <li
         
-             class="active"
-         
     >
         <a href="/code/project-euler/">
             Project Euler 
@@ -661,12 +661,8 @@ Modernizr.load({
                 <div class="jumbotron">
                     
     <h1>
-        Project Euler
+        Career Overview
     </h1>
-    
-        <p>
-            A Set of code challenges solved in various programming languages. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.
-        </p>                        
     
     <a class="btn btn-primary btn-xs" href="#navigation_heading">
             Navigation
@@ -689,89 +685,52 @@ Modernizr.load({
     
         <div class="panel panel-default">
     <div class="panel-heading">
-        <h4>Project Euler</h4>
+        <h4>Career Overview</h4>
     </div>
     <div class="panel-body">
-        <p>Vist my GitHub <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">repro</a> to see all the latest code. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.</p>
+        <h1>Biography</h1>
+<h2>Brief</h2>
+<p>I've been in the games industry since 2007 and coding no-stop since 2005. My passion is for online game play.
+I have worked in the following roles: 
+<em> online game play
+</em> online TRCs/XRs (8th Gen)
+<em> generalist
+</em> UI
+* platform lead (Wii).</p>
+<h2>Goals</h2>
+<p>I always want to be working with people who strive for perfection and to make games with technical brilliance and mass appeal. To become a better programmer and be more knowledgeable about the details of people and project management.</p>
+<h1>Industry Experience</h1>
+<p>I am currently working at Ubisoft Montreal.</p>
+<h2><a href="http://ubisoft.com" title="Ubisoft">Ubisoft</a></h2>
+<p>08/2012 - Present : Game play Programmer at Ubisoft Montreal</p>
+<h4>Projects</h4>
+<ul>
+<li><a href="http://nathanrosspowell.com/games/watch-dogs" title="Watch_Dogs">Watch_Dogs</a></li>
+</ul>
+<h2><a href="http://codemasters.com" title="Codemasters">Codemasters</a></h2>
+<p>08/2010 - 06/2012 : Game Programmer to Experienced Game Programmer (09/2011)</p>
+<h4>Projects</h4>
+<ul>
+<li><a href="http://nathanrosspowell.com/games/dirt-showdown" title="DiRT Showdown">DiRT Showdown</a> </li>
+<li><a href="http://nathanrosspowell.com/games/operation-flashpoint-red-river" title="Operation Flashpoint: Red River">Operation Flashpoint: Red River</a></li>
+</ul>
+<h2><a href="http://www.eutechnyx.com" title="Eutechnyx">Eutechnyx</a></h2>
+<p>06/2007 - 07/2010 : Game Programmer</p>
+<h4>Projects</h4>
+<ul>
+<li><a href="http://nathanrosspowell.com/games/ferrari-the-race-experince" title="Ferrari The Race Experience">Ferrari The Race Experience</a></li>
+<li><a href="http://nathanrosspowell.com/games/ride-to-hell" title="Ride To Hell">Ride To Hell</a></li>
+<li><a href="http://nathanrosspowell.com/games/hot-wheels-beat-that" title="Hot Wheels: Beat That!">Hot Wheels: Beat That!</a></li>
+</ul>
+<h1>Skills</h1>
+<ul>
+<li><a href="http://nathanrosspowell.com/career/professional-skills" title="Professional Skills">Professional Skills</a></li>
+<li><a href="http://nathanrosspowell.com/career/other-experiences" title="Other Experiences">Other Skills</a></li>
+</ul>
+<h1><a href="http://nathanrosspowell.com/career/formal-education" title="Formal Education">Formal Education</a></h1>
     </div>
 </div>
     
-    
-      
-      <div class="panel panel-default">
-    <div class="panel-heading">
-        <h4>Project readme file</h4>
-    </div>
-    <div class="panel-body">
-        <h1>PROJECT EULER</h1>
-<p><img src="http://projecteuler.net/profile/nathanrosspowell.png" /></p>
-<p>I have been attempting the Project Euler challenges as a learning exercise - 
-primarily to enhance my problem solving skills
-and secondly to aid in the learning of new programming languages.</p>
-<h2>Languages</h2>
-<p>Currently solutions are presented in</p>
-<ul>
-<li>C++</li>
-<li>Python</li>
-<li>Haskell</li>
-<li>D</li>
-<li>Erlang</li>
-<li>Go</li>
-<li>Javascript</li>
-</ul>
-<h2>Installing</h2>
-<p>This repo is tested against these versions</p>
-<ul>
-<li>Ubuntu 12.04 &amp; 11.10</li>
-<li>Python 2.6.6</li>
-<li>GCC 4.4.5</li>
-<li>Clang 2.9</li>
-<li>Glasgow Compiler 6.12.1</li>
-<li>GDC</li>
-<li>Erlang R14B04</li>
-<li>go1</li>
-<li>rhino 1.7</li>
-</ul>
-<p>Call the bash script <code>install.bash</code> to get the needed software.</p>
-<h2>Executing</h2>
-<p>Completed problems will be ran by the testing utility and double checked against the correct answer</p>
-<pre><code>python testing/run.py
-</code></pre>
-<p>To filter the testing add a language (or list of them) and a problem number (or list of them)</p>
-<pre><code>python testing/run.py cpp
-python testing/run.py python
-python testing/run.py cpp python
-python testing/run.py cpp 1
-python testing/run.py cpp 1 2 99 142
-python testing/run.py cpp haskell 1
-python testing/run.py cpp haskell 42 69
-</code></pre>
-<h2>Solutions</h2>
-<p>Nothing here is groundbreaking, super minimal or extremely optimal code.
-The solutions are of the most part coded upto getting the correct answer, then plopped into source control.
-It's the actual completion of the problems that I'm aiming for!</p>
-<h2>To do</h2>
-<ul>
-<li>Make a seperate list of C solution, move C++ to using as much C++11 features as possible.</li>
-<li>Redo testing to allow for multiple solutions in the same language. (functional and imperative solutions, differnt approaches etc.)</li>
-<li>Have different run methods for languages that have the option to be interpreted and compiled.</li>
-<li>Make and store output data from the testing functionalilty<ul>
-<li>Include stats on the best and worst solutions from each language</li>
-<li>Include some kind of graphic</li>
-<li>Make a website with the github pages feature</li>
-</ul>
-</li>
-<li>Better install code</li>
-<li>Languages to add:<ul>
-<li>Rust - tricky to install right now, but nearly at v1.0</li>
-<li>Clojure - missing some Lisp knowledge right now</li>
-<li>Split C and C++ - makes C++ use C++11 features</li>
-<li>Nimrod - seems interesting</li>
-</ul>
-</li>
-</ul>
-    </div>
-</div>
     
 
 
@@ -780,21 +739,7 @@ It's the actual completion of the problems that I'm aiming for!</p>
     
     
         
-            <div class="col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4>Personal Website</h4>
-            </div>
-            <div class="panel-body">
-                
-                This very website! A static pages site delevoped with Flash and Frozen Flask python software and hosted on GitHub Pages
-            
-                <br/>
-                <a class="btn btn-primary btn-large" href="/code/personal-website/">
-            Read previous
-        </a>
-            </div>
-        </div>
+            <div class="span4">
     </div>
         
         
@@ -805,18 +750,32 @@ It's the actual completion of the problems that I'm aiming for!</p>
             </div>
             <div class="panel-body">
                 
-            Go back to the index page for code to see all of the pages like this.
+            Go back to the index page for career to see all of the pages like this.
             Or, skip to the next or previous pages.
         
                 <br/>
-                <a class="btn btn-primary btn-large" href="/code/">
-            Code
+                <a class="btn btn-primary btn-large" href="/career/">
+            Career
         </a>
             </div>
         </div>
     </div>
         
-            <div class="span4">
+            <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Codemasters - DiRT Showdown</h4>
+            </div>
+            <div class="panel-body">
+                
+                
+            
+                <br/>
+                <a class="btn btn-primary btn-large" href="/career/codemasters-dirt-showdown/">
+            Read next
+        </a>
+            </div>
+        </div>
     </div>
         
     
@@ -873,7 +832,7 @@ It's the actual completion of the problems that I'm aiming for!</p>
     <div class="well">
         <small>
             &copy; NathanRossPowell 2014.
-            This website was last statically updated: 2014, May 18th at 13:47:19 EDT. Which is 17:47:19 UTC/GMT.
+            This website was last statically updated: 2014, May 18th at 13:47:16 EDT. Which is 17:47:16 UTC/GMT.
         </small>
     </div>
 

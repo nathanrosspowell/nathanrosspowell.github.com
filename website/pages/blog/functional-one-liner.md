@@ -16,9 +16,9 @@ I'd like to share a Project Euler solution [(I'll not say which)*][sol] that I a
     :::python
     sum( map( int, str( reduce( operator.mul, xrange( 2, 101 ) ) ) ) )
 
-While I'm still very much a novice with functional programming, I'm using a few tricks that I picked up when I last sat down and tried to ['Learn *me* a Haskell'][luah] by using a range generator, folds and an ananonymous function.
+While I'm still very much a novice with functional programming, I'm using a few tricks that I picked up when I last sat down and tried to ['Learn *me* a Haskell'][luah] by using a range generator, folds and an anonymous function.
 
-I managed to power through a couple of the easier P.E problems a few ahead of my current sticking point, using the python language. It made me want to try and do something a little more **useful** with the language. Enter the last big python [gist][gist] I created `podcast.py` - a crued but configurable mass podcast downloader.
+I managed to power through a couple of the easier P.E problems a few ahead of my current sticking point, using the python language. It made me want to try and do something a little more **useful** with the language. Enter the last big python [gist][gist] I created `podcast.py` - a crude but configurable mass podcast downloader.
 
 ### [`podcast.py`][gistpy]
 
@@ -60,9 +60,9 @@ I managed to power through a couple of the easier P.E problems a few ahead of my
                 dryRun = False
             main( podcastXML, verbose, dryRun )
 
-Being very anti-iTunes (due to it being a system resource hog) and failing to find a suitable alternative for 'managing' podcasts I decided to grab the favorite feeds straight from the source and download ALL the things at once. Running the script whenever I booted my computer to get all the latest audio treats for myself to keep.
+Being very anti-iTunes (due to it being a system resource hog) and failing to find a suitable alternative for 'managing' podcasts I decided to grab the favourite feeds straight from the source and download ALL the things at once. Running the script whenever I booted my computer to get all the latest audio treats for myself to keep.
 
-An example of my config that powered the script (note the embeded python code used to format the titles!).
+An example of my config that powered the script (note the embedded python code used to format the titles!).
 
 ### [`podcast.xml`][gistxml]
 

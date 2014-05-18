@@ -1,10 +1,7 @@
-source: "https://github.com/nathanrosspowell/interfacezero/blob/gh-pages/README.md"
-named: "project-euler"
 title: "Project Euler"
 published: "2012/08/09"
 time: "23:01:47"
 w3c: "2012-08-09T23:01:47-05:00"
-url: "code/project-euler"
 comments: True
 project: "euler"
 readme: "http://raw.github.com/nathanrosspowell/euler/master/README.markdown"

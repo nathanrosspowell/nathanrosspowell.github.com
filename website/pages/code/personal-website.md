@@ -1,10 +1,7 @@
-source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/code/personal-website.md"
-named: "personal-website"
 title: "Personal Website"
 published: "2013/02/09"
 time: "20:28:20"
 w3c: "2013-02-09T20:28:20-04:00"
-url: "code/personal-website"
 comments: True
 project: "nathanrosspowell.github.com"
 readme: "https://raw.github.com/nathanrosspowell/nathanrosspowell.github.com/dev/README.md"

@@ -1,7 +1,7 @@
 title: "Hello, Montreal. Hello, Ubisoft!"
 date: "2012-08-05T21:16:12+00:00"
 comments: True
-short: Preperation for my latest 'first day' as I start work for Ubisoft Montréal 
+short: Preparation for my latest 'first day' as I start work for Ubisoft Montréal 
 showInFeed: True
 tags:
 - life

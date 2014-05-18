@@ -8,7 +8,7 @@ tags:
 
 Well the website fell away to rot for a bit... Other things were more important, but today I finished a pass on making it nice and shiny again!
 
-Some effort has gone into fixing the litter errors that crept in last time I tried to optimise the Javascript execution on the pages.
+Some effort has gone into fixing the litter errors that crept in last time I tried to optimize the JavaScript execution on the pages.
 Along with that and a small redesign and palette change we end up here, with what you see before you.
 
 Code wise I have been working on a Linux based SDL powered 'game engine'. 

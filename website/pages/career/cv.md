@@ -1,8 +1,5 @@
-source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/menu/career.md"
-named: cv
 title: Curriculum Vitae
 comments: True
-
 
 Biogrpahy
 ===========================================================
@@ -20,10 +17,17 @@ I always want to be working with people who strive for perfection and to make ga
 Industry Experience
 ===========================================================
 
+[Ubisoft][codies]
+-----------------------------------------------------------
+
+08/2012 - Present : Gameplay Programmer
+
+### [Watch_Dogs][watchdogs]
+
 [Codemasters][codies]
 -----------------------------------------------------------
 
-08/2010 - Present : Game Programmer to Experienced Game Programmer (09/2011)
+08/2010 - 06/2012 : Game Programmer to Experienced Game Programmer (09/2011)
 
 <a id="dirt-showdown"/>
 ### [DiRT Showdown][showdown] 
@@ -178,9 +182,12 @@ Conyers College/School
 * A-levels - I.C.T, Mathematics, Physics, Business Studies
 * GCSEs - 11 including Mathematics and Dual Science
 
-
+[ubisoft]: http://ubisoft.com "Ubisoft"
 [codies]: http://codemasters.com "Codemasters" 
 [etx]: http://www.eutechnyx.com "Eutechnyx"
+
+
+[watchdogs]: http://nathanrosspowell.com/games/watch-dogs "Watch_Dogs"
 [showdown]: http://nathanrosspowell.com/games/dirt-showdown "DiRT Showdown"
 [redriver]: http://nathanrosspowell.com/games/operation-flashpoint-red-river "Operation Flashpoint: Red River"
 [ferrari]: http://nathanrosspowell.com/games/ferrari-the-race-experince "Ferrari The Race Experience"

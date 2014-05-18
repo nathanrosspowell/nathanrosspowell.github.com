@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"url",
+				"urllib2"
+			],
+			[
 				"js",
 				"jsbeautifier"
 			],
@@ -264,18 +268,10 @@
 	"buffers":
 	[
 		{
-			"file": "website/pages/games/ferrari-the-race-experience.md",
+			"file": "website/templates/base.html",
 			"settings":
 			{
-				"buffer_size": 1583,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/templates/article.html",
-			"settings":
-			{
-				"buffer_size": 4474,
+				"buffer_size": 5797,
 				"line_ending": "Unix"
 			}
 		},
@@ -283,39 +279,7 @@
 			"file": "website/templates/macros.html",
 			"settings":
 			{
-				"buffer_size": 3426,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/templates/game.html",
-			"settings":
-			{
-				"buffer_size": 2114,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/nathan/projects/interfacezero/beautify_javascript.py",
-			"settings":
-			{
-				"buffer_size": 1730,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/static/css/main.css",
-			"settings":
-			{
-				"buffer_size": 325,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/templates/boilerplate.html",
-			"settings":
-			{
-				"buffer_size": 5592,
+				"buffer_size": 4689,
 				"line_ending": "Unix"
 			}
 		}
@@ -379,41 +343,86 @@
 	},
 	"file_history":
 	[
-		"/home/nathan/projects/website/website/settings.cfg",
-		"/home/nathan/projects/website/.gitignore",
-		"/home/nathan/projects/website/website/pages/blog/hello-montral-hello-ubisoft.md",
-		"/home/nathan/projects/website/runserver.py",
+		"/home/nathan/projects/website/website/static/css/main.css",
+		"/home/nathan/projects/website/website/templates/macros.html",
+		"/home/nathan/projects/website/website/templates/game.html",
+		"/home/nathan/projects/interfacezero/js/player_character.js",
 		"/home/nathan/projects/website/website/templates/base.html",
-		"/home/nathan/projects/website/website/pages/games/ferrari-the-race-experience.md",
-		"/home/nathan/projects/website/freeze.py",
+		"/home/nathan/projects/website/website/templates/boilerplate.html",
 		"/home/nathan/projects/website/website/templates/article.html",
+		"/home/nathan/projects/website/website/build/career/other-experience/index.html",
+		"/home/nathan/projects/website/website/views.py",
+		"/home/nathan/projects/website/website/pages/code/personal-website.md",
+		"/home/nathan/projects/website/website/pages/code/project-euler.md",
+		"/home/nathan/projects/website/website/pages/code/interface-zero.md",
+		"/home/nathan/projects/website/website/pages/blog/website-maintainance.md",
+		"/home/nathan/projects/website/website/pages/blog/syntax-highlight-test.md",
+		"/home/nathan/projects/website/website/pages/blog/project-euler.md",
+		"/home/nathan/projects/website/website/pages/blog/long-time-no-update.md",
+		"/home/nathan/projects/website/website/pages/blog/hello-montral-hello-ubisoft.md",
+		"/home/nathan/projects/website/website/pages/blog/hello-world.md",
+		"/home/nathan/projects/website/website/pages/blog/functional-one-liner.md",
+		"/home/nathan/projects/website/website/pages/games/watch_dogs.md",
+		"/home/nathan/projects/website/website/templates/subfolder.html",
+		"/home/nathan/projects/website/website/pages/blog/erlang.md",
+		"/home/nathan/projects/website/README.sublime-workspace",
+		"/home/nathan/projects/website/website/pages/games/ferrari-the-race-experience.md",
+		"/home/nathan/projects/website/website/settings.cfg",
+		"/home/nathan/projects/website/settings.py",
+		"/home/nathan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/nathan/projects/website/scss.bash",
+		"/home/nathan/projects/website/website/pages/about_me.md",
+		"/home/nathan/projects/website/website/pages/games/snake-3d.md",
+		"/home/nathan/projects/website/website/pages/games/ride-to-hell.md",
+		"/home/nathan/projects/website/website/pages/games/operation-flashpoint-red-river.md",
+		"/home/nathan/projects/website/website/pages/games/hot-wheels-beat-that.md",
+		"/home/nathan/projects/website/website/pages/games/asteroid-escape.md",
+		"/home/nathan/projects/website/website/pages/games/dirt-showdown.md",
+		"/home/nathan/projects/website/website/build/games/operation-flashpoint-red-river/index.html",
+		"/home/nathan/projects/website/website/templates/slider_link.js",
+		"/home/nathan/projects/website/website/templates/slider_js.js",
+		"/home/nathan/projects/website/website/build/blog/long-time-no-update/index.html",
+		"/home/nathan/projects/website/website/build/about_me/index.html",
+		"/home/nathan/projects/website/website/build/career/cv_pdf/index.html",
+		"/home/nathan/projects/website/website/build/career/cv/index.html",
+		"/home/nathan/projects/website/website/build/blog/website-maintainance/index.html",
+		"/home/nathan/projects/website/website/build/blog/syntax-highlight-test/index.html",
+		"/home/nathan/projects/website/website/build/blog/project-euler/index.html",
+		"/home/nathan/projects/website/website/build/blog/hello-world/index.html",
+		"/home/nathan/projects/website/website/build/blog/hello-montral-hello-ubisoft/index.html",
+		"/home/nathan/projects/website/website/build/blog/functional-one-liner/index.html",
+		"/home/nathan/projects/website/website/build/blog/erlang/index.html",
+		"/home/nathan/projects/website/website/build/games/index.html",
+		"/home/nathan/projects/website/website/build/code/index.html",
+		"/home/nathan/projects/website/website/build/career/index.html",
+		"/home/nathan/projects/website/website/build/blog/index.html",
+		"/home/nathan/projects/website/website/build/index.html",
+		"/home/nathan/projects/website/website/static/css/anythingslider.css",
+		"/home/nathan/projects/website/deploy.py",
+		"/home/nathan/projects/website/delete_branch.py",
+		"/home/nathan/projects/website/create_branch.py",
+		"/home/nathan/projects/website/README.md",
+		"/home/nathan/projects/website/.gitignore",
+		"/home/nathan/projects/website/install.bash",
+		"/home/nathan/projects/website/website/feed_time.txt",
+		"/home/nathan/projects/website/website/feed_content.txt",
+		"/home/nathan/projects/website/website/__init__.py",
+		"/home/nathan/projects/website/website/static/js/jquery.anythingslider.min.js",
+		"/home/nathan/projects/website/website/static/js/jquery.easing.1.2.js",
+		"/home/nathan/projects/website/website/__init__.pyc",
+		"/home/nathan/projects/website/website/static/css/bootstrap.css",
+		"/home/nathan/projects/website/website/static/js/main.js",
+		"/home/nathan/projects/website/website/build/static/css/main.css",
+		"/home/nathan/projects/interfacezero/beautify_javascript.py",
+		"/home/nathan/projects/website/runserver.py",
+		"/home/nathan/projects/website/freeze.py",
 		"/home/nathan/projects/website/website/templates/home.html",
 		"/home/nathan/projects/website/website/templates/atom.xml",
 		"/home/nathan/projects/website/website/templates/error.html",
-		"/home/nathan/projects/website/website/templates/slider_link.js",
 		"/home/nathan/projects/website/website/time_stamp.py",
-		"/home/nathan/projects/website/website/templates/macros.html",
-		"/home/nathan/projects/website/website/views.py",
-		"/home/nathan/projects/website/website/templates/boilerplate.html",
-		"/home/nathan/projects/website/deploy.py",
-		"/home/nathan/projects/website/website/pages/about_me.md",
-		"/home/nathan/projects/website/website/static/css/main.css",
-		"/home/nathan/projects/website/website/build/blog/erlang/index.html",
-		"/home/nathan/projects/website/website/build/index.html",
-		"/home/nathan/projects/website/website/build/about_me/index.html",
-		"/home/nathan/projects/website/website/templates/game.html",
-		"/home/nathan/projects/website/website/__init__.py",
-		"/home/nathan/projects/website/website/pages/blog/erlang.md",
-		"/home/nathan/projects/website/website/pages/blog/functional-one-liner.md",
-		"/home/nathan/projects/website/website/pages/blog/hello-world.md",
-		"/home/nathan/projects/website/website/pages/blog/long-time-no-update.md",
-		"/home/nathan/projects/website/website/__init__.pyc",
 		"/home/nathan/projects/website/website/static/css/variables.less",
-		"/home/nathan/projects/website/create_branch.py",
 		"/home/nathan/projects/website/website/pages/career/other-experience.md",
-		"/home/nathan/projects/website/README.sublime-workspace",
 		"/home/nathan/projects/website/website/static/css/bootstrap.min.css",
-		"/home/nathan/projects/website/website/static/css/bootstrap.css",
 		"/home/nathan/Downloads/variables.less",
 		"/home/nathan/projects/interfacezero/yaml/trigger_finger.yaml",
 		"/home/nathan/projects/interfacezero/js/html_functions.js",
@@ -422,7 +431,6 @@
 		"/home/nathan/projects/interfacezero/yaml/silverbeard.yaml",
 		"/home/nathan/projects/interfacezero/js/main.js",
 		"/home/nathan/projects/interfacezero/yaml/derp_man.yaml",
-		"/home/nathan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/nathan/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/nathan/projects/interfacezero/yaml/todo.yaml",
 		"/home/nathan/projects/interfacezero/js/yaml_lists.js",
@@ -462,51 +470,7 @@
 		"/home/nathan/projects/sdl2/source/CMakeLists.sublime-workspace",
 		"/home/nathan/projects/sdl2/source/component/location.h",
 		"/home/nathan/projects/sdl2/source/component/location.cpp",
-		"/home/nathan/projects/sdl2/source/yaml_helpers/doc.cpp",
-		"/home/nathan/projects/sdl2/resources/entity/cubey_3.yaml",
-		"/home/nathan/projects/sdl2/resources/yaml/entity_cubey.yaml",
-		"/home/nathan/projects/sdl2/source/render/item.h",
-		"/home/nathan/projects/sdl2/source/render/item.cpp",
-		"/home/nathan/projects/sdl2/source/component/base.cpp",
-		"/home/nathan/projects/sdl2/source/component/base.h",
-		"/home/nathan/projects/sdl2/source/render/manager.h",
-		"/home/nathan/projects/sdl2/source/component/component_list.h",
-		"/home/nathan/projects/sdl2/source/entity/list.cpp",
-		"/home/nathan/projects/sdl2/source/entity/list.h",
-		"/home/nathan/projects/sdl2/source/game/application.h",
-		"/home/nathan/projects/sdl2/source/entity/source_listing/listing_0000.cpp",
-		"/home/nathan/projects/sdl2/source/entity/entity.cpp",
-		"/home/nathan/projects/sdl2/source/factory/setup.h",
-		"/home/nathan/projects/sdl2/source/component/manager.cpp",
-		"/home/nathan/projects/sdl2/source/types/stl.hxx",
-		"/home/nathan/projects/sdl2/source/entity/entity.h",
-		"/home/nathan/projects/sdl2/source/render/manager.cpp",
-		"/home/nathan/projects/sdl2/source/entity/entity_id.h",
-		"/home/nathan/projects/sdl2/source/command_line/screen_dimensions.cpp",
-		"/home/nathan/projects/sdl2/source/sdl2_engine.cpp",
-		"/home/nathan/projects/sdl2/source/component/manager.h",
-		"/home/nathan/projects/sdl2/source/yaml_helpers/doc.h",
-		"/home/nathan/projects/sdl2/source/camera/manager.cpp",
-		"/home/nathan/projects/sdl2/source/camera/manager.h",
-		"/home/nathan/projects/sdl2/make.bash",
-		"/home/nathan/projects/sdl2/errors.txt",
-		"/home/nathan/projects/sdl2/error.txt",
-		"/home/nathan/projects/sdl2/error",
-		"/home/nathan/projects/sdl2/source/factory/factory.h",
-		"/home/nathan/projects/sdl2/source/factory/register.cpp",
-		"/home/nathan/projects/sdl2/source/factory/register.h",
-		"/home/nathan/projects/sdl2/source/entity/types.hxx",
-		"/home/nathan/projects/sdl2/source/factory/types.hxx",
-		"/home/nathan/projects/sdl2/source/factory/factory.cpp",
-		"/home/nathan/projects/sdl2/source/render/types.hxx",
-		"/home/nathan/projects/sdl2/source/types/glm.hxx",
-		"/home/nathan/projects/sdl2/source/types/int.hxx",
-		"/usr/include/c++/4.8/functional",
-		"/home/nathan/projects/sdl2/source/passport/passport.h",
-		"/home/nathan/projects/sdl2/source/game/hopper.h",
-		"/home/nathan/projects/sdl2/source/game/hopper.cpp",
-		"/home/nathan/projects/sdl2/source/log/log.h",
-		"/home/nathan/projects/sdl2/source/command_line/cmd_line.cpp"
+		"/home/nathan/projects/sdl2/source/yaml_helpers/doc.cpp"
 	],
 	"find":
 	{
@@ -527,6 +491,41 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"boilerplate_google",
+			"google",
+			"comments",
+			"bookmarks",
+			"';",
+			"x += '",
+			"call macros.",
+			"row",
+			"Markdown",
+			"urllib2",
+			"compute(",
+			"compute",
+			"equalto",
+			"markdown",
+			"readme",
+			"published",
+			"menu_link_item",
+			"active",
+			"title",
+			"GOOGLE_ANALYTICS",
+			"ar _gaq = _gaq || [];",
+			"released: ",
+			"published:",
+			"publish",
+			"published:",
+			"Home",
+			"Read pre",
+			"read prev",
+			"slider_js",
+			"slider_link",
+			"boilerplate_head",
+			"bookmarks_heading",
+			"book",
+			"Bookmarks",
+			"SUB_MENU_PAGE_LIMIT",
 			"article_pre",
 			"youtube",
 			"boilerplate_footer",
@@ -619,42 +618,7 @@
 			"modal",
 			"stain",
 			"augmen",
-			"prote",
-			"spending",
-			"augmentations",
-			"makeHeading",
-			"augmentations",
-			"arm",
-			"edge",
-			"tapTable",
-			"edgesId",
-			"edge",
-			"arm",
-			"arn",
-			"weapons",
-			"weapon",
-			"arm",
-			"description",
-			"weapons",
-			"h3",
-			"weapo",
-			"makeModal",
-			"weapons",
-			"weap",
-			"if",
-			"skillsId",
-			"accordionId",
-			"accordionName",
-			"accordionAnchor",
-			"/bootstrap/",
-			"');",
-			"x.push('",
-			"x.push",
-			"x += ''",
-			"');",
-			"x.push(",
-			"x.push('",
-			"/bootstrap/"
+			"prote"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -662,6 +626,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"{{ id }}",
+			"",
+			"subfolder_link_item",
+			"date: ",
 			"<li class=\"dropdown-header\">",
 			"",
 			"attributeList",
@@ -770,52 +738,24 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "website/pages/games/ferrari-the-race-experience.md",
+					"file": "website/templates/base.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1583,
+						"buffer_size": 5797,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								105,
-								105
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "website/templates/article.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4474,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1753,
-								1753
+								4109,
+								4109
 							]
 						],
 						"settings":
@@ -823,139 +763,27 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 588.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "website/templates/macros.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3426,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3234,
-								3234
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1330.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "website/templates/game.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2114,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/nathan/projects/interfacezero/beautify_javascript.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1730,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 872.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "website/static/css/main.css",
+					"buffer": 1,
+					"file": "website/templates/macros.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 325,
+						"buffer_size": 4689,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								254,
-								254
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "website/templates/boilerplate.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4316,
-								4316
+								1525,
+								1525
 							]
 						],
 						"settings":
@@ -963,10 +791,10 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1246.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1019,20 +847,96 @@
 		"selected_items":
 		[
 			[
-				".css",
-				"website/static/css/main.css"
+				"macro",
+				"website/templates/macros.html"
+			],
+			[
+				"base",
+				"website/templates/base.html"
 			],
 			[
 				"boiler",
 				"website/templates/boilerplate.html"
 			],
 			[
-				"macro",
-				"website/templates/macros.html"
+				"article",
+				"website/templates/article.html"
 			],
 			[
 				"arti",
 				"website/templates/article.html"
+			],
+			[
+				"game",
+				"website/templates/game.html"
+			],
+			[
+				"macros",
+				"website/templates/macros.html"
+			],
+			[
+				"artic",
+				"website/templates/article.html"
+			],
+			[
+				"vi",
+				"website/views.py"
+			],
+			[
+				"wat",
+				"website/pages/games/watch_dogs.md"
+			],
+			[
+				"sub",
+				"website/templates/subfolder.html"
+			],
+			[
+				"sett",
+				"settings.py"
+			],
+			[
+				"view",
+				"website/views.py"
+			],
+			[
+				"articl",
+				"website/templates/article.html"
+			],
+			[
+				"templatein",
+				"website/templates/slider_link.js"
+			],
+			[
+				"templindex",
+				"website/build/games/operation-flashpoint-red-river/index.html"
+			],
+			[
+				"index",
+				"website/build/index.html"
+			],
+			[
+				"boilerpl",
+				"website/templates/boilerplate.html"
+			],
+			[
+				"ma",
+				"website/templates/macros.html"
+			],
+			[
+				"mac",
+				"website/static/css/main.css"
+			],
+			[
+				"maro",
+				"website/pages/games/asteroid-escape.md"
+			],
+			[
+				"boi",
+				"website/build/career/other-experience/index.html"
+			],
+			[
+				".css",
+				"website/static/css/main.css"
 			],
 			[
 				"fer",
@@ -1043,16 +947,8 @@
 				"website/templates/home.html"
 			],
 			[
-				"base",
-				"website/templates/base.html"
-			],
-			[
 				"template/",
 				"website/templates/article.html"
-			],
-			[
-				"mac",
-				"website/templates/macros.html"
 			],
 			[
 				"boil",
@@ -1065,10 +961,6 @@
 			[
 				"derp",
 				"yaml/derp_man.yaml"
-			],
-			[
-				"index",
-				"index.html"
 			],
 			[
 				"tri",
@@ -1465,70 +1357,6 @@
 			[
 				"copmm",
 				"source/component/manager.h"
-			],
-			[
-				"copmlis",
-				"source/component/source_listing/listing_0000.cpp"
-			],
-			[
-				"pass",
-				"source/passport/identity_factory.h"
-			],
-			[
-				"passpiden",
-				"source/passport/identity_factory.h"
-			],
-			[
-				"entytyp",
-				"source/entity/types.hxx"
-			],
-			[
-				"typst",
-				"source/types/stl.hxx"
-			],
-			[
-				"engin",
-				"sdl2_engine.cpp"
-			],
-			[
-				"rednerer",
-				"game/renderer.cpp"
-			],
-			[
-				"redn",
-				"game/renderer.cpp"
-			],
-			[
-				"typegl",
-				"types/glm.hxx"
-			],
-			[
-				"camera",
-				"camera/camera.h"
-			],
-			[
-				"compre",
-				"component/render.h"
-			],
-			[
-				"lo",
-				"component/location.h"
-			],
-			[
-				"ho",
-				"game/hopper.cpp"
-			],
-			[
-				"pas",
-				"passport/passport.h"
-			],
-			[
-				"hop",
-				"game/hopper.cpp"
-			],
-			[
-				"ty",
-				"factory/types.hxx"
 			]
 		],
 		"width": 0.0

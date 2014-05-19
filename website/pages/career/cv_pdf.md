@@ -1,6 +1,7 @@
 title: "Curriculum Vitae PDF Link"
 comments: True
 short: "Link to the CV"
+customsort: "011"
 tags:
 - career
 

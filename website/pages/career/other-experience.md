@@ -1,6 +1,7 @@
 title: "Other Skills"
 comments: True
 short: "Other experience gained from outside of my daily work life."
+customsort: "009"
 tags:
 - career
 

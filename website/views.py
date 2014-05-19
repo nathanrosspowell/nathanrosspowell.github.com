@@ -134,14 +134,18 @@ def create_navbar():
             title = itemMeta.get( "title", item )
             date = itemMeta.get( "date", False )
             sort = date if date is not False else title
+            customSort = itemMeta.get( "customsort", False )
+            sort = customSort if customSort is not False else sort
             data = {
                 "title" : title,
                 "path" : path,
                 "date" : date,
                 "sort" : sort,
             }
-            if date is not False: 
-                dateSort.append( data )    
+            if customSort is not False:
+                alphaSort.append( data )
+            elif date is not False: 
+                dateSort.append( data )
             else:
                 alphaSort.append( data )
         sorter = lambda k: k[ "sort" ]

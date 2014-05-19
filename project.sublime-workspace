@@ -271,14 +271,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "website/views.py",
-			"settings":
-			{
-				"buffer_size": 13133,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -339,25 +331,26 @@
 	},
 	"file_history":
 	[
+		"/home/nathan/projects/website/website/views.py",
+		"/home/nathan/projects/website/website/pages/career/overview.md",
+		"/home/nathan/projects/website/website/pages/career/ubisoft-watch-dogs.md",
+		"/home/nathan/projects/website/website/pages/games/ferrari-the-race-experience.md",
+		"/home/nathan/projects/website/website/pages/career/eutechnyx-ferrari.md",
+		"/home/nathan/projects/website/website/pages/games/watch_dogs.md",
 		"/home/nathan/projects/website/website/pages/career/cv_pdf.md",
 		"/home/nathan/projects/website/project.sublime-project",
 		"/home/nathan/projects/website/website/pages/career/formal-education.md",
 		"/home/nathan/projects/website/website/pages/career/other-experience.md",
-		"/home/nathan/projects/website/website/views.py",
-		"/home/nathan/projects/website/website/pages/career/ubisoft-watch-dogs.md",
-		"/home/nathan/projects/website/website/pages/career/overview.md",
 		"/home/nathan/projects/website/website/pages/career/eutechnyx-hot-wheels.md",
 		"/home/nathan/projects/website/website/pages/career/professional-skills.md",
 		"/home/nathan/projects/website/website/pages/career/professional-skills.md.bak",
 		"/home/nathan/projects/website/website/pages/games/operation-flashpoint-red-river.md",
 		"/home/nathan/projects/website/website/pages/career/codemasters-dirt-showdown.md",
 		"/home/nathan/projects/website/website/pages/career/codemasters-operation-flashpoint.md",
-		"/home/nathan/projects/website/website/pages/career/eutechnyx-ferrari.md",
 		"/home/nathan/projects/website/website/pages/career/eutechnyx-ride-to-hell.md",
 		"/home/nathan/projects/website/website/pages/career/ubisoft-watch-dogs.md.bak",
 		"/home/nathan/projects/website/project.sublime-workspace",
 		"/home/nathan/projects/website/website/pages/career/cv.md",
-		"/home/nathan/projects/website/website/pages/games/watch_dogs.md",
 		"/home/nathan/projects/website/website/pages/career/codemasters-operation-flashpoint",
 		"/home/nathan/projects/website/website/pages/code/project-euler.md",
 		"/home/nathan/projects/website/website/pages/code/personal-website.md",
@@ -380,7 +373,6 @@
 		"/home/nathan/projects/website/website/templates/subfolder.html",
 		"/home/nathan/projects/website/website/pages/blog/erlang.md",
 		"/home/nathan/projects/website/README.sublime-workspace",
-		"/home/nathan/projects/website/website/pages/games/ferrari-the-race-experience.md",
 		"/home/nathan/projects/website/website/settings.cfg",
 		"/home/nathan/projects/website/settings.py",
 		"/home/nathan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
@@ -734,37 +726,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "website/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13133,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5099,
-								5099
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1684.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -815,6 +778,18 @@
 		"selected_items":
 		[
 			[
+				"fer",
+				"website/pages/career/eutechnyx-ferrari.md"
+			],
+			[
+				"ferr",
+				"website/pages/games/ferrari-the-race-experience.md"
+			],
+			[
+				"watch",
+				"website/pages/career/ubisoft-watch-dogs.md"
+			],
+			[
 				"view",
 				"website/views.py"
 			],
@@ -841,10 +816,6 @@
 			[
 				"pover",
 				"website/pages/career/overview.md"
-			],
-			[
-				"watch",
-				"website/pages/career/ubisoft-watch-dogs.md"
 			],
 			[
 				"macro",
@@ -933,10 +904,6 @@
 			[
 				".css",
 				"website/static/css/main.css"
-			],
-			[
-				"fer",
-				"website/pages/games/ferrari-the-race-experience.md"
 			],
 			[
 				"home",
@@ -1321,10 +1288,6 @@
 			[
 				"factotyp",
 				"source/factory/types.hxx"
-			],
-			[
-				"locati",
-				"source/component/location.h"
 			]
 		],
 		"width": 0.0

@@ -1,7 +1,7 @@
 title: "Eutechnyx - Ferrari: The Race Experience"
 comments: True
 customsort: "005"
-
+short: A licensed circuit racer packaged for PSN and Wii.
 
 Industry Experience at [Eutechnyx][etx] on [Ferrari The Race Experience][ferrari]
 =================================================================================

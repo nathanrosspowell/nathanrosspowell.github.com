@@ -53,6 +53,7 @@ Modernizr.load({
         
     
     "codehilitecss" : "/static/css/codehilite.css", 
+    "githubwidget" : "/static/js/vendor/jquery.githubRepoWidget.min.js", 
     
     
 
@@ -681,13 +682,15 @@ Modernizr.load({
                 
     
     
-
     
-        <div class="panel panel-default">
+        
+    
+    <div class="panel panel-default">
     <div class="panel-heading">
         <h4>Erlang - 2013, Feb 17th</h4>
     </div>
     <div class="panel-body">
+        
         <p>I was feeling functional, so I added <a href="http://erlang.org">Erlang</a> to the supported functions in my Project Euler codebase. While I have done some functional programming already, there are a few features in Erlang that I have never seem before (atoms, etc).
 I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Erlang For Great Good!</a> which is in the same vein as the Haskell publication.</p>
 <div class="codehilite"><pre><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">e0001</span><span class="p">).</span>
@@ -697,9 +700,12 @@ I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Er
     <span class="nv">Result</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">sum</span><span class="p">([</span> <span class="nv">X</span> <span class="p">||</span> <span class="nv">X</span> <span class="o">&lt;-</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">seq</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">999</span> <span class="p">),</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">3</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nv">X</span> <span class="ow">rem</span> <span class="mi">5</span> <span class="o">=:=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">]),</span>
     <span class="nn">io</span><span class="p">:</span><span class="nf">fwrite</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~w</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Result</span><span class="p">]).</span>
 </pre></div>
+        
+    
     </div>
 </div>
-    
+
+
     
 
 
@@ -801,7 +807,7 @@ I'm scrolling through <a href="http://learnyousomeerlang.com/">Learn You Some Er
     <div class="well">
         <small>
             &copy; NathanRossPowell 2014.
-            This website was last statically updated: 2014, May 19th at 01:30:49 EDT. Which is 05:30:49 UTC/GMT.
+            This website was last statically updated: 2014, May 20nd at 19:05:44 EDT. Which is 23:05:44 UTC/GMT.
         </small>
     </div>
 

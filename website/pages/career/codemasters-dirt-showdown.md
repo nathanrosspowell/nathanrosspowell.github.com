@@ -1,6 +1,7 @@
 title: "Codemasters - DiRT Showdown"
 comments: True
 customsort: "003"
+short: Am arcade racer with destruction derby modes in SP an MP.
 
 Industry Experience at [Codemasters][codies] on [DiRT Showdown][showdown]
 =========================================================================

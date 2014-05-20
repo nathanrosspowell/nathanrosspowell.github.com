@@ -1,6 +1,7 @@
 title: "Ubisoft - Watch_Dogs"
 comments: True
 customsort: "002"
+short: The big new IP for Ubisoft, a next-gen open world hacking filled adventure.
 
 Industry Experience at [Ubisoft][ubi] on [Watch_Dogs][watchdogs]
 ================================================================

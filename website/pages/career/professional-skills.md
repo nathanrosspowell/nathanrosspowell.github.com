@@ -1,7 +1,7 @@
 title: "Professional Skills"
 comments: True
 customsort: "008"
-
+short: The skils I have learned/proved to have in a professional enviroment.
 
 Skills
 ===========================================================

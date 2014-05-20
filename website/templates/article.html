@@ -3,6 +3,7 @@
 
 {% block base_load %}
     "codehilitecss" : "{{ url_for(".static", filename="css/codehilite.css") }}", 
+    "githubwidget" : "{{ url_for(".static", filename="js/vendor/jquery.githubRepoWidget.min.js") }}", 
     {% block article_load %}
     {% endblock article_load %}
 {% endblock base_load %}
@@ -68,20 +69,21 @@
 {% block boilerplate_post_hero_unit %}
     {% block article_pre_row %}
     {% endblock article_pre_row %}
-
     {% if article.date %}
-        {{
-        macros.panel( 
-            article.title|title + " - " + makedate( article.date ), 
-            article.html|safe)
-        }}
+        {% set mainPanelTitle = article.title|title + " - " + makedate( article.date ) %}
     {% else %}
-        {{
-        macros.panel( 
-            article.title|title, 
-            article.html|safe )
-        }}
+        {% set mainPanelTitle = article.title|title %}
     {% endif %}
+    {% call macros.panel_call( mainPanelTitle ) %}
+        {{ article.html|safe }}
+        {% if article.project %}
+            <div class="github-widget" 
+                 data-repo="{{ github_name }}/{{ article.project }}">
+            </div>
+        {% endif %}
+    {% endcall %}
+
+
     {% if article.readme %}
       {% set readme = urltomarkdown( article.readme ) %}
       {{

@@ -331,6 +331,7 @@
 	},
 	"file_history":
 	[
+		"/home/nathan/projects/website/.gitignore",
 		"/home/nathan/projects/website/website/views.py",
 		"/home/nathan/projects/website/website/pages/career/overview.md",
 		"/home/nathan/projects/website/website/pages/career/ubisoft-watch-dogs.md",
@@ -407,7 +408,6 @@
 		"/home/nathan/projects/website/delete_branch.py",
 		"/home/nathan/projects/website/create_branch.py",
 		"/home/nathan/projects/website/README.md",
-		"/home/nathan/projects/website/.gitignore",
 		"/home/nathan/projects/website/install.bash",
 		"/home/nathan/projects/website/website/feed_time.txt",
 		"/home/nathan/projects/website/website/feed_content.txt",

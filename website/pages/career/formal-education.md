@@ -1,6 +1,7 @@
 title: Formal Education
 comments: True
 customsort: "010"
+short: My school achievements up until University.
 
 Northumbria University
 -----------------------------------------------------------

@@ -1,7 +1,7 @@
 title: "Eutechnyx - Ride To Hell"
 comments: True
 customsort: "007"
-
+short: A kart-like power-up’d racing game.
 
 Industry Experience at [Eutechnyx][etx] on [Hot Wheels: Beat That!][hotwheels]
 ==============================================================================

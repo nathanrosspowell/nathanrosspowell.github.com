@@ -1,7 +1,7 @@
 title: "Eutechnyx - Hot Wheels: Beat That!"
 comments: True
 customsort: "006"
-
+short: I worked on the 1st iteration of RTH when it was an open world GTA style biker game.
 
 Industry Experience at [Eutechnyx][etx] on [Ride To Hell][ridetohell]
 =====================================================================

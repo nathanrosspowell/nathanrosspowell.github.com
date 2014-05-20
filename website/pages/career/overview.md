@@ -1,6 +1,7 @@
 title: Career Overview
 comments: True
 customsort: "001"
+short: The chronological listing of my professional achievements.
 
 Biography
 ===========================================================

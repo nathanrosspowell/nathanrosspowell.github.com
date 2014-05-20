@@ -1,6 +1,7 @@
 title: "Codemasters - Operation Flashpoint: Red River"
 comments: True
 customsort: "004"
+short: An authentic military co-op FPS.
 
 Industry Experience at [Codemasters][codies] on [Operation Flashpoint: Red River][redriver]
 ===========================================================================================

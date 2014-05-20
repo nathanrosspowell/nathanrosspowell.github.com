@@ -53,6 +53,7 @@ Modernizr.load({
         
     
     "codehilitecss" : "/static/css/codehilite.css", 
+    "githubwidget" : "/static/js/vendor/jquery.githubRepoWidget.min.js", 
     
     
 
@@ -681,17 +682,26 @@ Modernizr.load({
                 
     
     
-
     
-        <div class="panel panel-default">
+        
+    
+    <div class="panel panel-default">
     <div class="panel-heading">
         <h4>Project Euler</h4>
     </div>
     <div class="panel-body">
+        
         <p>Vist my GitHub <a href="http://github.com/nathanrosspowell/euler" title="Project Euler on GitHub">repro</a> to see all the latest code. Most of the solutions have been programmed and left alone once solving the problem - it is not perfectly optimized code.</p>
+        
+            <div class="github-widget" 
+                 data-repo="nathanrosspowell/euler">
+            </div>
+        
+    
     </div>
 </div>
-    
+
+
     
       
       <div class="panel panel-default">
@@ -869,7 +879,7 @@ It's the actual completion of the problems that I'm aiming for!</p>
     <div class="well">
         <small>
             &copy; NathanRossPowell 2014.
-            This website was last statically updated: 2014, May 19th at 01:30:53 EDT. Which is 05:30:53 UTC/GMT.
+            This website was last statically updated: 2014, May 20nd at 19:05:49 EDT. Which is 23:05:49 UTC/GMT.
         </small>
     </div>
 

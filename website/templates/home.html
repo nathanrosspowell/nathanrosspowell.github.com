@@ -18,20 +18,24 @@
 
 {% block boilerplate_hero_unit %}
     <h1>
-       Nathan's Website 
+       NathanRossPowell.com
     </h1>
     <p>
-Here is my slice of the Internet - finally!
-Not too much is here at the moment but hopefully I will put up some of my coding projects up for the world to see.
-In the meantime, if you want to get in touch, check out the connect page.
-<br/>
-<br/>
-Thanks,
-<br/>
-Nathan
+        Welcome to my slice of the Internet!
+        I am a <a href="{{ url_for( "page", page_path = 'about_me' ) }}">computer programmer</a> that makes video 
+        game professionaly for <a href="http://www.ubisoft.com">Ubisoft</a> and codes all kinds of things in my spare time.
+        <br/>
+        This website is a learning exercise more than anything but hopefully it is good enough to showcase some of my works
+        and accomplishments. Below are links to my latest works and also some bits of social media.
+        <br/>
+        <br/>
+        Thanks,
+        <br/>
+        Nathan
     </p>
-    {% set link = url_for( "page", page_path = 'games/watch_dogs' ) %}                        
-    {{ macros.button_primary( "Watch_Dogs", link ) }}
+    {{ macros.button_primary( "Erlang", url_for( "page", page_path = 'blog/erlang' ) ) }}
+    {{ macros.button_primary( "Watch_Dogs", url_for( "page", page_path = 'games/watch_dogs' ) ) }}
+    {{ macros.button_primary( "Interface Zero", url_for( "page", page_path = 'cpde/interface-zero' ) ) }}
 {% endblock boilerplate_hero_unit %}
 
 {% block boilerplate_row %}

@@ -331,16 +331,25 @@
 	},
 	"file_history":
 	[
-		"/home/nathan/projects/website/.gitignore",
 		"/home/nathan/projects/website/website/views.py",
+		"/home/nathan/projects/website/website/templates/game.html",
+		"/home/nathan/projects/website/website/settings.cfg",
+		"/home/nathan/projects/website/website/pages/code/interface-zero.md",
+		"/home/nathan/projects/website/website/templates/article.html",
+		"/home/nathan/projects/website/website/pages/career/formal-education.md",
+		"/home/nathan/projects/website/website/pages/blog/functional-one-liner.md",
+		"/home/nathan/projects/website/website/pages/career/eutechnyx-ferrari.md",
+		"/home/nathan/projects/website/website/build/index.html",
+		"/home/nathan/projects/website/settings.pyc",
+		"/home/nathan/projects/website/settings.py",
+		"/home/nathan/projects/website/website/templates/subfolder.html",
+		"/home/nathan/projects/website/.gitignore",
 		"/home/nathan/projects/website/website/pages/career/overview.md",
 		"/home/nathan/projects/website/website/pages/career/ubisoft-watch-dogs.md",
 		"/home/nathan/projects/website/website/pages/games/ferrari-the-race-experience.md",
-		"/home/nathan/projects/website/website/pages/career/eutechnyx-ferrari.md",
 		"/home/nathan/projects/website/website/pages/games/watch_dogs.md",
 		"/home/nathan/projects/website/website/pages/career/cv_pdf.md",
 		"/home/nathan/projects/website/project.sublime-project",
-		"/home/nathan/projects/website/website/pages/career/formal-education.md",
 		"/home/nathan/projects/website/website/pages/career/other-experience.md",
 		"/home/nathan/projects/website/website/pages/career/eutechnyx-hot-wheels.md",
 		"/home/nathan/projects/website/website/pages/career/professional-skills.md",
@@ -355,14 +364,11 @@
 		"/home/nathan/projects/website/website/pages/career/codemasters-operation-flashpoint",
 		"/home/nathan/projects/website/website/pages/code/project-euler.md",
 		"/home/nathan/projects/website/website/pages/code/personal-website.md",
-		"/home/nathan/projects/website/website/pages/code/interface-zero.md",
 		"/home/nathan/projects/website/website/templates/macros.html",
 		"/home/nathan/projects/website/website/templates/base.html",
 		"/home/nathan/projects/website/website/static/css/main.css",
-		"/home/nathan/projects/website/website/templates/game.html",
 		"/home/nathan/projects/interfacezero/js/player_character.js",
 		"/home/nathan/projects/website/website/templates/boilerplate.html",
-		"/home/nathan/projects/website/website/templates/article.html",
 		"/home/nathan/projects/website/website/build/career/other-experience/index.html",
 		"/home/nathan/projects/website/website/pages/blog/website-maintainance.md",
 		"/home/nathan/projects/website/website/pages/blog/syntax-highlight-test.md",
@@ -370,12 +376,8 @@
 		"/home/nathan/projects/website/website/pages/blog/long-time-no-update.md",
 		"/home/nathan/projects/website/website/pages/blog/hello-montral-hello-ubisoft.md",
 		"/home/nathan/projects/website/website/pages/blog/hello-world.md",
-		"/home/nathan/projects/website/website/pages/blog/functional-one-liner.md",
-		"/home/nathan/projects/website/website/templates/subfolder.html",
 		"/home/nathan/projects/website/website/pages/blog/erlang.md",
 		"/home/nathan/projects/website/README.sublime-workspace",
-		"/home/nathan/projects/website/website/settings.cfg",
-		"/home/nathan/projects/website/settings.py",
 		"/home/nathan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/nathan/projects/website/scss.bash",
 		"/home/nathan/projects/website/website/pages/about_me.md",
@@ -402,7 +404,6 @@
 		"/home/nathan/projects/website/website/build/code/index.html",
 		"/home/nathan/projects/website/website/build/career/index.html",
 		"/home/nathan/projects/website/website/build/blog/index.html",
-		"/home/nathan/projects/website/website/build/index.html",
 		"/home/nathan/projects/website/website/static/css/anythingslider.css",
 		"/home/nathan/projects/website/deploy.py",
 		"/home/nathan/projects/website/delete_branch.py",
@@ -457,8 +458,7 @@
 		"/home/nathan/projects/sdl2/source/passport/identity_factory.h",
 		"/home/nathan/projects/interface_zero/yaml_to_js.py",
 		"/home/nathan/projects/interface_zero/yaml/derp_man.yaml",
-		"/home/nathan/projects/interface_zero/characer_map.js",
-		"/home/nathan/projects/interface_zero/trigger_finger.js"
+		"/home/nathan/projects/interface_zero/characer_map.js"
 	],
 	"find":
 	{
@@ -479,6 +479,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"panel_",
+			"INSTAGRAM_NAME",
 			"vustomsort",
 			"named:",
 			"\"url\"",
@@ -604,9 +606,7 @@
 			"prote",
 			"x +=  makeHeading",
 			"y += '  ",
-			"poop",
-			"prote",
-			"makeModal"
+			"poop"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -777,6 +777,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"forma",
+				"website/pages/career/formal-education.md"
+			],
+			[
+				"interf",
+				"website/pages/code/interface-zero.md"
+			],
+			[
+				"setting",
+				"website/settings.cfg"
+			],
 			[
 				"fer",
 				"website/pages/career/eutechnyx-ferrari.md"
@@ -1276,18 +1288,6 @@
 			[
 				"yamldo",
 				"source/yaml_helpers/doc.cpp"
-			],
-			[
-				"config",
-				"resources/yaml/config.yaml"
-			],
-			[
-				"applica",
-				"source/game/application.cpp"
-			],
-			[
-				"factotyp",
-				"source/factory/types.hxx"
 			]
 		],
 		"width": 0.0

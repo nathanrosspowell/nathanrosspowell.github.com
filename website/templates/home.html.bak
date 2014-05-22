@@ -23,7 +23,7 @@
     <p>
         Welcome to my slice of the Internet!
         I am a <a href="{{ url_for( "page", page_path = 'about_me' ) }}">computer programmer</a> that makes video 
-        game professionally for <a href="http://www.ubisoft.com">Ubisoft</a> and codes all kinds of things in my spare time.
+        game professionaly for <a href="http://www.ubisoft.com">Ubisoft</a> and codes all kinds of things in my spare time.
         <br/>
         This website is a learning exercise more than anything but hopefully it is good enough to showcase some of my works
         and accomplishments. Below are links to my latest works and also some bits of social media.
@@ -35,7 +35,7 @@
     </p>
     {{ macros.button_primary( "Erlang", url_for( "page", page_path = 'blog/erlang' ) ) }}
     {{ macros.button_primary( "Watch_Dogs", url_for( "page", page_path = 'games/watch_dogs' ) ) }}
-    {{ macros.button_primary( "Interface Zero", url_for( "page", page_path = 'code/interface-zero' ) ) }}
+    {{ macros.button_primary( "Interface Zero", url_for( "page", page_path = 'cpde/interface-zero' ) ) }}
 {% endblock boilerplate_hero_unit %}
 
 {% block boilerplate_row %}

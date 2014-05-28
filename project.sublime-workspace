@@ -271,6 +271,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "website/templates/home.html",
+			"settings":
+			{
+				"buffer_size": 3337,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -726,8 +734,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "website/templates/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1368,
+								1368
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 490.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -777,6 +814,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"home",
+				"website/templates/home.html"
+			],
 			[
 				"forma",
 				"website/pages/career/formal-education.md"
@@ -916,10 +957,6 @@
 			[
 				".css",
 				"website/static/css/main.css"
-			],
-			[
-				"home",
-				"website/templates/home.html"
 			],
 			[
 				"template/",

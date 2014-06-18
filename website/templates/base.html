@@ -16,9 +16,9 @@
     {% endblock base_complete %}
 {% endblock yepnope_complete%}
 
-{% block boilerplate_project_name %}
-    {{ title }} 
-{% endblock boilerplate_project_name %}
+{% block boilerplate_project_nav_tile %}
+    <span class="mega-octicon octicon-home"></span>
+{% endblock boilerplate_project_nav_tile %}
 
 {% block boilerplate_navbar %}
     {% for key, value in navbar %}
@@ -27,14 +27,14 @@
                 {% for data in value[ 0 ] %}
                     {% set page_link = url_for( "page", page_path = data.path ) %}
                     {% set active = menu_selected is equalto( data.path ) %} 
-                    {{ macros.menu_link_item( data.title|title, page_link, active ) }}
+                    {{ macros.menu_link_root_item( data.title|title, page_link, active ) }}
                 {% endfor %}
             {% endif %}
             {% if value[ 1 ]|length > 0 %}
                 {% for data in value[ 1 ] %}
                     {% set page_link = url_for( "page", page_path = data.path ) %}
                     {% set active = menu_selected is equalto( data.path ) %} 
-                    {{ macros.menu_link_item( data.title|title, page_link, active ) }}
+                    {{ macros.menu_link_root_item( data.title|title, page_link, active ) }}
                 {% endfor %}
             {% endif %}
         {% elif value|length is compute( ">", 1 ) %} 

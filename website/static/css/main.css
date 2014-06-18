@@ -20,7 +20,27 @@ body {
     word-wrap: break-word;
 }
 
+.well-subfolder {
+    max-height: 300px;
+    overflow-y:scroll;
+    border: 1px solid #464545;
 
+}
+
+.subfolder {
+    padding: 0,0,0,0
+    margin-left: -50px;
+    transform: scale(0.75);
+    -ms-transform: scale(0.75); /* IE 9 */
+    -webkit-transform: scale(0.75); /* Safari and Chrome */
+    -o-transform: scale(0.75); /* Opera */
+    -moz-transform: scale(0.75); /* Firefox */
+    transform-origin: top;
+    -ms-transform-origin: top; /* IE 9 */
+    -webkit-transform-origin: top; /* Safari and Chrome */
+    -o-transform-origin: top; /* Opera */
+    -moz-transform-origin: top; /* Firefox */
+}
 
 
 

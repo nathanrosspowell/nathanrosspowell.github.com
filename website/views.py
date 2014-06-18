@@ -91,13 +91,16 @@ def getdate( value, type ):
             elif day[ 0 ] == "3":
                 post = "rd"
         return "%s%s" % ( day, post, )
-
     return "_ERROR_"
 app.jinja_env.globals.update( getdate = getdate )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def equalto( x, y ):
     return x == y
 app.jinja_env.tests.update( equalto = equalto )
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def textequalto( x, y ):
+    return x.lower().strip() == y.lower().strip()
+app.jinja_env.tests.update( textequalto = textequalto )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def urltomarkdown( url ):
     return Markup(markdown.markdown(urllib2.urlopen( url ).read()))
@@ -123,14 +126,13 @@ def create_navbar_structure():
 # Helpers
 def create_navbar():
     navbar = {}
-    getPage = lambda x, y: pages.get_or_404( os.path.join( x, y ) )
-    getTitle = lambda x, y: getPage( x, y ).meta.get( "title", x )
     for key, value in create_navbar_structure().items(): 
         alphaSort = [] 
         dateSort = []
         for item in value:
             path = os.path.join( key, item )
-            itemMeta = pages.get_or_404( path ).meta
+            thisPage = pages.get_or_404( path )
+            itemMeta = thisPage.meta
             title = itemMeta.get( "title", item )
             date = itemMeta.get( "date", False )
             sort = date if date is not False else title
@@ -141,6 +143,9 @@ def create_navbar():
                 "path" : path,
                 "date" : date,
                 "sort" : sort,
+                "comments": itemMeta.get( "comments", False ),
+                "html" : thisPage.html
+
             }
             if customSort is not False:
                 alphaSort.append( data )

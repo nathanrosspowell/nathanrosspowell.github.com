@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"register"
+			],
+			[
+				"ins",
+				"install_scripts"
+			],
+			[
 				"Cus",
 				"customSort"
 			],
@@ -134,10 +142,6 @@
 			[
 				"inc",
 				"inc	#include \"…\""
-			],
-			[
-				"re",
-				"return"
 			],
 			[
 				"ite",
@@ -272,10 +276,40 @@
 	"buffers":
 	[
 		{
-			"file": "website/templates/home.html",
+			"contents": "/* affix the navbar after scroll below header */\n$('#nav').affix({\n      offset: {\n        top: $('header').height()-$('#nav').height()\n      }\n});\n/* highlight the top nav as scrolling occurs */\n$('body').scrollspy({ target: '#nav' })\n/* smooth scrolling for scroll to top */\n$('.scroll-top').click(function(){\n  $('body,html').animate({scrollTop:0},1000);\n})\n/* smooth scrolling for nav sections */\n$('#nav .navbar-nav li>a').click(function(){\n  var link = $(this).attr('href');\n  var posi = $(link).offset().top+20;\n  $('body,html').animate({scrollTop:posi},700);\n})",
+			"file": "/home/nathan/projects/yaml-boot-bars/js/scripts.js",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
-				"buffer_size": 3337,
+				"buffer_size": 569,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html class=\"no-js\" lang=\"\">\n    <head>\n        <meta name=\"description\" content=\"\">\n        <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n        <meta charset=\"utf-8\">\n        <title>YAML-Boot-Bars</title>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\n        <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n        <!--[if lt IE 9]>\n            <script src=\"//html5shim.googlecode.com/svn/trunk/html5.js\"></script>\n        <![endif]-->\n        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->\n        <link rel=\"stylesheet\" href=\"css/normalize.css\">\n        <link rel=\"stylesheet\" href=\"css/boilerplate.css\">\n        <link href=\"css/styles.css\" rel=\"stylesheet\">\n    </head>\n    <body>\n<!-- Wrap all page content here -->\n<div id=\"wrap\">\n  \n<header class=\"masthead\">\n    <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-sm-6\">\n        <h1><a href=\"#\" title=\"Bootstrap Template\">Happy Scroll</a>\n          <p class=\"lead\">{A Bootstrap Template}</p></h1>\n      </div>\n      <div class=\"col-sm-6\">\n        <div class=\"pull-right  hidden-xs\">    \n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><h3><i class=\"glyphicon glyphicon-cog\"></i></h3></a>\n          <ul class=\"dropdown-menu\">\n              <li><a href=\"#\"><i class=\"glyphicon glyphicon-chevron-right\"></i> Link</a></li>\n              <li><a href=\"#\"><i class=\"glyphicon glyphicon-user\"></i> Link</a></li>\n              <li><a href=\"#\"><i class=\"glyphicon glyphicon-lock\"></i> Link</a></li>\n              <li><a href=\"#\"><i class=\"glyphicon glyphicon-cog\"></i> Link</a></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n    </div>\n</header>\n  \n  \n<!-- Fixed navbar -->\n<div class=\"navbar navbar-custom navbar-inverse navbar-static-top\" id=\"nav\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n      </div>\n      <div class=\"collapse navbar-collapse\">\n        <ul class=\"nav navbar-nav nav-justified\" id=\"navList\">\n          <li><a href=\"#\">Home</a></li>\n          <li><a href=\"#\">DOME</a></li>\n                {{#each this.built.the_data.sections}}\n                    {{name}}\n                {{/each}}\n                {{#each built.the_data.sections }}\n                    {{name}}\n                {{/each}}\n                {{#with the_data}}\n                    {{#each sections}}\n                        <li {{#if active}}class=\"active\"{{/if}}>\n                            <a href=\"#{{name}}\"><strong>{{name}}</strong></a>\n                        </li>\n                    {{/each}}\n                {{/with}}\n        </ul>\n      </div><!--/.nav-collapse -->\n    </div><!--/.container -->\n</div><!--/.navbar -->\n    \n<div id=\"sections\">\n    {{#with the_data}}\n        {{#each sections}}\n            <div class=\"divider\" id=\"{{name}}\"></div>\n            <section style=\"\n            background: url('{{background}}') no-repeat center center fixed;\n            -webkit-background-size: cover;\n                -moz-background-size: cover;\n                -o-background-size: cover;\n                background-size: cover;\">\n              <div class=\"col-sm-6 col-sm-offset-3 text-center\"><h2 style=\"padding:20px;background-color:rgba(5,5,5,.8)\">{{name}}</h2></div>\n      \n            </section>\n            <div class=\"divider\"></div>\n        {{/each}}\n    {{/with}}\n</div>\n\n<ul class=\"nav pull-right scroll-top\">\n  <li><a href=\"#\" title=\"Scroll to top\"><i class=\"glyphicon glyphicon-chevron-up\"></i></a></li>\n</ul>\n\n    <!-- script references -->\n\n        <!--script src=\"//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script-->\n        <script>window.jQuery || document.write('<script src=\"js/jquery-2.1.1.min.js\"><\\/script>')</script>\n        <script src=\"js/handlebars-v1.3.0.js\"></script>\n        <script src=\"js/bootstrap.min.js\"></script>\n        <script src=\"http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed\"></script>\n        <script src=\"js/scripts.js\"></script>\n        <script src=\"js/the_data.js\"></script>\n        <script src=\"js/main.js\"></script>\n\n        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->\n        <!--script>\n            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=\n            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;\n            e=o.createElement(i);r=o.getElementsByTagName(i)[0];\n            e.src='//www.google-analytics.com/analytics.js';\n            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));\n            ga('create','UA-XXXXX-X');ga('send','pageview');\n        </script-->\n\n    </body>\n</html>",
+			"file": "/home/nathan/projects/yaml-boot-bars/src/index.html",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 4946,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/nathan/projects/yaml-boot-bars/Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 4751,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/nathan/projects/yaml-boot-bars/src/index.handlebars",
+			"settings":
+			{
+				"buffer_size": 4630,
 				"line_ending": "Unix"
 			}
 		}
@@ -339,6 +373,47 @@
 	},
 	"file_history":
 	[
+		"/home/nathan/projects/yaml-boot-bars/js/main.js",
+		"/home/nathan/projects/yaml-boot-bars/node_modules/grunt-static-handlebars/tasks/lib/context.js",
+		"/home/nathan/projects/website/deploy.py",
+		"/home/nathan/projects/yaml-boot-bars/node_modules/grunt-static-handlebars/tasks/static_handlebars.js",
+		"/home/nathan/projects/website/delete_branch.py",
+		"/home/nathan/projects/yaml-boot-bars/build/index.html",
+		"/home/nathan/projects/yaml-boot-bars/temp/built.json",
+		"/home/nathan/projects/yaml-boot-bars/make-yaml",
+		"/home/nathan/projects/yaml-boot-bars/index.html",
+		"/home/nathan/projects/yaml-boot-bars/src/index.html",
+		"/home/nathan/projects/yaml-boot-bars/js/the_data.js",
+		"/home/nathan/projects/yaml-boot-bars/css/styles.css",
+		"/home/nathan/tests/grunt-tutorial/package.json",
+		"/home/nathan/projects/yaml-boot-bars/src/yaml/the_data_2.yml",
+		"/home/nathan/projects/yaml-boot-bars/src/yaml/the_data.yml",
+		"/home/nathan/projects/yaml-boot-bars/src/yaml/the_data.yaml",
+		"/home/nathan/tests/grunt-tutorial/Gruntfile.js",
+		"/home/nathan/tests/grunt-tutorial/Gruntfile",
+		"/home/nathan/.config/sublime-text-3/Packages/User/Plain text.sublime-settings",
+		"/home/nathan/projects/yaml-boot-bars/README.md",
+		"/home/nathan/projects/yaml-boot-bars/js/scripts.js",
+		"/home/nathan/projects/yaml-boot-bars/css/main.css",
+		"/home/nathan/projects/yaml-boot-bars/index-old.html",
+		"/home/nathan/Downloads/happy scroll/index.html",
+		"/home/nathan/projects/website/freeze.py",
+		"/home/nathan/projects/dotfiles/install.bash",
+		"/home/nathan/projects/vim/install.bash",
+		"/home/nathan/projects/dotfiles/bashrc",
+		"/home/nathan/projects/dotfiles/.gitmodules",
+		"/home/nathan/projects/dotfiles/test.bash",
+		"/home/nathan/.vim/install.bash",
+		"/home/nathan/projects/my-vim-setup/install.bash",
+		"/home/nathan/.bashrc",
+		"/home/nathan/vim/bundle_history.bash",
+		"/home/nathan/vim/install.bash",
+		"/home/nathan/vim/vimrc",
+		"/home/nathan/vim/install_bundles.bash",
+		"/home/nathan/projects/website/website/build/index.html",
+		"/home/nathan/projects/website/website/templates/home.html",
+		"/home/nathan/projects/website/website/static/css/main.css",
+		"/home/nathan/projects/website/README.sublime-workspace",
 		"/home/nathan/projects/website/website/views.py",
 		"/home/nathan/projects/website/website/templates/game.html",
 		"/home/nathan/projects/website/website/settings.cfg",
@@ -347,7 +422,6 @@
 		"/home/nathan/projects/website/website/pages/career/formal-education.md",
 		"/home/nathan/projects/website/website/pages/blog/functional-one-liner.md",
 		"/home/nathan/projects/website/website/pages/career/eutechnyx-ferrari.md",
-		"/home/nathan/projects/website/website/build/index.html",
 		"/home/nathan/projects/website/settings.pyc",
 		"/home/nathan/projects/website/settings.py",
 		"/home/nathan/projects/website/website/templates/subfolder.html",
@@ -374,7 +448,6 @@
 		"/home/nathan/projects/website/website/pages/code/personal-website.md",
 		"/home/nathan/projects/website/website/templates/macros.html",
 		"/home/nathan/projects/website/website/templates/base.html",
-		"/home/nathan/projects/website/website/static/css/main.css",
 		"/home/nathan/projects/interfacezero/js/player_character.js",
 		"/home/nathan/projects/website/website/templates/boilerplate.html",
 		"/home/nathan/projects/website/website/build/career/other-experience/index.html",
@@ -385,7 +458,6 @@
 		"/home/nathan/projects/website/website/pages/blog/hello-montral-hello-ubisoft.md",
 		"/home/nathan/projects/website/website/pages/blog/hello-world.md",
 		"/home/nathan/projects/website/website/pages/blog/erlang.md",
-		"/home/nathan/projects/website/README.sublime-workspace",
 		"/home/nathan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/nathan/projects/website/scss.bash",
 		"/home/nathan/projects/website/website/pages/about_me.md",
@@ -413,8 +485,6 @@
 		"/home/nathan/projects/website/website/build/career/index.html",
 		"/home/nathan/projects/website/website/build/blog/index.html",
 		"/home/nathan/projects/website/website/static/css/anythingslider.css",
-		"/home/nathan/projects/website/deploy.py",
-		"/home/nathan/projects/website/delete_branch.py",
 		"/home/nathan/projects/website/create_branch.py",
 		"/home/nathan/projects/website/README.md",
 		"/home/nathan/projects/website/install.bash",
@@ -429,48 +499,12 @@
 		"/home/nathan/projects/website/website/build/static/css/main.css",
 		"/home/nathan/projects/interfacezero/beautify_javascript.py",
 		"/home/nathan/projects/website/runserver.py",
-		"/home/nathan/projects/website/freeze.py",
-		"/home/nathan/projects/website/website/templates/home.html",
 		"/home/nathan/projects/website/website/templates/atom.xml",
-		"/home/nathan/projects/website/website/templates/error.html",
-		"/home/nathan/projects/website/website/time_stamp.py",
-		"/home/nathan/projects/website/website/static/css/variables.less",
-		"/home/nathan/projects/website/website/static/css/bootstrap.min.css",
-		"/home/nathan/Downloads/variables.less",
-		"/home/nathan/projects/interfacezero/yaml/trigger_finger.yaml",
-		"/home/nathan/projects/interfacezero/js/html_functions.js",
-		"/home/nathan/projects/interfacezero/index.html",
-		"/home/nathan/projects/interfacezero/css/navbar-fixed-top.css",
-		"/home/nathan/projects/interfacezero/yaml/silverbeard.yaml",
-		"/home/nathan/projects/interfacezero/js/main.js",
-		"/home/nathan/projects/interfacezero/yaml/derp_man.yaml",
-		"/home/nathan/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/nathan/projects/interfacezero/yaml/todo.yaml",
-		"/home/nathan/projects/interfacezero/js/yaml_lists.js",
-		"/home/nathan/projects/interfacezero/js/postload.js",
-		"/home/nathan/projects/interfacezero/interfacezero.sublime-project",
-		"/home/nathan/projects/interfacezero/params.json",
-		"/home/nathan/projects/interfacezero/css/bootstrap/bootstrap.css",
-		"/home/nathan/projects/interfacezero/run_chrome_local.bash",
-		"/home/nathan/projects/interface_zero_offline/html/index.html",
-		"/home/nathan/projects/interfacezero/.gitignore",
-		"/home/nathan/projects/interface_zero_offline/html/js/main.js",
-		"/home/nathan/projects/interface_zero/html/js/main.js",
-		"/home/nathan/projects/interface_zero/html/index.html",
-		"/home/nathan/projects/interface_zero/trigger_finger.yaml",
-		"/home/nathan/projects/interface_zero/html/js/interface_zero/character_map.js",
-		"/home/nathan/projects/interface_zero/python/yaml_to_js.py",
-		"/home/nathan/projects/sdl2/source/CMakeLists.sublime-project",
-		"/home/nathan/projects/sdl2/source/log/log.cpp",
-		"/home/nathan/projects/sdl2/source/gl_helpers/primitives.h",
-		"/home/nathan/projects/sdl2/source/passport/identity_factory.h",
-		"/home/nathan/projects/interface_zero/yaml_to_js.py",
-		"/home/nathan/projects/interface_zero/yaml/derp_man.yaml",
-		"/home/nathan/projects/interface_zero/characer_map.js"
+		"/home/nathan/projects/website/website/templates/error.html"
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 46.0
 	},
 	"find_in_files":
 	{
@@ -487,6 +521,29 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"\n  ",
+			"built.js'",
+			"my_targets",
+			"getContext",
+			"getContext ",
+			"getContext",
+			"warning",
+			"extends",
+			",",
+			"\"",
+			"uglify",
+			"section1",
+			"img",
+			"id=\"nav\"",
+			"header",
+			"#nav",
+			"img",
+			"currentDir",
+			"packageList",
+			"currentDir",
+			"NathanRossPowell.com",
+			"NathanRossPowell",
+			"nathanrosspowell",
 			"panel_",
 			"INSTAGRAM_NAME",
 			"vustomsort",
@@ -591,30 +648,7 @@
 			"makeInfoButton",
 			"makeInfoButtonBig",
 			"modal += ",
-			"modal",
-			"makeInfoButtonBig",
-			"shortN",
-			"camp",
-			"notes",
-			"edges",
-			"/\\s+/g",
-			"replace",
-			"replaceSpaces",
-			"replace",
-			"edges",
-			"makeInfoButton",
-			"edges",
-			"makeTable",
-			"edge",
-			"notes",
-			"accordion",
-			"attributeItems",
-			"makeTable",
-			"makeVerticalTable",
-			"prote",
-			"x +=  makeHeading",
-			"y += '  ",
-			"poop"
+			"modal"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -622,6 +656,13 @@
 		"regex": false,
 		"replace_history":
 		[
+			"concatfile.json'",
+			"concatfile.json",
+			"ybb",
+			"",
+			"current_dir",
+			"package_list",
+			"current_dir",
 			"{{ id }}",
 			"",
 			"subfolder_link_item",
@@ -734,24 +775,52 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "website/templates/home.html",
+					"file": "/home/nathan/projects/yaml-boot-bars/js/scripts.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3337,
+						"buffer_size": 569,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1368,
-								1368
+								361,
+								361
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/nathan/projects/yaml-boot-bars/src/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1518,
+								1518
 							]
 						],
 						"settings":
@@ -762,7 +831,63 @@
 						"translation.y": 490.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/nathan/projects/yaml-boot-bars/Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3206,
+								3206
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1400.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/nathan/projects/yaml-boot-bars/src/index.handlebars",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2455,
+								2455
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 854.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -806,7 +931,7 @@
 	"project": "project.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 84.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -814,6 +939,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				".css",
+				"website/static/css/main.css"
+			],
 			[
 				"home",
 				"website/templates/home.html"
@@ -953,10 +1082,6 @@
 			[
 				"boi",
 				"website/build/career/other-experience/index.html"
-			],
-			[
-				".css",
-				"website/static/css/main.css"
 			],
 			[
 				"template/",
@@ -1352,7 +1477,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 331.0,
+	"side_bar_width": 260.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

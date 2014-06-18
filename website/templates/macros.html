@@ -1,3 +1,19 @@
+{% macro menu_tile_add_glyph( title ) -%}
+    {% if title is textequalto( "Me" ) %}
+        <span class="octicon octicon-person"></span> {{title}}
+    {% elif title is textequalto( "Blog" ) %}
+        <span class="octicon octicon-keyboard"> {{title}}
+    {% elif title is textequalto( "Career" ) %}
+        <span class="octicon octicon-mortar-board"> {{title}}
+    {% elif title is textequalto( "Code" ) %}
+        <span class="octicon octicon-bug"> {{title}}
+    {% elif title is textequalto( "Games" ) %}
+        <span class="octicon octicon-rocket"> {{title}}
+    {% else %}
+        <span class="octicon octicon-primitive-dot"> {{ title }}
+    {% endif%}
+{%- endmacro %}
+
 {% macro menu_dropdown( dropdown_title, dropdown_link, active ) -%}
     <li
         {% if active %}
@@ -7,7 +23,7 @@
          {% endif %}
     >
         <a href="{{ dropdown_link }}" class="dropdown-toggle" data-toggle="dropdown">
-            {{ dropdown_title }}
+            {{ menu_tile_add_glyph(dropdown_title) }}
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
@@ -16,6 +32,19 @@
     </li>
 {%- endmacro %}
 
+{% macro menu_link_root_item( item_title, item_link, active ) -%}
+    <li
+        {% if active %}
+             class="active"
+         {% endif %}
+    >
+        <a href="{{ item_link }}">
+            {{ menu_tile_add_glyph(item_title) }}
+        </a>
+    </li>
+{%- endmacro %}
+
+
 {% macro menu_link_item( item_title, item_link, active ) -%}
     <li
         {% if active %}
@@ -23,7 +52,7 @@
          {% endif %}
     >
         <a href="{{ item_link }}">
-            {{ item_title }} {{ extra }}
+            {{ item_title }}
         </a>
     </li>
 {%- endmacro %}
@@ -37,19 +66,32 @@
     <li class="divider"></li>
 {%- endmacro %}
 
-{% macro subfolder_link_item( item_title, item_link, extra ) -%}
-    <li>
-        <a href="{{ item_link }}">
-            {{ item_title }} 
+{% macro subfolder_link_item( data, item_link, extra ) -%}
+        <h3>
+            <a href="{{ item_link }}">
+            {{ data.title }} 
+            </a>
+            {{ extra }}
+        </h3>
+        <div class="well well-subfolder">
+            <div class="subfolder">
+                {{ data.html|safe }}
+            </div>
+        </div>
+        <a class="btn btn-primary btn-large" href="{{ item_link }}">
+            <span class="glyphicon glyphicon-link"></span> Read in full
         </a>
-        {{ extra }}
-    </li>
+        {% if data.comments %}
+            <a class="btn btn-primary btn-large" href="{{ item_link }}#comments-body">
+                <span class="glyphicon glyphicon-comment"></span> Comments
+            </a>
+        {% endif %}
 {%- endmacro %}
 
 {% macro button_primary( button_title, button_link ) -%}
-        <a class="btn btn-primary btn-large" href="{{ button_link }}">
-            {{ button_title }}
-        </a>
+    <a class="btn btn-primary btn-large" href="{{ button_link }}">
+        {{ button_title }}
+    </a>
 {%- endmacro %}
 
 {% macro button( button_title, button_link ) -%}

@@ -30,22 +30,23 @@
         {% for key, value in navbar %}
             {% if key is equalto( subfolder ) %}
                 {% if value[ 0 ]|length > 0 %}
-                    <p>Pages</p>
-                    {% for data in value[ 0 ] %}
-                        {% set page_link = url_for( "page", page_path = data.path ) %}
-                        {{ macros.subfolder_link_item( data.title, page_link ) }}
-                    {% endfor %}
+                        {% for data in value[ 0 ] %}
+                            {% set page_link = url_for( "page", page_path = data.path ) %}
+                            {{ macros.subfolder_link_item( data, page_link ) }}
+                        {% endfor %}
                 {% endif %}
                 {% if value[ 1 ]|length > 0 %}
-                    <p>Articles</p>
-                    {% for data in value[ 1 ] %}
-                        {% set page_link = url_for( "page", page_path = data.path ) %}
-                        {% if data.date %}
-                            {{ macros.subfolder_link_item( data.title, page_link, makedate( data.date ) ) }}
-                        {% else %}
-                            {{ macros.subfolder_link_item( data.title, page_link ) }}
-                        {% endif %}
-                    {% endfor %}
+                        {% for data in value[ 1 ] %}
+                            {% if not loop.first %}
+                                <hr/>
+                            {% endif %}
+                            {% set page_link = url_for( "page", page_path = data.path ) %}
+                            {% if data.date %}
+                                {{ macros.subfolder_link_item( data, page_link, makedate( data.date ) ) }}
+                            {% else %}
+                                {{ macros.subfolder_link_item( data, page_link ) }}
+                            {% endif %}
+                        {% endfor %}
                 {% endif %}
             {% endif %} 
         {% endfor %}

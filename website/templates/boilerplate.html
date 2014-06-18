@@ -15,6 +15,7 @@
 
         <link rel="stylesheet" href="{{ url_for(".static", filename="css/bootstrap.min.css") }}">
         <link rel="stylesheet" href="{{ url_for(".static", filename="css/main.css") }}">
+        <link rel="stylesheet" href="{{ url_for(".static", filename="octicons/octicons.css") }}">
 
         {% block boilerplate_meta %}
         {% endblock boilerplate_meta %}
@@ -69,7 +70,7 @@ Modernizr.load({
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="{{ url_for( "index" ) }}">{% block boilerplate_project_name %}Project name{% endblock boilerplate_project_name %}</a>
+                  <a class="navbar-brand" href="{{ url_for( "index" ) }}">{% block boilerplate_project_nav_tile %}Project name{% endblock boilerplate_project_nav_tile %}</a>
                 </div>
                 <div class="collapse navbar-collapse">
                   <ul class="nav navbar-nav">

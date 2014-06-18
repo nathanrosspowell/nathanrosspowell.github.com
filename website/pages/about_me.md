@@ -1,5 +1,5 @@
 source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/menu/connect.md"
-title: About Me
+title: Me
 comments: True
 
 <p><a href="http://imgur.com/WOllJ"><img class="img-responsive img-thumbnail" src="http://imgur.com/60QayFc.png" alt="My face herp derp" title="My face herp derp" /></a></p>

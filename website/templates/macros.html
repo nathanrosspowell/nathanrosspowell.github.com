@@ -2,15 +2,15 @@
     {% if title is textequalto( "Me" ) %}
         <span class="octicon octicon-person"></span> {{title}}
     {% elif title is textequalto( "Blog" ) %}
-        <span class="octicon octicon-keyboard"> {{title}}
+        <span class="octicon octicon-keyboard"></span> {{title}}
     {% elif title is textequalto( "Career" ) %}
-        <span class="octicon octicon-mortar-board"> {{title}}
+        <span class="octicon octicon-mortar-board"></span> {{title}}
     {% elif title is textequalto( "Code" ) %}
-        <span class="octicon octicon-bug"> {{title}}
+        <span class="octicon octicon-bug"></span> {{title}}
     {% elif title is textequalto( "Games" ) %}
-        <span class="octicon octicon-rocket"> {{title}}
+        <span class="octicon octicon-rocket"></span> {{title}}
     {% else %}
-        <span class="octicon octicon-primitive-dot"> {{ title }}
+        <span class="octicon octicon-primitive-dot"></span> {{ title }}
     {% endif%}
 {%- endmacro %}
 

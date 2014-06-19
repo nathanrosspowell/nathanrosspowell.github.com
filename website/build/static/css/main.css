@@ -42,7 +42,13 @@ body {
     -moz-transform-origin: top; /* Firefox */
 }
 
+.form-control {
+    max-width: 180px;
+}
 
+.vtop {
+    vertical-align: text-top;
+}
 
 
 

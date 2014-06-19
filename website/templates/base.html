@@ -17,7 +17,19 @@
 {% endblock yepnope_complete%}
 
 {% block boilerplate_project_nav_tile %}
-    <span class="mega-octicon octicon-home"></span>
+    <span class="visible-xs">
+        <span class="mega-octicon octicon-home "></span>
+        {{ title }}
+    </span>
+    <span class="visible-lg">
+        <span class="octicon octicon-home "></span>
+        {{ title }}
+    </span>
+    <span class="visible-sm visible-md">
+        <span class="octicon octicon-home "></span>
+        {{ small_title }}
+    </span>
+
 {% endblock boilerplate_project_nav_tile %}
 
 {% block boilerplate_navbar %}

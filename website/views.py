@@ -182,6 +182,7 @@ def base_render_template( template, **kwargs ):
     navbarTuples = sorted( navbar.iteritems(), key = operator.itemgetter( 0 ) )
     kwargs[ "navbar" ] = navbarTuples
     kwargs[ "title" ] = app.config[ "TITLE" ]
+    kwargs[ "small_title" ] = app.config[ "SMALL_TITLE" ]
     kwargs[ "google_analytics" ] = app.config[ "GOOGLE_ANALYTICS" ]
     kwargs[ "disqus_name" ] = app.config[ "DISQUS_NAME" ]
     kwargs[ "twitter_name" ] = app.config[ "TWITTER_NAME" ]

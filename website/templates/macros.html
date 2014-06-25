@@ -1,5 +1,5 @@
 {% macro menu_tile_add_glyph( title ) -%}
-    {% if title is textequalto( "Me" ) %}
+    {% if title is textequalto( "About Me" ) %}
         <span class="octicon octicon-person"></span> {{title}}
     {% elif title is textequalto( "Blog" ) %}
         <span class="octicon octicon-keyboard"></span> {{title}}
@@ -130,7 +130,23 @@
 
 {% macro youtube( url, params = "" ) -%}
 
-<iframe title="YouTube video player" width="560" height="315" src="http://www.youtube.com/embed/{{ url }}" frameborder="0" allowfullscreen></iframe>
+<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+    <iframe allowfullscreen="" 
+            src="http://www.youtube.com/embed/{{ url }}?feature=player_detailpage" 
+            frameborder="0">
+    </iframe>
+</div>
+
+{%- endmacro %}
+
+{% macro vimeo( url, params = "" ) -%}
+
+<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+     <iframe allowfullscreen="" 
+            src="http://player.vimeo.com/video/{{ url }}" 
+            frameborder="0">
+    </iframe>
+</div> 
 
 {%- endmacro %}
 
@@ -147,9 +163,13 @@ style="max-width:600px"
 
 {% macro gametrailer( url ) -%}
 
-<!--iframe src="http://media.mtvnservices.com/embed/mgid:arc:video:gametrailers.com:{{ url }}" width="560" height="315" frameborder="0"></iframe-->
-
-<embed wmode="opaque" width="560" height="315" src="http://media.mtvnservices.com/mgid:arc:video:gametrailers.com:{{ url }}"  quality="high" bgcolor="000000" name="efp" align="middle" type="application/x-shockwave-flash"  pluginspage="http://www.macromedia.com/go/getflashplayer"  flashvars="autoPlay=false"  allowfullscreen="true"></embed>
+<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+    <iframe allowfullscreen="" 
+            src="http://media.mtvnservices.com/embed/mgid:arc:video:gametrailers.com:{{ url }}" 
+            width="512" 
+            height="288" 
+            frameborder="0"></iframe>
+</div> 
 
 {%- endmacro %}
 

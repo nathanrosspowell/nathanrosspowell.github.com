@@ -4,6 +4,7 @@ date: "2007-08-01"
 comments: True
 release: minor
 template: "game.html"
+short: The first game I made outside of university which was a 'portfolio piece' for job interviews.
 tags:
 - games
 

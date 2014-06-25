@@ -5,6 +5,7 @@ date: "2007-02-01"
 release: minor 
 tags:
 - games
+short: My first 3D game which was programmed on the game cube for a university module.
 
 Snake 3D was my design for my 'Gamecube Programming' module in Uni. I wanted to take the two dimensional playing field of a normal game of [snake][snake] and add one more dimension to it so that it was taking place inside of a cube.
 

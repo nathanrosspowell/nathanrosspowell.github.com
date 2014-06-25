@@ -15,7 +15,7 @@ mediabar:
 - { "type":"gametrailer", "src":"ba978124-d937-4de0-a323-c2141637d446", "title":"Interview" }
 - { "type":"image", "src":"jpg/ride-to-hell-poster.jpg", "title":"Art style" }
 - { "type":"youtube", "src":"oHg5SJYRHA0", "title":"Game ending" }
-
+short: I worked on the first incarnation of the game (2007-2009) before it was re-imagined and flopped in 2013.
 
 The game is set in the last years of the roaring 1960’s, a time of Sex, Drugs and Rock ‘N Roll. The biker movement, rock music and the hippie counterculture all add to the fascinating atmosphere to be experienced in ‘Ride to Hell’.  
 

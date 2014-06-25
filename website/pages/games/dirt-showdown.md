@@ -22,20 +22,30 @@ mediabar:
 - { "type":"image", "src":"jpg/dirt-showdown-screen-5.jpg", "title":"Damage physics" }
 tags:
 - games
+short: An arcade racing game from the award-winning DiRT series.
+
 
 DiRT Showdown is the new arcade racing game from the team that brought you the award-winning DiRT series, uncaged in 2012. Pick up and play controls combine with electrifying events, frenzied crowds and stunning graphics to deliver high octane, dive in and drive thrills from event one.
 
+---
 
-SPEED, STYLE AND DESTRUCTION – LET LOOSE ON A TOUR OF MOTORISED MAYHEM:
-
-
-NO HOLDS BARRED RACING EVENTS - Trade paint and use nitrous to blast past rivals in DiRT Showdown’s racing modes. Courses are littered with obstacles, pinch points, multiple-routes and ramps to deliver adrenaline-fuelled racing across spectacular courses.
+## SPEED, STYLE AND DESTRUCTION – LET LOOSE ON A TOUR OF MOTORISED MAYHEM:
 
 
-BONE CRUNCHING DEMOLITION DERBY EVENTS - Crash, smash and bash your way through a range of demolition derby events, pushing our stunning damage engine to its spectacular limits.
+#### NO HOLDS BARRED RACING EVENTS 
+
+Trade paint and use nitrous to blast past rivals in DiRT Showdown’s racing modes. Courses are littered with obstacles, pinch points, multiple-routes and ramps to deliver adrenaline-fuelled racing across spectacular courses.
 
 
-EDGE OF CONTROL HOONIGAN EVENTS - A new accessible handling system lets you go wild in free-roaming, freestyle stunt parks. Compounds flooded with obstacles play host to a range of new challenges, from performing trick runs to competitive stunt events, explorations challenges and more.
+#### BONE CRUNCHING DEMOLITION DERBY EVENTS 
 
+Crash, smash and bash your way through a range of demolition derby events, pushing our stunning damage engine to its spectacular limits.
+
+
+#### EDGE OF CONTROL HOONIGAN EVENTS
+
+A new accessible handling system lets you go wild in free-roaming, freestyle stunt parks. Compounds flooded with obstacles play host to a range of new challenges, from performing trick runs to competitive stunt events, explorations challenges and more.
+
+---
 
 DiRT Showdown comes with phenomenal graphical performance, bone-jarring damage, and social online and split-screen multiplayer as standard. Welcome to DiRT Showdown - a new world of driving delirium.

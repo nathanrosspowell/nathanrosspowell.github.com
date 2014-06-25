@@ -21,6 +21,7 @@ mediabar:
 - { "type":"image", "src":"jpg/red-river-screen-4.jpg", "title":"Tactical gameplay" }
 tags:
 - games
+short: The console sequel to Dragon Rising, Red River is a four player simultion military sim.
 
 Taking a small step into the future, Red River depicts a fictional conflict with contemporary geopolitical themes, which will unfold over three distinct acts in both single player and drop-in-drop-out co-operative play for up to four players online. Faced with new counter-insurgency combat and the returning threat of the Chinese PLA, players will feel the tension, brutality and carnage of modern conflict from the perspective of a marine fireteam on deployment in a hostile country, thousands of miles from home.
 

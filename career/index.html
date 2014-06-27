@@ -2,1117 +2,732 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>
-            
-            
-        </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/css/main.css">
-        <link rel="stylesheet" href="/static/octicons/octicons.css">
-
-        
-        
-
-        
-        
-
-        <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <script>
-//<![CDATA[
-<!--
-Modernizr.load({
-    load : {
-        
-            'jqueryjs' : '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
-        
-        'bootstrap' : "/static/js/vendor/bootstrap.min.js",
-        
-    
-    "codehilitecss" : "/static/css/codehilite.css", 
-
-
-    },
-    callback : {
-        
-    
-
-
-    },
-    complete : function() {
-        
-            if ( !window.jQuery ) {
-                Modernizr.load('js/libs/jquery-1.9.1.min.js');
-            }
-            
-        Modernizr.load('/static/js/main.js');
-        
-    
-    
-
-
-    }
-});
-//-->
-//]]>
-        </script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/octicons/octicons.css">
+    <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script>
+      //<![CDATA[
+       <!--
+      Modernizr.load({
+        load: {
+          'jqueryjs': '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+          'bootstrap': "/static/js/vendor/bootstrap.min.js",
+          "codehilitecss": "/static/css/codehilite.css",
+        },
+        callback: {},
+        complete: function() {
+          if (!window.jQuery) {
+            Modernizr.load('js/libs/jquery-1.9.1.min.js');
+          }
+          Modernizr.load('/static/js/main.js');
+        }
+      });
+       //-->
+       //]]>
+    </script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-        
-            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="/">
-    <span class="visible-xs">
-        <span class="mega-octicon octicon-home "></span>
-        NathanRossPowell.com
-    </span>
-    <span class="visible-lg">
-        <span class="octicon octicon-home "></span>
-        NathanRossPowell.com
-    </span>
-    <span class="visible-sm visible-md">
-        <span class="octicon octicon-home "></span>
-        NRP
-    </span>
-
-</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav">
-                    
-    
-        
-            
-                
-                    
-                     
-                    <li
-        
-    >
-        <a href="/about_me/">
-            
-        <span class="octicon octicon-person"></span> About Me
-    
-        </a>
-    </li>
-                
-            
-            
-         
-    
-         
-             
-            
-            <li
-        
-            class="dropdown"
-         
-    >
-        <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown">
-            
-        <span class="octicon octicon-keyboard"></span> Blog
-    
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            
-                 
-                <li
-        
-    >
-        <a href="/blog/">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <span class="visible-xs">
+              <span class="mega-octicon octicon-home "></span>
+              NathanRossPowell.com
+            </span>
+            <span class="visible-lg">
+              <span class="octicon octicon-home "></span>
+              NathanRossPowell.com
+            </span>
+            <span class="visible-sm visible-md">
+              <span class="octicon octicon-home "></span>
+              NRP
+            </span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="/about_me/">
+                <span class="octicon octicon-person"></span>About Me
+              </a>
+            </li>
+            <li class="dropdown">
+              <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="octicon octicon-keyboard"></span>Blog
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/blog/">
             Index page
         </a>
-    </li>
-                
-                
-                    <li class="divider"></li>
-                    <li class="dropdown-header text-primary">Articles</li>
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/blog/erlang/">
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header text-primary">Articles</li>
+                <li>
+                  <a href="/blog/erlang/">
             Erlang
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/blog/website-maintainance/">
+                </li>
+                <li>
+                  <a href="/blog/website-maintainance/">
             Website Maintainance
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/blog/long-time-no-update/">
+                </li>
+                <li>
+                  <a href="/blog/long-time-no-update/">
             Long Time No Update
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/blog/functional-one-liner/">
+                </li>
+                <li>
+                  <a href="/blog/functional-one-liner/">
             Functional One Liner
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/blog/project-euler/">
+                </li>
+                <li>
+                  <a href="/blog/project-euler/">
             Project Euler
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/blog/hello-montral-hello-ubisoft/">
+                </li>
+                <li>
+                  <a href="/blog/hello-montral-hello-ubisoft/">
             Hello, Montreal. Hello, Ubisoft!
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/blog/syntax-highlight-test/">
+                </li>
+                <li>
+                  <a href="/blog/syntax-highlight-test/">
             Syntax Highlight Test
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/blog/hello-world/">
+                </li>
+                <li>
+                  <a href="/blog/hello-world/">
             Hello, World!
         </a>
-    </li>
-                        
-                    
-                    
-                
-            
-        </ul>
-    </li>
-         
-    
-         
-             
-            
-            <li
-        
-             class="dropdown active"
-         
-    >
-        <a href="/career/" class="dropdown-toggle" data-toggle="dropdown">
-            
-        <span class="octicon octicon-mortar-board"></span> Career
-    
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            
-                 
-                <li
-        
-             class="active"
-         
-    >
-        <a href="/career/">
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown active">
+              <a href="/career/" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="octicon octicon-mortar-board"></span>Career
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="active">
+                  <a href="/career/">
             Index page
         </a>
-    </li>
-                
-                    <li class="divider"></li>
-                    <li class="dropdown-header text-primary">Pages</li>
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/overview/">
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header text-primary">Pages</li>
+                <li>
+                  <a href="/career/overview/">
             Career Overview
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/ubisoft-watch-dogs/">
+                </li>
+                <li>
+                  <a href="/career/ubisoft-watch-dogs/">
             Ubisoft - Watch_dogs
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/codemasters-dirt-showdown/">
+                </li>
+                <li>
+                  <a href="/career/codemasters-dirt-showdown/">
             Codemasters - Dirt Showdown
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/codemasters-operation-flashpoint/">
+                </li>
+                <li>
+                  <a href="/career/codemasters-operation-flashpoint/">
             Codemasters - Operation Flashpoint: Red River
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/eutechnyx-ferrari/">
+                </li>
+                <li>
+                  <a href="/career/eutechnyx-ferrari/">
             Eutechnyx - Ferrari: The Race Experience
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/eutechnyx-ride-to-hell/">
+                </li>
+                <li>
+                  <a href="/career/eutechnyx-ride-to-hell/">
             Eutechnyx - Hot Wheels: Beat That!
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/eutechnyx-hot-wheels/">
+                </li>
+                <li>
+                  <a href="/career/eutechnyx-hot-wheels/">
             Eutechnyx - Ride To Hell
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/professional-skills/">
+                </li>
+                <li>
+                  <a href="/career/professional-skills/">
             Professional Skills
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/other-experience/">
+                </li>
+                <li>
+                  <a href="/career/other-experience/">
             Other Skills
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/career/formal-education/">
+                </li>
+                <li>
+                  <a href="/career/formal-education/">
             Formal Education
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                    
-                    
-                        <li
-        
-    >
-        <a href="/career/">
+                </li>
+                <li>
+                  <a href="/career/">
             ... more pages
         </a>
-    </li>
-                    
-                
-                
-            
-        </ul>
-    </li>
-         
-    
-         
-             
-            
-            <li
-        
-            class="dropdown"
-         
-    >
-        <a href="/code/" class="dropdown-toggle" data-toggle="dropdown">
-            
-        <span class="octicon octicon-bug"></span> Code
-    
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            
-                 
-                <li
-        
-    >
-        <a href="/code/">
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="/code/" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="octicon octicon-bug"></span>Code
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/code/">
             Index page
         </a>
-    </li>
-                
-                    <li class="divider"></li>
-                    <li class="dropdown-header text-primary">Pages</li>
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/code/interface-zero/">
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header text-primary">Pages</li>
+                <li>
+                  <a href="/code/interface-zero/">
             Interface Zero
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/code/personal-website/">
+                </li>
+                <li>
+                  <a href="/code/personal-website/">
             Personal Website
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/code/project-euler/">
+                </li>
+                <li>
+                  <a href="/code/project-euler/">
             Project Euler
         </a>
-    </li>
-                        
-                    
-                    
-                
-                
-            
-        </ul>
-    </li>
-         
-    
-         
-             
-            
-            <li
-        
-            class="dropdown"
-         
-    >
-        <a href="/games/" class="dropdown-toggle" data-toggle="dropdown">
-            
-        <span class="octicon octicon-rocket"></span> Games
-    
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-            
-                 
-                <li
-        
-    >
-        <a href="/games/">
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="/games/" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="octicon octicon-rocket"></span>Games
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/games/">
             Index page
         </a>
-    </li>
-                
-                
-                    <li class="divider"></li>
-                    <li class="dropdown-header text-primary">Articles</li>
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/games/watch_dogs/">
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header text-primary">Articles</li>
+                <li>
+                  <a href="/games/watch_dogs/">
             Watch_dogs
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/games/dirt-showdown/">
+                </li>
+                <li>
+                  <a href="/games/dirt-showdown/">
             Dirt Showdown
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/games/operation-flashpoint-red-river/">
+                </li>
+                <li>
+                  <a href="/games/operation-flashpoint-red-river/">
             Operation Flashpoint: Red River
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/games/ferrari-the-race-experience/">
+                </li>
+                <li>
+                  <a href="/games/ferrari-the-race-experience/">
             Ferrari The Race Experince
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/games/ride-to-hell/">
+                </li>
+                <li>
+                  <a href="/games/ride-to-hell/">
             Ride To Hell
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/games/hot-wheels-beat-that/">
+                </li>
+                <li>
+                  <a href="/games/hot-wheels-beat-that/">
             Hot Wheels: Beat That!
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/games/asteroid-escape/">
+                </li>
+                <li>
+                  <a href="/games/asteroid-escape/">
             Asteroid Escape
         </a>
-    </li>
-                        
-                    
-                         
-                        
-                        
-                            <li
-        
-    >
-        <a href="/games/snake-3d/">
+                </li>
+                <li>
+                  <a href="/games/snake-3d/">
             Snake 3d
         </a>
-    </li>
-                        
-                    
-                    
-                
-            
-        </ul>
-    </li>
-         
-    
-
-                  </ul>
-                  
-    <form class="navbar-form navbar-right" role="form" method="get" action="http://www.google.com/search">
-        <div class="form-group">
-            <input class="form-control" type="text" name="q" placeholder="Site search..." />
-            <input type="hidden"  name="sitesearch" value="http://nathanrosspowell.com" />
-        </div>
-        <div class="form-group">
-            <button type="submit" value="Google Search" class="btn">Search</button>
-        </div>
-    </form>
-
-                </div><!--/.nav-collapse -->
-              </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="form" method="get" action="http://www.google.com/search">
+            <div class="form-group">
+              <input class="form-control" type="text" name="q" placeholder="Site search..." />
+              <input type="hidden" name="sitesearch" value="http://nathanrosspowell.com" />
             </div>
-
-            <div class="container">
-
-                <!-- Main hero unit for a primary marketing message or call to action -->
-                <div class="jumbotron">
-                    
-    <h1>
-        Career
-    </h1>
-    <p>
-        
-             
-        
-             
-        
-            
-                
-                        
-                            
-                            <h3>
+            <div class="form-group">
+              <button type="submit" value="Google Search" class="btn">Search</button>
+            </div>
+          </form>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>
+          Career
+        </h1>
+        <p>
+          <h3>
             <a href="/career/overview/">
             Career Overview 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <h1>Biography</h1>
-<h2>Brief</h2>
-<p>I've been in the games industry since 2007 and coding no-stop since 2005. My passion is for online game play.
-I have worked in the following roles: </p>
-<ul>
-<li>Online game play </li>
-<li>Online TRCs/XRs (8th Gen)</li>
-<li>Generalist</li>
-<li>UI</li>
-<li>Platform lead (Wii).</li>
-</ul>
-<h2>Goals</h2>
-<p>I always want to be working with people who strive for perfection and to make games with technical brilliance and mass appeal. To become a better programmer and be more knowledgeable about the details of people and project management.</p>
-<h1>Industry Experience</h1>
-<p>I am currently working at Ubisoft Montreal.</p>
-<h2><a href="http://ubisoft.com" title="Ubisoft">Ubisoft</a></h2>
-<p>08/2012 - Present : Game play Programmer at Ubisoft Montreal</p>
-<h4>Projects</h4>
-<ul>
-<li><a href="http://nathanrosspowell.com/career/ubisoft-watch-dogs" title="Watch_Dogs">Watch_Dogs</a></li>
-</ul>
-<h2><a href="http://codemasters.com" title="Codemasters">Codemasters</a></h2>
-<p>08/2010 - 06/2012 : Game Programmer to Experienced Game Programmer (09/2011)</p>
-<h4>Projects</h4>
-<ul>
-<li><a href="http://nathanrosspowell.com/career/codemasters-dirt-showdown" title="DiRT Showdown">DiRT Showdown</a> </li>
-<li><a href="http://nathanrosspowell.com/career/codemasters-operation-flashpoint" title="Operation Flashpoint: Red River">Operation Flashpoint: Red River</a></li>
-</ul>
-<h2><a href="http://www.eutechnyx.com" title="Eutechnyx">Eutechnyx</a></h2>
-<p>06/2007 - 07/2010 : Game Programmer</p>
-<h4>Projects</h4>
-<ul>
-<li><a href="http://nathanrosspowell.com/career/eutechnyx-ferrari" title="Ferrari The Race Experience">Ferrari The Race Experience</a></li>
-<li><a href="http://nathanrosspowell.com/career/eutechnyx-ride-to-hell" title="Ride To Hell">Ride To Hell</a></li>
-<li><a href="http://nathanrosspowell.com/career/eutechnyx-hot-wheels" title="Hot Wheels: Beat That!">Hot Wheels: Beat That!</a></li>
-</ul>
-<h1>Skills</h1>
-<ul>
-<li><a href="http://nathanrosspowell.com/career/professional-skills" title="Professional Skills">Professional Skills</a></li>
-<li><a href="http://nathanrosspowell.com/career/other-experience" title="Other Experiences">Other Skills</a></li>
-</ul>
-<h1><a href="http://nathanrosspowell.com/career/formal-education" title="Formal Education">Formal Education</a></h1>
+              <h1>Biography</h1>
+              <h2>Brief</h2>
+              <p>I've been in the games industry since 2007 and coding no-stop since 2005. My passion is for online game play. I have worked in the following roles:</p>
+              <ul>
+                <li>Online game play</li>
+                <li>Online TRCs/XRs (8th Gen)</li>
+                <li>Generalist</li>
+                <li>UI</li>
+                <li>Platform lead (Wii).</li>
+              </ul>
+              <h2>Goals</h2>
+              <p>I always want to be working with people who strive for perfection and to make games with technical brilliance and mass appeal. To become a better programmer and be more knowledgeable about the details of people and project management.</p>
+              <h1>Industry Experience</h1>
+              <p>I am currently working at Ubisoft Montreal.</p>
+              <h2><a href="http://ubisoft.com" title="Ubisoft">Ubisoft</a>
+              </h2>
+              <p>08/2012 - Present : Game play Programmer at Ubisoft Montreal</p>
+              <h4>Projects</h4>
+              <ul>
+                <li><a href="http://nathanrosspowell.com/career/ubisoft-watch-dogs" title="Watch_Dogs">Watch_Dogs</a>
+                </li>
+              </ul>
+              <h2><a href="http://codemasters.com" title="Codemasters">Codemasters</a>
+              </h2>
+              <p>08/2010 - 06/2012 : Game Programmer to Experienced Game Programmer (09/2011)</p>
+              <h4>Projects</h4>
+              <ul>
+                <li><a href="http://nathanrosspowell.com/career/codemasters-dirt-showdown" title="DiRT Showdown">DiRT Showdown</a> 
+                </li>
+                <li><a href="http://nathanrosspowell.com/career/codemasters-operation-flashpoint" title="Operation Flashpoint: Red River">Operation Flashpoint: Red River</a>
+                </li>
+              </ul>
+              <h2><a href="http://www.eutechnyx.com" title="Eutechnyx">Eutechnyx</a>
+              </h2>
+              <p>06/2007 - 07/2010 : Game Programmer</p>
+              <h4>Projects</h4>
+              <ul>
+                <li><a href="http://nathanrosspowell.com/career/eutechnyx-ferrari" title="Ferrari The Race Experience">Ferrari The Race Experience</a>
+                </li>
+                <li><a href="http://nathanrosspowell.com/career/eutechnyx-ride-to-hell" title="Ride To Hell">Ride To Hell</a>
+                </li>
+                <li><a href="http://nathanrosspowell.com/career/eutechnyx-hot-wheels" title="Hot Wheels: Beat That!">Hot Wheels: Beat That!</a>
+                </li>
+              </ul>
+              <h1>Skills</h1>
+              <ul>
+                <li><a href="http://nathanrosspowell.com/career/professional-skills" title="Professional Skills">Professional Skills</a>
+                </li>
+                <li><a href="http://nathanrosspowell.com/career/other-experience" title="Other Experiences">Other Skills</a>
+                </li>
+              </ul>
+              <h1><a href="http://nathanrosspowell.com/career/formal-education" title="Formal Education">Formal Education</a>
+              </h1>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/overview/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/overview/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/overview/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/overview/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/ubisoft-watch-dogs/">
             Ubisoft - Watch_Dogs 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <h1>Industry Experience at <a href="http://ubisoft.com" title="Ubisoft">Ubisoft</a> on <a href="http://nathanrosspowell.com/games/watch_dogs" title="Watch_Dogs">Watch_Dogs</a></h1>
-<h3>08/2012 - 05/2014 : Open world story based hacker themed world with seamless multiplayer (PS4/XB1/X360/PS3/PC)</h3>
-<p>My role was on the multiplayer game play team.</p>
-<h4>Game modes</h4>
-<p>I was a team member for 'online game play' where I worked with designers to create various game modes and pieces of the mission system. Watch_Dogs multi-player features join in progress, host migration and seamless transitions for the 'invasion' style game play.</p>
-<h4>Parties and Invites</h4>
-<p>I was also a team member for 'online engine' programming which had me focusing on 'game invites' and 'party' functionality on the Xbox one and PS4.</p>
-<h4>MP Audio</h4>
-<p>I (once again) put together a simple system so that 'barks' (caharacter speach) could be easily played.</p>
-<h4>Mentor-ship</h4>
-<p>I was able to guide some online programmers from another studio in the creation of a new multiplayer experince which unfortunately for cut from the game, but it was a very rewarding experince.</p>
+              <h1>Industry Experience at <a href="http://ubisoft.com" title="Ubisoft">Ubisoft</a> on <a href="http://nathanrosspowell.com/games/watch_dogs" title="Watch_Dogs">Watch_Dogs</a>
+              </h1>
+              <h3>08/2012 - 05/2014 : Open world story based hacker themed world with seamless multiplayer (PS4/XB1/X360/PS3/PC)</h3>
+              <p>My role was on the multiplayer game play team.</p>
+              <h4>Game modes</h4>
+              <p>I was a team member for 'online game play' where I worked with designers to create various game modes and pieces of the mission system. Watch_Dogs multi-player features join in progress, host migration and seamless transitions for the 'invasion'
+                style game play.</p>
+              <h4>Parties and Invites</h4>
+              <p>I was also a team member for 'online engine' programming which had me focusing on 'game invites' and 'party' functionality on the Xbox one and PS4.</p>
+              <h4>MP Audio</h4>
+              <p>I (once again) put together a simple system so that 'barks' (caharacter speach) could be easily played.</p>
+              <h4>Mentor-ship</h4>
+              <p>I was able to guide some online programmers from another studio in the creation of a new multiplayer experince which unfortunately for cut from the game, but it was a very rewarding experince.</p>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/ubisoft-watch-dogs/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/ubisoft-watch-dogs/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/ubisoft-watch-dogs/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/ubisoft-watch-dogs/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/codemasters-dirt-showdown/">
             Codemasters - DiRT Showdown 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <h1>Industry Experience at <a href="http://codemasters.com" title="Codemasters">Codemasters</a> on <a href="http://nathanrosspowell.com/games/dirt-showdown" title="DiRT Showdown">DiRT Showdown</a></h1>
-<h3>09/2011 - 05/2012 : Arcade racing with destruction modes (X360/PS3/PC)</h3>
-<p>Member of the game team. Appointed responsibility for game modes and key systems critical to the
-projects success inside of an extremely short time frame.</p>
-<h4>Game modes and components</h4>
-<p>Primary responsibility were the Joyride - progression and unlock based free ride game play; and Knockout and Transporter game modes, which were made to work in career, online and spectator modes. Tight feed back loops with design and play test sessions to iterate game play. Lots of experience with making the best use of data driven component architectures - re-factored code functionality into reusable generic components.  Data driven codebase Masses of work using and improving the game DB system. Task with re-factoring DB usage and making game code as data driven as possible. Usability wrappers classes generated from the DB schema to simplify use and improve correctness. Re-factored achievements implementations down to core types that are database driven with one line class creation. Implemented half the games achievements.</p>
-<h4>Audio speech system</h4>
-<p>A system no-one in the team had knowledge on, or wanted to take responsibility for. Used proven skills with legacy code to decipher and fix bugs in a multi threaded environment. Updated data editing tools and leased with design and producers to add features and fix countless bugs.</p>
-<h4>Additional</h4>
-<p>Produced high level project estimations for majority of game code. Designers first point of contact for build stability issues - making rapid ‘same day’ fixes. Mentoring and learning with lesser experienced team members with pair programming sessions.  </p>
+              <h1>Industry Experience at <a href="http://codemasters.com" title="Codemasters">Codemasters</a> on <a href="http://nathanrosspowell.com/games/dirt-showdown" title="DiRT Showdown">DiRT Showdown</a>
+              </h1>
+              <h3>09/2011 - 05/2012 : Arcade racing with destruction modes (X360/PS3/PC)</h3>
+              <p>Member of the game team. Appointed responsibility for game modes and key systems critical to the projects success inside of an extremely short time frame.</p>
+              <h4>Game modes and components</h4>
+              <p>Primary responsibility were the Joyride - progression and unlock based free ride game play; and Knockout and Transporter game modes, which were made to work in career, online and spectator modes. Tight feed back loops with design and play
+                test sessions to iterate game play. Lots of experience with making the best use of data driven component architectures - re-factored code functionality into reusable generic components. Data driven codebase Masses of work using and improving
+                the game DB system. Task with re-factoring DB usage and making game code as data driven as possible. Usability wrappers classes generated from the DB schema to simplify use and improve correctness. Re-factored achievements implementations
+                down to core types that are database driven with one line class creation. Implemented half the games achievements.</p>
+              <h4>Audio speech system</h4>
+              <p>A system no-one in the team had knowledge on, or wanted to take responsibility for. Used proven skills with legacy code to decipher and fix bugs in a multi threaded environment. Updated data editing tools and leased with design and producers
+                to add features and fix countless bugs.</p>
+              <h4>Additional</h4>
+              <p>Produced high level project estimations for majority of game code. Designers first point of contact for build stability issues - making rapid ‘same day’ fixes. Mentoring and learning with lesser experienced team members with pair programming
+                sessions.
+              </p>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/codemasters-dirt-showdown/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/codemasters-dirt-showdown/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/codemasters-dirt-showdown/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/codemasters-dirt-showdown/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/codemasters-operation-flashpoint/">
             Codemasters - Operation Flashpoint: Red River 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <h1>Industry Experience at <a href="http://codemasters.com" title="Codemasters">Codemasters</a> on <a href="http://nathanrosspowell.com/games/operation-flashpoint-red-river" title="Operation Flashpoint: Red River">Operation Flashpoint: Red River</a></h1>
-<h3>08/2010 - 06/2011 : Authentic military co-op FPS (X360/PS3/PC).</h3>
-<p>Member of the game play team, involved with multiple scrums through out the project. Responsible for patch, DLC and Japan SKU post release.</p>
-<p>~### Characters, weapons and equipment</p>
-<p>Main focus on the players controls of inventory, ballistics, context sensitive actions, weapon customization, vehicle and weapon mounting. With tasks and bugs distributed to me I had the chance to work closely with design, physics, animation and UI teams. Working with a component based entity system. Commended by peers for task completion ahead of schedule.  </p>
-<h4>Networking &amp; join in progress (JIP)</h4>
-<p>Developing a 4-player co-op main campaign. Extensive ‘hooking up’ of game systems over the network. Ex- perienced in syncing of static and dynamic objects states for a JIP environment. Re-factoring to achieve a single code path in replacement of online/offline paths. Xbox 360 auto-launcher tool to get four machines into networked game play without needing to deal with any menus.</p>
-<h4>Havok</h4>
-<p>Working with rigid body and phantom set ups and physics layers to get players and vehicles interacting with the game play actions. Using animation events to make remote networked characters perform the correct actions (vaulting, mounting etc.). Fixed countless physics edge cases inside an open world, tweaking bounding box sizes, adding ray casts, tweaking friction values etc.</p>
-<h4>Mission design</h4>
-<p>Full purpose built tutorial system used with actions and triggered from mission script (Lua). XML definitions of tutorial strings, button presses and flow that were reusable. Exposing key functionality to Lua for optimal mission script flexibility and efficiency. Close work with mission designers and UI teams.</p>
-<h4>Prototyping</h4>
-<p>Worked on an always synced ‘Actions’ system to simplify coding new static and dynamic objects with an action (ammo crates, mines, etc). Created an in-game (3D) replication of the 2D character and weapon customization menus and functionality.</p>
-<h4>Additional</h4>
-<p>Strong experience debugging release crash dumps on all platforms. Team member picked to be part of the rapid prototyping scrum. Working in a fully Agile team. Graded ‘Straight A’ in internal appraisals.</p>
+              <h1>Industry Experience at <a href="http://codemasters.com" title="Codemasters">Codemasters</a> on <a href="http://nathanrosspowell.com/games/operation-flashpoint-red-river" title="Operation Flashpoint: Red River">Operation Flashpoint: Red River</a>
+              </h1>
+              <h3>08/2010 - 06/2011 : Authentic military co-op FPS (X360/PS3/PC).</h3>
+              <p>Member of the game play team, involved with multiple scrums through out the project. Responsible for patch, DLC and Japan SKU post release.</p>
+              <p>~### Characters, weapons and equipment</p>
+              <p>Main focus on the players controls of inventory, ballistics, context sensitive actions, weapon customization, vehicle and weapon mounting. With tasks and bugs distributed to me I had the chance to work closely with design, physics, animation
+                and UI teams. Working with a component based entity system. Commended by peers for task completion ahead of schedule.</p>
+              <h4>Networking &amp; join in progress (JIP)</h4>
+              <p>Developing a 4-player co-op main campaign. Extensive ‘hooking up’ of game systems over the network. Ex- perienced in syncing of static and dynamic objects states for a JIP environment. Re-factoring to achieve a single code path in replacement
+                of online/offline paths. Xbox 360 auto-launcher tool to get four machines into networked game play without needing to deal with any menus.</p>
+              <h4>Havok</h4>
+              <p>Working with rigid body and phantom set ups and physics layers to get players and vehicles interacting with the game play actions. Using animation events to make remote networked characters perform the correct actions (vaulting, mounting
+                etc.). Fixed countless physics edge cases inside an open world, tweaking bounding box sizes, adding ray casts, tweaking friction values etc.</p>
+              <h4>Mission design</h4>
+              <p>Full purpose built tutorial system used with actions and triggered from mission script (Lua). XML definitions of tutorial strings, button presses and flow that were reusable. Exposing key functionality to Lua for optimal mission script flexibility
+                and efficiency. Close work with mission designers and UI teams.</p>
+              <h4>Prototyping</h4>
+              <p>Worked on an always synced ‘Actions’ system to simplify coding new static and dynamic objects with an action (ammo crates, mines, etc). Created an in-game (3D) replication of the 2D character and weapon customization menus and functionality.</p>
+              <h4>Additional</h4>
+              <p>Strong experience debugging release crash dumps on all platforms. Team member picked to be part of the rapid prototyping scrum. Working in a fully Agile team. Graded ‘Straight A’ in internal appraisals.</p>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/codemasters-operation-flashpoint/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/codemasters-operation-flashpoint/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/codemasters-operation-flashpoint/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/codemasters-operation-flashpoint/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/eutechnyx-ferrari/">
             Eutechnyx - Ferrari: The Race Experience 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <h1>Industry Experience at <a href="http://www.eutechnyx.com" title="Eutechnyx">Eutechnyx</a> on <a href="http://nathanrosspowell.com/games/ferrari-the-race-experience" title="Ferrari The Race Experience">Ferrari The Race Experience</a></h1>
-<h3>03/2010 - 07/2010 : Licensed circuit racer (PSN/WII)</h3>
-<p>Platform lead for Wii release of a remix of Ferrari Challenge and all it’s DLC (previously PS3 only).</p>
-<h4>Wii</h4>
-<p>Extensive work with upgrading to the 3.1 SDK, controller code, channel/banner tools, disk mastering and passing lotcheck. Close work with art department leads to get vehicle and track assets to fit into the memory budget. Resurrected the decrepit Bink video integration to work in the latest cross platform code.  </p>
+              <h1>Industry Experience at <a href="http://www.eutechnyx.com" title="Eutechnyx">Eutechnyx</a> on <a href="http://nathanrosspowell.com/games/ferrari-the-race-experience" title="Ferrari The Race Experience">Ferrari The Race Experience</a>
+              </h1>
+              <h3>03/2010 - 07/2010 : Licensed circuit racer (PSN/WII)</h3>
+              <p>Platform lead for Wii release of a remix of Ferrari Challenge and all it’s DLC (previously PS3 only).</p>
+              <h4>Wii</h4>
+              <p>Extensive work with upgrading to the 3.1 SDK, controller code, channel/banner tools, disk mastering and passing lotcheck. Close work with art department leads to get vehicle and track assets to fit into the memory budget. Resurrected the
+                decrepit Bink video integration to work in the latest cross platform code.</p>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/eutechnyx-ferrari/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/eutechnyx-ferrari/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/eutechnyx-ferrari/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/eutechnyx-ferrari/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/eutechnyx-ride-to-hell/">
             Eutechnyx - Hot Wheels: Beat That! 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <h1>Industry Experience at <a href="http://www.eutechnyx.com" title="Eutechnyx">Eutechnyx</a> on <a href="http://nathanrosspowell.com/games/ride-to-hell" title="Ride To Hell">Ride To Hell</a></h1>
-<h3>3rd person open world action (X360/PS3/PC - Shelved) 10/2007 - 03/2010</h3>
-<p>New engine developed for Eutechnyx’s first action title. Worked on a small pre-production team with varied tasks, then worked mainly with Scaleform, Havok, Audio and the build process in full production.</p>
-<h4>Engine</h4>
-<p>Working with SIP bindings to enable game play code to be called from Python. Created custom mappings from C++ template containers to Python structures. Re-purposed ‘2D cut scene’ tool to make a high performance visual OSD system. Scriptable menu crawling automation system for in-game UI and mission testing.</p>
-<h4>Scaleform</h4>
-<p>Full front end flow and implementation. Actionscript knowledge and debugging skills. Worked extensively with and managed output of art assets from the Chengdu, China office.</p>
-<h4>Havok</h4>
-<p>Lightweight ‘Props’ object hierarchy for spawning weapons and dynamic objects in world from script and C++; designed and coded all cross game code, game specific code and build process. Set up of locomotion anima- tions with Behaviour tool. Optimization of AI local avoidance by re-writing collision detection in Havok.</p>
-<h4>Audio engine</h4>
-<p>Created the build process and game interfaces to use a custom audio engine. Global, per-context and per- mission archive loading. Baked archive offsets so strings didn’t have to be used outside of loading code.</p>
+              <h1>Industry Experience at <a href="http://www.eutechnyx.com" title="Eutechnyx">Eutechnyx</a> on <a href="http://nathanrosspowell.com/games/ride-to-hell" title="Ride To Hell">Ride To Hell</a>
+              </h1>
+              <h3>3rd person open world action (X360/PS3/PC - Shelved) 10/2007 - 03/2010</h3>
+              <p>New engine developed for Eutechnyx’s first action title. Worked on a small pre-production team with varied tasks, then worked mainly with Scaleform, Havok, Audio and the build process in full production.</p>
+              <h4>Engine</h4>
+              <p>Working with SIP bindings to enable game play code to be called from Python. Created custom mappings from C++ template containers to Python structures. Re-purposed ‘2D cut scene’ tool to make a high performance visual OSD system. Scriptable
+                menu crawling automation system for in-game UI and mission testing.</p>
+              <h4>Scaleform</h4>
+              <p>Full front end flow and implementation. Actionscript knowledge and debugging skills. Worked extensively with and managed output of art assets from the Chengdu, China office.</p>
+              <h4>Havok</h4>
+              <p>Lightweight ‘Props’ object hierarchy for spawning weapons and dynamic objects in world from script and C++; designed and coded all cross game code, game specific code and build process. Set up of locomotion anima- tions with Behaviour tool.
+                Optimization of AI local avoidance by re-writing collision detection in Havok.</p>
+              <h4>Audio engine</h4>
+              <p>Created the build process and game interfaces to use a custom audio engine. Global, per-context and per- mission archive loading. Baked archive offsets so strings didn’t have to be used outside of loading code.</p>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/eutechnyx-ride-to-hell/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/eutechnyx-ride-to-hell/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/eutechnyx-ride-to-hell/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/eutechnyx-ride-to-hell/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/eutechnyx-hot-wheels/">
             Eutechnyx - Ride To Hell 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <h1>Industry Experience at <a href="http://www.eutechnyx.com" title="Eutechnyx">Eutechnyx</a> on <a href="http://nathanrosspowell.com/games/hot-wheels-beat-that" title="Hot Wheels: Beat That!">Hot Wheels: Beat That!</a></h1>
-<h3>Kart-like power-up’d racing (X360/PS2/Wii/PC) 06/2007 - 10/2007</h3>
-<p>First industry title, working under the only other UI programmer, then taking charge when they left.</p>
-<h4>User interface</h4>
-<p>Working with in house tech/tools to get the front end working. Localization of all platforms and SKUs - a lot of personal effort to fix strings and images for deadlines. Cross platform specific screen set up. TCR/TRC/Lotcheck knowledge. Overseeing multiple SKU branch integration's during shipping.</p>
-<h4>Load/Save</h4>
-<p>Carry over of platform check knowledge to bug fix the Load/Save code. Extensive work on the PS2.</p>
+              <h1>Industry Experience at <a href="http://www.eutechnyx.com" title="Eutechnyx">Eutechnyx</a> on <a href="http://nathanrosspowell.com/games/hot-wheels-beat-that" title="Hot Wheels: Beat That!">Hot Wheels: Beat That!</a>
+              </h1>
+              <h3>Kart-like power-up’d racing (X360/PS2/Wii/PC) 06/2007 - 10/2007</h3>
+              <p>First industry title, working under the only other UI programmer, then taking charge when they left.</p>
+              <h4>User interface</h4>
+              <p>Working with in house tech/tools to get the front end working. Localization of all platforms and SKUs - a lot of personal effort to fix strings and images for deadlines. Cross platform specific screen set up. TCR/TRC/Lotcheck knowledge.
+                Overseeing multiple SKU branch integration's during shipping.</p>
+              <h4>Load/Save</h4>
+              <p>Carry over of platform check knowledge to bug fix the Load/Save code. Extensive work on the PS2.</p>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/eutechnyx-hot-wheels/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/eutechnyx-hot-wheels/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/eutechnyx-hot-wheels/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/eutechnyx-hot-wheels/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/professional-skills/">
             Professional Skills 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <h1>Skills</h1>
-<ul>
-<li>Solid experience on all consoles and also Mobile experience: Xbox 360, PS3, PC, Wii, iOS, Android.</li>
-<li>Specialist areas worked in: UI, gameplay, audio, systems &amp; tools, physics.</li>
-<li>Console dev using: C++ &amp; C, Python, C#, Lua.</li>
-<li>Tool dev using: Python, C#, Bat/Bash, HTML/Js</li>
-<li>Highly motivated, great self-management skills and punctual in the office.</li>
-<li>Working with and co-coordinating teams; scheduling tasks, working with production and design.</li>
-<li>Experience creating complete code designs and system architecture.</li>
-<li>Creating shared cross-platform, cross-game code and asset build processes.</li>
-<li>Component and object oriented system design.</li>
-<li>Solid debugging skills, debugging network issues, debugging crash dumps.</li>
-<li>Proficient with middle ware, new codebases, undocumented and legacy code.</li>
-<li>Database and server side technologies being used for game telemetry.</li>
-<li>Working with Agile, scrum and also more traditional production methods.</li>
-<li>Perforce, SVN, Git, Visual Studio, Vim, SQL Server, MS Access, Jira, Confluence.</li>
-</ul>
+              <h1>Skills</h1>
+              <ul>
+                <li>Solid experience on all consoles and also Mobile experience: Xbox 360, PS3, PC, Wii, iOS, Android.</li>
+                <li>Specialist areas worked in: UI, gameplay, audio, systems &amp; tools, physics.</li>
+                <li>Console dev using: C++ &amp; C, Python, C#, Lua.</li>
+                <li>Tool dev using: Python, C#, Bat/Bash, HTML/Js</li>
+                <li>Highly motivated, great self-management skills and punctual in the office.</li>
+                <li>Working with and co-coordinating teams; scheduling tasks, working with production and design.</li>
+                <li>Experience creating complete code designs and system architecture.</li>
+                <li>Creating shared cross-platform, cross-game code and asset build processes.</li>
+                <li>Component and object oriented system design.</li>
+                <li>Solid debugging skills, debugging network issues, debugging crash dumps.</li>
+                <li>Proficient with middle ware, new codebases, undocumented and legacy code.</li>
+                <li>Database and server side technologies being used for game telemetry.</li>
+                <li>Working with Agile, scrum and also more traditional production methods.</li>
+                <li>Perforce, SVN, Git, Visual Studio, Vim, SQL Server, MS Access, Jira, Confluence.</li>
+              </ul>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/professional-skills/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/professional-skills/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/professional-skills/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/professional-skills/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/other-experience/">
             Other Skills 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <p>Outside of work I am a keen hobbyist programmer. I am keen on learning new ways to solve problems whether it is via learning new frameworks, engines, or completely new (to me) programming paradigms.</p>
-<h1>Python</h1>
-<p>I was introduced to the <a href="http://python.org">Python</a> programming language from my time working at Eutechnyx. It was mainly used for the asset building system scripts. There was a good level of understanding of the language in the office, but only a select set of it's features where regularly used (C written in Python). 
-After some very interesting conversations inside the office I took my learning home and opened my post-graduate C++ programmers mind to all kinds of <em>exotic</em> concepts: List comprehension, generators, descriptors, curries, partial functions and so on.</p>
-<p>I don't claim to be a master at <a href="http://python.org">Python</a> (or <a href="http://www.cplusplus.com/">C++</a>), but I has made me a very <em>multi-lingual</em> programmer. I pick up and can work in different languages/domains relatively easily. I'm also hungry to learn about as many programming concepts and languages as I can find time to.</p>
-<h1>Linux &amp; Websites</h1>
-<p>Linux programming was something that I was vastly unaware of. I touched on working with the terminal while in university, but it never really clicked with me. Like most curiosities of mine, the effort to stick at it was missing until I found a good project to sink my teeth into. I was previously working on a <a href="https://www.djangoproject.com">Django</a> based website under Windows 7 but started to run into issues with my Python install, the package manager and other web tech such as Apache. I made the jump over to Ubuntu and after many days of hair pulling I got the first signs of life out of my website codebase. After some trial and error I was at the point I stopped at on Windows and ran straight onto the battlefield of the <a href="http://en.wikipedia.org/wiki/Editor_war"><em>"Text Editor Wars"</em></a>... A few more weeks and I was able to edit text again inside of <a href="http://vim.org">VIM</a>. Finally after adding some new features to my website I had to find a new version control system. With <a href="http://git-scm.com">Git</a> the stage was set for my to actually work code in a Linux environment!</p>
-<p>Sadly the Django project never took the the web due how basic it was compared to the extra cost from the web service needed to run it. Luckily all of that template knowledge was transferred to <a href="http://flask.pocoo.org/">Flask</a> and <a href="http://jinja.pocoo.org/">Jinja2</a> which is what my current dot com is running off; full tech specs on the <a href="http://nathanrosspowell.com/credits">credits</a> page.</p>
-<p>A favourite thing about Linux is that my multiple machines all have access to git and there fore are a few commands from cloning and installing (via a bash script) my entire working environment from my <a href="http://github.com/nathanrosspowell/dotfiles">dotfiles</a> repository. The power, speed and <em>simplicity</em> of a CLI has really helped my productivity (cliched Linux claim, I know).  </p>
-<h1>Project Euler</h1>
-<p>To keep my Linux skills sharp I needed some projects and from the recommendation of a friend I found the <em>endless</em> challenge of <a href="http://projecteuler.net">Project Euler</a> to try and get my teeth around. My point of entry for expanding my mind on problem solving. My <a href="https://github.com/nathanrosspowell/euler/#project-euler">euler</a> Github repro where my current solutions (and work in progresses) can be found. Most are solved with C++ and Python, but I've been starting to use <a href="http://www.haskell.org">Haskell</a> to get to grips with the quirks and advantages of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a>. </p>
-<h1>Unity</h1>
-<p><a href="http://unity3d.com">Unity</a> is the engine that I have been doing my game play experiments in. Using Unity I'm able to attach <a href="http://msdn.microsoft.com/en-us/vstudio/hh388566.aspx">C#</a> scripts to objects in the game world and get experimenting with my ideas that I have for game play. It's a very useful tool to remove distraction from the trap of programming a game <em>engine</em> instead of an actual game.</p>
-<p>Hopefully at some point I will be hosting some demos and small games through the Unity we plugin on my site.</p>
+              <p>Outside of work I am a keen hobbyist programmer. I am keen on learning new ways to solve problems whether it is via learning new frameworks, engines, or completely new (to me) programming paradigms.</p>
+              <h1>Python</h1>
+              <p>I was introduced to the <a href="http://python.org">Python</a> programming language from my time working at Eutechnyx. It was mainly used for the asset building system scripts. There was a good level of understanding of the language in the
+                office, but only a select set of it's features where regularly used (C written in Python). After some very interesting conversations inside the office I took my learning home and opened my post-graduate C++ programmers mind to all kinds
+                of
+                <em>exotic</em>concepts: List comprehension, generators, descriptors, curries, partial functions and so on.</p>
+              <p>I don't claim to be a master at <a href="http://python.org">Python</a> (or <a href="http://www.cplusplus.com/">C++</a>), but I has made me a very
+                <em>multi-lingual</em>programmer. I pick up and can work in different languages/domains relatively easily. I'm also hungry to learn about as many programming concepts and languages as I can find time to.</p>
+              <h1>Linux &amp; Websites</h1>
+              <p>Linux programming was something that I was vastly unaware of. I touched on working with the terminal while in university, but it never really clicked with me. Like most curiosities of mine, the effort to stick at it was missing until I found
+                a good project to sink my teeth into. I was previously working on a <a href="https://www.djangoproject.com">Django</a> based website under Windows 7 but started to run into issues with my Python install, the package manager and other web
+                tech such as Apache. I made the jump over to Ubuntu and after many days of hair pulling I got the first signs of life out of my website codebase. After some trial and error I was at the point I stopped at on Windows and ran straight onto
+                the battlefield of the
+                <a href="http://en.wikipedia.org/wiki/Editor_war">
+                  <em>"Text Editor Wars"</em>
+                </a>... A few more weeks and I was able to edit text again inside of <a href="http://vim.org">VIM</a>. Finally after adding some new features to my website I had to find a new version control system. With <a href="http://git-scm.com">Git</a> the
+                stage was set for my to actually work code in a Linux environment!</p>
+              <p>Sadly the Django project never took the the web due how basic it was compared to the extra cost from the web service needed to run it. Luckily all of that template knowledge was transferred to <a href="http://flask.pocoo.org/">Flask</a> and
+                <a href="http://jinja.pocoo.org/">Jinja2</a>which is what my current dot com is running off; full tech specs on the <a href="http://nathanrosspowell.com/credits">credits</a> page.</p>
+              <p>A favourite thing about Linux is that my multiple machines all have access to git and there fore are a few commands from cloning and installing (via a bash script) my entire working environment from my <a href="http://github.com/nathanrosspowell/dotfiles">dotfiles</a> repository.
+                The power, speed and
+                <em>simplicity</em>of a CLI has really helped my productivity (cliched Linux claim, I know).</p>
+              <h1>Project Euler</h1>
+              <p>To keep my Linux skills sharp I needed some projects and from the recommendation of a friend I found the
+                <em>endless</em>challenge of <a href="http://projecteuler.net">Project Euler</a> to try and get my teeth around. My point of entry for expanding my mind on problem solving. My <a href="https://github.com/nathanrosspowell/euler/#project-euler">euler</a> Github
+                repro where my current solutions (and work in progresses) can be found. Most are solved with C++ and Python, but I've been starting to use <a href="http://www.haskell.org">Haskell</a> to get to grips with the quirks and advantages of <a href="http://en.wikipedia.org/wiki/Functional_programming">functional programming</a>.</p>
+              <h1>Unity</h1>
+              <p><a href="http://unity3d.com">Unity</a> is the engine that I have been doing my game play experiments in. Using Unity I'm able to attach <a href="http://msdn.microsoft.com/en-us/vstudio/hh388566.aspx">C#</a> scripts to objects in the game world
+                and get experimenting with my ideas that I have for game play. It's a very useful tool to remove distraction from the trap of programming a game
+                <em>engine</em>instead of an actual game.</p>
+              <p>Hopefully at some point I will be hosting some demos and small games through the Unity we plugin on my site.</p>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/other-experience/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/other-experience/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/other-experience/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/other-experience/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/formal-education/">
             Formal Education 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <h2>Northumbria University</h2>
-<ul>
-<li>09/05 - 06/10 : Full time and part time study</li>
-<li>Computer Games Software Engineering BSc - First Class Honours (1:1)</li>
-<li>Dissertation : “Procedurally Generated Complex 3D Terrain with User Defined Regions”</li>
-<li>A DirectX11 GPGPU marching cubes implementation with height map and noise inputs.</li>
-</ul>
-<h4>Modules</h4>
-<ul>
-<li>Introduction to Internet Technologies (CG0022)</li>
-<li>Computer Systems Fundamentals (CM0075)</li>
-<li>Relational Databases: Theory &amp; Practice (CM0401)</li>
-<li>Programming for Games 1 (CM0403)</li>
-<li>Programming for Games 2 (CM0404)</li>
-<li>Computer Games Design (CM0405)</li>
-<li>Mathematics for Computer Games 1 (MS0407)</li>
-<li>Foundations of Human Computer Interatction (CM0160)</li>
-<li>Professional Development (CM0501)</li>
-<li>Object Oriented Design (CM0502)</li>
-<li>Games System Architecture (CM0509)</li>
-<li>Programming for Games 3 (CM0510)</li>
-<li>Programming for Games 4 (CM0511)</li>
-<li>Object Oriented Games Design (CM0532)</li>
-<li>Mathematics for Computer Games 2 (MS0501)</li>
-<li>Intelligent Systems (CG0189)</li>
-<li>AI for Computer Games (CM0606)</li>
-<li>Games Case Project (CM0607)</li>
-<li>Multimedia Asses For Computer Games (CM0608)</li>
-<li>Advance Architecture for Games Systems (CM0609)</li>
-<li>Individual Project (CM0645)</li>
-<li>Advance Programming Issues for Games (CM0649)</li>
-</ul>
-<h2>Conyers College/School</h2>
-<ul>
-<li>09/98 - 05/05 : Full time study</li>
-<li>A-levels - I.C.T, Mathematics, Physics, Business Studies</li>
-<li>GCSEs - 11 including Mathematics and Dual Science</li>
-</ul>
+              <h2>Northumbria University</h2>
+              <ul>
+                <li>09/05 - 06/10 : Full time and part time study</li>
+                <li>Computer Games Software Engineering BSc - First Class Honours (1:1)</li>
+                <li>Dissertation : “Procedurally Generated Complex 3D Terrain with User Defined Regions”</li>
+                <li>A DirectX11 GPGPU marching cubes implementation with height map and noise inputs.</li>
+              </ul>
+              <h4>Modules</h4>
+              <ul>
+                <li>Introduction to Internet Technologies (CG0022)</li>
+                <li>Computer Systems Fundamentals (CM0075)</li>
+                <li>Relational Databases: Theory &amp; Practice (CM0401)</li>
+                <li>Programming for Games 1 (CM0403)</li>
+                <li>Programming for Games 2 (CM0404)</li>
+                <li>Computer Games Design (CM0405)</li>
+                <li>Mathematics for Computer Games 1 (MS0407)</li>
+                <li>Foundations of Human Computer Interatction (CM0160)</li>
+                <li>Professional Development (CM0501)</li>
+                <li>Object Oriented Design (CM0502)</li>
+                <li>Games System Architecture (CM0509)</li>
+                <li>Programming for Games 3 (CM0510)</li>
+                <li>Programming for Games 4 (CM0511)</li>
+                <li>Object Oriented Games Design (CM0532)</li>
+                <li>Mathematics for Computer Games 2 (MS0501)</li>
+                <li>Intelligent Systems (CG0189)</li>
+                <li>AI for Computer Games (CM0606)</li>
+                <li>Games Case Project (CM0607)</li>
+                <li>Multimedia Asses For Computer Games (CM0608)</li>
+                <li>Advance Architecture for Games Systems (CM0609)</li>
+                <li>Individual Project (CM0645)</li>
+                <li>Advance Programming Issues for Games (CM0649)</li>
+              </ul>
+              <h2>Conyers College/School</h2>
+              <ul>
+                <li>09/98 - 05/05 : Full time study</li>
+                <li>A-levels - I.C.T, Mathematics, Physics, Business Studies</li>
+                <li>GCSEs - 11 including Mathematics and Dual Science</li>
+              </ul>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/formal-education/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/formal-education/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                            
-                            <h3>
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/formal-education/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/formal-education/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <h3>
             <a href="/career/cv_pdf/">
             Curriculum Vitae PDF Link 
             </a>
-            
-        </h3>
-        <div class="well well-subfolder">
+          </h3>
+          <div class="well well-subfolder">
             <div class="subfolder">
-                <p>Please take a copy of the <a href="http://nathanrosspowell.com/static/pdf/NathanRossPowell-CV.pdf" title="CV PDF">pdf</a> version of the above information.</p>
+              <p>Please take a copy of the <a href="http://nathanrosspowell.com/static/pdf/NathanRossPowell-CV.pdf" title="CV PDF">pdf</a> version of the above information.</p>
             </div>
-        </div>
-        <a class="btn btn-primary btn-large" href="/career/cv_pdf/">
-            <span class="glyphicon glyphicon-link"></span> Read in full
-        </a>
-        
-            <a class="btn btn-primary btn-large" href="/career/cv_pdf/#comments-body">
-                <span class="glyphicon glyphicon-comment"></span> Comments
-            </a>
-        
-                        
-                
-                
-             
-        
-             
-        
-             
-        
-    </p>                        
-    
-
-                </div>
-
-                
-                
-
-                <div class="row" id="navigation_heading">
-                    
-    <div class="col-md-4">
-        <div class="panel panel-default">
+          </div>
+          <a class="btn btn-primary btn-large" href="/career/cv_pdf/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/career/cv_pdf/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+        </p>
+      </div>
+      <div class="row" id="navigation_heading">
+        <div class="col-md-4">
+          <div class="panel panel-default">
             <div class="panel-heading">
-                <h4>Get back home</h4>
+              <h4>Get back home</h4>
             </div>
             <div class="panel-body">
-                
-        Go to the home page.
-    
-                <br/>
-                <a class="btn btn-primary btn-large" href="/">
+              Go to the home page.
+              <br/>
+              <a class="btn btn-primary btn-large" href="/">
         Home
     </a>
             </div>
+          </div>
         </div>
+      </div>
+      <footer>
+        <div class="well">
+          <small>
+            &copy; NathanRossPowell.com 2014. This website was last statically updated: 2014, Jun 26nd at 21:08:11 EDT. Which is 01:08:11 UTC/GMT.
+          </small>
+        </div>
+      </footer>
     </div>
-
-                </div>
-
-                
-                
-
-                <footer>
-                    
-    <div class="well">
-        <small>
-            &copy; NathanRossPowell.com 2014.
-            This website was last statically updated: 2014, Jun 26nd at 21:08:11 EDT. Which is 01:08:11 UTC/GMT.
-        </small>
-    </div>
-
-                </footer>
-
-            </div> <!-- /container -->
-            
-            <script type="text/javascript">
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-                ga('create', 'UA-33462621-1', 'nathanrosspowell.com');
-                ga('send', 'pageview');
-            </script>
-
-            
-            
-        
-    </body>
+    <!-- /container -->
+    <script type="text/javascript">
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-33462621-1', 'nathanrosspowell.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>

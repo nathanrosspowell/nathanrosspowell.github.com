@@ -5,7 +5,6 @@ comments: True
 
 <p><a href="http://imgur.com/WOllJ"><img class="img-responsive img-thumbnail" src="http://imgur.com/60QayFc.png" alt="My face herp derp" title="My face herp derp" /></a></p>
 
-
 Bio
 ===
 I am a [computer programmer][career] who makes a living working on [video games][games], which happens to be a very nice job. 
@@ -48,7 +47,6 @@ Blogroll
 * [Dom Taylor][poppadom] - Line drawer and shape buster.
 * [Peter Alexander][peter] - Programmer, Mac gamer, _D_ lover.
 * [Matt Lacey][lacey] - Reggae Reggae Source Control expert.
-
 
 [career]: http://nathanrosspowell.com/career "Nathan's Career"
 [games]: http://nathanrosspowell.com/games "Nathan's Games"

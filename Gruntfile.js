@@ -69,8 +69,7 @@ module.exports = function(grunt) {
           options: {
             base: 'website/build/',
             branch: 'master',
-            add: true,
-            message: 'Grunt deploy <%= grunt.template.today("yyyy-mm-dd hh:mm:ss") %>'
+            message: 'Grunt deploy <%= grunt.template.today() %>'
           },
           src: ['**']
         }

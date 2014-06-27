@@ -1,0 +1,459 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'node-python',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.15
+4 verbose read json /home/nathan/projects/website/package.json
+5 verbose read json /home/nathan/projects/website/node_modules/grunt/package.json
+6 verbose read json /home/nathan/projects/website/node_modules/grunt-contrib-uglify/package.json
+7 verbose read json /home/nathan/projects/website/node_modules/grunt-gh-pages/package.json
+8 verbose read json /home/nathan/projects/website/node_modules/grunt-prettify/package.json
+9 verbose from cache /home/nathan/projects/website/package.json
+10 verbose readDependencies using package.json deps
+11 verbose cache add [ 'node-python', null ]
+12 verbose cache add name=undefined spec="node-python" args=["node-python",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'node-python',
+13 verbose parsed url   path: 'node-python',
+13 verbose parsed url   href: 'node-python' }
+14 silly lockFile d56db8ac-node-python node-python
+15 verbose lock node-python /home/nathan/.npm/d56db8ac-node-python.lock
+16 silly lockFile d56db8ac-node-python node-python
+17 silly lockFile d56db8ac-node-python node-python
+18 verbose addNamed [ 'node-python', '' ]
+19 verbose addNamed [ null, '*' ]
+20 silly lockFile 12d5b1aa-node-python node-python@
+21 verbose lock node-python@ /home/nathan/.npm/12d5b1aa-node-python.lock
+22 silly addNameRange { name: 'node-python', range: '*', hasData: false }
+23 verbose url raw node-python
+24 verbose url resolving [ 'https://registry.npmjs.org/', './node-python' ]
+25 verbose url resolved https://registry.npmjs.org/node-python
+26 info trying registry request attempt 1 at 21:30:00
+27 http GET https://registry.npmjs.org/node-python
+28 http 200 https://registry.npmjs.org/node-python
+29 silly registry.get cb [ 200,
+29 silly registry.get   { date: 'Fri, 27 Jun 2014 01:30:01 GMT',
+29 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 silly registry.get     etag: '"2EI3XV04SM013V0GM5JZVE14S"',
+29 silly registry.get     'content-type': 'application/json',
+29 silly registry.get     'cache-control': 'max-age=30',
+29 silly registry.get     'content-length': '12372',
+29 silly registry.get     'accept-ranges': 'bytes',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     age: '0',
+29 silly registry.get     'x-served-by': 'cache-sv95-SJC3',
+29 silly registry.get     'x-cache': 'MISS',
+29 silly registry.get     'x-cache-hits': '0',
+29 silly registry.get     'x-timer': 'S1403832601.178081,VS0,VE87',
+29 silly registry.get     vary: 'Accept',
+29 silly registry.get     'keep-alive': 'timeout=10, max=50',
+29 silly registry.get     connection: 'Keep-Alive' } ]
+30 silly addNameRange number 2 { name: 'node-python', range: '*', hasData: true }
+31 silly addNameRange versions [ 'node-python', [ '0.0.2', '0.0.3', '0.0.4' ] ]
+32 verbose addNamed [ 'node-python', '0.0.4' ]
+33 verbose addNamed [ '0.0.4', '0.0.4' ]
+34 silly lockFile 3c531df8-node-python-0-0-4 node-python@0.0.4
+35 verbose lock node-python@0.0.4 /home/nathan/.npm/3c531df8-node-python-0-0-4.lock
+36 silly lockFile 9024e232-ode-python-node-python-0-0-4-tgz https://registry.npmjs.org/node-python/-/node-python-0.0.4.tgz
+37 verbose lock https://registry.npmjs.org/node-python/-/node-python-0.0.4.tgz /home/nathan/.npm/9024e232-ode-python-node-python-0-0-4-tgz.lock
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/node-python/-/node-python-0.0.4.tgz',
+38 verbose addRemoteTarball   '5dc689cc6f8394e0de39b10627296e93ff28db08' ]
+39 info retry fetch attempt 1 at 21:30:01
+40 verbose fetch to= /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/tmp.tgz
+41 http GET https://registry.npmjs.org/node-python/-/node-python-0.0.4.tgz
+42 http 200 https://registry.npmjs.org/node-python/-/node-python-0.0.4.tgz
+43 silly shasum updated bytes 5732
+44 info shasum 5dc689cc6f8394e0de39b10627296e93ff28db08
+44 info shasum /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/tmp.tgz
+45 verbose tar unpack /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/tmp.tgz
+46 silly lockFile e92d1da7-01366-0-2038703567814082-package /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package
+47 verbose lock /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package /home/nathan/.npm/e92d1da7-01366-0-2038703567814082-package.lock
+48 silly lockFile 2ec562e5-01366-0-2038703567814082-tmp-tgz /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/tmp.tgz
+49 verbose lock /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/tmp.tgz /home/nathan/.npm/2ec562e5-01366-0-2038703567814082-tmp-tgz.lock
+50 silly gunzTarPerm modes [ '755', '644' ]
+51 silly gunzTarPerm extractEntry package.json
+52 silly gunzTarPerm extractEntry .npmignore
+53 silly gunzTarPerm extractEntry README.md
+54 silly gunzTarPerm extractEntry index.js
+55 silly gunzTarPerm extractEntry .travis.yml
+56 silly gunzTarPerm extractEntry LICENSE.bsd
+57 silly gunzTarPerm extractEntry binding.gyp
+58 silly gunzTarPerm extractEntry src/binding.cc
+59 silly gunzTarPerm extractEntry src/js_object_wrapper.h
+60 silly gunzTarPerm extractEntry src/py_object_wrapper.cc
+61 silly gunzTarPerm extractEntry src/py_object_wrapper.h
+62 silly gunzTarPerm extractEntry src/utils.cc
+63 silly gunzTarPerm extractEntry src/utils.h
+64 silly gunzTarPerm extractEntry test/linker.js
+65 verbose read json /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package/package.json
+66 silly lockFile e92d1da7-01366-0-2038703567814082-package /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package
+67 silly lockFile e92d1da7-01366-0-2038703567814082-package /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package
+68 silly lockFile 2ec562e5-01366-0-2038703567814082-tmp-tgz /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/tmp.tgz
+69 silly lockFile 2ec562e5-01366-0-2038703567814082-tmp-tgz /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/tmp.tgz
+70 verbose from cache /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package/package.json
+71 verbose tar pack [ '/home/nathan/.npm/node-python/0.0.4/package.tgz',
+71 verbose tar pack   '/home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package' ]
+72 verbose tarball /home/nathan/.npm/node-python/0.0.4/package.tgz
+73 verbose folder /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package
+74 silly lockFile e92d1da7-01366-0-2038703567814082-package /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package
+75 verbose lock /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package /home/nathan/.npm/e92d1da7-01366-0-2038703567814082-package.lock
+76 silly lockFile e7893383-pm-node-python-0-0-4-package-tgz /home/nathan/.npm/node-python/0.0.4/package.tgz
+77 verbose lock /home/nathan/.npm/node-python/0.0.4/package.tgz /home/nathan/.npm/e7893383-pm-node-python-0-0-4-package-tgz.lock
+78 silly lockFile e92d1da7-01366-0-2038703567814082-package /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package
+79 silly lockFile e92d1da7-01366-0-2038703567814082-package /home/nathan/tmp/npm-2584/1403832601366-0.2038703567814082/package
+80 silly lockFile e7893383-pm-node-python-0-0-4-package-tgz /home/nathan/.npm/node-python/0.0.4/package.tgz
+81 silly lockFile e7893383-pm-node-python-0-0-4-package-tgz /home/nathan/.npm/node-python/0.0.4/package.tgz
+82 silly lockFile 8743e719-an-npm-node-python-0-0-4-package /home/nathan/.npm/node-python/0.0.4/package
+83 verbose lock /home/nathan/.npm/node-python/0.0.4/package /home/nathan/.npm/8743e719-an-npm-node-python-0-0-4-package.lock
+84 silly lockFile 8743e719-an-npm-node-python-0-0-4-package /home/nathan/.npm/node-python/0.0.4/package
+85 silly lockFile 8743e719-an-npm-node-python-0-0-4-package /home/nathan/.npm/node-python/0.0.4/package
+86 verbose tar unpack /home/nathan/.npm/node-python/0.0.4/package.tgz
+87 silly lockFile 8743e719-an-npm-node-python-0-0-4-package /home/nathan/.npm/node-python/0.0.4/package
+88 verbose lock /home/nathan/.npm/node-python/0.0.4/package /home/nathan/.npm/8743e719-an-npm-node-python-0-0-4-package.lock
+89 silly lockFile e7893383-pm-node-python-0-0-4-package-tgz /home/nathan/.npm/node-python/0.0.4/package.tgz
+90 verbose lock /home/nathan/.npm/node-python/0.0.4/package.tgz /home/nathan/.npm/e7893383-pm-node-python-0-0-4-package-tgz.lock
+91 silly gunzTarPerm modes [ '755', '644' ]
+92 silly gunzTarPerm extractEntry package.json
+93 silly gunzTarPerm extractEntry .npmignore
+94 silly gunzTarPerm extractEntry README.md
+95 silly gunzTarPerm extractEntry index.js
+96 silly gunzTarPerm extractEntry .travis.yml
+97 silly gunzTarPerm extractEntry LICENSE.bsd
+98 silly gunzTarPerm extractEntry binding.gyp
+99 silly gunzTarPerm extractEntry src/binding.cc
+100 silly gunzTarPerm extractEntry src/js_object_wrapper.h
+101 silly gunzTarPerm extractEntry src/py_object_wrapper.cc
+102 silly gunzTarPerm extractEntry src/py_object_wrapper.h
+103 silly gunzTarPerm extractEntry src/utils.cc
+104 silly gunzTarPerm extractEntry src/utils.h
+105 silly gunzTarPerm extractEntry test/linker.js
+106 verbose read json /home/nathan/.npm/node-python/0.0.4/package/package.json
+107 silly lockFile 8743e719-an-npm-node-python-0-0-4-package /home/nathan/.npm/node-python/0.0.4/package
+108 silly lockFile 8743e719-an-npm-node-python-0-0-4-package /home/nathan/.npm/node-python/0.0.4/package
+109 silly lockFile e7893383-pm-node-python-0-0-4-package-tgz /home/nathan/.npm/node-python/0.0.4/package.tgz
+110 silly lockFile e7893383-pm-node-python-0-0-4-package-tgz /home/nathan/.npm/node-python/0.0.4/package.tgz
+111 silly shasum updated bytes 5724
+112 info shasum 780652564a8e64d920873cd16746569223aa85d5
+112 info shasum /home/nathan/.npm/node-python/0.0.4/package.tgz
+113 verbose from cache /home/nathan/.npm/node-python/0.0.4/package/package.json
+114 verbose chmod /home/nathan/.npm/node-python/0.0.4/package.tgz 644
+115 verbose chown /home/nathan/.npm/node-python/0.0.4/package.tgz [ 0, 0 ]
+116 silly lockFile 9024e232-ode-python-node-python-0-0-4-tgz https://registry.npmjs.org/node-python/-/node-python-0.0.4.tgz
+117 silly lockFile 9024e232-ode-python-node-python-0-0-4-tgz https://registry.npmjs.org/node-python/-/node-python-0.0.4.tgz
+118 silly lockFile 3c531df8-node-python-0-0-4 node-python@0.0.4
+119 silly lockFile 3c531df8-node-python-0-0-4 node-python@0.0.4
+120 silly lockFile 12d5b1aa-node-python node-python@
+121 silly lockFile 12d5b1aa-node-python node-python@
+122 silly resolved [ { name: 'node-python',
+122 silly resolved     version: '0.0.4',
+122 silly resolved     description: 'Call python stuff from nodejs',
+122 silly resolved     main: 'index.js',
+122 silly resolved     repository:
+122 silly resolved      { type: 'git',
+122 silly resolved        url: 'git://github.com/JeanSebTr/node-python.git' },
+122 silly resolved     bugs: 'https://github.com/JeanSebTr/node-python/issues',
+122 silly resolved     keywords: [ 'python', 'bridge' ],
+122 silly resolved     author:
+122 silly resolved      { name: 'Jean-Sébastien Tremblay',
+122 silly resolved        email: 'jeansebtr@xpensia.com',
+122 silly resolved        url: 'http://blog.jeansebtr.com' },
+122 silly resolved     contributors: [ [Object] ],
+122 silly resolved     scripts: { test: 'node test/linker.js', install: 'node-gyp rebuild' },
+122 silly resolved     license: 'BSD',
+122 silly resolved     gypfile: true,
+122 silly resolved     readmeFilename: 'README.md',
+122 silly resolved     dependencies: { bindings: '~1.1.1' },
+122 silly resolved     readme: '# node-python binding \n\npython bridge for nodejs!\n\nHyper-beta, don\'t hesitate to try and report bugs!\n\n[![Build Status](https://travis-ci.org/JeanSebTr/node-python.png)](https://travis-ci.org/JeanSebTr/node-python)\n\n## Installation\n\n```npm install node-python```\n\n## Usage\n\n```javascript\n\n// python stuff\nvar python = require(\'node-python\');\nvar os = python.import(\'os\');\n\n// nodejs stuff\nvar path = require(\'path\');\n\nassert(os.path.basename(os.getcwd()) == path.basename(process.cwd()))\n\n```\n\nYou should now go have fun with that and make it brokes :)\n\n## Current status\n\nWhat should work:\n\n* Conversion between None and Undefined\n* Conversion between Python\'s and Node\'s Boolean\n* Conversion between Python\'s and Node\'s String\n* Calling python functions from node\n* Conversion from Python\'s Array to Node\'s Array\n\nWhat may be broken:\n\n* Losing precision from Python\'s 64 bits Integer to Node\'s Number\n* If you\'re using node v0.6.x (please upgrade) you\'ll have to manually compile with node-gyp\n\nWhat\'s to be done:\n\n* Conversion from Node\'s Array to Python\'s Array\n* Pass javascript object to python\n* Call javascript function from python\n\nWhat would be realy awesome:\n\n* Proper object introspection\n\n\n## History\n\n* **v0.0.4** : 2013-10-09\n  - use the bindings module to load the native extension\n* **v0.0.3** : 2013-07-06\n  - Refactor\n  - Better type conversion & error handling\n  - Compilation now properly working on both OSX and Linux. Windows compilation _may_ work too\n* **v0.0.2** : 2012-12-21\n  - Forked from [chrisdickinson/node-python](https://github.com/chrisdickinson/node-python)\n  - Compilation with node-gyp\n',
+122 silly resolved     _id: 'node-python@0.0.4',
+122 silly resolved     dist: { shasum: '780652564a8e64d920873cd16746569223aa85d5' },
+122 silly resolved     _from: 'node-python@',
+122 silly resolved     _resolved: 'https://registry.npmjs.org/node-python/-/node-python-0.0.4.tgz' } ]
+123 info install node-python@0.0.4 into /home/nathan/projects/website
+124 info installOne node-python@0.0.4
+125 verbose from cache /home/nathan/.npm/node-python/0.0.4/package/package.json
+126 info /home/nathan/projects/website/node_modules/node-python unbuild
+127 verbose read json /home/nathan/projects/website/node_modules/node-python/package.json
+128 verbose tar unpack /home/nathan/.npm/node-python/0.0.4/package.tgz
+129 silly lockFile 9008e30d-website-node-modules-node-python /home/nathan/projects/website/node_modules/node-python
+130 verbose lock /home/nathan/projects/website/node_modules/node-python /home/nathan/.npm/9008e30d-website-node-modules-node-python.lock
+131 silly lockFile e7893383-pm-node-python-0-0-4-package-tgz /home/nathan/.npm/node-python/0.0.4/package.tgz
+132 verbose lock /home/nathan/.npm/node-python/0.0.4/package.tgz /home/nathan/.npm/e7893383-pm-node-python-0-0-4-package-tgz.lock
+133 silly gunzTarPerm modes [ '755', '644' ]
+134 silly gunzTarPerm extractEntry package.json
+135 silly gunzTarPerm extractEntry .npmignore
+136 silly gunzTarPerm extractEntry README.md
+137 silly gunzTarPerm extractEntry index.js
+138 silly gunzTarPerm extractEntry .travis.yml
+139 silly gunzTarPerm extractEntry LICENSE.bsd
+140 silly gunzTarPerm extractEntry binding.gyp
+141 silly gunzTarPerm extractEntry src/binding.cc
+142 silly gunzTarPerm extractEntry src/js_object_wrapper.h
+143 silly gunzTarPerm extractEntry src/py_object_wrapper.cc
+144 silly gunzTarPerm extractEntry src/py_object_wrapper.h
+145 silly gunzTarPerm extractEntry src/utils.cc
+146 silly gunzTarPerm extractEntry src/utils.h
+147 silly gunzTarPerm extractEntry test/linker.js
+148 verbose read json /home/nathan/projects/website/node_modules/node-python/package.json
+149 silly lockFile 9008e30d-website-node-modules-node-python /home/nathan/projects/website/node_modules/node-python
+150 silly lockFile 9008e30d-website-node-modules-node-python /home/nathan/projects/website/node_modules/node-python
+151 silly lockFile e7893383-pm-node-python-0-0-4-package-tgz /home/nathan/.npm/node-python/0.0.4/package.tgz
+152 silly lockFile e7893383-pm-node-python-0-0-4-package-tgz /home/nathan/.npm/node-python/0.0.4/package.tgz
+153 info preinstall node-python@0.0.4
+154 verbose from cache /home/nathan/projects/website/node_modules/node-python/package.json
+155 verbose readDependencies using package.json deps
+156 verbose from cache /home/nathan/projects/website/node_modules/node-python/package.json
+157 verbose readDependencies using package.json deps
+158 verbose cache add [ 'bindings@~1.1.1', null ]
+159 verbose cache add name=undefined spec="bindings@~1.1.1" args=["bindings@~1.1.1",null]
+160 verbose parsed url { protocol: null,
+160 verbose parsed url   slashes: null,
+160 verbose parsed url   auth: null,
+160 verbose parsed url   host: null,
+160 verbose parsed url   port: null,
+160 verbose parsed url   hostname: null,
+160 verbose parsed url   hash: null,
+160 verbose parsed url   search: null,
+160 verbose parsed url   query: null,
+160 verbose parsed url   pathname: 'bindings@~1.1.1',
+160 verbose parsed url   path: 'bindings@~1.1.1',
+160 verbose parsed url   href: 'bindings@~1.1.1' }
+161 verbose cache add name="bindings" spec="~1.1.1" args=["bindings","~1.1.1"]
+162 verbose parsed url { protocol: null,
+162 verbose parsed url   slashes: null,
+162 verbose parsed url   auth: null,
+162 verbose parsed url   host: null,
+162 verbose parsed url   port: null,
+162 verbose parsed url   hostname: null,
+162 verbose parsed url   hash: null,
+162 verbose parsed url   search: null,
+162 verbose parsed url   query: null,
+162 verbose parsed url   pathname: '~1.1.1',
+162 verbose parsed url   path: '~1.1.1',
+162 verbose parsed url   href: '~1.1.1' }
+163 verbose addNamed [ 'bindings', '~1.1.1' ]
+164 verbose addNamed [ null, '>=1.1.1-0 <1.2.0-0' ]
+165 silly lockFile cc1512d6-bindings-1-1-1 bindings@~1.1.1
+166 verbose lock bindings@~1.1.1 /home/nathan/.npm/cc1512d6-bindings-1-1-1.lock
+167 silly addNameRange { name: 'bindings', range: '>=1.1.1-0 <1.2.0-0', hasData: false }
+168 verbose url raw bindings
+169 verbose url resolving [ 'https://registry.npmjs.org/', './bindings' ]
+170 verbose url resolved https://registry.npmjs.org/bindings
+171 info trying registry request attempt 1 at 21:30:02
+172 http GET https://registry.npmjs.org/bindings
+173 http 200 https://registry.npmjs.org/bindings
+174 silly registry.get cb [ 200,
+174 silly registry.get   { date: 'Fri, 27 Jun 2014 01:30:02 GMT',
+174 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+174 silly registry.get     etag: '"EF0U3ERBDZ107WR2K8OB2X3WQ"',
+174 silly registry.get     'content-type': 'application/json',
+174 silly registry.get     'cache-control': 'max-age=30',
+174 silly registry.get     'content-length': '17199',
+174 silly registry.get     'accept-ranges': 'bytes',
+174 silly registry.get     via: '1.1 varnish',
+174 silly registry.get     age: '696',
+174 silly registry.get     'x-served-by': 'cache-sv61-SJC3',
+174 silly registry.get     'x-cache': 'HIT',
+174 silly registry.get     'x-cache-hits': '2',
+174 silly registry.get     'x-timer': 'S1403832602.833894,VS0,VE0',
+174 silly registry.get     vary: 'Accept',
+174 silly registry.get     'keep-alive': 'timeout=10, max=50',
+174 silly registry.get     connection: 'Keep-Alive' } ]
+175 silly addNameRange number 2 { name: 'bindings', range: '>=1.1.1-0 <1.2.0-0', hasData: true }
+176 silly addNameRange versions [ 'bindings',
+176 silly addNameRange   [ '0.0.1',
+176 silly addNameRange     '0.1.0',
+176 silly addNameRange     '0.1.1',
+176 silly addNameRange     '0.2.0',
+176 silly addNameRange     '0.2.1',
+176 silly addNameRange     '0.2.2',
+176 silly addNameRange     '0.2.3',
+176 silly addNameRange     '0.2.4',
+176 silly addNameRange     '0.3.0',
+176 silly addNameRange     '0.4.0',
+176 silly addNameRange     '1.0.0',
+176 silly addNameRange     '1.1.0',
+176 silly addNameRange     '1.1.1',
+176 silly addNameRange     '1.2.0' ] ]
+177 verbose addNamed [ 'bindings', '1.1.1' ]
+178 verbose addNamed [ '1.1.1', '1.1.1' ]
+179 silly lockFile 52dd60a7-bindings-1-1-1 bindings@1.1.1
+180 verbose lock bindings@1.1.1 /home/nathan/.npm/52dd60a7-bindings-1-1-1.lock
+181 silly lockFile 4e5e3491--org-bindings-bindings-1-1-1-tgz https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+182 verbose lock https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz /home/nathan/.npm/4e5e3491--org-bindings-bindings-1-1-1-tgz.lock
+183 verbose addRemoteTarball [ 'https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz',
+183 verbose addRemoteTarball   '951f7ae010302ffc50b265b124032017ed2bf6f3' ]
+184 info retry fetch attempt 1 at 21:30:03
+185 verbose fetch to= /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/tmp.tgz
+186 http GET https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+187 http 200 https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+188 silly shasum updated bytes 3509
+189 info shasum 951f7ae010302ffc50b265b124032017ed2bf6f3
+189 info shasum /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/tmp.tgz
+190 verbose tar unpack /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/tmp.tgz
+191 silly lockFile fbb18b21-3022-0-33692635386250913-package /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package
+192 verbose lock /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package /home/nathan/.npm/fbb18b21-3022-0-33692635386250913-package.lock
+193 silly lockFile df62eb7e-3022-0-33692635386250913-tmp-tgz /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/tmp.tgz
+194 verbose lock /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/tmp.tgz /home/nathan/.npm/df62eb7e-3022-0-33692635386250913-tmp-tgz.lock
+195 silly gunzTarPerm modes [ '755', '644' ]
+196 silly gunzTarPerm extractEntry package.json
+197 silly gunzTarPerm extractEntry README.md
+198 silly gunzTarPerm extractEntry bindings.js
+199 verbose read json /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package/package.json
+200 silly lockFile fbb18b21-3022-0-33692635386250913-package /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package
+201 silly lockFile fbb18b21-3022-0-33692635386250913-package /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package
+202 silly lockFile df62eb7e-3022-0-33692635386250913-tmp-tgz /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/tmp.tgz
+203 silly lockFile df62eb7e-3022-0-33692635386250913-tmp-tgz /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/tmp.tgz
+204 verbose from cache /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package/package.json
+205 verbose tar pack [ '/home/nathan/.npm/bindings/1.1.1/package.tgz',
+205 verbose tar pack   '/home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package' ]
+206 verbose tarball /home/nathan/.npm/bindings/1.1.1/package.tgz
+207 verbose folder /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package
+208 silly lockFile fbb18b21-3022-0-33692635386250913-package /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package
+209 verbose lock /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package /home/nathan/.npm/fbb18b21-3022-0-33692635386250913-package.lock
+210 silly lockFile 09d0bb8b-n-npm-bindings-1-1-1-package-tgz /home/nathan/.npm/bindings/1.1.1/package.tgz
+211 verbose lock /home/nathan/.npm/bindings/1.1.1/package.tgz /home/nathan/.npm/09d0bb8b-n-npm-bindings-1-1-1-package-tgz.lock
+212 silly lockFile fbb18b21-3022-0-33692635386250913-package /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package
+213 silly lockFile fbb18b21-3022-0-33692635386250913-package /home/nathan/tmp/npm-2584/1403832603022-0.33692635386250913/package
+214 silly lockFile 09d0bb8b-n-npm-bindings-1-1-1-package-tgz /home/nathan/.npm/bindings/1.1.1/package.tgz
+215 silly lockFile 09d0bb8b-n-npm-bindings-1-1-1-package-tgz /home/nathan/.npm/bindings/1.1.1/package.tgz
+216 silly lockFile 20159900-athan-npm-bindings-1-1-1-package /home/nathan/.npm/bindings/1.1.1/package
+217 verbose lock /home/nathan/.npm/bindings/1.1.1/package /home/nathan/.npm/20159900-athan-npm-bindings-1-1-1-package.lock
+218 silly lockFile 20159900-athan-npm-bindings-1-1-1-package /home/nathan/.npm/bindings/1.1.1/package
+219 silly lockFile 20159900-athan-npm-bindings-1-1-1-package /home/nathan/.npm/bindings/1.1.1/package
+220 verbose tar unpack /home/nathan/.npm/bindings/1.1.1/package.tgz
+221 silly lockFile 20159900-athan-npm-bindings-1-1-1-package /home/nathan/.npm/bindings/1.1.1/package
+222 verbose lock /home/nathan/.npm/bindings/1.1.1/package /home/nathan/.npm/20159900-athan-npm-bindings-1-1-1-package.lock
+223 silly lockFile 09d0bb8b-n-npm-bindings-1-1-1-package-tgz /home/nathan/.npm/bindings/1.1.1/package.tgz
+224 verbose lock /home/nathan/.npm/bindings/1.1.1/package.tgz /home/nathan/.npm/09d0bb8b-n-npm-bindings-1-1-1-package-tgz.lock
+225 silly gunzTarPerm modes [ '755', '644' ]
+226 silly gunzTarPerm extractEntry package.json
+227 silly gunzTarPerm extractEntry README.md
+228 silly gunzTarPerm extractEntry bindings.js
+229 verbose read json /home/nathan/.npm/bindings/1.1.1/package/package.json
+230 silly lockFile 20159900-athan-npm-bindings-1-1-1-package /home/nathan/.npm/bindings/1.1.1/package
+231 silly lockFile 20159900-athan-npm-bindings-1-1-1-package /home/nathan/.npm/bindings/1.1.1/package
+232 silly lockFile 09d0bb8b-n-npm-bindings-1-1-1-package-tgz /home/nathan/.npm/bindings/1.1.1/package.tgz
+233 silly lockFile 09d0bb8b-n-npm-bindings-1-1-1-package-tgz /home/nathan/.npm/bindings/1.1.1/package.tgz
+234 silly shasum updated bytes 3499
+235 info shasum b4c67493ed67adef0943701dbc1c49315b17a9df
+235 info shasum /home/nathan/.npm/bindings/1.1.1/package.tgz
+236 verbose from cache /home/nathan/.npm/bindings/1.1.1/package/package.json
+237 verbose chmod /home/nathan/.npm/bindings/1.1.1/package.tgz 644
+238 verbose chown /home/nathan/.npm/bindings/1.1.1/package.tgz [ 0, 0 ]
+239 silly lockFile 4e5e3491--org-bindings-bindings-1-1-1-tgz https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+240 silly lockFile 4e5e3491--org-bindings-bindings-1-1-1-tgz https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+241 silly lockFile 52dd60a7-bindings-1-1-1 bindings@1.1.1
+242 silly lockFile 52dd60a7-bindings-1-1-1 bindings@1.1.1
+243 silly lockFile cc1512d6-bindings-1-1-1 bindings@~1.1.1
+244 silly lockFile cc1512d6-bindings-1-1-1 bindings@~1.1.1
+245 silly resolved [ { name: 'bindings',
+245 silly resolved     description: 'Helper module for loading your native module\'s .node file',
+245 silly resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+245 silly resolved     version: '1.1.1',
+245 silly resolved     author:
+245 silly resolved      { name: 'Nathan Rajlich',
+245 silly resolved        email: 'nathan@tootallnate.net',
+245 silly resolved        url: 'http://tootallnate.net' },
+245 silly resolved     repository:
+245 silly resolved      { type: 'git',
+245 silly resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+245 silly resolved     main: './bindings.js',
+245 silly resolved     readme: 'node-bindings\n=============\n### Helper module for loading your native module\'s .node file\n\nThis is a helper module for authors of Node.js native addon modules.\nIt is basically the "swiss army knife" of `require()`ing your native module\'s\n`.node` file.\n\nThroughout the course of Node\'s native addon history, addons have ended up being\ncompiled in a variety of different places, depending on which build tool and which\nversion of node was used. To make matters worse, now the _gyp_ build tool can\nproduce either a _Release_ or _Debug_ build, each being built into different\nlocations.\n\nThis module checks _all_ the possible locations that a native addon would be built\nat, and returns the first one that loads successfully.\n\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install bindings\n```\n\nOr add it to the `"dependencies"` section of your _package.json_ file.\n\n\nExample\n-------\n\n`require()`ing the proper bindings file for the current node version, platform\nand architecture is as simple as:\n\n``` js\nvar bindings = require(\'bindings\')(\'binding.node\')\n\n// Use your bindings defined in your C files\nbindings.your_c_function()\n```\n\n\nNice Error Output\n-----------------\n\nWhen the `.node` file could not be loaded, `node-bindings` throws an Error with\na nice error message telling you exactly what was tried. You can also check the\n`err.tries` Array property.\n\n```\nError: Could not load the bindings file. Tried:\n → /Users/nrajlich/ref/build/binding.node\n → /Users/nrajlich/ref/build/Debug/binding.node\n → /Users/nrajlich/ref/build/Release/binding.node\n → /Users/nrajlich/ref/out/Debug/binding.node\n → /Users/nrajlich/ref/Debug/binding.node\n → /Users/nrajlich/ref/out/Release/binding.node\n → /Users/nrajlich/ref/Release/binding.node\n → /Users/nrajlich/ref/build/default/binding.node\n → /Users/nrajlich/ref/compiled/0.8.2/darwin/x64/binding.node\n    at bindings (/Users/nrajlich/ref/node_modules/bindings/bindings.js:84:13)\n    at Object.<anonymous> (/Users/nrajlich/ref/lib/ref.js:5:47)\n    at Module._compile (module.js:449:26)\n    at Object.Module._extensions..js (module.js:467:10)\n    at Module.load (module.js:356:32)\n    at Function.Module._load (module.js:312:12)\n    ...\n```\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+245 silly resolved     readmeFilename: 'README.md',
+245 silly resolved     _id: 'bindings@1.1.1',
+245 silly resolved     dist: { shasum: 'b4c67493ed67adef0943701dbc1c49315b17a9df' },
+245 silly resolved     _from: 'bindings@~1.1.1',
+245 silly resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz' } ]
+246 info install bindings@1.1.1 into /home/nathan/projects/website/node_modules/node-python
+247 info installOne bindings@1.1.1
+248 verbose from cache /home/nathan/.npm/bindings/1.1.1/package/package.json
+249 info /home/nathan/projects/website/node_modules/node-python/node_modules/bindings unbuild
+250 verbose read json /home/nathan/projects/website/node_modules/node-python/node_modules/bindings/package.json
+251 verbose tar unpack /home/nathan/.npm/bindings/1.1.1/package.tgz
+252 silly lockFile b7edf00b-ode-python-node-modules-bindings /home/nathan/projects/website/node_modules/node-python/node_modules/bindings
+253 verbose lock /home/nathan/projects/website/node_modules/node-python/node_modules/bindings /home/nathan/.npm/b7edf00b-ode-python-node-modules-bindings.lock
+254 silly lockFile 09d0bb8b-n-npm-bindings-1-1-1-package-tgz /home/nathan/.npm/bindings/1.1.1/package.tgz
+255 verbose lock /home/nathan/.npm/bindings/1.1.1/package.tgz /home/nathan/.npm/09d0bb8b-n-npm-bindings-1-1-1-package-tgz.lock
+256 silly gunzTarPerm modes [ '755', '644' ]
+257 silly gunzTarPerm extractEntry package.json
+258 silly gunzTarPerm extractEntry README.md
+259 silly gunzTarPerm extractEntry bindings.js
+260 verbose read json /home/nathan/projects/website/node_modules/node-python/node_modules/bindings/package.json
+261 silly lockFile b7edf00b-ode-python-node-modules-bindings /home/nathan/projects/website/node_modules/node-python/node_modules/bindings
+262 silly lockFile b7edf00b-ode-python-node-modules-bindings /home/nathan/projects/website/node_modules/node-python/node_modules/bindings
+263 silly lockFile 09d0bb8b-n-npm-bindings-1-1-1-package-tgz /home/nathan/.npm/bindings/1.1.1/package.tgz
+264 silly lockFile 09d0bb8b-n-npm-bindings-1-1-1-package-tgz /home/nathan/.npm/bindings/1.1.1/package.tgz
+265 info preinstall bindings@1.1.1
+266 verbose from cache /home/nathan/projects/website/node_modules/node-python/node_modules/bindings/package.json
+267 verbose readDependencies using package.json deps
+268 verbose from cache /home/nathan/projects/website/node_modules/node-python/node_modules/bindings/package.json
+269 verbose readDependencies using package.json deps
+270 silly resolved []
+271 verbose about to build /home/nathan/projects/website/node_modules/node-python/node_modules/bindings
+272 info build /home/nathan/projects/website/node_modules/node-python/node_modules/bindings
+273 verbose from cache /home/nathan/projects/website/node_modules/node-python/node_modules/bindings/package.json
+274 verbose linkStuff [ false,
+274 verbose linkStuff   false,
+274 verbose linkStuff   false,
+274 verbose linkStuff   '/home/nathan/projects/website/node_modules/node-python/node_modules' ]
+275 info linkStuff bindings@1.1.1
+276 verbose linkBins bindings@1.1.1
+277 verbose linkMans bindings@1.1.1
+278 verbose rebuildBundles bindings@1.1.1
+279 info install bindings@1.1.1
+280 info postinstall bindings@1.1.1
+281 verbose about to build /home/nathan/projects/website/node_modules/node-python
+282 info build /home/nathan/projects/website/node_modules/node-python
+283 verbose from cache /home/nathan/projects/website/node_modules/node-python/package.json
+284 verbose linkStuff [ false,
+284 verbose linkStuff   false,
+284 verbose linkStuff   false,
+284 verbose linkStuff   '/home/nathan/projects/website/node_modules' ]
+285 info linkStuff node-python@0.0.4
+286 verbose linkBins node-python@0.0.4
+287 verbose linkMans node-python@0.0.4
+288 verbose rebuildBundles node-python@0.0.4
+289 verbose rebuildBundles [ 'bindings' ]
+290 info install node-python@0.0.4
+291 verbose unsafe-perm in lifecycle false
+292 verbose set uid from=0 to=1000
+293 silly exec sh "-c" "node-gyp rebuild"
+294 silly sh,-c,node-gyp rebuild,/home/nathan/projects/website/node_modules/node-python spawning
+295 info node-python@0.0.4 Failed to exec install script
+296 info /home/nathan/projects/website/node_modules/node-python unbuild
+297 verbose from cache /home/nathan/projects/website/node_modules/node-python/package.json
+298 warn This failure might be due to the use of legacy binary "node"
+299 warn For further explanations, please read
+/usr/share/doc/nodejs/README.Debian
+300 info preuninstall node-python@0.0.4
+301 info uninstall node-python@0.0.4
+302 verbose true,/home/nathan/projects/website/node_modules,/home/nathan/projects/website/node_modules unbuild node-python@0.0.4
+303 info postuninstall node-python@0.0.4
+304 error node-python@0.0.4 install: `node-gyp rebuild`
+304 error `sh "-c" "node-gyp rebuild"` failed with 1
+305 error Failed at the node-python@0.0.4 install script.
+305 error This is most likely a problem with the node-python package,
+305 error not with npm itself.
+305 error Tell the author that this fails on your system:
+305 error     node-gyp rebuild
+305 error You can get their info via:
+305 error     npm owner ls node-python
+305 error There is likely additional logging output above.
+306 error System Linux 3.11.0-23-generic
+307 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "node-python" "--save-dev"
+308 error cwd /home/nathan/projects/website
+309 error node -v v0.10.15
+310 error npm -v 1.2.18
+311 error code ELIFECYCLE
+312 verbose exit [ 1, true ]

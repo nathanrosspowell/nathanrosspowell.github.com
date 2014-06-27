@@ -1,4 +1,1 @@
-website/build/*
-*.pyc
-*.*~
-*.md.bak
+/website/build/

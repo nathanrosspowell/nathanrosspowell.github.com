@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/octicons/octicons.css">
+    <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script>
+      //<![CDATA[
+       <!--
+      Modernizr.load({
+        load: {
+          'jqueryjs': '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+          'bootstrap': "/static/js/vendor/bootstrap.min.js",
+          "codehilitecss": "/static/css/codehilite.css",
+        },
+        callback: {},
+        complete: function() {
+          if (!window.jQuery) {
+            Modernizr.load('js/libs/jquery-1.9.1.min.js');
+          }
+          Modernizr.load('/static/js/main.js');
+        }
+      });
+       //-->
+       //]]>
+    </script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <span class="visible-xs">
+              <span class="mega-octicon octicon-home "></span>
+              NathanRossPowell.com
+            </span>
+            <span class="visible-lg">
+              <span class="octicon octicon-home "></span>
+              NathanRossPowell.com
+            </span>
+            <span class="visible-sm visible-md">
+              <span class="octicon octicon-home "></span>
+              NRP
+            </span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="/about_me/">
+                <span class="octicon octicon-person"></span>About Me
+              </a>
+            </li>
+            <li class="dropdown">
+              <a href="/blog/" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="octicon octicon-keyboard"></span>Blog
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/blog/">
+            Index page
+        </a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header text-primary">Articles</li>
+                <li>
+                  <a href="/blog/erlang/">
+            Erlang
+        </a>
+                </li>
+                <li>
+                  <a href="/blog/website-maintainance/">
+            Website Maintainance
+        </a>
+                </li>
+                <li>
+                  <a href="/blog/long-time-no-update/">
+            Long Time No Update
+        </a>
+                </li>
+                <li>
+                  <a href="/blog/functional-one-liner/">
+            Functional One Liner
+        </a>
+                </li>
+                <li>
+                  <a href="/blog/project-euler/">
+            Project Euler
+        </a>
+                </li>
+                <li>
+                  <a href="/blog/hello-montral-hello-ubisoft/">
+            Hello, Montreal. Hello, Ubisoft!
+        </a>
+                </li>
+                <li>
+                  <a href="/blog/syntax-highlight-test/">
+            Syntax Highlight Test
+        </a>
+                </li>
+                <li>
+                  <a href="/blog/hello-world/">
+            Hello, World!
+        </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="/career/" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="octicon octicon-mortar-board"></span>Career
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/career/">
+            Index page
+        </a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header text-primary">Pages</li>
+                <li>
+                  <a href="/career/overview/">
+            Career Overview
+        </a>
+                </li>
+                <li>
+                  <a href="/career/ubisoft-watch-dogs/">
+            Ubisoft - Watch_dogs
+        </a>
+                </li>
+                <li>
+                  <a href="/career/codemasters-dirt-showdown/">
+            Codemasters - Dirt Showdown
+        </a>
+                </li>
+                <li>
+                  <a href="/career/codemasters-operation-flashpoint/">
+            Codemasters - Operation Flashpoint: Red River
+        </a>
+                </li>
+                <li>
+                  <a href="/career/eutechnyx-ferrari/">
+            Eutechnyx - Ferrari: The Race Experience
+        </a>
+                </li>
+                <li>
+                  <a href="/career/eutechnyx-ride-to-hell/">
+            Eutechnyx - Hot Wheels: Beat That!
+        </a>
+                </li>
+                <li>
+                  <a href="/career/eutechnyx-hot-wheels/">
+            Eutechnyx - Ride To Hell
+        </a>
+                </li>
+                <li>
+                  <a href="/career/professional-skills/">
+            Professional Skills
+        </a>
+                </li>
+                <li>
+                  <a href="/career/other-experience/">
+            Other Skills
+        </a>
+                </li>
+                <li>
+                  <a href="/career/formal-education/">
+            Formal Education
+        </a>
+                </li>
+                <li>
+                  <a href="/career/">
+            ... more pages
+        </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="/code/" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="octicon octicon-bug"></span>Code
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/code/">
+            Index page
+        </a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header text-primary">Pages</li>
+                <li>
+                  <a href="/code/interface-zero/">
+            Interface Zero
+        </a>
+                </li>
+                <li>
+                  <a href="/code/personal-website/">
+            Personal Website
+        </a>
+                </li>
+                <li>
+                  <a href="/code/project-euler/">
+            Project Euler
+        </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown active">
+              <a href="/games/" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="octicon octicon-rocket"></span>Games
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="active">
+                  <a href="/games/">
+            Index page
+        </a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header text-primary">Articles</li>
+                <li>
+                  <a href="/games/watch_dogs/">
+            Watch_dogs
+        </a>
+                </li>
+                <li>
+                  <a href="/games/dirt-showdown/">
+            Dirt Showdown
+        </a>
+                </li>
+                <li>
+                  <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River
+        </a>
+                </li>
+                <li>
+                  <a href="/games/ferrari-the-race-experience/">
+            Ferrari The Race Experince
+        </a>
+                </li>
+                <li>
+                  <a href="/games/ride-to-hell/">
+            Ride To Hell
+        </a>
+                </li>
+                <li>
+                  <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That!
+        </a>
+                </li>
+                <li>
+                  <a href="/games/asteroid-escape/">
+            Asteroid Escape
+        </a>
+                </li>
+                <li>
+                  <a href="/games/snake-3d/">
+            Snake 3d
+        </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="form" method="get" action="http://www.google.com/search">
+            <div class="form-group">
+              <input class="form-control" type="text" name="q" placeholder="Site search..." />
+              <input type="hidden" name="sitesearch" value="http://nathanrosspowell.com" />
+            </div>
+            <div class="form-group">
+              <button type="submit" value="Google Search" class="btn">Search</button>
+            </div>
+          </form>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>
+          Games
+        </h1>
+        <p>
+          <h3>
+            <a href="/games/watch_dogs/">
+            Watch_Dogs 
+            </a>
+            2014, May 27nd
+          </h3>
+          <div class="well well-subfolder">
+            <div class="subfolder">
+              <h2>Overview</h2>
+              <p>Set in Chicago, where a central network of computers connects everyone and everything, Watch_Dogs explores the impact of technology within our society. Using the city as your weapon, you will embark on a personal mission to inflict your
+                own brand of justice.</p>
+              <p>Chicago's overarching network is known as the Central Operating System (ctOS), and it controls almost all of the city's technology and information - including key data on all of the city's residents.</p>
+              <p>You play as Aiden Pearce, a brilliant hacker and former thug, whose criminal past led to a violent family tragedy. While seeking justice for those events, you'll monitor and hack those around you by manipulating the ctOS from the palm of
+                your hand. You'll access omnipresent security cameras, download personal information to locate a target, control traffic lights and public transportation to stop the enemy... and more.</p>
+              <h2>ctOS</h2>
+              <p>The ctOS is an efficient system linking all the city's infrastructure and public security installations to one centralized hub. This system focuses on traffic efficiency, eco-development, tele-communications, and crime control throughout
+                Chicago. It has brought notable benefits to citizens, including shorter commutes, lowered crime rates, a cleaner city, and much more.</p>
+              <h2>Chicago</h2>
+              <p>Watch_Dogs takes place in a contemporary Chicago that's been enhanced and transformed by the ctOS. In this version of Chicago, everything is connected. Banks, security systems, communication hubs, and even the city's basic infrastructure
+                operate via the this connected network. The ctOS provides a new take on one of the world's great cities, and it's this omniscient setting that serves as the backdrop for Aiden's story.</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large" href="/games/watch_dogs/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/games/watch_dogs/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <hr/>
+          <h3>
+            <a href="/games/dirt-showdown/">
+            DiRT Showdown 
+            </a>
+            2012, May 1st
+          </h3>
+          <div class="well well-subfolder">
+            <div class="subfolder">
+              <p>DiRT Showdown is the new arcade racing game from the team that brought you the award-winning DiRT series, uncaged in 2012. Pick up and play controls combine with electrifying events, frenzied crowds and stunning graphics to deliver high
+                octane, dive in and drive thrills from event one.</p>
+              <hr />
+              <h2>SPEED, STYLE AND DESTRUCTION – LET LOOSE ON A TOUR OF MOTORISED MAYHEM:</h2>
+              <h4>NO HOLDS BARRED RACING EVENTS</h4>
+              <p>Trade paint and use nitrous to blast past rivals in DiRT Showdown’s racing modes. Courses are littered with obstacles, pinch points, multiple-routes and ramps to deliver adrenaline-fuelled racing across spectacular courses.</p>
+              <h4>BONE CRUNCHING DEMOLITION DERBY EVENTS</h4>
+              <p>Crash, smash and bash your way through a range of demolition derby events, pushing our stunning damage engine to its spectacular limits.</p>
+              <h4>EDGE OF CONTROL HOONIGAN EVENTS</h4>
+              <p>A new accessible handling system lets you go wild in free-roaming, freestyle stunt parks. Compounds flooded with obstacles play host to a range of new challenges, from performing trick runs to competitive stunt events, explorations challenges
+                and more.</p>
+              <hr />
+              <p>DiRT Showdown comes with phenomenal graphical performance, bone-jarring damage, and social online and split-screen multiplayer as standard. Welcome to DiRT Showdown - a new world of driving delirium.</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large" href="/games/dirt-showdown/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/games/dirt-showdown/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <hr/>
+          <h3>
+            <a href="/games/operation-flashpoint-red-river/">
+            Operation Flashpoint: Red River 
+            </a>
+            2011, May 1st
+          </h3>
+          <div class="well well-subfolder">
+            <div class="subfolder">
+              <p>Taking a small step into the future, Red River depicts a fictional conflict with contemporary geopolitical themes, which will unfold over three distinct acts in both single player and drop-in-drop-out co-operative play for up to four players
+                online. Faced with new counter-insurgency combat and the returning threat of the Chinese PLA, players will feel the tension, brutality and carnage of modern conflict from the perspective of a marine fireteam on deployment in a hostile
+                country, thousands of miles from home.</p>
+              <hr />
+              <p>Tajikistan, 2013.</p>
+              <p>Between Afghanistan and China, the world’s next flashpoint is about to erupt. The valleys, towns and mountains of Tajikistan will become bloody frontlines for the might of the People’s Liberation Army, insurgent guerrilla fighters and the
+                United States Marine Corps.</p>
+              <p>You and your fireteam can make a difference. How much is up to you. It’s not the soldier with the most expensive gun or the biggest heart who wins on the battlefield. It’s the smartest. Semper Fi, Marine.</p>
+              <p>Game Features</p>
+              <p>Go closer to the experience of the US Marines on campaign with the ultimate tactical infantry shooter</p>
+              <p>Stand together with 4 player drop-in drop-out online co-op multiplayer in campaign mode and standalone Fire Team Engagements</p>
+              <p>Become immersed in an engrossing narrative which unfolds over three acts in campaign mode</p>
+              <p>Play as Grenadier, Scout, Rifleman and Automatic Rifleman classes, each with unique strengths and weaknesses for increased replayability</p>
+              <p>Earn and spend XP on weapons, attachments and abilities for each of the fireteam’s specialists</p>
+              <p>Call in Combat Support such as Mortars, Howitzers and JDAMs, whilst AH-1Z Helicopters and A-10 Ground Attack Aircraft provide Close Air Support</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large" href="/games/operation-flashpoint-red-river/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/games/operation-flashpoint-red-river/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <hr/>
+          <h3>
+            <a href="/games/ferrari-the-race-experience/">
+            Ferrari The Race Experince 
+            </a>
+            2010, Aug 1st
+          </h3>
+          <div class="well well-subfolder">
+            <div class="subfolder">
+              <p>Ferrari's latest and hottest marques, along with its motors past and present, are poised to vroom onto PlayStation3 with the September 29 launch of Ferrari The Race Experience.</p>
+              <p>Ferrari The Race Experience will be available exclusively from the PlayStation Network Store in this major videogames industry breakthrough. Players of all disciplines – yes, even novices to the track – can recreate the excitement, the sounds,
+                the action and the vibrant colours of real-life racing for hours of motoring enjoyment.</p>
+              <p>Poised for action on the starting line are Ferrari’s new much-acclaimed 458 Italia and the powerhouse that is the 599XX. They are just two of the many new models introduced into Ferrari The Race Experience, which follows hot on the wheels
+                of the much-acclaimed Ferrari Challenge that launched two years ago.</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large" href="/games/ferrari-the-race-experience/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/games/ferrari-the-race-experience/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <hr/>
+          <h3>
+            <a href="/games/ride-to-hell/">
+            Ride To Hell 
+            </a>
+            2009, May 1st
+          </h3>
+          <div class="well well-subfolder">
+            <div class="subfolder">
+              <p>The game is set in the last years of the roaring 1960’s, a time of Sex, Drugs and Rock ‘N Roll. The biker movement, rock music and the hippie counterculture all add to the fascinating atmosphere to be experienced in ‘Ride to Hell’.</p>
+              <p>Action loaded from the very start with free roaming environments, players can immerse themselves in the liberty and freedom of riding full throttle with their gang on a multitude of different vehicles through the dusty flats of Western America.
+                Protecting their turf, their brothers and their machines from rival gangs is just a taste of what this epic game will involve.</p>
+              <p>‘Ride to Hell’ is not for the faint hearted; it’s aimed heavily at the player who wants to become fully involved in the original West Coast biker culture. With its hard drinking, bare knuckle environment, this is as close to the action as
+                you can get.</p>
+              <p>In a movie style production model, the internal Deep Silver studio is teaming up with leading creative companies such as Eutechnyx, Perspective Studios, and others, to bring the authentic and massive game world of ‘Ride to Hell’ to life.</p>
+              <p>“The Deep Silver development team has worked on some of the greatest and grittiest, freeform-style games to ever hit the market,” Cathy Tische, Vice President of Sales and Marketing at Deep Silver, Inc. “They are pulling out all the stops
+                to bring the biker gang world alive in Ride to Hell, from the 1960s art style, music and scenery to the completely raw and intense game play.”</p>
+              <p>"Ride to Hell is one of Deep Silver’s largest global multiplatform game launches to date and one that will put Deep Silver on the map in the US,” says Hannes Seifert, Managing Director at the Deep Silver development studio. “Ride to Hell
+                captures the spirit of the biker movement in the 1960s, while delivering an authentic, action-packed game play experience.”</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large" href="/games/ride-to-hell/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/games/ride-to-hell/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <hr/>
+          <h3>
+            <a href="/games/hot-wheels-beat-that/">
+            Hot Wheels: Beat That! 
+            </a>
+            2007, Sep 1st
+          </h3>
+          <div class="well well-subfolder">
+            <div class="subfolder">
+              <p>Put the pedal to the metal and show off your racing skills in "Hot Wheels: Beat That!" Speed, Power, Performance, and Attitude are what determines success here. Choose your car, grab the wheel, and let her rip! Then challenge your friends
+                to "BEAT THAT!" 30 cars authentically modeled directly from Hot Wheels design specs. 12 pulse-pounding tracks and 4 battle arenas. Stunt action with high-flying jumps and high-speed drifting. 5 competitive modes: Race, Eliminator, Rampage,
+                Tournament, and Battle. Collect competitive weaponry as power-ups. Physics-based racing with visible vehicle damage and amazing wipe-outs. [Activision]</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large" href="/games/hot-wheels-beat-that/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/games/hot-wheels-beat-that/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <hr/>
+          <h3>
+            <a href="/games/asteroid-escape/">
+            Asteroid Escape 
+            </a>
+            2007, Aug 1st
+          </h3>
+          <div class="well well-subfolder">
+            <div class="subfolder">
+              <p>This was my first 'full' game that I made under my own steam. I had been feeling like I had very little to show in the way of a portfolio and I starting to think about applying for placement year jobs.</p>
+              <p>I gave myself a small twist on the classic game of <a href="http://en.wikipedia.org/wiki/Asteroids_(video_game)">Asteroids</a> by introducing gravity pull. When you got into the lower section of the screen (where the image of the planet was)
+                the ships sields would lower and make an annoying alert noise. Too long, and you'd explode losing one life. Leave the danger zone and the shields would recharge.</p>
+              <p>A number of pickups where introuced being three sizes of bullet and finally a triple fire laser. You would get points for shooting the asteroids and the high scores would save out to a data file.</p>
+              <p>Sadly the code was built against a custom engine written by my lecture at the time and I cannot seem to get the correct libs on my computer to compile it (Visual Studio 2005 and Direct Draw).</p>
+              <p>I have a plan to either port the code to another 'engine' or to remake the gameplay in Unity3D.</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large" href="/games/asteroid-escape/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/games/asteroid-escape/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+          <hr/>
+          <h3>
+            <a href="/games/snake-3d/">
+            Snake 3D 
+            </a>
+            2007, Feb 1st
+          </h3>
+          <div class="well well-subfolder">
+            <div class="subfolder">
+              <p>Snake 3D was my design for my 'Gamecube Programming' module in Uni. I wanted to take the two dimensional playing field of a normal game of [snake][snake] and add one more dimension to it so that it was taking place inside of a cube.</p>
+              <p>I learned a great deal about how interesting ideas do not always turn out to be fun game play wise! Traversing the extra dimension was not easy for a player to get their head around and extra markers had to be made help indicate depth in
+                the wireframe grid/cube/level.</p>
+              <p>Luckily as it was a programming assigment I managed to tick all of the game requirements and get good marks. Still to this day I am puzzled over how it would be best to navigate the three dimensions whithout the average player losing their
+                bearings.
+              </p>
+              <p>Hopefully I will be able to find the files to run it in an emulator of some sorts to get some screen caps.</p>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large" href="/games/snake-3d/">
+            <span class="glyphicon glyphicon-link"></span>Read in full
+          </a>
+          <a class="btn btn-primary btn-large" href="/games/snake-3d/#comments-body">
+            <span class="glyphicon glyphicon-comment"></span>Comments
+          </a>
+        </p>
+      </div>
+      <div class="row" id="navigation_heading">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4>Get back home</h4>
+            </div>
+            <div class="panel-body">
+              Go to the home page.
+              <br/>
+              <a class="btn btn-primary btn-large" href="/">
+        Home
+    </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="well">
+          <small>
+            &copy; NathanRossPowell.com 2014. This website was last statically updated: 2014, Jun 26nd at 21:08:17 EDT. Which is 01:08:17 UTC/GMT.
+          </small>
+        </div>
+      </footer>
+    </div>
+    <!-- /container -->
+    <script type="text/javascript">
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-33462621-1', 'nathanrosspowell.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

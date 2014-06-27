@@ -3,11 +3,25 @@ var fs = require('fs');
 var path = require('path');
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 var websiteRoot = "website/build/";
+var metaRoot = "website/meta/";
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    copy: {
+      website: {
+        files: [
+          {
+            expand:true,
+            cwd: metaRoot,
+            src: [ '**/*' ],
+            dest: websiteRoot,
+          }
+        ]
+      }
+    },
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     uglify: {
       options: {
@@ -54,7 +68,9 @@ module.exports = function(grunt) {
         website: {
           options: {
             base: 'website/build/',
-            branch: 'master'
+            branch: 'master',
+            add: true,
+            message: 'Grunt deploy <%= grunt.template.today("yyyy-mm-dd hh:mm:ss") %>'
           },
           src: ['**']
         }
@@ -63,10 +79,11 @@ module.exports = function(grunt) {
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // Load tasks.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-prettify');
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // Default task: move everything to the 'build' folder.
-  grunt.registerTask('default', ['uglify', 'prettify', 'gh-pages']);
+  grunt.registerTask('default', ['uglify', 'prettify', 'copy', 'gh-pages']);
 };
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

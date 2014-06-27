@@ -144,8 +144,8 @@ def create_navbar():
                 "date" : date,
                 "sort" : sort,
                 "comments": itemMeta.get( "comments", False ),
-                "html" : thisPage.html
-
+                "html" : thisPage.html,
+                "tags" : itemMeta.get( "tags", [] )
             }
             if customSort is not False:
                 alphaSort.append( data )

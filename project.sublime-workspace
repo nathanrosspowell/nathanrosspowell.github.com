@@ -276,76 +276,10 @@
 	"buffers":
 	[
 		{
-			"file": "website/views.py",
+			"file": "website/templates/article.html",
 			"settings":
 			{
-				"buffer_size": 13459,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/templates/base.html",
-			"settings":
-			{
-				"buffer_size": 6163,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "deploy.py",
-			"settings":
-			{
-				"buffer_size": 2644,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/static/octicons/octicons.css",
-			"settings":
-			{
-				"buffer_size": 11150,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/static/css/main.css",
-			"settings":
-			{
-				"buffer_size": 1055,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/pages/about_me.md",
-			"settings":
-			{
-				"buffer_size": 2921,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 10 files for \"title\" (case sensitive)\n\n/home/nathan/projects/website/website/templates/article.html:\n   19          var disqus_url = \"{{ web_root }}{{ page_id }}\";\n   20          var disqus_identifier = \"{{ page_id }}\";\n   21:         var disqus_title = \"{{ page_title }}\";\n   22          (function() {\n   23              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;\n   ..\n   53  {% block boilerplate_hero_unit %}\n   54      <h1>\n   55:         {{ article.title|title }}\n   56      </h1>\n   57      {% if article.short %}\n   ..\n   71      {% endblock article_pre_row %}\n   72      {% if article.date %}\n   73:         {% set mainPanelTitle = article.title|title + \" - \" + makedate( article.date ) %}\n   74      {% else %}\n   75:         {% set mainPanelTitle = article.title|title %}\n   76      {% endif %}\n   77      {% call macros.panel_call( mainPanelTitle ) %}\n   ..\n  104      {% else %}\n  105          {% if previous_article %}\n  106:             {% call macros.row_span( previous_article.title, \"Read previous\", url_for( \"page\", page_path=previous_article.path ) ) %}\n  107                  {{ previous_article.short|safe }}\n  108              {% endcall %}\n  ...\n  111          {% endif %}\n  112          {% set link = url_for( \"page\", page_path = menu_selected ) %}\n  113:         {% call macros.row_span( \"Index Page\", menu_selected|title, link ) %}\n  114              Go back to the index page for {{ menu_selected }} to see all of the pages like this.\n  115              Or, skip to the next or previous pages.\n  116          {% endcall %}\n  117          {% if next_article %}\n  118:             {% call macros.row_span( next_article.title, \"Read next\", url_for( \"page\", page_path=next_article.path ) ) %}\n  119                  {{ next_article.short|safe }}\n  120              {% endcall %}\n\n/home/nathan/projects/website/website/templates/atom.xml:\n    1  <atom:feed xmlns:atom=\"http://www.w3.org/2005/Atom\">\n    2    <atom:id>{{ web_root }}/</atom:id>\n    3:   <atom:title>{{ title }}</atom:title>\n    4    <atom:updated>{{ w3c_update }}</atom:updated>\n    5    <atom:link href=\"{{ web_root }}/feeds/atom.xml\" rel=\"self\"/>\n    .\n   12    {% for page in pages %}\n   13    <atom:entry>\n   14:     <atom:title>{{ page.title|title }}</atom:title>\n   15      <atom:id>{{ web_root }}{{ url_for( \"page\", page_path = page.path ) }}</atom:id>\n   16      <atom:updated>{{ page.date }}</atom:updated>\n   ..\n   21  \n   22          {{ page.html|safe }}\n   23:         <p><a title=\"Comments\" href=\"{{ web_root }}{{ url_for( \"page\", page_path = page.path ) }}#disqus_thread\">Comments</a></p>\n   24  \n   25          ]]>\n\n/home/nathan/projects/website/website/templates/base.html:\n   18  \n   19  {% block boilerplate_project_name %}\n   20:     {{ title }} \n   21  {% endblock boilerplate_project_name %}\n   22  \n   ..\n   28                      {% set page_link = url_for( \"page\", page_path = data.path ) %}\n   29                      {% set active = menu_selected is equalto( data.path ) %} \n   30:                     {{ macros.menu_link_root_item( data.title|title, page_link, active ) }}\n   31                  {% endfor %}\n   32              {% endif %}\n   ..\n   35                      {% set page_link = url_for( \"page\", page_path = data.path ) %}\n   36                      {% set active = menu_selected is equalto( data.path ) %} \n   37:                     {{ macros.menu_link_root_item( data.title|title, page_link, active ) }}\n   38                  {% endfor %}\n   39              {% endif %}\n   ..\n   41              {% set active = menu_selected is equalto( key ) %} \n   42              {% set drop_link = url_for( \"page\", page_path = key ) %}\n   43:             {% call macros.menu_dropdown( key|title, drop_link, active ) %}\n   44                  {% set no_page = page_selected is equalto( False ) %} \n   45                  {{ macros.menu_link_item( \"Index page\", drop_link, active and no_page ) }}\n   ..\n   51                          {% set page_link = url_for( \"page\", page_path = data.path ) %}\n   52                          {% if loop.index0 < submenu_page_limit %}\n   53:                             {{ macros.menu_link_item( data.title|title, page_link, page_active ) }}\n   54                          {% endif %}\n   55                      {% endfor %}\n   ..\n   65                          {% set page_link = url_for( \"page\", page_path = data.path ) %}\n   66                          {% if loop.index0 < submenu_article_limit %}\n   67:                             {{ macros.menu_link_item( data.title|title, page_link, page_active ) }}\n   68                          {% endif %}\n   69                      {% endfor %}\n   ..\n  115      <div class=\"well\">\n  116          <small>\n  117:             &copy; {{ title }} {{ year }}.\n  118              This website was last statically updated: {{ date }} at {{ time }}.\n  119          </small>\n\n/home/nathan/projects/website/website/templates/boilerplate.html:\n    7          <meta charset=\"utf-8\">\n    8          <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n    9:         <title>\n   10:             {% block boilerplate_title %}\n   11:             {% endblock boilerplate_title %}\n   12:         </title>\n   13          <meta name=\"description\" content=\"\">\n   14          <meta name=\"viewport\" content=\"width=device-width\">\n\n/home/nathan/projects/website/website/templates/error.html:\n   23      </p>                        \n   24      <p>\n   25:         <a class=\"btn btn-primary btn-large\" href=\"{{ url_for( \"index\" ) }}\" title=\"Home page\">\n   26              Make your way back home...\n   27          </a>\n\n/home/nathan/projects/website/website/templates/game.html:\n   33                          {% endif %}\n   34                        <div class=\"carousel-caption\">\n   35:                         {{ data.title }}\n   36                        </div>\n   37                      </div>\n\n/home/nathan/projects/website/website/templates/macros.html:\n    1: {% macro menu_tile_add_glyph( title ) -%}\n    2:     {% if title is textequalto( \"About Me\" ) %}\n    3:         <span class=\"octicon octicon-person\"></span> {{title}}\n    4:     {% elif title is textequalto( \"Blog\" ) %}\n    5:         <span class=\"octicon octicon-keyboard\"> {{title}}\n    6:     {% elif title is textequalto( \"Career\" ) %}\n    7:         <span class=\"octicon octicon-mortar-board\"> {{title}}\n    8:     {% elif title is textequalto( \"Code\" ) %}\n    9:         <span class=\"octicon octicon-bug\"> {{title}}\n   10:     {% elif title is textequalto( \"Games\" ) %}\n   11:         <span class=\"octicon octicon-rocket\"> {{title}}\n   12      {% else %}\n   13:         <span class=\"octicon octicon-primitive-dot\"> {{ title }}\n   14      {% endif%}\n   15  {%- endmacro %}\n   16  \n   17: {% macro menu_dropdown( dropdown_title, dropdown_link, active ) -%}\n   18      <li\n   19          {% if active %}\n   ..\n   24      >\n   25          <a href=\"{{ dropdown_link }}\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n   26:             {{ menu_tile_add_glyph(dropdown_title) }}\n   27              <b class=\"caret\"></b>\n   28          </a>\n   ..\n   33  {%- endmacro %}\n   34  \n   35: {% macro menu_link_root_item( item_title, item_link, active ) -%}\n   36      <li\n   37          {% if active %}\n   ..\n   40      >\n   41          <a href=\"{{ item_link }}\">\n   42:             {{ menu_tile_add_glyph(item_title) }}\n   43          </a>\n   44      </li>\n   ..\n   46  \n   47  \n   48: {% macro menu_link_item( item_title, item_link, active ) -%}\n   49      <li\n   50          {% if active %}\n   ..\n   53      >\n   54          <a href=\"{{ item_link }}\">\n   55:             {{ item_title }}\n   56          </a>\n   57      </li>\n   58  {%- endmacro %}\n   59  \n   60: {% macro menu_header( header_title ) -%}\n   61      <li class=\"nav-header\">\n   62:         {{ header_title }}\n   63      </li>\n   64  {%- endmacro %}\n   ..\n   70          <h3>\n   71              <a href=\"{{ item_link }}\">\n   72:             {{ data.title }} \n   73              </a>\n   74              {{ extra }}\n   ..\n   89  {%- endmacro %}\n   90  \n   91: {% macro button_primary( button_title, button_link ) -%}\n   92      <a class=\"btn btn-primary btn-large\" href=\"{{ button_link }}\">\n   93:         {{ button_title }}\n   94      </a>\n   95  {%- endmacro %}\n   96  \n   97: {% macro button( button_title, button_link ) -%}\n   98      <p>\n   99          <a class=\"btn\" href=\"{{ button_link }}\">\n  100:             {{ button_title }}\n  101          </a>\n  102      </p>\n  103  {%- endmacro %}\n  104  \n  105: {% macro button_xs( button_title, button_link ) -%}\n  106          <a class=\"btn btn-primary btn-xs\" href=\"{{ button_link }}\">\n  107:             {{ button_title }}\n  108          </a>\n  109  {%- endmacro %}\n  110  \n  111: {% macro row_span( heading_title, button_title, button_link ) -%}\n  112      <div class=\"col-md-4\">\n  113          <div class=\"panel panel-default\">\n  114              <div class=\"panel-heading\">\n  115:                 <h4>{{ heading_title }}</h4>\n  116              </div>\n  117              <div class=\"panel-body\">\n  118                  {{ caller() }}\n  119                  <br/>\n  120:                 {{ button_primary( button_title, button_link ) }}\n  121              </div>\n  122          </div>\n  ...\n  131  {% macro youtube( url, params = \"\" ) -%}\n  132  \n  133: <iframe title=\"YouTube video player\" width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/{{ url }}\" frameborder=\"0\" allowfullscreen></iframe>\n  134  \n  135  {%- endmacro %}\n  ...\n  154  {%- endmacro %}\n  155  \n  156: {% macro disqus_thread( page_id, page_title ) -%}\n  157  \n  158  var disqus_shortname = 'nathanrosspowell';\n  159  var disqus_url = \"http://nathanrosspowell.com{{ page_id }}\";\n  160  var disqus_identifier = \"{{ page_id }}\";\n  161: var disqus_title = \"{{ page_title }}\";\n  162  (function() {\n  163      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;\n  ...\n  168  {%- endmacro %}\n  169  \n  170: {% macro panel( title, content ) -%}\n  171  \n  172  <div class=\"panel panel-default\">\n  173      <div class=\"panel-heading\">\n  174:         <h4>{{ title }}</h4>\n  175      </div>\n  176      <div class=\"panel-body\">\n  ...\n  181  {%- endmacro %}\n  182  \n  183: {% macro panel_call( title ) -%}\n  184  \n  185  <div class=\"panel panel-default\">\n  186      <div class=\"panel-heading\">\n  187:         <h4>{{ title }}</h4>\n  188      </div>\n  189      <div class=\"panel-body\">\n  ...\n  194  {%- endmacro %}\n  195  \n  196: {% macro accordian_call( id, title ) -%}\n  197  \n  198    <div class=\"panel-group\" id=\"{{ id }}\">\n  199      <div class=\"panel panel-default\">\n  200        <div class=\"panel-heading\">\n  201:         <h4 class=\"panel-title\">\n  202            <a data-toggle=\"collapse\" data-parent=\"#{{ id }}\" href=\"#{{ id }}-body\">\n  203:             {{ title }}<b class=\"caret\"></b>\n  204            </a>\n  205          </h4>\n\n/home/nathan/projects/website/website/templates/subfolder.html:\n   14          var disqus_url = \"{{ web_root }}{{ page_id }}\";\n   15          var disqus_identifier = \"{{ page_id }}\";\n   16:         var disqus_title = \"{{ page_title }}\";\n   17          (function() {\n   18              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;\n   ..\n   25  {% block boilerplate_hero_unit %}\n   26      <h1>\n   27:         {{ subfolder|title }}\n   28      </h1>\n   29      <p>\n\n81 matches across 8 files\n\n\nSearching 10 files for \"{{ title }}\" (case sensitive)\n\n/home/nathan/projects/website/website/templates/atom.xml:\n    1  <atom:feed xmlns:atom=\"http://www.w3.org/2005/Atom\">\n    2    <atom:id>{{ web_root }}/</atom:id>\n    3:   <atom:title>{{ title }}</atom:title>\n    4    <atom:updated>{{ w3c_update }}</atom:updated>\n    5    <atom:link href=\"{{ web_root }}/feeds/atom.xml\" rel=\"self\"/>\n\n/home/nathan/projects/website/website/templates/base.html:\n   18  \n   19  {% block boilerplate_project_name %}\n   20:     {{ title }} \n   21  {% endblock boilerplate_project_name %}\n   22  \n   ..\n  115      <div class=\"well\">\n  116          <small>\n  117:             &copy; {{ title }} {{ year }}.\n  118              This website was last statically updated: {{ date }} at {{ time }}.\n  119          </small>\n\n/home/nathan/projects/website/website/templates/macros.html:\n   11          <span class=\"octicon octicon-rocket\"> {{title}}\n   12      {% else %}\n   13:         <span class=\"octicon octicon-primitive-dot\"> {{ title }}\n   14      {% endif%}\n   15  {%- endmacro %}\n   ..\n  172  <div class=\"panel panel-default\">\n  173      <div class=\"panel-heading\">\n  174:         <h4>{{ title }}</h4>\n  175      </div>\n  176      <div class=\"panel-body\">\n  ...\n  185  <div class=\"panel panel-default\">\n  186      <div class=\"panel-heading\">\n  187:         <h4>{{ title }}</h4>\n  188      </div>\n  189      <div class=\"panel-body\">\n  ...\n  201          <h4 class=\"panel-title\">\n  202            <a data-toggle=\"collapse\" data-parent=\"#{{ id }}\" href=\"#{{ id }}-body\">\n  203:             {{ title }}<b class=\"caret\"></b>\n  204            </a>\n  205          </h4>\n\n7 matches across 3 files\n\n\nSearching 10 files for \"boilerplate_project_name\" (case sensitive)\n\n/home/nathan/projects/website/website/templates/base.html:\n   17  {% endblock yepnope_complete%}\n   18  \n   19: {% block boilerplate_project_name %}\n   20      <span class=\"mega-octicon octicon-home\"></span>\n   21: {% endblock boilerplate_project_name %}\n   22  \n   23  {% block boilerplate_navbar %}\n\n/home/nathan/projects/website/website/templates/boilerplate.html:\n   71                      <span class=\"icon-bar\"></span>\n   72                    </button>\n   73:                   <a class=\"navbar-brand\" href=\"{{ url_for( \"index\" ) }}\">{% block boilerplate_project_name %}Project name{% endblock boilerplate_project_name %}</a>\n   74                  </div>\n   75                  <div class=\"collapse navbar-collapse\">\n\n4 matches across 2 files\n\n\nSearching 10 files for \"home\" (case sensitive)\n\n/home/nathan/projects/website/website/templates/article.html:\n  100          {% set link = url_for( \".index\" ) %}\n  101          {% call macros.row_span( \"Home\", \"Home\", link ) %}\n  102:             One click away from the home page. Have away with yourself.\n  103          {% endcall %}\n  104      {% else %}\n\n/home/nathan/projects/website/website/templates/base.html:\n   18  \n   19  {% block boilerplate_project_nav_tile %}\n   20:     <span class=\"mega-octicon octicon-home\"></span>\n   21  {% endblock boilerplate_project_nav_tile %}\n   22  \n\n/home/nathan/projects/website/website/templates/error.html:\n   24      <p>\n   25          <a class=\"btn btn-primary btn-large\" href=\"{{ url_for( \"index\" ) }}\" title=\"Home page\">\n   26:             Make your way back home...\n   27          </a>\n   28      </p>\n\n/home/nathan/projects/website/website/templates/home.html:\n    3  \n    4  {% block base_load %}\n    5:     {% block home_load %}\n    6:     {% endblock home_load %}\n    7  {% endblock base_load %}\n    8  \n    9  {% block base_callback %}\n   10:     {% block home_callback %}\n   11:     {% endblock home_callback %}\n   12  {% endblock base_callback %}\n   13  \n   14  {% block base_complete %}\n   15:     {% block home_complete %}\n   16:     {% endblock home_complete %}\n   17  {% endblock base_complete %}\n   18  \n\n/home/nathan/projects/website/website/templates/home.html.bak:\n    3  \n    4  {% block base_load %}\n    5:     {% block home_load %}\n    6:     {% endblock home_load %}\n    7  {% endblock base_load %}\n    8  \n    9  {% block base_callback %}\n   10:     {% block home_callback %}\n   11:     {% endblock home_callback %}\n   12  {% endblock base_callback %}\n   13  \n   14  {% block base_complete %}\n   15:     {% block home_complete %}\n   16:     {% endblock home_complete %}\n   17  {% endblock base_complete %}\n   18  \n\n/home/nathan/projects/website/website/templates/subfolder.html:\n   58  \n   59  {% block boilerplate_row %}\n   60:     {% call macros.row_span( \"Get back home\", \"Home\", url_for( \".index\" ) ) %}\n   61:         Go to the home page.\n   62      {% endcall %}\n   63  {% endblock boilerplate_row %}\n\n17 matches across 6 files\n\n\nSearching 9 files for \"TITLE\" (case sensitive)\n\n/home/nathan/projects/website/website/views.py:\n  182      navbarTuples = sorted( navbar.iteritems(), key = operator.itemgetter( 0 ) )\n  183      kwargs[ \"navbar\" ] = navbarTuples\n  184:     kwargs[ \"title\" ] = app.config[ \"TITLE\" ]\n  185      kwargs[ \"google_analytics\" ] = app.config[ \"GOOGLE_ANALYTICS\" ]\n  186      kwargs[ \"disqus_name\" ] = app.config[ \"DISQUS_NAME\" ]\n  ...\n  308          author = app.config[ \"AUTHOR\" ],\n  309          email = app.config[ \"EMAIL\" ], \n  310:         title = app.config[ \"TITLE\" ],\n  311      ), 200, {'Content-Type': 'application/atom+xml; charset=utf-8'}\n  312  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n2 matches in 1 file\n",
-			"settings":
-			{
-				"buffer_size": 16952,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "website/templates/boilerplate.html",
-			"settings":
-			{
-				"buffer_size": 5635,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/settings.cfg",
-			"settings":
-			{
-				"buffer_size": 1047,
+				"buffer_size": 6067,
 				"line_ending": "Unix"
 			}
 		},
@@ -353,15 +287,7 @@
 			"file": "website/templates/macros.html",
 			"settings":
 			{
-				"buffer_size": 6222,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/templates/atom.xml",
-			"settings":
-			{
-				"buffer_size": 1085,
+				"buffer_size": 6421,
 				"line_ending": "Unix"
 			}
 		}
@@ -426,21 +352,37 @@
 	"file_history":
 	[
 		"/home/nathan/projects/website/website/static/css/main.css",
+		"/home/nathan/projects/website/website/templates/macros.html",
+		"/home/nathan/projects/website/website/pages/games/dirt-showdown.md",
+		"/home/nathan/projects/website/website/pages/games/ferrari-the-race-experience.md",
+		"/home/nathan/projects/website/website/pages/games/hot-wheels-beat-that.md",
+		"/home/nathan/projects/website/website/pages/games/ride-to-hell.md",
+		"/home/nathan/projects/website/website/pages/games/snake-3d.md",
+		"/home/nathan/projects/website/website/pages/games/watch_dogs.md",
+		"/home/nathan/projects/website/website/pages/games/operation-flashpoint-red-river.md",
+		"/home/nathan/projects/website/website/templates/base.html",
+		"/home/nathan/projects/website/website/templates/boilerplate.html",
+		"/home/nathan/projects/website/website/pages/career/eutechnyx-hot-wheels.md",
+		"/home/nathan/projects/website/website/pages/career/ubisoft-watch-dogs.md",
+		"/home/nathan/projects/website/website/pages/games/asteroid-escape.md",
+		"/home/nathan/projects/website/website/templates/atom.xml",
+		"/home/nathan/projects/website/install.bash",
+		"/home/nathan/projects/interfacezero/index.html",
+		"/home/nathan/projects/website/website/views.py",
+		"/home/nathan/projects/website/deploy.py",
+		"/home/nathan/projects/website/website/static/octicons/octicons.css",
+		"/home/nathan/projects/website/website/pages/about_me.md",
+		"/home/nathan/projects/website/website/settings.cfg",
 		"/home/nathan/projects/website/website/static/css/codehilite.css",
 		"/home/nathan/projects/website/website/static/css/bootstrap.css",
 		"/home/nathan/projects/website/website/static/css/anythingslider.css",
 		"/home/nathan/projects/website/website/static/css/animate.css",
 		"/home/nathan/projects/website/website/pages/career/codemasters-dirt-showdown.md",
 		"/home/nathan/projects/website/create_branch.py",
-		"/home/nathan/projects/website/website/templates/macros.html",
-		"/home/nathan/projects/website/website/settings.cfg",
 		"/home/nathan/projects/website/website/static/oct/octicons.css",
 		"/home/nathan/projects/website/website/templates/article.html",
 		"/home/nathan/projects/website/website/templates/subfolder.html",
-		"/home/nathan/projects/website/website/views.py",
 		"/home/nathan/projects/website/website/build/404.html",
-		"/home/nathan/projects/website/website/templates/boilerplate.html",
-		"/home/nathan/projects/website/website/templates/base.html",
 		"/home/nathan/projects/website/website/build/403.html",
 		"/home/nathan/projects/yaml-boot-bars/src/index.handlebars",
 		"/home/nathan/projects/yaml-boot-bars/js/scripts.js",
@@ -448,7 +390,6 @@
 		"/home/nathan/projects/yaml-boot-bars/Gruntfile.js",
 		"/home/nathan/projects/yaml-boot-bars/js/main.js",
 		"/home/nathan/projects/yaml-boot-bars/node_modules/grunt-static-handlebars/tasks/lib/context.js",
-		"/home/nathan/projects/website/deploy.py",
 		"/home/nathan/projects/yaml-boot-bars/node_modules/grunt-static-handlebars/tasks/static_handlebars.js",
 		"/home/nathan/projects/website/delete_branch.py",
 		"/home/nathan/projects/yaml-boot-bars/build/index.html",
@@ -493,16 +434,11 @@
 		"/home/nathan/projects/website/settings.py",
 		"/home/nathan/projects/website/.gitignore",
 		"/home/nathan/projects/website/website/pages/career/overview.md",
-		"/home/nathan/projects/website/website/pages/career/ubisoft-watch-dogs.md",
-		"/home/nathan/projects/website/website/pages/games/ferrari-the-race-experience.md",
-		"/home/nathan/projects/website/website/pages/games/watch_dogs.md",
 		"/home/nathan/projects/website/website/pages/career/cv_pdf.md",
 		"/home/nathan/projects/website/project.sublime-project",
 		"/home/nathan/projects/website/website/pages/career/other-experience.md",
-		"/home/nathan/projects/website/website/pages/career/eutechnyx-hot-wheels.md",
 		"/home/nathan/projects/website/website/pages/career/professional-skills.md",
 		"/home/nathan/projects/website/website/pages/career/professional-skills.md.bak",
-		"/home/nathan/projects/website/website/pages/games/operation-flashpoint-red-river.md",
 		"/home/nathan/projects/website/website/pages/career/codemasters-operation-flashpoint.md",
 		"/home/nathan/projects/website/website/pages/career/eutechnyx-ride-to-hell.md",
 		"/home/nathan/projects/website/website/pages/career/ubisoft-watch-dogs.md.bak",
@@ -522,12 +458,6 @@
 		"/home/nathan/projects/website/website/pages/blog/erlang.md",
 		"/home/nathan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/nathan/projects/website/scss.bash",
-		"/home/nathan/projects/website/website/pages/about_me.md",
-		"/home/nathan/projects/website/website/pages/games/snake-3d.md",
-		"/home/nathan/projects/website/website/pages/games/ride-to-hell.md",
-		"/home/nathan/projects/website/website/pages/games/hot-wheels-beat-that.md",
-		"/home/nathan/projects/website/website/pages/games/asteroid-escape.md",
-		"/home/nathan/projects/website/website/pages/games/dirt-showdown.md",
 		"/home/nathan/projects/website/website/build/games/operation-flashpoint-red-river/index.html",
 		"/home/nathan/projects/website/website/templates/slider_link.js",
 		"/home/nathan/projects/website/website/templates/slider_js.js",
@@ -547,12 +477,8 @@
 		"/home/nathan/projects/website/website/build/career/index.html",
 		"/home/nathan/projects/website/website/build/blog/index.html",
 		"/home/nathan/projects/website/README.md",
-		"/home/nathan/projects/website/install.bash",
 		"/home/nathan/projects/website/website/feed_time.txt",
-		"/home/nathan/projects/website/website/feed_content.txt",
-		"/home/nathan/projects/website/website/__init__.py",
-		"/home/nathan/projects/website/website/static/js/jquery.anythingslider.min.js",
-		"/home/nathan/projects/website/website/static/js/jquery.easing.1.2.js"
+		"/home/nathan/projects/website/website/feed_content.txt"
 	],
 	"find":
 	{
@@ -563,6 +489,7 @@
 		"height": 95.0,
 		"where_history":
 		[
+			"/home/nathan/projects/website/website/templates",
 			"*.py",
 			"/home/nathan/projects/website/website/templates",
 			"*.py",
@@ -580,6 +507,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"gly",
+			"boilerplate_row",
+			"col-3",
+			"col",
+			"Watch_dogs",
 			"TITLE",
 			"home",
 			"boilerplate_project_name",
@@ -702,12 +634,7 @@
 			"block boilerplate_row",
 			"article_post",
 			"block article_pre",
-			"block boilerplate_post_hero_unit",
-			"navbar",
-			"brand",
-			"navbar-inverse",
-			"twitter",
-			"<li class=\"nav-header\">"
+			"block boilerplate_post_hero_unit"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -715,6 +642,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Watch_Dogs",
 			"boilerplate_project_nav_tile",
 			"0.75",
 			"",
@@ -841,52 +769,24 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "website/views.py",
+					"file": "website/templates/article.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13459,
+						"buffer_size": 6067,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6740,
-								6740
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2324.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "website/templates/base.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6163,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								575,
-								575
+								5286,
+								5286
 							]
 						],
 						"settings":
@@ -894,721 +794,38 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 70.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "deploy.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2644,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2572,
-								2572
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 490.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "website/static/octicons/octicons.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11150,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "website/static/css/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1055,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								998,
-								998
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 280.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "website/pages/about_me.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2921,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								119,
-								119
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16952,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										256,
-										261
-									],
-									[
-										273,
-										278
-									],
-									[
-										513,
-										518
-									],
-									[
-										519,
-										524
-									],
-									[
-										707,
-										712
-									],
-									[
-										713,
-										718
-									],
-									[
-										826,
-										831
-									],
-									[
-										832,
-										837
-									],
-									[
-										1052,
-										1057
-									],
-									[
-										1400,
-										1405
-									],
-									[
-										1703,
-										1708
-									],
-									[
-										2039,
-										2044
-									],
-									[
-										2048,
-										2053
-									],
-									[
-										2063,
-										2068
-									],
-									[
-										2273,
-										2278
-									],
-									[
-										2287,
-										2292
-									],
-									[
-										2293,
-										2298
-									],
-									[
-										2308,
-										2313
-									],
-									[
-										2533,
-										2538
-									],
-									[
-										2802,
-										2807
-									],
-									[
-										3111,
-										3116
-									],
-									[
-										3117,
-										3122
-									],
-									[
-										3458,
-										3463
-									],
-									[
-										3464,
-										3469
-									],
-									[
-										3767,
-										3772
-									],
-									[
-										4212,
-										4217
-									],
-									[
-										4218,
-										4223
-									],
-									[
-										4578,
-										4583
-									],
-									[
-										4584,
-										4589
-									],
-									[
-										4790,
-										4795
-									],
-									[
-										5121,
-										5126
-									],
-									[
-										5168,
-										5173
-									],
-									[
-										5220,
-										5225
-									],
-									[
-										5246,
-										5251
-									],
-									[
-										5572,
-										5577
-									],
-									[
-										5859,
-										5864
-									],
-									[
-										6037,
-										6042
-									],
-									[
-										6066,
-										6071
-									],
-									[
-										6166,
-										6171
-									],
-									[
-										6193,
-										6198
-									],
-									[
-										6284,
-										6289
-									],
-									[
-										6311,
-										6316
-									],
-									[
-										6408,
-										6413
-									],
-									[
-										6435,
-										6440
-									],
-									[
-										6521,
-										6526
-									],
-									[
-										6548,
-										6553
-									],
-									[
-										6638,
-										6643
-									],
-									[
-										6731,
-										6736
-									],
-									[
-										6833,
-										6838
-									],
-									[
-										7077,
-										7082
-									],
-									[
-										7227,
-										7232
-									],
-									[
-										7412,
-										7417
-									],
-									[
-										7518,
-										7523
-									],
-									[
-										7683,
-										7688
-									],
-									[
-										7796,
-										7801
-									],
-									[
-										7868,
-										7873
-									],
-									[
-										8016,
-										8021
-									],
-									[
-										8157,
-										8162
-									],
-									[
-										8281,
-										8286
-									],
-									[
-										8368,
-										8373
-									],
-									[
-										8493,
-										8498
-									],
-									[
-										8603,
-										8608
-									],
-									[
-										8732,
-										8737
-									],
-									[
-										8826,
-										8831
-									],
-									[
-										8840,
-										8845
-									],
-									[
-										9033,
-										9038
-									],
-									[
-										9233,
-										9238
-									],
-									[
-										9382,
-										9387
-									],
-									[
-										9636,
-										9641
-									],
-									[
-										9840,
-										9845
-									],
-									[
-										9857,
-										9862
-									],
-									[
-										10052,
-										10057
-									],
-									[
-										10183,
-										10188
-									],
-									[
-										10316,
-										10321
-									],
-									[
-										10438,
-										10443
-									],
-									[
-										10579,
-										10584
-									],
-									[
-										10766,
-										10771
-									],
-									[
-										10886,
-										10891
-									],
-									[
-										11169,
-										11174
-									],
-									[
-										11186,
-										11191
-									],
-									[
-										11428,
-										11433
-									],
-									[
-										11736,
-										11747
-									],
-									[
-										12009,
-										12020
-									],
-									[
-										12162,
-										12173
-									],
-									[
-										12504,
-										12515
-									],
-									[
-										12666,
-										12677
-									],
-									[
-										12842,
-										12853
-									],
-									[
-										13068,
-										13079
-									],
-									[
-										13361,
-										13385
-									],
-									[
-										13467,
-										13491
-									],
-									[
-										13791,
-										13815
-									],
-									[
-										13842,
-										13866
-									],
-									[
-										14265,
-										14269
-									],
-									[
-										14513,
-										14517
-									],
-									[
-										14803,
-										14807
-									],
-									[
-										14964,
-										14968
-									],
-									[
-										15000,
-										15004
-									],
-									[
-										15106,
-										15110
-									],
-									[
-										15146,
-										15150
-									],
-									[
-										15260,
-										15264
-									],
-									[
-										15300,
-										15304
-									],
-									[
-										15482,
-										15486
-									],
-									[
-										15518,
-										15522
-									],
-									[
-										15624,
-										15628
-									],
-									[
-										15664,
-										15668
-									],
-									[
-										15778,
-										15782
-									],
-									[
-										15818,
-										15822
-									],
-									[
-										16033,
-										16037
-									],
-									[
-										16098,
-										16102
-									],
-									[
-										16473,
-										16478
-									],
-									[
-										16759,
-										16764
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								16474,
-								16474
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 5,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6132.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "website/templates/boilerplate.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5635,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3132,
-								3132
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 630.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "website/settings.cfg",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1047,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								752,
-								752
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "website/templates/macros.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6222,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								665,
-								665
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1726.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "website/templates/atom.xml",
+					"buffer": 1,
+					"file": "website/templates/macros.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1085,
+						"buffer_size": 6421,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								566,
-								566
+								3443,
+								3443
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/XML/XML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1320.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1661,6 +878,22 @@
 		"selected_items":
 		[
 			[
+				"macro",
+				"website/templates/macros.html"
+			],
+			[
+				"wat",
+				"website/pages/games/watch_dogs.md"
+			],
+			[
+				"watch",
+				"website/pages/career/ubisoft-watch-dogs.md"
+			],
+			[
+				".css",
+				"website/static/css/main.css"
+			],
+			[
 				"main",
 				"website/static/css/main.css"
 			],
@@ -1675,10 +908,6 @@
 			[
 				"view",
 				"website/views.py"
-			],
-			[
-				".css",
-				"website/static/css/main.css"
 			],
 			[
 				"home",
@@ -1705,10 +934,6 @@
 				"website/pages/games/ferrari-the-race-experience.md"
 			],
 			[
-				"watch",
-				"website/pages/career/ubisoft-watch-dogs.md"
-			],
-			[
 				"pdf",
 				"website/pages/career/cv_pdf.md"
 			],
@@ -1731,10 +956,6 @@
 			[
 				"pover",
 				"website/pages/career/overview.md"
-			],
-			[
-				"macro",
-				"website/templates/macros.html"
 			],
 			[
 				"base",
@@ -1767,10 +988,6 @@
 			[
 				"vi",
 				"website/views.py"
-			],
-			[
-				"wat",
-				"website/pages/games/watch_dogs.md"
 			],
 			[
 				"sub",

@@ -103,19 +103,19 @@
         {% endcall %}
     {% else %}
         {% if previous_article %}
-            {% call macros.row_span( previous_article.title, "Read previous", url_for( "page", page_path=previous_article.path ) ) %}
+            {% call macros.row_span( '<span class="glyphicon glyphicon-chevron-left"></span> '+previous_article.title, 'Read previous', url_for( "page", page_path=previous_article.path ) ) %}
                 {{ previous_article.short|safe }}
             {% endcall %}
         {% else %}
             {{ macros.row_span_empty() }}
         {% endif %}
         {% set link = url_for( "page", page_path = menu_selected ) %}
-        {% call macros.row_span( "Index Page", menu_selected|title, link ) %}
+        {% call macros.row_span( '<span class="glyphicon glyphicon-th-list"></span> Index Page', menu_selected|title, link ) %}
             Go back to the index page for {{ menu_selected }} to see all of the pages like this.
             Or, skip to the next or previous pages.
         {% endcall %}
         {% if next_article %}
-            {% call macros.row_span( next_article.title, "Read next", url_for( "page", page_path=next_article.path ) ) %}
+            {% call macros.row_span( next_article.title + ' <span class="glyphicon glyphicon-chevron-right"></span>', 'Read next', url_for( "page", page_path=next_article.path ) ) %}
                 {{ next_article.short|safe }}
             {% endcall %}
         {% else %}

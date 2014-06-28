@@ -4,7 +4,7 @@
 What is it?
 -----------
 
-This is my personal website which is made using the [Python][python] based [Flask][flask] web framework which.
+This is my personal website which is made using the [Python][python] based [Flask][flask] web framework.
 
 
 What is it made of?

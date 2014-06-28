@@ -29,6 +29,7 @@ Open your web browser and navigate to `http://localhost:5000/`.
 Finally, if you have any changes that need to be committed, use the script `bash deploy.bash "My commit message"` to push everything to the branch and deploy the website to [GitHub Pages][ghpages].
 
 [homepage]: http://nathanrospowell.github.io
+[python]: https://www.python.org/
 [flask]: http://flask.pocoo.org/
 [ghpages]: https://pages.github.com/
 [frozenflask]: https://pythonhosted.org/Frozen-Flask/

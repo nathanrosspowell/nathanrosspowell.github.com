@@ -61,10 +61,14 @@ The use of Github Pages means that collaborators can safely update a version con
 Githubs extensive web interface controls mean that updating character sheets can done from any device.
 Editing the files with a mobile device can be a bit tricky, but that is down to Githubs controls inside of their browser text editor.
 
+### Conclusion
+
 Overall this project was a good learning experience and it highlights the need for some kind of HTML templating engine when dealing with dynamic values.
 
 [YAML Boot Bars][yamlbootbars] & [French Quiz][frenchquiz]
 ==========================================================
+
+These two projects are slightly different from each other, but the technology used to power them is exactly the same. [YAML Boot Bars][yamlbootbars] was intended to be a 'shell' of a project and [French Quiz][frenchquiz] is something that matched the same requirements.
 
 There are a number of templating engines that are targeted at the HTML generation.
 The [Jinja2][jinja2] template engine is the one employed by default in the [Flask][flask] framework.
@@ -133,13 +137,54 @@ For these projects a JavaScript solution was found
 
 #### [Node.js][node] and [Grunt][grunt]
 
+Node.js is a platform built around JavaScript which uses the Chrome V8 engine.
+As well as allowing JavaScript to be used outside of the browser, with full access to the file system, Node.js offers a very rich community with access to thousands of libraries through the [Node Package Manager][npm].
 
+Grunt is a task automation tool.
+Adding a the file `Gruntfile.js` to a project allows tasks to be configured and run with a simple command line.
 
+    :::bash
+    grunt # Runs the default task
+    grunt deploy # Runs the task set up to deploy the website
+
+For these projects a large number of tasks where installed using [npm][npm].
+These task are loaded in `Gruntfile.js` and configured with a JSON entry to specify the parameters for each individual task.
+
+- [`grunt-compile-handlebars`][grunt-compile-handlebars] - Statically compile handlebars templates
+- [`grunt-contrib-concat`][grunt-contrib-concat] - file concatenation
+- [`grunt-contrib-copy`][grunt-contrib-copy] - file copy
+- [`grunt-contrib-uglify`][grunt-contrib-uglify] - JavaScript minification
+- [`grunt-file-append`][grunt-file-append] - file append
+- [`grunt-gh-pages`][grunt-gh-pages] - commit and push deploy folder to another git branch
+- [`grunt-jsbeautifier`][grunt-jsbeautifier] - JavaScript pretty print
+- [`grunt-prettify`][grunt-prettify] - HTML pretty print
+- [`grunt-replace`][grunt-replace] - find and replace 
+- [`grunt-yaml`][grunt-yaml] - convert YAML to JSON
+
+With all of these task configured the work flow for the two projects goes something like this:
+
+1. YAML converted into JSON files in the `temp` directory
+2. All JSON files concatenated into one JSON file, the key for each file being the file name (minus the extension)
+3. All Handlebars files are compiled and copied to the `build` folder
+4. All JavaScript files get minimized (if they are not `*.min.css`) and copied to the `build` folder
+5. All remaining asset files are copied to the `build` folder
+
+With the power of Grunt the projects have much more functionality than in the original goal, but the ease of setting up all of the task made it a no brainer.
+The power of the open source community really shines when browsing the [npm][npm] listings.
+It is simple to use someone elses solution instead of starting from scratch, as simple as one command line install and one JSON objects worth of configuration.
+
+### Conclusion
+
+These two projects have a completely custom set up and use a set of utilities rather than a web framework.
+The setup is highly productive, but limited in scope some what.
+For example, it would not be ideal to try and make a blogging site using this set up.
+
+Node.js and Grunt turned out to be very impressive, so the next natural step is to look at fully fledged frameworks which also leverage them.
 
 Assemble.io
 ===========
 
-The future of my home page.
+To Do....
 
 [interfacezero]: http://nathanrosspowell.com/code/interface-zero/ "Interface Zero code page"
 [nrp]: http://nathanrosspowell.com "My home page"
@@ -149,3 +194,24 @@ The future of my home page.
 [chrome]: https://www.google.com/chrome/browser "Google Chrome web browser"
 [nrp-handlebar]: https://github.com/nathanrosspowell/handlebar
 [nrp-handlebar-website]: http://nathanrosspowell.github.io/handlebar
+[flask]: http://flask.pocoo.org/ "Flask web micro framework"
+[django]: https://www.djangoproject.com/ "Django web framework"
+[js-yaml]: https://www.npmjs.org/package/js-yaml "js-yaml Node.js package"
+[yamlbootbars]: https://github.com/nathanrosspowell/yaml-boot-bars " A YAML Bootstrap and Handlebars powered website"
+[frenchquiz]: https://github.com/nathanrosspowell/frenchquiz "A French language resource"
+[jinja2]: http://jinja.pocoo.org/docs/ "A Python templating engine"
+[mustache]: http://mustache.github.io/ "A JavaScript templating engine"
+[handlebars]: http://handlebarsjs.com/ "A JavaScript templating engine based on Mustache"
+[node]: http://nodejs.org "Node.js is a platform built around JavaScript"
+[grunt]: http://gruntjs.com/ "A JAvaScript task runner"
+[npm]: https://www.npmjs.org "The Node Package Manager"
+[grunt-compile-handlebars]: https://www.npmjs.org/package/grunt-compile-handlebars "Statically compile handlebars templates"
+[grunt-contrib-concat]: https://www.npmjs.org/package/grunt-compile-handlebars "file concatination"
+[grunt-contrib-copy]: https://www.npmjs.org/package/grunt-compile-copy "file copy"
+[grunt-contrib-uglify]: https://www.npmjs.org/package/grunt-compile-uglify "JavaScript minification"
+[grunt-file-append]: https://www.npmjs.org/package/grunt-file-append "file append"
+[grunt-gh-pages]: https://www.npmjs.org/package/grunt-gh-pages "commit and push deploy folder to another git branch"
+[grunt-jsbeautifier]: https://www.npmjs.org/package/grunt-jsbeautifier "JavaScript pretty print"
+[grunt-prettify]: https://www.npmjs.org/package/grunt-prettify "HTML pretty print"
+[grunt-replace]: https://www.npmjs.org/package/grunt-replace "find and replace"
+[grunt-yaml]: https://www.npmjs.org/package/grunt-yaml "convert YAML to JSON"

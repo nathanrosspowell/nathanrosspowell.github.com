@@ -1,19 +1,28 @@
 source: "http://github.com/nathanrosspowell/nathanrosspowell.github.com/blob/dev/website/pages/menu/connect.md"
 title: About Me
-short: Some details about myself.
+short: Who I am, what I do and where to find me
 comments: True
 
-<p><a href="http://imgur.com/WOllJ"><img class="img-responsive img-thumbnail" src="http://imgur.com/60QayFc.png" alt="My face herp derp" title="My face herp derp" /></a></p>
+<p>
+    <a href="http://imgur.com/60QayFc.png">
+        <img class="img-responsive img-thumbnail" 
+             src="http://imgur.com/60QayFcl.png" 
+             alt="My face..." 
+             title="My face..." 
+             style="display:block;margin-left:auto;margin-right:auto;"
+        />
+    </a>
+</p>
 
 Bio
 ===
-I am a [computer programmer][career] who makes a living working on [video games][games], which happens to be a very nice job. 
+I am a [computer programmer][career] who makes a living working on [video games][games], which happens to be a very nice job.
+
+In my spare time I am into programming all kinds of things, escpecially 'online' stuff.
 
 Connect
 =======
-Feel free to email me via:
-
-<script type="text/javascript">
+Feel free to email me via: <script type="text/javascript">
 //<![CDATA[
 <!--
 var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
@@ -39,6 +48,32 @@ while(x=eval(x));
 //]]>
 </script>
 
+Profiles on the Web
+===================
+
+Here is where to find me. 
+
+* [LinkedIn][linkedin]
+* [Zerply][zerply]
+* [MobyGames][mobygames]
+* [Reddit][reddit]
+* [Twitter][twitter]
+* [Instagram][instagram]
+* [Google+][googleplus]
+* [Facebook][facebook]
+
+Where I Hang Out
+================
+
+I'm not one for posting much, but I'm usually hanging out on these sites:
+
+* [/r/programming][r-programming] - Programming sub reddit
+* [/r/gamedev][r-gamedev] - Game development sub reddit
+* [/r/mma][r-mma] - Mixed Martial Arts sub reddit
+* [/r/mechanicalkeyboards][r-mech] - Keyboard sub reddit
+* [GeekHack][geekhack] - Keyboard enthusiasts forum
+* [Silverfish Longboarding][silverfish] - Longboard forum
+
 Blogroll
 ========
 * [Elliot Powell][elliot] - My brother, talented dancer, singer, performer. The _Mentalist_.
@@ -56,3 +91,17 @@ Blogroll
 [poppadom]: http://www.domtaylor.co.uk/ "PoppaDom"
 [lacey]: http://matt-lacey.com "'Dodgy as piss, man!"
 [peter]: http://poita.org "Writes code, makes games"
+[linkedin]: http://ca.linkedin.com/in/nathanrosspowell
+[mobygames]: http://www.mobygames.com/developer/sheet/view/developerId,453475/
+[twitter]: http://twitter.com/nathanross
+[instagram]: http://instagram.com/nathanrosspowell
+[facebook]: http://facebook.com/nathanrosspowell
+[reddit]: http://reddit.com/u/nathanrosspowell
+[googleplus]: https://plus.google.com/u/0/+NathanRossPowell/
+[zerply]: http://zerply.com/nathanrosspowell
+[r-programming]: http://reddit.com/r/programming
+[r-gamedev]: http://reddit.com/r/gamedev
+[r-mma]: http://reddit.com/r/mma
+[r-mech]: http://reddit.com/r/mechanicalkeyboards
+[geekhack]: http://geekhack.org
+[silverfish]: http://silverfishlongboarding.com/

@@ -53,6 +53,7 @@ Profiles on the Web
 
 Here is where to find me. 
 
+* [<span class="octicon octicon-logo-github"></span>][github]
 * [LinkedIn][linkedin]
 * [Zerply][zerply]
 * [MobyGames][mobygames]
@@ -105,3 +106,4 @@ Blogroll
 [r-mech]: http://reddit.com/r/mechanicalkeyboards
 [geekhack]: http://geekhack.org
 [silverfish]: http://silverfishlongboarding.com/
+[github]: http://github.com/nathanrosspowell
